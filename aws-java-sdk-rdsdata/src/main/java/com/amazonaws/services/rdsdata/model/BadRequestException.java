@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * There is an error in the call or in a SQL statement.
+ * There is an error in the call or in a SQL statement. (This error only appears in calls from Aurora Serverless v1
+ * databases.)
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

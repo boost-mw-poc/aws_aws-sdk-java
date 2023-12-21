@@ -435,6 +435,14 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
     private RetryStrategy retryStrategy;
     /**
      * <p>
+     * Configuration for remote debugging. To learn more about the remote debugging functionality of SageMaker, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-remote-debugging.html">Access a training container
+     * through Amazon Web Services Systems Manager (SSM) for remote debugging</a>.
+     * </p>
+     */
+    private RemoteDebugConfig remoteDebugConfig;
+    /**
+     * <p>
      * Contains information about the infrastructure health check configuration for the training job.
      * </p>
      */
@@ -3787,6 +3795,58 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
+     * Configuration for remote debugging. To learn more about the remote debugging functionality of SageMaker, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-remote-debugging.html">Access a training container
+     * through Amazon Web Services Systems Manager (SSM) for remote debugging</a>.
+     * </p>
+     * 
+     * @param remoteDebugConfig
+     *        Configuration for remote debugging. To learn more about the remote debugging functionality of SageMaker,
+     *        see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-remote-debugging.html">Access a
+     *        training container through Amazon Web Services Systems Manager (SSM) for remote debugging</a>.
+     */
+
+    public void setRemoteDebugConfig(RemoteDebugConfig remoteDebugConfig) {
+        this.remoteDebugConfig = remoteDebugConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration for remote debugging. To learn more about the remote debugging functionality of SageMaker, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-remote-debugging.html">Access a training container
+     * through Amazon Web Services Systems Manager (SSM) for remote debugging</a>.
+     * </p>
+     * 
+     * @return Configuration for remote debugging. To learn more about the remote debugging functionality of SageMaker,
+     *         see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-remote-debugging.html">Access a
+     *         training container through Amazon Web Services Systems Manager (SSM) for remote debugging</a>.
+     */
+
+    public RemoteDebugConfig getRemoteDebugConfig() {
+        return this.remoteDebugConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration for remote debugging. To learn more about the remote debugging functionality of SageMaker, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-remote-debugging.html">Access a training container
+     * through Amazon Web Services Systems Manager (SSM) for remote debugging</a>.
+     * </p>
+     * 
+     * @param remoteDebugConfig
+     *        Configuration for remote debugging. To learn more about the remote debugging functionality of SageMaker,
+     *        see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/train-remote-debugging.html">Access a
+     *        training container through Amazon Web Services Systems Manager (SSM) for remote debugging</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeTrainingJobResult withRemoteDebugConfig(RemoteDebugConfig remoteDebugConfig) {
+        setRemoteDebugConfig(remoteDebugConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * Contains information about the infrastructure health check configuration for the training job.
      * </p>
      * 
@@ -3919,6 +3979,8 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
             sb.append("Environment: ").append(getEnvironment()).append(",");
         if (getRetryStrategy() != null)
             sb.append("RetryStrategy: ").append(getRetryStrategy()).append(",");
+        if (getRemoteDebugConfig() != null)
+            sb.append("RemoteDebugConfig: ").append(getRemoteDebugConfig()).append(",");
         if (getInfraCheckConfig() != null)
             sb.append("InfraCheckConfig: ").append(getInfraCheckConfig());
         sb.append("}");
@@ -4101,6 +4163,10 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getRetryStrategy() != null && other.getRetryStrategy().equals(this.getRetryStrategy()) == false)
             return false;
+        if (other.getRemoteDebugConfig() == null ^ this.getRemoteDebugConfig() == null)
+            return false;
+        if (other.getRemoteDebugConfig() != null && other.getRemoteDebugConfig().equals(this.getRemoteDebugConfig()) == false)
+            return false;
         if (other.getInfraCheckConfig() == null ^ this.getInfraCheckConfig() == null)
             return false;
         if (other.getInfraCheckConfig() != null && other.getInfraCheckConfig().equals(this.getInfraCheckConfig()) == false)
@@ -4154,6 +4220,7 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
         hashCode = prime * hashCode + ((getProfilingStatus() == null) ? 0 : getProfilingStatus().hashCode());
         hashCode = prime * hashCode + ((getEnvironment() == null) ? 0 : getEnvironment().hashCode());
         hashCode = prime * hashCode + ((getRetryStrategy() == null) ? 0 : getRetryStrategy().hashCode());
+        hashCode = prime * hashCode + ((getRemoteDebugConfig() == null) ? 0 : getRemoteDebugConfig().hashCode());
         hashCode = prime * hashCode + ((getInfraCheckConfig() == null) ? 0 : getInfraCheckConfig().hashCode());
         return hashCode;
     }

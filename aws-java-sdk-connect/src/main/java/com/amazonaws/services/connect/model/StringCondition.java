@@ -21,6 +21,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * A leaf node condition which can be used to specify a string condition.
  * </p>
+ * <note>
+ * <p>
+ * The currently supported values for <code>FieldName</code> are <code>name</code> and <code>description</code>.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StringCondition" target="_top">AWS API
  *      Documentation</a>

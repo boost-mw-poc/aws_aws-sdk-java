@@ -28,7 +28,7 @@ import com.amazonaws.annotation.SdkInternalApi;
 public class GetApplicationRequestMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("Arn").build();
+            .marshallLocationName("ApplicationIdentifier").build();
 
     private static final GetApplicationRequestMarshaller instance = new GetApplicationRequestMarshaller();
 

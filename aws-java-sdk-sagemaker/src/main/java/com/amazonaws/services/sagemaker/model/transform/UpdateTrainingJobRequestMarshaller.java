@@ -36,6 +36,8 @@ public class UpdateTrainingJobRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProfilerRuleConfigurations").build();
     private static final MarshallingInfo<StructuredPojo> RESOURCECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceConfig").build();
+    private static final MarshallingInfo<StructuredPojo> REMOTEDEBUGCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RemoteDebugConfig").build();
 
     private static final UpdateTrainingJobRequestMarshaller instance = new UpdateTrainingJobRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class UpdateTrainingJobRequestMarshaller {
             protocolMarshaller.marshall(updateTrainingJobRequest.getProfilerConfig(), PROFILERCONFIG_BINDING);
             protocolMarshaller.marshall(updateTrainingJobRequest.getProfilerRuleConfigurations(), PROFILERRULECONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(updateTrainingJobRequest.getResourceConfig(), RESOURCECONFIG_BINDING);
+            protocolMarshaller.marshall(updateTrainingJobRequest.getRemoteDebugConfig(), REMOTEDEBUGCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

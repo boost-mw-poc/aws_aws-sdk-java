@@ -38,6 +38,8 @@ public class CreateWorkspaceRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> KMSKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("kmsKeyArn").build();
 
     private static final CreateWorkspaceRequestMarshaller instance = new CreateWorkspaceRequestMarshaller();
 
@@ -58,6 +60,7 @@ public class CreateWorkspaceRequestMarshaller {
             protocolMarshaller.marshall(createWorkspaceRequest.getAlias(), ALIAS_BINDING);
             protocolMarshaller.marshall(createWorkspaceRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createWorkspaceRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createWorkspaceRequest.getKmsKeyArn(), KMSKEYARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

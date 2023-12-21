@@ -219,8 +219,12 @@ public enum RDSActions implements Action {
     DescribeTenantDatabases("rds:DescribeTenantDatabases"),
     /** Action for the DescribeValidDBInstanceModifications operation. */
     DescribeValidDBInstanceModifications("rds:DescribeValidDBInstanceModifications"),
+    /** Action for the DisableHttpEndpoint operation. */
+    DisableHttpEndpoint("rds:DisableHttpEndpoint"),
     /** Action for the DownloadDBLogFilePortion operation. */
     DownloadDBLogFilePortion("rds:DownloadDBLogFilePortion"),
+    /** Action for the EnableHttpEndpoint operation. */
+    EnableHttpEndpoint("rds:EnableHttpEndpoint"),
     /** Action for the FailoverDBCluster operation. */
     FailoverDBCluster("rds:FailoverDBCluster"),
     /** Action for the FailoverGlobalCluster operation. */

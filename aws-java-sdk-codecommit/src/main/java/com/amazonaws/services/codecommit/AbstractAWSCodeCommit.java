@@ -428,6 +428,11 @@ public class AbstractAWSCodeCommit implements AWSCodeCommit {
     }
 
     @Override
+    public UpdateRepositoryEncryptionKeyResult updateRepositoryEncryptionKey(UpdateRepositoryEncryptionKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateRepositoryNameResult updateRepositoryName(UpdateRepositoryNameRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

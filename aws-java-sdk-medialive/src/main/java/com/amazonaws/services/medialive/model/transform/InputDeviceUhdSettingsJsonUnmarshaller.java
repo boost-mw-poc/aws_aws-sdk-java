@@ -92,6 +92,13 @@ public class InputDeviceUhdSettingsJsonUnmarshaller implements Unmarshaller<Inpu
                     context.nextToken();
                     inputDeviceUhdSettings.setMediaconnectSettings(InputDeviceMediaConnectSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("audioChannelPairs", targetDepth)) {
+                    context.nextToken();
+                    inputDeviceUhdSettings.setAudioChannelPairs(new ListUnmarshaller<InputDeviceUhdAudioChannelPairConfig>(
+                            InputDeviceUhdAudioChannelPairConfigJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -63,6 +63,18 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
+     * programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see <a
+     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
+     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * </p>
+     * <p>
+     * If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
+     * </p>
+     */
+    private String kmsKeyId;
 
     /**
      * <p>
@@ -303,6 +315,80 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
+     * programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see <a
+     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
+     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * </p>
+     * <p>
+     * If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
+     * </p>
+     * 
+     * @param kmsKeyId
+     *        The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS
+     *        APIs to programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see
+     *        <a href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in
+     *        the Decrypt API description in the <i>Key Management Service API Reference</i>.</p>
+     *        <p>
+     *        If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
+     */
+
+    public void setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
+     * programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see <a
+     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
+     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * </p>
+     * <p>
+     * If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
+     * </p>
+     * 
+     * @return The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS
+     *         APIs to programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID,
+     *         see <a
+     *         href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in
+     *         the Decrypt API description in the <i>Key Management Service API Reference</i>.</p>
+     *         <p>
+     *         If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
+     */
+
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
+     * programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see <a
+     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
+     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * </p>
+     * <p>
+     * If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
+     * </p>
+     * 
+     * @param kmsKeyId
+     *        The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS
+     *        APIs to programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see
+     *        <a href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in
+     *        the Decrypt API description in the <i>Key Management Service API Reference</i>.</p>
+     *        <p>
+     *        If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRepositoryRequest withKmsKeyId(String kmsKeyId) {
+        setKmsKeyId(kmsKeyId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -319,7 +405,9 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
         if (getRepositoryDescription() != null)
             sb.append("RepositoryDescription: ").append(getRepositoryDescription()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getKmsKeyId() != null)
+            sb.append("KmsKeyId: ").append(getKmsKeyId());
         sb.append("}");
         return sb.toString();
     }
@@ -346,6 +434,10 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getKmsKeyId() == null ^ this.getKmsKeyId() == null)
+            return false;
+        if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
+            return false;
         return true;
     }
 
@@ -357,6 +449,7 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getRepositoryName() == null) ? 0 : getRepositoryName().hashCode());
         hashCode = prime * hashCode + ((getRepositoryDescription() == null) ? 0 : getRepositoryDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         return hashCode;
     }
 

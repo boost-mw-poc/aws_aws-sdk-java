@@ -157,6 +157,22 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
     private WisdomInfo wisdomInfo;
     /**
      * <p>
+     * An integer that represents the queue time adjust to be applied to the contact, in seconds (longer / larger queue
+     * time are routed preferentially). Cannot be specified if the QueuePriority is specified. Must be statically
+     * defined and a valid integer value.
+     * </p>
+     */
+    private Integer queueTimeAdjustmentSeconds;
+    /**
+     * <p>
+     * An integer that represents the queue priority to be applied to the contact (lower priorities are routed
+     * preferentially). Cannot be specified if the QueueTimeAdjustmentSeconds is specified. Must be statically defined,
+     * must be larger than zero, and a valid integer value. Default Value is 5.
+     * </p>
+     */
+    private Long queuePriority;
+    /**
+     * <p>
      * Tags associated with the contact. This contains both Amazon Web Services generated and user-defined tags.
      * </p>
      */
@@ -1047,6 +1063,110 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * An integer that represents the queue time adjust to be applied to the contact, in seconds (longer / larger queue
+     * time are routed preferentially). Cannot be specified if the QueuePriority is specified. Must be statically
+     * defined and a valid integer value.
+     * </p>
+     * 
+     * @param queueTimeAdjustmentSeconds
+     *        An integer that represents the queue time adjust to be applied to the contact, in seconds (longer / larger
+     *        queue time are routed preferentially). Cannot be specified if the QueuePriority is specified. Must be
+     *        statically defined and a valid integer value.
+     */
+
+    public void setQueueTimeAdjustmentSeconds(Integer queueTimeAdjustmentSeconds) {
+        this.queueTimeAdjustmentSeconds = queueTimeAdjustmentSeconds;
+    }
+
+    /**
+     * <p>
+     * An integer that represents the queue time adjust to be applied to the contact, in seconds (longer / larger queue
+     * time are routed preferentially). Cannot be specified if the QueuePriority is specified. Must be statically
+     * defined and a valid integer value.
+     * </p>
+     * 
+     * @return An integer that represents the queue time adjust to be applied to the contact, in seconds (longer /
+     *         larger queue time are routed preferentially). Cannot be specified if the QueuePriority is specified. Must
+     *         be statically defined and a valid integer value.
+     */
+
+    public Integer getQueueTimeAdjustmentSeconds() {
+        return this.queueTimeAdjustmentSeconds;
+    }
+
+    /**
+     * <p>
+     * An integer that represents the queue time adjust to be applied to the contact, in seconds (longer / larger queue
+     * time are routed preferentially). Cannot be specified if the QueuePriority is specified. Must be statically
+     * defined and a valid integer value.
+     * </p>
+     * 
+     * @param queueTimeAdjustmentSeconds
+     *        An integer that represents the queue time adjust to be applied to the contact, in seconds (longer / larger
+     *        queue time are routed preferentially). Cannot be specified if the QueuePriority is specified. Must be
+     *        statically defined and a valid integer value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withQueueTimeAdjustmentSeconds(Integer queueTimeAdjustmentSeconds) {
+        setQueueTimeAdjustmentSeconds(queueTimeAdjustmentSeconds);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An integer that represents the queue priority to be applied to the contact (lower priorities are routed
+     * preferentially). Cannot be specified if the QueueTimeAdjustmentSeconds is specified. Must be statically defined,
+     * must be larger than zero, and a valid integer value. Default Value is 5.
+     * </p>
+     * 
+     * @param queuePriority
+     *        An integer that represents the queue priority to be applied to the contact (lower priorities are routed
+     *        preferentially). Cannot be specified if the QueueTimeAdjustmentSeconds is specified. Must be statically
+     *        defined, must be larger than zero, and a valid integer value. Default Value is 5.
+     */
+
+    public void setQueuePriority(Long queuePriority) {
+        this.queuePriority = queuePriority;
+    }
+
+    /**
+     * <p>
+     * An integer that represents the queue priority to be applied to the contact (lower priorities are routed
+     * preferentially). Cannot be specified if the QueueTimeAdjustmentSeconds is specified. Must be statically defined,
+     * must be larger than zero, and a valid integer value. Default Value is 5.
+     * </p>
+     * 
+     * @return An integer that represents the queue priority to be applied to the contact (lower priorities are routed
+     *         preferentially). Cannot be specified if the QueueTimeAdjustmentSeconds is specified. Must be statically
+     *         defined, must be larger than zero, and a valid integer value. Default Value is 5.
+     */
+
+    public Long getQueuePriority() {
+        return this.queuePriority;
+    }
+
+    /**
+     * <p>
+     * An integer that represents the queue priority to be applied to the contact (lower priorities are routed
+     * preferentially). Cannot be specified if the QueueTimeAdjustmentSeconds is specified. Must be statically defined,
+     * must be larger than zero, and a valid integer value. Default Value is 5.
+     * </p>
+     * 
+     * @param queuePriority
+     *        An integer that represents the queue priority to be applied to the contact (lower priorities are routed
+     *        preferentially). Cannot be specified if the QueueTimeAdjustmentSeconds is specified. Must be statically
+     *        defined, must be larger than zero, and a valid integer value. Default Value is 5.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withQueuePriority(Long queuePriority) {
+        setQueuePriority(queuePriority);
+        return this;
+    }
+
+    /**
+     * <p>
      * Tags associated with the contact. This contains both Amazon Web Services generated and user-defined tags.
      * </p>
      * 
@@ -1165,6 +1285,10 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
             sb.append("RelatedContactId: ").append(getRelatedContactId()).append(",");
         if (getWisdomInfo() != null)
             sb.append("WisdomInfo: ").append(getWisdomInfo()).append(",");
+        if (getQueueTimeAdjustmentSeconds() != null)
+            sb.append("QueueTimeAdjustmentSeconds: ").append(getQueueTimeAdjustmentSeconds()).append(",");
+        if (getQueuePriority() != null)
+            sb.append("QueuePriority: ").append(getQueuePriority()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -1261,6 +1385,14 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getWisdomInfo() != null && other.getWisdomInfo().equals(this.getWisdomInfo()) == false)
             return false;
+        if (other.getQueueTimeAdjustmentSeconds() == null ^ this.getQueueTimeAdjustmentSeconds() == null)
+            return false;
+        if (other.getQueueTimeAdjustmentSeconds() != null && other.getQueueTimeAdjustmentSeconds().equals(this.getQueueTimeAdjustmentSeconds()) == false)
+            return false;
+        if (other.getQueuePriority() == null ^ this.getQueuePriority() == null)
+            return false;
+        if (other.getQueuePriority() != null && other.getQueuePriority().equals(this.getQueuePriority()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -1293,6 +1425,8 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getScheduledTimestamp() == null) ? 0 : getScheduledTimestamp().hashCode());
         hashCode = prime * hashCode + ((getRelatedContactId() == null) ? 0 : getRelatedContactId().hashCode());
         hashCode = prime * hashCode + ((getWisdomInfo() == null) ? 0 : getWisdomInfo().hashCode());
+        hashCode = prime * hashCode + ((getQueueTimeAdjustmentSeconds() == null) ? 0 : getQueueTimeAdjustmentSeconds().hashCode());
+        hashCode = prime * hashCode + ((getQueuePriority() == null) ? 0 : getQueuePriority().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

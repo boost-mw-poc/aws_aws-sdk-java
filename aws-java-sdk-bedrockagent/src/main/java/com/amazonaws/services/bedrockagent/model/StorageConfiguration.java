@@ -36,6 +36,8 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
 
     private RedisEnterpriseCloudConfiguration redisEnterpriseCloudConfiguration;
 
+    private RdsConfiguration rdsConfiguration;
+
     /**
      * @param type
      * @see KnowledgeBaseStorageType
@@ -155,6 +157,32 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * @param rdsConfiguration
+     */
+
+    public void setRdsConfiguration(RdsConfiguration rdsConfiguration) {
+        this.rdsConfiguration = rdsConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public RdsConfiguration getRdsConfiguration() {
+        return this.rdsConfiguration;
+    }
+
+    /**
+     * @param rdsConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StorageConfiguration withRdsConfiguration(RdsConfiguration rdsConfiguration) {
+        setRdsConfiguration(rdsConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -173,7 +201,9 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
         if (getPineconeConfiguration() != null)
             sb.append("PineconeConfiguration: ").append(getPineconeConfiguration()).append(",");
         if (getRedisEnterpriseCloudConfiguration() != null)
-            sb.append("RedisEnterpriseCloudConfiguration: ").append(getRedisEnterpriseCloudConfiguration());
+            sb.append("RedisEnterpriseCloudConfiguration: ").append(getRedisEnterpriseCloudConfiguration()).append(",");
+        if (getRdsConfiguration() != null)
+            sb.append("RdsConfiguration: ").append(getRdsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -206,6 +236,10 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
         if (other.getRedisEnterpriseCloudConfiguration() != null
                 && other.getRedisEnterpriseCloudConfiguration().equals(this.getRedisEnterpriseCloudConfiguration()) == false)
             return false;
+        if (other.getRdsConfiguration() == null ^ this.getRdsConfiguration() == null)
+            return false;
+        if (other.getRdsConfiguration() != null && other.getRdsConfiguration().equals(this.getRdsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -218,6 +252,7 @@ public class StorageConfiguration implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getOpensearchServerlessConfiguration() == null) ? 0 : getOpensearchServerlessConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPineconeConfiguration() == null) ? 0 : getPineconeConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRedisEnterpriseCloudConfiguration() == null) ? 0 : getRedisEnterpriseCloudConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getRdsConfiguration() == null) ? 0 : getRdsConfiguration().hashCode());
         return hashCode;
     }
 

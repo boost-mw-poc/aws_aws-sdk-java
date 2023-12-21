@@ -80,6 +80,12 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
      * </p>
      */
     private String crossAccountFilterOption;
+    /**
+     * <p>
+     * Limits the results of your search request to the resources that you can access.
+     * </p>
+     */
+    private java.util.List<VisibilityConditions> visibilityConditions;
 
     /**
      * <p>
@@ -515,6 +521,76 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
     }
 
     /**
+     * <p>
+     * Limits the results of your search request to the resources that you can access.
+     * </p>
+     * 
+     * @return Limits the results of your search request to the resources that you can access.
+     */
+
+    public java.util.List<VisibilityConditions> getVisibilityConditions() {
+        return visibilityConditions;
+    }
+
+    /**
+     * <p>
+     * Limits the results of your search request to the resources that you can access.
+     * </p>
+     * 
+     * @param visibilityConditions
+     *        Limits the results of your search request to the resources that you can access.
+     */
+
+    public void setVisibilityConditions(java.util.Collection<VisibilityConditions> visibilityConditions) {
+        if (visibilityConditions == null) {
+            this.visibilityConditions = null;
+            return;
+        }
+
+        this.visibilityConditions = new java.util.ArrayList<VisibilityConditions>(visibilityConditions);
+    }
+
+    /**
+     * <p>
+     * Limits the results of your search request to the resources that you can access.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setVisibilityConditions(java.util.Collection)} or {@link #withVisibilityConditions(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param visibilityConditions
+     *        Limits the results of your search request to the resources that you can access.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchRequest withVisibilityConditions(VisibilityConditions... visibilityConditions) {
+        if (this.visibilityConditions == null) {
+            setVisibilityConditions(new java.util.ArrayList<VisibilityConditions>(visibilityConditions.length));
+        }
+        for (VisibilityConditions ele : visibilityConditions) {
+            this.visibilityConditions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Limits the results of your search request to the resources that you can access.
+     * </p>
+     * 
+     * @param visibilityConditions
+     *        Limits the results of your search request to the resources that you can access.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchRequest withVisibilityConditions(java.util.Collection<VisibilityConditions> visibilityConditions) {
+        setVisibilityConditions(visibilityConditions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -539,7 +615,9 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getCrossAccountFilterOption() != null)
-            sb.append("CrossAccountFilterOption: ").append(getCrossAccountFilterOption());
+            sb.append("CrossAccountFilterOption: ").append(getCrossAccountFilterOption()).append(",");
+        if (getVisibilityConditions() != null)
+            sb.append("VisibilityConditions: ").append(getVisibilityConditions());
         sb.append("}");
         return sb.toString();
     }
@@ -582,6 +660,10 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
             return false;
         if (other.getCrossAccountFilterOption() != null && other.getCrossAccountFilterOption().equals(this.getCrossAccountFilterOption()) == false)
             return false;
+        if (other.getVisibilityConditions() == null ^ this.getVisibilityConditions() == null)
+            return false;
+        if (other.getVisibilityConditions() != null && other.getVisibilityConditions().equals(this.getVisibilityConditions()) == false)
+            return false;
         return true;
     }
 
@@ -597,6 +679,7 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getCrossAccountFilterOption() == null) ? 0 : getCrossAccountFilterOption().hashCode());
+        hashCode = prime * hashCode + ((getVisibilityConditions() == null) ? 0 : getVisibilityConditions().hashCode());
         return hashCode;
     }
 

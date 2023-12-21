@@ -48,6 +48,8 @@ public class CreateApplicationRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<List> PERMISSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Permissions").build();
 
     private static final CreateApplicationRequestMarshaller instance = new CreateApplicationRequestMarshaller();
 
@@ -73,6 +75,7 @@ public class CreateApplicationRequestMarshaller {
             protocolMarshaller.marshall(createApplicationRequest.getPublications(), PUBLICATIONS_BINDING);
             protocolMarshaller.marshall(createApplicationRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createApplicationRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createApplicationRequest.getPermissions(), PERMISSIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -32,8 +32,9 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetApplicationRequestProtocolMarshaller implements Marshaller<Request<GetApplicationRequest>, GetApplicationRequest> {
 
-    private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON).requestUri("/applications/{Arn}")
-            .httpMethodName(HttpMethodName.GET).hasExplicitPayloadMember(false).hasPayloadMembers(false).serviceName("AmazonAppIntegrations").build();
+    private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON)
+            .requestUri("/applications/{ApplicationIdentifier}").httpMethodName(HttpMethodName.GET).hasExplicitPayloadMember(false).hasPayloadMembers(false)
+            .serviceName("AmazonAppIntegrations").build();
 
     private final com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory;
 

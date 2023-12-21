@@ -1,3 +1,44 @@
+# __1.12.624__ __2023-12-21__
+## __AWS CodeCommit__
+  - ### Features
+    - AWS CodeCommit now supports customer managed keys from AWS Key Management Service. UpdateRepositoryEncryptionKey is added for updating the key configuration. CreateRepository, GetRepository, BatchGetRepositories are updated with new input or output parameters.
+
+## __AWS Elemental MediaLive__
+  - ### Features
+    - MediaLive now supports the ability to configure the audio that an AWS Elemental Link UHD device produces, when the device is configured as the source for a flow in AWS Elemental MediaConnect.
+
+## __AWS RDS DataService__
+  - ### Features
+    - This release adds support for using RDS Data API with Aurora PostgreSQL Serverless v2 and provisioned DB clusters.
+
+## __Agents for Amazon Bedrock__
+  - ### Features
+    - This release introduces Amazon Aurora as a vector store on Knowledge Bases for Amazon Bedrock
+
+## __Amazon AppIntegrations Service__
+  - ### Features
+    - The Amazon AppIntegrations service adds DeleteApplication API for deleting applications, and updates APIs to support third party applications reacting to workspace events and make data requests to Amazon Connect for agent and contact events.
+
+## __Amazon Connect Service__
+  - ### Features
+    - Adds APIs to manage User Proficiencies and Predefined Attributes. Enhances StartOutboundVoiceContact API input. Introduces SearchContacts API. Enhances DescribeContact API. Adds an API to update Routing Attributes in QueuePriority and QueueTimeAdjustmentSeconds.
+
+## __Amazon Neptune Graph__
+  - ### Features
+    - Adds Waiters for successful creation and deletion of Graph, Graph Snapshot, Import Task and Private Endpoints for Neptune Analytics
+
+## __Amazon Prometheus Service__
+  - ### Features
+    - This release updates Amazon Managed Service for Prometheus APIs to support customer managed KMS keys.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds support for using RDS Data API with Aurora PostgreSQL Serverless v2 and provisioned DB clusters.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon SageMaker Training now provides model training container access for debugging purposes. Amazon SageMaker Search now provides the ability to use visibility conditions to limit resource access to a single domain or multiple domains.
+
 # __1.12.623__ __2023-12-20__
 ## __AWS MediaTailor__
   - ### Features

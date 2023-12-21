@@ -42,6 +42,12 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
     private String channel;
 
     private RoutingProfileReference routingProfile;
+    /**
+     * <p>
+     * The expression of a step in a routing criteria.
+     * </p>
+     */
+    private String routingStepExpression;
 
     /**
      * <p>
@@ -169,6 +175,46 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The expression of a step in a routing criteria.
+     * </p>
+     * 
+     * @param routingStepExpression
+     *        The expression of a step in a routing criteria.
+     */
+
+    public void setRoutingStepExpression(String routingStepExpression) {
+        this.routingStepExpression = routingStepExpression;
+    }
+
+    /**
+     * <p>
+     * The expression of a step in a routing criteria.
+     * </p>
+     * 
+     * @return The expression of a step in a routing criteria.
+     */
+
+    public String getRoutingStepExpression() {
+        return this.routingStepExpression;
+    }
+
+    /**
+     * <p>
+     * The expression of a step in a routing criteria.
+     * </p>
+     * 
+     * @param routingStepExpression
+     *        The expression of a step in a routing criteria.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Dimensions withRoutingStepExpression(String routingStepExpression) {
+        setRoutingStepExpression(routingStepExpression);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -185,7 +231,9 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
         if (getChannel() != null)
             sb.append("Channel: ").append(getChannel()).append(",");
         if (getRoutingProfile() != null)
-            sb.append("RoutingProfile: ").append(getRoutingProfile());
+            sb.append("RoutingProfile: ").append(getRoutingProfile()).append(",");
+        if (getRoutingStepExpression() != null)
+            sb.append("RoutingStepExpression: ").append(getRoutingStepExpression());
         sb.append("}");
         return sb.toString();
     }
@@ -212,6 +260,10 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRoutingProfile() != null && other.getRoutingProfile().equals(this.getRoutingProfile()) == false)
             return false;
+        if (other.getRoutingStepExpression() == null ^ this.getRoutingStepExpression() == null)
+            return false;
+        if (other.getRoutingStepExpression() != null && other.getRoutingStepExpression().equals(this.getRoutingStepExpression()) == false)
+            return false;
         return true;
     }
 
@@ -223,6 +275,7 @@ public class Dimensions implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getQueue() == null) ? 0 : getQueue().hashCode());
         hashCode = prime * hashCode + ((getChannel() == null) ? 0 : getChannel().hashCode());
         hashCode = prime * hashCode + ((getRoutingProfile() == null) ? 0 : getRoutingProfile().hashCode());
+        hashCode = prime * hashCode + ((getRoutingStepExpression() == null) ? 0 : getRoutingStepExpression().hashCode());
         return hashCode;
     }
 

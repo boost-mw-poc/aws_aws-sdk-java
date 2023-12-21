@@ -70,6 +70,12 @@ import com.amazonaws.services.codecommit.model.*;
  * </li>
  * <li>
  * <p>
+ * <a>UpdateRepositoryEncryptionKey</a>, which updates the Key Management Service encryption key used to encrypt and
+ * decrypt a repository.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a>UpdateRepositoryName</a>, which changes the name of the repository. If you change the name of a repository, no
  * other users of that repository can access it until you send them the new HTTPS or SSH URL to use.
  * </p>
@@ -3279,6 +3285,41 @@ public interface AWSCodeCommitAsync extends AWSCodeCommit {
     java.util.concurrent.Future<UpdateRepositoryDescriptionResult> updateRepositoryDescriptionAsync(
             UpdateRepositoryDescriptionRequest updateRepositoryDescriptionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateRepositoryDescriptionRequest, UpdateRepositoryDescriptionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the Key Management Service encryption key used to encrypt and decrypt a CodeCommit repository.
+     * </p>
+     * 
+     * @param updateRepositoryEncryptionKeyRequest
+     * @return A Java Future containing the result of the UpdateRepositoryEncryptionKey operation returned by the
+     *         service.
+     * @sample AWSCodeCommitAsync.UpdateRepositoryEncryptionKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateRepositoryEncryptionKey"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRepositoryEncryptionKeyResult> updateRepositoryEncryptionKeyAsync(
+            UpdateRepositoryEncryptionKeyRequest updateRepositoryEncryptionKeyRequest);
+
+    /**
+     * <p>
+     * Updates the Key Management Service encryption key used to encrypt and decrypt a CodeCommit repository.
+     * </p>
+     * 
+     * @param updateRepositoryEncryptionKeyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateRepositoryEncryptionKey operation returned by the
+     *         service.
+     * @sample AWSCodeCommitAsyncHandler.UpdateRepositoryEncryptionKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateRepositoryEncryptionKey"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRepositoryEncryptionKeyResult> updateRepositoryEncryptionKeyAsync(
+            UpdateRepositoryEncryptionKeyRequest updateRepositoryEncryptionKeyRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateRepositoryEncryptionKeyRequest, UpdateRepositoryEncryptionKeyResult> asyncHandler);
 
     /**
      * <p>

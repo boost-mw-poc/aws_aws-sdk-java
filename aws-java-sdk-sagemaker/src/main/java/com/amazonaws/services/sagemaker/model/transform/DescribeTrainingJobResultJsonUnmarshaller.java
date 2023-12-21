@@ -233,6 +233,10 @@ public class DescribeTrainingJobResultJsonUnmarshaller implements Unmarshaller<D
                     context.nextToken();
                     describeTrainingJobResult.setRetryStrategy(RetryStrategyJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RemoteDebugConfig", targetDepth)) {
+                    context.nextToken();
+                    describeTrainingJobResult.setRemoteDebugConfig(RemoteDebugConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("InfraCheckConfig", targetDepth)) {
                     context.nextToken();
                     describeTrainingJobResult.setInfraCheckConfig(InfraCheckConfigJsonUnmarshaller.getInstance().unmarshall(context));

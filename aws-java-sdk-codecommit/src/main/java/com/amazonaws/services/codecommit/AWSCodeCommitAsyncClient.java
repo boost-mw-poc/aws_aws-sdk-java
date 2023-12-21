@@ -75,6 +75,12 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * </li>
  * <li>
  * <p>
+ * <a>UpdateRepositoryEncryptionKey</a>, which updates the Key Management Service encryption key used to encrypt and
+ * decrypt a repository.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a>UpdateRepositoryName</a>, which changes the name of the repository. If you change the name of a repository, no
  * other users of that repository can access it until you send them the new HTTPS or SSH URL to use.
  * </p>
@@ -3292,6 +3298,40 @@ public class AWSCodeCommitAsyncClient extends AWSCodeCommitClient implements AWS
 
                 try {
                     result = executeUpdateRepositoryDescription(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRepositoryEncryptionKeyResult> updateRepositoryEncryptionKeyAsync(UpdateRepositoryEncryptionKeyRequest request) {
+
+        return updateRepositoryEncryptionKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRepositoryEncryptionKeyResult> updateRepositoryEncryptionKeyAsync(
+            final UpdateRepositoryEncryptionKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateRepositoryEncryptionKeyRequest, UpdateRepositoryEncryptionKeyResult> asyncHandler) {
+        final UpdateRepositoryEncryptionKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateRepositoryEncryptionKeyResult>() {
+            @Override
+            public UpdateRepositoryEncryptionKeyResult call() throws Exception {
+                UpdateRepositoryEncryptionKeyResult result = null;
+
+                try {
+                    result = executeUpdateRepositoryEncryptionKey(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -194,11 +194,6 @@ public class SecondaryStatusTransition implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * Downloading the training image.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Training image download completed. Training in progress.
      * </p>
      * </li>
@@ -1202,11 +1197,6 @@ public class SecondaryStatusTransition implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * Downloading the training image.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Training image download completed. Training in progress.
      * </p>
      * </li>
@@ -1283,11 +1273,6 @@ public class SecondaryStatusTransition implements Serializable, Cloneable, Struc
      *        <dt>Training</dt>
      *        <dd>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        Downloading the training image.
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        Training image download completed. Training in progress.
@@ -1374,11 +1359,6 @@ public class SecondaryStatusTransition implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * Downloading the training image.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Training image download completed. Training in progress.
      * </p>
      * </li>
@@ -1454,11 +1434,6 @@ public class SecondaryStatusTransition implements Serializable, Cloneable, Struc
      *         <dt>Training</dt>
      *         <dd>
      *         <ul>
-     *         <li>
-     *         <p>
-     *         Downloading the training image.
-     *         </p>
-     *         </li>
      *         <li>
      *         <p>
      *         Training image download completed. Training in progress.
@@ -1545,11 +1520,6 @@ public class SecondaryStatusTransition implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * Downloading the training image.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Training image download completed. Training in progress.
      * </p>
      * </li>
@@ -1626,11 +1596,6 @@ public class SecondaryStatusTransition implements Serializable, Cloneable, Struc
      *        <dt>Training</dt>
      *        <dd>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        Downloading the training image.
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        Training image download completed. Training in progress.

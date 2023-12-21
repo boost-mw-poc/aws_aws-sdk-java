@@ -29,7 +29,7 @@ import com.amazonaws.annotation.SdkInternalApi;
 public class UpdateApplicationRequestMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("Arn").build();
+            .marshallLocationName("ApplicationIdentifier").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Name").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -40,6 +40,8 @@ public class UpdateApplicationRequestMarshaller {
             .marshallLocationName("Subscriptions").build();
     private static final MarshallingInfo<List> PUBLICATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Publications").build();
+    private static final MarshallingInfo<List> PERMISSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Permissions").build();
 
     private static final UpdateApplicationRequestMarshaller instance = new UpdateApplicationRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class UpdateApplicationRequestMarshaller {
             protocolMarshaller.marshall(updateApplicationRequest.getApplicationSourceConfig(), APPLICATIONSOURCECONFIG_BINDING);
             protocolMarshaller.marshall(updateApplicationRequest.getSubscriptions(), SUBSCRIPTIONS_BINDING);
             protocolMarshaller.marshall(updateApplicationRequest.getPublications(), PUBLICATIONS_BINDING);
+            protocolMarshaller.marshall(updateApplicationRequest.getPermissions(), PERMISSIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

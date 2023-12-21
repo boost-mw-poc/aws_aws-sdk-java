@@ -41,6 +41,8 @@ public class WorkspaceSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> KMSKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("kmsKeyArn").build();
 
     private static final WorkspaceSummaryMarshaller instance = new WorkspaceSummaryMarshaller();
 
@@ -64,6 +66,7 @@ public class WorkspaceSummaryMarshaller {
             protocolMarshaller.marshall(workspaceSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(workspaceSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(workspaceSummary.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(workspaceSummary.getKmsKeyArn(), KMSKEYARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

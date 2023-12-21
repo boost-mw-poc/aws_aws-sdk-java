@@ -21,10 +21,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The result of a SQL statement.
  * </p>
- * 
- * <pre>
- * <code> &lt;note&gt; &lt;p&gt;This data structure is only used with the deprecated &lt;code&gt;ExecuteSql&lt;/code&gt; operation. Use the &lt;code&gt;BatchExecuteStatement&lt;/code&gt; or &lt;code&gt;ExecuteStatement&lt;/code&gt; operation instead.&lt;/p&gt; &lt;/note&gt; </code>
- * </pre>
+ * <note>
+ * <p>
+ * This data structure is only used with the deprecated <code>ExecuteSql</code> operation. Use the
+ * <code>BatchExecuteStatement</code> or <code>ExecuteStatement</code> operation instead.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-data-2018-08-01/SqlStatementResult" target="_top">AWS API
  *      Documentation</a>

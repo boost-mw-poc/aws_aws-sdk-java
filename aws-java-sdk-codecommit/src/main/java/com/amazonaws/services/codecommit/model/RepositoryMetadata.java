@@ -88,6 +88,12 @@ public class RepositoryMetadata implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String arn;
+    /**
+     * <p>
+     * The ID of the Key Management Service encryption key used to encrypt and decrypt the repository.
+     * </p>
+     */
+    private String kmsKeyId;
 
     /**
      * <p>
@@ -490,6 +496,46 @@ public class RepositoryMetadata implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The ID of the Key Management Service encryption key used to encrypt and decrypt the repository.
+     * </p>
+     * 
+     * @param kmsKeyId
+     *        The ID of the Key Management Service encryption key used to encrypt and decrypt the repository.
+     */
+
+    public void setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service encryption key used to encrypt and decrypt the repository.
+     * </p>
+     * 
+     * @return The ID of the Key Management Service encryption key used to encrypt and decrypt the repository.
+     */
+
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The ID of the Key Management Service encryption key used to encrypt and decrypt the repository.
+     * </p>
+     * 
+     * @param kmsKeyId
+     *        The ID of the Key Management Service encryption key used to encrypt and decrypt the repository.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RepositoryMetadata withKmsKeyId(String kmsKeyId) {
+        setKmsKeyId(kmsKeyId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -520,7 +566,9 @@ public class RepositoryMetadata implements Serializable, Cloneable, StructuredPo
         if (getCloneUrlSsh() != null)
             sb.append("CloneUrlSsh: ").append(getCloneUrlSsh()).append(",");
         if (getArn() != null)
-            sb.append("Arn: ").append(getArn());
+            sb.append("Arn: ").append(getArn()).append(",");
+        if (getKmsKeyId() != null)
+            sb.append("KmsKeyId: ").append(getKmsKeyId());
         sb.append("}");
         return sb.toString();
     }
@@ -575,6 +623,10 @@ public class RepositoryMetadata implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
+        if (other.getKmsKeyId() == null ^ this.getKmsKeyId() == null)
+            return false;
+        if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
+            return false;
         return true;
     }
 
@@ -593,6 +645,7 @@ public class RepositoryMetadata implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getCloneUrlHttp() == null) ? 0 : getCloneUrlHttp().hashCode());
         hashCode = prime * hashCode + ((getCloneUrlSsh() == null) ? 0 : getCloneUrlSsh().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         return hashCode;
     }
 

@@ -70,6 +70,12 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The customer managed KMS key of this workspace.
+     * </p>
+     */
+    private String kmsKeyArn;
 
     /**
      * <p>
@@ -380,6 +386,46 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The customer managed KMS key of this workspace.
+     * </p>
+     * 
+     * @param kmsKeyArn
+     *        The customer managed KMS key of this workspace.
+     */
+
+    public void setKmsKeyArn(String kmsKeyArn) {
+        this.kmsKeyArn = kmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * The customer managed KMS key of this workspace.
+     * </p>
+     * 
+     * @return The customer managed KMS key of this workspace.
+     */
+
+    public String getKmsKeyArn() {
+        return this.kmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * The customer managed KMS key of this workspace.
+     * </p>
+     * 
+     * @param kmsKeyArn
+     *        The customer managed KMS key of this workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDescription withKmsKeyArn(String kmsKeyArn) {
+        setKmsKeyArn(kmsKeyArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -404,7 +450,9 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getKmsKeyArn() != null)
+            sb.append("KmsKeyArn: ").append(getKmsKeyArn());
         sb.append("}");
         return sb.toString();
     }
@@ -447,6 +495,10 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getKmsKeyArn() == null ^ this.getKmsKeyArn() == null)
+            return false;
+        if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
+            return false;
         return true;
     }
 
@@ -462,6 +514,7 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getPrometheusEndpoint() == null) ? 0 : getPrometheusEndpoint().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
         return hashCode;
     }
 

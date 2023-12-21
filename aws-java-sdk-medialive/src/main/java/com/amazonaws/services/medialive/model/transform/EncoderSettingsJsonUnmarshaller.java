@@ -72,10 +72,6 @@ public class EncoderSettingsJsonUnmarshaller implements Unmarshaller<EncoderSett
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("colorCorrectionSettings", targetDepth)) {
-                    context.nextToken();
-                    encoderSettings.setColorCorrectionSettings(ColorCorrectionSettingsJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("featureActivations", targetDepth)) {
                     context.nextToken();
                     encoderSettings.setFeatureActivations(FeatureActivationsJsonUnmarshaller.getInstance().unmarshall(context));
@@ -111,6 +107,10 @@ public class EncoderSettingsJsonUnmarshaller implements Unmarshaller<EncoderSett
                 if (context.testExpression("thumbnailConfiguration", targetDepth)) {
                     context.nextToken();
                     encoderSettings.setThumbnailConfiguration(ThumbnailConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("colorCorrectionSettings", targetDepth)) {
+                    context.nextToken();
+                    encoderSettings.setColorCorrectionSettings(ColorCorrectionSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

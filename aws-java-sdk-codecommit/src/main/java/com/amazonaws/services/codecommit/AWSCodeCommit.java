@@ -71,6 +71,12 @@ import com.amazonaws.services.codecommit.model.*;
  * </li>
  * <li>
  * <p>
+ * <a>UpdateRepositoryEncryptionKey</a>, which updates the Key Management Service encryption key used to encrypt and
+ * decrypt a repository.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a>UpdateRepositoryName</a>, which changes the name of the repository. If you change the name of a repository, no
  * other users of that repository can access it until you send them the new HTTPS or SSH URL to use.
  * </p>
@@ -1222,6 +1228,11 @@ public interface AWSCodeCommit {
      *         No encryption key was found.
      * @throws EncryptionKeyUnavailableException
      *         The encryption key is not available.
+     * @throws EncryptionKeyInvalidIdException
+     *         The Key Management Service encryption key is not valid.
+     * @throws EncryptionKeyInvalidUsageException
+     *         A KMS encryption key was used to try and encrypt or decrypt a repository, but either the repository or
+     *         the key was not in a valid state to support the operation.
      * @throws InvalidTagsMapException
      *         The map of tags is not valid.
      * @throws TooManyTagsException
@@ -4410,6 +4421,46 @@ public interface AWSCodeCommit {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateRepositoryDescriptionResult updateRepositoryDescription(UpdateRepositoryDescriptionRequest updateRepositoryDescriptionRequest);
+
+    /**
+     * <p>
+     * Updates the Key Management Service encryption key used to encrypt and decrypt a CodeCommit repository.
+     * </p>
+     * 
+     * @param updateRepositoryEncryptionKeyRequest
+     * @return Result of the UpdateRepositoryEncryptionKey operation returned by the service.
+     * @throws RepositoryNameRequiredException
+     *         A repository name is required, but was not specified.
+     * @throws RepositoryDoesNotExistException
+     *         The specified repository does not exist.
+     * @throws InvalidRepositoryNameException
+     *         A specified repository name is not valid.</p> <note>
+     *         <p>
+     *         This exception occurs only when a specified repository name is not valid. Other exceptions occur when a
+     *         required repository parameter is missing, or when a specified repository does not exist.
+     *         </p>
+     * @throws EncryptionKeyRequiredException
+     *         A KMS encryption key ID is required but was not specified.
+     * @throws EncryptionIntegrityChecksFailedException
+     *         An encryption integrity check failed.
+     * @throws EncryptionKeyAccessDeniedException
+     *         An encryption key could not be accessed.
+     * @throws EncryptionKeyInvalidIdException
+     *         The Key Management Service encryption key is not valid.
+     * @throws EncryptionKeyInvalidUsageException
+     *         A KMS encryption key was used to try and encrypt or decrypt a repository, but either the repository or
+     *         the key was not in a valid state to support the operation.
+     * @throws EncryptionKeyDisabledException
+     *         The encryption key is disabled.
+     * @throws EncryptionKeyNotFoundException
+     *         No encryption key was found.
+     * @throws EncryptionKeyUnavailableException
+     *         The encryption key is not available.
+     * @sample AWSCodeCommit.UpdateRepositoryEncryptionKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateRepositoryEncryptionKey"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateRepositoryEncryptionKeyResult updateRepositoryEncryptionKey(UpdateRepositoryEncryptionKeyRequest updateRepositoryEncryptionKeyRequest);
 
     /**
      * <p>

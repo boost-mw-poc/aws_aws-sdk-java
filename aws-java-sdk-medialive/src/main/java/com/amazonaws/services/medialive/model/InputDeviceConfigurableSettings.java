@@ -43,6 +43,13 @@ public class InputDeviceConfigurableSettings implements Serializable, Cloneable,
      * the value of mediaconnectSettings. Only UHD devices can specify this parameter.
      */
     private InputDeviceMediaConnectConfigurableSettings mediaconnectSettings;
+    /**
+     * An array of eight audio configurations, one for each audio pair in the source. Set up each audio configuration
+     * either to exclude the pair, or to format it and include it in the output from the device. This parameter applies
+     * only to UHD devices, and only when the device is configured as the source for a MediaConnect flow. For an HD
+     * device, you configure the audio by setting up audio selectors in the channel configuration.
+     */
+    private java.util.List<InputDeviceConfigurableAudioChannelPairConfig> audioChannelPairs;
 
     /**
      * The input source that you want to use. If the device has a source connected to only one of its input ports, or if
@@ -271,6 +278,96 @@ public class InputDeviceConfigurableSettings implements Serializable, Cloneable,
     }
 
     /**
+     * An array of eight audio configurations, one for each audio pair in the source. Set up each audio configuration
+     * either to exclude the pair, or to format it and include it in the output from the device. This parameter applies
+     * only to UHD devices, and only when the device is configured as the source for a MediaConnect flow. For an HD
+     * device, you configure the audio by setting up audio selectors in the channel configuration.
+     * 
+     * @return An array of eight audio configurations, one for each audio pair in the source. Set up each audio
+     *         configuration either to exclude the pair, or to format it and include it in the output from the device.
+     *         This parameter applies only to UHD devices, and only when the device is configured as the source for a
+     *         MediaConnect flow. For an HD device, you configure the audio by setting up audio selectors in the channel
+     *         configuration.
+     */
+
+    public java.util.List<InputDeviceConfigurableAudioChannelPairConfig> getAudioChannelPairs() {
+        return audioChannelPairs;
+    }
+
+    /**
+     * An array of eight audio configurations, one for each audio pair in the source. Set up each audio configuration
+     * either to exclude the pair, or to format it and include it in the output from the device. This parameter applies
+     * only to UHD devices, and only when the device is configured as the source for a MediaConnect flow. For an HD
+     * device, you configure the audio by setting up audio selectors in the channel configuration.
+     * 
+     * @param audioChannelPairs
+     *        An array of eight audio configurations, one for each audio pair in the source. Set up each audio
+     *        configuration either to exclude the pair, or to format it and include it in the output from the device.
+     *        This parameter applies only to UHD devices, and only when the device is configured as the source for a
+     *        MediaConnect flow. For an HD device, you configure the audio by setting up audio selectors in the channel
+     *        configuration.
+     */
+
+    public void setAudioChannelPairs(java.util.Collection<InputDeviceConfigurableAudioChannelPairConfig> audioChannelPairs) {
+        if (audioChannelPairs == null) {
+            this.audioChannelPairs = null;
+            return;
+        }
+
+        this.audioChannelPairs = new java.util.ArrayList<InputDeviceConfigurableAudioChannelPairConfig>(audioChannelPairs);
+    }
+
+    /**
+     * An array of eight audio configurations, one for each audio pair in the source. Set up each audio configuration
+     * either to exclude the pair, or to format it and include it in the output from the device. This parameter applies
+     * only to UHD devices, and only when the device is configured as the source for a MediaConnect flow. For an HD
+     * device, you configure the audio by setting up audio selectors in the channel configuration.
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAudioChannelPairs(java.util.Collection)} or {@link #withAudioChannelPairs(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param audioChannelPairs
+     *        An array of eight audio configurations, one for each audio pair in the source. Set up each audio
+     *        configuration either to exclude the pair, or to format it and include it in the output from the device.
+     *        This parameter applies only to UHD devices, and only when the device is configured as the source for a
+     *        MediaConnect flow. For an HD device, you configure the audio by setting up audio selectors in the channel
+     *        configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InputDeviceConfigurableSettings withAudioChannelPairs(InputDeviceConfigurableAudioChannelPairConfig... audioChannelPairs) {
+        if (this.audioChannelPairs == null) {
+            setAudioChannelPairs(new java.util.ArrayList<InputDeviceConfigurableAudioChannelPairConfig>(audioChannelPairs.length));
+        }
+        for (InputDeviceConfigurableAudioChannelPairConfig ele : audioChannelPairs) {
+            this.audioChannelPairs.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * An array of eight audio configurations, one for each audio pair in the source. Set up each audio configuration
+     * either to exclude the pair, or to format it and include it in the output from the device. This parameter applies
+     * only to UHD devices, and only when the device is configured as the source for a MediaConnect flow. For an HD
+     * device, you configure the audio by setting up audio selectors in the channel configuration.
+     * 
+     * @param audioChannelPairs
+     *        An array of eight audio configurations, one for each audio pair in the source. Set up each audio
+     *        configuration either to exclude the pair, or to format it and include it in the output from the device.
+     *        This parameter applies only to UHD devices, and only when the device is configured as the source for a
+     *        MediaConnect flow. For an HD device, you configure the audio by setting up audio selectors in the channel
+     *        configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InputDeviceConfigurableSettings withAudioChannelPairs(java.util.Collection<InputDeviceConfigurableAudioChannelPairConfig> audioChannelPairs) {
+        setAudioChannelPairs(audioChannelPairs);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -291,7 +388,9 @@ public class InputDeviceConfigurableSettings implements Serializable, Cloneable,
         if (getCodec() != null)
             sb.append("Codec: ").append(getCodec()).append(",");
         if (getMediaconnectSettings() != null)
-            sb.append("MediaconnectSettings: ").append(getMediaconnectSettings());
+            sb.append("MediaconnectSettings: ").append(getMediaconnectSettings()).append(",");
+        if (getAudioChannelPairs() != null)
+            sb.append("AudioChannelPairs: ").append(getAudioChannelPairs());
         sb.append("}");
         return sb.toString();
     }
@@ -326,6 +425,10 @@ public class InputDeviceConfigurableSettings implements Serializable, Cloneable,
             return false;
         if (other.getMediaconnectSettings() != null && other.getMediaconnectSettings().equals(this.getMediaconnectSettings()) == false)
             return false;
+        if (other.getAudioChannelPairs() == null ^ this.getAudioChannelPairs() == null)
+            return false;
+        if (other.getAudioChannelPairs() != null && other.getAudioChannelPairs().equals(this.getAudioChannelPairs()) == false)
+            return false;
         return true;
     }
 
@@ -339,6 +442,7 @@ public class InputDeviceConfigurableSettings implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getLatencyMs() == null) ? 0 : getLatencyMs().hashCode());
         hashCode = prime * hashCode + ((getCodec() == null) ? 0 : getCodec().hashCode());
         hashCode = prime * hashCode + ((getMediaconnectSettings() == null) ? 0 : getMediaconnectSettings().hashCode());
+        hashCode = prime * hashCode + ((getAudioChannelPairs() == null) ? 0 : getAudioChannelPairs().hashCode());
         return hashCode;
     }
 

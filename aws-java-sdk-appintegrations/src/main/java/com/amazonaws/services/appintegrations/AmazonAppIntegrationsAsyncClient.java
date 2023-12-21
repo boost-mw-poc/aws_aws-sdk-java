@@ -181,6 +181,39 @@ public class AmazonAppIntegrationsAsyncClient extends AmazonAppIntegrationsClien
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteApplicationResult> deleteApplicationAsync(DeleteApplicationRequest request) {
+
+        return deleteApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteApplicationResult> deleteApplicationAsync(final DeleteApplicationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteApplicationRequest, DeleteApplicationResult> asyncHandler) {
+        final DeleteApplicationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteApplicationResult>() {
+            @Override
+            public DeleteApplicationResult call() throws Exception {
+                DeleteApplicationResult result = null;
+
+                try {
+                    result = executeDeleteApplication(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteDataIntegrationResult> deleteDataIntegrationAsync(DeleteDataIntegrationRequest request) {
 
         return deleteDataIntegrationAsync(request, null);
@@ -330,6 +363,39 @@ public class AmazonAppIntegrationsAsyncClient extends AmazonAppIntegrationsClien
 
                 try {
                     result = executeGetEventIntegration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListApplicationAssociationsResult> listApplicationAssociationsAsync(ListApplicationAssociationsRequest request) {
+
+        return listApplicationAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListApplicationAssociationsResult> listApplicationAssociationsAsync(final ListApplicationAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListApplicationAssociationsRequest, ListApplicationAssociationsResult> asyncHandler) {
+        final ListApplicationAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListApplicationAssociationsResult>() {
+            @Override
+            public ListApplicationAssociationsResult call() throws Exception {
+                ListApplicationAssociationsResult result = null;
+
+                try {
+                    result = executeListApplicationAssociations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

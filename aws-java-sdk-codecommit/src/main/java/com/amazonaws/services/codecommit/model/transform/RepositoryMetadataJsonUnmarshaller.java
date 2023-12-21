@@ -88,6 +88,10 @@ public class RepositoryMetadataJsonUnmarshaller implements Unmarshaller<Reposito
                     context.nextToken();
                     repositoryMetadata.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("kmsKeyId", targetDepth)) {
+                    context.nextToken();
+                    repositoryMetadata.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

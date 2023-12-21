@@ -155,6 +155,37 @@ public interface AmazonAppIntegrationsAsync extends AmazonAppIntegrations {
 
     /**
      * <p>
+     * Deletes the Application. Only Applications that don't have any Application Associations can be deleted.
+     * </p>
+     * 
+     * @param deleteApplicationRequest
+     * @return A Java Future containing the result of the DeleteApplication operation returned by the service.
+     * @sample AmazonAppIntegrationsAsync.DeleteApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/DeleteApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteApplicationResult> deleteApplicationAsync(DeleteApplicationRequest deleteApplicationRequest);
+
+    /**
+     * <p>
+     * Deletes the Application. Only Applications that don't have any Application Associations can be deleted.
+     * </p>
+     * 
+     * @param deleteApplicationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteApplication operation returned by the service.
+     * @sample AmazonAppIntegrationsAsyncHandler.DeleteApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/DeleteApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteApplicationResult> deleteApplicationAsync(DeleteApplicationRequest deleteApplicationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteApplicationRequest, DeleteApplicationResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the DataIntegration. Only DataIntegrations that don't have any DataIntegrationAssociations can be
      * deleted. Deleting a DataIntegration also deletes the underlying Amazon AppFlow flow and service linked role.
      * </p>
@@ -349,6 +380,39 @@ public interface AmazonAppIntegrationsAsync extends AmazonAppIntegrations {
      */
     java.util.concurrent.Future<GetEventIntegrationResult> getEventIntegrationAsync(GetEventIntegrationRequest getEventIntegrationRequest,
             com.amazonaws.handlers.AsyncHandler<GetEventIntegrationRequest, GetEventIntegrationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of application associations for an application.
+     * </p>
+     * 
+     * @param listApplicationAssociationsRequest
+     * @return A Java Future containing the result of the ListApplicationAssociations operation returned by the service.
+     * @sample AmazonAppIntegrationsAsync.ListApplicationAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListApplicationAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListApplicationAssociationsResult> listApplicationAssociationsAsync(
+            ListApplicationAssociationsRequest listApplicationAssociationsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of application associations for an application.
+     * </p>
+     * 
+     * @param listApplicationAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListApplicationAssociations operation returned by the service.
+     * @sample AmazonAppIntegrationsAsyncHandler.ListApplicationAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListApplicationAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListApplicationAssociationsResult> listApplicationAssociationsAsync(
+            ListApplicationAssociationsRequest listApplicationAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListApplicationAssociationsRequest, ListApplicationAssociationsResult> asyncHandler);
 
     /**
      * <p>

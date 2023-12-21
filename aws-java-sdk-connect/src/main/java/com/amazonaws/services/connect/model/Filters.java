@@ -48,6 +48,12 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> routingProfiles;
+    /**
+     * <p>
+     * A list of expressions as a filter, in which an expression is an object of a step in a routing criteria.
+     * </p>
+     */
+    private java.util.List<String> routingStepExpressions;
 
     /**
      * <p>
@@ -304,6 +310,76 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A list of expressions as a filter, in which an expression is an object of a step in a routing criteria.
+     * </p>
+     * 
+     * @return A list of expressions as a filter, in which an expression is an object of a step in a routing criteria.
+     */
+
+    public java.util.List<String> getRoutingStepExpressions() {
+        return routingStepExpressions;
+    }
+
+    /**
+     * <p>
+     * A list of expressions as a filter, in which an expression is an object of a step in a routing criteria.
+     * </p>
+     * 
+     * @param routingStepExpressions
+     *        A list of expressions as a filter, in which an expression is an object of a step in a routing criteria.
+     */
+
+    public void setRoutingStepExpressions(java.util.Collection<String> routingStepExpressions) {
+        if (routingStepExpressions == null) {
+            this.routingStepExpressions = null;
+            return;
+        }
+
+        this.routingStepExpressions = new java.util.ArrayList<String>(routingStepExpressions);
+    }
+
+    /**
+     * <p>
+     * A list of expressions as a filter, in which an expression is an object of a step in a routing criteria.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setRoutingStepExpressions(java.util.Collection)} or
+     * {@link #withRoutingStepExpressions(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param routingStepExpressions
+     *        A list of expressions as a filter, in which an expression is an object of a step in a routing criteria.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Filters withRoutingStepExpressions(String... routingStepExpressions) {
+        if (this.routingStepExpressions == null) {
+            setRoutingStepExpressions(new java.util.ArrayList<String>(routingStepExpressions.length));
+        }
+        for (String ele : routingStepExpressions) {
+            this.routingStepExpressions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of expressions as a filter, in which an expression is an object of a step in a routing criteria.
+     * </p>
+     * 
+     * @param routingStepExpressions
+     *        A list of expressions as a filter, in which an expression is an object of a step in a routing criteria.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Filters withRoutingStepExpressions(java.util.Collection<String> routingStepExpressions) {
+        setRoutingStepExpressions(routingStepExpressions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -320,7 +396,9 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
         if (getChannels() != null)
             sb.append("Channels: ").append(getChannels()).append(",");
         if (getRoutingProfiles() != null)
-            sb.append("RoutingProfiles: ").append(getRoutingProfiles());
+            sb.append("RoutingProfiles: ").append(getRoutingProfiles()).append(",");
+        if (getRoutingStepExpressions() != null)
+            sb.append("RoutingStepExpressions: ").append(getRoutingStepExpressions());
         sb.append("}");
         return sb.toString();
     }
@@ -347,6 +425,10 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRoutingProfiles() != null && other.getRoutingProfiles().equals(this.getRoutingProfiles()) == false)
             return false;
+        if (other.getRoutingStepExpressions() == null ^ this.getRoutingStepExpressions() == null)
+            return false;
+        if (other.getRoutingStepExpressions() != null && other.getRoutingStepExpressions().equals(this.getRoutingStepExpressions()) == false)
+            return false;
         return true;
     }
 
@@ -358,6 +440,7 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getQueues() == null) ? 0 : getQueues().hashCode());
         hashCode = prime * hashCode + ((getChannels() == null) ? 0 : getChannels().hashCode());
         hashCode = prime * hashCode + ((getRoutingProfiles() == null) ? 0 : getRoutingProfiles().hashCode());
+        hashCode = prime * hashCode + ((getRoutingStepExpressions() == null) ? 0 : getRoutingStepExpressions().hashCode());
         return hashCode;
     }
 

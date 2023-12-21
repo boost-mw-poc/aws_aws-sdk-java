@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The service specified by the <code>resourceArn</code> parameter is not available.
+ * The service specified by the <code>resourceArn</code> parameter isn't available.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

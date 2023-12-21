@@ -4924,6 +4924,61 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Disables the HTTP endpoint for the specified DB cluster. Disabling this endpoint disables RDS Data API.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation applies only to Aurora PostgreSQL Serverless v2 and provisioned DB clusters. To disable the HTTP
+     * endpoint for Aurora Serverless v1 DB clusters, use the <code>EnableHttpEndpoint</code> parameter of the
+     * <code>ModifyDBCluster</code> operation.
+     * </p>
+     * </note>
+     * 
+     * @param disableHttpEndpointRequest
+     * @return A Java Future containing the result of the DisableHttpEndpoint operation returned by the service.
+     * @sample AmazonRDSAsync.DisableHttpEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DisableHttpEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisableHttpEndpointResult> disableHttpEndpointAsync(DisableHttpEndpointRequest disableHttpEndpointRequest);
+
+    /**
+     * <p>
+     * Disables the HTTP endpoint for the specified DB cluster. Disabling this endpoint disables RDS Data API.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation applies only to Aurora PostgreSQL Serverless v2 and provisioned DB clusters. To disable the HTTP
+     * endpoint for Aurora Serverless v1 DB clusters, use the <code>EnableHttpEndpoint</code> parameter of the
+     * <code>ModifyDBCluster</code> operation.
+     * </p>
+     * </note>
+     * 
+     * @param disableHttpEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisableHttpEndpoint operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.DisableHttpEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DisableHttpEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisableHttpEndpointResult> disableHttpEndpointAsync(DisableHttpEndpointRequest disableHttpEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<DisableHttpEndpointRequest, DisableHttpEndpointResult> asyncHandler);
+
+    /**
+     * <p>
      * Downloads all or a portion of the specified log file, up to 1 MB in size.
      * </p>
      * <p>
@@ -4958,6 +5013,69 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<DownloadDBLogFilePortionResult> downloadDBLogFilePortionAsync(DownloadDBLogFilePortionRequest downloadDBLogFilePortionRequest,
             com.amazonaws.handlers.AsyncHandler<DownloadDBLogFilePortionRequest, DownloadDBLogFilePortionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Enables the HTTP endpoint for the DB cluster. By default, the HTTP endpoint isn't enabled.
+     * </p>
+     * <p>
+     * When enabled, this endpoint provides a connectionless web service API (RDS Data API) for running SQL queries on
+     * the Aurora DB cluster. You can also query your database from inside the RDS console with the RDS query editor.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation applies only to Aurora PostgreSQL Serverless v2 and provisioned DB clusters. To enable the HTTP
+     * endpoint for Aurora Serverless v1 DB clusters, use the <code>EnableHttpEndpoint</code> parameter of the
+     * <code>ModifyDBCluster</code> operation.
+     * </p>
+     * </note>
+     * 
+     * @param enableHttpEndpointRequest
+     * @return A Java Future containing the result of the EnableHttpEndpoint operation returned by the service.
+     * @sample AmazonRDSAsync.EnableHttpEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/EnableHttpEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<EnableHttpEndpointResult> enableHttpEndpointAsync(EnableHttpEndpointRequest enableHttpEndpointRequest);
+
+    /**
+     * <p>
+     * Enables the HTTP endpoint for the DB cluster. By default, the HTTP endpoint isn't enabled.
+     * </p>
+     * <p>
+     * When enabled, this endpoint provides a connectionless web service API (RDS Data API) for running SQL queries on
+     * the Aurora DB cluster. You can also query your database from inside the RDS console with the RDS query editor.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation applies only to Aurora PostgreSQL Serverless v2 and provisioned DB clusters. To enable the HTTP
+     * endpoint for Aurora Serverless v1 DB clusters, use the <code>EnableHttpEndpoint</code> parameter of the
+     * <code>ModifyDBCluster</code> operation.
+     * </p>
+     * </note>
+     * 
+     * @param enableHttpEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the EnableHttpEndpoint operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.EnableHttpEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/EnableHttpEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<EnableHttpEndpointResult> enableHttpEndpointAsync(EnableHttpEndpointRequest enableHttpEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<EnableHttpEndpointRequest, EnableHttpEndpointResult> asyncHandler);
 
     /**
      * <p>

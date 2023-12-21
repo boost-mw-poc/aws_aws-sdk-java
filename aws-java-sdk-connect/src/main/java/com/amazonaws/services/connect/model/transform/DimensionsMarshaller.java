@@ -33,6 +33,8 @@ public class DimensionsMarshaller {
             .marshallLocationName("Channel").build();
     private static final MarshallingInfo<StructuredPojo> ROUTINGPROFILE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RoutingProfile").build();
+    private static final MarshallingInfo<String> ROUTINGSTEPEXPRESSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RoutingStepExpression").build();
 
     private static final DimensionsMarshaller instance = new DimensionsMarshaller();
 
@@ -53,6 +55,7 @@ public class DimensionsMarshaller {
             protocolMarshaller.marshall(dimensions.getQueue(), QUEUE_BINDING);
             protocolMarshaller.marshall(dimensions.getChannel(), CHANNEL_BINDING);
             protocolMarshaller.marshall(dimensions.getRoutingProfile(), ROUTINGPROFILE_BINDING);
+            protocolMarshaller.marshall(dimensions.getRoutingStepExpression(), ROUTINGSTEPEXPRESSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

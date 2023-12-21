@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.medialive.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -49,6 +50,8 @@ public class InputDeviceUhdSettingsMarshaller {
             .marshallLocationName("codec").build();
     private static final MarshallingInfo<StructuredPojo> MEDIACONNECTSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("mediaconnectSettings").build();
+    private static final MarshallingInfo<List> AUDIOCHANNELPAIRS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audioChannelPairs").build();
 
     private static final InputDeviceUhdSettingsMarshaller instance = new InputDeviceUhdSettingsMarshaller();
 
@@ -77,6 +80,7 @@ public class InputDeviceUhdSettingsMarshaller {
             protocolMarshaller.marshall(inputDeviceUhdSettings.getLatencyMs(), LATENCYMS_BINDING);
             protocolMarshaller.marshall(inputDeviceUhdSettings.getCodec(), CODEC_BINDING);
             protocolMarshaller.marshall(inputDeviceUhdSettings.getMediaconnectSettings(), MEDIACONNECTSETTINGS_BINDING);
+            protocolMarshaller.marshall(inputDeviceUhdSettings.getAudioChannelPairs(), AUDIOCHANNELPAIRS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

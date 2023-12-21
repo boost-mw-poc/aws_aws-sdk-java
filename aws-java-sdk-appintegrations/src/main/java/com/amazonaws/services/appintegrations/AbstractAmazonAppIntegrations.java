@@ -43,6 +43,11 @@ public class AbstractAmazonAppIntegrations implements AmazonAppIntegrations {
     }
 
     @Override
+    public DeleteApplicationResult deleteApplication(DeleteApplicationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteDataIntegrationResult deleteDataIntegration(DeleteDataIntegrationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -64,6 +69,11 @@ public class AbstractAmazonAppIntegrations implements AmazonAppIntegrations {
 
     @Override
     public GetEventIntegrationResult getEventIntegration(GetEventIntegrationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListApplicationAssociationsResult listApplicationAssociations(ListApplicationAssociationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

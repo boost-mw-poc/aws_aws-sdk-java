@@ -454,6 +454,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * &gt;Associates a set of proficiencies with a user.
+     * </p>
+     * 
+     * @param associateUserProficienciesRequest
+     * @return Result of the AssociateUserProficiencies operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.AssociateUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateUserProficiencies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateUserProficienciesResult associateUserProficiencies(AssociateUserProficienciesRequest associateUserProficienciesRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -891,6 +914,33 @@ public interface AmazonConnect {
      */
     CreatePersistentContactAssociationResult createPersistentContactAssociation(
             CreatePersistentContactAssociationRequest createPersistentContactAssociationRequest);
+
+    /**
+     * <p>
+     * Creates a new predefined attribute for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param createPredefinedAttributeRequest
+     * @return Result of the CreatePredefinedAttribute operation returned by the service.
+     * @throws DuplicateResourceException
+     *         A resource with the specified name already exists.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws LimitExceededException
+     *         The allowed limit for the resource has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.CreatePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreatePredefinedAttributeResult createPredefinedAttribute(CreatePredefinedAttributeRequest createPredefinedAttributeRequest);
 
     /**
      * <p>
@@ -1567,6 +1617,31 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Deletes a predefined attribute from the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deletePredefinedAttributeRequest
+     * @return Result of the DeletePredefinedAttribute operation returned by the service.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DeletePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeletePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeletePredefinedAttributeResult deletePredefinedAttribute(DeletePredefinedAttributeRequest deletePredefinedAttributeRequest);
+
+    /**
+     * <p>
      * Deletes a prompt.
      * </p>
      * 
@@ -2216,6 +2291,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Describes a predefined attribute for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describePredefinedAttributeRequest
+     * @return Result of the DescribePredefinedAttribute operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DescribePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribePredefinedAttributeResult describePredefinedAttribute(DescribePredefinedAttributeRequest describePredefinedAttributeRequest);
+
+    /**
+     * <p>
      * Describes the prompt.
      * </p>
      * 
@@ -2823,6 +2921,29 @@ public interface AmazonConnect {
      */
     DisassociateTrafficDistributionGroupUserResult disassociateTrafficDistributionGroupUser(
             DisassociateTrafficDistributionGroupUserRequest disassociateTrafficDistributionGroupUserRequest);
+
+    /**
+     * <p>
+     * Disassociates a set of proficiencies from a user.
+     * </p>
+     * 
+     * @param disassociateUserProficienciesRequest
+     * @return Result of the DisassociateUserProficiencies operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DisassociateUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateUserProficiencies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateUserProficienciesResult disassociateUserProficiencies(DisassociateUserProficienciesRequest disassociateUserProficienciesRequest);
 
     /**
      * <p>
@@ -3732,6 +3853,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Lists predefined attributes for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listPredefinedAttributesRequest
+     * @return Result of the ListPredefinedAttributes operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListPredefinedAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListPredefinedAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListPredefinedAttributesResult listPredefinedAttributes(ListPredefinedAttributesRequest listPredefinedAttributesRequest);
+
+    /**
+     * <p>
      * Provides information about the prompts for the specified Amazon Connect instance.
      * </p>
      * 
@@ -4185,6 +4329,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Lists proficiencies associated with a user.
+     * </p>
+     * 
+     * @param listUserProficienciesRequest
+     * @return Result of the ListUserProficiencies operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListUserProficiencies" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListUserProficienciesResult listUserProficiencies(ListUserProficienciesRequest listUserProficienciesRequest);
+
+    /**
+     * <p>
      * Provides summary information about the users for the specified Amazon Connect instance.
      * </p>
      * 
@@ -4519,6 +4686,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Searches contacts in an Amazon Connect instance.
+     * </p>
+     * 
+     * @param searchContactsRequest
+     * @return Result of the SearchContacts operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.SearchContacts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchContacts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    SearchContactsResult searchContacts(SearchContactsRequest searchContactsRequest);
+
+    /**
+     * <p>
      * Searches the hours of operation in an Amazon Connect instance, with optional filtering.
      * </p>
      * 
@@ -4539,6 +4729,29 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     SearchHoursOfOperationsResult searchHoursOfOperations(SearchHoursOfOperationsRequest searchHoursOfOperationsRequest);
+
+    /**
+     * <p>
+     * Predefined attributes that meet certain criteria.
+     * </p>
+     * 
+     * @param searchPredefinedAttributesRequest
+     * @return Result of the SearchPredefinedAttributes operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchPredefinedAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchPredefinedAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    SearchPredefinedAttributesResult searchPredefinedAttributes(SearchPredefinedAttributesRequest searchPredefinedAttributesRequest);
 
     /**
      * <p>
@@ -5678,6 +5891,42 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Updates routing priority and age on the contact (<b>QueuePriority</b> and <b>QueueTimeAdjustmentInSeconds</b>).
+     * These properties can be used to change a customer's position in the queue. For example, you can move a contact to
+     * the back of the queue by setting a lower routing priority relative to other contacts in queue; or you can move a
+     * contact to the front of the queue by increasing the routing age which will make the contact look artificially
+     * older and therefore higher up in the first-in-first-out routing order. Note that adjusting the routing age of a
+     * contact affects only its position in queue, and not its actual queue wait time as reported through metrics. These
+     * properties can also be updated by using <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/change-routing-priority.html">the Set routing
+     * priority / age flow block</a>.
+     * </p>
+     * 
+     * @param updateContactRoutingDataRequest
+     * @return Result of the UpdateContactRoutingData operation returned by the service.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.UpdateContactRoutingData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactRoutingData"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateContactRoutingDataResult updateContactRoutingData(UpdateContactRoutingDataRequest updateContactRoutingDataRequest);
+
+    /**
+     * <p>
      * Updates the scheduled time of a task contact that is already scheduled.
      * </p>
      * 
@@ -5940,6 +6189,29 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     UpdatePhoneNumberMetadataResult updatePhoneNumberMetadata(UpdatePhoneNumberMetadataRequest updatePhoneNumberMetadataRequest);
+
+    /**
+     * <p>
+     * Updates a predefined attribute for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param updatePredefinedAttributeRequest
+     * @return Result of the UpdatePredefinedAttribute operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.UpdatePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdatePredefinedAttributeResult updatePredefinedAttribute(UpdatePredefinedAttributeRequest updatePredefinedAttributeRequest);
 
     /**
      * <p>
@@ -6544,6 +6816,29 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     UpdateUserPhoneConfigResult updateUserPhoneConfig(UpdateUserPhoneConfigRequest updateUserPhoneConfigRequest);
+
+    /**
+     * <p>
+     * Updates the properties associated with the proficiencies of a user.
+     * </p>
+     * 
+     * @param updateUserProficienciesRequest
+     * @return Result of the UpdateUserProficiencies operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.UpdateUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserProficiencies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateUserProficienciesResult updateUserProficiencies(UpdateUserProficienciesRequest updateUserProficienciesRequest);
 
     /**
      * <p>

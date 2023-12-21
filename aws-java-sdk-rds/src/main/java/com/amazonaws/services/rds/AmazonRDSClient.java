@@ -589,6 +589,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("SNSTopicArnNotFound", new SNSTopicArnNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new SNSTopicArnNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidResourceStateFault") == null) {
+            exceptionUnmarshallersMap.put("InvalidResourceStateFault", new InvalidResourceStateExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new InvalidResourceStateExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("InvalidDBSubnetGroupFault") == null) {
             exceptionUnmarshallersMap.put("InvalidDBSubnetGroupFault", new InvalidDBSubnetGroupExceptionUnmarshaller());
         }
@@ -7760,6 +7764,78 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Disables the HTTP endpoint for the specified DB cluster. Disabling this endpoint disables RDS Data API.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation applies only to Aurora PostgreSQL Serverless v2 and provisioned DB clusters. To disable the HTTP
+     * endpoint for Aurora Serverless v1 DB clusters, use the <code>EnableHttpEndpoint</code> parameter of the
+     * <code>ModifyDBCluster</code> operation.
+     * </p>
+     * </note>
+     * 
+     * @param disableHttpEndpointRequest
+     * @return Result of the DisableHttpEndpoint operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ID was not found.
+     * @throws InvalidResourceStateException
+     *         The operation can't be performed because another operation is in progress.
+     * @sample AmazonRDS.DisableHttpEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DisableHttpEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DisableHttpEndpointResult disableHttpEndpoint(DisableHttpEndpointRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableHttpEndpoint(request);
+    }
+
+    @SdkInternalApi
+    final DisableHttpEndpointResult executeDisableHttpEndpoint(DisableHttpEndpointRequest disableHttpEndpointRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableHttpEndpointRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableHttpEndpointRequest> request = null;
+        Response<DisableHttpEndpointResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableHttpEndpointRequestMarshaller().marshall(super.beforeMarshalling(disableHttpEndpointRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableHttpEndpoint");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisableHttpEndpointResult> responseHandler = new StaxResponseHandler<DisableHttpEndpointResult>(
+                    new DisableHttpEndpointResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Downloads all or a portion of the specified log file, up to 1 MB in size.
      * </p>
      * <p>
@@ -7810,6 +7886,82 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
             StaxResponseHandler<DownloadDBLogFilePortionResult> responseHandler = new StaxResponseHandler<DownloadDBLogFilePortionResult>(
                     new DownloadDBLogFilePortionResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Enables the HTTP endpoint for the DB cluster. By default, the HTTP endpoint isn't enabled.
+     * </p>
+     * <p>
+     * When enabled, this endpoint provides a connectionless web service API (RDS Data API) for running SQL queries on
+     * the Aurora DB cluster. You can also query your database from inside the RDS console with the RDS query editor.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation applies only to Aurora PostgreSQL Serverless v2 and provisioned DB clusters. To enable the HTTP
+     * endpoint for Aurora Serverless v1 DB clusters, use the <code>EnableHttpEndpoint</code> parameter of the
+     * <code>ModifyDBCluster</code> operation.
+     * </p>
+     * </note>
+     * 
+     * @param enableHttpEndpointRequest
+     * @return Result of the EnableHttpEndpoint operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ID was not found.
+     * @throws InvalidResourceStateException
+     *         The operation can't be performed because another operation is in progress.
+     * @sample AmazonRDS.EnableHttpEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/EnableHttpEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public EnableHttpEndpointResult enableHttpEndpoint(EnableHttpEndpointRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableHttpEndpoint(request);
+    }
+
+    @SdkInternalApi
+    final EnableHttpEndpointResult executeEnableHttpEndpoint(EnableHttpEndpointRequest enableHttpEndpointRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableHttpEndpointRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableHttpEndpointRequest> request = null;
+        Response<EnableHttpEndpointResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableHttpEndpointRequestMarshaller().marshall(super.beforeMarshalling(enableHttpEndpointRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableHttpEndpoint");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<EnableHttpEndpointResult> responseHandler = new StaxResponseHandler<EnableHttpEndpointResult>(
+                    new EnableHttpEndpointResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

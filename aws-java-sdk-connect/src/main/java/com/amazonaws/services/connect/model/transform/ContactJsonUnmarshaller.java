@@ -128,6 +128,14 @@ public class ContactJsonUnmarshaller implements Unmarshaller<Contact, JsonUnmars
                     context.nextToken();
                     contact.setWisdomInfo(WisdomInfoJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("QueueTimeAdjustmentSeconds", targetDepth)) {
+                    context.nextToken();
+                    contact.setQueueTimeAdjustmentSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("QueuePriority", targetDepth)) {
+                    context.nextToken();
+                    contact.setQueuePriority(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     contact.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))

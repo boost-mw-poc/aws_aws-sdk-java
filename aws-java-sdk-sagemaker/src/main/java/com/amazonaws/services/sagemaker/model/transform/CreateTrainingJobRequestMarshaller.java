@@ -73,6 +73,8 @@ public class CreateTrainingJobRequestMarshaller {
             .marshallLocationName("Environment").build();
     private static final MarshallingInfo<StructuredPojo> RETRYSTRATEGY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RetryStrategy").build();
+    private static final MarshallingInfo<StructuredPojo> REMOTEDEBUGCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RemoteDebugConfig").build();
     private static final MarshallingInfo<StructuredPojo> INFRACHECKCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InfraCheckConfig").build();
 
@@ -114,6 +116,7 @@ public class CreateTrainingJobRequestMarshaller {
             protocolMarshaller.marshall(createTrainingJobRequest.getProfilerRuleConfigurations(), PROFILERRULECONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(createTrainingJobRequest.getEnvironment(), ENVIRONMENT_BINDING);
             protocolMarshaller.marshall(createTrainingJobRequest.getRetryStrategy(), RETRYSTRATEGY_BINDING);
+            protocolMarshaller.marshall(createTrainingJobRequest.getRemoteDebugConfig(), REMOTEDEBUGCONFIG_BINDING);
             protocolMarshaller.marshall(createTrainingJobRequest.getInfraCheckConfig(), INFRACHECKCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

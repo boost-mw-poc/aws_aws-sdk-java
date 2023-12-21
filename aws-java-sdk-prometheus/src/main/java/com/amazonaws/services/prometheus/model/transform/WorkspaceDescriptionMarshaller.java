@@ -43,6 +43,8 @@ public class WorkspaceDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> KMSKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("kmsKeyArn").build();
 
     private static final WorkspaceDescriptionMarshaller instance = new WorkspaceDescriptionMarshaller();
 
@@ -67,6 +69,7 @@ public class WorkspaceDescriptionMarshaller {
             protocolMarshaller.marshall(workspaceDescription.getPrometheusEndpoint(), PROMETHEUSENDPOINT_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(workspaceDescription.getKmsKeyArn(), KMSKEYARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

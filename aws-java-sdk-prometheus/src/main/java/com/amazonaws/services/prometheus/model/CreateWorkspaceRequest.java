@@ -47,6 +47,12 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * Optional, customer managed KMS key used to encrypt data for this workspace
+     * </p>
+     */
+    private String kmsKeyArn;
 
     /**
      * <p>
@@ -203,6 +209,46 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Optional, customer managed KMS key used to encrypt data for this workspace
+     * </p>
+     * 
+     * @param kmsKeyArn
+     *        Optional, customer managed KMS key used to encrypt data for this workspace
+     */
+
+    public void setKmsKeyArn(String kmsKeyArn) {
+        this.kmsKeyArn = kmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * Optional, customer managed KMS key used to encrypt data for this workspace
+     * </p>
+     * 
+     * @return Optional, customer managed KMS key used to encrypt data for this workspace
+     */
+
+    public String getKmsKeyArn() {
+        return this.kmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * Optional, customer managed KMS key used to encrypt data for this workspace
+     * </p>
+     * 
+     * @param kmsKeyArn
+     *        Optional, customer managed KMS key used to encrypt data for this workspace
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWorkspaceRequest withKmsKeyArn(String kmsKeyArn) {
+        setKmsKeyArn(kmsKeyArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -219,7 +265,9 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getKmsKeyArn() != null)
+            sb.append("KmsKeyArn: ").append(getKmsKeyArn());
         sb.append("}");
         return sb.toString();
     }
@@ -246,6 +294,10 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getKmsKeyArn() == null ^ this.getKmsKeyArn() == null)
+            return false;
+        if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
+            return false;
         return true;
     }
 
@@ -257,6 +309,7 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getAlias() == null) ? 0 : getAlias().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
         return hashCode;
     }
 

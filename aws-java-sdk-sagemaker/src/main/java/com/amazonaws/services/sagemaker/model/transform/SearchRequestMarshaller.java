@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -41,6 +42,8 @@ public class SearchRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> CROSSACCOUNTFILTEROPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrossAccountFilterOption").build();
+    private static final MarshallingInfo<List> VISIBILITYCONDITIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VisibilityConditions").build();
 
     private static final SearchRequestMarshaller instance = new SearchRequestMarshaller();
 
@@ -65,6 +68,7 @@ public class SearchRequestMarshaller {
             protocolMarshaller.marshall(searchRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(searchRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(searchRequest.getCrossAccountFilterOption(), CROSSACCOUNTFILTEROPTION_BINDING);
+            protocolMarshaller.marshall(searchRequest.getVisibilityConditions(), VISIBILITYCONDITIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -619,7 +619,17 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public DisableHttpEndpointResult disableHttpEndpoint(DisableHttpEndpointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DownloadDBLogFilePortionResult downloadDBLogFilePortion(DownloadDBLogFilePortionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableHttpEndpointResult enableHttpEndpoint(EnableHttpEndpointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

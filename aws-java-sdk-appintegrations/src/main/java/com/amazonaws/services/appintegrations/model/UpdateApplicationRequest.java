@@ -54,13 +54,21 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * The events that the application subscribes.
      * </p>
      */
+    @Deprecated
     private java.util.List<Subscription> subscriptions;
     /**
      * <p>
      * The events that the application publishes.
      * </p>
      */
+    @Deprecated
     private java.util.List<Publication> publications;
+    /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     */
+    private java.util.List<String> permissions;
 
     /**
      * <p>
@@ -229,7 +237,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @return The events that the application subscribes.
      */
-
+    @Deprecated
     public java.util.List<Subscription> getSubscriptions() {
         return subscriptions;
     }
@@ -242,7 +250,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * @param subscriptions
      *        The events that the application subscribes.
      */
-
+    @Deprecated
     public void setSubscriptions(java.util.Collection<Subscription> subscriptions) {
         if (subscriptions == null) {
             this.subscriptions = null;
@@ -266,7 +274,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        The events that the application subscribes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public UpdateApplicationRequest withSubscriptions(Subscription... subscriptions) {
         if (this.subscriptions == null) {
             setSubscriptions(new java.util.ArrayList<Subscription>(subscriptions.length));
@@ -286,7 +294,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        The events that the application subscribes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public UpdateApplicationRequest withSubscriptions(java.util.Collection<Subscription> subscriptions) {
         setSubscriptions(subscriptions);
         return this;
@@ -299,7 +307,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @return The events that the application publishes.
      */
-
+    @Deprecated
     public java.util.List<Publication> getPublications() {
         return publications;
     }
@@ -312,7 +320,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * @param publications
      *        The events that the application publishes.
      */
-
+    @Deprecated
     public void setPublications(java.util.Collection<Publication> publications) {
         if (publications == null) {
             this.publications = null;
@@ -336,7 +344,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        The events that the application publishes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public UpdateApplicationRequest withPublications(Publication... publications) {
         if (this.publications == null) {
             setPublications(new java.util.ArrayList<Publication>(publications.length));
@@ -356,9 +364,79 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        The events that the application publishes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public UpdateApplicationRequest withPublications(java.util.Collection<Publication> publications) {
         setPublications(publications);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     * 
+     * @return The configuration of events or requests that the application has access to.
+     */
+
+    public java.util.List<String> getPermissions() {
+        return permissions;
+    }
+
+    /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     * 
+     * @param permissions
+     *        The configuration of events or requests that the application has access to.
+     */
+
+    public void setPermissions(java.util.Collection<String> permissions) {
+        if (permissions == null) {
+            this.permissions = null;
+            return;
+        }
+
+        this.permissions = new java.util.ArrayList<String>(permissions);
+    }
+
+    /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPermissions(java.util.Collection)} or {@link #withPermissions(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param permissions
+     *        The configuration of events or requests that the application has access to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateApplicationRequest withPermissions(String... permissions) {
+        if (this.permissions == null) {
+            setPermissions(new java.util.ArrayList<String>(permissions.length));
+        }
+        for (String ele : permissions) {
+            this.permissions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     * 
+     * @param permissions
+     *        The configuration of events or requests that the application has access to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateApplicationRequest withPermissions(java.util.Collection<String> permissions) {
+        setPermissions(permissions);
         return this;
     }
 
@@ -385,7 +463,9 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getSubscriptions() != null)
             sb.append("Subscriptions: ").append(getSubscriptions()).append(",");
         if (getPublications() != null)
-            sb.append("Publications: ").append(getPublications());
+            sb.append("Publications: ").append(getPublications()).append(",");
+        if (getPermissions() != null)
+            sb.append("Permissions: ").append(getPermissions());
         sb.append("}");
         return sb.toString();
     }
@@ -424,6 +504,10 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getPublications() != null && other.getPublications().equals(this.getPublications()) == false)
             return false;
+        if (other.getPermissions() == null ^ this.getPermissions() == null)
+            return false;
+        if (other.getPermissions() != null && other.getPermissions().equals(this.getPermissions()) == false)
+            return false;
         return true;
     }
 
@@ -438,6 +522,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getApplicationSourceConfig() == null) ? 0 : getApplicationSourceConfig().hashCode());
         hashCode = prime * hashCode + ((getSubscriptions() == null) ? 0 : getSubscriptions().hashCode());
         hashCode = prime * hashCode + ((getPublications() == null) ? 0 : getPublications().hashCode());
+        hashCode = prime * hashCode + ((getPermissions() == null) ? 0 : getPermissions().hashCode());
         return hashCode;
     }
 

@@ -98,6 +98,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public AssociateUserProficienciesResult associateUserProficiencies(AssociateUserProficienciesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchAssociateAnalyticsDataSetResult batchAssociateAnalyticsDataSet(BatchAssociateAnalyticsDataSetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -164,6 +169,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public CreatePersistentContactAssociationResult createPersistentContactAssociation(CreatePersistentContactAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreatePredefinedAttributeResult createPredefinedAttribute(CreatePredefinedAttributeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -274,6 +284,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DeleteIntegrationAssociationResult deleteIntegrationAssociation(DeleteIntegrationAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeletePredefinedAttributeResult deletePredefinedAttribute(DeletePredefinedAttributeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -403,6 +418,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public DescribePredefinedAttributeResult describePredefinedAttribute(DescribePredefinedAttributeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribePromptResult describePrompt(DescribePromptRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -519,6 +539,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DisassociateTrafficDistributionGroupUserResult disassociateTrafficDistributionGroupUser(DisassociateTrafficDistributionGroupUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisassociateUserProficienciesResult disassociateUserProficiencies(DisassociateUserProficienciesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -688,6 +713,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public ListPredefinedAttributesResult listPredefinedAttributes(ListPredefinedAttributesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListPromptsResult listPrompts(ListPromptsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -778,6 +808,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public ListUserProficienciesResult listUserProficiencies(ListUserProficienciesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListUsersResult listUsers(ListUsersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -833,7 +868,17 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public SearchContactsResult searchContacts(SearchContactsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchHoursOfOperationsResult searchHoursOfOperations(SearchHoursOfOperationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchPredefinedAttributesResult searchPredefinedAttributes(SearchPredefinedAttributesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1013,6 +1058,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public UpdateContactRoutingDataResult updateContactRoutingData(UpdateContactRoutingDataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateContactScheduleResult updateContactSchedule(UpdateContactScheduleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1049,6 +1099,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public UpdatePhoneNumberMetadataResult updatePhoneNumberMetadata(UpdatePhoneNumberMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePredefinedAttributeResult updatePredefinedAttribute(UpdatePredefinedAttributeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1159,6 +1214,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public UpdateUserPhoneConfigResult updateUserPhoneConfig(UpdateUserPhoneConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateUserProficienciesResult updateUserProficiencies(UpdateUserProficienciesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

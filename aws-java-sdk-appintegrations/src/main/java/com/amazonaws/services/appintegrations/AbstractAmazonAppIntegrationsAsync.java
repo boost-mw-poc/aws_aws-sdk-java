@@ -67,6 +67,19 @@ public class AbstractAmazonAppIntegrationsAsync extends AbstractAmazonAppIntegra
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteApplicationResult> deleteApplicationAsync(DeleteApplicationRequest request) {
+
+        return deleteApplicationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteApplicationResult> deleteApplicationAsync(DeleteApplicationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteApplicationRequest, DeleteApplicationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteDataIntegrationResult> deleteDataIntegrationAsync(DeleteDataIntegrationRequest request) {
 
         return deleteDataIntegrationAsync(request, null);
@@ -127,6 +140,19 @@ public class AbstractAmazonAppIntegrationsAsync extends AbstractAmazonAppIntegra
     @Override
     public java.util.concurrent.Future<GetEventIntegrationResult> getEventIntegrationAsync(GetEventIntegrationRequest request,
             com.amazonaws.handlers.AsyncHandler<GetEventIntegrationRequest, GetEventIntegrationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListApplicationAssociationsResult> listApplicationAssociationsAsync(ListApplicationAssociationsRequest request) {
+
+        return listApplicationAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListApplicationAssociationsResult> listApplicationAssociationsAsync(ListApplicationAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListApplicationAssociationsRequest, ListApplicationAssociationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

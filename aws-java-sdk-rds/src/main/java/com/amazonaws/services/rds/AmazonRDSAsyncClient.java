@@ -3985,6 +3985,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<DisableHttpEndpointResult> disableHttpEndpointAsync(DisableHttpEndpointRequest request) {
+
+        return disableHttpEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableHttpEndpointResult> disableHttpEndpointAsync(final DisableHttpEndpointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableHttpEndpointRequest, DisableHttpEndpointResult> asyncHandler) {
+        final DisableHttpEndpointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableHttpEndpointResult>() {
+            @Override
+            public DisableHttpEndpointResult call() throws Exception {
+                DisableHttpEndpointResult result = null;
+
+                try {
+                    result = executeDisableHttpEndpoint(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DownloadDBLogFilePortionResult> downloadDBLogFilePortionAsync(DownloadDBLogFilePortionRequest request) {
 
         return downloadDBLogFilePortionAsync(request, null);
@@ -4002,6 +4035,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
 
                 try {
                     result = executeDownloadDBLogFilePortion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableHttpEndpointResult> enableHttpEndpointAsync(EnableHttpEndpointRequest request) {
+
+        return enableHttpEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableHttpEndpointResult> enableHttpEndpointAsync(final EnableHttpEndpointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableHttpEndpointRequest, EnableHttpEndpointResult> asyncHandler) {
+        final EnableHttpEndpointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableHttpEndpointResult>() {
+            @Override
+            public EnableHttpEndpointResult call() throws Exception {
+                EnableHttpEndpointResult result = null;
+
+                try {
+                    result = executeEnableHttpEndpoint(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

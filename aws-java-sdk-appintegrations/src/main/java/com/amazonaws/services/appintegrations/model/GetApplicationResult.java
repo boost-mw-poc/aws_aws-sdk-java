@@ -64,12 +64,14 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      * The events that the application subscribes.
      * </p>
      */
+    @Deprecated
     private java.util.List<Subscription> subscriptions;
     /**
      * <p>
      * The events that the application publishes.
      * </p>
      */
+    @Deprecated
     private java.util.List<Publication> publications;
     /**
      * <p>
@@ -90,6 +92,12 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     */
+    private java.util.List<String> permissions;
 
     /**
      * <p>
@@ -338,7 +346,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      * 
      * @return The events that the application subscribes.
      */
-
+    @Deprecated
     public java.util.List<Subscription> getSubscriptions() {
         return subscriptions;
     }
@@ -351,7 +359,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      * @param subscriptions
      *        The events that the application subscribes.
      */
-
+    @Deprecated
     public void setSubscriptions(java.util.Collection<Subscription> subscriptions) {
         if (subscriptions == null) {
             this.subscriptions = null;
@@ -375,7 +383,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      *        The events that the application subscribes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public GetApplicationResult withSubscriptions(Subscription... subscriptions) {
         if (this.subscriptions == null) {
             setSubscriptions(new java.util.ArrayList<Subscription>(subscriptions.length));
@@ -395,7 +403,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      *        The events that the application subscribes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public GetApplicationResult withSubscriptions(java.util.Collection<Subscription> subscriptions) {
         setSubscriptions(subscriptions);
         return this;
@@ -408,7 +416,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      * 
      * @return The events that the application publishes.
      */
-
+    @Deprecated
     public java.util.List<Publication> getPublications() {
         return publications;
     }
@@ -421,7 +429,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      * @param publications
      *        The events that the application publishes.
      */
-
+    @Deprecated
     public void setPublications(java.util.Collection<Publication> publications) {
         if (publications == null) {
             this.publications = null;
@@ -445,7 +453,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      *        The events that the application publishes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public GetApplicationResult withPublications(Publication... publications) {
         if (this.publications == null) {
             setPublications(new java.util.ArrayList<Publication>(publications.length));
@@ -465,7 +473,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
      *        The events that the application publishes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public GetApplicationResult withPublications(java.util.Collection<Publication> publications) {
         setPublications(publications);
         return this;
@@ -626,6 +634,76 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     * 
+     * @return The configuration of events or requests that the application has access to.
+     */
+
+    public java.util.List<String> getPermissions() {
+        return permissions;
+    }
+
+    /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     * 
+     * @param permissions
+     *        The configuration of events or requests that the application has access to.
+     */
+
+    public void setPermissions(java.util.Collection<String> permissions) {
+        if (permissions == null) {
+            this.permissions = null;
+            return;
+        }
+
+        this.permissions = new java.util.ArrayList<String>(permissions);
+    }
+
+    /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPermissions(java.util.Collection)} or {@link #withPermissions(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param permissions
+     *        The configuration of events or requests that the application has access to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetApplicationResult withPermissions(String... permissions) {
+        if (this.permissions == null) {
+            setPermissions(new java.util.ArrayList<String>(permissions.length));
+        }
+        for (String ele : permissions) {
+            this.permissions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration of events or requests that the application has access to.
+     * </p>
+     * 
+     * @param permissions
+     *        The configuration of events or requests that the application has access to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetApplicationResult withPermissions(java.util.Collection<String> permissions) {
+        setPermissions(permissions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -658,7 +736,9 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getPermissions() != null)
+            sb.append("Permissions: ").append(getPermissions());
         sb.append("}");
         return sb.toString();
     }
@@ -717,6 +797,10 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getPermissions() == null ^ this.getPermissions() == null)
+            return false;
+        if (other.getPermissions() != null && other.getPermissions().equals(this.getPermissions()) == false)
+            return false;
         return true;
     }
 
@@ -736,6 +820,7 @@ public class GetApplicationResult extends com.amazonaws.AmazonWebServiceResult<c
         hashCode = prime * hashCode + ((getCreatedTime() == null) ? 0 : getCreatedTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getPermissions() == null) ? 0 : getPermissions().hashCode());
         return hashCode;
     }
 

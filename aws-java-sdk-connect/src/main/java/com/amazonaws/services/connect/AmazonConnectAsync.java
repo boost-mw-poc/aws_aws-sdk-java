@@ -594,6 +594,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * &gt;Associates a set of proficiencies with a user.
+     * </p>
+     * 
+     * @param associateUserProficienciesRequest
+     * @return A Java Future containing the result of the AssociateUserProficiencies operation returned by the service.
+     * @sample AmazonConnectAsync.AssociateUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateUserProficiencies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateUserProficienciesResult> associateUserProficienciesAsync(
+            AssociateUserProficienciesRequest associateUserProficienciesRequest);
+
+    /**
+     * <p>
+     * &gt;Associates a set of proficiencies with a user.
+     * </p>
+     * 
+     * @param associateUserProficienciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateUserProficiencies operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.AssociateUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociateUserProficiencies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateUserProficienciesResult> associateUserProficienciesAsync(
+            AssociateUserProficienciesRequest associateUserProficienciesRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateUserProficienciesRequest, AssociateUserProficienciesResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -1207,6 +1240,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<CreatePersistentContactAssociationResult> createPersistentContactAssociationAsync(
             CreatePersistentContactAssociationRequest createPersistentContactAssociationRequest,
             com.amazonaws.handlers.AsyncHandler<CreatePersistentContactAssociationRequest, CreatePersistentContactAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new predefined attribute for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param createPredefinedAttributeRequest
+     * @return A Java Future containing the result of the CreatePredefinedAttribute operation returned by the service.
+     * @sample AmazonConnectAsync.CreatePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePredefinedAttributeResult> createPredefinedAttributeAsync(
+            CreatePredefinedAttributeRequest createPredefinedAttributeRequest);
+
+    /**
+     * <p>
+     * Creates a new predefined attribute for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param createPredefinedAttributeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePredefinedAttribute operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.CreatePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreatePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePredefinedAttributeResult> createPredefinedAttributeAsync(
+            CreatePredefinedAttributeRequest createPredefinedAttributeRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePredefinedAttributeRequest, CreatePredefinedAttributeResult> asyncHandler);
 
     /**
      * <p>
@@ -2126,6 +2192,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Deletes a predefined attribute from the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deletePredefinedAttributeRequest
+     * @return A Java Future containing the result of the DeletePredefinedAttribute operation returned by the service.
+     * @sample AmazonConnectAsync.DeletePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeletePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePredefinedAttributeResult> deletePredefinedAttributeAsync(
+            DeletePredefinedAttributeRequest deletePredefinedAttributeRequest);
+
+    /**
+     * <p>
+     * Deletes a predefined attribute from the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deletePredefinedAttributeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePredefinedAttribute operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DeletePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeletePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePredefinedAttributeResult> deletePredefinedAttributeAsync(
+            DeletePredefinedAttributeRequest deletePredefinedAttributeRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePredefinedAttributeRequest, DeletePredefinedAttributeResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a prompt.
      * </p>
      * 
@@ -3035,6 +3134,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Describes a predefined attribute for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describePredefinedAttributeRequest
+     * @return A Java Future containing the result of the DescribePredefinedAttribute operation returned by the service.
+     * @sample AmazonConnectAsync.DescribePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePredefinedAttributeResult> describePredefinedAttributeAsync(
+            DescribePredefinedAttributeRequest describePredefinedAttributeRequest);
+
+    /**
+     * <p>
+     * Describes a predefined attribute for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describePredefinedAttributeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribePredefinedAttribute operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DescribePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePredefinedAttributeResult> describePredefinedAttributeAsync(
+            DescribePredefinedAttributeRequest describePredefinedAttributeRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribePredefinedAttributeRequest, DescribePredefinedAttributeResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the prompt.
      * </p>
      * 
@@ -3918,6 +4050,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<DisassociateTrafficDistributionGroupUserResult> disassociateTrafficDistributionGroupUserAsync(
             DisassociateTrafficDistributionGroupUserRequest disassociateTrafficDistributionGroupUserRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateTrafficDistributionGroupUserRequest, DisassociateTrafficDistributionGroupUserResult> asyncHandler);
+
+    /**
+     * <p>
+     * Disassociates a set of proficiencies from a user.
+     * </p>
+     * 
+     * @param disassociateUserProficienciesRequest
+     * @return A Java Future containing the result of the DisassociateUserProficiencies operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.DisassociateUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateUserProficiencies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateUserProficienciesResult> disassociateUserProficienciesAsync(
+            DisassociateUserProficienciesRequest disassociateUserProficienciesRequest);
+
+    /**
+     * <p>
+     * Disassociates a set of proficiencies from a user.
+     * </p>
+     * 
+     * @param disassociateUserProficienciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateUserProficiencies operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.DisassociateUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociateUserProficiencies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateUserProficienciesResult> disassociateUserProficienciesAsync(
+            DisassociateUserProficienciesRequest disassociateUserProficienciesRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateUserProficienciesRequest, DisassociateUserProficienciesResult> asyncHandler);
 
     /**
      * <p>
@@ -5268,6 +5435,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Lists predefined attributes for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listPredefinedAttributesRequest
+     * @return A Java Future containing the result of the ListPredefinedAttributes operation returned by the service.
+     * @sample AmazonConnectAsync.ListPredefinedAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListPredefinedAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPredefinedAttributesResult> listPredefinedAttributesAsync(ListPredefinedAttributesRequest listPredefinedAttributesRequest);
+
+    /**
+     * <p>
+     * Lists predefined attributes for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listPredefinedAttributesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListPredefinedAttributes operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListPredefinedAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListPredefinedAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPredefinedAttributesResult> listPredefinedAttributesAsync(ListPredefinedAttributesRequest listPredefinedAttributesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListPredefinedAttributesRequest, ListPredefinedAttributesResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides information about the prompts for the specified Amazon Connect instance.
      * </p>
      * 
@@ -5922,6 +6120,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Lists proficiencies associated with a user.
+     * </p>
+     * 
+     * @param listUserProficienciesRequest
+     * @return A Java Future containing the result of the ListUserProficiencies operation returned by the service.
+     * @sample AmazonConnectAsync.ListUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListUserProficiencies" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListUserProficienciesResult> listUserProficienciesAsync(ListUserProficienciesRequest listUserProficienciesRequest);
+
+    /**
+     * <p>
+     * Lists proficiencies associated with a user.
+     * </p>
+     * 
+     * @param listUserProficienciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListUserProficiencies operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListUserProficiencies" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListUserProficienciesResult> listUserProficienciesAsync(ListUserProficienciesRequest listUserProficienciesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListUserProficienciesRequest, ListUserProficienciesResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides summary information about the users for the specified Amazon Connect instance.
      * </p>
      * 
@@ -6375,6 +6604,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Searches contacts in an Amazon Connect instance.
+     * </p>
+     * 
+     * @param searchContactsRequest
+     * @return A Java Future containing the result of the SearchContacts operation returned by the service.
+     * @sample AmazonConnectAsync.SearchContacts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchContacts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchContactsResult> searchContactsAsync(SearchContactsRequest searchContactsRequest);
+
+    /**
+     * <p>
+     * Searches contacts in an Amazon Connect instance.
+     * </p>
+     * 
+     * @param searchContactsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchContacts operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchContacts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchContacts" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchContactsResult> searchContactsAsync(SearchContactsRequest searchContactsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchContactsRequest, SearchContactsResult> asyncHandler);
+
+    /**
+     * <p>
      * Searches the hours of operation in an Amazon Connect instance, with optional filtering.
      * </p>
      * 
@@ -6403,6 +6663,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<SearchHoursOfOperationsResult> searchHoursOfOperationsAsync(SearchHoursOfOperationsRequest searchHoursOfOperationsRequest,
             com.amazonaws.handlers.AsyncHandler<SearchHoursOfOperationsRequest, SearchHoursOfOperationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Predefined attributes that meet certain criteria.
+     * </p>
+     * 
+     * @param searchPredefinedAttributesRequest
+     * @return A Java Future containing the result of the SearchPredefinedAttributes operation returned by the service.
+     * @sample AmazonConnectAsync.SearchPredefinedAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchPredefinedAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchPredefinedAttributesResult> searchPredefinedAttributesAsync(
+            SearchPredefinedAttributesRequest searchPredefinedAttributesRequest);
+
+    /**
+     * <p>
+     * Predefined attributes that meet certain criteria.
+     * </p>
+     * 
+     * @param searchPredefinedAttributesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchPredefinedAttributes operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchPredefinedAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchPredefinedAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchPredefinedAttributesResult> searchPredefinedAttributesAsync(
+            SearchPredefinedAttributesRequest searchPredefinedAttributesRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchPredefinedAttributesRequest, SearchPredefinedAttributesResult> asyncHandler);
 
     /**
      * <p>
@@ -8133,6 +8426,59 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Updates routing priority and age on the contact (<b>QueuePriority</b> and <b>QueueTimeAdjustmentInSeconds</b>).
+     * These properties can be used to change a customer's position in the queue. For example, you can move a contact to
+     * the back of the queue by setting a lower routing priority relative to other contacts in queue; or you can move a
+     * contact to the front of the queue by increasing the routing age which will make the contact look artificially
+     * older and therefore higher up in the first-in-first-out routing order. Note that adjusting the routing age of a
+     * contact affects only its position in queue, and not its actual queue wait time as reported through metrics. These
+     * properties can also be updated by using <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/change-routing-priority.html">the Set routing
+     * priority / age flow block</a>.
+     * </p>
+     * 
+     * @param updateContactRoutingDataRequest
+     * @return A Java Future containing the result of the UpdateContactRoutingData operation returned by the service.
+     * @sample AmazonConnectAsync.UpdateContactRoutingData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactRoutingData"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContactRoutingDataResult> updateContactRoutingDataAsync(UpdateContactRoutingDataRequest updateContactRoutingDataRequest);
+
+    /**
+     * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
+     * Updates routing priority and age on the contact (<b>QueuePriority</b> and <b>QueueTimeAdjustmentInSeconds</b>).
+     * These properties can be used to change a customer's position in the queue. For example, you can move a contact to
+     * the back of the queue by setting a lower routing priority relative to other contacts in queue; or you can move a
+     * contact to the front of the queue by increasing the routing age which will make the contact look artificially
+     * older and therefore higher up in the first-in-first-out routing order. Note that adjusting the routing age of a
+     * contact affects only its position in queue, and not its actual queue wait time as reported through metrics. These
+     * properties can also be updated by using <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/change-routing-priority.html">the Set routing
+     * priority / age flow block</a>.
+     * </p>
+     * 
+     * @param updateContactRoutingDataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateContactRoutingData operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateContactRoutingData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactRoutingData"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContactRoutingDataResult> updateContactRoutingDataAsync(UpdateContactRoutingDataRequest updateContactRoutingDataRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateContactRoutingDataRequest, UpdateContactRoutingDataResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates the scheduled time of a task contact that is already scheduled.
      * </p>
      * 
@@ -8510,6 +8856,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<UpdatePhoneNumberMetadataResult> updatePhoneNumberMetadataAsync(
             UpdatePhoneNumberMetadataRequest updatePhoneNumberMetadataRequest,
             com.amazonaws.handlers.AsyncHandler<UpdatePhoneNumberMetadataRequest, UpdatePhoneNumberMetadataResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a predefined attribute for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param updatePredefinedAttributeRequest
+     * @return A Java Future containing the result of the UpdatePredefinedAttribute operation returned by the service.
+     * @sample AmazonConnectAsync.UpdatePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePredefinedAttributeResult> updatePredefinedAttributeAsync(
+            UpdatePredefinedAttributeRequest updatePredefinedAttributeRequest);
+
+    /**
+     * <p>
+     * Updates a predefined attribute for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param updatePredefinedAttributeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdatePredefinedAttribute operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdatePredefinedAttribute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePredefinedAttribute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePredefinedAttributeResult> updatePredefinedAttributeAsync(
+            UpdatePredefinedAttributeRequest updatePredefinedAttributeRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdatePredefinedAttributeRequest, UpdatePredefinedAttributeResult> asyncHandler);
 
     /**
      * <p>
@@ -9386,6 +9765,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<UpdateUserPhoneConfigResult> updateUserPhoneConfigAsync(UpdateUserPhoneConfigRequest updateUserPhoneConfigRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateUserPhoneConfigRequest, UpdateUserPhoneConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the properties associated with the proficiencies of a user.
+     * </p>
+     * 
+     * @param updateUserProficienciesRequest
+     * @return A Java Future containing the result of the UpdateUserProficiencies operation returned by the service.
+     * @sample AmazonConnectAsync.UpdateUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserProficiencies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateUserProficienciesResult> updateUserProficienciesAsync(UpdateUserProficienciesRequest updateUserProficienciesRequest);
+
+    /**
+     * <p>
+     * Updates the properties associated with the proficiencies of a user.
+     * </p>
+     * 
+     * @param updateUserProficienciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateUserProficiencies operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateUserProficiencies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateUserProficiencies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateUserProficienciesResult> updateUserProficienciesAsync(UpdateUserProficienciesRequest updateUserProficienciesRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateUserProficienciesRequest, UpdateUserProficienciesResult> asyncHandler);
 
     /**
      * <p>

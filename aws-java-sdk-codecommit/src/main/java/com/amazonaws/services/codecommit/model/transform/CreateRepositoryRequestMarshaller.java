@@ -35,6 +35,8 @@ public class CreateRepositoryRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("repositoryDescription").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> KMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("kmsKeyId").build();
 
     private static final CreateRepositoryRequestMarshaller instance = new CreateRepositoryRequestMarshaller();
 
@@ -55,6 +57,7 @@ public class CreateRepositoryRequestMarshaller {
             protocolMarshaller.marshall(createRepositoryRequest.getRepositoryName(), REPOSITORYNAME_BINDING);
             protocolMarshaller.marshall(createRepositoryRequest.getRepositoryDescription(), REPOSITORYDESCRIPTION_BINDING);
             protocolMarshaller.marshall(createRepositoryRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createRepositoryRequest.getKmsKeyId(), KMSKEYID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

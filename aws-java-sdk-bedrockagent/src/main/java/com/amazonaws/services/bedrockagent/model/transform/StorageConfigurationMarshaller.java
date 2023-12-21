@@ -35,6 +35,8 @@ public class StorageConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pineconeConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> REDISENTERPRISECLOUDCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("redisEnterpriseCloudConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> RDSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rdsConfiguration").build();
 
     private static final StorageConfigurationMarshaller instance = new StorageConfigurationMarshaller();
 
@@ -56,6 +58,7 @@ public class StorageConfigurationMarshaller {
             protocolMarshaller.marshall(storageConfiguration.getOpensearchServerlessConfiguration(), OPENSEARCHSERVERLESSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(storageConfiguration.getPineconeConfiguration(), PINECONECONFIGURATION_BINDING);
             protocolMarshaller.marshall(storageConfiguration.getRedisEnterpriseCloudConfiguration(), REDISENTERPRISECLOUDCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(storageConfiguration.getRdsConfiguration(), RDSCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

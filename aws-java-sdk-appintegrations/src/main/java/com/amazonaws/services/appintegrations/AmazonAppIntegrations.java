@@ -69,6 +69,8 @@ public interface AmazonAppIntegrations {
      *         The request is not valid.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
+     * @throws UnsupportedOperationException
+     *         The operation is not supported.
      * @sample AmazonAppIntegrations.CreateApplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/CreateApplication"
      *      target="_top">AWS API Documentation</a>
@@ -132,6 +134,29 @@ public interface AmazonAppIntegrations {
      *      target="_top">AWS API Documentation</a>
      */
     CreateEventIntegrationResult createEventIntegration(CreateEventIntegrationRequest createEventIntegrationRequest);
+
+    /**
+     * <p>
+     * Deletes the Application. Only Applications that don't have any Application Associations can be deleted.
+     * </p>
+     * 
+     * @param deleteApplicationRequest
+     * @return Result of the DeleteApplication operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.DeleteApplication
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/DeleteApplication"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteApplicationResult deleteApplication(DeleteApplicationRequest deleteApplicationRequest);
 
     /**
      * <p>
@@ -268,6 +293,29 @@ public interface AmazonAppIntegrations {
      *      target="_top">AWS API Documentation</a>
      */
     GetEventIntegrationResult getEventIntegration(GetEventIntegrationRequest getEventIntegrationRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of application associations for an application.
+     * </p>
+     * 
+     * @param listApplicationAssociationsRequest
+     * @return Result of the ListApplicationAssociations operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.ListApplicationAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListApplicationAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListApplicationAssociationsResult listApplicationAssociations(ListApplicationAssociationsRequest listApplicationAssociationsRequest);
 
     /**
      * <p>
@@ -480,6 +528,8 @@ public interface AmazonAppIntegrations {
      *         The request is not valid.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
+     * @throws UnsupportedOperationException
+     *         The operation is not supported.
      * @sample AmazonAppIntegrations.UpdateApplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/UpdateApplication"
      *      target="_top">AWS API Documentation</a>

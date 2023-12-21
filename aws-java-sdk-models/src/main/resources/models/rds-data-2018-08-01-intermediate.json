@@ -57,7 +57,7 @@
     "defaultEndpoint" : "rds-data.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "rds-data.us-east-1.amazonaws.com",
     "defaultRegion" : null,
-    "documentation" : "<p><fullname>Amazon RDS Data Service</fullname> <p>Amazon RDS provides an HTTP endpoint to run SQL statements on an Amazon Aurora Serverless v1 DB cluster. To run these statements, you work with the Data Service API.</p> <note> <p>The Data Service API isn't supported on Amazon Aurora Serverless v2 DB clusters.</p> </note> <p>For more information about the Data Service API, see <a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html\">Using the Data API</a> in the <i>Amazon Aurora User Guide</i>.</p></p>",
+    "documentation" : "<p><fullname>RDS Data API</fullname> <p>Amazon RDS provides an HTTP endpoint to run SQL statements on an Amazon Aurora DB cluster. To run these statements, you use the RDS Data API (Data API).</p> <p>Data API is available with the following types of Aurora databases:</p> <ul> <li> <p>Aurora PostgreSQL - Serverless v2, Serverless v1, and provisioned</p> </li> <li> <p>Aurora MySQL - Serverless v1 only</p> </li> </ul> <p>For more information about the Data API, see <a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html\">Using RDS Data API</a> in the <i>Amazon Aurora User Guide</i>.</p></p>",
     "endpointPrefix" : "rds-data",
     "hasApiWithStreamInput" : false,
     "ionProtocol" : false,
@@ -99,12 +99,48 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "SecretsErrorException",
+        "documentation" : "<p>There was a problem with the Secrets Manager secret used with the request, caused by one of the following conditions:</p> <ul> <li> <p>RDS Data API timed out retrieving the secret.</p> </li> <li> <p>The secret provided wasn't found.</p> </li> <li> <p>The secret couldn't be decrypted.</p> </li> </ul>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "HttpEndpointNotEnabledException",
+        "documentation" : "<p>The HTTP endpoint for using RDS Data API isn't enabled for the DB cluster.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseErrorException",
+        "documentation" : "<p>There was an error in processing the SQL statement.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseUnavailableException",
+        "documentation" : "<p>The writer instance in the DB cluster isn't available.</p>",
+        "httpStatusCode" : 504
+      }, {
+        "exceptionName" : "TransactionNotFoundException",
+        "documentation" : "<p>The transaction ID wasn't found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "InvalidSecretException",
+        "documentation" : "<p>The Secrets Manager secret used with the request isn't valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "ServiceUnavailableErrorException",
+        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter isn't available.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "DatabaseNotFoundException",
+        "documentation" : "<p>The DB cluster doesn't have a DB instance.</p>",
+        "httpStatusCode" : 404
+      }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>You do not have sufficient access to perform this action.</p>",
+        "documentation" : "<p>You don't have sufficient access to perform this action.</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "BadRequestException",
-        "documentation" : "<p>There is an error in the call or in a SQL statement.</p>",
+        "documentation" : "<p>There is an error in the call or in a SQL statement. (This error only appears in calls from Aurora Serverless v1 databases.)</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "StatementTimeoutException",
@@ -114,14 +150,6 @@
         "exceptionName" : "InternalServerErrorException",
         "documentation" : "<p>An internal error occurred.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "ForbiddenException",
-        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ServiceUnavailableErrorException",
-        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter is not available.</p>",
-        "httpStatusCode" : 503
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -156,12 +184,48 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "SecretsErrorException",
+        "documentation" : "<p>There was a problem with the Secrets Manager secret used with the request, caused by one of the following conditions:</p> <ul> <li> <p>RDS Data API timed out retrieving the secret.</p> </li> <li> <p>The secret provided wasn't found.</p> </li> <li> <p>The secret couldn't be decrypted.</p> </li> </ul>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "HttpEndpointNotEnabledException",
+        "documentation" : "<p>The HTTP endpoint for using RDS Data API isn't enabled for the DB cluster.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseErrorException",
+        "documentation" : "<p>There was an error in processing the SQL statement.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseUnavailableException",
+        "documentation" : "<p>The writer instance in the DB cluster isn't available.</p>",
+        "httpStatusCode" : 504
+      }, {
+        "exceptionName" : "TransactionNotFoundException",
+        "documentation" : "<p>The transaction ID wasn't found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "InvalidSecretException",
+        "documentation" : "<p>The Secrets Manager secret used with the request isn't valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "ServiceUnavailableErrorException",
+        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter isn't available.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "DatabaseNotFoundException",
+        "documentation" : "<p>The DB cluster doesn't have a DB instance.</p>",
+        "httpStatusCode" : 404
+      }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>You do not have sufficient access to perform this action.</p>",
+        "documentation" : "<p>You don't have sufficient access to perform this action.</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "BadRequestException",
-        "documentation" : "<p>There is an error in the call or in a SQL statement.</p>",
+        "documentation" : "<p>There is an error in the call or in a SQL statement. (This error only appears in calls from Aurora Serverless v1 databases.)</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "StatementTimeoutException",
@@ -171,14 +235,6 @@
         "exceptionName" : "InternalServerErrorException",
         "documentation" : "<p>An internal error occurred.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "ForbiddenException",
-        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ServiceUnavailableErrorException",
-        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter is not available.</p>",
-        "httpStatusCode" : 503
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -213,12 +269,48 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "SecretsErrorException",
+        "documentation" : "<p>There was a problem with the Secrets Manager secret used with the request, caused by one of the following conditions:</p> <ul> <li> <p>RDS Data API timed out retrieving the secret.</p> </li> <li> <p>The secret provided wasn't found.</p> </li> <li> <p>The secret couldn't be decrypted.</p> </li> </ul>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "HttpEndpointNotEnabledException",
+        "documentation" : "<p>The HTTP endpoint for using RDS Data API isn't enabled for the DB cluster.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseErrorException",
+        "documentation" : "<p>There was an error in processing the SQL statement.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseUnavailableException",
+        "documentation" : "<p>The writer instance in the DB cluster isn't available.</p>",
+        "httpStatusCode" : 504
+      }, {
+        "exceptionName" : "TransactionNotFoundException",
+        "documentation" : "<p>The transaction ID wasn't found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "InvalidSecretException",
+        "documentation" : "<p>The Secrets Manager secret used with the request isn't valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "ServiceUnavailableErrorException",
+        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter isn't available.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "DatabaseNotFoundException",
+        "documentation" : "<p>The DB cluster doesn't have a DB instance.</p>",
+        "httpStatusCode" : 404
+      }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>You do not have sufficient access to perform this action.</p>",
+        "documentation" : "<p>You don't have sufficient access to perform this action.</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "BadRequestException",
-        "documentation" : "<p>There is an error in the call or in a SQL statement.</p>",
+        "documentation" : "<p>There is an error in the call or in a SQL statement. (This error only appears in calls from Aurora Serverless v1 databases.)</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "StatementTimeoutException",
@@ -228,14 +320,6 @@
         "exceptionName" : "InternalServerErrorException",
         "documentation" : "<p>An internal error occurred.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "ForbiddenException",
-        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ServiceUnavailableErrorException",
-        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter is not available.</p>",
-        "httpStatusCode" : 503
       }, {
         "exceptionName" : "NotFoundException",
         "documentation" : "<p>The <code>resourceArn</code>, <code>secretArn</code>, or <code>transactionId</code> value can't be found.</p>",
@@ -268,18 +352,18 @@
       "asyncReturnType" : "ExecuteSqlResult",
       "authenticated" : true,
       "deprecated" : true,
-      "documentation" : "<p>Runs one or more SQL statements.</p> <note> <p>This operation is deprecated. Use the <code>BatchExecuteStatement</code> or <code>ExecuteStatement</code> operation.</p> </note>",
+      "documentation" : "<p>Runs one or more SQL statements.</p> <note> <p>This operation isn't supported for Aurora PostgreSQL Serverless v2 and provisioned DB clusters, and for Aurora Serverless v1 DB clusters, the operation is deprecated. Use the <code>BatchExecuteStatement</code> or <code>ExecuteStatement</code> operation.</p> </note>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>You do not have sufficient access to perform this action.</p>",
+        "documentation" : "<p>You don't have sufficient access to perform this action.</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "BadRequestException",
-        "documentation" : "<p>There is an error in the call or in a SQL statement.</p>",
+        "documentation" : "<p>There is an error in the call or in a SQL statement. (This error only appears in calls from Aurora Serverless v1 databases.)</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerErrorException",
@@ -291,7 +375,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ServiceUnavailableErrorException",
-        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter is not available.</p>",
+        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter isn't available.</p>",
         "httpStatusCode" : 503
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -327,12 +411,48 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "SecretsErrorException",
+        "documentation" : "<p>There was a problem with the Secrets Manager secret used with the request, caused by one of the following conditions:</p> <ul> <li> <p>RDS Data API timed out retrieving the secret.</p> </li> <li> <p>The secret provided wasn't found.</p> </li> <li> <p>The secret couldn't be decrypted.</p> </li> </ul>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "HttpEndpointNotEnabledException",
+        "documentation" : "<p>The HTTP endpoint for using RDS Data API isn't enabled for the DB cluster.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseErrorException",
+        "documentation" : "<p>There was an error in processing the SQL statement.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseUnavailableException",
+        "documentation" : "<p>The writer instance in the DB cluster isn't available.</p>",
+        "httpStatusCode" : 504
+      }, {
+        "exceptionName" : "TransactionNotFoundException",
+        "documentation" : "<p>The transaction ID wasn't found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "InvalidSecretException",
+        "documentation" : "<p>The Secrets Manager secret used with the request isn't valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "ServiceUnavailableErrorException",
+        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter isn't available.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "DatabaseNotFoundException",
+        "documentation" : "<p>The DB cluster doesn't have a DB instance.</p>",
+        "httpStatusCode" : 404
+      }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>You do not have sufficient access to perform this action.</p>",
+        "documentation" : "<p>You don't have sufficient access to perform this action.</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "BadRequestException",
-        "documentation" : "<p>There is an error in the call or in a SQL statement.</p>",
+        "documentation" : "<p>There is an error in the call or in a SQL statement. (This error only appears in calls from Aurora Serverless v1 databases.)</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "StatementTimeoutException",
@@ -343,13 +463,9 @@
         "documentation" : "<p>An internal error occurred.</p>",
         "httpStatusCode" : 500
       }, {
-        "exceptionName" : "ForbiddenException",
-        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ServiceUnavailableErrorException",
-        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter is not available.</p>",
-        "httpStatusCode" : 503
+        "exceptionName" : "UnsupportedResultException",
+        "documentation" : "<p>There was a problem with the result because of one of the following conditions:</p> <ul> <li> <p>It contained an unsupported data type.</p> </li> <li> <p>It contained a multidimensional array.</p> </li> <li> <p>The size was too large.</p> </li> </ul>",
+        "httpStatusCode" : 400
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -384,12 +500,48 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "SecretsErrorException",
+        "documentation" : "<p>There was a problem with the Secrets Manager secret used with the request, caused by one of the following conditions:</p> <ul> <li> <p>RDS Data API timed out retrieving the secret.</p> </li> <li> <p>The secret provided wasn't found.</p> </li> <li> <p>The secret couldn't be decrypted.</p> </li> </ul>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "HttpEndpointNotEnabledException",
+        "documentation" : "<p>The HTTP endpoint for using RDS Data API isn't enabled for the DB cluster.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseErrorException",
+        "documentation" : "<p>There was an error in processing the SQL statement.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "DatabaseUnavailableException",
+        "documentation" : "<p>The writer instance in the DB cluster isn't available.</p>",
+        "httpStatusCode" : 504
+      }, {
+        "exceptionName" : "TransactionNotFoundException",
+        "documentation" : "<p>The transaction ID wasn't found.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "InvalidSecretException",
+        "documentation" : "<p>The Secrets Manager secret used with the request isn't valid.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "ServiceUnavailableErrorException",
+        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter isn't available.</p>",
+        "httpStatusCode" : 503
+      }, {
+        "exceptionName" : "ForbiddenException",
+        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "DatabaseNotFoundException",
+        "documentation" : "<p>The DB cluster doesn't have a DB instance.</p>",
+        "httpStatusCode" : 404
+      }, {
         "exceptionName" : "AccessDeniedException",
-        "documentation" : "<p>You do not have sufficient access to perform this action.</p>",
+        "documentation" : "<p>You don't have sufficient access to perform this action.</p>",
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "BadRequestException",
-        "documentation" : "<p>There is an error in the call or in a SQL statement.</p>",
+        "documentation" : "<p>There is an error in the call or in a SQL statement. (This error only appears in calls from Aurora Serverless v1 databases.)</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "StatementTimeoutException",
@@ -399,14 +551,6 @@
         "exceptionName" : "InternalServerErrorException",
         "documentation" : "<p>An internal error occurred.</p>",
         "httpStatusCode" : 500
-      }, {
-        "exceptionName" : "ForbiddenException",
-        "documentation" : "<p>There are insufficient privileges to make the call.</p>",
-        "httpStatusCode" : 403
-      }, {
-        "exceptionName" : "ServiceUnavailableErrorException",
-        "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter is not available.</p>",
-        "httpStatusCode" : 503
       }, {
         "exceptionName" : "NotFoundException",
         "documentation" : "<p>The <code>resourceArn</code>, <code>secretArn</code>, or <code>transactionId</code> value can't be found.</p>",
@@ -443,7 +587,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>You do not have sufficient access to perform this action.</p>",
+      "documentation" : "<p>You don't have sufficient access to perform this action.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "AccessDeniedException",
@@ -2064,7 +2208,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>There is an error in the call or in a SQL statement.</p>",
+      "documentation" : "<p>There is an error in the call or in a SQL statement. (This error only appears in calls from Aurora Serverless v1 databases.)</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "BadRequestException",
@@ -7236,6 +7380,129 @@
       },
       "wrapper" : false
     },
+    "DatabaseErrorException" : {
+      "c2jName" : "DatabaseErrorException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>There was an error in processing the SQL statement.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "DatabaseErrorException",
+      "fullyQualifiedName" : "com.amazonaws.services.rdsdata.exception.DatabaseErrorException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.rdsdata.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "DatabaseErrorException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "DatabaseErrorException",
+        "variableName" : "databaseErrorException",
+        "variableType" : "DatabaseErrorException",
+        "documentation" : null,
+        "simpleType" : "DatabaseErrorException",
+        "variableSetterType" : "DatabaseErrorException"
+      },
+      "wrapper" : false
+    },
+    "DatabaseNotFoundException" : {
+      "c2jName" : "DatabaseNotFoundException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The DB cluster doesn't have a DB instance.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "DatabaseNotFoundException",
+      "fullyQualifiedName" : "com.amazonaws.services.rdsdata.exception.DatabaseNotFoundException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.rdsdata.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "DatabaseNotFoundException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "DatabaseNotFoundException",
+        "variableName" : "databaseNotFoundException",
+        "variableType" : "DatabaseNotFoundException",
+        "documentation" : null,
+        "simpleType" : "DatabaseNotFoundException",
+        "variableSetterType" : "DatabaseNotFoundException"
+      },
+      "wrapper" : false
+    },
+    "DatabaseUnavailableException" : {
+      "c2jName" : "DatabaseUnavailableException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The writer instance in the DB cluster isn't available.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "DatabaseUnavailableException",
+      "fullyQualifiedName" : "com.amazonaws.services.rdsdata.exception.DatabaseUnavailableException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.rdsdata.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "DatabaseUnavailableException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "DatabaseUnavailableException",
+        "variableName" : "databaseUnavailableException",
+        "variableType" : "DatabaseUnavailableException",
+        "documentation" : null,
+        "simpleType" : "DatabaseUnavailableException",
+        "variableSetterType" : "DatabaseUnavailableException"
+      },
+      "wrapper" : false
+    },
     "DecimalReturnType" : {
       "c2jName" : "DecimalReturnType",
       "customization" : {
@@ -10611,12 +10878,12 @@
         "c2jName" : "generatedFields",
         "c2jShape" : "FieldList",
         "deprecated" : false,
-        "documentation" : "<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>",
+        "documentation" : "<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>\n@param generatedFields Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>\n@param generatedFields Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withGeneratedFields",
-        "getterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>\n@return Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code>*/",
+        "getterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>\n@return Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p>*/",
         "getterMethodName" : "getGeneratedFields",
         "getterModel" : {
           "returnType" : "java.util.List<Field>",
@@ -10734,7 +11001,7 @@
         "marshallingType" : "LIST",
         "name" : "GeneratedFields",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>\n@param generatedFields Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code>*/",
+        "setterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>\n@param generatedFields Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p>*/",
         "setterMethodName" : "setGeneratedFields",
         "setterModel" : {
           "timestampFormat" : null,
@@ -10749,13 +11016,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setGeneratedFields(java.util.Collection)} or {@link #withGeneratedFields(java.util.Collection)} if you want to override the existing values.</p>\n@param generatedFields Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setGeneratedFields(java.util.Collection)} or {@link #withGeneratedFields(java.util.Collection)} if you want to override the existing values.</p>\n@param generatedFields Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "java.util.List<Field>",
           "variableName" : "generatedFields",
           "variableType" : "java.util.List<Field>",
-          "documentation" : "<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>",
+          "documentation" : "<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>",
           "simpleType" : "List<Field>",
           "variableSetterType" : "java.util.Collection<Field>"
         },
@@ -11059,12 +11326,12 @@
           "c2jName" : "generatedFields",
           "c2jShape" : "FieldList",
           "deprecated" : false,
-          "documentation" : "<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>",
+          "documentation" : "<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>\n@param generatedFields Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>\n@param generatedFields Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withGeneratedFields",
-          "getterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>\n@return Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code>*/",
+          "getterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>\n@return Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p>*/",
           "getterMethodName" : "getGeneratedFields",
           "getterModel" : {
             "returnType" : "java.util.List<Field>",
@@ -11182,7 +11449,7 @@
           "marshallingType" : "LIST",
           "name" : "GeneratedFields",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>\n@param generatedFields Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code>*/",
+          "setterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>\n@param generatedFields Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p>*/",
           "setterMethodName" : "setGeneratedFields",
           "setterModel" : {
             "timestampFormat" : null,
@@ -11197,13 +11464,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setGeneratedFields(java.util.Collection)} or {@link #withGeneratedFields(java.util.Collection)} if you want to override the existing values.</p>\n@param generatedFields Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setGeneratedFields(java.util.Collection)} or {@link #withGeneratedFields(java.util.Collection)} if you want to override the existing values.</p>\n@param generatedFields Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "java.util.List<Field>",
             "variableName" : "generatedFields",
             "variableType" : "java.util.List<Field>",
-            "documentation" : "<p>Values for fields generated during a DML request.</p> <pre><code> &lt;note&gt; &lt;p&gt;The &lt;code&gt;generatedFields&lt;/code&gt; data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the &lt;code&gt;RETURNING&lt;/code&gt; clause. For more information, see &lt;a href=&quot;https://www.postgresql.org/docs/10/dml-returning.html&quot;&gt;Returning Data From Modified Rows&lt;/a&gt; in the PostgreSQL documentation.&lt;/p&gt; &lt;/note&gt; </code></pre>",
+            "documentation" : "<p>Values for fields generated during a DML request.</p> <note> <p>The <code>generatedFields</code> data isn't supported by Aurora PostgreSQL. To get the values of generated fields, use the <code>RETURNING</code> clause. For more information, see <a href=\"https://www.postgresql.org/docs/10/dml-returning.html\">Returning Data From Modified Rows</a> in the PostgreSQL documentation.</p> </note>",
             "simpleType" : "List<Field>",
             "variableSetterType" : "java.util.Collection<Field>"
           },
@@ -12599,6 +12866,47 @@
       },
       "wrapper" : false
     },
+    "HttpEndpointNotEnabledException" : {
+      "c2jName" : "HttpEndpointNotEnabledException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The HTTP endpoint for using RDS Data API isn't enabled for the DB cluster.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "HttpEndpointNotEnabledException",
+      "fullyQualifiedName" : "com.amazonaws.services.rdsdata.exception.HttpEndpointNotEnabledException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.rdsdata.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "HttpEndpointNotEnabledException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "HttpEndpointNotEnabledException",
+        "variableName" : "httpEndpointNotEnabledException",
+        "variableType" : "HttpEndpointNotEnabledException",
+        "documentation" : null,
+        "simpleType" : "HttpEndpointNotEnabledException",
+        "variableSetterType" : "HttpEndpointNotEnabledException"
+      },
+      "wrapper" : false
+    },
     "InternalServerErrorException" : {
       "c2jName" : "InternalServerErrorException",
       "customization" : {
@@ -12637,6 +12945,47 @@
         "documentation" : null,
         "simpleType" : "InternalServerErrorException",
         "variableSetterType" : "InternalServerErrorException"
+      },
+      "wrapper" : false
+    },
+    "InvalidSecretException" : {
+      "c2jName" : "InvalidSecretException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The Secrets Manager secret used with the request isn't valid.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "InvalidSecretException",
+      "fullyQualifiedName" : "com.amazonaws.services.rdsdata.exception.InvalidSecretException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.rdsdata.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "InvalidSecretException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "InvalidSecretException",
+        "variableName" : "invalidSecretException",
+        "variableType" : "InvalidSecretException",
+        "documentation" : null,
+        "simpleType" : "InvalidSecretException",
+        "variableSetterType" : "InvalidSecretException"
       },
       "wrapper" : false
     },
@@ -15088,6 +15437,47 @@
       },
       "wrapper" : false
     },
+    "SecretsErrorException" : {
+      "c2jName" : "SecretsErrorException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>There was a problem with the Secrets Manager secret used with the request, caused by one of the following conditions:</p> <ul> <li> <p>RDS Data API timed out retrieving the secret.</p> </li> <li> <p>The secret provided wasn't found.</p> </li> <li> <p>The secret couldn't be decrypted.</p> </li> </ul>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "SecretsErrorException",
+      "fullyQualifiedName" : "com.amazonaws.services.rdsdata.exception.SecretsErrorException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.rdsdata.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "SecretsErrorException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "SecretsErrorException",
+        "variableName" : "secretsErrorException",
+        "variableType" : "SecretsErrorException",
+        "documentation" : null,
+        "simpleType" : "SecretsErrorException",
+        "variableSetterType" : "SecretsErrorException"
+      },
+      "wrapper" : false
+    },
     "ServiceUnavailableErrorException" : {
       "c2jName" : "ServiceUnavailableError",
       "customization" : {
@@ -15097,7 +15487,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter is not available.</p>",
+      "documentation" : "<p>The service specified by the <code>resourceArn</code> parameter isn't available.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ServiceUnavailableError",
@@ -15600,7 +15990,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>The result of a SQL statement.</p> <pre><code> &lt;note&gt; &lt;p&gt;This data structure is only used with the deprecated &lt;code&gt;ExecuteSql&lt;/code&gt; operation. Use the &lt;code&gt;BatchExecuteStatement&lt;/code&gt; or &lt;code&gt;ExecuteStatement&lt;/code&gt; operation instead.&lt;/p&gt; &lt;/note&gt; </code></pre>",
+      "documentation" : "<p>The result of a SQL statement.</p> <note> <p>This data structure is only used with the deprecated <code>ExecuteSql</code> operation. Use the <code>BatchExecuteStatement</code> or <code>ExecuteStatement</code> operation instead.</p> </note>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -16447,6 +16837,47 @@
       },
       "wrapper" : false
     },
+    "TransactionNotFoundException" : {
+      "c2jName" : "TransactionNotFoundException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The transaction ID wasn't found.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "TransactionNotFoundException",
+      "fullyQualifiedName" : "com.amazonaws.services.rdsdata.exception.TransactionNotFoundException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.rdsdata.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "TransactionNotFoundException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "TransactionNotFoundException",
+        "variableName" : "transactionNotFoundException",
+        "variableType" : "TransactionNotFoundException",
+        "documentation" : null,
+        "simpleType" : "TransactionNotFoundException",
+        "variableSetterType" : "TransactionNotFoundException"
+      },
+      "wrapper" : false
+    },
     "TypeHint" : {
       "c2jName" : "TypeHint",
       "customization" : {
@@ -16506,6 +16937,47 @@
         "documentation" : null,
         "simpleType" : "TypeHint",
         "variableSetterType" : "TypeHint"
+      },
+      "wrapper" : false
+    },
+    "UnsupportedResultException" : {
+      "c2jName" : "UnsupportedResultException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>There was a problem with the result because of one of the following conditions:</p> <ul> <li> <p>It contained an unsupported data type.</p> </li> <li> <p>It contained a multidimensional array.</p> </li> <li> <p>The size was too large.</p> </li> </ul>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "UnsupportedResultException",
+      "fullyQualifiedName" : "com.amazonaws.services.rdsdata.exception.UnsupportedResultException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.rdsdata.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "UnsupportedResultException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "UnsupportedResultException",
+        "variableName" : "unsupportedResultException",
+        "variableType" : "UnsupportedResultException",
+        "documentation" : null,
+        "simpleType" : "UnsupportedResultException",
+        "variableSetterType" : "UnsupportedResultException"
       },
       "wrapper" : false
     },
@@ -16870,7 +17342,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>Contains the value of a column.</p> <pre><code> &lt;note&gt; &lt;p&gt;This data structure is only used with the deprecated &lt;code&gt;ExecuteSql&lt;/code&gt; operation. Use the &lt;code&gt;BatchExecuteStatement&lt;/code&gt; or &lt;code&gt;ExecuteStatement&lt;/code&gt; operation instead.&lt;/p&gt; &lt;/note&gt; </code></pre>",
+      "documentation" : "<p>Contains the value of a column.</p> <note> <p>This data structure is only used with the deprecated <code>ExecuteSql</code> operation. Use the <code>BatchExecuteStatement</code> or <code>ExecuteStatement</code> operation instead.</p> </note>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,

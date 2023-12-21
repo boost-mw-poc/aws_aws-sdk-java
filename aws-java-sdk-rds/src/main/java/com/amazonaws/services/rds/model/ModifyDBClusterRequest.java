@@ -493,17 +493,25 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the HTTP
-     * endpoint is disabled.
+     * endpoint isn't enabled.
      * </p>
      * <p>
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for running SQL queries
+     * on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the RDS
+     * query editor.
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter applies only to Aurora Serverless v1 DB clusters. To enable or disable the HTTP endpoint for an
+     * Aurora PostgreSQL Serverless v2 or provisioned DB cluster, use the <code>EnableHttpEndpoint</code> and
+     * <code>DisableHttpEndpoint</code> operations.
+     * </p>
+     * </note>
      * <p>
      * Valid for Cluster Type: Aurora DB clusters only
      * </p>
@@ -3907,34 +3915,49 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the HTTP
-     * endpoint is disabled.
+     * endpoint isn't enabled.
      * </p>
      * <p>
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for running SQL queries
+     * on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the RDS
+     * query editor.
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter applies only to Aurora Serverless v1 DB clusters. To enable or disable the HTTP endpoint for an
+     * Aurora PostgreSQL Serverless v2 or provisioned DB cluster, use the <code>EnableHttpEndpoint</code> and
+     * <code>DisableHttpEndpoint</code> operations.
+     * </p>
+     * </note>
      * <p>
      * Valid for Cluster Type: Aurora DB clusters only
      * </p>
      * 
      * @param enableHttpEndpoint
      *        Specifies whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the HTTP
-     *        endpoint is disabled.</p>
+     *        endpoint isn't enabled.</p>
      *        <p>
-     *        When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *        Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
-     *        query editor.
+     *        When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for running SQL
+     *        queries on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS
+     *        console with the RDS query editor.
      *        </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *        Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a>
+     *        in the <i>Amazon Aurora User Guide</i>.
      *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter applies only to Aurora Serverless v1 DB clusters. To enable or disable the HTTP endpoint
+     *        for an Aurora PostgreSQL Serverless v2 or provisioned DB cluster, use the <code>EnableHttpEndpoint</code>
+     *        and <code>DisableHttpEndpoint</code> operations.
+     *        </p>
+     *        </note>
      *        <p>
      *        Valid for Cluster Type: Aurora DB clusters only
      */
@@ -3946,33 +3969,48 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the HTTP
-     * endpoint is disabled.
+     * endpoint isn't enabled.
      * </p>
      * <p>
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for running SQL queries
+     * on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the RDS
+     * query editor.
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter applies only to Aurora Serverless v1 DB clusters. To enable or disable the HTTP endpoint for an
+     * Aurora PostgreSQL Serverless v2 or provisioned DB cluster, use the <code>EnableHttpEndpoint</code> and
+     * <code>DisableHttpEndpoint</code> operations.
+     * </p>
+     * </note>
      * <p>
      * Valid for Cluster Type: Aurora DB clusters only
      * </p>
      * 
      * @return Specifies whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the
-     *         HTTP endpoint is disabled.</p>
+     *         HTTP endpoint isn't enabled.</p>
      *         <p>
-     *         When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *         Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
-     *         query editor.
+     *         When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for running SQL
+     *         queries on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS
+     *         console with the RDS query editor.
      *         </p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *         Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a>
+     *         in the <i>Amazon Aurora User Guide</i>.
      *         </p>
+     *         <note>
+     *         <p>
+     *         This parameter applies only to Aurora Serverless v1 DB clusters. To enable or disable the HTTP endpoint
+     *         for an Aurora PostgreSQL Serverless v2 or provisioned DB cluster, use the <code>EnableHttpEndpoint</code>
+     *         and <code>DisableHttpEndpoint</code> operations.
+     *         </p>
+     *         </note>
      *         <p>
      *         Valid for Cluster Type: Aurora DB clusters only
      */
@@ -3984,34 +4022,49 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the HTTP
-     * endpoint is disabled.
+     * endpoint isn't enabled.
      * </p>
      * <p>
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for running SQL queries
+     * on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the RDS
+     * query editor.
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter applies only to Aurora Serverless v1 DB clusters. To enable or disable the HTTP endpoint for an
+     * Aurora PostgreSQL Serverless v2 or provisioned DB cluster, use the <code>EnableHttpEndpoint</code> and
+     * <code>DisableHttpEndpoint</code> operations.
+     * </p>
+     * </note>
      * <p>
      * Valid for Cluster Type: Aurora DB clusters only
      * </p>
      * 
      * @param enableHttpEndpoint
      *        Specifies whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the HTTP
-     *        endpoint is disabled.</p>
+     *        endpoint isn't enabled.</p>
      *        <p>
-     *        When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *        Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
-     *        query editor.
+     *        When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for running SQL
+     *        queries on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS
+     *        console with the RDS query editor.
      *        </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *        Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a>
+     *        in the <i>Amazon Aurora User Guide</i>.
      *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter applies only to Aurora Serverless v1 DB clusters. To enable or disable the HTTP endpoint
+     *        for an Aurora PostgreSQL Serverless v2 or provisioned DB cluster, use the <code>EnableHttpEndpoint</code>
+     *        and <code>DisableHttpEndpoint</code> operations.
+     *        </p>
+     *        </note>
      *        <p>
      *        Valid for Cluster Type: Aurora DB clusters only
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -4025,33 +4078,48 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Specifies whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the HTTP
-     * endpoint is disabled.
+     * endpoint isn't enabled.
      * </p>
      * <p>
-     * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for running SQL queries
+     * on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the RDS
+     * query editor.
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter applies only to Aurora Serverless v1 DB clusters. To enable or disable the HTTP endpoint for an
+     * Aurora PostgreSQL Serverless v2 or provisioned DB cluster, use the <code>EnableHttpEndpoint</code> and
+     * <code>DisableHttpEndpoint</code> operations.
+     * </p>
+     * </note>
      * <p>
      * Valid for Cluster Type: Aurora DB clusters only
      * </p>
      * 
      * @return Specifies whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the
-     *         HTTP endpoint is disabled.</p>
+     *         HTTP endpoint isn't enabled.</p>
      *         <p>
-     *         When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *         Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
-     *         query editor.
+     *         When enabled, the HTTP endpoint provides a connectionless web service API (RDS Data API) for running SQL
+     *         queries on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS
+     *         console with the RDS query editor.
      *         </p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *         Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using RDS Data API</a>
+     *         in the <i>Amazon Aurora User Guide</i>.
      *         </p>
+     *         <note>
+     *         <p>
+     *         This parameter applies only to Aurora Serverless v1 DB clusters. To enable or disable the HTTP endpoint
+     *         for an Aurora PostgreSQL Serverless v2 or provisioned DB cluster, use the <code>EnableHttpEndpoint</code>
+     *         and <code>DisableHttpEndpoint</code> operations.
+     *         </p>
+     *         </note>
      *         <p>
      *         Valid for Cluster Type: Aurora DB clusters only
      */

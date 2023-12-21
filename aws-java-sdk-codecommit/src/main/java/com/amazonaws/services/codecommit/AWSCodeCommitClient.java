@@ -96,6 +96,12 @@ import com.amazonaws.services.codecommit.model.transform.*;
  * </li>
  * <li>
  * <p>
+ * <a>UpdateRepositoryEncryptionKey</a>, which updates the Key Management Service encryption key used to encrypt and
+ * decrypt a repository.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a>UpdateRepositoryName</a>, which changes the name of the repository. If you change the name of a repository, no
  * other users of that repository can access it until you send them the new HTTPS or SSH URL to use.
  * </p>
@@ -645,6 +651,9 @@ public class AWSCodeCommitClient extends AmazonWebServiceClient implements AWSCo
                             new JsonErrorShapeMetadata().withErrorCode("MaximumBranchesExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codecommit.model.transform.MaximumBranchesExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("EncryptionKeyInvalidIdException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.codecommit.model.transform.EncryptionKeyInvalidIdExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidRelativeFileVersionEnumException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codecommit.model.transform.InvalidRelativeFileVersionEnumExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -887,6 +896,9 @@ public class AWSCodeCommitClient extends AmazonWebServiceClient implements AWSCo
                             new JsonErrorShapeMetadata().withErrorCode("MaximumRepositoryTriggersExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codecommit.model.transform.MaximumRepositoryTriggersExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("EncryptionKeyInvalidUsageException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.codecommit.model.transform.EncryptionKeyInvalidUsageExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("BlobIdRequiredException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codecommit.model.transform.BlobIdRequiredExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -952,6 +964,9 @@ public class AWSCodeCommitClient extends AmazonWebServiceClient implements AWSCo
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidConflictResolutionException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codecommit.model.transform.InvalidConflictResolutionExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("EncryptionKeyRequiredException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.codecommit.model.transform.EncryptionKeyRequiredExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidApprovalRuleTemplateContentException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codecommit.model.transform.InvalidApprovalRuleTemplateContentExceptionUnmarshaller.getInstance()))
@@ -2449,6 +2464,11 @@ public class AWSCodeCommitClient extends AmazonWebServiceClient implements AWSCo
      *         No encryption key was found.
      * @throws EncryptionKeyUnavailableException
      *         The encryption key is not available.
+     * @throws EncryptionKeyInvalidIdException
+     *         The Key Management Service encryption key is not valid.
+     * @throws EncryptionKeyInvalidUsageException
+     *         A KMS encryption key was used to try and encrypt or decrypt a repository, but either the repository or
+     *         the key was not in a valid state to support the operation.
      * @throws InvalidTagsMapException
      *         The map of tags is not valid.
      * @throws TooManyTagsException
@@ -8472,6 +8492,90 @@ public class AWSCodeCommitClient extends AmazonWebServiceClient implements AWSCo
             HttpResponseHandler<AmazonWebServiceResponse<UpdateRepositoryDescriptionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateRepositoryDescriptionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the Key Management Service encryption key used to encrypt and decrypt a CodeCommit repository.
+     * </p>
+     * 
+     * @param updateRepositoryEncryptionKeyRequest
+     * @return Result of the UpdateRepositoryEncryptionKey operation returned by the service.
+     * @throws RepositoryNameRequiredException
+     *         A repository name is required, but was not specified.
+     * @throws RepositoryDoesNotExistException
+     *         The specified repository does not exist.
+     * @throws InvalidRepositoryNameException
+     *         A specified repository name is not valid.</p> <note>
+     *         <p>
+     *         This exception occurs only when a specified repository name is not valid. Other exceptions occur when a
+     *         required repository parameter is missing, or when a specified repository does not exist.
+     *         </p>
+     * @throws EncryptionKeyRequiredException
+     *         A KMS encryption key ID is required but was not specified.
+     * @throws EncryptionIntegrityChecksFailedException
+     *         An encryption integrity check failed.
+     * @throws EncryptionKeyAccessDeniedException
+     *         An encryption key could not be accessed.
+     * @throws EncryptionKeyInvalidIdException
+     *         The Key Management Service encryption key is not valid.
+     * @throws EncryptionKeyInvalidUsageException
+     *         A KMS encryption key was used to try and encrypt or decrypt a repository, but either the repository or
+     *         the key was not in a valid state to support the operation.
+     * @throws EncryptionKeyDisabledException
+     *         The encryption key is disabled.
+     * @throws EncryptionKeyNotFoundException
+     *         No encryption key was found.
+     * @throws EncryptionKeyUnavailableException
+     *         The encryption key is not available.
+     * @sample AWSCodeCommit.UpdateRepositoryEncryptionKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codecommit-2015-04-13/UpdateRepositoryEncryptionKey"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateRepositoryEncryptionKeyResult updateRepositoryEncryptionKey(UpdateRepositoryEncryptionKeyRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateRepositoryEncryptionKey(request);
+    }
+
+    @SdkInternalApi
+    final UpdateRepositoryEncryptionKeyResult executeUpdateRepositoryEncryptionKey(UpdateRepositoryEncryptionKeyRequest updateRepositoryEncryptionKeyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateRepositoryEncryptionKeyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateRepositoryEncryptionKeyRequest> request = null;
+        Response<UpdateRepositoryEncryptionKeyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateRepositoryEncryptionKeyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateRepositoryEncryptionKeyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CodeCommit");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateRepositoryEncryptionKey");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateRepositoryEncryptionKeyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateRepositoryEncryptionKeyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
