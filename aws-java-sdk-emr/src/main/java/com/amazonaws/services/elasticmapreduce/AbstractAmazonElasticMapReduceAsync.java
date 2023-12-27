@@ -716,6 +716,19 @@ public class AbstractAmazonElasticMapReduceAsync extends AbstractAmazonElasticMa
     }
 
     @Override
+    public java.util.concurrent.Future<SetKeepJobFlowAliveWhenNoStepsResult> setKeepJobFlowAliveWhenNoStepsAsync(SetKeepJobFlowAliveWhenNoStepsRequest request) {
+
+        return setKeepJobFlowAliveWhenNoStepsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SetKeepJobFlowAliveWhenNoStepsResult> setKeepJobFlowAliveWhenNoStepsAsync(SetKeepJobFlowAliveWhenNoStepsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SetKeepJobFlowAliveWhenNoStepsRequest, SetKeepJobFlowAliveWhenNoStepsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SetTerminationProtectionResult> setTerminationProtectionAsync(SetTerminationProtectionRequest request) {
 
         return setTerminationProtectionAsync(request, null);

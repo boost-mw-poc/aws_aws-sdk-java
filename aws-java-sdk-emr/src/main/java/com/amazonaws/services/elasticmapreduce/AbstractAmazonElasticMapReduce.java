@@ -291,6 +291,11 @@ public class AbstractAmazonElasticMapReduce implements AmazonElasticMapReduce {
     }
 
     @Override
+    public SetKeepJobFlowAliveWhenNoStepsResult setKeepJobFlowAliveWhenNoSteps(SetKeepJobFlowAliveWhenNoStepsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SetTerminationProtectionResult setTerminationProtection(SetTerminationProtectionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

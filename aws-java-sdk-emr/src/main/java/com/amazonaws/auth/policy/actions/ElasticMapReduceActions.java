@@ -119,6 +119,8 @@ public enum ElasticMapReduceActions implements Action {
     RemoveTags("elasticmapreduce:RemoveTags"),
     /** Action for the RunJobFlow operation. */
     RunJobFlow("elasticmapreduce:RunJobFlow"),
+    /** Action for the SetKeepJobFlowAliveWhenNoSteps operation. */
+    SetKeepJobFlowAliveWhenNoSteps("elasticmapreduce:SetKeepJobFlowAliveWhenNoSteps"),
     /** Action for the SetTerminationProtection operation. */
     SetTerminationProtection("elasticmapreduce:SetTerminationProtection"),
     /** Action for the SetVisibleToAllUsers operation. */

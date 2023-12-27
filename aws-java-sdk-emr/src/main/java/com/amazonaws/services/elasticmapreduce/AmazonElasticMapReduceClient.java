@@ -3261,6 +3261,73 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
+     * You can use the <code>SetKeepJobFlowAliveWhenNoSteps</code> to configure a cluster (job flow) to terminate after
+     * the step execution, i.e., all your steps are executed. If you want a transient cluster that shuts down after the
+     * last of the current executing steps are completed, you can configure <code>SetKeepJobFlowAliveWhenNoSteps</code>
+     * to false. If you want a long running cluster, configure <code>SetKeepJobFlowAliveWhenNoSteps</code> to true.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/UsingEMR_TerminationProtection.html">Managing
+     * Cluster Termination</a> in the <i>Amazon EMR Management Guide</i>.
+     * </p>
+     * 
+     * @param setKeepJobFlowAliveWhenNoStepsRequest
+     * @return Result of the SetKeepJobFlowAliveWhenNoSteps operation returned by the service.
+     * @throws InternalServerErrorException
+     *         Indicates that an error occurred while processing the request and that the request was not completed.
+     * @sample AmazonElasticMapReduce.SetKeepJobFlowAliveWhenNoSteps
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/SetKeepJobFlowAliveWhenNoSteps"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public SetKeepJobFlowAliveWhenNoStepsResult setKeepJobFlowAliveWhenNoSteps(SetKeepJobFlowAliveWhenNoStepsRequest request) {
+        request = beforeClientExecution(request);
+        return executeSetKeepJobFlowAliveWhenNoSteps(request);
+    }
+
+    @SdkInternalApi
+    final SetKeepJobFlowAliveWhenNoStepsResult executeSetKeepJobFlowAliveWhenNoSteps(SetKeepJobFlowAliveWhenNoStepsRequest setKeepJobFlowAliveWhenNoStepsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(setKeepJobFlowAliveWhenNoStepsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SetKeepJobFlowAliveWhenNoStepsRequest> request = null;
+        Response<SetKeepJobFlowAliveWhenNoStepsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SetKeepJobFlowAliveWhenNoStepsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(setKeepJobFlowAliveWhenNoStepsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SetKeepJobFlowAliveWhenNoSteps");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SetKeepJobFlowAliveWhenNoStepsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new SetKeepJobFlowAliveWhenNoStepsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * SetTerminationProtection locks a cluster (job flow) so the Amazon EC2 instances in the cluster cannot be
      * terminated by user intervention, an API call, or in the event of a job-flow error. The cluster still terminates
      * upon successful completion of the job flow. Calling <code>SetTerminationProtection</code> on a cluster is similar

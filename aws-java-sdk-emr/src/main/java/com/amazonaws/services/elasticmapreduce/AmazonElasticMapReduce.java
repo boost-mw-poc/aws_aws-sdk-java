@@ -1054,6 +1054,29 @@ public interface AmazonElasticMapReduce {
 
     /**
      * <p>
+     * You can use the <code>SetKeepJobFlowAliveWhenNoSteps</code> to configure a cluster (job flow) to terminate after
+     * the step execution, i.e., all your steps are executed. If you want a transient cluster that shuts down after the
+     * last of the current executing steps are completed, you can configure <code>SetKeepJobFlowAliveWhenNoSteps</code>
+     * to false. If you want a long running cluster, configure <code>SetKeepJobFlowAliveWhenNoSteps</code> to true.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/UsingEMR_TerminationProtection.html">Managing
+     * Cluster Termination</a> in the <i>Amazon EMR Management Guide</i>.
+     * </p>
+     * 
+     * @param setKeepJobFlowAliveWhenNoStepsRequest
+     * @return Result of the SetKeepJobFlowAliveWhenNoSteps operation returned by the service.
+     * @throws InternalServerErrorException
+     *         Indicates that an error occurred while processing the request and that the request was not completed.
+     * @sample AmazonElasticMapReduce.SetKeepJobFlowAliveWhenNoSteps
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/SetKeepJobFlowAliveWhenNoSteps"
+     *      target="_top">AWS API Documentation</a>
+     */
+    SetKeepJobFlowAliveWhenNoStepsResult setKeepJobFlowAliveWhenNoSteps(SetKeepJobFlowAliveWhenNoStepsRequest setKeepJobFlowAliveWhenNoStepsRequest);
+
+    /**
+     * <p>
      * SetTerminationProtection locks a cluster (job flow) so the Amazon EC2 instances in the cluster cannot be
      * terminated by user intervention, an API call, or in the event of a job-flow error. The cluster still terminates
      * upon successful completion of the job flow. Calling <code>SetTerminationProtection</code> on a cluster is similar

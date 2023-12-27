@@ -1,3 +1,8 @@
+# __1.12.627__ __2023-12-27__
+## __Amazon EMR__
+  - ### Features
+    - Add support for customers to modify cluster attribute auto-terminate post cluster launch
+
 # __1.12.626__ __2023-12-26__
 ## __AWS Identity and Access Management__
   - ### Features

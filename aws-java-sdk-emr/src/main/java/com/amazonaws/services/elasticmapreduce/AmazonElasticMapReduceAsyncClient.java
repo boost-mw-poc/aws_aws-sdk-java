@@ -1888,6 +1888,40 @@ public class AmazonElasticMapReduceAsyncClient extends AmazonElasticMapReduceCli
     }
 
     @Override
+    public java.util.concurrent.Future<SetKeepJobFlowAliveWhenNoStepsResult> setKeepJobFlowAliveWhenNoStepsAsync(SetKeepJobFlowAliveWhenNoStepsRequest request) {
+
+        return setKeepJobFlowAliveWhenNoStepsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SetKeepJobFlowAliveWhenNoStepsResult> setKeepJobFlowAliveWhenNoStepsAsync(
+            final SetKeepJobFlowAliveWhenNoStepsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SetKeepJobFlowAliveWhenNoStepsRequest, SetKeepJobFlowAliveWhenNoStepsResult> asyncHandler) {
+        final SetKeepJobFlowAliveWhenNoStepsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SetKeepJobFlowAliveWhenNoStepsResult>() {
+            @Override
+            public SetKeepJobFlowAliveWhenNoStepsResult call() throws Exception {
+                SetKeepJobFlowAliveWhenNoStepsResult result = null;
+
+                try {
+                    result = executeSetKeepJobFlowAliveWhenNoSteps(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SetTerminationProtectionResult> setTerminationProtectionAsync(SetTerminationProtectionRequest request) {
 
         return setTerminationProtectionAsync(request, null);
