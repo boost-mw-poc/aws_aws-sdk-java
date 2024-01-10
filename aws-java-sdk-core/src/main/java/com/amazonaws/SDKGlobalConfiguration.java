@@ -329,6 +329,16 @@ public class SDKGlobalConfiguration {
     public static final String AWS_EC2_METADATA_DISABLED_SYSTEM_PROPERTY = "com.amazonaws.sdk.disableEc2Metadata";
 
     /**
+     * Environment variable to disable fallback to IMDS v1.
+     */
+    public static final String AWS_EC2_METADATA_V1_DISABLED_ENV_VAR = "AWS_EC2_METADATA_V1_DISABLED";
+
+    /**
+     * System property to disable fallback to IMDS v1.
+     */
+    public static final String AWS_EC2_METADATA_V1_DISABLED_SYSTEM_PROPERTY = "com.amazonaws.sdk.disableEc2MetadataV1";
+
+    /**
      * Environment variable to enable/disable client side monitoring.
      */
     public static final String AWS_CSM_ENABLED_ENV_VAR = "AWS_CSM_ENABLED";
@@ -407,6 +417,11 @@ public class SDKGlobalConfiguration {
     public static boolean isEc2MetadataDisabled() {
         return isPropertyTrue(System.getProperty(AWS_EC2_METADATA_DISABLED_SYSTEM_PROPERTY)) ||
                isPropertyTrue(System.getenv(AWS_EC2_METADATA_DISABLED_ENV_VAR));
+    }
+
+    public static boolean isEc2MetadataV1Disabled() {
+        return isPropertyTrue(System.getProperty(AWS_EC2_METADATA_V1_DISABLED_SYSTEM_PROPERTY)) ||
+                isPropertyTrue(System.getenv(AWS_EC2_METADATA_V1_DISABLED_ENV_VAR));
     }
 
     private static boolean isPropertyEnabled(final String property) {

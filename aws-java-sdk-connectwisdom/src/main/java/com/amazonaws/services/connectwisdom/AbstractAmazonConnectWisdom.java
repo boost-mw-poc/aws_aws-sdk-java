@@ -123,6 +123,7 @@ public class AbstractAmazonConnectWisdom implements AmazonConnectWisdom {
     }
 
     @Override
+    @Deprecated
     public GetRecommendationsResult getRecommendations(GetRecommendationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -173,6 +174,7 @@ public class AbstractAmazonConnectWisdom implements AmazonConnectWisdom {
     }
 
     @Override
+    @Deprecated
     public QueryAssistantResult queryAssistant(QueryAssistantRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

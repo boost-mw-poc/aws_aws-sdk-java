@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.location.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -27,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class MapConfigurationMarshaller {
 
+    private static final MarshallingInfo<List> CUSTOMLAYERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("CustomLayers").build();
     private static final MarshallingInfo<String> POLITICALVIEW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PoliticalView").build();
     private static final MarshallingInfo<String> STYLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -48,6 +51,7 @@ public class MapConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(mapConfiguration.getCustomLayers(), CUSTOMLAYERS_BINDING);
             protocolMarshaller.marshall(mapConfiguration.getPoliticalView(), POLITICALVIEW_BINDING);
             protocolMarshaller.marshall(mapConfiguration.getStyle(), STYLE_BINDING);
         } catch (Exception e) {

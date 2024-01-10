@@ -33,10 +33,13 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
     private String policyName;
     /**
      * <p>
-     * Specify the data protection policy, in JSON.
+     * Specify the policy, in JSON.
      * </p>
      * <p>
-     * This policy must include two JSON blocks:
+     * <b>Data protection policy</b>
+     * </p>
+     * <p>
+     * A data protection policy must include two JSON blocks:
      * </p>
      * <ul>
      * <li>
@@ -83,13 +86,70 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * findings metrics to CloudWatch.
      * </p>
      * <p>
-     * The JSON specified in <code>policyDocument</code> can be up to 30,720 characters.
+     * The JSON specified in <code>policyDocument</code> can be up to 30,720 characters long.
      * </p>
+     * <p>
+     * <b>Subscription filter policy</b>
+     * </p>
+     * <p>
+     * A subscription filter policy can include the following attributes in a JSON block:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>DestinationArn</b> The ARN of the destination to deliver log events to. Supported destinations are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Kinesis Data Firehose data stream in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A Lambda function in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A logical destination in a different account created with <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDestination.html"
+     * >PutDestination</a>, for cross-account delivery. Kinesis Data Streams and Kinesis Data Firehose are supported as
+     * logical destinations.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>RoleArn</b> The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to
+     * the destination stream. You don't need to provide the ARN when you are working with a logical destination for
+     * cross-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>FilterPattern</b> A filter pattern for subscribing to a filtered stream of log events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Distribution</b>The method used to distribute log data to the destination. By default, log data is grouped by
+     * log stream, but the grouping can be set to <code>Random</code> for a more even distribution. This property is
+     * only applicable when the destination is an Kinesis Data Streams data stream.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String policyDocument;
     /**
      * <p>
-     * Currently the only valid value for this parameter is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy that you're creating or updating.
      * </p>
      */
     private String policyType;
@@ -101,6 +161,24 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String scope;
+    /**
+     * <p>
+     * Use this parameter to apply the subscription filter policy to a subset of log groups in the account. Currently,
+     * the only supported filter is <code>LogGroupName NOT IN []</code>. The <code>selectionCriteria</code> string can
+     * be up to 25KB in length. The length is determined by using its UTF-8 bytes.
+     * </p>
+     * <p>
+     * Using the <code>selectionCriteria</code> parameter is useful to help prevent infinite loops. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html">Log
+     * recursion prevention</a>.
+     * </p>
+     * <p>
+     * Specifing <code>selectionCriteria</code> is valid only when you specify <code> SUBSCRIPTION_FILTER_POLICY</code>
+     * for <code>policyType</code>.
+     * </p>
+     */
+    private String selectionCriteria;
 
     /**
      * <p>
@@ -144,10 +222,13 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specify the data protection policy, in JSON.
+     * Specify the policy, in JSON.
      * </p>
      * <p>
-     * This policy must include two JSON blocks:
+     * <b>Data protection policy</b>
+     * </p>
+     * <p>
+     * A data protection policy must include two JSON blocks:
      * </p>
      * <ul>
      * <li>
@@ -194,13 +275,73 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * findings metrics to CloudWatch.
      * </p>
      * <p>
-     * The JSON specified in <code>policyDocument</code> can be up to 30,720 characters.
+     * The JSON specified in <code>policyDocument</code> can be up to 30,720 characters long.
      * </p>
+     * <p>
+     * <b>Subscription filter policy</b>
+     * </p>
+     * <p>
+     * A subscription filter policy can include the following attributes in a JSON block:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>DestinationArn</b> The ARN of the destination to deliver log events to. Supported destinations are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Kinesis Data Firehose data stream in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A Lambda function in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A logical destination in a different account created with <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDestination.html"
+     * >PutDestination</a>, for cross-account delivery. Kinesis Data Streams and Kinesis Data Firehose are supported as
+     * logical destinations.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>RoleArn</b> The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to
+     * the destination stream. You don't need to provide the ARN when you are working with a logical destination for
+     * cross-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>FilterPattern</b> A filter pattern for subscribing to a filtered stream of log events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Distribution</b>The method used to distribute log data to the destination. By default, log data is grouped by
+     * log stream, but the grouping can be set to <code>Random</code> for a more even distribution. This property is
+     * only applicable when the destination is an Kinesis Data Streams data stream.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param policyDocument
-     *        Specify the data protection policy, in JSON.</p>
+     *        Specify the policy, in JSON.</p>
      *        <p>
-     *        This policy must include two JSON blocks:
+     *        <b>Data protection policy</b>
+     *        </p>
+     *        <p>
+     *        A data protection policy must include two JSON blocks:
      *        </p>
      *        <ul>
      *        <li>
@@ -247,7 +388,66 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      *        audit findings metrics to CloudWatch.
      *        </p>
      *        <p>
-     *        The JSON specified in <code>policyDocument</code> can be up to 30,720 characters.
+     *        The JSON specified in <code>policyDocument</code> can be up to 30,720 characters long.
+     *        </p>
+     *        <p>
+     *        <b>Subscription filter policy</b>
+     *        </p>
+     *        <p>
+     *        A subscription filter policy can include the following attributes in a JSON block:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>DestinationArn</b> The ARN of the destination to deliver log events to. Supported destinations are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account
+     *        delivery.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An Kinesis Data Firehose data stream in the same account as the subscription policy, for same-account
+     *        delivery.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        A Lambda function in the same account as the subscription policy, for same-account delivery.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        A logical destination in a different account created with <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDestination.html"
+     *        >PutDestination</a>, for cross-account delivery. Kinesis Data Streams and Kinesis Data Firehose are
+     *        supported as logical destinations.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>RoleArn</b> The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log
+     *        events to the destination stream. You don't need to provide the ARN when you are working with a logical
+     *        destination for cross-account delivery.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>FilterPattern</b> A filter pattern for subscribing to a filtered stream of log events.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>Distribution</b>The method used to distribute log data to the destination. By default, log data is
+     *        grouped by log stream, but the grouping can be set to <code>Random</code> for a more even distribution.
+     *        This property is only applicable when the destination is an Kinesis Data Streams data stream.
+     *        </p>
+     *        </li>
      */
 
     public void setPolicyDocument(String policyDocument) {
@@ -256,10 +456,13 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specify the data protection policy, in JSON.
+     * Specify the policy, in JSON.
      * </p>
      * <p>
-     * This policy must include two JSON blocks:
+     * <b>Data protection policy</b>
+     * </p>
+     * <p>
+     * A data protection policy must include two JSON blocks:
      * </p>
      * <ul>
      * <li>
@@ -306,12 +509,72 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * findings metrics to CloudWatch.
      * </p>
      * <p>
-     * The JSON specified in <code>policyDocument</code> can be up to 30,720 characters.
+     * The JSON specified in <code>policyDocument</code> can be up to 30,720 characters long.
      * </p>
+     * <p>
+     * <b>Subscription filter policy</b>
+     * </p>
+     * <p>
+     * A subscription filter policy can include the following attributes in a JSON block:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>DestinationArn</b> The ARN of the destination to deliver log events to. Supported destinations are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Kinesis Data Firehose data stream in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A Lambda function in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A logical destination in a different account created with <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDestination.html"
+     * >PutDestination</a>, for cross-account delivery. Kinesis Data Streams and Kinesis Data Firehose are supported as
+     * logical destinations.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>RoleArn</b> The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to
+     * the destination stream. You don't need to provide the ARN when you are working with a logical destination for
+     * cross-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>FilterPattern</b> A filter pattern for subscribing to a filtered stream of log events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Distribution</b>The method used to distribute log data to the destination. By default, log data is grouped by
+     * log stream, but the grouping can be set to <code>Random</code> for a more even distribution. This property is
+     * only applicable when the destination is an Kinesis Data Streams data stream.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Specify the data protection policy, in JSON.</p>
+     * @return Specify the policy, in JSON.</p>
      *         <p>
-     *         This policy must include two JSON blocks:
+     *         <b>Data protection policy</b>
+     *         </p>
+     *         <p>
+     *         A data protection policy must include two JSON blocks:
      *         </p>
      *         <ul>
      *         <li>
@@ -358,7 +621,66 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      *         audit findings metrics to CloudWatch.
      *         </p>
      *         <p>
-     *         The JSON specified in <code>policyDocument</code> can be up to 30,720 characters.
+     *         The JSON specified in <code>policyDocument</code> can be up to 30,720 characters long.
+     *         </p>
+     *         <p>
+     *         <b>Subscription filter policy</b>
+     *         </p>
+     *         <p>
+     *         A subscription filter policy can include the following attributes in a JSON block:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <b>DestinationArn</b> The ARN of the destination to deliver log events to. Supported destinations are:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account
+     *         delivery.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An Kinesis Data Firehose data stream in the same account as the subscription policy, for same-account
+     *         delivery.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A Lambda function in the same account as the subscription policy, for same-account delivery.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A logical destination in a different account created with <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDestination.html"
+     *         >PutDestination</a>, for cross-account delivery. Kinesis Data Streams and Kinesis Data Firehose are
+     *         supported as logical destinations.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>RoleArn</b> The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log
+     *         events to the destination stream. You don't need to provide the ARN when you are working with a logical
+     *         destination for cross-account delivery.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>FilterPattern</b> A filter pattern for subscribing to a filtered stream of log events.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>Distribution</b>The method used to distribute log data to the destination. By default, log data is
+     *         grouped by log stream, but the grouping can be set to <code>Random</code> for a more even distribution.
+     *         This property is only applicable when the destination is an Kinesis Data Streams data stream.
+     *         </p>
+     *         </li>
      */
 
     public String getPolicyDocument() {
@@ -367,10 +689,13 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Specify the data protection policy, in JSON.
+     * Specify the policy, in JSON.
      * </p>
      * <p>
-     * This policy must include two JSON blocks:
+     * <b>Data protection policy</b>
+     * </p>
+     * <p>
+     * A data protection policy must include two JSON blocks:
      * </p>
      * <ul>
      * <li>
@@ -417,13 +742,73 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      * findings metrics to CloudWatch.
      * </p>
      * <p>
-     * The JSON specified in <code>policyDocument</code> can be up to 30,720 characters.
+     * The JSON specified in <code>policyDocument</code> can be up to 30,720 characters long.
      * </p>
+     * <p>
+     * <b>Subscription filter policy</b>
+     * </p>
+     * <p>
+     * A subscription filter policy can include the following attributes in a JSON block:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>DestinationArn</b> The ARN of the destination to deliver log events to. Supported destinations are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Kinesis Data Firehose data stream in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A Lambda function in the same account as the subscription policy, for same-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A logical destination in a different account created with <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDestination.html"
+     * >PutDestination</a>, for cross-account delivery. Kinesis Data Streams and Kinesis Data Firehose are supported as
+     * logical destinations.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b>RoleArn</b> The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to
+     * the destination stream. You don't need to provide the ARN when you are working with a logical destination for
+     * cross-account delivery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>FilterPattern</b> A filter pattern for subscribing to a filtered stream of log events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Distribution</b>The method used to distribute log data to the destination. By default, log data is grouped by
+     * log stream, but the grouping can be set to <code>Random</code> for a more even distribution. This property is
+     * only applicable when the destination is an Kinesis Data Streams data stream.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param policyDocument
-     *        Specify the data protection policy, in JSON.</p>
+     *        Specify the policy, in JSON.</p>
      *        <p>
-     *        This policy must include two JSON blocks:
+     *        <b>Data protection policy</b>
+     *        </p>
+     *        <p>
+     *        A data protection policy must include two JSON blocks:
      *        </p>
      *        <ul>
      *        <li>
@@ -470,7 +855,66 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
      *        audit findings metrics to CloudWatch.
      *        </p>
      *        <p>
-     *        The JSON specified in <code>policyDocument</code> can be up to 30,720 characters.
+     *        The JSON specified in <code>policyDocument</code> can be up to 30,720 characters long.
+     *        </p>
+     *        <p>
+     *        <b>Subscription filter policy</b>
+     *        </p>
+     *        <p>
+     *        A subscription filter policy can include the following attributes in a JSON block:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>DestinationArn</b> The ARN of the destination to deliver log events to. Supported destinations are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account
+     *        delivery.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An Kinesis Data Firehose data stream in the same account as the subscription policy, for same-account
+     *        delivery.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        A Lambda function in the same account as the subscription policy, for same-account delivery.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        A logical destination in a different account created with <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDestination.html"
+     *        >PutDestination</a>, for cross-account delivery. Kinesis Data Streams and Kinesis Data Firehose are
+     *        supported as logical destinations.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>RoleArn</b> The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log
+     *        events to the destination stream. You don't need to provide the ARN when you are working with a logical
+     *        destination for cross-account delivery.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>FilterPattern</b> A filter pattern for subscribing to a filtered stream of log events.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>Distribution</b>The method used to distribute log data to the destination. By default, log data is
+     *        grouped by log stream, but the grouping can be set to <code>Random</code> for a more even distribution.
+     *        This property is only applicable when the destination is an Kinesis Data Streams data stream.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -481,11 +925,11 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Currently the only valid value for this parameter is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy that you're creating or updating.
      * </p>
      * 
      * @param policyType
-     *        Currently the only valid value for this parameter is <code>DATA_PROTECTION_POLICY</code>.
+     *        The type of policy that you're creating or updating.
      * @see PolicyType
      */
 
@@ -495,10 +939,10 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Currently the only valid value for this parameter is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy that you're creating or updating.
      * </p>
      * 
-     * @return Currently the only valid value for this parameter is <code>DATA_PROTECTION_POLICY</code>.
+     * @return The type of policy that you're creating or updating.
      * @see PolicyType
      */
 
@@ -508,11 +952,11 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Currently the only valid value for this parameter is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy that you're creating or updating.
      * </p>
      * 
      * @param policyType
-     *        Currently the only valid value for this parameter is <code>DATA_PROTECTION_POLICY</code>.
+     *        The type of policy that you're creating or updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PolicyType
      */
@@ -524,11 +968,11 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Currently the only valid value for this parameter is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy that you're creating or updating.
      * </p>
      * 
      * @param policyType
-     *        Currently the only valid value for this parameter is <code>DATA_PROTECTION_POLICY</code>.
+     *        The type of policy that you're creating or updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PolicyType
      */
@@ -614,6 +1058,118 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Use this parameter to apply the subscription filter policy to a subset of log groups in the account. Currently,
+     * the only supported filter is <code>LogGroupName NOT IN []</code>. The <code>selectionCriteria</code> string can
+     * be up to 25KB in length. The length is determined by using its UTF-8 bytes.
+     * </p>
+     * <p>
+     * Using the <code>selectionCriteria</code> parameter is useful to help prevent infinite loops. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html">Log
+     * recursion prevention</a>.
+     * </p>
+     * <p>
+     * Specifing <code>selectionCriteria</code> is valid only when you specify <code> SUBSCRIPTION_FILTER_POLICY</code>
+     * for <code>policyType</code>.
+     * </p>
+     * 
+     * @param selectionCriteria
+     *        Use this parameter to apply the subscription filter policy to a subset of log groups in the account.
+     *        Currently, the only supported filter is <code>LogGroupName NOT IN []</code>. The
+     *        <code>selectionCriteria</code> string can be up to 25KB in length. The length is determined by using its
+     *        UTF-8 bytes.</p>
+     *        <p>
+     *        Using the <code>selectionCriteria</code> parameter is useful to help prevent infinite loops. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html"
+     *        >Log recursion prevention</a>.
+     *        </p>
+     *        <p>
+     *        Specifing <code>selectionCriteria</code> is valid only when you specify
+     *        <code> SUBSCRIPTION_FILTER_POLICY</code> for <code>policyType</code>.
+     */
+
+    public void setSelectionCriteria(String selectionCriteria) {
+        this.selectionCriteria = selectionCriteria;
+    }
+
+    /**
+     * <p>
+     * Use this parameter to apply the subscription filter policy to a subset of log groups in the account. Currently,
+     * the only supported filter is <code>LogGroupName NOT IN []</code>. The <code>selectionCriteria</code> string can
+     * be up to 25KB in length. The length is determined by using its UTF-8 bytes.
+     * </p>
+     * <p>
+     * Using the <code>selectionCriteria</code> parameter is useful to help prevent infinite loops. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html">Log
+     * recursion prevention</a>.
+     * </p>
+     * <p>
+     * Specifing <code>selectionCriteria</code> is valid only when you specify <code> SUBSCRIPTION_FILTER_POLICY</code>
+     * for <code>policyType</code>.
+     * </p>
+     * 
+     * @return Use this parameter to apply the subscription filter policy to a subset of log groups in the account.
+     *         Currently, the only supported filter is <code>LogGroupName NOT IN []</code>. The
+     *         <code>selectionCriteria</code> string can be up to 25KB in length. The length is determined by using its
+     *         UTF-8 bytes.</p>
+     *         <p>
+     *         Using the <code>selectionCriteria</code> parameter is useful to help prevent infinite loops. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html"
+     *         >Log recursion prevention</a>.
+     *         </p>
+     *         <p>
+     *         Specifing <code>selectionCriteria</code> is valid only when you specify
+     *         <code> SUBSCRIPTION_FILTER_POLICY</code> for <code>policyType</code>.
+     */
+
+    public String getSelectionCriteria() {
+        return this.selectionCriteria;
+    }
+
+    /**
+     * <p>
+     * Use this parameter to apply the subscription filter policy to a subset of log groups in the account. Currently,
+     * the only supported filter is <code>LogGroupName NOT IN []</code>. The <code>selectionCriteria</code> string can
+     * be up to 25KB in length. The length is determined by using its UTF-8 bytes.
+     * </p>
+     * <p>
+     * Using the <code>selectionCriteria</code> parameter is useful to help prevent infinite loops. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html">Log
+     * recursion prevention</a>.
+     * </p>
+     * <p>
+     * Specifing <code>selectionCriteria</code> is valid only when you specify <code> SUBSCRIPTION_FILTER_POLICY</code>
+     * for <code>policyType</code>.
+     * </p>
+     * 
+     * @param selectionCriteria
+     *        Use this parameter to apply the subscription filter policy to a subset of log groups in the account.
+     *        Currently, the only supported filter is <code>LogGroupName NOT IN []</code>. The
+     *        <code>selectionCriteria</code> string can be up to 25KB in length. The length is determined by using its
+     *        UTF-8 bytes.</p>
+     *        <p>
+     *        Using the <code>selectionCriteria</code> parameter is useful to help prevent infinite loops. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Subscriptions-recursion-prevention.html"
+     *        >Log recursion prevention</a>.
+     *        </p>
+     *        <p>
+     *        Specifing <code>selectionCriteria</code> is valid only when you specify
+     *        <code> SUBSCRIPTION_FILTER_POLICY</code> for <code>policyType</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutAccountPolicyRequest withSelectionCriteria(String selectionCriteria) {
+        setSelectionCriteria(selectionCriteria);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -632,7 +1188,9 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
         if (getPolicyType() != null)
             sb.append("PolicyType: ").append(getPolicyType()).append(",");
         if (getScope() != null)
-            sb.append("Scope: ").append(getScope());
+            sb.append("Scope: ").append(getScope()).append(",");
+        if (getSelectionCriteria() != null)
+            sb.append("SelectionCriteria: ").append(getSelectionCriteria());
         sb.append("}");
         return sb.toString();
     }
@@ -663,6 +1221,10 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getScope() != null && other.getScope().equals(this.getScope()) == false)
             return false;
+        if (other.getSelectionCriteria() == null ^ this.getSelectionCriteria() == null)
+            return false;
+        if (other.getSelectionCriteria() != null && other.getSelectionCriteria().equals(this.getSelectionCriteria()) == false)
+            return false;
         return true;
     }
 
@@ -675,6 +1237,7 @@ public class PutAccountPolicyRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getPolicyDocument() == null) ? 0 : getPolicyDocument().hashCode());
         hashCode = prime * hashCode + ((getPolicyType() == null) ? 0 : getPolicyType().hashCode());
         hashCode = prime * hashCode + ((getScope() == null) ? 0 : getScope().hashCode());
+        hashCode = prime * hashCode + ((getSelectionCriteria() == null) ? 0 : getSelectionCriteria().hashCode());
         return hashCode;
     }
 

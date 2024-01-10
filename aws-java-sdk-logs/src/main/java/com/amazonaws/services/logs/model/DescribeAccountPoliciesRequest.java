@@ -28,7 +28,7 @@ public class DescribeAccountPoliciesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * Use this parameter to limit the returned policies to only the policies that match the policy type that you
-     * specify. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * specify.
      * </p>
      */
     private String policyType;
@@ -53,12 +53,12 @@ public class DescribeAccountPoliciesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * Use this parameter to limit the returned policies to only the policies that match the policy type that you
-     * specify. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * specify.
      * </p>
      * 
      * @param policyType
      *        Use this parameter to limit the returned policies to only the policies that match the policy type that you
-     *        specify. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     *        specify.
      * @see PolicyType
      */
 
@@ -69,11 +69,11 @@ public class DescribeAccountPoliciesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * Use this parameter to limit the returned policies to only the policies that match the policy type that you
-     * specify. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * specify.
      * </p>
      * 
      * @return Use this parameter to limit the returned policies to only the policies that match the policy type that
-     *         you specify. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     *         you specify.
      * @see PolicyType
      */
 
@@ -84,12 +84,12 @@ public class DescribeAccountPoliciesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * Use this parameter to limit the returned policies to only the policies that match the policy type that you
-     * specify. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * specify.
      * </p>
      * 
      * @param policyType
      *        Use this parameter to limit the returned policies to only the policies that match the policy type that you
-     *        specify. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     *        specify.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PolicyType
      */
@@ -102,12 +102,12 @@ public class DescribeAccountPoliciesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * Use this parameter to limit the returned policies to only the policies that match the policy type that you
-     * specify. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * specify.
      * </p>
      * 
      * @param policyType
      *        Use this parameter to limit the returned policies to only the policies that match the policy type that you
-     *        specify. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     *        specify.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PolicyType
      */

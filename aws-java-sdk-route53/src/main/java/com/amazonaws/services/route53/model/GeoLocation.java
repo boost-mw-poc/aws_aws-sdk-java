@@ -85,7 +85,7 @@ public class GeoLocation implements Serializable, Cloneable {
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      * </p>
      * <p>
-     * Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     * Route 53 also supports the country code <b>UA</b> for Ukraine.
      * </p>
      */
     private String countryCode;
@@ -412,7 +412,7 @@ public class GeoLocation implements Serializable, Cloneable {
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      * </p>
      * <p>
-     * Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     * Route 53 also supports the country code <b>UA</b> for Ukraine.
      * </p>
      * 
      * @param countryCode
@@ -422,7 +422,7 @@ public class GeoLocation implements Serializable, Cloneable {
      *        href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      *        </p>
      *        <p>
-     *        Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     *        Route 53 also supports the country code <b>UA</b> for Ukraine.
      */
 
     public void setCountryCode(String countryCode) {
@@ -438,7 +438,7 @@ public class GeoLocation implements Serializable, Cloneable {
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      * </p>
      * <p>
-     * Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     * Route 53 also supports the country code <b>UA</b> for Ukraine.
      * </p>
      * 
      * @return For geolocation resource record sets, the two-letter code for a country.</p>
@@ -447,7 +447,7 @@ public class GeoLocation implements Serializable, Cloneable {
      *         href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      *         </p>
      *         <p>
-     *         Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     *         Route 53 also supports the country code <b>UA</b> for Ukraine.
      */
 
     public String getCountryCode() {
@@ -463,7 +463,7 @@ public class GeoLocation implements Serializable, Cloneable {
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      * </p>
      * <p>
-     * Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     * Route 53 also supports the country code <b>UA</b> for Ukraine.
      * </p>
      * 
      * @param countryCode
@@ -473,7 +473,7 @@ public class GeoLocation implements Serializable, Cloneable {
      *        href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      *        </p>
      *        <p>
-     *        Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     *        Route 53 also supports the country code <b>UA</b> for Ukraine.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,7 +25,7 @@ public class GetDNSSECResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * A string repesenting the status of DNSSEC.
+     * A string representing the status of DNSSEC.
      * </p>
      */
     private DNSSECStatus status;
@@ -38,11 +38,11 @@ public class GetDNSSECResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * A string repesenting the status of DNSSEC.
+     * A string representing the status of DNSSEC.
      * </p>
      * 
      * @param status
-     *        A string repesenting the status of DNSSEC.
+     *        A string representing the status of DNSSEC.
      */
 
     public void setStatus(DNSSECStatus status) {
@@ -51,10 +51,10 @@ public class GetDNSSECResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * A string repesenting the status of DNSSEC.
+     * A string representing the status of DNSSEC.
      * </p>
      * 
-     * @return A string repesenting the status of DNSSEC.
+     * @return A string representing the status of DNSSEC.
      */
 
     public DNSSECStatus getStatus() {
@@ -63,11 +63,11 @@ public class GetDNSSECResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * A string repesenting the status of DNSSEC.
+     * A string representing the status of DNSSEC.
      * </p>
      * 
      * @param status
-     *        A string repesenting the status of DNSSEC.
+     *        A string representing the status of DNSSEC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

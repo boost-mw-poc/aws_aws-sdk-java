@@ -119,6 +119,11 @@ public class ResourceRecordSetStaxUnmarshaller implements Unmarshaller<ResourceR
                     resourceRecordSet.setCidrRoutingConfig(CidrRoutingConfigStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("GeoProximityLocation", targetDepth)) {
+                    resourceRecordSet.setGeoProximityLocation(GeoProximityLocationStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return resourceRecordSet;

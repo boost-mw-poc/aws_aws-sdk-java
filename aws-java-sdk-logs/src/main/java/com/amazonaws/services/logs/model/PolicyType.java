@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum PolicyType {
 
-    DATA_PROTECTION_POLICY("DATA_PROTECTION_POLICY");
+    DATA_PROTECTION_POLICY("DATA_PROTECTION_POLICY"),
+    SUBSCRIPTION_FILTER_POLICY("SUBSCRIPTION_FILTER_POLICY");
 
     private String value;
 

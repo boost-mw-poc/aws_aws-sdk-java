@@ -753,6 +753,7 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/GetRecommendations" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetRecommendationsResult> getRecommendationsAsync(GetRecommendationsRequest getRecommendationsRequest);
 
     /**
@@ -776,6 +777,7 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/GetRecommendations" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetRecommendationsResult> getRecommendationsAsync(GetRecommendationsRequest getRecommendationsRequest,
             com.amazonaws.handlers.AsyncHandler<GetRecommendationsRequest, GetRecommendationsResult> asyncHandler);
 
@@ -1082,6 +1084,7 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/QueryAssistant" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(QueryAssistantRequest queryAssistantRequest);
 
     /**
@@ -1100,6 +1103,7 @@ public interface AmazonConnectWisdomAsync extends AmazonConnectWisdom {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/QueryAssistant" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(QueryAssistantRequest queryAssistantRequest,
             com.amazonaws.handlers.AsyncHandler<QueryAssistantRequest, QueryAssistantResult> asyncHandler);
 

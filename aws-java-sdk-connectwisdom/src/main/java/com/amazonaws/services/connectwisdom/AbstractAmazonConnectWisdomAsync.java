@@ -275,12 +275,14 @@ public class AbstractAmazonConnectWisdomAsync extends AbstractAmazonConnectWisdo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<GetRecommendationsResult> getRecommendationsAsync(GetRecommendationsRequest request) {
 
         return getRecommendationsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<GetRecommendationsResult> getRecommendationsAsync(GetRecommendationsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetRecommendationsRequest, GetRecommendationsResult> asyncHandler) {
 
@@ -405,12 +407,14 @@ public class AbstractAmazonConnectWisdomAsync extends AbstractAmazonConnectWisdo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(QueryAssistantRequest request) {
 
         return queryAssistantAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(QueryAssistantRequest request,
             com.amazonaws.handlers.AsyncHandler<QueryAssistantRequest, QueryAssistantResult> asyncHandler) {
 

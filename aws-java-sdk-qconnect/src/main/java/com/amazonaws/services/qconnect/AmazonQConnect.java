@@ -545,6 +545,7 @@ public interface AmazonQConnect {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/GetRecommendations" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     GetRecommendationsResult getRecommendations(GetRecommendationsRequest getRecommendationsRequest);
 
     /**
@@ -755,6 +756,7 @@ public interface AmazonQConnect {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/QueryAssistant" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     QueryAssistantResult queryAssistant(QueryAssistantRequest queryAssistantRequest);
 
     /**

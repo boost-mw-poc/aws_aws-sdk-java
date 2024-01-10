@@ -1459,6 +1459,7 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public GetRecommendationsResult getRecommendations(GetRecommendationsRequest request) {
         request = beforeClientExecution(request);
         return executeGetRecommendations(request);
@@ -2135,6 +2136,7 @@ public class AmazonQConnectClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public QueryAssistantResult queryAssistant(QueryAssistantRequest request) {
         request = beforeClientExecution(request);
         return executeQueryAssistant(request);

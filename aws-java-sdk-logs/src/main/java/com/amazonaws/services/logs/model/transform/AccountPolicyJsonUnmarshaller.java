@@ -68,6 +68,10 @@ public class AccountPolicyJsonUnmarshaller implements Unmarshaller<AccountPolicy
                     context.nextToken();
                     accountPolicy.setScope(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("selectionCriteria", targetDepth)) {
+                    context.nextToken();
+                    accountPolicy.setSelectionCriteria(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("accountId", targetDepth)) {
                     context.nextToken();
                     accountPolicy.setAccountId(context.getUnmarshaller(String.class).unmarshall(context));

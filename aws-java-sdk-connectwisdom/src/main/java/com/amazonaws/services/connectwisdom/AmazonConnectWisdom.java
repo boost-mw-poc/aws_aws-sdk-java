@@ -523,6 +523,7 @@ public interface AmazonConnectWisdom {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/GetRecommendations" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     GetRecommendationsResult getRecommendations(GetRecommendationsRequest getRecommendationsRequest);
 
     /**
@@ -711,6 +712,7 @@ public interface AmazonConnectWisdom {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wisdom-2020-10-19/QueryAssistant" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     QueryAssistantResult queryAssistant(QueryAssistantRequest queryAssistantRequest);
 
     /**

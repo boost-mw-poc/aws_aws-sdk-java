@@ -1439,6 +1439,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public GetRecommendationsResult getRecommendations(GetRecommendationsRequest request) {
         request = beforeClientExecution(request);
         return executeGetRecommendations(request);
@@ -2051,6 +2052,7 @@ public class AmazonConnectWisdomClient extends AmazonWebServiceClient implements
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public QueryAssistantResult queryAssistant(QueryAssistantRequest request) {
         request = beforeClientExecution(request);
         return executeQueryAssistant(request);

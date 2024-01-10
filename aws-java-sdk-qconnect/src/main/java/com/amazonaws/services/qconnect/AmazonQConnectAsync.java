@@ -774,6 +774,7 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/GetRecommendations" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetRecommendationsResult> getRecommendationsAsync(GetRecommendationsRequest getRecommendationsRequest);
 
     /**
@@ -798,6 +799,7 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/GetRecommendations" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetRecommendationsResult> getRecommendationsAsync(GetRecommendationsRequest getRecommendationsRequest,
             com.amazonaws.handlers.AsyncHandler<GetRecommendationsRequest, GetRecommendationsResult> asyncHandler);
 
@@ -1140,6 +1142,7 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/QueryAssistant" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(QueryAssistantRequest queryAssistantRequest);
 
     /**
@@ -1159,6 +1162,7 @@ public interface AmazonQConnectAsync extends AmazonQConnect {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/QueryAssistant" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(QueryAssistantRequest queryAssistantRequest,
             com.amazonaws.handlers.AsyncHandler<QueryAssistantRequest, QueryAssistantResult> asyncHandler);
 

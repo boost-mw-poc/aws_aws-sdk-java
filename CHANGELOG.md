@@ -1,3 +1,36 @@
+# __1.12.634__ __2024-01-10__
+## __AWS SDK for Java__
+  - ### Features
+    - Add environment option to disable falling back to IMDSv1 if IMDSv2 is not available. To disable the fallback, set either the `AWS_EC2_METADATA_V1_DISABLED` environment variable or `com.amazonaws.sdk.disableEc2MetadataV1` system property to `true`. See https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html for more information.
+
+## __Amazon CloudWatch Logs__
+  - ### Features
+    - Add support for account level subscription filter policies to PutAccountPolicy, DescribeAccountPolicies, and DeleteAccountPolicy APIs. Additionally, PutAccountPolicy has been modified with new optional "selectionCriteria" parameter for resource selection.
+
+## __Amazon Connect Wisdom Service__
+  - ### Features
+    - QueryAssistant and GetRecommendations will be discontinued starting June 1, 2024. To receive generative responses after March 1, 2024 you will need to create a new Assistant in the Connect console and integrate the Amazon Q in Connect JavaScript library (amazon-q-connectjs) into your applications.
+
+## __Amazon Location Service__
+  - ### Features
+    - This release adds API support for custom layers for the maps service APIs: CreateMap, UpdateMap, DescribeMap.
+
+## __Amazon Q Connect__
+  - ### Features
+    - QueryAssistant and GetRecommendations will be discontinued starting June 1, 2024. To receive generative responses after March 1, 2024 you will need to create a new Assistant in the Connect console and integrate the Amazon Q in Connect JavaScript library (amazon-q-connectjs) into your applications.
+
+## __Amazon Route 53__
+  - ### Features
+    - Route53 now supports geoproximity routing in AWS regions
+
+## __AmazonConnectCampaignService__
+  - ### Features
+    - Minor pattern updates for Campaign and Dial Request API fields.
+
+## __Redshift Serverless__
+  - ### Features
+    - Updates to ConfigParameter for RSS workgroup, removal of use_fips_ssl
+
 # __1.12.633__ __2024-01-08__
 ## __AWS CodeBuild__
   - ### Features

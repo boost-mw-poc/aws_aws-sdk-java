@@ -76,7 +76,7 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * After a log group is created, its class can't be changed.
+     * The value of <code>logGroupClass</code> can't be changed after a log group is created.
      * </p>
      * </important>
      * <p>
@@ -344,7 +344,7 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * After a log group is created, its class can't be changed.
+     * The value of <code>logGroupClass</code> can't be changed after a log group is created.
      * </p>
      * </important>
      * <p>
@@ -372,7 +372,7 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <important>
      *        <p>
-     *        After a log group is created, its class can't be changed.
+     *        The value of <code>logGroupClass</code> can't be changed after a log group is created.
      *        </p>
      *        </important>
      *        <p>
@@ -408,7 +408,7 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * After a log group is created, its class can't be changed.
+     * The value of <code>logGroupClass</code> can't be changed after a log group is created.
      * </p>
      * </important>
      * <p>
@@ -435,7 +435,7 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </p>
      *         <important>
      *         <p>
-     *         After a log group is created, its class can't be changed.
+     *         The value of <code>logGroupClass</code> can't be changed after a log group is created.
      *         </p>
      *         </important>
      *         <p>
@@ -471,7 +471,7 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * After a log group is created, its class can't be changed.
+     * The value of <code>logGroupClass</code> can't be changed after a log group is created.
      * </p>
      * </important>
      * <p>
@@ -499,7 +499,7 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <important>
      *        <p>
-     *        After a log group is created, its class can't be changed.
+     *        The value of <code>logGroupClass</code> can't be changed after a log group is created.
      *        </p>
      *        </important>
      *        <p>
@@ -537,7 +537,7 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * After a log group is created, its class can't be changed.
+     * The value of <code>logGroupClass</code> can't be changed after a log group is created.
      * </p>
      * </important>
      * <p>
@@ -565,7 +565,7 @@ public class CreateLogGroupRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <important>
      *        <p>
-     *        After a log group is created, its class can't be changed.
+     *        The value of <code>logGroupClass</code> can't be changed after a log group is created.
      *        </p>
      *        </important>
      *        <p>

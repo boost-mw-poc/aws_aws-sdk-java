@@ -41,7 +41,10 @@ import java.net.SocketTimeoutException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Map;
+
+import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
@@ -78,6 +81,11 @@ public class InstanceMetadataServiceResourceFetcherTest {
         resourceFetcher = InstanceMetadataServiceResourceFetcher.getInstance();
         System.setProperty(SDKGlobalConfiguration.EC2_METADATA_SERVICE_OVERRIDE_SYSTEM_PROPERTY,
             "http://localhost:" + mockServer.port());
+    }
+
+    @Before
+    public void methodSetup() {
+        System.clearProperty(SDKGlobalConfiguration.AWS_EC2_METADATA_V1_DISABLED_SYSTEM_PROPERTY);
     }
 
     @AfterClass
@@ -182,6 +190,80 @@ public class InstanceMetadataServiceResourceFetcherTest {
             fail("no exception");
         } catch (SdkClientException exception) {
             assertEquals(exception.getCause(), ioException);
+        }
+    }
+
+    @Test
+    public void token404_v1FallbackDisabled_shouldThrowException() throws IOException {
+        generateErrorTokenStub(404);
+        generateStub(200, SUCCESS_BODY);
+        System.setProperty(SDKGlobalConfiguration.AWS_EC2_METADATA_V1_DISABLED_SYSTEM_PROPERTY, "true");
+
+        try {
+            assertEquals(SUCCESS_BODY, resourceFetcher.readResource(endpoint));
+            fail("no exception");
+        } catch (AmazonClientException exception) {
+            assertEquals("Failed to retrieve IMDS token, and fallback to IMDS v1 is disabled via the " +
+                            "AWS_EC2_METADATA_V1_DISABLED environment variable and/or " +
+                            "com.amazonaws.sdk.disableEc2MetadataV1 system property",
+                    exception.getMessage());
+        }
+    }
+
+    @Test
+    public void tokenNonRetryableError_v1FallbackDisabled_shouldThrowException() {
+        generateErrorTokenStub(405);
+        generateStub(200, SUCCESS_BODY);
+        System.setProperty(SDKGlobalConfiguration.AWS_EC2_METADATA_V1_DISABLED_SYSTEM_PROPERTY, "true");
+
+        try {
+            assertEquals(SUCCESS_BODY, resourceFetcher.readResource(endpoint));
+            fail("no exception");
+        } catch (AmazonClientException exception) {
+            assertEquals("Failed to retrieve IMDS token, and fallback to IMDS v1 is disabled via the " +
+                            "AWS_EC2_METADATA_V1_DISABLED environment variable and/or " +
+                            "com.amazonaws.sdk.disableEc2MetadataV1 system property",
+                    exception.getMessage());
+        }
+    }
+
+    @Test
+    public void token403_v1FallbackDisabled_shouldThrowException() {
+        generateErrorTokenStub(403);
+        generateStub(200, SUCCESS_BODY);
+        System.setProperty(SDKGlobalConfiguration.AWS_EC2_METADATA_V1_DISABLED_SYSTEM_PROPERTY, "true");
+
+        try {
+            assertEquals(SUCCESS_BODY, resourceFetcher.readResource(endpoint));
+            fail("no exception");
+        } catch (AmazonClientException exception) {
+            assertEquals("Failed to retrieve IMDS token, and fallback to IMDS v1 is disabled via the " +
+                            "AWS_EC2_METADATA_V1_DISABLED environment variable and/or " +
+                            "com.amazonaws.sdk.disableEc2MetadataV1 system property",
+                    exception.getMessage());
+        }
+    }
+
+    @Test
+    public void tokenTimeoutException_v1FallbackDisabled_shouldThrowException() throws IOException {
+        generateStub(200, SUCCESS_BODY);
+        Mockito.when(mockConnection.connectToEndpoint(eq(tokenEndpoint), any(Map.class), eq("PUT")))
+                .thenThrow(new SocketTimeoutException());
+
+        Mockito.when(mockConnection.connectToEndpoint(eq(endpoint), any(Map.class), eq("GET")))
+                .thenCallRealMethod();
+
+        System.setProperty(SDKGlobalConfiguration.AWS_EC2_METADATA_V1_DISABLED_SYSTEM_PROPERTY, "true");
+
+        try {
+            assertEquals(SUCCESS_BODY,
+                    new InstanceMetadataServiceResourceFetcher(mockConnection).readResource(endpoint));
+            fail("no exception");
+        } catch (AmazonClientException exception) {
+            assertEquals("Failed to retrieve IMDS token, and fallback to IMDS v1 is disabled via the " +
+                            "AWS_EC2_METADATA_V1_DISABLED environment variable and/or " +
+                            "com.amazonaws.sdk.disableEc2MetadataV1 system property",
+                    exception.getMessage());
         }
     }
 

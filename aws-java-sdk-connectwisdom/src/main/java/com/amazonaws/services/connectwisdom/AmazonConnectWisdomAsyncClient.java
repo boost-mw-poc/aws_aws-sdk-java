@@ -706,12 +706,14 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<GetRecommendationsResult> getRecommendationsAsync(GetRecommendationsRequest request) {
 
         return getRecommendationsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<GetRecommendationsResult> getRecommendationsAsync(final GetRecommendationsRequest request,
             final com.amazonaws.handlers.AsyncHandler<GetRecommendationsRequest, GetRecommendationsResult> asyncHandler) {
         final GetRecommendationsRequest finalRequest = beforeClientExecution(request);
@@ -1037,12 +1039,14 @@ public class AmazonConnectWisdomAsyncClient extends AmazonConnectWisdomClient im
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(QueryAssistantRequest request) {
 
         return queryAssistantAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<QueryAssistantResult> queryAssistantAsync(final QueryAssistantRequest request,
             final com.amazonaws.handlers.AsyncHandler<QueryAssistantRequest, QueryAssistantResult> asyncHandler) {
         final QueryAssistantRequest finalRequest = beforeClientExecution(request);

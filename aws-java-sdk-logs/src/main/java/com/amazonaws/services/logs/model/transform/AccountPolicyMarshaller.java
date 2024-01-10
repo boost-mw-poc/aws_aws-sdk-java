@@ -37,6 +37,8 @@ public class AccountPolicyMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("policyType").build();
     private static final MarshallingInfo<String> SCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("scope").build();
+    private static final MarshallingInfo<String> SELECTIONCRITERIA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("selectionCriteria").build();
     private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("accountId").build();
 
@@ -61,6 +63,7 @@ public class AccountPolicyMarshaller {
             protocolMarshaller.marshall(accountPolicy.getLastUpdatedTime(), LASTUPDATEDTIME_BINDING);
             protocolMarshaller.marshall(accountPolicy.getPolicyType(), POLICYTYPE_BINDING);
             protocolMarshaller.marshall(accountPolicy.getScope(), SCOPE_BINDING);
+            protocolMarshaller.marshall(accountPolicy.getSelectionCriteria(), SELECTIONCRITERIA_BINDING);
             protocolMarshaller.marshall(accountPolicy.getAccountId(), ACCOUNTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

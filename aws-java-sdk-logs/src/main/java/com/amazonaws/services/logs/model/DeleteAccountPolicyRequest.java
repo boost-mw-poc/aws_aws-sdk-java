@@ -33,7 +33,7 @@ public class DeleteAccountPolicyRequest extends com.amazonaws.AmazonWebServiceRe
     private String policyName;
     /**
      * <p>
-     * The type of policy to delete. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy to delete.
      * </p>
      */
     private String policyType;
@@ -80,11 +80,11 @@ public class DeleteAccountPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of policy to delete. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy to delete.
      * </p>
      * 
      * @param policyType
-     *        The type of policy to delete. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     *        The type of policy to delete.
      * @see PolicyType
      */
 
@@ -94,10 +94,10 @@ public class DeleteAccountPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of policy to delete. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy to delete.
      * </p>
      * 
-     * @return The type of policy to delete. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * @return The type of policy to delete.
      * @see PolicyType
      */
 
@@ -107,11 +107,11 @@ public class DeleteAccountPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of policy to delete. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy to delete.
      * </p>
      * 
      * @param policyType
-     *        The type of policy to delete. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     *        The type of policy to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PolicyType
      */
@@ -123,11 +123,11 @@ public class DeleteAccountPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of policy to delete. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     * The type of policy to delete.
      * </p>
      * 
      * @param policyType
-     *        The type of policy to delete. Currently, the only valid value is <code>DATA_PROTECTION_POLICY</code>.
+     *        The type of policy to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PolicyType
      */

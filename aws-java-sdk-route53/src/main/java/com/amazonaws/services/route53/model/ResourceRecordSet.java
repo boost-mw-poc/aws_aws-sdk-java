@@ -272,12 +272,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * be routed to a web server with an IP address of <code>192.0.2.111</code>, create a resource record set with a
      * <code>Type</code> of <code>A</code> and a <code>ContinentCode</code> of <code>AF</code>.
      * </p>
-     * <note>
-     * <p>
-     * Although creating geolocation and geolocation alias resource record sets in a private hosted zone is allowed,
-     * it's not supported.
-     * </p>
-     * </note>
      * <p>
      * If you create separate resource record sets for overlapping geographic regions (for example, one resource record
      * set for a continent and one for a country on the same continent), priority goes to the smallest geographic
@@ -698,6 +692,13 @@ public class ResourceRecordSet implements Serializable, Cloneable {
     private String trafficPolicyInstanceId;
 
     private CidrRoutingConfig cidrRoutingConfig;
+    /**
+     * <p>
+     * <i> GeoproximityLocation resource record sets only:</i> A complex type that lets you control how Route 53
+     * responds to DNS queries based on the geographic origin of the query and your resources.
+     * </p>
+     */
+    private GeoProximityLocation geoProximityLocation;
 
     /**
      * Default constructor for ResourceRecordSet object. Callers should use the setter or fluent setter (with...)
@@ -2977,12 +2978,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * be routed to a web server with an IP address of <code>192.0.2.111</code>, create a resource record set with a
      * <code>Type</code> of <code>A</code> and a <code>ContinentCode</code> of <code>AF</code>.
      * </p>
-     * <note>
-     * <p>
-     * Although creating geolocation and geolocation alias resource record sets in a private hosted zone is allowed,
-     * it's not supported.
-     * </p>
-     * </note>
      * <p>
      * If you create separate resource record sets for overlapping geographic regions (for example, one resource record
      * set for a continent and one for a country on the same continent), priority goes to the smallest geographic
@@ -3019,12 +3014,7 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *        responds to DNS queries based on the geographic origin of the query. For example, if you want all queries
      *        from Africa to be routed to a web server with an IP address of <code>192.0.2.111</code>, create a resource
      *        record set with a <code>Type</code> of <code>A</code> and a <code>ContinentCode</code> of <code>AF</code>
-     *        .</p> <note>
-     *        <p>
-     *        Although creating geolocation and geolocation alias resource record sets in a private hosted zone is
-     *        allowed, it's not supported.
-     *        </p>
-     *        </note>
+     *        .</p>
      *        <p>
      *        If you create separate resource record sets for overlapping geographic regions (for example, one resource
      *        record set for a continent and one for a country on the same continent), priority goes to the smallest
@@ -3067,12 +3057,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * be routed to a web server with an IP address of <code>192.0.2.111</code>, create a resource record set with a
      * <code>Type</code> of <code>A</code> and a <code>ContinentCode</code> of <code>AF</code>.
      * </p>
-     * <note>
-     * <p>
-     * Although creating geolocation and geolocation alias resource record sets in a private hosted zone is allowed,
-     * it's not supported.
-     * </p>
-     * </note>
      * <p>
      * If you create separate resource record sets for overlapping geographic regions (for example, one resource record
      * set for a continent and one for a country on the same continent), priority goes to the smallest geographic
@@ -3108,12 +3092,7 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *         responds to DNS queries based on the geographic origin of the query. For example, if you want all queries
      *         from Africa to be routed to a web server with an IP address of <code>192.0.2.111</code>, create a
      *         resource record set with a <code>Type</code> of <code>A</code> and a <code>ContinentCode</code> of
-     *         <code>AF</code>.</p> <note>
-     *         <p>
-     *         Although creating geolocation and geolocation alias resource record sets in a private hosted zone is
-     *         allowed, it's not supported.
-     *         </p>
-     *         </note>
+     *         <code>AF</code>.</p>
      *         <p>
      *         If you create separate resource record sets for overlapping geographic regions (for example, one resource
      *         record set for a continent and one for a country on the same continent), priority goes to the smallest
@@ -3156,12 +3135,6 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      * be routed to a web server with an IP address of <code>192.0.2.111</code>, create a resource record set with a
      * <code>Type</code> of <code>A</code> and a <code>ContinentCode</code> of <code>AF</code>.
      * </p>
-     * <note>
-     * <p>
-     * Although creating geolocation and geolocation alias resource record sets in a private hosted zone is allowed,
-     * it's not supported.
-     * </p>
-     * </note>
      * <p>
      * If you create separate resource record sets for overlapping geographic regions (for example, one resource record
      * set for a continent and one for a country on the same continent), priority goes to the smallest geographic
@@ -3198,12 +3171,7 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      *        responds to DNS queries based on the geographic origin of the query. For example, if you want all queries
      *        from Africa to be routed to a web server with an IP address of <code>192.0.2.111</code>, create a resource
      *        record set with a <code>Type</code> of <code>A</code> and a <code>ContinentCode</code> of <code>AF</code>
-     *        .</p> <note>
-     *        <p>
-     *        Although creating geolocation and geolocation alias resource record sets in a private hosted zone is
-     *        allowed, it's not supported.
-     *        </p>
-     *        </note>
+     *        .</p>
      *        <p>
      *        If you create separate resource record sets for overlapping geographic regions (for example, one resource
      *        record set for a continent and one for a country on the same continent), priority goes to the smallest
@@ -6019,6 +5987,52 @@ public class ResourceRecordSet implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * <i> GeoproximityLocation resource record sets only:</i> A complex type that lets you control how Route 53
+     * responds to DNS queries based on the geographic origin of the query and your resources.
+     * </p>
+     * 
+     * @param geoProximityLocation
+     *        <i> GeoproximityLocation resource record sets only:</i> A complex type that lets you control how Route 53
+     *        responds to DNS queries based on the geographic origin of the query and your resources.
+     */
+
+    public void setGeoProximityLocation(GeoProximityLocation geoProximityLocation) {
+        this.geoProximityLocation = geoProximityLocation;
+    }
+
+    /**
+     * <p>
+     * <i> GeoproximityLocation resource record sets only:</i> A complex type that lets you control how Route 53
+     * responds to DNS queries based on the geographic origin of the query and your resources.
+     * </p>
+     * 
+     * @return <i> GeoproximityLocation resource record sets only:</i> A complex type that lets you control how Route 53
+     *         responds to DNS queries based on the geographic origin of the query and your resources.
+     */
+
+    public GeoProximityLocation getGeoProximityLocation() {
+        return this.geoProximityLocation;
+    }
+
+    /**
+     * <p>
+     * <i> GeoproximityLocation resource record sets only:</i> A complex type that lets you control how Route 53
+     * responds to DNS queries based on the geographic origin of the query and your resources.
+     * </p>
+     * 
+     * @param geoProximityLocation
+     *        <i> GeoproximityLocation resource record sets only:</i> A complex type that lets you control how Route 53
+     *        responds to DNS queries based on the geographic origin of the query and your resources.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceRecordSet withGeoProximityLocation(GeoProximityLocation geoProximityLocation) {
+        setGeoProximityLocation(geoProximityLocation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6057,7 +6071,9 @@ public class ResourceRecordSet implements Serializable, Cloneable {
         if (getTrafficPolicyInstanceId() != null)
             sb.append("TrafficPolicyInstanceId: ").append(getTrafficPolicyInstanceId()).append(",");
         if (getCidrRoutingConfig() != null)
-            sb.append("CidrRoutingConfig: ").append(getCidrRoutingConfig());
+            sb.append("CidrRoutingConfig: ").append(getCidrRoutingConfig()).append(",");
+        if (getGeoProximityLocation() != null)
+            sb.append("GeoProximityLocation: ").append(getGeoProximityLocation());
         sb.append("}");
         return sb.toString();
     }
@@ -6128,6 +6144,10 @@ public class ResourceRecordSet implements Serializable, Cloneable {
             return false;
         if (other.getCidrRoutingConfig() != null && other.getCidrRoutingConfig().equals(this.getCidrRoutingConfig()) == false)
             return false;
+        if (other.getGeoProximityLocation() == null ^ this.getGeoProximityLocation() == null)
+            return false;
+        if (other.getGeoProximityLocation() != null && other.getGeoProximityLocation().equals(this.getGeoProximityLocation()) == false)
+            return false;
         return true;
     }
 
@@ -6150,6 +6170,7 @@ public class ResourceRecordSet implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getHealthCheckId() == null) ? 0 : getHealthCheckId().hashCode());
         hashCode = prime * hashCode + ((getTrafficPolicyInstanceId() == null) ? 0 : getTrafficPolicyInstanceId().hashCode());
         hashCode = prime * hashCode + ((getCidrRoutingConfig() == null) ? 0 : getCidrRoutingConfig().hashCode());
+        hashCode = prime * hashCode + ((getGeoProximityLocation() == null) ? 0 : getGeoProximityLocation().hashCode());
         return hashCode;
     }
 

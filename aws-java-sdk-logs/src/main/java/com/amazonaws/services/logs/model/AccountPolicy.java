@@ -63,6 +63,12 @@ public class AccountPolicy implements Serializable, Cloneable, StructuredPojo {
     private String scope;
     /**
      * <p>
+     * The log group selection criteria for this subscription filter policy.
+     * </p>
+     */
+    private String selectionCriteria;
+    /**
+     * <p>
      * The Amazon Web Services account ID that the policy applies to.
      * </p>
      */
@@ -323,6 +329,46 @@ public class AccountPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The log group selection criteria for this subscription filter policy.
+     * </p>
+     * 
+     * @param selectionCriteria
+     *        The log group selection criteria for this subscription filter policy.
+     */
+
+    public void setSelectionCriteria(String selectionCriteria) {
+        this.selectionCriteria = selectionCriteria;
+    }
+
+    /**
+     * <p>
+     * The log group selection criteria for this subscription filter policy.
+     * </p>
+     * 
+     * @return The log group selection criteria for this subscription filter policy.
+     */
+
+    public String getSelectionCriteria() {
+        return this.selectionCriteria;
+    }
+
+    /**
+     * <p>
+     * The log group selection criteria for this subscription filter policy.
+     * </p>
+     * 
+     * @param selectionCriteria
+     *        The log group selection criteria for this subscription filter policy.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AccountPolicy withSelectionCriteria(String selectionCriteria) {
+        setSelectionCriteria(selectionCriteria);
+        return this;
+    }
+
+    /**
+     * <p>
      * The Amazon Web Services account ID that the policy applies to.
      * </p>
      * 
@@ -383,6 +429,8 @@ public class AccountPolicy implements Serializable, Cloneable, StructuredPojo {
             sb.append("PolicyType: ").append(getPolicyType()).append(",");
         if (getScope() != null)
             sb.append("Scope: ").append(getScope()).append(",");
+        if (getSelectionCriteria() != null)
+            sb.append("SelectionCriteria: ").append(getSelectionCriteria()).append(",");
         if (getAccountId() != null)
             sb.append("AccountId: ").append(getAccountId());
         sb.append("}");
@@ -419,6 +467,10 @@ public class AccountPolicy implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getScope() != null && other.getScope().equals(this.getScope()) == false)
             return false;
+        if (other.getSelectionCriteria() == null ^ this.getSelectionCriteria() == null)
+            return false;
+        if (other.getSelectionCriteria() != null && other.getSelectionCriteria().equals(this.getSelectionCriteria()) == false)
+            return false;
         if (other.getAccountId() == null ^ this.getAccountId() == null)
             return false;
         if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
@@ -436,6 +488,7 @@ public class AccountPolicy implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLastUpdatedTime() == null) ? 0 : getLastUpdatedTime().hashCode());
         hashCode = prime * hashCode + ((getPolicyType() == null) ? 0 : getPolicyType().hashCode());
         hashCode = prime * hashCode + ((getScope() == null) ? 0 : getScope().hashCode());
+        hashCode = prime * hashCode + ((getSelectionCriteria() == null) ? 0 : getSelectionCriteria().hashCode());
         hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
         return hashCode;
     }

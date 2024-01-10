@@ -70,6 +70,12 @@ public final class InstanceMetadataServiceResourceFetcher extends EC2ResourceFet
 
         if (token != null) {
             newHeaders.put(TOKEN_HEADER, token);
+        } else if (SDKGlobalConfiguration.isEc2MetadataV1Disabled()) {
+            String errorMsg = String.format("Failed to retrieve IMDS token, and fallback to IMDS v1 is disabled via " +
+                    "the %s environment variable and/or %s system property",
+                    SDKGlobalConfiguration.AWS_EC2_METADATA_V1_DISABLED_ENV_VAR,
+                    SDKGlobalConfiguration.AWS_EC2_METADATA_V1_DISABLED_SYSTEM_PROPERTY);
+            throw new AmazonClientException(errorMsg);
         }
 
         return doReadResource(endpoint, retryPolicy, newHeaders);

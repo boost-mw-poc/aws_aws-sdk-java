@@ -79,7 +79,7 @@ public class GetGeoLocationRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      * </p>
      * <p>
-     * Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     * Route 53 also supports the country code <b>UA</b> for Ukraine.
      * </p>
      */
     private String countryCode;
@@ -366,14 +366,14 @@ public class GetGeoLocationRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      * </p>
      * <p>
-     * Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     * Route 53 also supports the country code <b>UA</b> for Ukraine.
      * </p>
      * 
      * @param countryCode
      *        Amazon Route 53 uses the two-letter country codes that are specified in <a
      *        href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.</p>
      *        <p>
-     *        Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     *        Route 53 also supports the country code <b>UA</b> for Ukraine.
      */
 
     public void setCountryCode(String countryCode) {
@@ -386,13 +386,13 @@ public class GetGeoLocationRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      * </p>
      * <p>
-     * Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     * Route 53 also supports the country code <b>UA</b> for Ukraine.
      * </p>
      * 
      * @return Amazon Route 53 uses the two-letter country codes that are specified in <a
      *         href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.</p>
      *         <p>
-     *         Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     *         Route 53 also supports the country code <b>UA</b> for Ukraine.
      */
 
     public String getCountryCode() {
@@ -405,14 +405,14 @@ public class GetGeoLocationRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.
      * </p>
      * <p>
-     * Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     * Route 53 also supports the country code <b>UA</b> for Ukraine.
      * </p>
      * 
      * @param countryCode
      *        Amazon Route 53 uses the two-letter country codes that are specified in <a
      *        href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO standard 3166-1 alpha-2</a>.</p>
      *        <p>
-     *        Route 53 also supports the contry code <b>UA</b> forr Ukraine.
+     *        Route 53 also supports the country code <b>UA</b> for Ukraine.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

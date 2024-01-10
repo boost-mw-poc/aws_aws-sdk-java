@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A string repesenting the status of DNSSEC signing.
+ * A string representing the status of DNSSEC signing.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/DNSSECStatus" target="_top">AWS API

@@ -123,6 +123,7 @@ public class AbstractAmazonQConnect implements AmazonQConnect {
     }
 
     @Override
+    @Deprecated
     public GetRecommendationsResult getRecommendations(GetRecommendationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -178,6 +179,7 @@ public class AbstractAmazonQConnect implements AmazonQConnect {
     }
 
     @Override
+    @Deprecated
     public QueryAssistantResult queryAssistant(QueryAssistantRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

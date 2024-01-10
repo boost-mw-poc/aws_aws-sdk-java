@@ -35,6 +35,8 @@ public class PutAccountPolicyRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("policyType").build();
     private static final MarshallingInfo<String> SCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("scope").build();
+    private static final MarshallingInfo<String> SELECTIONCRITERIA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("selectionCriteria").build();
 
     private static final PutAccountPolicyRequestMarshaller instance = new PutAccountPolicyRequestMarshaller();
 
@@ -56,6 +58,7 @@ public class PutAccountPolicyRequestMarshaller {
             protocolMarshaller.marshall(putAccountPolicyRequest.getPolicyDocument(), POLICYDOCUMENT_BINDING);
             protocolMarshaller.marshall(putAccountPolicyRequest.getPolicyType(), POLICYTYPE_BINDING);
             protocolMarshaller.marshall(putAccountPolicyRequest.getScope(), SCOPE_BINDING);
+            protocolMarshaller.marshall(putAccountPolicyRequest.getSelectionCriteria(), SELECTIONCRITERIA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

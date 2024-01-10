@@ -171,7 +171,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller routing
+     * <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller routing
      * control. If the routing control state is <code>ON</code>, the health check is considered healthy. If the state is
      * <code>OFF</code>, the health check is considered unhealthy.
      * </p>
@@ -1011,7 +1011,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller routing
+     * <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller routing
      * control. If the routing control state is <code>ON</code>, the health check is considered healthy. If the state is
      * <code>OFF</code>, the health check is considered unhealthy.
      * </p>
@@ -1089,7 +1089,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller
+     *        <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller
      *        routing control. If the routing control state is <code>ON</code>, the health check is considered healthy.
      *        If the state is <code>OFF</code>, the health check is considered unhealthy.
      *        </p>
@@ -1175,7 +1175,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller routing
+     * <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller routing
      * control. If the routing control state is <code>ON</code>, the health check is considered healthy. If the state is
      * <code>OFF</code>, the health check is considered unhealthy.
      * </p>
@@ -1252,7 +1252,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller
+     *         <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller
      *         routing control. If the routing control state is <code>ON</code>, the health check is considered healthy.
      *         If the state is <code>OFF</code>, the health check is considered unhealthy.
      *         </p>
@@ -1339,7 +1339,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller routing
+     * <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller routing
      * control. If the routing control state is <code>ON</code>, the health check is considered healthy. If the state is
      * <code>OFF</code>, the health check is considered unhealthy.
      * </p>
@@ -1417,7 +1417,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller
+     *        <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller
      *        routing control. If the routing control state is <code>ON</code>, the health check is considered healthy.
      *        If the state is <code>OFF</code>, the health check is considered unhealthy.
      *        </p>
@@ -1505,7 +1505,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller routing
+     * <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller routing
      * control. If the routing control state is <code>ON</code>, the health check is considered healthy. If the state is
      * <code>OFF</code>, the health check is considered unhealthy.
      * </p>
@@ -1583,7 +1583,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller
+     *        <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller
      *        routing control. If the routing control state is <code>ON</code>, the health check is considered healthy.
      *        If the state is <code>OFF</code>, the health check is considered unhealthy.
      *        </p>
@@ -1669,7 +1669,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller routing
+     * <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller routing
      * control. If the routing control state is <code>ON</code>, the health check is considered healthy. If the state is
      * <code>OFF</code>, the health check is considered unhealthy.
      * </p>
@@ -1747,7 +1747,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>RECOVERY_CONTROL</b>: The health check is assocated with a Route53 Application Recovery Controller
+     *        <b>RECOVERY_CONTROL</b>: The health check is associated with a Route53 Application Recovery Controller
      *        routing control. If the routing control state is <code>ON</code>, the health check is considered healthy.
      *        If the state is <code>OFF</code>, the health check is considered unhealthy.
      *        </p>
