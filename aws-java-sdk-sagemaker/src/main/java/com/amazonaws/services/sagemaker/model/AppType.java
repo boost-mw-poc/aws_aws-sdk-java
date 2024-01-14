@@ -24,17 +24,11 @@ public enum AppType {
     KernelGateway("KernelGateway"),
     DetailedProfiler("DetailedProfiler"),
     TensorBoard("TensorBoard"),
-    VSCode("VSCode"),
-    Savitur("Savitur"),
     CodeEditor("CodeEditor"),
     JupyterLab("JupyterLab"),
     RStudioServerPro("RStudioServerPro"),
-    RSession("RSession"),
     RSessionGateway("RSessionGateway"),
-    Canvas("Canvas"),
-    DatasetManager("DatasetManager"),
-    SageMakerLite("SageMakerLite"),
-    Local("Local");
+    Canvas("Canvas");
 
     private String value;
 

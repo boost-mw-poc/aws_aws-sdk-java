@@ -1,3 +1,8 @@
+# __1.12.637__ __2024-01-14__
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release will have ValidationException thrown if certain invalid app types are provided. The release will also throw ValidationException if more than 10 account ids are provided in VpcOnlyTrustedAccounts.
+
 # __1.12.636__ __2024-01-12__
 ## __AWS S3 Control__
   - ### Features

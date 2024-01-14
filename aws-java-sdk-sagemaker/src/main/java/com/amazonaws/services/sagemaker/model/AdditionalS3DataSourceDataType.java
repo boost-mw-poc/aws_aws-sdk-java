@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AdditionalS3DataSourceDataType {
 
-    S3Object("S3Object");
+    S3Object("S3Object"),
+    S3Prefix("S3Prefix");
 
     private String value;
 
