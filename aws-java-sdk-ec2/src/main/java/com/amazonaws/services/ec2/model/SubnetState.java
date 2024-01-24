@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum SubnetState {
 
     Pending("pending"),
-    Available("available");
+    Available("available"),
+    Unavailable("unavailable");
 
     private String value;
 

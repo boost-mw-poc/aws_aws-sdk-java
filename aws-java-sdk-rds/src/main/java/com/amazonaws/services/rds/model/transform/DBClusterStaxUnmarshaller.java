@@ -479,6 +479,11 @@ public class DBClusterStaxUnmarshaller implements Unmarshaller<DBCluster, StaxUn
                     dBCluster.setAwsBackupRecoveryPointArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("LimitlessDatabase", targetDepth)) {
+                    dBCluster.setLimitlessDatabase(LimitlessDatabaseStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBCluster;

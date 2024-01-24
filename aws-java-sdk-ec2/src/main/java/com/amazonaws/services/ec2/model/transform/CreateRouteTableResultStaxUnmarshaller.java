@@ -47,6 +47,11 @@ public class CreateRouteTableResultStaxUnmarshaller implements Unmarshaller<Crea
                     createRouteTableResult.setRouteTable(RouteTableStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("clientToken", targetDepth)) {
+                    createRouteTableResult.setClientToken(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return createRouteTableResult;

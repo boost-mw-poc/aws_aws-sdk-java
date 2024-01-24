@@ -36783,7 +36783,7 @@
       "packageName" : "com.amazonaws.services.outposts.request",
       "requestSignerAware" : false,
       "requestSignerClassFqcn" : null,
-      "required" : [ "DeviceSerialNumber", "AssetId", "ClientPublicKey", "NetworkInterfaceDeviceIndex" ],
+      "required" : [ "AssetId", "ClientPublicKey", "NetworkInterfaceDeviceIndex" ],
       "shapeName" : "StartConnectionRequest",
       "signerAware" : false,
       "signerType" : null,

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object representing the networking details for a task or service.
+ * An object representing the networking details for a task or service. For example
+ * <code>awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}</code>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/AwsVpcConfiguration" target="_top">AWS API

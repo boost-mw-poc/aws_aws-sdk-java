@@ -164,6 +164,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public CreateDBShardGroupResult createDBShardGroup(CreateDBShardGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DBSnapshot createDBSnapshot(CreateDBSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -260,6 +265,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public DeleteDBSecurityGroupResult deleteDBSecurityGroup(DeleteDBSecurityGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteDBShardGroupResult deleteDBShardGroup(DeleteDBShardGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -461,6 +471,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     @Override
     public DescribeDBSecurityGroupsResult describeDBSecurityGroups() {
         return describeDBSecurityGroups(new DescribeDBSecurityGroupsRequest());
+    }
+
+    @Override
+    public DescribeDBShardGroupsResult describeDBShardGroups(DescribeDBShardGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -724,6 +739,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public ModifyDBShardGroupResult modifyDBShardGroup(ModifyDBShardGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DBSnapshot modifyDBSnapshot(ModifyDBSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -780,6 +800,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public DBInstance rebootDBInstance(RebootDBInstanceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RebootDBShardGroupResult rebootDBShardGroup(RebootDBShardGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

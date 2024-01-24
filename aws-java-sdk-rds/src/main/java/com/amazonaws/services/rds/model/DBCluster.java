@@ -641,6 +641,12 @@ public class DBCluster implements Serializable, Cloneable {
      * </p>
      */
     private String awsBackupRecoveryPointArn;
+    /**
+     * <p>
+     * The details for Aurora Limitless Database.
+     * </p>
+     */
+    private LimitlessDatabase limitlessDatabase;
 
     /**
      * <p>
@@ -5163,6 +5169,46 @@ public class DBCluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The details for Aurora Limitless Database.
+     * </p>
+     * 
+     * @param limitlessDatabase
+     *        The details for Aurora Limitless Database.
+     */
+
+    public void setLimitlessDatabase(LimitlessDatabase limitlessDatabase) {
+        this.limitlessDatabase = limitlessDatabase;
+    }
+
+    /**
+     * <p>
+     * The details for Aurora Limitless Database.
+     * </p>
+     * 
+     * @return The details for Aurora Limitless Database.
+     */
+
+    public LimitlessDatabase getLimitlessDatabase() {
+        return this.limitlessDatabase;
+    }
+
+    /**
+     * <p>
+     * The details for Aurora Limitless Database.
+     * </p>
+     * 
+     * @param limitlessDatabase
+     *        The details for Aurora Limitless Database.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withLimitlessDatabase(LimitlessDatabase limitlessDatabase) {
+        setLimitlessDatabase(limitlessDatabase);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5325,7 +5371,9 @@ public class DBCluster implements Serializable, Cloneable {
         if (getLocalWriteForwardingStatus() != null)
             sb.append("LocalWriteForwardingStatus: ").append(getLocalWriteForwardingStatus()).append(",");
         if (getAwsBackupRecoveryPointArn() != null)
-            sb.append("AwsBackupRecoveryPointArn: ").append(getAwsBackupRecoveryPointArn());
+            sb.append("AwsBackupRecoveryPointArn: ").append(getAwsBackupRecoveryPointArn()).append(",");
+        if (getLimitlessDatabase() != null)
+            sb.append("LimitlessDatabase: ").append(getLimitlessDatabase());
         sb.append("}");
         return sb.toString();
     }
@@ -5653,6 +5701,10 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getAwsBackupRecoveryPointArn() != null && other.getAwsBackupRecoveryPointArn().equals(this.getAwsBackupRecoveryPointArn()) == false)
             return false;
+        if (other.getLimitlessDatabase() == null ^ this.getLimitlessDatabase() == null)
+            return false;
+        if (other.getLimitlessDatabase() != null && other.getLimitlessDatabase().equals(this.getLimitlessDatabase()) == false)
+            return false;
         return true;
     }
 
@@ -5737,6 +5789,7 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getIOOptimizedNextAllowedModificationTime() == null) ? 0 : getIOOptimizedNextAllowedModificationTime().hashCode());
         hashCode = prime * hashCode + ((getLocalWriteForwardingStatus() == null) ? 0 : getLocalWriteForwardingStatus().hashCode());
         hashCode = prime * hashCode + ((getAwsBackupRecoveryPointArn() == null) ? 0 : getAwsBackupRecoveryPointArn().hashCode());
+        hashCode = prime * hashCode + ((getLimitlessDatabase() == null) ? 0 : getLimitlessDatabase().hashCode());
         return hashCode;
     }
 

@@ -1076,6 +1076,16 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private Integer performanceInsightsRetentionPeriod;
+    /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     */
+    private Boolean enableLimitlessDatabase;
 
     private ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
     /**
@@ -8123,6 +8133,86 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param enableLimitlessDatabase
+     *        Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create
+     *        a DB shard group.</p>
+     *        <p>
+     *        Valid for: Aurora DB clusters only
+     */
+
+    public void setEnableLimitlessDatabase(Boolean enableLimitlessDatabase) {
+        this.enableLimitlessDatabase = enableLimitlessDatabase;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @return Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to
+     *         create a DB shard group.</p>
+     *         <p>
+     *         Valid for: Aurora DB clusters only
+     */
+
+    public Boolean getEnableLimitlessDatabase() {
+        return this.enableLimitlessDatabase;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param enableLimitlessDatabase
+     *        Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create
+     *        a DB shard group.</p>
+     *        <p>
+     *        Valid for: Aurora DB clusters only
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBClusterRequest withEnableLimitlessDatabase(Boolean enableLimitlessDatabase) {
+        setEnableLimitlessDatabase(enableLimitlessDatabase);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @return Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to
+     *         create a DB shard group.</p>
+     *         <p>
+     *         Valid for: Aurora DB clusters only
+     */
+
+    public Boolean isEnableLimitlessDatabase() {
+        return this.enableLimitlessDatabase;
+    }
+
+    /**
      * @param serverlessV2ScalingConfiguration
      */
 
@@ -8919,6 +9009,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("PerformanceInsightsKMSKeyId: ").append(getPerformanceInsightsKMSKeyId()).append(",");
         if (getPerformanceInsightsRetentionPeriod() != null)
             sb.append("PerformanceInsightsRetentionPeriod: ").append(getPerformanceInsightsRetentionPeriod()).append(",");
+        if (getEnableLimitlessDatabase() != null)
+            sb.append("EnableLimitlessDatabase: ").append(getEnableLimitlessDatabase()).append(",");
         if (getServerlessV2ScalingConfiguration() != null)
             sb.append("ServerlessV2ScalingConfiguration: ").append(getServerlessV2ScalingConfiguration()).append(",");
         if (getNetworkType() != null)
@@ -9130,6 +9222,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         if (other.getPerformanceInsightsRetentionPeriod() != null
                 && other.getPerformanceInsightsRetentionPeriod().equals(this.getPerformanceInsightsRetentionPeriod()) == false)
             return false;
+        if (other.getEnableLimitlessDatabase() == null ^ this.getEnableLimitlessDatabase() == null)
+            return false;
+        if (other.getEnableLimitlessDatabase() != null && other.getEnableLimitlessDatabase().equals(this.getEnableLimitlessDatabase()) == false)
+            return false;
         if (other.getServerlessV2ScalingConfiguration() == null ^ this.getServerlessV2ScalingConfiguration() == null)
             return false;
         if (other.getServerlessV2ScalingConfiguration() != null
@@ -9212,6 +9308,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getEnablePerformanceInsights() == null) ? 0 : getEnablePerformanceInsights().hashCode());
         hashCode = prime * hashCode + ((getPerformanceInsightsKMSKeyId() == null) ? 0 : getPerformanceInsightsKMSKeyId().hashCode());
         hashCode = prime * hashCode + ((getPerformanceInsightsRetentionPeriod() == null) ? 0 : getPerformanceInsightsRetentionPeriod().hashCode());
+        hashCode = prime * hashCode + ((getEnableLimitlessDatabase() == null) ? 0 : getEnableLimitlessDatabase().hashCode());
         hashCode = prime * hashCode + ((getServerlessV2ScalingConfiguration() == null) ? 0 : getServerlessV2ScalingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());

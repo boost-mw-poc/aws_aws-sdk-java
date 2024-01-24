@@ -45,6 +45,10 @@ public class GatewayInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HostEnvironment").build();
     private static final MarshallingInfo<String> HOSTENVIRONMENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HostEnvironmentId").build();
+    private static final MarshallingInfo<String> DEPRECATIONDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeprecationDate").build();
+    private static final MarshallingInfo<String> SOFTWAREVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SoftwareVersion").build();
 
     private static final GatewayInfoMarshaller instance = new GatewayInfoMarshaller();
 
@@ -71,6 +75,8 @@ public class GatewayInfoMarshaller {
             protocolMarshaller.marshall(gatewayInfo.getEc2InstanceRegion(), EC2INSTANCEREGION_BINDING);
             protocolMarshaller.marshall(gatewayInfo.getHostEnvironment(), HOSTENVIRONMENT_BINDING);
             protocolMarshaller.marshall(gatewayInfo.getHostEnvironmentId(), HOSTENVIRONMENTID_BINDING);
+            protocolMarshaller.marshall(gatewayInfo.getDeprecationDate(), DEPRECATIONDATE_BINDING);
+            protocolMarshaller.marshall(gatewayInfo.getSoftwareVersion(), SOFTWAREVERSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

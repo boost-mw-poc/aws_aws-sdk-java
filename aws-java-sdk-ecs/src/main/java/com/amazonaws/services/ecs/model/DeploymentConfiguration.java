@@ -104,7 +104,7 @@ public class DeploymentConfiguration implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * <p>
-     * For services are that <i>do</i> use a load balancer, the following should be noted:
+     * For services that <i>do</i> use a load balancer, the following should be noted:
      * </p>
      * <ul>
      * <li>
@@ -416,7 +416,7 @@ public class DeploymentConfiguration implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * <p>
-     * For services are that <i>do</i> use a load balancer, the following should be noted:
+     * For services that <i>do</i> use a load balancer, the following should be noted:
      * </p>
      * <ul>
      * <li>
@@ -480,7 +480,7 @@ public class DeploymentConfiguration implements Serializable, Cloneable, Structu
      *        </li>
      *        </ul>
      *        <p>
-     *        For services are that <i>do</i> use a load balancer, the following should be noted:
+     *        For services that <i>do</i> use a load balancer, the following should be noted:
      *        </p>
      *        <ul>
      *        <li>
@@ -549,7 +549,7 @@ public class DeploymentConfiguration implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * <p>
-     * For services are that <i>do</i> use a load balancer, the following should be noted:
+     * For services that <i>do</i> use a load balancer, the following should be noted:
      * </p>
      * <ul>
      * <li>
@@ -612,7 +612,7 @@ public class DeploymentConfiguration implements Serializable, Cloneable, Structu
      *         </li>
      *         </ul>
      *         <p>
-     *         For services are that <i>do</i> use a load balancer, the following should be noted:
+     *         For services that <i>do</i> use a load balancer, the following should be noted:
      *         </p>
      *         <ul>
      *         <li>
@@ -681,7 +681,7 @@ public class DeploymentConfiguration implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * <p>
-     * For services are that <i>do</i> use a load balancer, the following should be noted:
+     * For services that <i>do</i> use a load balancer, the following should be noted:
      * </p>
      * <ul>
      * <li>
@@ -745,7 +745,7 @@ public class DeploymentConfiguration implements Serializable, Cloneable, Structu
      *        </li>
      *        </ul>
      *        <p>
-     *        For services are that <i>do</i> use a load balancer, the following should be noted:
+     *        For services that <i>do</i> use a load balancer, the following should be noted:
      *        </p>
      *        <ul>
      *        <li>

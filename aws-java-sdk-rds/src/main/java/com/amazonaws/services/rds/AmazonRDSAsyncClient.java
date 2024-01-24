@@ -1150,6 +1150,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<CreateDBShardGroupResult> createDBShardGroupAsync(CreateDBShardGroupRequest request) {
+
+        return createDBShardGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDBShardGroupResult> createDBShardGroupAsync(final CreateDBShardGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateDBShardGroupRequest, CreateDBShardGroupResult> asyncHandler) {
+        final CreateDBShardGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateDBShardGroupResult>() {
+            @Override
+            public CreateDBShardGroupResult call() throws Exception {
+                CreateDBShardGroupResult result = null;
+
+                try {
+                    result = executeCreateDBShardGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DBSnapshot> createDBSnapshotAsync(CreateDBSnapshotRequest request) {
 
         return createDBSnapshotAsync(request, null);
@@ -1795,6 +1828,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
 
                 try {
                     result = executeDeleteDBSecurityGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDBShardGroupResult> deleteDBShardGroupAsync(DeleteDBShardGroupRequest request) {
+
+        return deleteDBShardGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDBShardGroupResult> deleteDBShardGroupAsync(final DeleteDBShardGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteDBShardGroupRequest, DeleteDBShardGroupResult> asyncHandler) {
+        final DeleteDBShardGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteDBShardGroupResult>() {
+            @Override
+            public DeleteDBShardGroupResult call() throws Exception {
+                DeleteDBShardGroupResult result = null;
+
+                try {
+                    result = executeDeleteDBShardGroup(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3047,6 +3113,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
             com.amazonaws.handlers.AsyncHandler<DescribeDBSecurityGroupsRequest, DescribeDBSecurityGroupsResult> asyncHandler) {
 
         return describeDBSecurityGroupsAsync(new DescribeDBSecurityGroupsRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDBShardGroupsResult> describeDBShardGroupsAsync(DescribeDBShardGroupsRequest request) {
+
+        return describeDBShardGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDBShardGroupsResult> describeDBShardGroupsAsync(final DescribeDBShardGroupsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDBShardGroupsRequest, DescribeDBShardGroupsResult> asyncHandler) {
+        final DescribeDBShardGroupsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDBShardGroupsResult>() {
+            @Override
+            public DescribeDBShardGroupsResult call() throws Exception {
+                DescribeDBShardGroupsResult result = null;
+
+                try {
+                    result = executeDescribeDBShardGroups(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
     }
 
     @Override
@@ -4670,6 +4769,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<ModifyDBShardGroupResult> modifyDBShardGroupAsync(ModifyDBShardGroupRequest request) {
+
+        return modifyDBShardGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyDBShardGroupResult> modifyDBShardGroupAsync(final ModifyDBShardGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifyDBShardGroupRequest, ModifyDBShardGroupResult> asyncHandler) {
+        final ModifyDBShardGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ModifyDBShardGroupResult>() {
+            @Override
+            public ModifyDBShardGroupResult call() throws Exception {
+                ModifyDBShardGroupResult result = null;
+
+                try {
+                    result = executeModifyDBShardGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DBSnapshot> modifyDBSnapshotAsync(ModifyDBSnapshotRequest request) {
 
         return modifyDBSnapshotAsync(request, null);
@@ -5050,6 +5182,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
 
                 try {
                     result = executeRebootDBInstance(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RebootDBShardGroupResult> rebootDBShardGroupAsync(RebootDBShardGroupRequest request) {
+
+        return rebootDBShardGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RebootDBShardGroupResult> rebootDBShardGroupAsync(final RebootDBShardGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RebootDBShardGroupRequest, RebootDBShardGroupResult> asyncHandler) {
+        final RebootDBShardGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RebootDBShardGroupResult>() {
+            @Override
+            public RebootDBShardGroupResult call() throws Exception {
+                RebootDBShardGroupResult result = null;
+
+                try {
+                    result = executeRebootDBShardGroup(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

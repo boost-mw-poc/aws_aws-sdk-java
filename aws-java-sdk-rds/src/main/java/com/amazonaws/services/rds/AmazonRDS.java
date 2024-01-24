@@ -1125,6 +1125,39 @@ public interface AmazonRDS {
 
     /**
      * <p>
+     * Creates a new DB shard group for Aurora Limitless Database. You must enable Aurora Limitless Database to create a
+     * DB shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param createDBShardGroupRequest
+     * @return Result of the CreateDBShardGroup operation returned by the service.
+     * @throws DBShardGroupAlreadyExistsException
+     *         The specified DB shard group name must be unique in your Amazon Web Services account in the specified
+     *         Amazon Web Services Region.
+     * @throws DBClusterNotFoundException
+     *         <code>DBClusterIdentifier</code> doesn't refer to an existing DB cluster.
+     * @throws MaxDBShardGroupLimitReachedException
+     *         The maximum number of DB shard groups for your Amazon Web Services account in the specified Amazon Web
+     *         Services Region has been reached.
+     * @throws InvalidDBClusterStateException
+     *         The requested operation can't be performed while the cluster is in this state.
+     * @throws InvalidMaxAcuException
+     *         The maximum capacity of the DB shard group must be 48-7168 Aurora capacity units (ACUs).
+     * @throws UnsupportedDBEngineVersionException
+     *         The specified DB engine version isn't supported for Aurora Limitless Database.
+     * @throws InvalidVPCNetworkStateException
+     *         The DB subnet group doesn't cover all Availability Zones after it's created because of users' change.
+     * @sample AmazonRDS.CreateDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateDBShardGroupResult createDBShardGroup(CreateDBShardGroupRequest createDBShardGroupRequest);
+
+    /**
+     * <p>
      * Creates a snapshot of a DB instance. The source DB instance must be in the <code>available</code> or
      * <code>storage-optimization</code> state.
      * </p>
@@ -1718,6 +1751,25 @@ public interface AmazonRDS {
      *      Documentation</a>
      */
     DeleteDBSecurityGroupResult deleteDBSecurityGroup(DeleteDBSecurityGroupRequest deleteDBSecurityGroupRequest);
+
+    /**
+     * <p>
+     * Deletes an Aurora Limitless Database DB shard group.
+     * </p>
+     * 
+     * @param deleteDBShardGroupRequest
+     * @return Result of the DeleteDBShardGroup operation returned by the service.
+     * @throws DBShardGroupNotFoundException
+     *         The specified DB shard group name wasn't found.
+     * @throws InvalidDBShardGroupStateException
+     *         The DB shard group must be in the available state.
+     * @throws InvalidDBClusterStateException
+     *         The requested operation can't be performed while the cluster is in this state.
+     * @sample AmazonRDS.DeleteDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteDBShardGroupResult deleteDBShardGroup(DeleteDBShardGroupRequest deleteDBShardGroupRequest);
 
     /**
      * <p>
@@ -2443,6 +2495,23 @@ public interface AmazonRDS {
 
     /**
      * <p>
+     * Describes existing Aurora Limitless Database DB shard groups.
+     * </p>
+     * 
+     * @param describeDBShardGroupsRequest
+     * @return Result of the DescribeDBShardGroups operation returned by the service.
+     * @throws DBShardGroupNotFoundException
+     *         The specified DB shard group name wasn't found.
+     * @throws DBClusterNotFoundException
+     *         <code>DBClusterIdentifier</code> doesn't refer to an existing DB cluster.
+     * @sample AmazonRDS.DescribeDBShardGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBShardGroups" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeDBShardGroupsResult describeDBShardGroups(DescribeDBShardGroupsRequest describeDBShardGroupsRequest);
+
+    /**
+     * <p>
      * Returns a list of DB snapshot attribute names and values for a manual DB snapshot.
      * </p>
      * <p>
@@ -2986,8 +3055,9 @@ public interface AmazonRDS {
      * the DB cluster to be the primary DB instance (the cluster writer).
      * </p>
      * <p>
-     * For a Multi-AZ DB cluster, failover for a DB cluster promotes one of the readable standby DB instances (read-only
-     * instances) in the DB cluster to be the primary DB instance (the cluster writer).
+     * For a Multi-AZ DB cluster, after RDS terminates the primary DB instance, the internal monitoring system detects
+     * that the primary DB instance is unhealthy and promotes a readable standby (read-only instances) in the DB cluster
+     * to be the primary DB instance (the cluster writer). Failover times are typically less than 35 seconds.
      * </p>
      * <p>
      * An Amazon Aurora DB cluster automatically fails over to an Aurora Replica, if one exists, when the primary DB
@@ -3651,6 +3721,29 @@ public interface AmazonRDS {
 
     /**
      * <p>
+     * Modifies the settings of an Aurora Limitless Database DB shard group. You can change one or more settings by
+     * specifying these parameters and the new values in the request.
+     * </p>
+     * 
+     * @param modifyDBShardGroupRequest
+     * @return Result of the ModifyDBShardGroup operation returned by the service.
+     * @throws InvalidDBClusterStateException
+     *         The requested operation can't be performed while the cluster is in this state.
+     * @throws DBShardGroupAlreadyExistsException
+     *         The specified DB shard group name must be unique in your Amazon Web Services account in the specified
+     *         Amazon Web Services Region.
+     * @throws DBShardGroupNotFoundException
+     *         The specified DB shard group name wasn't found.
+     * @throws InvalidMaxAcuException
+     *         The maximum capacity of the DB shard group must be 48-7168 Aurora capacity units (ACUs).
+     * @sample AmazonRDS.ModifyDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ModifyDBShardGroupResult modifyDBShardGroup(ModifyDBShardGroupRequest modifyDBShardGroupRequest);
+
+    /**
+     * <p>
      * Updates a manual DB snapshot with a new engine version. The snapshot can be encrypted or unencrypted, but not
      * shared or public.
      * </p>
@@ -3975,6 +4068,27 @@ public interface AmazonRDS {
      *      Documentation</a>
      */
     DBInstance rebootDBInstance(RebootDBInstanceRequest rebootDBInstanceRequest);
+
+    /**
+     * <p>
+     * You might need to reboot your DB shard group, usually for maintenance reasons. For example, if you make certain
+     * modifications, reboot the DB shard group for the changes to take effect.
+     * </p>
+     * <p>
+     * This operation applies only to Aurora Limitless Database DBb shard groups.
+     * </p>
+     * 
+     * @param rebootDBShardGroupRequest
+     * @return Result of the RebootDBShardGroup operation returned by the service.
+     * @throws DBShardGroupNotFoundException
+     *         The specified DB shard group name wasn't found.
+     * @throws InvalidDBShardGroupStateException
+     *         The DB shard group must be in the available state.
+     * @sample AmazonRDS.RebootDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RebootDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    RebootDBShardGroupResult rebootDBShardGroup(RebootDBShardGroupRequest rebootDBShardGroupRequest);
 
     /**
      * <p>

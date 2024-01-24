@@ -309,6 +309,10 @@ public class CreateDBClusterRequestMarshaller implements Marshaller<Request<Crea
             request.addParameter("PerformanceInsightsRetentionPeriod", StringUtils.fromInteger(createDBClusterRequest.getPerformanceInsightsRetentionPeriod()));
         }
 
+        if (createDBClusterRequest.getEnableLimitlessDatabase() != null) {
+            request.addParameter("EnableLimitlessDatabase", StringUtils.fromBoolean(createDBClusterRequest.getEnableLimitlessDatabase()));
+        }
+
         {
             ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration = createDBClusterRequest.getServerlessV2ScalingConfiguration();
             if (serverlessV2ScalingConfiguration != null) {

@@ -75,6 +75,8 @@ public enum RDSActions implements Action {
     CreateDBProxyEndpoint("rds:CreateDBProxyEndpoint"),
     /** Action for the CreateDBSecurityGroup operation. */
     CreateDBSecurityGroup("rds:CreateDBSecurityGroup"),
+    /** Action for the CreateDBShardGroup operation. */
+    CreateDBShardGroup("rds:CreateDBShardGroup"),
     /** Action for the CreateDBSnapshot operation. */
     CreateDBSnapshot("rds:CreateDBSnapshot"),
     /** Action for the CreateDBSubnetGroup operation. */
@@ -115,6 +117,8 @@ public enum RDSActions implements Action {
     DeleteDBProxyEndpoint("rds:DeleteDBProxyEndpoint"),
     /** Action for the DeleteDBSecurityGroup operation. */
     DeleteDBSecurityGroup("rds:DeleteDBSecurityGroup"),
+    /** Action for the DeleteDBShardGroup operation. */
+    DeleteDBShardGroup("rds:DeleteDBShardGroup"),
     /** Action for the DeleteDBSnapshot operation. */
     DeleteDBSnapshot("rds:DeleteDBSnapshot"),
     /** Action for the DeleteDBSubnetGroup operation. */
@@ -177,6 +181,8 @@ public enum RDSActions implements Action {
     DescribeDBRecommendations("rds:DescribeDBRecommendations"),
     /** Action for the DescribeDBSecurityGroups operation. */
     DescribeDBSecurityGroups("rds:DescribeDBSecurityGroups"),
+    /** Action for the DescribeDBShardGroups operation. */
+    DescribeDBShardGroups("rds:DescribeDBShardGroups"),
     /** Action for the DescribeDBSnapshotAttributes operation. */
     DescribeDBSnapshotAttributes("rds:DescribeDBSnapshotAttributes"),
     /** Action for the DescribeDBSnapshotTenantDatabases operation. */
@@ -259,6 +265,8 @@ public enum RDSActions implements Action {
     ModifyDBProxyTargetGroup("rds:ModifyDBProxyTargetGroup"),
     /** Action for the ModifyDBRecommendation operation. */
     ModifyDBRecommendation("rds:ModifyDBRecommendation"),
+    /** Action for the ModifyDBShardGroup operation. */
+    ModifyDBShardGroup("rds:ModifyDBShardGroup"),
     /** Action for the ModifyDBSnapshot operation. */
     ModifyDBSnapshot("rds:ModifyDBSnapshot"),
     /** Action for the ModifyDBSnapshotAttribute operation. */
@@ -283,6 +291,8 @@ public enum RDSActions implements Action {
     RebootDBCluster("rds:RebootDBCluster"),
     /** Action for the RebootDBInstance operation. */
     RebootDBInstance("rds:RebootDBInstance"),
+    /** Action for the RebootDBShardGroup operation. */
+    RebootDBShardGroup("rds:RebootDBShardGroup"),
     /** Action for the RegisterDBProxyTargets operation. */
     RegisterDBProxyTargets("rds:RegisterDBProxyTargets"),
     /** Action for the RemoveFromGlobalCluster operation. */

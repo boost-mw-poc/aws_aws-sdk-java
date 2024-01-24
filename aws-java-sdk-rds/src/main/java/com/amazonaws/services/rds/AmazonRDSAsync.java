@@ -1486,6 +1486,45 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Creates a new DB shard group for Aurora Limitless Database. You must enable Aurora Limitless Database to create a
+     * DB shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param createDBShardGroupRequest
+     * @return A Java Future containing the result of the CreateDBShardGroup operation returned by the service.
+     * @sample AmazonRDSAsync.CreateDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDBShardGroupResult> createDBShardGroupAsync(CreateDBShardGroupRequest createDBShardGroupRequest);
+
+    /**
+     * <p>
+     * Creates a new DB shard group for Aurora Limitless Database. You must enable Aurora Limitless Database to create a
+     * DB shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param createDBShardGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateDBShardGroup operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.CreateDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDBShardGroupResult> createDBShardGroupAsync(CreateDBShardGroupRequest createDBShardGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateDBShardGroupRequest, CreateDBShardGroupResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a snapshot of a DB instance. The source DB instance must be in the <code>available</code> or
      * <code>storage-optimization</code> state.
      * </p>
@@ -2497,6 +2536,37 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<DeleteDBSecurityGroupResult> deleteDBSecurityGroupAsync(DeleteDBSecurityGroupRequest deleteDBSecurityGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteDBSecurityGroupRequest, DeleteDBSecurityGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an Aurora Limitless Database DB shard group.
+     * </p>
+     * 
+     * @param deleteDBShardGroupRequest
+     * @return A Java Future containing the result of the DeleteDBShardGroup operation returned by the service.
+     * @sample AmazonRDSAsync.DeleteDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDBShardGroupResult> deleteDBShardGroupAsync(DeleteDBShardGroupRequest deleteDBShardGroupRequest);
+
+    /**
+     * <p>
+     * Deletes an Aurora Limitless Database DB shard group.
+     * </p>
+     * 
+     * @param deleteDBShardGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDBShardGroup operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.DeleteDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDBShardGroupResult> deleteDBShardGroupAsync(DeleteDBShardGroupRequest deleteDBShardGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDBShardGroupRequest, DeleteDBShardGroupResult> asyncHandler);
 
     /**
      * <p>
@@ -3927,6 +3997,37 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Describes existing Aurora Limitless Database DB shard groups.
+     * </p>
+     * 
+     * @param describeDBShardGroupsRequest
+     * @return A Java Future containing the result of the DescribeDBShardGroups operation returned by the service.
+     * @sample AmazonRDSAsync.DescribeDBShardGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBShardGroups" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDBShardGroupsResult> describeDBShardGroupsAsync(DescribeDBShardGroupsRequest describeDBShardGroupsRequest);
+
+    /**
+     * <p>
+     * Describes existing Aurora Limitless Database DB shard groups.
+     * </p>
+     * 
+     * @param describeDBShardGroupsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDBShardGroups operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.DescribeDBShardGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBShardGroups" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDBShardGroupsResult> describeDBShardGroupsAsync(DescribeDBShardGroupsRequest describeDBShardGroupsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDBShardGroupsRequest, DescribeDBShardGroupsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of DB snapshot attribute names and values for a manual DB snapshot.
      * </p>
      * <p>
@@ -5086,8 +5187,9 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * the DB cluster to be the primary DB instance (the cluster writer).
      * </p>
      * <p>
-     * For a Multi-AZ DB cluster, failover for a DB cluster promotes one of the readable standby DB instances (read-only
-     * instances) in the DB cluster to be the primary DB instance (the cluster writer).
+     * For a Multi-AZ DB cluster, after RDS terminates the primary DB instance, the internal monitoring system detects
+     * that the primary DB instance is unhealthy and promotes a readable standby (read-only instances) in the DB cluster
+     * to be the primary DB instance (the cluster writer). Failover times are typically less than 35 seconds.
      * </p>
      * <p>
      * An Amazon Aurora DB cluster automatically fails over to an Aurora Replica, if one exists, when the primary DB
@@ -5127,8 +5229,9 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * the DB cluster to be the primary DB instance (the cluster writer).
      * </p>
      * <p>
-     * For a Multi-AZ DB cluster, failover for a DB cluster promotes one of the readable standby DB instances (read-only
-     * instances) in the DB cluster to be the primary DB instance (the cluster writer).
+     * For a Multi-AZ DB cluster, after RDS terminates the primary DB instance, the internal monitoring system detects
+     * that the primary DB instance is unhealthy and promotes a readable standby (read-only instances) in the DB cluster
+     * to be the primary DB instance (the cluster writer). Failover times are typically less than 35 seconds.
      * </p>
      * <p>
      * An Amazon Aurora DB cluster automatically fails over to an Aurora Replica, if one exists, when the primary DB
@@ -6156,6 +6259,39 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Modifies the settings of an Aurora Limitless Database DB shard group. You can change one or more settings by
+     * specifying these parameters and the new values in the request.
+     * </p>
+     * 
+     * @param modifyDBShardGroupRequest
+     * @return A Java Future containing the result of the ModifyDBShardGroup operation returned by the service.
+     * @sample AmazonRDSAsync.ModifyDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyDBShardGroupResult> modifyDBShardGroupAsync(ModifyDBShardGroupRequest modifyDBShardGroupRequest);
+
+    /**
+     * <p>
+     * Modifies the settings of an Aurora Limitless Database DB shard group. You can change one or more settings by
+     * specifying these parameters and the new values in the request.
+     * </p>
+     * 
+     * @param modifyDBShardGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyDBShardGroup operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.ModifyDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyDBShardGroupResult> modifyDBShardGroupAsync(ModifyDBShardGroupRequest modifyDBShardGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyDBShardGroupRequest, ModifyDBShardGroupResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates a manual DB snapshot with a new engine version. The snapshot can be encrypted or unencrypted, but not
      * shared or public.
      * </p>
@@ -6719,6 +6855,45 @@ public interface AmazonRDSAsync extends AmazonRDS {
      */
     java.util.concurrent.Future<DBInstance> rebootDBInstanceAsync(RebootDBInstanceRequest rebootDBInstanceRequest,
             com.amazonaws.handlers.AsyncHandler<RebootDBInstanceRequest, DBInstance> asyncHandler);
+
+    /**
+     * <p>
+     * You might need to reboot your DB shard group, usually for maintenance reasons. For example, if you make certain
+     * modifications, reboot the DB shard group for the changes to take effect.
+     * </p>
+     * <p>
+     * This operation applies only to Aurora Limitless Database DBb shard groups.
+     * </p>
+     * 
+     * @param rebootDBShardGroupRequest
+     * @return A Java Future containing the result of the RebootDBShardGroup operation returned by the service.
+     * @sample AmazonRDSAsync.RebootDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RebootDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RebootDBShardGroupResult> rebootDBShardGroupAsync(RebootDBShardGroupRequest rebootDBShardGroupRequest);
+
+    /**
+     * <p>
+     * You might need to reboot your DB shard group, usually for maintenance reasons. For example, if you make certain
+     * modifications, reboot the DB shard group for the changes to take effect.
+     * </p>
+     * <p>
+     * This operation applies only to Aurora Limitless Database DBb shard groups.
+     * </p>
+     * 
+     * @param rebootDBShardGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RebootDBShardGroup operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.RebootDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RebootDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RebootDBShardGroupResult> rebootDBShardGroupAsync(RebootDBShardGroupRequest rebootDBShardGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<RebootDBShardGroupRequest, RebootDBShardGroupResult> asyncHandler);
 
     /**
      * <p>

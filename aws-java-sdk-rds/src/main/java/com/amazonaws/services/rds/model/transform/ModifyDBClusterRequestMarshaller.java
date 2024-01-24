@@ -293,6 +293,10 @@ public class ModifyDBClusterRequestMarshaller implements Marshaller<Request<Modi
             request.addParameter("AwsBackupRecoveryPointArn", StringUtils.fromString(modifyDBClusterRequest.getAwsBackupRecoveryPointArn()));
         }
 
+        if (modifyDBClusterRequest.getEnableLimitlessDatabase() != null) {
+            request.addParameter("EnableLimitlessDatabase", StringUtils.fromBoolean(modifyDBClusterRequest.getEnableLimitlessDatabase()));
+        }
+
         return request;
     }
 

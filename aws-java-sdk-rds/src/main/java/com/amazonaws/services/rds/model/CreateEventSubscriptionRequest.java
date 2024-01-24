@@ -37,9 +37,16 @@ public class CreateEventSubscriptionRequest extends com.amazonaws.AmazonWebServi
     private String subscriptionName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the SNS topic created for event notification. The ARN is created by Amazon SNS
+     * The Amazon Resource Name (ARN) of the SNS topic created for event notification. SNS automatically creates the ARN
      * when you create a topic and subscribe to it.
      * </p>
+     * <note>
+     * <p>
+     * RDS doesn't support FIFO (first in, first out) topics. For more information, see <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/sns-fifo-topics.html">Message ordering and deduplication (FIFO
+     * topics)</a> in the <i>Amazon Simple Notification Service Developer Guide</i>.
+     * </p>
+     * </note>
      */
     private String snsTopicArn;
     /**
@@ -187,13 +194,25 @@ public class CreateEventSubscriptionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the SNS topic created for event notification. The ARN is created by Amazon SNS
+     * The Amazon Resource Name (ARN) of the SNS topic created for event notification. SNS automatically creates the ARN
      * when you create a topic and subscribe to it.
      * </p>
+     * <note>
+     * <p>
+     * RDS doesn't support FIFO (first in, first out) topics. For more information, see <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/sns-fifo-topics.html">Message ordering and deduplication (FIFO
+     * topics)</a> in the <i>Amazon Simple Notification Service Developer Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param snsTopicArn
-     *        The Amazon Resource Name (ARN) of the SNS topic created for event notification. The ARN is created by
-     *        Amazon SNS when you create a topic and subscribe to it.
+     *        The Amazon Resource Name (ARN) of the SNS topic created for event notification. SNS automatically creates
+     *        the ARN when you create a topic and subscribe to it.</p> <note>
+     *        <p>
+     *        RDS doesn't support FIFO (first in, first out) topics. For more information, see <a
+     *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-fifo-topics.html">Message ordering and deduplication
+     *        (FIFO topics)</a> in the <i>Amazon Simple Notification Service Developer Guide</i>.
+     *        </p>
      */
 
     public void setSnsTopicArn(String snsTopicArn) {
@@ -202,12 +221,24 @@ public class CreateEventSubscriptionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the SNS topic created for event notification. The ARN is created by Amazon SNS
+     * The Amazon Resource Name (ARN) of the SNS topic created for event notification. SNS automatically creates the ARN
      * when you create a topic and subscribe to it.
      * </p>
+     * <note>
+     * <p>
+     * RDS doesn't support FIFO (first in, first out) topics. For more information, see <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/sns-fifo-topics.html">Message ordering and deduplication (FIFO
+     * topics)</a> in the <i>Amazon Simple Notification Service Developer Guide</i>.
+     * </p>
+     * </note>
      * 
-     * @return The Amazon Resource Name (ARN) of the SNS topic created for event notification. The ARN is created by
-     *         Amazon SNS when you create a topic and subscribe to it.
+     * @return The Amazon Resource Name (ARN) of the SNS topic created for event notification. SNS automatically creates
+     *         the ARN when you create a topic and subscribe to it.</p> <note>
+     *         <p>
+     *         RDS doesn't support FIFO (first in, first out) topics. For more information, see <a
+     *         href="https://docs.aws.amazon.com/sns/latest/dg/sns-fifo-topics.html">Message ordering and deduplication
+     *         (FIFO topics)</a> in the <i>Amazon Simple Notification Service Developer Guide</i>.
+     *         </p>
      */
 
     public String getSnsTopicArn() {
@@ -216,13 +247,25 @@ public class CreateEventSubscriptionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the SNS topic created for event notification. The ARN is created by Amazon SNS
+     * The Amazon Resource Name (ARN) of the SNS topic created for event notification. SNS automatically creates the ARN
      * when you create a topic and subscribe to it.
      * </p>
+     * <note>
+     * <p>
+     * RDS doesn't support FIFO (first in, first out) topics. For more information, see <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/sns-fifo-topics.html">Message ordering and deduplication (FIFO
+     * topics)</a> in the <i>Amazon Simple Notification Service Developer Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param snsTopicArn
-     *        The Amazon Resource Name (ARN) of the SNS topic created for event notification. The ARN is created by
-     *        Amazon SNS when you create a topic and subscribe to it.
+     *        The Amazon Resource Name (ARN) of the SNS topic created for event notification. SNS automatically creates
+     *        the ARN when you create a topic and subscribe to it.</p> <note>
+     *        <p>
+     *        RDS doesn't support FIFO (first in, first out) topics. For more information, see <a
+     *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-fifo-topics.html">Message ordering and deduplication
+     *        (FIFO topics)</a> in the <i>Amazon Simple Notification Service Developer Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -937,6 +937,16 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String awsBackupRecoveryPointArn;
+    /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     */
+    private Boolean enableLimitlessDatabase;
 
     /**
      * <p>
@@ -6971,6 +6981,86 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param enableLimitlessDatabase
+     *        Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create
+     *        a DB shard group.</p>
+     *        <p>
+     *        Valid for: Aurora DB clusters only
+     */
+
+    public void setEnableLimitlessDatabase(Boolean enableLimitlessDatabase) {
+        this.enableLimitlessDatabase = enableLimitlessDatabase;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @return Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to
+     *         create a DB shard group.</p>
+     *         <p>
+     *         Valid for: Aurora DB clusters only
+     */
+
+    public Boolean getEnableLimitlessDatabase() {
+        return this.enableLimitlessDatabase;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param enableLimitlessDatabase
+     *        Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create
+     *        a DB shard group.</p>
+     *        <p>
+     *        Valid for: Aurora DB clusters only
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyDBClusterRequest withEnableLimitlessDatabase(Boolean enableLimitlessDatabase) {
+        setEnableLimitlessDatabase(enableLimitlessDatabase);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to create a DB
+     * shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @return Specifies whether to enable Aurora Limitless Database. You must enable Aurora Limitless Database to
+     *         create a DB shard group.</p>
+     *         <p>
+     *         Valid for: Aurora DB clusters only
+     */
+
+    public Boolean isEnableLimitlessDatabase() {
+        return this.enableLimitlessDatabase;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -7067,7 +7157,9 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         if (getEnableLocalWriteForwarding() != null)
             sb.append("EnableLocalWriteForwarding: ").append(getEnableLocalWriteForwarding()).append(",");
         if (getAwsBackupRecoveryPointArn() != null)
-            sb.append("AwsBackupRecoveryPointArn: ").append(getAwsBackupRecoveryPointArn());
+            sb.append("AwsBackupRecoveryPointArn: ").append(getAwsBackupRecoveryPointArn()).append(",");
+        if (getEnableLimitlessDatabase() != null)
+            sb.append("EnableLimitlessDatabase: ").append(getEnableLimitlessDatabase());
         sb.append("}");
         return sb.toString();
     }
@@ -7258,6 +7350,10 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getAwsBackupRecoveryPointArn() != null && other.getAwsBackupRecoveryPointArn().equals(this.getAwsBackupRecoveryPointArn()) == false)
             return false;
+        if (other.getEnableLimitlessDatabase() == null ^ this.getEnableLimitlessDatabase() == null)
+            return false;
+        if (other.getEnableLimitlessDatabase() != null && other.getEnableLimitlessDatabase().equals(this.getEnableLimitlessDatabase()) == false)
+            return false;
         return true;
     }
 
@@ -7309,6 +7405,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getAllowEngineModeChange() == null) ? 0 : getAllowEngineModeChange().hashCode());
         hashCode = prime * hashCode + ((getEnableLocalWriteForwarding() == null) ? 0 : getEnableLocalWriteForwarding().hashCode());
         hashCode = prime * hashCode + ((getAwsBackupRecoveryPointArn() == null) ? 0 : getAwsBackupRecoveryPointArn().hashCode());
+        hashCode = prime * hashCode + ((getEnableLimitlessDatabase() == null) ? 0 : getEnableLimitlessDatabase().hashCode());
         return hashCode;
     }
 

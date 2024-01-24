@@ -722,7 +722,9 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * You can create a maximum of 5 tasks sets for a deployment.
+     * For information about the maximum number of task sets and otther quotas, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS service
+     * quotas</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param createTaskSetRequest

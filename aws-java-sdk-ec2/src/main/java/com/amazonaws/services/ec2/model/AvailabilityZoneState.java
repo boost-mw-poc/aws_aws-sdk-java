@@ -23,7 +23,8 @@ public enum AvailabilityZoneState {
     Available("available"),
     Information("information"),
     Impaired("impaired"),
-    Unavailable("unavailable");
+    Unavailable("unavailable"),
+    Constrained("constrained");
 
     private String value;
 

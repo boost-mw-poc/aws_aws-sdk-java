@@ -340,41 +340,6 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
      * codes</a> in the <i>Amazon ECS User Guide</i>.
      * </p>
-     * <p>
-     * The following are valid values:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>TaskFailedToStart</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>EssentialContainerExited</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UserInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TerminationNotice</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ServiceSchedulerInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>SpotInterruption</code>
-     * </p>
-     * </li>
-     * </ul>
      */
     private String stopCode;
     /**
@@ -2647,41 +2612,6 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
      * codes</a> in the <i>Amazon ECS User Guide</i>.
      * </p>
-     * <p>
-     * The following are valid values:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>TaskFailedToStart</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>EssentialContainerExited</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UserInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TerminationNotice</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ServiceSchedulerInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>SpotInterruption</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param stopCode
      *        The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional
@@ -2690,41 +2620,6 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        For more information about stop code, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks
      *        error codes</a> in the <i>Amazon ECS User Guide</i>.
-     *        </p>
-     *        <p>
-     *        The following are valid values:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>TaskFailedToStart</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>EssentialContainerExited</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>UserInitiated</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>TerminationNotice</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>ServiceSchedulerInitiated</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>SpotInterruption</code>
-     *        </p>
-     *        </li>
      * @see TaskStopCode
      */
 
@@ -2741,41 +2636,6 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
      * codes</a> in the <i>Amazon ECS User Guide</i>.
      * </p>
-     * <p>
-     * The following are valid values:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>TaskFailedToStart</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>EssentialContainerExited</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UserInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TerminationNotice</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ServiceSchedulerInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>SpotInterruption</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @return The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional
      *         details. </p>
@@ -2783,41 +2643,6 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *         For more information about stop code, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks
      *         error codes</a> in the <i>Amazon ECS User Guide</i>.
-     *         </p>
-     *         <p>
-     *         The following are valid values:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>TaskFailedToStart</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>EssentialContainerExited</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>UserInitiated</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>TerminationNotice</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>ServiceSchedulerInitiated</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>SpotInterruption</code>
-     *         </p>
-     *         </li>
      * @see TaskStopCode
      */
 
@@ -2834,41 +2659,6 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
      * codes</a> in the <i>Amazon ECS User Guide</i>.
      * </p>
-     * <p>
-     * The following are valid values:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>TaskFailedToStart</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>EssentialContainerExited</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UserInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TerminationNotice</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ServiceSchedulerInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>SpotInterruption</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param stopCode
      *        The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional
@@ -2877,41 +2667,6 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        For more information about stop code, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks
      *        error codes</a> in the <i>Amazon ECS User Guide</i>.
-     *        </p>
-     *        <p>
-     *        The following are valid values:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>TaskFailedToStart</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>EssentialContainerExited</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>UserInitiated</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>TerminationNotice</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>ServiceSchedulerInitiated</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>SpotInterruption</code>
-     *        </p>
-     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskStopCode
      */
@@ -2930,41 +2685,6 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks error
      * codes</a> in the <i>Amazon ECS User Guide</i>.
      * </p>
-     * <p>
-     * The following are valid values:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>TaskFailedToStart</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>EssentialContainerExited</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>UserInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TerminationNotice</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ServiceSchedulerInitiated</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>SpotInterruption</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param stopCode
      *        The stop code indicating why a task was stopped. The <code>stoppedReason</code> might contain additional
@@ -2973,41 +2693,6 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        For more information about stop code, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/stopped-task-error-codes.html">Stopped tasks
      *        error codes</a> in the <i>Amazon ECS User Guide</i>.
-     *        </p>
-     *        <p>
-     *        The following are valid values:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>TaskFailedToStart</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>EssentialContainerExited</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>UserInitiated</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>TerminationNotice</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>ServiceSchedulerInitiated</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>SpotInterruption</code>
-     *        </p>
-     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskStopCode
      */

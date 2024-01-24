@@ -477,6 +477,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBClusterAutomatedBackupQuotaExceededFault", new DBClusterAutomatedBackupQuotaExceededExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBClusterAutomatedBackupQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBShardGroupAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("DBShardGroupAlreadyExists", new DBShardGroupAlreadyExistsExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new DBShardGroupAlreadyExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("InvalidDBInstanceAutomatedBackupState") == null) {
             exceptionUnmarshallersMap.put("InvalidDBInstanceAutomatedBackupState", new InvalidDBInstanceAutomatedBackupStateExceptionUnmarshaller());
         }
@@ -501,6 +505,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBProxyNotFoundFault", new DBProxyNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBProxyNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("MaxDBShardGroupLimitReached") == null) {
+            exceptionUnmarshallersMap.put("MaxDBShardGroupLimitReached", new MaxDBShardGroupLimitReachedExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new MaxDBShardGroupLimitReachedExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("DBClusterEndpointQuotaExceededFault") == null) {
             exceptionUnmarshallersMap.put("DBClusterEndpointQuotaExceededFault", new DBClusterEndpointQuotaExceededExceptionUnmarshaller());
         }
@@ -605,6 +613,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("OptionGroupNotFoundFault", new OptionGroupNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new OptionGroupNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("UnsupportedDBEngineVersion") == null) {
+            exceptionUnmarshallersMap.put("UnsupportedDBEngineVersion", new UnsupportedDBEngineVersionExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new UnsupportedDBEngineVersionExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("InvalidDBClusterSnapshotStateFault") == null) {
             exceptionUnmarshallersMap.put("InvalidDBClusterSnapshotStateFault", new InvalidDBClusterSnapshotStateExceptionUnmarshaller());
         }
@@ -649,6 +661,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("InvalidExportSourceState", new InvalidExportSourceStateExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidExportSourceStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidMaxAcu") == null) {
+            exceptionUnmarshallersMap.put("InvalidMaxAcu", new InvalidMaxAcuExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new InvalidMaxAcuExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("DBSnapshotNotFound") == null) {
             exceptionUnmarshallersMap.put("DBSnapshotNotFound", new DBSnapshotNotFoundExceptionUnmarshaller());
         }
@@ -829,6 +845,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("InvalidGlobalClusterStateFault", new InvalidGlobalClusterStateExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidGlobalClusterStateExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("InvalidDBShardGroupState") == null) {
+            exceptionUnmarshallersMap.put("InvalidDBShardGroupState", new InvalidDBShardGroupStateExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new InvalidDBShardGroupStateExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("SourceClusterNotSupportedFault") == null) {
             exceptionUnmarshallersMap.put("SourceClusterNotSupportedFault", new SourceClusterNotSupportedExceptionUnmarshaller());
         }
@@ -889,6 +909,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("CreateCustomDBEngineVersionFault", new CreateCustomDBEngineVersionExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new CreateCustomDBEngineVersionExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DBShardGroupNotFound") == null) {
+            exceptionUnmarshallersMap.put("DBShardGroupNotFound", new DBShardGroupNotFoundExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new DBShardGroupNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("EventSubscriptionQuotaExceeded") == null) {
             exceptionUnmarshallersMap.put("EventSubscriptionQuotaExceeded", new EventSubscriptionQuotaExceededExceptionUnmarshaller());
         }
@@ -2940,6 +2964,82 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Creates a new DB shard group for Aurora Limitless Database. You must enable Aurora Limitless Database to create a
+     * DB shard group.
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param createDBShardGroupRequest
+     * @return Result of the CreateDBShardGroup operation returned by the service.
+     * @throws DBShardGroupAlreadyExistsException
+     *         The specified DB shard group name must be unique in your Amazon Web Services account in the specified
+     *         Amazon Web Services Region.
+     * @throws DBClusterNotFoundException
+     *         <code>DBClusterIdentifier</code> doesn't refer to an existing DB cluster.
+     * @throws MaxDBShardGroupLimitReachedException
+     *         The maximum number of DB shard groups for your Amazon Web Services account in the specified Amazon Web
+     *         Services Region has been reached.
+     * @throws InvalidDBClusterStateException
+     *         The requested operation can't be performed while the cluster is in this state.
+     * @throws InvalidMaxAcuException
+     *         The maximum capacity of the DB shard group must be 48-7168 Aurora capacity units (ACUs).
+     * @throws UnsupportedDBEngineVersionException
+     *         The specified DB engine version isn't supported for Aurora Limitless Database.
+     * @throws InvalidVPCNetworkStateException
+     *         The DB subnet group doesn't cover all Availability Zones after it's created because of users' change.
+     * @sample AmazonRDS.CreateDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateDBShardGroupResult createDBShardGroup(CreateDBShardGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateDBShardGroup(request);
+    }
+
+    @SdkInternalApi
+    final CreateDBShardGroupResult executeCreateDBShardGroup(CreateDBShardGroupRequest createDBShardGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createDBShardGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateDBShardGroupRequest> request = null;
+        Response<CreateDBShardGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateDBShardGroupRequestMarshaller().marshall(super.beforeMarshalling(createDBShardGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateDBShardGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateDBShardGroupResult> responseHandler = new StaxResponseHandler<CreateDBShardGroupResult>(
+                    new CreateDBShardGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a snapshot of a DB instance. The source DB instance must be in the <code>available</code> or
      * <code>storage-optimization</code> state.
      * </p>
@@ -4373,6 +4473,68 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
             StaxResponseHandler<DeleteDBSecurityGroupResult> responseHandler = new StaxResponseHandler<DeleteDBSecurityGroupResult>(
                     new DeleteDBSecurityGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an Aurora Limitless Database DB shard group.
+     * </p>
+     * 
+     * @param deleteDBShardGroupRequest
+     * @return Result of the DeleteDBShardGroup operation returned by the service.
+     * @throws DBShardGroupNotFoundException
+     *         The specified DB shard group name wasn't found.
+     * @throws InvalidDBShardGroupStateException
+     *         The DB shard group must be in the available state.
+     * @throws InvalidDBClusterStateException
+     *         The requested operation can't be performed while the cluster is in this state.
+     * @sample AmazonRDS.DeleteDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteDBShardGroupResult deleteDBShardGroup(DeleteDBShardGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteDBShardGroup(request);
+    }
+
+    @SdkInternalApi
+    final DeleteDBShardGroupResult executeDeleteDBShardGroup(DeleteDBShardGroupRequest deleteDBShardGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteDBShardGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteDBShardGroupRequest> request = null;
+        Response<DeleteDBShardGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteDBShardGroupRequestMarshaller().marshall(super.beforeMarshalling(deleteDBShardGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteDBShardGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteDBShardGroupResult> responseHandler = new StaxResponseHandler<DeleteDBShardGroupResult>(
+                    new DeleteDBShardGroupResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -6424,6 +6586,66 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Describes existing Aurora Limitless Database DB shard groups.
+     * </p>
+     * 
+     * @param describeDBShardGroupsRequest
+     * @return Result of the DescribeDBShardGroups operation returned by the service.
+     * @throws DBShardGroupNotFoundException
+     *         The specified DB shard group name wasn't found.
+     * @throws DBClusterNotFoundException
+     *         <code>DBClusterIdentifier</code> doesn't refer to an existing DB cluster.
+     * @sample AmazonRDS.DescribeDBShardGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeDBShardGroups" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeDBShardGroupsResult describeDBShardGroups(DescribeDBShardGroupsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDBShardGroups(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDBShardGroupsResult executeDescribeDBShardGroups(DescribeDBShardGroupsRequest describeDBShardGroupsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDBShardGroupsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDBShardGroupsRequest> request = null;
+        Response<DescribeDBShardGroupsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDBShardGroupsRequestMarshaller().marshall(super.beforeMarshalling(describeDBShardGroupsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDBShardGroups");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeDBShardGroupsResult> responseHandler = new StaxResponseHandler<DescribeDBShardGroupsResult>(
+                    new DescribeDBShardGroupsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of DB snapshot attribute names and values for a manual DB snapshot.
      * </p>
      * <p>
@@ -7984,8 +8206,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * the DB cluster to be the primary DB instance (the cluster writer).
      * </p>
      * <p>
-     * For a Multi-AZ DB cluster, failover for a DB cluster promotes one of the readable standby DB instances (read-only
-     * instances) in the DB cluster to be the primary DB instance (the cluster writer).
+     * For a Multi-AZ DB cluster, after RDS terminates the primary DB instance, the internal monitoring system detects
+     * that the primary DB instance is unhealthy and promotes a readable standby (read-only instances) in the DB cluster
+     * to be the primary DB instance (the cluster writer). Failover times are typically less than 35 seconds.
      * </p>
      * <p>
      * An Amazon Aurora DB cluster automatically fails over to an Aurora Replica, if one exists, when the primary DB
@@ -9373,6 +9596,72 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Modifies the settings of an Aurora Limitless Database DB shard group. You can change one or more settings by
+     * specifying these parameters and the new values in the request.
+     * </p>
+     * 
+     * @param modifyDBShardGroupRequest
+     * @return Result of the ModifyDBShardGroup operation returned by the service.
+     * @throws InvalidDBClusterStateException
+     *         The requested operation can't be performed while the cluster is in this state.
+     * @throws DBShardGroupAlreadyExistsException
+     *         The specified DB shard group name must be unique in your Amazon Web Services account in the specified
+     *         Amazon Web Services Region.
+     * @throws DBShardGroupNotFoundException
+     *         The specified DB shard group name wasn't found.
+     * @throws InvalidMaxAcuException
+     *         The maximum capacity of the DB shard group must be 48-7168 Aurora capacity units (ACUs).
+     * @sample AmazonRDS.ModifyDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ModifyDBShardGroupResult modifyDBShardGroup(ModifyDBShardGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyDBShardGroup(request);
+    }
+
+    @SdkInternalApi
+    final ModifyDBShardGroupResult executeModifyDBShardGroup(ModifyDBShardGroupRequest modifyDBShardGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyDBShardGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyDBShardGroupRequest> request = null;
+        Response<ModifyDBShardGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyDBShardGroupRequestMarshaller().marshall(super.beforeMarshalling(modifyDBShardGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyDBShardGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyDBShardGroupResult> responseHandler = new StaxResponseHandler<ModifyDBShardGroupResult>(
+                    new ModifyDBShardGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates a manual DB snapshot with a new engine version. The snapshot can be encrypted or unencrypted, but not
      * shared or public.
      * </p>
@@ -10193,6 +10482,70 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             }
 
             StaxResponseHandler<DBInstance> responseHandler = new StaxResponseHandler<DBInstance>(new DBInstanceStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * You might need to reboot your DB shard group, usually for maintenance reasons. For example, if you make certain
+     * modifications, reboot the DB shard group for the changes to take effect.
+     * </p>
+     * <p>
+     * This operation applies only to Aurora Limitless Database DBb shard groups.
+     * </p>
+     * 
+     * @param rebootDBShardGroupRequest
+     * @return Result of the RebootDBShardGroup operation returned by the service.
+     * @throws DBShardGroupNotFoundException
+     *         The specified DB shard group name wasn't found.
+     * @throws InvalidDBShardGroupStateException
+     *         The DB shard group must be in the available state.
+     * @sample AmazonRDS.RebootDBShardGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RebootDBShardGroup" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public RebootDBShardGroupResult rebootDBShardGroup(RebootDBShardGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeRebootDBShardGroup(request);
+    }
+
+    @SdkInternalApi
+    final RebootDBShardGroupResult executeRebootDBShardGroup(RebootDBShardGroupRequest rebootDBShardGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(rebootDBShardGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RebootDBShardGroupRequest> request = null;
+        Response<RebootDBShardGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RebootDBShardGroupRequestMarshaller().marshall(super.beforeMarshalling(rebootDBShardGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RebootDBShardGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<RebootDBShardGroupResult> responseHandler = new StaxResponseHandler<RebootDBShardGroupResult>(
+                    new RebootDBShardGroupResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

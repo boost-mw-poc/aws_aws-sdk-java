@@ -51,6 +51,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * </ul>
  * </note>
+ * <p>
+ * For more information about how to create a container dependency, see <a href=
+ * "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/example_task_definitions.html#example_task_definition-containerdependency"
+ * >Container dependency</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ContainerDependency" target="_top">AWS API
  *      Documentation</a>

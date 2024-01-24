@@ -1,3 +1,24 @@
+# __1.12.644__ __2024-01-24__
+## __AWS Outposts__
+  - ### Features
+    - DeviceSerialNumber parameter is now optional in StartConnection API
+
+## __AWS Storage Gateway__
+  - ### Features
+    - Add DeprecationDate and SoftwareVersion to response of ListGateways.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - Documentation updates for Amazon ECS.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Introduced a new clientToken request parameter on CreateNetworkAcl and CreateRouteTable APIs. The clientToken parameter allows idempotent operations on the APIs.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds support for Aurora Limitless Database.
+
 # __1.12.643__ __2024-01-23__
 ## __Inspector2__
   - ### Features

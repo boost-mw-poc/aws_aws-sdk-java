@@ -1471,9 +1471,15 @@ public interface AWSStorageGateway {
 
     /**
      * <p>
-     * Returns a description of the specified Amazon Resource Name (ARN) of virtual tapes. If a <code>TapeARN</code> is
-     * not specified, returns a description of all virtual tapes associated with the specified gateway. This operation
-     * is only supported in the tape gateway type.
+     * Returns a description of virtual tapes that correspond to the specified Amazon Resource Names (ARNs). If
+     * <code>TapeARN</code> is not specified, returns a description of the virtual tapes associated with the specified
+     * gateway. This operation is only supported for the tape gateway type.
+     * </p>
+     * <p>
+     * The operation supports pagination. By default, the operation returns a maximum of up to 100 tapes. You can
+     * optionally specify the <code>Limit</code> field in the body to limit the number of tapes in the response. If the
+     * number of tapes returned in the response is truncated, the response includes a <code>Marker</code> field. You can
+     * use this <code>Marker</code> value in your subsequent request to retrieve the next set of tapes.
      * </p>
      * 
      * @param describeTapesRequest
@@ -2005,7 +2011,7 @@ public interface AWSStorageGateway {
     /**
      * <p>
      * Sends you notification through CloudWatch Events when all files written to your file share have been uploaded to
-     * S3. Amazon S3.
+     * Amazon S3.
      * </p>
      * <p>
      * Storage Gateway can send a notification through Amazon CloudWatch Events when all files written to your file
@@ -2045,10 +2051,10 @@ public interface AWSStorageGateway {
      * </p>
      * <p>
      * You can subscribe to be notified through an Amazon CloudWatch event when your <code>RefreshCache</code> operation
-     * completes. For more information, see <a href=
-     * "https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification"
-     * >Getting notified about file operations</a> in the <i>Storage Gateway User Guide</i>. This operation is Only
-     * supported for S3 File Gateways.
+     * completes. For more information, see <a
+     * href="https://docs.aws.amazon.com/filegateway/latest/files3/monitoring-file-gateway.html#get-notification"
+     * >Getting notified about file operations</a> in the <i>Amazon S3 File Gateway User Guide</i>. This operation is
+     * Only supported for S3 File Gateways.
      * </p>
      * <p>
      * When this API is called, it only initiates the refresh operation. When the API call completes and returns a
@@ -2060,9 +2066,9 @@ public interface AWSStorageGateway {
      * <p>
      * Throttle limit: This API is asynchronous, so the gateway will accept no more than two refreshes at any time. We
      * recommend using the refresh-complete CloudWatch event notification before issuing additional requests. For more
-     * information, see <a href=
-     * "https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification"
-     * >Getting notified about file operations</a> in the <i>Storage Gateway User Guide</i>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/filegateway/latest/files3/monitoring-file-gateway.html#get-notification"
+     * >Getting notified about file operations</a> in the <i>Amazon S3 File Gateway User Guide</i>.
      * </p>
      * <important>
      * <ul>
@@ -2084,9 +2090,9 @@ public interface AWSStorageGateway {
      * </p>
      * </note>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification"
-     * >Getting notified about file operations</a> in the <i>Storage Gateway User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/filegateway/latest/files3/monitoring-file-gateway.html#get-notification"
+     * >Getting notified about file operations</a> in the <i>Amazon S3 File Gateway User Guide</i>.
      * </p>
      * 
      * @param refreshCacheRequest
@@ -2267,9 +2273,14 @@ public interface AWSStorageGateway {
 
     /**
      * <p>
-     * Shuts down a gateway. To specify which gateway to shut down, use the Amazon Resource Name (ARN) of the gateway in
-     * the body of your request.
+     * Shuts down a Tape Gateway or Volume Gateway. To specify which gateway to shut down, use the Amazon Resource Name
+     * (ARN) of the gateway in the body of your request.
      * </p>
+     * <note>
+     * <p>
+     * This API action cannot be used to shut down S3 File Gateway or FSx File Gateway.
+     * </p>
+     * </note>
      * <p>
      * The operation shuts down the gateway service component running in the gateway's virtual machine (VM) and not the
      * host VM.

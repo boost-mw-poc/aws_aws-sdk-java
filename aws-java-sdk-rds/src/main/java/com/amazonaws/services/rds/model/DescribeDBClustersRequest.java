@@ -94,7 +94,7 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      * Default: 100
      * </p>
      * <p>
-     * Constraints: Minimum 20, maximum 100.
+     * Constraints: Minimum 20, maximum 100
      * </p>
      */
     private Integer maxRecords;
@@ -578,7 +578,7 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      * Default: 100
      * </p>
      * <p>
-     * Constraints: Minimum 20, maximum 100.
+     * Constraints: Minimum 20, maximum 100
      * </p>
      * 
      * @param maxRecords
@@ -589,7 +589,7 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      *        Default: 100
      *        </p>
      *        <p>
-     *        Constraints: Minimum 20, maximum 100.
+     *        Constraints: Minimum 20, maximum 100
      */
 
     public void setMaxRecords(Integer maxRecords) {
@@ -606,7 +606,7 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      * Default: 100
      * </p>
      * <p>
-     * Constraints: Minimum 20, maximum 100.
+     * Constraints: Minimum 20, maximum 100
      * </p>
      * 
      * @return The maximum number of records to include in the response. If more records exist than the specified
@@ -616,7 +616,7 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      *         Default: 100
      *         </p>
      *         <p>
-     *         Constraints: Minimum 20, maximum 100.
+     *         Constraints: Minimum 20, maximum 100
      */
 
     public Integer getMaxRecords() {
@@ -633,7 +633,7 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      * Default: 100
      * </p>
      * <p>
-     * Constraints: Minimum 20, maximum 100.
+     * Constraints: Minimum 20, maximum 100
      * </p>
      * 
      * @param maxRecords
@@ -644,7 +644,7 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      *        Default: 100
      *        </p>
      *        <p>
-     *        Constraints: Minimum 20, maximum 100.
+     *        Constraints: Minimum 20, maximum 100
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -90,7 +90,11 @@ public class ServiceConnectService implements Serializable, Cloneable, Structure
      * </p>
      */
     private TimeoutConfiguration timeout;
-
+    /**
+     * <p>
+     * A reference to an object that represents a Transport Layer Security (TLS) configuration.
+     * </p>
+     */
     private ServiceConnectTlsConfiguration tls;
 
     /**
@@ -522,7 +526,12 @@ public class ServiceConnectService implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * A reference to an object that represents a Transport Layer Security (TLS) configuration.
+     * </p>
+     * 
      * @param tls
+     *        A reference to an object that represents a Transport Layer Security (TLS) configuration.
      */
 
     public void setTls(ServiceConnectTlsConfiguration tls) {
@@ -530,7 +539,11 @@ public class ServiceConnectService implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * A reference to an object that represents a Transport Layer Security (TLS) configuration.
+     * </p>
+     * 
+     * @return A reference to an object that represents a Transport Layer Security (TLS) configuration.
      */
 
     public ServiceConnectTlsConfiguration getTls() {
@@ -538,7 +551,12 @@ public class ServiceConnectService implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * A reference to an object that represents a Transport Layer Security (TLS) configuration.
+     * </p>
+     * 
      * @param tls
+     *        A reference to an object that represents a Transport Layer Security (TLS) configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

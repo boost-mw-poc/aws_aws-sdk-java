@@ -352,6 +352,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
+    public java.util.concurrent.Future<CreateDBShardGroupResult> createDBShardGroupAsync(CreateDBShardGroupRequest request) {
+
+        return createDBShardGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDBShardGroupResult> createDBShardGroupAsync(CreateDBShardGroupRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateDBShardGroupRequest, CreateDBShardGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DBSnapshot> createDBSnapshotAsync(CreateDBSnapshotRequest request) {
 
         return createDBSnapshotAsync(request, null);
@@ -607,6 +620,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     @Override
     public java.util.concurrent.Future<DeleteDBSecurityGroupResult> deleteDBSecurityGroupAsync(DeleteDBSecurityGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteDBSecurityGroupRequest, DeleteDBSecurityGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDBShardGroupResult> deleteDBShardGroupAsync(DeleteDBShardGroupRequest request) {
+
+        return deleteDBShardGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDBShardGroupResult> deleteDBShardGroupAsync(DeleteDBShardGroupRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteDBShardGroupRequest, DeleteDBShardGroupResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1228,6 +1254,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
             com.amazonaws.handlers.AsyncHandler<DescribeDBSecurityGroupsRequest, DescribeDBSecurityGroupsResult> asyncHandler) {
 
         return describeDBSecurityGroupsAsync(new DescribeDBSecurityGroupsRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDBShardGroupsResult> describeDBShardGroupsAsync(DescribeDBShardGroupsRequest request) {
+
+        return describeDBShardGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDBShardGroupsResult> describeDBShardGroupsAsync(DescribeDBShardGroupsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeDBShardGroupsRequest, DescribeDBShardGroupsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -2029,6 +2068,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
+    public java.util.concurrent.Future<ModifyDBShardGroupResult> modifyDBShardGroupAsync(ModifyDBShardGroupRequest request) {
+
+        return modifyDBShardGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyDBShardGroupResult> modifyDBShardGroupAsync(ModifyDBShardGroupRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyDBShardGroupRequest, ModifyDBShardGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DBSnapshot> modifyDBSnapshotAsync(ModifyDBSnapshotRequest request) {
 
         return modifyDBSnapshotAsync(request, null);
@@ -2180,6 +2232,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     @Override
     public java.util.concurrent.Future<DBInstance> rebootDBInstanceAsync(RebootDBInstanceRequest request,
             com.amazonaws.handlers.AsyncHandler<RebootDBInstanceRequest, DBInstance> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RebootDBShardGroupResult> rebootDBShardGroupAsync(RebootDBShardGroupRequest request) {
+
+        return rebootDBShardGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RebootDBShardGroupResult> rebootDBShardGroupAsync(RebootDBShardGroupRequest request,
+            com.amazonaws.handlers.AsyncHandler<RebootDBShardGroupRequest, RebootDBShardGroupResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -47,6 +47,11 @@ public class CreateNetworkAclResultStaxUnmarshaller implements Unmarshaller<Crea
                     createNetworkAclResult.setNetworkAcl(NetworkAclStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("clientToken", targetDepth)) {
+                    createNetworkAclResult.setClientToken(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return createNetworkAclResult;

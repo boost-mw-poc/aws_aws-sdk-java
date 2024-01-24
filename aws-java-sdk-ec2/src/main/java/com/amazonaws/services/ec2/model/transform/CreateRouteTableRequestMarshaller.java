@@ -21,6 +21,7 @@ import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.ec2.model.*;
 import com.amazonaws.transform.Marshaller;
 import com.amazonaws.util.StringUtils;
+import com.amazonaws.util.IdempotentUtils;
 
 /**
  * CreateRouteTableRequest Marshaller
@@ -78,6 +79,8 @@ public class CreateRouteTableRequestMarshaller implements Marshaller<Request<Cre
                 tagSpecificationsListIndex++;
             }
         }
+
+        request.addParameter("ClientToken", IdempotentUtils.resolveString(createRouteTableRequest.getClientToken()));
 
         return request;
     }
