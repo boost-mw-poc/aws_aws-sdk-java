@@ -34,6 +34,8 @@ public class InstanceAccessDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("expiresAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> IPADDRESS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ipAddress").build();
+    private static final MarshallingInfo<List> IPV6ADDRESSES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ipv6Addresses").build();
     private static final MarshallingInfo<String> PASSWORD_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("password").build();
     private static final MarshallingInfo<StructuredPojo> PASSWORDDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -68,6 +70,7 @@ public class InstanceAccessDetailsMarshaller {
             protocolMarshaller.marshall(instanceAccessDetails.getCertKey(), CERTKEY_BINDING);
             protocolMarshaller.marshall(instanceAccessDetails.getExpiresAt(), EXPIRESAT_BINDING);
             protocolMarshaller.marshall(instanceAccessDetails.getIpAddress(), IPADDRESS_BINDING);
+            protocolMarshaller.marshall(instanceAccessDetails.getIpv6Addresses(), IPV6ADDRESSES_BINDING);
             protocolMarshaller.marshall(instanceAccessDetails.getPassword(), PASSWORD_BINDING);
             protocolMarshaller.marshall(instanceAccessDetails.getPasswordData(), PASSWORDDATA_BINDING);
             protocolMarshaller.marshall(instanceAccessDetails.getPrivateKey(), PRIVATEKEY_BINDING);

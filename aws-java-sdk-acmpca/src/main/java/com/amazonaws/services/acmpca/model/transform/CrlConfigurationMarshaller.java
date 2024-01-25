@@ -37,6 +37,9 @@ public class CrlConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3BucketName").build();
     private static final MarshallingInfo<String> S3OBJECTACL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3ObjectAcl").build();
+    private static final MarshallingInfo<StructuredPojo> CRLDISTRIBUTIONPOINTEXTENSIONCONFIGURATION_BINDING = MarshallingInfo
+            .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrlDistributionPointExtensionConfiguration")
+            .build();
 
     private static final CrlConfigurationMarshaller instance = new CrlConfigurationMarshaller();
 
@@ -59,6 +62,7 @@ public class CrlConfigurationMarshaller {
             protocolMarshaller.marshall(crlConfiguration.getCustomCname(), CUSTOMCNAME_BINDING);
             protocolMarshaller.marshall(crlConfiguration.getS3BucketName(), S3BUCKETNAME_BINDING);
             protocolMarshaller.marshall(crlConfiguration.getS3ObjectAcl(), S3OBJECTACL_BINDING);
+            protocolMarshaller.marshall(crlConfiguration.getCrlDistributionPointExtensionConfiguration(), CRLDISTRIBUTIONPOINTEXTENSIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

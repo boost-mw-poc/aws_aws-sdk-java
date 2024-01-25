@@ -51,7 +51,7 @@ public class AWSACMPCAWaiters {
 
         return new WaiterBuilder<GetCertificateRequest, GetCertificateResult>().withSdkFunction(new GetCertificateFunction(client))
                 .withAcceptors(new HttpSuccessStatusAcceptor(WaiterState.SUCCESS), new CertificateIssued.IsRequestInProgressExceptionMatcher())
-                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(3)))
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(1)))
                 .withExecutorService(executorService).build();
     }
 

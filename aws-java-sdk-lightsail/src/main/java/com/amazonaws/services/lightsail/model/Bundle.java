@@ -110,6 +110,12 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
      * </important>
      */
     private java.util.List<String> supportedAppCategories;
+    /**
+     * <p>
+     * An integer that indicates the public ipv4 address count included in the bundle, the value is either 0 or 1.
+     * </p>
+     */
+    private Integer publicIpv4AddressCount;
 
     /**
      * <p>
@@ -798,6 +804,49 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An integer that indicates the public ipv4 address count included in the bundle, the value is either 0 or 1.
+     * </p>
+     * 
+     * @param publicIpv4AddressCount
+     *        An integer that indicates the public ipv4 address count included in the bundle, the value is either 0 or
+     *        1.
+     */
+
+    public void setPublicIpv4AddressCount(Integer publicIpv4AddressCount) {
+        this.publicIpv4AddressCount = publicIpv4AddressCount;
+    }
+
+    /**
+     * <p>
+     * An integer that indicates the public ipv4 address count included in the bundle, the value is either 0 or 1.
+     * </p>
+     * 
+     * @return An integer that indicates the public ipv4 address count included in the bundle, the value is either 0 or
+     *         1.
+     */
+
+    public Integer getPublicIpv4AddressCount() {
+        return this.publicIpv4AddressCount;
+    }
+
+    /**
+     * <p>
+     * An integer that indicates the public ipv4 address count included in the bundle, the value is either 0 or 1.
+     * </p>
+     * 
+     * @param publicIpv4AddressCount
+     *        An integer that indicates the public ipv4 address count included in the bundle, the value is either 0 or
+     *        1.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Bundle withPublicIpv4AddressCount(Integer publicIpv4AddressCount) {
+        setPublicIpv4AddressCount(publicIpv4AddressCount);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -832,7 +881,9 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
         if (getSupportedPlatforms() != null)
             sb.append("SupportedPlatforms: ").append(getSupportedPlatforms()).append(",");
         if (getSupportedAppCategories() != null)
-            sb.append("SupportedAppCategories: ").append(getSupportedAppCategories());
+            sb.append("SupportedAppCategories: ").append(getSupportedAppCategories()).append(",");
+        if (getPublicIpv4AddressCount() != null)
+            sb.append("PublicIpv4AddressCount: ").append(getPublicIpv4AddressCount());
         sb.append("}");
         return sb.toString();
     }
@@ -895,6 +946,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSupportedAppCategories() != null && other.getSupportedAppCategories().equals(this.getSupportedAppCategories()) == false)
             return false;
+        if (other.getPublicIpv4AddressCount() == null ^ this.getPublicIpv4AddressCount() == null)
+            return false;
+        if (other.getPublicIpv4AddressCount() != null && other.getPublicIpv4AddressCount().equals(this.getPublicIpv4AddressCount()) == false)
+            return false;
         return true;
     }
 
@@ -915,6 +970,7 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTransferPerMonthInGb() == null) ? 0 : getTransferPerMonthInGb().hashCode());
         hashCode = prime * hashCode + ((getSupportedPlatforms() == null) ? 0 : getSupportedPlatforms().hashCode());
         hashCode = prime * hashCode + ((getSupportedAppCategories() == null) ? 0 : getSupportedAppCategories().hashCode());
+        hashCode = prime * hashCode + ((getPublicIpv4AddressCount() == null) ? 0 : getPublicIpv4AddressCount().hashCode());
         return hashCode;
     }
 

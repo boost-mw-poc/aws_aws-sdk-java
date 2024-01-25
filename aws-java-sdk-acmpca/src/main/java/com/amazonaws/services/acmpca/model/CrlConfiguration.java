@@ -23,9 +23,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * creates base CRLs. Delta CRLs are not supported. You can enable CRLs for your new or an existing private CA by
  * setting the <b>Enabled</b> parameter to <code>true</code>. Your private CA writes CRLs to an S3 bucket that you
  * specify in the <b>S3BucketName</b> parameter. You can hide the name of your bucket by specifying a value for the
- * <b>CustomCname</b> parameter. Your private CA copies the CNAME or the S3 bucket name to the <b>CRL Distribution
- * Points</b> extension of each certificate it issues. Your S3 bucket policy must give write permission to Amazon Web
- * Services Private CA.
+ * <b>CustomCname</b> parameter. Your private CA by default copies the CNAME or the S3 bucket name to the <b>CRL
+ * Distribution Points</b> extension of each certificate it issues. If you want to configure this default behavior to be
+ * something different, you can set the <b>CrlDistributionPointExtensionConfiguration</b> parameter. Your S3 bucket
+ * policy must give write permission to Amazon Web Services Private CA.
  * </p>
  * <p>
  * Amazon Web Services Private CA assets that are stored in Amazon S3 can be protected with encryption. For more
@@ -219,6 +220,14 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String s3ObjectAcl;
+    /**
+     * <p>
+     * Configures the behavior of the CRL Distribution Point extension for certificates issued by your certificate
+     * authority. If this field is not provided, then the CRl Distribution Point Extension will be present and contain
+     * the default CRL URL.
+     * </p>
+     */
+    private CrlDistributionPointExtensionConfiguration crlDistributionPointExtensionConfiguration;
 
     /**
      * <p>
@@ -741,6 +750,58 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Configures the behavior of the CRL Distribution Point extension for certificates issued by your certificate
+     * authority. If this field is not provided, then the CRl Distribution Point Extension will be present and contain
+     * the default CRL URL.
+     * </p>
+     * 
+     * @param crlDistributionPointExtensionConfiguration
+     *        Configures the behavior of the CRL Distribution Point extension for certificates issued by your
+     *        certificate authority. If this field is not provided, then the CRl Distribution Point Extension will be
+     *        present and contain the default CRL URL.
+     */
+
+    public void setCrlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfiguration crlDistributionPointExtensionConfiguration) {
+        this.crlDistributionPointExtensionConfiguration = crlDistributionPointExtensionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configures the behavior of the CRL Distribution Point extension for certificates issued by your certificate
+     * authority. If this field is not provided, then the CRl Distribution Point Extension will be present and contain
+     * the default CRL URL.
+     * </p>
+     * 
+     * @return Configures the behavior of the CRL Distribution Point extension for certificates issued by your
+     *         certificate authority. If this field is not provided, then the CRl Distribution Point Extension will be
+     *         present and contain the default CRL URL.
+     */
+
+    public CrlDistributionPointExtensionConfiguration getCrlDistributionPointExtensionConfiguration() {
+        return this.crlDistributionPointExtensionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configures the behavior of the CRL Distribution Point extension for certificates issued by your certificate
+     * authority. If this field is not provided, then the CRl Distribution Point Extension will be present and contain
+     * the default CRL URL.
+     * </p>
+     * 
+     * @param crlDistributionPointExtensionConfiguration
+     *        Configures the behavior of the CRL Distribution Point extension for certificates issued by your
+     *        certificate authority. If this field is not provided, then the CRl Distribution Point Extension will be
+     *        present and contain the default CRL URL.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CrlConfiguration withCrlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfiguration crlDistributionPointExtensionConfiguration) {
+        setCrlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -761,7 +822,9 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
         if (getS3BucketName() != null)
             sb.append("S3BucketName: ").append(getS3BucketName()).append(",");
         if (getS3ObjectAcl() != null)
-            sb.append("S3ObjectAcl: ").append(getS3ObjectAcl());
+            sb.append("S3ObjectAcl: ").append(getS3ObjectAcl()).append(",");
+        if (getCrlDistributionPointExtensionConfiguration() != null)
+            sb.append("CrlDistributionPointExtensionConfiguration: ").append(getCrlDistributionPointExtensionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -796,6 +859,11 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getS3ObjectAcl() != null && other.getS3ObjectAcl().equals(this.getS3ObjectAcl()) == false)
             return false;
+        if (other.getCrlDistributionPointExtensionConfiguration() == null ^ this.getCrlDistributionPointExtensionConfiguration() == null)
+            return false;
+        if (other.getCrlDistributionPointExtensionConfiguration() != null
+                && other.getCrlDistributionPointExtensionConfiguration().equals(this.getCrlDistributionPointExtensionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -809,6 +877,8 @@ public class CrlConfiguration implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getCustomCname() == null) ? 0 : getCustomCname().hashCode());
         hashCode = prime * hashCode + ((getS3BucketName() == null) ? 0 : getS3BucketName().hashCode());
         hashCode = prime * hashCode + ((getS3ObjectAcl() == null) ? 0 : getS3ObjectAcl().hashCode());
+        hashCode = prime * hashCode
+                + ((getCrlDistributionPointExtensionConfiguration() == null) ? 0 : getCrlDistributionPointExtensionConfiguration().hashCode());
         return hashCode;
     }
 

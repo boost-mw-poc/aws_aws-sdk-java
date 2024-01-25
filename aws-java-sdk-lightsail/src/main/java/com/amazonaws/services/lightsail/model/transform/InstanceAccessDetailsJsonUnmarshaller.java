@@ -60,6 +60,12 @@ public class InstanceAccessDetailsJsonUnmarshaller implements Unmarshaller<Insta
                     context.nextToken();
                     instanceAccessDetails.setIpAddress(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ipv6Addresses", targetDepth)) {
+                    context.nextToken();
+                    instanceAccessDetails.setIpv6Addresses(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("password", targetDepth)) {
                     context.nextToken();
                     instanceAccessDetails.setPassword(context.getUnmarshaller(String.class).unmarshall(context));
