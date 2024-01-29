@@ -379,6 +379,11 @@ public class GetSpotPlacementScoresRequestMarshaller implements Marshaller<Reque
                         allowedInstanceTypesListIndex++;
                     }
                 }
+
+                if (instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice() != null) {
+                    request.addParameter("InstanceRequirementsWithMetadata.InstanceRequirements.MaxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+                            StringUtils.fromInteger(instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()));
+                }
             }
         }
 

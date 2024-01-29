@@ -2170,7 +2170,7 @@ public class AmazonAutoScalingClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Gets information about the instance refreshes for the specified Auto Scaling group.
+     * Gets information about the instance refreshes for the specified Auto Scaling group from the previous six weeks.
      * </p>
      * <p>
      * This operation is part of the <a

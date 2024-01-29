@@ -1,3 +1,28 @@
+# __1.12.647__ __2024-01-29__
+## __Amazon Comprehend__
+  - ### Features
+    - Comprehend PII analysis now supports Spanish input documents.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - EC2 Fleet customers who use attribute based instance-type selection can now intuitively define their Spot instances price protection limit as a percentage of the lowest priced On-Demand instance type.
+
+## __Amazon Import/Export Snowball__
+  - ### Features
+    - Modified description of createaddress to include direction to add path when providing a JSON file.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Introduced support for the InsufficientDBInstanceCapacityFault error in the RDS RestoreDBClusterFromSnapshot and RestoreDBClusterToPointInTime API methods. This provides enhanced error handling, ensuring a more robust experience.
+
+## __AmazonMWAA__
+  - ### Features
+    - This release adds MAINTENANCE environment status for Amazon MWAA environments.
+
+## __Auto Scaling__
+  - ### Features
+    - EC2 Auto Scaling customers who use attribute based instance-type selection can now intuitively define their Spot instances price protection limit as a percentage of the lowest priced On-Demand instance type.
+
 # __1.12.646__ __2024-01-26__
 ## __Amazon Connect Service__
   - ### Features

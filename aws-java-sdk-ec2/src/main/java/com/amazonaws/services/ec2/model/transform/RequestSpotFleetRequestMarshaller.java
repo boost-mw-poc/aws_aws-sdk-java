@@ -870,6 +870,12 @@ public class RequestSpotFleetRequestMarshaller implements Marshaller<Request<Req
                                 allowedInstanceTypesListIndex++;
                             }
                         }
+
+                        if (instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice() != null) {
+                            request.addParameter("SpotFleetRequestConfig.LaunchSpecifications." + launchSpecificationsListIndex
+                                    + ".InstanceRequirements.MaxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+                                    StringUtils.fromInteger(instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()));
+                        }
                     }
                     launchSpecificationsListIndex++;
                 }
@@ -1245,6 +1251,12 @@ public class RequestSpotFleetRequestMarshaller implements Marshaller<Request<Req
                                         }
                                         allowedInstanceTypesListIndex++;
                                     }
+                                }
+
+                                if (instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice() != null) {
+                                    request.addParameter("SpotFleetRequestConfig.LaunchTemplateConfigs." + launchTemplateConfigsListIndex + ".Overrides."
+                                            + overridesListIndex + ".InstanceRequirements.MaxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+                                            StringUtils.fromInteger(instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()));
                                 }
                             }
                             overridesListIndex++;

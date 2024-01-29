@@ -274,6 +274,13 @@ public class StartInstanceRefreshRequestMarshaller implements Marshaller<Request
                                                                 StringUtils.fromInteger(instanceRequirements.getSpotMaxPricePercentageOverLowestPrice()));
                                                     }
 
+                                                    if (instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice() != null) {
+                                                        request.addParameter("DesiredConfiguration.MixedInstancesPolicy.LaunchTemplate.Overrides.member."
+                                                                + overridesListIndex + ".InstanceRequirements.MaxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+                                                                StringUtils.fromInteger(instanceRequirements
+                                                                        .getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()));
+                                                    }
+
                                                     if (instanceRequirements.getOnDemandMaxPricePercentageOverLowestPrice() != null) {
                                                         request.addParameter("DesiredConfiguration.MixedInstancesPolicy.LaunchTemplate.Overrides.member."
                                                                 + overridesListIndex + ".InstanceRequirements.OnDemandMaxPricePercentageOverLowestPrice",

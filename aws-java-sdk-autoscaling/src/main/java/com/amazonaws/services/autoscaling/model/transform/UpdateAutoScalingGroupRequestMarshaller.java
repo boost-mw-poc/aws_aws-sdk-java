@@ -250,6 +250,12 @@ public class UpdateAutoScalingGroupRequestMarshaller implements Marshaller<Reque
                                                         StringUtils.fromInteger(instanceRequirements.getSpotMaxPricePercentageOverLowestPrice()));
                                             }
 
+                                            if (instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice() != null) {
+                                                request.addParameter("MixedInstancesPolicy.LaunchTemplate.Overrides.member." + overridesListIndex
+                                                        + ".InstanceRequirements.MaxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+                                                        StringUtils.fromInteger(instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()));
+                                            }
+
                                             if (instanceRequirements.getOnDemandMaxPricePercentageOverLowestPrice() != null) {
                                                 request.addParameter("MixedInstancesPolicy.LaunchTemplate.Overrides.member." + overridesListIndex
                                                         + ".InstanceRequirements.OnDemandMaxPricePercentageOverLowestPrice",

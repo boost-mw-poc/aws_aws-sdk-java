@@ -30,7 +30,8 @@ public enum EnvironmentStatus {
     UPDATE_FAILED("UPDATE_FAILED"),
     ROLLING_BACK("ROLLING_BACK"),
     CREATING_SNAPSHOT("CREATING_SNAPSHOT"),
-    PENDING("PENDING");
+    PENDING("PENDING"),
+    MAINTENANCE("MAINTENANCE");
 
     private String value;
 

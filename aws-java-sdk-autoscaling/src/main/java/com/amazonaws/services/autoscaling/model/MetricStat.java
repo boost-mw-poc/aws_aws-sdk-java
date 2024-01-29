@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This structure defines the CloudWatch metric to return, along with the statistic, period, and unit.
+ * This structure defines the CloudWatch metric to return, along with the statistic and unit.
  * </p>
  * <p>
  * For more information about the CloudWatch terminology below, see <a

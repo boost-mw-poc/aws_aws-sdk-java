@@ -69,7 +69,7 @@ public class StartPiiEntitiesDetectionJobRequest extends com.amazonaws.AmazonWeb
     private String jobName;
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input documents. Enter the language code for English (en) or Spanish (es).
      * </p>
      */
     private String languageCode;
@@ -387,11 +387,11 @@ public class StartPiiEntitiesDetectionJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input documents. Enter the language code for English (en) or Spanish (es).
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents. Currently, English is the only valid language.
+     *        The language of the input documents. Enter the language code for English (en) or Spanish (es).
      * @see LanguageCode
      */
 
@@ -401,10 +401,10 @@ public class StartPiiEntitiesDetectionJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input documents. Enter the language code for English (en) or Spanish (es).
      * </p>
      * 
-     * @return The language of the input documents. Currently, English is the only valid language.
+     * @return The language of the input documents. Enter the language code for English (en) or Spanish (es).
      * @see LanguageCode
      */
 
@@ -414,11 +414,11 @@ public class StartPiiEntitiesDetectionJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input documents. Enter the language code for English (en) or Spanish (es).
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents. Currently, English is the only valid language.
+     *        The language of the input documents. Enter the language code for English (en) or Spanish (es).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -430,11 +430,11 @@ public class StartPiiEntitiesDetectionJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input documents. Enter the language code for English (en) or Spanish (es).
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents. Currently, English is the only valid language.
+     *        The language of the input documents. Enter the language code for English (en) or Spanish (es).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */

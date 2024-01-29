@@ -11313,6 +11313,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         <code>DBClusterParameterGroupName</code> doesn't refer to an existing DB cluster parameter group.
      * @throws InvalidDBInstanceStateException
      *         The DB instance isn't in a valid state.
+     * @throws InsufficientDBInstanceCapacityException
+     *         The specified DB instance class isn't available in the specified Availability Zone.
      * @sample AmazonRDS.RestoreDBClusterFromSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBClusterFromSnapshot"
      *      target="_top">AWS API Documentation</a>
@@ -11430,6 +11432,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         <code>DBClusterParameterGroupName</code> doesn't refer to an existing DB cluster parameter group.
      * @throws DBClusterAutomatedBackupNotFoundException
      *         No automated backup for this DB cluster was found.
+     * @throws InsufficientDBInstanceCapacityException
+     *         The specified DB instance class isn't available in the specified Availability Zone.
      * @sample AmazonRDS.RestoreDBClusterToPointInTime
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBClusterToPointInTime"
      *      target="_top">AWS API Documentation</a>

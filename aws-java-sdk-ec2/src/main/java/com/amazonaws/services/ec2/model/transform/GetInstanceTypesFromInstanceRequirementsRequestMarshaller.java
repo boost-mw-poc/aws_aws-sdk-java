@@ -322,6 +322,11 @@ public class GetInstanceTypesFromInstanceRequirementsRequestMarshaller implement
                     allowedInstanceTypesListIndex++;
                 }
             }
+
+            if (instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice() != null) {
+                request.addParameter("InstanceRequirements.MaxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+                        StringUtils.fromInteger(instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()));
+            }
         }
 
         if (getInstanceTypesFromInstanceRequirementsRequest.getMaxResults() != null) {

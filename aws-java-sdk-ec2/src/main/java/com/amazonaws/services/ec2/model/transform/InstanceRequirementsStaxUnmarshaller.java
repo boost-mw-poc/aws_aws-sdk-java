@@ -200,6 +200,10 @@ public class InstanceRequirementsStaxUnmarshaller implements Unmarshaller<Instan
                     continue;
                 }
 
+                if (context.testExpression("maxSpotPriceAsPercentageOfOptimalOnDemandPrice", targetDepth)) {
+                    instanceRequirements.setMaxSpotPriceAsPercentageOfOptimalOnDemandPrice(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return instanceRequirements;

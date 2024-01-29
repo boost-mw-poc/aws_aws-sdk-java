@@ -535,6 +535,12 @@ public class CreateFleetRequestMarshaller implements Marshaller<Request<CreateFl
                                     allowedInstanceTypesListIndex++;
                                 }
                             }
+
+                            if (instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice() != null) {
+                                request.addParameter("LaunchTemplateConfigs." + launchTemplateConfigsListIndex + ".Overrides." + overridesListIndex
+                                        + ".InstanceRequirements.MaxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+                                        StringUtils.fromInteger(instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()));
+                            }
                         }
 
                         if (fleetLaunchTemplateConfigRequestOverridesListValue.getImageId() != null) {

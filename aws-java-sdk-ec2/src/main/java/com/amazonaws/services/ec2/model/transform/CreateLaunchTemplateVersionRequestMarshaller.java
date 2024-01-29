@@ -948,6 +948,11 @@ public class CreateLaunchTemplateVersionRequestMarshaller implements
                         allowedInstanceTypesListIndex++;
                     }
                 }
+
+                if (instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice() != null) {
+                    request.addParameter("LaunchTemplateData.InstanceRequirements.MaxSpotPriceAsPercentageOfOptimalOnDemandPrice",
+                            StringUtils.fromInteger(instanceRequirements.getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()));
+                }
             }
 
             LaunchTemplatePrivateDnsNameOptionsRequest privateDnsNameOptions = launchTemplateData.getPrivateDnsNameOptions();

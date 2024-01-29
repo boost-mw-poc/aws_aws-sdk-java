@@ -35,8 +35,8 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * <p>
      * Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling group. It represents
      * the minimum percentage of the group to keep in service, healthy, and ready to use to support your workload when
-     * replacing instances. Value range is 0 to 100. After it's set, a value of <code>-1</code> will clear the
-     * previously set value.
+     * replacing instances. Value range is 0 to 100. To clear a previously set value, specify a value of <code>-1</code>
+     * .
      * </p>
      */
     private Integer minHealthyPercentage;
@@ -44,8 +44,8 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * <p>
      * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling group. It represents
      * the maximum percentage of the group that can be in service and healthy, or pending, to support your workload when
-     * replacing instances. Value range is 100 to 200. After it's set, a value of <code>-1</code> will clear the
-     * previously set value.
+     * replacing instances. Value range is 100 to 200. To clear a previously set value, specify a value of
+     * <code>-1</code>.
      * </p>
      * <p>
      * Both <code>MinHealthyPercentage</code> and <code>MaxHealthyPercentage</code> must be specified, and the
@@ -59,15 +59,15 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * <p>
      * Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling group. It represents
      * the minimum percentage of the group to keep in service, healthy, and ready to use to support your workload when
-     * replacing instances. Value range is 0 to 100. After it's set, a value of <code>-1</code> will clear the
-     * previously set value.
+     * replacing instances. Value range is 0 to 100. To clear a previously set value, specify a value of <code>-1</code>
+     * .
      * </p>
      * 
      * @param minHealthyPercentage
      *        Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling group. It
      *        represents the minimum percentage of the group to keep in service, healthy, and ready to use to support
-     *        your workload when replacing instances. Value range is 0 to 100. After it's set, a value of
-     *        <code>-1</code> will clear the previously set value.
+     *        your workload when replacing instances. Value range is 0 to 100. To clear a previously set value, specify
+     *        a value of <code>-1</code>.
      */
 
     public void setMinHealthyPercentage(Integer minHealthyPercentage) {
@@ -78,14 +78,14 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * <p>
      * Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling group. It represents
      * the minimum percentage of the group to keep in service, healthy, and ready to use to support your workload when
-     * replacing instances. Value range is 0 to 100. After it's set, a value of <code>-1</code> will clear the
-     * previously set value.
+     * replacing instances. Value range is 0 to 100. To clear a previously set value, specify a value of <code>-1</code>
+     * .
      * </p>
      * 
      * @return Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling group. It
      *         represents the minimum percentage of the group to keep in service, healthy, and ready to use to support
-     *         your workload when replacing instances. Value range is 0 to 100. After it's set, a value of
-     *         <code>-1</code> will clear the previously set value.
+     *         your workload when replacing instances. Value range is 0 to 100. To clear a previously set value, specify
+     *         a value of <code>-1</code>.
      */
 
     public Integer getMinHealthyPercentage() {
@@ -96,15 +96,15 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * <p>
      * Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling group. It represents
      * the minimum percentage of the group to keep in service, healthy, and ready to use to support your workload when
-     * replacing instances. Value range is 0 to 100. After it's set, a value of <code>-1</code> will clear the
-     * previously set value.
+     * replacing instances. Value range is 0 to 100. To clear a previously set value, specify a value of <code>-1</code>
+     * .
      * </p>
      * 
      * @param minHealthyPercentage
      *        Specifies the lower threshold as a percentage of the desired capacity of the Auto Scaling group. It
      *        represents the minimum percentage of the group to keep in service, healthy, and ready to use to support
-     *        your workload when replacing instances. Value range is 0 to 100. After it's set, a value of
-     *        <code>-1</code> will clear the previously set value.
+     *        your workload when replacing instances. Value range is 0 to 100. To clear a previously set value, specify
+     *        a value of <code>-1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,8 +117,8 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * <p>
      * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling group. It represents
      * the maximum percentage of the group that can be in service and healthy, or pending, to support your workload when
-     * replacing instances. Value range is 100 to 200. After it's set, a value of <code>-1</code> will clear the
-     * previously set value.
+     * replacing instances. Value range is 100 to 200. To clear a previously set value, specify a value of
+     * <code>-1</code>.
      * </p>
      * <p>
      * Both <code>MinHealthyPercentage</code> and <code>MaxHealthyPercentage</code> must be specified, and the
@@ -129,8 +129,8 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * @param maxHealthyPercentage
      *        Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling group. It
      *        represents the maximum percentage of the group that can be in service and healthy, or pending, to support
-     *        your workload when replacing instances. Value range is 100 to 200. After it's set, a value of
-     *        <code>-1</code> will clear the previously set value. </p>
+     *        your workload when replacing instances. Value range is 100 to 200. To clear a previously set value,
+     *        specify a value of <code>-1</code>.</p>
      *        <p>
      *        Both <code>MinHealthyPercentage</code> and <code>MaxHealthyPercentage</code> must be specified, and the
      *        difference between them cannot be greater than 100. A large range increases the number of instances that
@@ -145,8 +145,8 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * <p>
      * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling group. It represents
      * the maximum percentage of the group that can be in service and healthy, or pending, to support your workload when
-     * replacing instances. Value range is 100 to 200. After it's set, a value of <code>-1</code> will clear the
-     * previously set value.
+     * replacing instances. Value range is 100 to 200. To clear a previously set value, specify a value of
+     * <code>-1</code>.
      * </p>
      * <p>
      * Both <code>MinHealthyPercentage</code> and <code>MaxHealthyPercentage</code> must be specified, and the
@@ -156,8 +156,8 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * 
      * @return Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling group. It
      *         represents the maximum percentage of the group that can be in service and healthy, or pending, to support
-     *         your workload when replacing instances. Value range is 100 to 200. After it's set, a value of
-     *         <code>-1</code> will clear the previously set value. </p>
+     *         your workload when replacing instances. Value range is 100 to 200. To clear a previously set value,
+     *         specify a value of <code>-1</code>.</p>
      *         <p>
      *         Both <code>MinHealthyPercentage</code> and <code>MaxHealthyPercentage</code> must be specified, and the
      *         difference between them cannot be greater than 100. A large range increases the number of instances that
@@ -172,8 +172,8 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * <p>
      * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling group. It represents
      * the maximum percentage of the group that can be in service and healthy, or pending, to support your workload when
-     * replacing instances. Value range is 100 to 200. After it's set, a value of <code>-1</code> will clear the
-     * previously set value.
+     * replacing instances. Value range is 100 to 200. To clear a previously set value, specify a value of
+     * <code>-1</code>.
      * </p>
      * <p>
      * Both <code>MinHealthyPercentage</code> and <code>MaxHealthyPercentage</code> must be specified, and the
@@ -184,8 +184,8 @@ public class InstanceMaintenancePolicy implements Serializable, Cloneable {
      * @param maxHealthyPercentage
      *        Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling group. It
      *        represents the maximum percentage of the group that can be in service and healthy, or pending, to support
-     *        your workload when replacing instances. Value range is 100 to 200. After it's set, a value of
-     *        <code>-1</code> will clear the previously set value. </p>
+     *        your workload when replacing instances. Value range is 100 to 200. To clear a previously set value,
+     *        specify a value of <code>-1</code>.</p>
      *        <p>
      *        Both <code>MinHealthyPercentage</code> and <code>MaxHealthyPercentage</code> must be specified, and the
      *        difference between them cannot be greater than 100. A large range increases the number of instances that

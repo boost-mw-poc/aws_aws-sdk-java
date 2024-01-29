@@ -107,7 +107,7 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
     private RedactionConfig redactionConfig;
     /**
      * <p>
-     * The language code of the input documents
+     * The language code of the input documents.
      * </p>
      */
     private String languageCode;
@@ -644,11 +644,11 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The language code of the input documents
+     * The language code of the input documents.
      * </p>
      * 
      * @param languageCode
-     *        The language code of the input documents
+     *        The language code of the input documents.
      * @see LanguageCode
      */
 
@@ -658,10 +658,10 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The language code of the input documents
+     * The language code of the input documents.
      * </p>
      * 
-     * @return The language code of the input documents
+     * @return The language code of the input documents.
      * @see LanguageCode
      */
 
@@ -671,11 +671,11 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The language code of the input documents
+     * The language code of the input documents.
      * </p>
      * 
      * @param languageCode
-     *        The language code of the input documents
+     *        The language code of the input documents.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -687,11 +687,11 @@ public class PiiEntitiesDetectionJobProperties implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The language code of the input documents
+     * The language code of the input documents.
      * </p>
      * 
      * @param languageCode
-     *        The language code of the input documents
+     *        The language code of the input documents.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */

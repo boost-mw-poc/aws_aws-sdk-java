@@ -110,7 +110,7 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String executionRoleArn;
     /**
      * <p>
-     * The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     * The KMS encryption key used to encrypt the data in your environment.
      * </p>
      */
     private String kmsKey;
@@ -327,14 +327,21 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment was unable to rollback and is not in
-     * a stable state.
+     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment did not return to its previous state
+     * and is not stable.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment has
-     * rolled back successfully and is ready to use.
+     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment was
+     * restored to its previous state successfully and is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MAINTENANCE</code> - Indicates that the environment is undergoing maintenance. Depending on the type of
+     * work Amazon MWAA is performing, your environment might become unavailable during this process. After all
+     * operations are done, your environment will return to its status prior to mainteneace operations.
      * </p>
      * </li>
      * </ul>
@@ -363,7 +370,7 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String webserverAccessMode;
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> host name for the Amazon MWAA environment. For more information, see <a
+     * The Apache Airflow <i>web server</i> host name for the Amazon MWAA environment. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html">Accessing the Apache Airflow
      * UI</a>.
      * </p>
@@ -964,12 +971,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     * The KMS encryption key used to encrypt the data in your environment.
      * </p>
      * 
      * @param kmsKey
-     *        The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your
-     *        environment.
+     *        The KMS encryption key used to encrypt the data in your environment.
      */
 
     public void setKmsKey(String kmsKey) {
@@ -978,11 +984,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     * The KMS encryption key used to encrypt the data in your environment.
      * </p>
      * 
-     * @return The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your
-     *         environment.
+     * @return The KMS encryption key used to encrypt the data in your environment.
      */
 
     public String getKmsKey() {
@@ -991,12 +996,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     * The KMS encryption key used to encrypt the data in your environment.
      * </p>
      * 
      * @param kmsKey
-     *        The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your
-     *        environment.
+     *        The KMS encryption key used to encrypt the data in your environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2030,14 +2034,21 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment was unable to rollback and is not in
-     * a stable state.
+     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment did not return to its previous state
+     * and is not stable.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment has
-     * rolled back successfully and is ready to use.
+     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment was
+     * restored to its previous state successfully and is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MAINTENANCE</code> - Indicates that the environment is undergoing maintenance. Depending on the type of
+     * work Amazon MWAA is performing, your environment might become unavailable during this process. After all
+     * operations are done, your environment will return to its status prior to mainteneace operations.
      * </p>
      * </li>
      * </ul>
@@ -2110,14 +2121,21 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNAVAILABLE</code> - Indicates the request failed, but the environment was unable to rollback and is
-     *        not in a stable state.
+     *        <code>UNAVAILABLE</code> - Indicates the request failed, but the environment did not return to its
+     *        previous state and is not stable.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment
-     *        has rolled back successfully and is ready to use.
+     *        was restored to its previous state successfully and is ready to use.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MAINTENANCE</code> - Indicates that the environment is undergoing maintenance. Depending on the type
+     *        of work Amazon MWAA is performing, your environment might become unavailable during this process. After
+     *        all operations are done, your environment will return to its status prior to mainteneace operations.
      *        </p>
      *        </li>
      *        </ul>
@@ -2194,14 +2212,21 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment was unable to rollback and is not in
-     * a stable state.
+     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment did not return to its previous state
+     * and is not stable.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment has
-     * rolled back successfully and is ready to use.
+     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment was
+     * restored to its previous state successfully and is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MAINTENANCE</code> - Indicates that the environment is undergoing maintenance. Depending on the type of
+     * work Amazon MWAA is performing, your environment might become unavailable during this process. After all
+     * operations are done, your environment will return to its status prior to mainteneace operations.
      * </p>
      * </li>
      * </ul>
@@ -2273,14 +2298,22 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UNAVAILABLE</code> - Indicates the request failed, but the environment was unable to rollback and
-     *         is not in a stable state.
+     *         <code>UNAVAILABLE</code> - Indicates the request failed, but the environment did not return to its
+     *         previous state and is not stable.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment
-     *         has rolled back successfully and is ready to use.
+     *         was restored to its previous state successfully and is ready to use.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>MAINTENANCE</code> - Indicates that the environment is undergoing maintenance. Depending on the
+     *         type of work Amazon MWAA is performing, your environment might become unavailable during this process.
+     *         After all operations are done, your environment will return to its status prior to mainteneace
+     *         operations.
      *         </p>
      *         </li>
      *         </ul>
@@ -2358,14 +2391,21 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment was unable to rollback and is not in
-     * a stable state.
+     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment did not return to its previous state
+     * and is not stable.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment has
-     * rolled back successfully and is ready to use.
+     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment was
+     * restored to its previous state successfully and is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MAINTENANCE</code> - Indicates that the environment is undergoing maintenance. Depending on the type of
+     * work Amazon MWAA is performing, your environment might become unavailable during this process. After all
+     * operations are done, your environment will return to its status prior to mainteneace operations.
      * </p>
      * </li>
      * </ul>
@@ -2438,14 +2478,21 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNAVAILABLE</code> - Indicates the request failed, but the environment was unable to rollback and is
-     *        not in a stable state.
+     *        <code>UNAVAILABLE</code> - Indicates the request failed, but the environment did not return to its
+     *        previous state and is not stable.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment
-     *        has rolled back successfully and is ready to use.
+     *        was restored to its previous state successfully and is ready to use.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MAINTENANCE</code> - Indicates that the environment is undergoing maintenance. Depending on the type
+     *        of work Amazon MWAA is performing, your environment might become unavailable during this process. After
+     *        all operations are done, your environment will return to its status prior to mainteneace operations.
      *        </p>
      *        </li>
      *        </ul>
@@ -2524,14 +2571,21 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment was unable to rollback and is not in
-     * a stable state.
+     * <code>UNAVAILABLE</code> - Indicates the request failed, but the environment did not return to its previous state
+     * and is not stable.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment has
-     * rolled back successfully and is ready to use.
+     * <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment was
+     * restored to its previous state successfully and is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>MAINTENANCE</code> - Indicates that the environment is undergoing maintenance. Depending on the type of
+     * work Amazon MWAA is performing, your environment might become unavailable during this process. After all
+     * operations are done, your environment will return to its status prior to mainteneace operations.
      * </p>
      * </li>
      * </ul>
@@ -2604,14 +2658,21 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNAVAILABLE</code> - Indicates the request failed, but the environment was unable to rollback and is
-     *        not in a stable state.
+     *        <code>UNAVAILABLE</code> - Indicates the request failed, but the environment did not return to its
+     *        previous state and is not stable.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>UPDATE_FAILED</code> - Indicates the request to update the environment failed, and the environment
-     *        has rolled back successfully and is ready to use.
+     *        was restored to its previous state successfully and is ready to use.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>MAINTENANCE</code> - Indicates that the environment is undergoing maintenance. Depending on the type
+     *        of work Amazon MWAA is performing, your environment might become unavailable during this process. After
+     *        all operations are done, your environment will return to its status prior to mainteneace operations.
      *        </p>
      *        </li>
      *        </ul>
@@ -2788,13 +2849,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> host name for the Amazon MWAA environment. For more information, see <a
+     * The Apache Airflow <i>web server</i> host name for the Amazon MWAA environment. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html">Accessing the Apache Airflow
      * UI</a>.
      * </p>
      * 
      * @param webserverUrl
-     *        The Apache Airflow <i>Web server</i> host name for the Amazon MWAA environment. For more information, see
+     *        The Apache Airflow <i>web server</i> host name for the Amazon MWAA environment. For more information, see
      *        <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html">Accessing the Apache
      *        Airflow UI</a>.
      */
@@ -2805,12 +2866,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> host name for the Amazon MWAA environment. For more information, see <a
+     * The Apache Airflow <i>web server</i> host name for the Amazon MWAA environment. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html">Accessing the Apache Airflow
      * UI</a>.
      * </p>
      * 
-     * @return The Apache Airflow <i>Web server</i> host name for the Amazon MWAA environment. For more information, see
+     * @return The Apache Airflow <i>web server</i> host name for the Amazon MWAA environment. For more information, see
      *         <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html">Accessing the Apache
      *         Airflow UI</a>.
      */
@@ -2821,13 +2882,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> host name for the Amazon MWAA environment. For more information, see <a
+     * The Apache Airflow <i>web server</i> host name for the Amazon MWAA environment. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html">Accessing the Apache Airflow
      * UI</a>.
      * </p>
      * 
      * @param webserverUrl
-     *        The Apache Airflow <i>Web server</i> host name for the Amazon MWAA environment. For more information, see
+     *        The Apache Airflow <i>web server</i> host name for the Amazon MWAA environment. For more information, see
      *        <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/access-airflow-ui.html">Accessing the Apache
      *        Airflow UI</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

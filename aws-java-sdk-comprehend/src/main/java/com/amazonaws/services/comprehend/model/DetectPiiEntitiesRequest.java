@@ -33,7 +33,7 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
     private String text;
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input text. Enter the language code for English (en) or Spanish (es).
      * </p>
      */
     private String languageCode;
@@ -80,11 +80,11 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input text. Enter the language code for English (en) or Spanish (es).
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents. Currently, English is the only valid language.
+     *        The language of the input text. Enter the language code for English (en) or Spanish (es).
      * @see LanguageCode
      */
 
@@ -94,10 +94,10 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input text. Enter the language code for English (en) or Spanish (es).
      * </p>
      * 
-     * @return The language of the input documents. Currently, English is the only valid language.
+     * @return The language of the input text. Enter the language code for English (en) or Spanish (es).
      * @see LanguageCode
      */
 
@@ -107,11 +107,11 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input text. Enter the language code for English (en) or Spanish (es).
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents. Currently, English is the only valid language.
+     *        The language of the input text. Enter the language code for English (en) or Spanish (es).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -123,11 +123,11 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The language of the input documents. Currently, English is the only valid language.
+     * The language of the input text. Enter the language code for English (en) or Spanish (es).
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents. Currently, English is the only valid language.
+     *        The language of the input text. Enter the language code for English (en) or Spanish (es).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
