@@ -39,6 +39,9 @@ public class SourceIpConditionConfig implements Serializable, Cloneable {
      * of the CIDR blocks. This condition is not satisfied by the addresses in the X-Forwarded-For header. To search for
      * addresses in the X-Forwarded-For header, use <a>HttpHeaderConditionConfig</a>.
      * </p>
+     * <p>
+     * The total number of values must be less than, or equal to five.
+     * </p>
      */
     private java.util.List<String> values;
 
@@ -51,6 +54,9 @@ public class SourceIpConditionConfig implements Serializable, Cloneable {
      * of the CIDR blocks. This condition is not satisfied by the addresses in the X-Forwarded-For header. To search for
      * addresses in the X-Forwarded-For header, use <a>HttpHeaderConditionConfig</a>.
      * </p>
+     * <p>
+     * The total number of values must be less than, or equal to five.
+     * </p>
      * 
      * @return The source IP addresses, in CIDR format. You can use both IPv4 and IPv6 addresses. Wildcards are not
      *         supported.</p>
@@ -58,6 +64,9 @@ public class SourceIpConditionConfig implements Serializable, Cloneable {
      *         If you specify multiple addresses, the condition is satisfied if the source IP address of the request
      *         matches one of the CIDR blocks. This condition is not satisfied by the addresses in the X-Forwarded-For
      *         header. To search for addresses in the X-Forwarded-For header, use <a>HttpHeaderConditionConfig</a>.
+     *         </p>
+     *         <p>
+     *         The total number of values must be less than, or equal to five.
      */
 
     public java.util.List<String> getValues() {
@@ -73,6 +82,9 @@ public class SourceIpConditionConfig implements Serializable, Cloneable {
      * of the CIDR blocks. This condition is not satisfied by the addresses in the X-Forwarded-For header. To search for
      * addresses in the X-Forwarded-For header, use <a>HttpHeaderConditionConfig</a>.
      * </p>
+     * <p>
+     * The total number of values must be less than, or equal to five.
+     * </p>
      * 
      * @param values
      *        The source IP addresses, in CIDR format. You can use both IPv4 and IPv6 addresses. Wildcards are not
@@ -81,6 +93,9 @@ public class SourceIpConditionConfig implements Serializable, Cloneable {
      *        If you specify multiple addresses, the condition is satisfied if the source IP address of the request
      *        matches one of the CIDR blocks. This condition is not satisfied by the addresses in the X-Forwarded-For
      *        header. To search for addresses in the X-Forwarded-For header, use <a>HttpHeaderConditionConfig</a>.
+     *        </p>
+     *        <p>
+     *        The total number of values must be less than, or equal to five.
      */
 
     public void setValues(java.util.Collection<String> values) {
@@ -102,6 +117,9 @@ public class SourceIpConditionConfig implements Serializable, Cloneable {
      * addresses in the X-Forwarded-For header, use <a>HttpHeaderConditionConfig</a>.
      * </p>
      * <p>
+     * The total number of values must be less than, or equal to five.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setValues(java.util.Collection)} or {@link #withValues(java.util.Collection)} if you want to override the
      * existing values.
@@ -114,6 +132,9 @@ public class SourceIpConditionConfig implements Serializable, Cloneable {
      *        If you specify multiple addresses, the condition is satisfied if the source IP address of the request
      *        matches one of the CIDR blocks. This condition is not satisfied by the addresses in the X-Forwarded-For
      *        header. To search for addresses in the X-Forwarded-For header, use <a>HttpHeaderConditionConfig</a>.
+     *        </p>
+     *        <p>
+     *        The total number of values must be less than, or equal to five.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,6 +157,9 @@ public class SourceIpConditionConfig implements Serializable, Cloneable {
      * of the CIDR blocks. This condition is not satisfied by the addresses in the X-Forwarded-For header. To search for
      * addresses in the X-Forwarded-For header, use <a>HttpHeaderConditionConfig</a>.
      * </p>
+     * <p>
+     * The total number of values must be less than, or equal to five.
+     * </p>
      * 
      * @param values
      *        The source IP addresses, in CIDR format. You can use both IPv4 and IPv6 addresses. Wildcards are not
@@ -144,6 +168,9 @@ public class SourceIpConditionConfig implements Serializable, Cloneable {
      *        If you specify multiple addresses, the condition is satisfied if the source IP address of the request
      *        matches one of the CIDR blocks. This condition is not satisfied by the addresses in the X-Forwarded-For
      *        header. To search for addresses in the X-Forwarded-For header, use <a>HttpHeaderConditionConfig</a>.
+     *        </p>
+     *        <p>
+     *        The total number of values must be less than, or equal to five.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

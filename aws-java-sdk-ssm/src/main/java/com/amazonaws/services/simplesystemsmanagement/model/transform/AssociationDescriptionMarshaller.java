@@ -79,6 +79,8 @@ public class AssociationDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetLocations").build();
     private static final MarshallingInfo<Integer> SCHEDULEOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScheduleOffset").build();
+    private static final MarshallingInfo<Integer> DURATION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Duration").build();
     private static final MarshallingInfo<List> TARGETMAPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("TargetMaps").build();
     private static final MarshallingInfo<StructuredPojo> ALARMCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -127,6 +129,7 @@ public class AssociationDescriptionMarshaller {
             protocolMarshaller.marshall(associationDescription.getCalendarNames(), CALENDARNAMES_BINDING);
             protocolMarshaller.marshall(associationDescription.getTargetLocations(), TARGETLOCATIONS_BINDING);
             protocolMarshaller.marshall(associationDescription.getScheduleOffset(), SCHEDULEOFFSET_BINDING);
+            protocolMarshaller.marshall(associationDescription.getDuration(), DURATION_BINDING);
             protocolMarshaller.marshall(associationDescription.getTargetMaps(), TARGETMAPS_BINDING);
             protocolMarshaller.marshall(associationDescription.getAlarmConfiguration(), ALARMCONFIGURATION_BINDING);
             protocolMarshaller.marshall(associationDescription.getTriggeredAlarms(), TRIGGEREDALARMS_BINDING);

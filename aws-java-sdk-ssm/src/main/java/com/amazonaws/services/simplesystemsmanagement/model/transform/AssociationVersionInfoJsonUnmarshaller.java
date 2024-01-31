@@ -130,6 +130,10 @@ public class AssociationVersionInfoJsonUnmarshaller implements Unmarshaller<Asso
                     context.nextToken();
                     associationVersionInfo.setScheduleOffset(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("Duration", targetDepth)) {
+                    context.nextToken();
+                    associationVersionInfo.setDuration(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("TargetMaps", targetDepth)) {
                     context.nextToken();
                     associationVersionInfo.setTargetMaps(new ListUnmarshaller<java.util.Map<String, java.util.List<String>>>(

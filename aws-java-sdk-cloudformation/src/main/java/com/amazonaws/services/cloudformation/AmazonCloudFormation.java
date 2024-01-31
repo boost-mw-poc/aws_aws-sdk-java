@@ -277,6 +277,32 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
+     * Creates a template from existing resources that are not already managed with CloudFormation. You can check the
+     * status of the template generation using the <code>DescribeGeneratedTemplate</code> API action.
+     * </p>
+     * 
+     * @param createGeneratedTemplateRequest
+     * @return Result of the CreateGeneratedTemplate operation returned by the service.
+     * @throws AlreadyExistsException
+     *         The resource with the name requested already exists.
+     * @throws LimitExceededException
+     *         The quota for the resource has already been reached.</p>
+     *         <p>
+     *         For information about resource and stack limitations, see <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
+     *         >CloudFormation quotas</a> in the <i>CloudFormation User Guide</i>.
+     * @throws ConcurrentResourcesLimitExceededException
+     *         No more than 5 generated templates can be in an <code>InProgress</code> or <code>Pending</code> status at
+     *         one time. This error is also returned if a generated template that is in an <code>InProgress</code> or
+     *         <code>Pending</code> status is attempted to be updated or deleted.
+     * @sample AmazonCloudFormation.CreateGeneratedTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateGeneratedTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateGeneratedTemplateResult createGeneratedTemplate(CreateGeneratedTemplateRequest createGeneratedTemplateRequest);
+
+    /**
+     * <p>
      * Creates a stack as specified in the template. After the call completes successfully, the stack creation starts.
      * You can check the status of the stack through the <a>DescribeStacks</a> operation.
      * </p>
@@ -422,6 +448,25 @@ public interface AmazonCloudFormation {
      *      API Documentation</a>
      */
     DeleteChangeSetResult deleteChangeSet(DeleteChangeSetRequest deleteChangeSetRequest);
+
+    /**
+     * <p>
+     * Deleted a generated template.
+     * </p>
+     * 
+     * @param deleteGeneratedTemplateRequest
+     * @return Result of the DeleteGeneratedTemplate operation returned by the service.
+     * @throws GeneratedTemplateNotFoundException
+     *         The generated template was not found.
+     * @throws ConcurrentResourcesLimitExceededException
+     *         No more than 5 generated templates can be in an <code>InProgress</code> or <code>Pending</code> status at
+     *         one time. This error is also returned if a generated template that is in an <code>InProgress</code> or
+     *         <code>Pending</code> status is attempted to be updated or deleted.
+     * @sample AmazonCloudFormation.DeleteGeneratedTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DeleteGeneratedTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteGeneratedTemplateResult deleteGeneratedTemplate(DeleteGeneratedTemplateRequest deleteGeneratedTemplateRequest);
 
     /**
      * <p>
@@ -572,6 +617,23 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
+     * Describes a generated template. The output includes details about the progress of the creation of a generated
+     * template started by a <code>CreateGeneratedTemplate</code> API action or the update of a generated template
+     * started with an <code>UpdateGeneratedTemplate</code> API action.
+     * </p>
+     * 
+     * @param describeGeneratedTemplateRequest
+     * @return Result of the DescribeGeneratedTemplate operation returned by the service.
+     * @throws GeneratedTemplateNotFoundException
+     *         The generated template was not found.
+     * @sample AmazonCloudFormation.DescribeGeneratedTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeGeneratedTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeGeneratedTemplateResult describeGeneratedTemplate(DescribeGeneratedTemplateRequest describeGeneratedTemplateRequest);
+
+    /**
+     * <p>
      * Retrieves information about the account's <code>OrganizationAccess</code> status. This API can be called either
      * by the management account or the delegated administrator by using the <code>CallAs</code> parameter. This API can
      * also be called without the <code>CallAs</code> parameter by the management account.
@@ -624,6 +686,21 @@ public interface AmazonCloudFormation {
      *      target="_top">AWS API Documentation</a>
      */
     DescribePublisherResult describePublisher(DescribePublisherRequest describePublisherRequest);
+
+    /**
+     * <p>
+     * Describes details of a resource scan.
+     * </p>
+     * 
+     * @param describeResourceScanRequest
+     * @return Result of the DescribeResourceScan operation returned by the service.
+     * @throws ResourceScanNotFoundException
+     *         The resource scan was not found.
+     * @sample AmazonCloudFormation.DescribeResourceScan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeResourceScan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeResourceScanResult describeResourceScan(DescribeResourceScanRequest describeResourceScanRequest);
 
     /**
      * <p>
@@ -1074,6 +1151,23 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
+     * Retrieves a generated template. If the template is in an <code>InProgress</code> or <code>Pending</code> status
+     * then the template returned will be the template when the template was last in a <code>Complete</code> status. If
+     * the template has not yet been in a <code>Complete</code> status then an empty template will be returned.
+     * </p>
+     * 
+     * @param getGeneratedTemplateRequest
+     * @return Result of the GetGeneratedTemplate operation returned by the service.
+     * @throws GeneratedTemplateNotFoundException
+     *         The generated template was not found.
+     * @sample AmazonCloudFormation.GetGeneratedTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/GetGeneratedTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetGeneratedTemplateResult getGeneratedTemplate(GetGeneratedTemplateRequest getGeneratedTemplateRequest);
+
+    /**
+     * <p>
      * Returns the stack policy for a specified stack. If a stack doesn't have a policy, a null value is returned.
      * </p>
      * 
@@ -1217,6 +1311,19 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
+     * Lists your generated templates in this Region.
+     * </p>
+     * 
+     * @param listGeneratedTemplatesRequest
+     * @return Result of the ListGeneratedTemplates operation returned by the service.
+     * @sample AmazonCloudFormation.ListGeneratedTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListGeneratedTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListGeneratedTemplatesResult listGeneratedTemplates(ListGeneratedTemplatesRequest listGeneratedTemplatesRequest);
+
+    /**
+     * <p>
      * Lists all stacks that are importing an exported output value. To modify or remove an exported output value, first
      * use this action to see which stacks are using it. To see the exported output values in your account, see
      * <a>ListExports</a>.
@@ -1234,6 +1341,56 @@ public interface AmazonCloudFormation {
      *      Documentation</a>
      */
     ListImportsResult listImports(ListImportsRequest listImportsRequest);
+
+    /**
+     * <p>
+     * Lists the related resources for a list of resources from a resource scan. The response indicates whether each
+     * returned resource is already managed by CloudFormation.
+     * </p>
+     * 
+     * @param listResourceScanRelatedResourcesRequest
+     * @return Result of the ListResourceScanRelatedResources operation returned by the service.
+     * @throws ResourceScanNotFoundException
+     *         The resource scan was not found.
+     * @throws ResourceScanInProgressException
+     *         A resource scan is currently in progress. Only one can be run at a time for an account in a Region.
+     * @sample AmazonCloudFormation.ListResourceScanRelatedResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListResourceScanRelatedResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListResourceScanRelatedResourcesResult listResourceScanRelatedResources(ListResourceScanRelatedResourcesRequest listResourceScanRelatedResourcesRequest);
+
+    /**
+     * <p>
+     * Lists the resources from a resource scan. The results can be filtered by resource identifier, resource type
+     * prefix, tag key, and tag value. Only resources that match all specified filters are returned. The response
+     * indicates whether each returned resource is already managed by CloudFormation.
+     * </p>
+     * 
+     * @param listResourceScanResourcesRequest
+     * @return Result of the ListResourceScanResources operation returned by the service.
+     * @throws ResourceScanNotFoundException
+     *         The resource scan was not found.
+     * @throws ResourceScanInProgressException
+     *         A resource scan is currently in progress. Only one can be run at a time for an account in a Region.
+     * @sample AmazonCloudFormation.ListResourceScanResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListResourceScanResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListResourceScanResourcesResult listResourceScanResources(ListResourceScanResourcesRequest listResourceScanResourcesRequest);
+
+    /**
+     * <p>
+     * List the resource scans from newest to oldest. By default it will return up to 10 resource scans.
+     * </p>
+     * 
+     * @param listResourceScansRequest
+     * @return Result of the ListResourceScans operation returned by the service.
+     * @sample AmazonCloudFormation.ListResourceScans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ListResourceScans"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListResourceScansResult listResourceScans(ListResourceScansRequest listResourceScansRequest);
 
     /**
      * <p>
@@ -1698,6 +1855,41 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
+     * Starts a scan of the resources in this account in this Region. You can the status of a scan using the
+     * <code>ListResourceScans</code> API action.
+     * </p>
+     * 
+     * @param startResourceScanRequest
+     * @return Result of the StartResourceScan operation returned by the service.
+     * @throws ResourceScanInProgressException
+     *         A resource scan is currently in progress. Only one can be run at a time for an account in a Region.
+     * @throws ResourceScanLimitExceededException
+     *         The limit on resource scans has been exceeded. Reasons include:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Exceeded the daily quota for resource scans.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         A resource scan recently failed. You must wait 10 minutes before starting a new resource scan.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The last resource scan failed after exceeding 100,000 resources. When this happens, you must wait 24
+     *         hours before starting a new resource scan.
+     *         </p>
+     *         </li>
+     * @sample AmazonCloudFormation.StartResourceScan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/StartResourceScan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartResourceScanResult startResourceScan(StartResourceScanRequest startResourceScanRequest);
+
+    /**
+     * <p>
      * Stops an in-progress operation on a stack set and its associated stack instances. StackSets will cancel all the
      * unstarted stack instance deployments and wait for those are in-progress to complete.
      * </p>
@@ -1770,6 +1962,31 @@ public interface AmazonCloudFormation {
      *      Documentation</a>
      */
     TestTypeResult testType(TestTypeRequest testTypeRequest);
+
+    /**
+     * <p>
+     * Updates a generated template. This can be used to change the name, add and remove resources, refresh resources,
+     * and change the <code>DeletionPolicy</code> and <code>UpdateReplacePolicy</code> settings. You can check the
+     * status of the update to the generated template using the <code>DescribeGeneratedTemplate</code> API action.
+     * </p>
+     * 
+     * @param updateGeneratedTemplateRequest
+     * @return Result of the UpdateGeneratedTemplate operation returned by the service.
+     * @throws AlreadyExistsException
+     *         The resource with the name requested already exists.
+     * @throws GeneratedTemplateNotFoundException
+     *         The generated template was not found.
+     * @throws LimitExceededException
+     *         The quota for the resource has already been reached.</p>
+     *         <p>
+     *         For information about resource and stack limitations, see <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
+     *         >CloudFormation quotas</a> in the <i>CloudFormation User Guide</i>.
+     * @sample AmazonCloudFormation.UpdateGeneratedTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/UpdateGeneratedTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateGeneratedTemplateResult updateGeneratedTemplate(UpdateGeneratedTemplateRequest updateGeneratedTemplateRequest);
 
     /**
      * <p>

@@ -52,8 +52,8 @@ public class JobCommand implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * In Ray jobs, Runtime is used to specify the versions of Ray, Python and additional libraries available in your
      * environment. This field is not used in other job types. For supported runtime environment values, see <a
-     * href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-runtimes.html">Working with Ray jobs</a> in the
-     * Glue Developer Guide.
+     * href="https://docs.aws.amazon.com/glue/latest/dg/ray-jobs-section.html">Supported Ray runtime environments</a> in
+     * the Glue Developer Guide.
      * </p>
      */
     private String runtime;
@@ -194,15 +194,15 @@ public class JobCommand implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * In Ray jobs, Runtime is used to specify the versions of Ray, Python and additional libraries available in your
      * environment. This field is not used in other job types. For supported runtime environment values, see <a
-     * href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-runtimes.html">Working with Ray jobs</a> in the
-     * Glue Developer Guide.
+     * href="https://docs.aws.amazon.com/glue/latest/dg/ray-jobs-section.html">Supported Ray runtime environments</a> in
+     * the Glue Developer Guide.
      * </p>
      * 
      * @param runtime
      *        In Ray jobs, Runtime is used to specify the versions of Ray, Python and additional libraries available in
      *        your environment. This field is not used in other job types. For supported runtime environment values, see
-     *        <a href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-runtimes.html">Working with Ray
-     *        jobs</a> in the Glue Developer Guide.
+     *        <a href="https://docs.aws.amazon.com/glue/latest/dg/ray-jobs-section.html">Supported Ray runtime
+     *        environments</a> in the Glue Developer Guide.
      */
 
     public void setRuntime(String runtime) {
@@ -213,14 +213,14 @@ public class JobCommand implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * In Ray jobs, Runtime is used to specify the versions of Ray, Python and additional libraries available in your
      * environment. This field is not used in other job types. For supported runtime environment values, see <a
-     * href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-runtimes.html">Working with Ray jobs</a> in the
-     * Glue Developer Guide.
+     * href="https://docs.aws.amazon.com/glue/latest/dg/ray-jobs-section.html">Supported Ray runtime environments</a> in
+     * the Glue Developer Guide.
      * </p>
      * 
      * @return In Ray jobs, Runtime is used to specify the versions of Ray, Python and additional libraries available in
      *         your environment. This field is not used in other job types. For supported runtime environment values,
-     *         see <a href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-runtimes.html">Working with Ray
-     *         jobs</a> in the Glue Developer Guide.
+     *         see <a href="https://docs.aws.amazon.com/glue/latest/dg/ray-jobs-section.html">Supported Ray runtime
+     *         environments</a> in the Glue Developer Guide.
      */
 
     public String getRuntime() {
@@ -231,15 +231,15 @@ public class JobCommand implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * In Ray jobs, Runtime is used to specify the versions of Ray, Python and additional libraries available in your
      * environment. This field is not used in other job types. For supported runtime environment values, see <a
-     * href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-runtimes.html">Working with Ray jobs</a> in the
-     * Glue Developer Guide.
+     * href="https://docs.aws.amazon.com/glue/latest/dg/ray-jobs-section.html">Supported Ray runtime environments</a> in
+     * the Glue Developer Guide.
      * </p>
      * 
      * @param runtime
      *        In Ray jobs, Runtime is used to specify the versions of Ray, Python and additional libraries available in
      *        your environment. This field is not used in other job types. For supported runtime environment values, see
-     *        <a href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-runtimes.html">Working with Ray
-     *        jobs</a> in the Glue Developer Guide.
+     *        <a href="https://docs.aws.amazon.com/glue/latest/dg/ray-jobs-section.html">Supported Ray runtime
+     *        environments</a> in the Glue Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

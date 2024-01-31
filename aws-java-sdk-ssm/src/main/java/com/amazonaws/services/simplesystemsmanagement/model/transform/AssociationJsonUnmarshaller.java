@@ -95,6 +95,10 @@ public class AssociationJsonUnmarshaller implements Unmarshaller<Association, Js
                     context.nextToken();
                     association.setScheduleOffset(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("Duration", targetDepth)) {
+                    context.nextToken();
+                    association.setDuration(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("TargetMaps", targetDepth)) {
                     context.nextToken();
                     association.setTargetMaps(new ListUnmarshaller<java.util.Map<String, java.util.List<String>>>(

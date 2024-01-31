@@ -210,6 +210,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * <code>true</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>target_health_state.unhealthy.draining_interval_seconds</code> - The amount of time for Elastic Load
+     * Balancing to wait before changing the state of an unhealthy target from <code>unhealthy.draining</code> to
+     * <code>unhealthy</code>. The range is 0-360000 seconds. The default value is 0 seconds.
+     * </p>
+     * <p>
+     * Note: This attribute can only be configured when
+     * <code>target_health_state.unhealthy.connection_termination.enabled</code> is <code>false</code>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * The following attributes are supported only by Gateway Load Balancers:
@@ -427,6 +438,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * <code>true</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>target_health_state.unhealthy.draining_interval_seconds</code> - The amount of time for Elastic Load
+     * Balancing to wait before changing the state of an unhealthy target from <code>unhealthy.draining</code> to
+     * <code>unhealthy</code>. The range is 0-360000 seconds. The default value is 0 seconds.
+     * </p>
+     * <p>
+     * Note: This attribute can only be configured when
+     * <code>target_health_state.unhealthy.connection_termination.enabled</code> is <code>false</code>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * The following attributes are supported only by Gateway Load Balancers:
@@ -637,6 +659,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      *        <code>target_health_state.unhealthy.connection_termination.enabled</code> - Indicates whether the load
      *        balancer terminates connections to unhealthy targets. The value is <code>true</code> or <code>false</code>
      *        . The default is <code>true</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>target_health_state.unhealthy.draining_interval_seconds</code> - The amount of time for Elastic Load
+     *        Balancing to wait before changing the state of an unhealthy target from <code>unhealthy.draining</code> to
+     *        <code>unhealthy</code>. The range is 0-360000 seconds. The default value is 0 seconds.
+     *        </p>
+     *        <p>
+     *        Note: This attribute can only be configured when
+     *        <code>target_health_state.unhealthy.connection_termination.enabled</code> is <code>false</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -852,6 +885,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * <code>true</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>target_health_state.unhealthy.draining_interval_seconds</code> - The amount of time for Elastic Load
+     * Balancing to wait before changing the state of an unhealthy target from <code>unhealthy.draining</code> to
+     * <code>unhealthy</code>. The range is 0-360000 seconds. The default value is 0 seconds.
+     * </p>
+     * <p>
+     * Note: This attribute can only be configured when
+     * <code>target_health_state.unhealthy.connection_termination.enabled</code> is <code>false</code>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * The following attributes are supported only by Gateway Load Balancers:
@@ -1061,6 +1105,18 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      *         <code>target_health_state.unhealthy.connection_termination.enabled</code> - Indicates whether the load
      *         balancer terminates connections to unhealthy targets. The value is <code>true</code> or
      *         <code>false</code>. The default is <code>true</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>target_health_state.unhealthy.draining_interval_seconds</code> - The amount of time for Elastic
+     *         Load Balancing to wait before changing the state of an unhealthy target from
+     *         <code>unhealthy.draining</code> to <code>unhealthy</code>. The range is 0-360000 seconds. The default
+     *         value is 0 seconds.
+     *         </p>
+     *         <p>
+     *         Note: This attribute can only be configured when
+     *         <code>target_health_state.unhealthy.connection_termination.enabled</code> is <code>false</code>.
      *         </p>
      *         </li>
      *         </ul>
@@ -1276,6 +1332,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      * <code>true</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>target_health_state.unhealthy.draining_interval_seconds</code> - The amount of time for Elastic Load
+     * Balancing to wait before changing the state of an unhealthy target from <code>unhealthy.draining</code> to
+     * <code>unhealthy</code>. The range is 0-360000 seconds. The default value is 0 seconds.
+     * </p>
+     * <p>
+     * Note: This attribute can only be configured when
+     * <code>target_health_state.unhealthy.connection_termination.enabled</code> is <code>false</code>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * The following attributes are supported only by Gateway Load Balancers:
@@ -1486,6 +1553,17 @@ public class TargetGroupAttribute implements Serializable, Cloneable {
      *        <code>target_health_state.unhealthy.connection_termination.enabled</code> - Indicates whether the load
      *        balancer terminates connections to unhealthy targets. The value is <code>true</code> or <code>false</code>
      *        . The default is <code>true</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>target_health_state.unhealthy.draining_interval_seconds</code> - The amount of time for Elastic Load
+     *        Balancing to wait before changing the state of an unhealthy target from <code>unhealthy.draining</code> to
+     *        <code>unhealthy</code>. The range is 0-360000 seconds. The default value is 0 seconds.
+     *        </p>
+     *        <p>
+     *        Note: This attribute can only be configured when
+     *        <code>target_health_state.unhealthy.connection_termination.enabled</code> is <code>false</code>.
      *        </p>
      *        </li>
      *        </ul>

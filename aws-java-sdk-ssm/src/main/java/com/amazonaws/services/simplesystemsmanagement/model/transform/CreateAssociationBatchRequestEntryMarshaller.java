@@ -63,6 +63,8 @@ public class CreateAssociationBatchRequestEntryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetLocations").build();
     private static final MarshallingInfo<Integer> SCHEDULEOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScheduleOffset").build();
+    private static final MarshallingInfo<Integer> DURATION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Duration").build();
     private static final MarshallingInfo<List> TARGETMAPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("TargetMaps").build();
     private static final MarshallingInfo<StructuredPojo> ALARMCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -101,6 +103,7 @@ public class CreateAssociationBatchRequestEntryMarshaller {
             protocolMarshaller.marshall(createAssociationBatchRequestEntry.getCalendarNames(), CALENDARNAMES_BINDING);
             protocolMarshaller.marshall(createAssociationBatchRequestEntry.getTargetLocations(), TARGETLOCATIONS_BINDING);
             protocolMarshaller.marshall(createAssociationBatchRequestEntry.getScheduleOffset(), SCHEDULEOFFSET_BINDING);
+            protocolMarshaller.marshall(createAssociationBatchRequestEntry.getDuration(), DURATION_BINDING);
             protocolMarshaller.marshall(createAssociationBatchRequestEntry.getTargetMaps(), TARGETMAPS_BINDING);
             protocolMarshaller.marshall(createAssociationBatchRequestEntry.getAlarmConfiguration(), ALARMCONFIGURATION_BINDING);
         } catch (Exception e) {

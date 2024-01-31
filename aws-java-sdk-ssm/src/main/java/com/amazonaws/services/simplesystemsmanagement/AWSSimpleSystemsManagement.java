@@ -1268,6 +1268,12 @@ public interface AWSSimpleSystemsManagement {
      * <p>
      * Lists all patches eligible to be included in a patch baseline.
      * </p>
+     * <note>
+     * <p>
+     * Currently, <code>DescribeAvailablePatches</code> supports only the Amazon Linux 1, Amazon Linux 2, and Windows
+     * Server operating systems.
+     * </p>
+     * </note>
      * 
      * @param describeAvailablePatchesRequest
      * @return Result of the DescribeAvailablePatches operation returned by the service.

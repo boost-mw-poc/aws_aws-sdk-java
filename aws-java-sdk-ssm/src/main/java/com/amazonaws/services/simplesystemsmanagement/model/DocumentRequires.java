@@ -48,8 +48,8 @@ public class DocumentRequires implements Serializable, Cloneable, StructuredPojo
     private String requireType;
     /**
      * <p>
-     * An optional field specifying the version of the artifact associated with the document. For example,
-     * "Release 12, Update 6". This value is unique across all versions of a document, and can't be changed.
+     * An optional field specifying the version of the artifact associated with the document. For example, 12.6. This
+     * value is unique across all versions of a document, and can't be changed.
      * </p>
      */
     private String versionName;
@@ -176,13 +176,13 @@ public class DocumentRequires implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An optional field specifying the version of the artifact associated with the document. For example,
-     * "Release 12, Update 6". This value is unique across all versions of a document, and can't be changed.
+     * An optional field specifying the version of the artifact associated with the document. For example, 12.6. This
+     * value is unique across all versions of a document, and can't be changed.
      * </p>
      * 
      * @param versionName
-     *        An optional field specifying the version of the artifact associated with the document. For example,
-     *        "Release 12, Update 6". This value is unique across all versions of a document, and can't be changed.
+     *        An optional field specifying the version of the artifact associated with the document. For example, 12.6.
+     *        This value is unique across all versions of a document, and can't be changed.
      */
 
     public void setVersionName(String versionName) {
@@ -191,12 +191,12 @@ public class DocumentRequires implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An optional field specifying the version of the artifact associated with the document. For example,
-     * "Release 12, Update 6". This value is unique across all versions of a document, and can't be changed.
+     * An optional field specifying the version of the artifact associated with the document. For example, 12.6. This
+     * value is unique across all versions of a document, and can't be changed.
      * </p>
      * 
-     * @return An optional field specifying the version of the artifact associated with the document. For example,
-     *         "Release 12, Update 6". This value is unique across all versions of a document, and can't be changed.
+     * @return An optional field specifying the version of the artifact associated with the document. For example, 12.6.
+     *         This value is unique across all versions of a document, and can't be changed.
      */
 
     public String getVersionName() {
@@ -205,13 +205,13 @@ public class DocumentRequires implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An optional field specifying the version of the artifact associated with the document. For example,
-     * "Release 12, Update 6". This value is unique across all versions of a document, and can't be changed.
+     * An optional field specifying the version of the artifact associated with the document. For example, 12.6. This
+     * value is unique across all versions of a document, and can't be changed.
      * </p>
      * 
      * @param versionName
-     *        An optional field specifying the version of the artifact associated with the document. For example,
-     *        "Release 12, Update 6". This value is unique across all versions of a document, and can't be changed.
+     *        An optional field specifying the version of the artifact associated with the document. For example, 12.6.
+     *        This value is unique across all versions of a document, and can't be changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

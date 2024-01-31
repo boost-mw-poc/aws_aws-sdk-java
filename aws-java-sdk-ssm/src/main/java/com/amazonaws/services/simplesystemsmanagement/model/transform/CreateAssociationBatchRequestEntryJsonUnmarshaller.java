@@ -126,6 +126,10 @@ public class CreateAssociationBatchRequestEntryJsonUnmarshaller implements Unmar
                     context.nextToken();
                     createAssociationBatchRequestEntry.setScheduleOffset(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("Duration", targetDepth)) {
+                    context.nextToken();
+                    createAssociationBatchRequestEntry.setDuration(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("TargetMaps", targetDepth)) {
                     context.nextToken();
                     createAssociationBatchRequestEntry.setTargetMaps(new ListUnmarshaller<java.util.Map<String, java.util.List<String>>>(

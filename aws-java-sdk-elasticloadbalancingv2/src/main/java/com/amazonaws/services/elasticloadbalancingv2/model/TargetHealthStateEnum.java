@@ -23,6 +23,7 @@ public enum TargetHealthStateEnum {
     Initial("initial"),
     Healthy("healthy"),
     Unhealthy("unhealthy"),
+    UnhealthyDraining("unhealthy.draining"),
     Unused("unused"),
     Draining("draining"),
     Unavailable("unavailable");

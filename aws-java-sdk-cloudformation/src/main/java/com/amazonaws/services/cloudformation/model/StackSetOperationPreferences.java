@@ -41,6 +41,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <p>
      * The order of the Regions where you want to perform the stack operation.
      * </p>
+     * <note>
+     * <p>
+     * <code>RegionOrder</code> isn't followed if <code>AutoDeployment</code> is enabled.
+     * </p>
+     * </note>
      */
     private com.amazonaws.internal.SdkInternalList<String> regionOrder;
     /**
@@ -215,8 +220,16 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <p>
      * The order of the Regions where you want to perform the stack operation.
      * </p>
+     * <note>
+     * <p>
+     * <code>RegionOrder</code> isn't followed if <code>AutoDeployment</code> is enabled.
+     * </p>
+     * </note>
      * 
-     * @return The order of the Regions where you want to perform the stack operation.
+     * @return The order of the Regions where you want to perform the stack operation.</p> <note>
+     *         <p>
+     *         <code>RegionOrder</code> isn't followed if <code>AutoDeployment</code> is enabled.
+     *         </p>
      */
 
     public java.util.List<String> getRegionOrder() {
@@ -230,9 +243,17 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <p>
      * The order of the Regions where you want to perform the stack operation.
      * </p>
+     * <note>
+     * <p>
+     * <code>RegionOrder</code> isn't followed if <code>AutoDeployment</code> is enabled.
+     * </p>
+     * </note>
      * 
      * @param regionOrder
-     *        The order of the Regions where you want to perform the stack operation.
+     *        The order of the Regions where you want to perform the stack operation.</p> <note>
+     *        <p>
+     *        <code>RegionOrder</code> isn't followed if <code>AutoDeployment</code> is enabled.
+     *        </p>
      */
 
     public void setRegionOrder(java.util.Collection<String> regionOrder) {
@@ -248,6 +269,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <p>
      * The order of the Regions where you want to perform the stack operation.
      * </p>
+     * <note>
+     * <p>
+     * <code>RegionOrder</code> isn't followed if <code>AutoDeployment</code> is enabled.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRegionOrder(java.util.Collection)} or {@link #withRegionOrder(java.util.Collection)} if you want to
@@ -255,7 +281,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </p>
      * 
      * @param regionOrder
-     *        The order of the Regions where you want to perform the stack operation.
+     *        The order of the Regions where you want to perform the stack operation.</p> <note>
+     *        <p>
+     *        <code>RegionOrder</code> isn't followed if <code>AutoDeployment</code> is enabled.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,9 +302,17 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * <p>
      * The order of the Regions where you want to perform the stack operation.
      * </p>
+     * <note>
+     * <p>
+     * <code>RegionOrder</code> isn't followed if <code>AutoDeployment</code> is enabled.
+     * </p>
+     * </note>
      * 
      * @param regionOrder
-     *        The order of the Regions where you want to perform the stack operation.
+     *        The order of the Regions where you want to perform the stack operation.</p> <note>
+     *        <p>
+     *        <code>RegionOrder</code> isn't followed if <code>AutoDeployment</code> is enabled.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

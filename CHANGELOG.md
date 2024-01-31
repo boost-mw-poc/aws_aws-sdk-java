@@ -1,3 +1,20 @@
+# __1.12.649__ __2024-01-31__
+## __AWS CloudFormation__
+  - ### Features
+    - CloudFormation IaC generator allows you to scan existing resources in your account and select resources to generate a template for a new or existing CloudFormation stack.
+
+## __AWS Glue__
+  - ### Features
+    - Update page size limits for GetJobRuns and GetTriggers APIs.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - This release adds an optional Duration parameter to StateManager Associations. This allows customers to specify how long an apply-only-on-cron association execution should run. Once the specified Duration is out all the ongoing cancellable commands or automations are cancelled.
+
+## __Elastic Load Balancing__
+  - ### Features
+    - This release enables unhealthy target draining intervals for Network Load Balancers.
+
 # __1.12.648__ __2024-01-30__
 ## __Amazon DataZone__
   - ### Features

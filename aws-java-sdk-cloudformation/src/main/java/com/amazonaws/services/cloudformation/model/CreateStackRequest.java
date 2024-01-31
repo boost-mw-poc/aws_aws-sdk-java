@@ -95,8 +95,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     private RollbackConfiguration rollbackConfiguration;
     /**
      * <p>
-     * The amount of time that can pass before the stack status becomes CREATE_FAILED; if <code>DisableRollback</code>
-     * is not set or is set to <code>false</code>, the stack will be rolled back.
+     * The amount of time that can pass before the stack status becomes <code>CREATE_FAILED</code>; if
+     * <code>DisableRollback</code> is not set or is set to <code>false</code>, the stack will be rolled back.
      * </p>
      */
     private Integer timeoutInMinutes;
@@ -820,12 +820,12 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The amount of time that can pass before the stack status becomes CREATE_FAILED; if <code>DisableRollback</code>
-     * is not set or is set to <code>false</code>, the stack will be rolled back.
+     * The amount of time that can pass before the stack status becomes <code>CREATE_FAILED</code>; if
+     * <code>DisableRollback</code> is not set or is set to <code>false</code>, the stack will be rolled back.
      * </p>
      * 
      * @param timeoutInMinutes
-     *        The amount of time that can pass before the stack status becomes CREATE_FAILED; if
+     *        The amount of time that can pass before the stack status becomes <code>CREATE_FAILED</code>; if
      *        <code>DisableRollback</code> is not set or is set to <code>false</code>, the stack will be rolled back.
      */
 
@@ -835,11 +835,11 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The amount of time that can pass before the stack status becomes CREATE_FAILED; if <code>DisableRollback</code>
-     * is not set or is set to <code>false</code>, the stack will be rolled back.
+     * The amount of time that can pass before the stack status becomes <code>CREATE_FAILED</code>; if
+     * <code>DisableRollback</code> is not set or is set to <code>false</code>, the stack will be rolled back.
      * </p>
      * 
-     * @return The amount of time that can pass before the stack status becomes CREATE_FAILED; if
+     * @return The amount of time that can pass before the stack status becomes <code>CREATE_FAILED</code>; if
      *         <code>DisableRollback</code> is not set or is set to <code>false</code>, the stack will be rolled back.
      */
 
@@ -849,12 +849,12 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The amount of time that can pass before the stack status becomes CREATE_FAILED; if <code>DisableRollback</code>
-     * is not set or is set to <code>false</code>, the stack will be rolled back.
+     * The amount of time that can pass before the stack status becomes <code>CREATE_FAILED</code>; if
+     * <code>DisableRollback</code> is not set or is set to <code>false</code>, the stack will be rolled back.
      * </p>
      * 
      * @param timeoutInMinutes
-     *        The amount of time that can pass before the stack status becomes CREATE_FAILED; if
+     *        The amount of time that can pass before the stack status becomes <code>CREATE_FAILED</code>; if
      *        <code>DisableRollback</code> is not set or is set to <code>false</code>, the stack will be rolled back.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
