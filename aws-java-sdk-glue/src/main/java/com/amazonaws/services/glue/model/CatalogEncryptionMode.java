@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum CatalogEncryptionMode {
 
     DISABLED("DISABLED"),
-    SSEKMS("SSE-KMS");
+    SSEKMS("SSE-KMS"),
+    SSEKMSWITHSERVICEROLE("SSE-KMS-WITH-SERVICE-ROLE");
 
     private String value;
 

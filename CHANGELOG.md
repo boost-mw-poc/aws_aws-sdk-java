@@ -1,3 +1,12 @@
+# __1.12.652__ __2024-02-05__
+## __AWS Glue__
+  - ### Features
+    - Introduce Catalog Encryption Role within Glue Data Catalog Settings. Introduce SASL/PLAIN as an authentication method for Glue Kafka connections
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - Added definitions of various WorkSpace states
+
 # __1.12.651__ __2024-02-02__
 ## __Amazon DynamoDB__
   - ### Features

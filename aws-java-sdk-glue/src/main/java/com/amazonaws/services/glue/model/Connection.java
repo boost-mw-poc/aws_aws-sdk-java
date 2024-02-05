@@ -233,9 +233,25 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>, or
-     * <code>"AWS_MSK_IAM"</code>. These are the supported <a
+     * <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>,
+     * <code>"AWS_MSK_IAM"</code>, or <code>"PLAIN"</code>. These are the supported <a
      * href="https://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml">SASL Mechanisms</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>KAFKA_SASL_PLAIN_USERNAME</code> - A plaintext username used to authenticate with the "PLAIN" mechanism.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>KAFKA_SASL_PLAIN_PASSWORD</code> - A plaintext password used to authenticate with the "PLAIN" mechanism.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENCRYPTED_KAFKA_SASL_PLAIN_PASSWORD</code> - The encrypted version of the Kafka SASL PLAIN password (if the
+     * user has the Glue encrypt passwords setting selected).
      * </p>
      * </li>
      * <li>
@@ -710,9 +726,25 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>, or
-     * <code>"AWS_MSK_IAM"</code>. These are the supported <a
+     * <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>,
+     * <code>"AWS_MSK_IAM"</code>, or <code>"PLAIN"</code>. These are the supported <a
      * href="https://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml">SASL Mechanisms</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>KAFKA_SASL_PLAIN_USERNAME</code> - A plaintext username used to authenticate with the "PLAIN" mechanism.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>KAFKA_SASL_PLAIN_PASSWORD</code> - A plaintext password used to authenticate with the "PLAIN" mechanism.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENCRYPTED_KAFKA_SASL_PLAIN_PASSWORD</code> - The encrypted version of the Kafka SASL PLAIN password (if the
+     * user has the Glue encrypt passwords setting selected).
      * </p>
      * </li>
      * <li>
@@ -951,9 +983,27 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>, or
-     *         <code>"AWS_MSK_IAM"</code>. These are the supported <a
+     *         <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>,
+     *         <code>"AWS_MSK_IAM"</code>, or <code>"PLAIN"</code>. These are the supported <a
      *         href="https://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml">SASL Mechanisms</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>KAFKA_SASL_PLAIN_USERNAME</code> - A plaintext username used to authenticate with the "PLAIN"
+     *         mechanism.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>KAFKA_SASL_PLAIN_PASSWORD</code> - A plaintext password used to authenticate with the "PLAIN"
+     *         mechanism.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ENCRYPTED_KAFKA_SASL_PLAIN_PASSWORD</code> - The encrypted version of the Kafka SASL PLAIN password
+     *         (if the user has the Glue encrypt passwords setting selected).
      *         </p>
      *         </li>
      *         <li>
@@ -1199,9 +1249,25 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>, or
-     * <code>"AWS_MSK_IAM"</code>. These are the supported <a
+     * <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>,
+     * <code>"AWS_MSK_IAM"</code>, or <code>"PLAIN"</code>. These are the supported <a
      * href="https://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml">SASL Mechanisms</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>KAFKA_SASL_PLAIN_USERNAME</code> - A plaintext username used to authenticate with the "PLAIN" mechanism.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>KAFKA_SASL_PLAIN_PASSWORD</code> - A plaintext password used to authenticate with the "PLAIN" mechanism.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENCRYPTED_KAFKA_SASL_PLAIN_PASSWORD</code> - The encrypted version of the Kafka SASL PLAIN password (if the
+     * user has the Glue encrypt passwords setting selected).
      * </p>
      * </li>
      * <li>
@@ -1441,9 +1507,27 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>, or
-     *        <code>"AWS_MSK_IAM"</code>. These are the supported <a
+     *        <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>,
+     *        <code>"AWS_MSK_IAM"</code>, or <code>"PLAIN"</code>. These are the supported <a
      *        href="https://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml">SASL Mechanisms</a>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>KAFKA_SASL_PLAIN_USERNAME</code> - A plaintext username used to authenticate with the "PLAIN"
+     *        mechanism.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>KAFKA_SASL_PLAIN_PASSWORD</code> - A plaintext password used to authenticate with the "PLAIN"
+     *        mechanism.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ENCRYPTED_KAFKA_SASL_PLAIN_PASSWORD</code> - The encrypted version of the Kafka SASL PLAIN password
+     *        (if the user has the Glue encrypt passwords setting selected).
      *        </p>
      *        </li>
      *        <li>
@@ -1689,9 +1773,25 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>, or
-     * <code>"AWS_MSK_IAM"</code>. These are the supported <a
+     * <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>,
+     * <code>"AWS_MSK_IAM"</code>, or <code>"PLAIN"</code>. These are the supported <a
      * href="https://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml">SASL Mechanisms</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>KAFKA_SASL_PLAIN_USERNAME</code> - A plaintext username used to authenticate with the "PLAIN" mechanism.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>KAFKA_SASL_PLAIN_PASSWORD</code> - A plaintext password used to authenticate with the "PLAIN" mechanism.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENCRYPTED_KAFKA_SASL_PLAIN_PASSWORD</code> - The encrypted version of the Kafka SASL PLAIN password (if the
+     * user has the Glue encrypt passwords setting selected).
      * </p>
      * </li>
      * <li>
@@ -1931,9 +2031,27 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>, or
-     *        <code>"AWS_MSK_IAM"</code>. These are the supported <a
+     *        <code>KAFKA_SASL_MECHANISM</code> - <code>"SCRAM-SHA-512"</code>, <code>"GSSAPI"</code>,
+     *        <code>"AWS_MSK_IAM"</code>, or <code>"PLAIN"</code>. These are the supported <a
      *        href="https://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml">SASL Mechanisms</a>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>KAFKA_SASL_PLAIN_USERNAME</code> - A plaintext username used to authenticate with the "PLAIN"
+     *        mechanism.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>KAFKA_SASL_PLAIN_PASSWORD</code> - A plaintext password used to authenticate with the "PLAIN"
+     *        mechanism.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ENCRYPTED_KAFKA_SASL_PLAIN_PASSWORD</code> - The encrypted version of the Kafka SASL PLAIN password
+     *        (if the user has the Glue encrypt passwords setting selected).
      *        </p>
      *        </li>
      *        <li>

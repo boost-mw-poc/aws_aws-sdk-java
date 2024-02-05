@@ -56,6 +56,10 @@ public class EncryptionAtRestJsonUnmarshaller implements Unmarshaller<Encryption
                     context.nextToken();
                     encryptionAtRest.setSseAwsKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CatalogEncryptionServiceRole", targetDepth)) {
+                    context.nextToken();
+                    encryptionAtRest.setCatalogEncryptionServiceRole(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
