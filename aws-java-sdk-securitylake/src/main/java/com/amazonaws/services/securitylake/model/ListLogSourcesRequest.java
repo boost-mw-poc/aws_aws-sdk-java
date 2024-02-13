@@ -46,7 +46,7 @@ public class ListLogSourcesRequest extends com.amazonaws.AmazonWebServiceRequest
     private String nextToken;
     /**
      * <p>
-     * The list of regions for which log sources are displayed.
+     * The list of Regions for which log sources are displayed.
      * </p>
      */
     private java.util.List<String> regions;
@@ -215,10 +215,10 @@ public class ListLogSourcesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The list of regions for which log sources are displayed.
+     * The list of Regions for which log sources are displayed.
      * </p>
      * 
-     * @return The list of regions for which log sources are displayed.
+     * @return The list of Regions for which log sources are displayed.
      */
 
     public java.util.List<String> getRegions() {
@@ -227,11 +227,11 @@ public class ListLogSourcesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The list of regions for which log sources are displayed.
+     * The list of Regions for which log sources are displayed.
      * </p>
      * 
      * @param regions
-     *        The list of regions for which log sources are displayed.
+     *        The list of Regions for which log sources are displayed.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -245,7 +245,7 @@ public class ListLogSourcesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The list of regions for which log sources are displayed.
+     * The list of Regions for which log sources are displayed.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -254,7 +254,7 @@ public class ListLogSourcesRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param regions
-     *        The list of regions for which log sources are displayed.
+     *        The list of Regions for which log sources are displayed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -270,11 +270,11 @@ public class ListLogSourcesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The list of regions for which log sources are displayed.
+     * The list of Regions for which log sources are displayed.
      * </p>
      * 
      * @param regions
-     *        The list of regions for which log sources are displayed.
+     *        The list of Regions for which log sources are displayed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

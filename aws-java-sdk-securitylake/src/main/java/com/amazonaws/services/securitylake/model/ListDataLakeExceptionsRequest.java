@@ -44,7 +44,7 @@ public class ListDataLakeExceptionsRequest extends com.amazonaws.AmazonWebServic
     private String nextToken;
     /**
      * <p>
-     * List the Amazon Web Services Regions from which exceptions are retrieved.
+     * The Amazon Web Services Regions from which exceptions are retrieved.
      * </p>
      */
     private java.util.List<String> regions;
@@ -161,10 +161,10 @@ public class ListDataLakeExceptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * List the Amazon Web Services Regions from which exceptions are retrieved.
+     * The Amazon Web Services Regions from which exceptions are retrieved.
      * </p>
      * 
-     * @return List the Amazon Web Services Regions from which exceptions are retrieved.
+     * @return The Amazon Web Services Regions from which exceptions are retrieved.
      */
 
     public java.util.List<String> getRegions() {
@@ -173,11 +173,11 @@ public class ListDataLakeExceptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * List the Amazon Web Services Regions from which exceptions are retrieved.
+     * The Amazon Web Services Regions from which exceptions are retrieved.
      * </p>
      * 
      * @param regions
-     *        List the Amazon Web Services Regions from which exceptions are retrieved.
+     *        The Amazon Web Services Regions from which exceptions are retrieved.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -191,7 +191,7 @@ public class ListDataLakeExceptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * List the Amazon Web Services Regions from which exceptions are retrieved.
+     * The Amazon Web Services Regions from which exceptions are retrieved.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -200,7 +200,7 @@ public class ListDataLakeExceptionsRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param regions
-     *        List the Amazon Web Services Regions from which exceptions are retrieved.
+     *        The Amazon Web Services Regions from which exceptions are retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -216,11 +216,11 @@ public class ListDataLakeExceptionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * List the Amazon Web Services Regions from which exceptions are retrieved.
+     * The Amazon Web Services Regions from which exceptions are retrieved.
      * </p>
      * 
      * @param regions
-     *        List the Amazon Web Services Regions from which exceptions are retrieved.
+     *        The Amazon Web Services Regions from which exceptions are retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

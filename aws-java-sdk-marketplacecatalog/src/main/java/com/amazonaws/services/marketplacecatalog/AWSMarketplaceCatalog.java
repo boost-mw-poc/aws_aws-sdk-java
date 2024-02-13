@@ -49,7 +49,8 @@ public interface AWSMarketplaceCatalog {
 
     /**
      * <p>
-     * Returns metadata and content for multiple entities.
+     * Returns metadata and content for multiple entities. This is the Batch version of the <code>DescribeEntity</code>
+     * API and uses the same IAM permission action as <code>DescribeEntity</code> API.
      * </p>
      * 
      * @param batchDescribeEntitiesRequest

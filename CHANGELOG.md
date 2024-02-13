@@ -1,3 +1,20 @@
+# __1.12.658__ __2024-02-13__
+## __AWS Marketplace Catalog Service__
+  - ### Features
+    - AWS Marketplace Catalog API now supports setting intent on requests
+
+## __AWS Resource Explorer__
+  - ### Features
+    - Resource Explorer now uses newly supported IPv4 'amazonaws.com' endpoints by default.
+
+## __Amazon Lightsail__
+  - ### Features
+    - This release adds support to upgrade the major version of a database.
+
+## __Amazon Security Lake__
+  - ### Features
+    - Documentation updates for Security Lake
+
 # __1.12.657__ __2024-02-12__
 ## __AWS AppSync__
   - ### Features

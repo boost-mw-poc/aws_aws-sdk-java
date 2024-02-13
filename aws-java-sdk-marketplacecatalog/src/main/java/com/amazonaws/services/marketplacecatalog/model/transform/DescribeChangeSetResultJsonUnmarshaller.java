@@ -60,6 +60,10 @@ public class DescribeChangeSetResultJsonUnmarshaller implements Unmarshaller<Des
                     context.nextToken();
                     describeChangeSetResult.setChangeSetName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Intent", targetDepth)) {
+                    context.nextToken();
+                    describeChangeSetResult.setIntent(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("StartTime", targetDepth)) {
                     context.nextToken();
                     describeChangeSetResult.setStartTime(context.getUnmarshaller(String.class).unmarshall(context));

@@ -27,17 +27,17 @@ public class ListDataLakesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of regions where Security Lake is enabled.
+     * The list of Regions where Security Lake is enabled.
      * </p>
      */
     private java.util.List<String> regions;
 
     /**
      * <p>
-     * The list of regions where Security Lake is enabled.
+     * The list of Regions where Security Lake is enabled.
      * </p>
      * 
-     * @return The list of regions where Security Lake is enabled.
+     * @return The list of Regions where Security Lake is enabled.
      */
 
     public java.util.List<String> getRegions() {
@@ -46,11 +46,11 @@ public class ListDataLakesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of regions where Security Lake is enabled.
+     * The list of Regions where Security Lake is enabled.
      * </p>
      * 
      * @param regions
-     *        The list of regions where Security Lake is enabled.
+     *        The list of Regions where Security Lake is enabled.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -64,7 +64,7 @@ public class ListDataLakesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of regions where Security Lake is enabled.
+     * The list of Regions where Security Lake is enabled.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -73,7 +73,7 @@ public class ListDataLakesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param regions
-     *        The list of regions where Security Lake is enabled.
+     *        The list of Regions where Security Lake is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class ListDataLakesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of regions where Security Lake is enabled.
+     * The list of Regions where Security Lake is enabled.
      * </p>
      * 
      * @param regions
-     *        The list of regions where Security Lake is enabled.
+     *        The list of Regions where Security Lake is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

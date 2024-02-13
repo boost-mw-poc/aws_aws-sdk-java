@@ -47,6 +47,8 @@ public class UpdateRelationalDatabaseRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("applyImmediately").build();
     private static final MarshallingInfo<String> CACERTIFICATEIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("caCertificateIdentifier").build();
+    private static final MarshallingInfo<String> RELATIONALDATABASEBLUEPRINTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("relationalDatabaseBlueprintId").build();
 
     private static final UpdateRelationalDatabaseRequestMarshaller instance = new UpdateRelationalDatabaseRequestMarshaller();
 
@@ -74,6 +76,7 @@ public class UpdateRelationalDatabaseRequestMarshaller {
             protocolMarshaller.marshall(updateRelationalDatabaseRequest.getPubliclyAccessible(), PUBLICLYACCESSIBLE_BINDING);
             protocolMarshaller.marshall(updateRelationalDatabaseRequest.getApplyImmediately(), APPLYIMMEDIATELY_BINDING);
             protocolMarshaller.marshall(updateRelationalDatabaseRequest.getCaCertificateIdentifier(), CACERTIFICATEIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(updateRelationalDatabaseRequest.getRelationalDatabaseBlueprintId(), RELATIONALDATABASEBLUEPRINTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

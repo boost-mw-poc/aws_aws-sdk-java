@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Object containing all the filter fields for SaaS products. Client can add a maximum of 8 filters in a single
- * <code>ListEntities</code> request.
+ * Object containing all the filter fields for SaaS products. Client can add only one wildcard filter and a maximum of 8
+ * filters in a single <code>ListEntities</code> request.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/marketplace-catalog-2018-09-17/SaaSProductFilters"

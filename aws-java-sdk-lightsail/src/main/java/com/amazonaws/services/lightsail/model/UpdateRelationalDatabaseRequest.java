@@ -179,6 +179,18 @@ public class UpdateRelationalDatabaseRequest extends com.amazonaws.AmazonWebServ
      * </p>
      */
     private String caCertificateIdentifier;
+    /**
+     * <p>
+     * This parameter is used to update the major version of the database. Enter the <code>blueprintId</code> for the
+     * major version that you want to update to.
+     * </p>
+     * <p>
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseBlueprints.html"
+     * >GetRelationalDatabaseBlueprints</a> action to get a list of available blueprint IDs.
+     * </p>
+     */
+    private String relationalDatabaseBlueprintId;
 
     /**
      * <p>
@@ -1225,6 +1237,79 @@ public class UpdateRelationalDatabaseRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * This parameter is used to update the major version of the database. Enter the <code>blueprintId</code> for the
+     * major version that you want to update to.
+     * </p>
+     * <p>
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseBlueprints.html"
+     * >GetRelationalDatabaseBlueprints</a> action to get a list of available blueprint IDs.
+     * </p>
+     * 
+     * @param relationalDatabaseBlueprintId
+     *        This parameter is used to update the major version of the database. Enter the <code>blueprintId</code> for
+     *        the major version that you want to update to.</p>
+     *        <p>
+     *        Use the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseBlueprints.html"
+     *        >GetRelationalDatabaseBlueprints</a> action to get a list of available blueprint IDs.
+     */
+
+    public void setRelationalDatabaseBlueprintId(String relationalDatabaseBlueprintId) {
+        this.relationalDatabaseBlueprintId = relationalDatabaseBlueprintId;
+    }
+
+    /**
+     * <p>
+     * This parameter is used to update the major version of the database. Enter the <code>blueprintId</code> for the
+     * major version that you want to update to.
+     * </p>
+     * <p>
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseBlueprints.html"
+     * >GetRelationalDatabaseBlueprints</a> action to get a list of available blueprint IDs.
+     * </p>
+     * 
+     * @return This parameter is used to update the major version of the database. Enter the <code>blueprintId</code>
+     *         for the major version that you want to update to.</p>
+     *         <p>
+     *         Use the <a href=
+     *         "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseBlueprints.html"
+     *         >GetRelationalDatabaseBlueprints</a> action to get a list of available blueprint IDs.
+     */
+
+    public String getRelationalDatabaseBlueprintId() {
+        return this.relationalDatabaseBlueprintId;
+    }
+
+    /**
+     * <p>
+     * This parameter is used to update the major version of the database. Enter the <code>blueprintId</code> for the
+     * major version that you want to update to.
+     * </p>
+     * <p>
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseBlueprints.html"
+     * >GetRelationalDatabaseBlueprints</a> action to get a list of available blueprint IDs.
+     * </p>
+     * 
+     * @param relationalDatabaseBlueprintId
+     *        This parameter is used to update the major version of the database. Enter the <code>blueprintId</code> for
+     *        the major version that you want to update to.</p>
+     *        <p>
+     *        Use the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseBlueprints.html"
+     *        >GetRelationalDatabaseBlueprints</a> action to get a list of available blueprint IDs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRelationalDatabaseRequest withRelationalDatabaseBlueprintId(String relationalDatabaseBlueprintId) {
+        setRelationalDatabaseBlueprintId(relationalDatabaseBlueprintId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1255,7 +1340,9 @@ public class UpdateRelationalDatabaseRequest extends com.amazonaws.AmazonWebServ
         if (getApplyImmediately() != null)
             sb.append("ApplyImmediately: ").append(getApplyImmediately()).append(",");
         if (getCaCertificateIdentifier() != null)
-            sb.append("CaCertificateIdentifier: ").append(getCaCertificateIdentifier());
+            sb.append("CaCertificateIdentifier: ").append(getCaCertificateIdentifier()).append(",");
+        if (getRelationalDatabaseBlueprintId() != null)
+            sb.append("RelationalDatabaseBlueprintId: ").append(getRelationalDatabaseBlueprintId());
         sb.append("}");
         return sb.toString();
     }
@@ -1310,6 +1397,11 @@ public class UpdateRelationalDatabaseRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getCaCertificateIdentifier() != null && other.getCaCertificateIdentifier().equals(this.getCaCertificateIdentifier()) == false)
             return false;
+        if (other.getRelationalDatabaseBlueprintId() == null ^ this.getRelationalDatabaseBlueprintId() == null)
+            return false;
+        if (other.getRelationalDatabaseBlueprintId() != null
+                && other.getRelationalDatabaseBlueprintId().equals(this.getRelationalDatabaseBlueprintId()) == false)
+            return false;
         return true;
     }
 
@@ -1328,6 +1420,7 @@ public class UpdateRelationalDatabaseRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getPubliclyAccessible() == null) ? 0 : getPubliclyAccessible().hashCode());
         hashCode = prime * hashCode + ((getApplyImmediately() == null) ? 0 : getApplyImmediately().hashCode());
         hashCode = prime * hashCode + ((getCaCertificateIdentifier() == null) ? 0 : getCaCertificateIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getRelationalDatabaseBlueprintId() == null) ? 0 : getRelationalDatabaseBlueprintId().hashCode());
         return hashCode;
     }
 

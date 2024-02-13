@@ -41,6 +41,8 @@ public class StartChangeSetRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<List> CHANGESETTAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ChangeSetTags").build();
+    private static final MarshallingInfo<String> INTENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Intent").build();
 
     private static final StartChangeSetRequestMarshaller instance = new StartChangeSetRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class StartChangeSetRequestMarshaller {
             protocolMarshaller.marshall(startChangeSetRequest.getChangeSetName(), CHANGESETNAME_BINDING);
             protocolMarshaller.marshall(startChangeSetRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(startChangeSetRequest.getChangeSetTags(), CHANGESETTAGS_BINDING);
+            protocolMarshaller.marshall(startChangeSetRequest.getIntent(), INTENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
