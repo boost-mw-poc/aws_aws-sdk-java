@@ -40,6 +40,8 @@ public class UpdateDomainAssociationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoSubDomainCreationPatterns").build();
     private static final MarshallingInfo<String> AUTOSUBDOMAINIAMROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoSubDomainIAMRole").build();
+    private static final MarshallingInfo<StructuredPojo> CERTIFICATESETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("certificateSettings").build();
 
     private static final UpdateDomainAssociationRequestMarshaller instance = new UpdateDomainAssociationRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class UpdateDomainAssociationRequestMarshaller {
             protocolMarshaller.marshall(updateDomainAssociationRequest.getSubDomainSettings(), SUBDOMAINSETTINGS_BINDING);
             protocolMarshaller.marshall(updateDomainAssociationRequest.getAutoSubDomainCreationPatterns(), AUTOSUBDOMAINCREATIONPATTERNS_BINDING);
             protocolMarshaller.marshall(updateDomainAssociationRequest.getAutoSubDomainIAMRole(), AUTOSUBDOMAINIAMROLE_BINDING);
+            protocolMarshaller.marshall(updateDomainAssociationRequest.getCertificateSettings(), CERTIFICATESETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -74,6 +74,10 @@ public class DomainAssociationJsonUnmarshaller implements Unmarshaller<DomainAss
                     context.nextToken();
                     domainAssociation.setDomainStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("updateStatus", targetDepth)) {
+                    context.nextToken();
+                    domainAssociation.setUpdateStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("statusReason", targetDepth)) {
                     context.nextToken();
                     domainAssociation.setStatusReason(context.getUnmarshaller(String.class).unmarshall(context));
@@ -87,6 +91,10 @@ public class DomainAssociationJsonUnmarshaller implements Unmarshaller<DomainAss
                     domainAssociation.setSubDomains(new ListUnmarshaller<SubDomain>(SubDomainJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("certificate", targetDepth)) {
+                    context.nextToken();
+                    domainAssociation.setCertificate(CertificateJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

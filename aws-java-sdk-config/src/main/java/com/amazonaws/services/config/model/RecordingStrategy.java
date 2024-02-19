@@ -127,6 +127,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
+     * Canada West (Calgary)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Europe (Spain)
      * </p>
      * </li>
@@ -249,6 +254,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
+     * Canada West (Calgary)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Europe (Spain)
      * </p>
      * </li>
@@ -364,6 +374,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        Asia Pacific (Melbourne)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Canada West (Calgary)
      *        </p>
      *        </li>
      *        <li>
@@ -493,6 +508,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
+     * Canada West (Calgary)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Europe (Spain)
      * </p>
      * </li>
@@ -607,6 +627,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *         <li>
      *         <p>
      *         Asia Pacific (Melbourne)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Canada West (Calgary)
      *         </p>
      *         </li>
      *         <li>
@@ -736,6 +761,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
+     * Canada West (Calgary)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Europe (Spain)
      * </p>
      * </li>
@@ -851,6 +881,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        Asia Pacific (Melbourne)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Canada West (Calgary)
      *        </p>
      *        </li>
      *        <li>
@@ -982,6 +1017,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
+     * Canada West (Calgary)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Europe (Spain)
      * </p>
      * </li>
@@ -1097,6 +1137,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        Asia Pacific (Melbourne)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Canada West (Calgary)
      *        </p>
      *        </li>
      *        <li>

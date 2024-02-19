@@ -1,3 +1,28 @@
+# __1.12.662__ __2024-02-19__
+## __AWS Amplify__
+  - ### Features
+    - This release contains API changes that enable users to configure their Amplify domains with their own custom SSL/TLS certificate.
+
+## __AWS Config__
+  - ### Features
+    - Documentation updates for the AWS Config CLI
+
+## __AWS MediaTailor__
+  - ### Features
+    - MediaTailor: marking #AdBreak.OffsetMillis as required.
+
+## __Amazon Interactive Video Service__
+  - ### Features
+    - Changed description for latencyMode in Create/UpdateChannel and Channel/ChannelSummary.
+
+## __Amazon Keyspaces__
+  - ### Features
+    - Documentation updates for Amazon Keyspaces
+
+## __chatbot__
+  - ### Features
+    - This release adds support for AWS Chatbot. You can now monitor, operate, and troubleshoot your AWS resources with interactive ChatOps using the AWS SDK.
+
 # __1.12.661__ __2024-02-16__
 ## __AWS Lambda__
   - ### Features

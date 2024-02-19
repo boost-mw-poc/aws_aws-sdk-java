@@ -66,6 +66,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
+ * Canada West (Calgary)
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * Europe (Spain)
  * </p>
  * </li>

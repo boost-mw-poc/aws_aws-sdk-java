@@ -26,8 +26,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * parameters.
  * </p>
  * <p>
- * Configure the minimum and maximum units for write and read capacity. The auto scaling policy ensures that capacity
- * never goes below the minimum or above the maximum range.
+ * Configure the minimum and maximum capacity units. The auto scaling policy ensures that capacity never goes below the
+ * minimum or above the maximum range.
  * </p>
  * <ul>
  * <li>
@@ -45,7 +45,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <li>
  * <p>
  * <code>scalingPolicy</code>: Amazon Keyspaces supports the <code>target tracking</code> scaling policy. The auto
- * scaling target is the provisioned read and write capacity of the table.
+ * scaling target is the provisioned capacity of the table.
  * </p>
  * <ul>
  * <li>

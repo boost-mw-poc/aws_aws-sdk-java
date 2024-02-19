@@ -49,8 +49,7 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
-     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the Amazon IVS
-     * console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.)
+     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>.
      * </p>
      */
     private String latencyMode;
@@ -250,15 +249,12 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
-     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the Amazon IVS
-     * console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.)
+     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>.
      * </p>
      * 
      * @param latencyMode
      *        Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
-     *        <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the
-     *        Amazon IVS console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard,
-     *        respectively.)
+     *        <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>.
      * @see ChannelLatencyMode
      */
 
@@ -269,14 +265,11 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
-     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the Amazon IVS
-     * console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.)
+     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>.
      * </p>
      * 
      * @return Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
-     *         <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the
-     *         Amazon IVS console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard,
-     *         respectively.)
+     *         <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>.
      * @see ChannelLatencyMode
      */
 
@@ -287,15 +280,12 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
-     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the Amazon IVS
-     * console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.)
+     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>.
      * </p>
      * 
      * @param latencyMode
      *        Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
-     *        <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the
-     *        Amazon IVS console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard,
-     *        respectively.)
+     *        <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChannelLatencyMode
      */
@@ -308,15 +298,12 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
-     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the Amazon IVS
-     * console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.)
+     * <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>.
      * </p>
      * 
      * @param latencyMode
      *        Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
-     *        <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>. (Note: In the
-     *        Amazon IVS console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard,
-     *        respectively.)
+     *        <code>LOW</code> for near-real-time interaction with viewers. Default: <code>LOW</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChannelLatencyMode
      */

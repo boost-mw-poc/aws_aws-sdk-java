@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The optional auto scaling settings for read and write capacity of a table in provisioned capacity mode.
+ * The optional auto scaling capacity settings for a table in provisioned capacity mode.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/keyspaces-2022-02-10/AutoScalingSpecification" target="_top">AWS

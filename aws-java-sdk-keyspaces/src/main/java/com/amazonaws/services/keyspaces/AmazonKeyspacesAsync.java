@@ -320,6 +320,27 @@ public interface AmazonKeyspacesAsync extends AmazonKeyspaces {
      * href="https://docs.aws.amazon.com/keyspaces/latest/devguide/autoscaling.html">Managing throughput capacity
      * automatically with Amazon Keyspaces auto scaling</a> in the <i>Amazon Keyspaces Developer Guide</i>.
      * </p>
+     * <important>
+     * <p>
+     * <code>GetTableAutoScalingSettings</code> can't be used as an action in an IAM policy.
+     * </p>
+     * </important>
+     * <p>
+     * To define permissions for <code>GetTableAutoScalingSettings</code>, you must allow the following two actions in
+     * the IAM policy statement's <code>Action</code> element:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>application-autoscaling:DescribeScalableTargets</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>application-autoscaling:DescribeScalingPolicies</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param getTableAutoScalingSettingsRequest
      * @return A Java Future containing the result of the GetTableAutoScalingSettings operation returned by the service.
@@ -342,6 +363,27 @@ public interface AmazonKeyspacesAsync extends AmazonKeyspaces {
      * href="https://docs.aws.amazon.com/keyspaces/latest/devguide/autoscaling.html">Managing throughput capacity
      * automatically with Amazon Keyspaces auto scaling</a> in the <i>Amazon Keyspaces Developer Guide</i>.
      * </p>
+     * <important>
+     * <p>
+     * <code>GetTableAutoScalingSettings</code> can't be used as an action in an IAM policy.
+     * </p>
+     * </important>
+     * <p>
+     * To define permissions for <code>GetTableAutoScalingSettings</code>, you must allow the following two actions in
+     * the IAM policy statement's <code>Action</code> element:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>application-autoscaling:DescribeScalableTargets</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>application-autoscaling:DescribeScalingPolicies</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param getTableAutoScalingSettingsRequest
      * @param asyncHandler
