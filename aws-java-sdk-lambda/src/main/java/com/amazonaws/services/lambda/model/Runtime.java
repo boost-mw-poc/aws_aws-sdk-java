@@ -41,6 +41,7 @@ public enum Runtime {
     Dotnetcore21("dotnetcore2.1"),
     Dotnetcore31("dotnetcore3.1"),
     Dotnet6("dotnet6"),
+    Dotnet8("dotnet8"),
     Nodejs43Edge("nodejs4.3-edge"),
     Go1X("go1.x"),
     Ruby25("ruby2.5"),

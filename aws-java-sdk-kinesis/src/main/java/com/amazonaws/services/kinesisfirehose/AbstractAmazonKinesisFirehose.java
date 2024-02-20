@@ -53,11 +53,6 @@ public class AbstractAmazonKinesisFirehose implements AmazonKinesisFirehose {
     }
 
     @Override
-    public GetKinesisStreamResult getKinesisStream(GetKinesisStreamRequest request) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public ListDeliveryStreamsResult listDeliveryStreams(ListDeliveryStreamsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,11 +94,6 @@ public class AbstractAmazonKinesisFirehose implements AmazonKinesisFirehose {
 
     @Override
     public UpdateDestinationResult updateDestination(UpdateDestinationRequest request) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
-    public VerifyResourcesExistForTagrisResult verifyResourcesExistForTagris(VerifyResourcesExistForTagrisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

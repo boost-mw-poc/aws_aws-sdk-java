@@ -1,3 +1,16 @@
+# __1.12.663__ __2024-02-20__
+## __AWS Lambda__
+  - ### Features
+    - Add .NET 8 (dotnet8) Runtime support to AWS Lambda.
+
+## __Amazon DynamoDB__
+  - ### Features
+    - Publishing quick fix for doc only update.
+
+## __Amazon Kinesis Firehose__
+  - ### Features
+    - This release updates a few Firehose related APIs.
+
 # __1.12.662__ __2024-02-19__
 ## __AWS Amplify__
   - ### Features

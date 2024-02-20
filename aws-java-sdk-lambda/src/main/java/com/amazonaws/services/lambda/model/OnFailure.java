@@ -49,7 +49,7 @@ public class OnFailure implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination"
      * >self-managed Kafka</a> or <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination">Amazon
-     * MSK</a>, you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+     * MSK</a>, you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the destination.
      * </p>
      */
     private String destination;
@@ -75,7 +75,7 @@ public class OnFailure implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination"
      * >self-managed Kafka</a> or <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination">Amazon
-     * MSK</a>, you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+     * MSK</a>, you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the destination.
      * </p>
      * 
      * @param destination
@@ -97,7 +97,8 @@ public class OnFailure implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination"
      *        >self-managed Kafka</a> or <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination"
-     *        >Amazon MSK</a>, you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+     *        >Amazon MSK</a>, you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+     *        destination.
      */
 
     public void setDestination(String destination) {
@@ -125,7 +126,7 @@ public class OnFailure implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination"
      * >self-managed Kafka</a> or <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination">Amazon
-     * MSK</a>, you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+     * MSK</a>, you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the destination.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the destination resource.</p>
@@ -146,7 +147,8 @@ public class OnFailure implements Serializable, Cloneable, StructuredPojo {
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination"
      *         >self-managed Kafka</a> or <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination"
-     *         >Amazon MSK</a>, you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+     *         >Amazon MSK</a>, you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+     *         destination.
      */
 
     public String getDestination() {
@@ -174,7 +176,7 @@ public class OnFailure implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination"
      * >self-managed Kafka</a> or <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination">Amazon
-     * MSK</a>, you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+     * MSK</a>, you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the destination.
      * </p>
      * 
      * @param destination
@@ -196,7 +198,8 @@ public class OnFailure implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination"
      *        >self-managed Kafka</a> or <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination"
-     *        >Amazon MSK</a>, you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
+     *        >Amazon MSK</a>, you can configure an Amazon SNS topic, Amazon SQS queue, or Amazon S3 bucket as the
+     *        destination.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

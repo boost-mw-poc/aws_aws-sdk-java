@@ -337,29 +337,6 @@ public interface AmazonKinesisFirehoseAsync extends AmazonKinesisFirehose {
             com.amazonaws.handlers.AsyncHandler<DescribeDeliveryStreamRequest, DescribeDeliveryStreamResult> asyncHandler);
 
     /**
-     * @param getKinesisStreamRequest
-     * @return A Java Future containing the result of the GetKinesisStream operation returned by the service.
-     * @sample AmazonKinesisFirehoseAsync.GetKinesisStream
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/GetKinesisStream" target="_top">AWS API
-     *      Documentation</a>
-     */
-    java.util.concurrent.Future<GetKinesisStreamResult> getKinesisStreamAsync(GetKinesisStreamRequest getKinesisStreamRequest);
-
-    /**
-     * @param getKinesisStreamRequest
-     * @param asyncHandler
-     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
-     *        implementation of the callback methods in this interface to receive notification of successful or
-     *        unsuccessful completion of the operation.
-     * @return A Java Future containing the result of the GetKinesisStream operation returned by the service.
-     * @sample AmazonKinesisFirehoseAsyncHandler.GetKinesisStream
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/GetKinesisStream" target="_top">AWS API
-     *      Documentation</a>
-     */
-    java.util.concurrent.Future<GetKinesisStreamResult> getKinesisStreamAsync(GetKinesisStreamRequest getKinesisStreamRequest,
-            com.amazonaws.handlers.AsyncHandler<GetKinesisStreamRequest, GetKinesisStreamResult> asyncHandler);
-
-    /**
      * <p>
      * Lists your delivery streams in alphabetical order of their names.
      * </p>
@@ -1131,32 +1108,5 @@ public interface AmazonKinesisFirehoseAsync extends AmazonKinesisFirehose {
      */
     java.util.concurrent.Future<UpdateDestinationResult> updateDestinationAsync(UpdateDestinationRequest updateDestinationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDestinationRequest, UpdateDestinationResult> asyncHandler);
-
-    /**
-     * @param verifyResourcesExistForTagrisRequest
-     * @return A Java Future containing the result of the VerifyResourcesExistForTagris operation returned by the
-     *         service.
-     * @sample AmazonKinesisFirehoseAsync.VerifyResourcesExistForTagris
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/VerifyResourcesExistForTagris"
-     *      target="_top">AWS API Documentation</a>
-     */
-    java.util.concurrent.Future<VerifyResourcesExistForTagrisResult> verifyResourcesExistForTagrisAsync(
-            VerifyResourcesExistForTagrisRequest verifyResourcesExistForTagrisRequest);
-
-    /**
-     * @param verifyResourcesExistForTagrisRequest
-     * @param asyncHandler
-     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
-     *        implementation of the callback methods in this interface to receive notification of successful or
-     *        unsuccessful completion of the operation.
-     * @return A Java Future containing the result of the VerifyResourcesExistForTagris operation returned by the
-     *         service.
-     * @sample AmazonKinesisFirehoseAsyncHandler.VerifyResourcesExistForTagris
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/VerifyResourcesExistForTagris"
-     *      target="_top">AWS API Documentation</a>
-     */
-    java.util.concurrent.Future<VerifyResourcesExistForTagrisResult> verifyResourcesExistForTagrisAsync(
-            VerifyResourcesExistForTagrisRequest verifyResourcesExistForTagrisRequest,
-            com.amazonaws.handlers.AsyncHandler<VerifyResourcesExistForTagrisRequest, VerifyResourcesExistForTagrisResult> asyncHandler);
 
 }

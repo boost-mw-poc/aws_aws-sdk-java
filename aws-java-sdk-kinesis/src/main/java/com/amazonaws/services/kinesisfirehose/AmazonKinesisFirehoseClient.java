@@ -84,39 +84,17 @@ public class AmazonKinesisFirehoseClient extends AmazonWebServiceClient implemen
                             new JsonErrorShapeMetadata().withErrorCode("ConcurrentModificationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kinesisfirehose.model.transform.ConcurrentModificationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TagrisInvalidParameterException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.kinesisfirehose.model.transform.TagrisInvalidParameterExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kinesisfirehose.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidSourceException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kinesisfirehose.model.transform.InvalidSourceExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidStreamTypeException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.kinesisfirehose.model.transform.InvalidStreamTypeExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TagrisAccessDeniedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.kinesisfirehose.model.transform.TagrisAccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TagrisThrottledException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.kinesisfirehose.model.transform.TagrisThrottledExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TagrisInvalidArnException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.kinesisfirehose.model.transform.TagrisInvalidArnExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kinesisfirehose.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TagrisPartialResourcesExistResultsException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.kinesisfirehose.model.transform.TagrisPartialResourcesExistResultsExceptionUnmarshaller
-                                            .getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidArgumentException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kinesisfirehose.model.transform.InvalidArgumentExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TagrisInternalServiceException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.kinesisfirehose.model.transform.TagrisInternalServiceExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kinesisfirehose.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
@@ -604,67 +582,6 @@ public class AmazonKinesisFirehoseClient extends AmazonWebServiceClient implemen
             HttpResponseHandler<AmazonWebServiceResponse<DescribeDeliveryStreamResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeDeliveryStreamResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * @param getKinesisStreamRequest
-     * @return Result of the GetKinesisStream operation returned by the service.
-     * @throws ResourceNotFoundException
-     *         The specified resource could not be found.
-     * @throws InvalidArgumentException
-     *         The specified input parameter has a value that is not valid.
-     * @throws InvalidStreamTypeException
-     * @throws InvalidKMSResourceException
-     *         Firehose throws this exception when an attempt to put records or to start or stop delivery stream
-     *         encryption fails. This happens when the KMS service throws one of the following exception types:
-     *         <code>AccessDeniedException</code>, <code>InvalidStateException</code>, <code>DisabledException</code>,
-     *         or <code>NotFoundException</code>.
-     * @sample AmazonKinesisFirehose.GetKinesisStream
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/GetKinesisStream" target="_top">AWS API
-     *      Documentation</a>
-     */
-    @Override
-    public GetKinesisStreamResult getKinesisStream(GetKinesisStreamRequest request) {
-        request = beforeClientExecution(request);
-        return executeGetKinesisStream(request);
-    }
-
-    @SdkInternalApi
-    final GetKinesisStreamResult executeGetKinesisStream(GetKinesisStreamRequest getKinesisStreamRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(getKinesisStreamRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<GetKinesisStreamRequest> request = null;
-        Response<GetKinesisStreamResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new GetKinesisStreamRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getKinesisStreamRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Firehose");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetKinesisStream");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            HttpResponseHandler<AmazonWebServiceResponse<GetKinesisStreamResult>> responseHandler = protocolFactory.createResponseHandler(
-                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetKinesisStreamResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1492,65 +1409,6 @@ public class AmazonKinesisFirehoseClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateDestinationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateDestinationResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * @param verifyResourcesExistForTagrisRequest
-     * @return Result of the VerifyResourcesExistForTagris operation returned by the service.
-     * @throws TagrisAccessDeniedException
-     * @throws TagrisInternalServiceException
-     * @throws TagrisInvalidArnException
-     * @throws TagrisInvalidParameterException
-     * @throws TagrisPartialResourcesExistResultsException
-     * @throws TagrisThrottledException
-     * @sample AmazonKinesisFirehose.VerifyResourcesExistForTagris
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/VerifyResourcesExistForTagris"
-     *      target="_top">AWS API Documentation</a>
-     */
-    @Override
-    public VerifyResourcesExistForTagrisResult verifyResourcesExistForTagris(VerifyResourcesExistForTagrisRequest request) {
-        request = beforeClientExecution(request);
-        return executeVerifyResourcesExistForTagris(request);
-    }
-
-    @SdkInternalApi
-    final VerifyResourcesExistForTagrisResult executeVerifyResourcesExistForTagris(VerifyResourcesExistForTagrisRequest verifyResourcesExistForTagrisRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(verifyResourcesExistForTagrisRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<VerifyResourcesExistForTagrisRequest> request = null;
-        Response<VerifyResourcesExistForTagrisResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new VerifyResourcesExistForTagrisRequestProtocolMarshaller(protocolFactory).marshall(super
-                        .beforeMarshalling(verifyResourcesExistForTagrisRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Firehose");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "VerifyResourcesExistForTagris");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            HttpResponseHandler<AmazonWebServiceResponse<VerifyResourcesExistForTagrisResult>> responseHandler = protocolFactory.createResponseHandler(
-                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
-                    new VerifyResourcesExistForTagrisResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

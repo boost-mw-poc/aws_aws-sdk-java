@@ -257,25 +257,6 @@ public interface AmazonKinesisFirehose {
     DescribeDeliveryStreamResult describeDeliveryStream(DescribeDeliveryStreamRequest describeDeliveryStreamRequest);
 
     /**
-     * @param getKinesisStreamRequest
-     * @return Result of the GetKinesisStream operation returned by the service.
-     * @throws ResourceNotFoundException
-     *         The specified resource could not be found.
-     * @throws InvalidArgumentException
-     *         The specified input parameter has a value that is not valid.
-     * @throws InvalidStreamTypeException
-     * @throws InvalidKMSResourceException
-     *         Firehose throws this exception when an attempt to put records or to start or stop delivery stream
-     *         encryption fails. This happens when the KMS service throws one of the following exception types:
-     *         <code>AccessDeniedException</code>, <code>InvalidStateException</code>, <code>DisabledException</code>,
-     *         or <code>NotFoundException</code>.
-     * @sample AmazonKinesisFirehose.GetKinesisStream
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/GetKinesisStream" target="_top">AWS API
-     *      Documentation</a>
-     */
-    GetKinesisStreamResult getKinesisStream(GetKinesisStreamRequest getKinesisStreamRequest);
-
-    /**
      * <p>
      * Lists your delivery streams in alphabetical order of their names.
      * </p>
@@ -717,21 +698,6 @@ public interface AmazonKinesisFirehose {
      *      Documentation</a>
      */
     UpdateDestinationResult updateDestination(UpdateDestinationRequest updateDestinationRequest);
-
-    /**
-     * @param verifyResourcesExistForTagrisRequest
-     * @return Result of the VerifyResourcesExistForTagris operation returned by the service.
-     * @throws TagrisAccessDeniedException
-     * @throws TagrisInternalServiceException
-     * @throws TagrisInvalidArnException
-     * @throws TagrisInvalidParameterException
-     * @throws TagrisPartialResourcesExistResultsException
-     * @throws TagrisThrottledException
-     * @sample AmazonKinesisFirehose.VerifyResourcesExistForTagris
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/VerifyResourcesExistForTagris"
-     *      target="_top">AWS API Documentation</a>
-     */
-    VerifyResourcesExistForTagrisResult verifyResourcesExistForTagris(VerifyResourcesExistForTagrisRequest verifyResourcesExistForTagrisRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

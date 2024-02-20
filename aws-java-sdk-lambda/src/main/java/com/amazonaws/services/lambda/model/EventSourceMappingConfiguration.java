@@ -139,7 +139,8 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     private String stateTransitionReason;
     /**
      * <p>
-     * (Kinesis and DynamoDB Streams only) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A configuration object
+     * that specifies the destination of an event after Lambda processes it.
      * </p>
      */
     private DestinationConfig destinationConfig;
@@ -961,12 +962,13 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Kinesis and DynamoDB Streams only) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A configuration object
+     * that specifies the destination of an event after Lambda processes it.
      * </p>
      * 
      * @param destinationConfig
-     *        (Kinesis and DynamoDB Streams only) An Amazon SQS queue or Amazon SNS topic destination for discarded
-     *        records.
+     *        (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A configuration
+     *        object that specifies the destination of an event after Lambda processes it.
      */
 
     public void setDestinationConfig(DestinationConfig destinationConfig) {
@@ -975,11 +977,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Kinesis and DynamoDB Streams only) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A configuration object
+     * that specifies the destination of an event after Lambda processes it.
      * </p>
      * 
-     * @return (Kinesis and DynamoDB Streams only) An Amazon SQS queue or Amazon SNS topic destination for discarded
-     *         records.
+     * @return (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A configuration
+     *         object that specifies the destination of an event after Lambda processes it.
      */
 
     public DestinationConfig getDestinationConfig() {
@@ -988,12 +991,13 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Kinesis and DynamoDB Streams only) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
+     * (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A configuration object
+     * that specifies the destination of an event after Lambda processes it.
      * </p>
      * 
      * @param destinationConfig
-     *        (Kinesis and DynamoDB Streams only) An Amazon SQS queue or Amazon SNS topic destination for discarded
-     *        records.
+     *        (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A configuration
+     *        object that specifies the destination of an event after Lambda processes it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

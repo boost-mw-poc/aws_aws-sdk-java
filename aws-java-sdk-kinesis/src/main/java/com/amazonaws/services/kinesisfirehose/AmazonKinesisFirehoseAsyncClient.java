@@ -359,39 +359,6 @@ public class AmazonKinesisFirehoseAsyncClient extends AmazonKinesisFirehoseClien
     }
 
     @Override
-    public java.util.concurrent.Future<GetKinesisStreamResult> getKinesisStreamAsync(GetKinesisStreamRequest request) {
-
-        return getKinesisStreamAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<GetKinesisStreamResult> getKinesisStreamAsync(final GetKinesisStreamRequest request,
-            final com.amazonaws.handlers.AsyncHandler<GetKinesisStreamRequest, GetKinesisStreamResult> asyncHandler) {
-        final GetKinesisStreamRequest finalRequest = beforeClientExecution(request);
-
-        return executorService.submit(new java.util.concurrent.Callable<GetKinesisStreamResult>() {
-            @Override
-            public GetKinesisStreamResult call() throws Exception {
-                GetKinesisStreamResult result = null;
-
-                try {
-                    result = executeGetKinesisStream(finalRequest);
-                } catch (Exception ex) {
-                    if (asyncHandler != null) {
-                        asyncHandler.onError(ex);
-                    }
-                    throw ex;
-                }
-
-                if (asyncHandler != null) {
-                    asyncHandler.onSuccess(finalRequest, result);
-                }
-                return result;
-            }
-        });
-    }
-
-    @Override
     public java.util.concurrent.Future<ListDeliveryStreamsResult> listDeliveryStreamsAsync(ListDeliveryStreamsRequest request) {
 
         return listDeliveryStreamsAsync(request, null);
@@ -674,40 +641,6 @@ public class AmazonKinesisFirehoseAsyncClient extends AmazonKinesisFirehoseClien
 
                 try {
                     result = executeUpdateDestination(finalRequest);
-                } catch (Exception ex) {
-                    if (asyncHandler != null) {
-                        asyncHandler.onError(ex);
-                    }
-                    throw ex;
-                }
-
-                if (asyncHandler != null) {
-                    asyncHandler.onSuccess(finalRequest, result);
-                }
-                return result;
-            }
-        });
-    }
-
-    @Override
-    public java.util.concurrent.Future<VerifyResourcesExistForTagrisResult> verifyResourcesExistForTagrisAsync(VerifyResourcesExistForTagrisRequest request) {
-
-        return verifyResourcesExistForTagrisAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<VerifyResourcesExistForTagrisResult> verifyResourcesExistForTagrisAsync(
-            final VerifyResourcesExistForTagrisRequest request,
-            final com.amazonaws.handlers.AsyncHandler<VerifyResourcesExistForTagrisRequest, VerifyResourcesExistForTagrisResult> asyncHandler) {
-        final VerifyResourcesExistForTagrisRequest finalRequest = beforeClientExecution(request);
-
-        return executorService.submit(new java.util.concurrent.Callable<VerifyResourcesExistForTagrisResult>() {
-            @Override
-            public VerifyResourcesExistForTagrisResult call() throws Exception {
-                VerifyResourcesExistForTagrisResult result = null;
-
-                try {
-                    result = executeVerifyResourcesExistForTagris(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
