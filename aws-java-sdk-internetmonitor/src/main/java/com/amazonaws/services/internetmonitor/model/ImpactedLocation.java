@@ -127,6 +127,12 @@ public class ImpactedLocation implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private InternetHealth internetHealth;
+    /**
+     * <p>
+     * The IPv4 prefixes at the client location that was impacted by the health event.
+     * </p>
+     */
+    private java.util.List<String> ipv4Prefixes;
 
     /**
      * <p>
@@ -771,6 +777,76 @@ public class ImpactedLocation implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The IPv4 prefixes at the client location that was impacted by the health event.
+     * </p>
+     * 
+     * @return The IPv4 prefixes at the client location that was impacted by the health event.
+     */
+
+    public java.util.List<String> getIpv4Prefixes() {
+        return ipv4Prefixes;
+    }
+
+    /**
+     * <p>
+     * The IPv4 prefixes at the client location that was impacted by the health event.
+     * </p>
+     * 
+     * @param ipv4Prefixes
+     *        The IPv4 prefixes at the client location that was impacted by the health event.
+     */
+
+    public void setIpv4Prefixes(java.util.Collection<String> ipv4Prefixes) {
+        if (ipv4Prefixes == null) {
+            this.ipv4Prefixes = null;
+            return;
+        }
+
+        this.ipv4Prefixes = new java.util.ArrayList<String>(ipv4Prefixes);
+    }
+
+    /**
+     * <p>
+     * The IPv4 prefixes at the client location that was impacted by the health event.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setIpv4Prefixes(java.util.Collection)} or {@link #withIpv4Prefixes(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param ipv4Prefixes
+     *        The IPv4 prefixes at the client location that was impacted by the health event.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImpactedLocation withIpv4Prefixes(String... ipv4Prefixes) {
+        if (this.ipv4Prefixes == null) {
+            setIpv4Prefixes(new java.util.ArrayList<String>(ipv4Prefixes.length));
+        }
+        for (String ele : ipv4Prefixes) {
+            this.ipv4Prefixes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IPv4 prefixes at the client location that was impacted by the health event.
+     * </p>
+     * 
+     * @param ipv4Prefixes
+     *        The IPv4 prefixes at the client location that was impacted by the health event.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImpactedLocation withIpv4Prefixes(java.util.Collection<String> ipv4Prefixes) {
+        setIpv4Prefixes(ipv4Prefixes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -809,7 +885,9 @@ public class ImpactedLocation implements Serializable, Cloneable, StructuredPojo
         if (getCausedBy() != null)
             sb.append("CausedBy: ").append(getCausedBy()).append(",");
         if (getInternetHealth() != null)
-            sb.append("InternetHealth: ").append(getInternetHealth());
+            sb.append("InternetHealth: ").append(getInternetHealth()).append(",");
+        if (getIpv4Prefixes() != null)
+            sb.append("Ipv4Prefixes: ").append(getIpv4Prefixes());
         sb.append("}");
         return sb.toString();
     }
@@ -880,6 +958,10 @@ public class ImpactedLocation implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getInternetHealth() != null && other.getInternetHealth().equals(this.getInternetHealth()) == false)
             return false;
+        if (other.getIpv4Prefixes() == null ^ this.getIpv4Prefixes() == null)
+            return false;
+        if (other.getIpv4Prefixes() != null && other.getIpv4Prefixes().equals(this.getIpv4Prefixes()) == false)
+            return false;
         return true;
     }
 
@@ -902,6 +984,7 @@ public class ImpactedLocation implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getCausedBy() == null) ? 0 : getCausedBy().hashCode());
         hashCode = prime * hashCode + ((getInternetHealth() == null) ? 0 : getInternetHealth().hashCode());
+        hashCode = prime * hashCode + ((getIpv4Prefixes() == null) ? 0 : getIpv4Prefixes().hashCode());
         return hashCode;
     }
 

@@ -51,17 +51,20 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>MEASUREMENTS</code>: TBD definition
+     * <code>MEASUREMENTS</code>: Provides availability score, performance score, total traffic, and round-trip times,
+     * at 5 minute intervals.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATIONS</code>: TBD definition
+     * <code>TOP_LOCATIONS</code>: Provides availability score, performance score, total traffic, and time to first byte
+     * (TTFB) information, for the top location and ASN combinations that you're monitoring, by traffic volume.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATION_DETAILS</code>: TBD definition
+     * <code>TOP_LOCATION_DETAILS</code>: Provides TTFB for Amazon CloudFront, your current configuration, and the best
+     * performing EC2 configuration, at 1 hour intervals.
      * </p>
      * </li>
      * </ul>
@@ -217,17 +220,20 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>MEASUREMENTS</code>: TBD definition
+     * <code>MEASUREMENTS</code>: Provides availability score, performance score, total traffic, and round-trip times,
+     * at 5 minute intervals.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATIONS</code>: TBD definition
+     * <code>TOP_LOCATIONS</code>: Provides availability score, performance score, total traffic, and time to first byte
+     * (TTFB) information, for the top location and ASN combinations that you're monitoring, by traffic volume.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATION_DETAILS</code>: TBD definition
+     * <code>TOP_LOCATION_DETAILS</code>: Provides TTFB for Amazon CloudFront, your current configuration, and the best
+     * performing EC2 configuration, at 1 hour intervals.
      * </p>
      * </li>
      * </ul>
@@ -245,17 +251,21 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>MEASUREMENTS</code>: TBD definition
+     *        <code>MEASUREMENTS</code>: Provides availability score, performance score, total traffic, and round-trip
+     *        times, at 5 minute intervals.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TOP_LOCATIONS</code>: TBD definition
+     *        <code>TOP_LOCATIONS</code>: Provides availability score, performance score, total traffic, and time to
+     *        first byte (TTFB) information, for the top location and ASN combinations that you're monitoring, by
+     *        traffic volume.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TOP_LOCATION_DETAILS</code>: TBD definition
+     *        <code>TOP_LOCATION_DETAILS</code>: Provides TTFB for Amazon CloudFront, your current configuration, and
+     *        the best performing EC2 configuration, at 1 hour intervals.
      *        </p>
      *        </li>
      *        </ul>
@@ -280,17 +290,20 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>MEASUREMENTS</code>: TBD definition
+     * <code>MEASUREMENTS</code>: Provides availability score, performance score, total traffic, and round-trip times,
+     * at 5 minute intervals.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATIONS</code>: TBD definition
+     * <code>TOP_LOCATIONS</code>: Provides availability score, performance score, total traffic, and time to first byte
+     * (TTFB) information, for the top location and ASN combinations that you're monitoring, by traffic volume.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATION_DETAILS</code>: TBD definition
+     * <code>TOP_LOCATION_DETAILS</code>: Provides TTFB for Amazon CloudFront, your current configuration, and the best
+     * performing EC2 configuration, at 1 hour intervals.
      * </p>
      * </li>
      * </ul>
@@ -307,17 +320,21 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>MEASUREMENTS</code>: TBD definition
+     *         <code>MEASUREMENTS</code>: Provides availability score, performance score, total traffic, and round-trip
+     *         times, at 5 minute intervals.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>TOP_LOCATIONS</code>: TBD definition
+     *         <code>TOP_LOCATIONS</code>: Provides availability score, performance score, total traffic, and time to
+     *         first byte (TTFB) information, for the top location and ASN combinations that you're monitoring, by
+     *         traffic volume.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>TOP_LOCATION_DETAILS</code>: TBD definition
+     *         <code>TOP_LOCATION_DETAILS</code>: Provides TTFB for Amazon CloudFront, your current configuration, and
+     *         the best performing EC2 configuration, at 1 hour intervals.
      *         </p>
      *         </li>
      *         </ul>
@@ -342,17 +359,20 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>MEASUREMENTS</code>: TBD definition
+     * <code>MEASUREMENTS</code>: Provides availability score, performance score, total traffic, and round-trip times,
+     * at 5 minute intervals.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATIONS</code>: TBD definition
+     * <code>TOP_LOCATIONS</code>: Provides availability score, performance score, total traffic, and time to first byte
+     * (TTFB) information, for the top location and ASN combinations that you're monitoring, by traffic volume.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATION_DETAILS</code>: TBD definition
+     * <code>TOP_LOCATION_DETAILS</code>: Provides TTFB for Amazon CloudFront, your current configuration, and the best
+     * performing EC2 configuration, at 1 hour intervals.
      * </p>
      * </li>
      * </ul>
@@ -370,17 +390,21 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>MEASUREMENTS</code>: TBD definition
+     *        <code>MEASUREMENTS</code>: Provides availability score, performance score, total traffic, and round-trip
+     *        times, at 5 minute intervals.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TOP_LOCATIONS</code>: TBD definition
+     *        <code>TOP_LOCATIONS</code>: Provides availability score, performance score, total traffic, and time to
+     *        first byte (TTFB) information, for the top location and ASN combinations that you're monitoring, by
+     *        traffic volume.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TOP_LOCATION_DETAILS</code>: TBD definition
+     *        <code>TOP_LOCATION_DETAILS</code>: Provides TTFB for Amazon CloudFront, your current configuration, and
+     *        the best performing EC2 configuration, at 1 hour intervals.
      *        </p>
      *        </li>
      *        </ul>
@@ -407,17 +431,20 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>MEASUREMENTS</code>: TBD definition
+     * <code>MEASUREMENTS</code>: Provides availability score, performance score, total traffic, and round-trip times,
+     * at 5 minute intervals.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATIONS</code>: TBD definition
+     * <code>TOP_LOCATIONS</code>: Provides availability score, performance score, total traffic, and time to first byte
+     * (TTFB) information, for the top location and ASN combinations that you're monitoring, by traffic volume.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TOP_LOCATION_DETAILS</code>: TBD definition
+     * <code>TOP_LOCATION_DETAILS</code>: Provides TTFB for Amazon CloudFront, your current configuration, and the best
+     * performing EC2 configuration, at 1 hour intervals.
      * </p>
      * </li>
      * </ul>
@@ -435,17 +462,21 @@ public class StartQueryRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>MEASUREMENTS</code>: TBD definition
+     *        <code>MEASUREMENTS</code>: Provides availability score, performance score, total traffic, and round-trip
+     *        times, at 5 minute intervals.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TOP_LOCATIONS</code>: TBD definition
+     *        <code>TOP_LOCATIONS</code>: Provides availability score, performance score, total traffic, and time to
+     *        first byte (TTFB) information, for the top location and ASN combinations that you're monitoring, by
+     *        traffic volume.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TOP_LOCATION_DETAILS</code>: TBD definition
+     *        <code>TOP_LOCATION_DETAILS</code>: Provides TTFB for Amazon CloudFront, your current configuration, and
+     *        the best performing EC2 configuration, at 1 hour intervals.
      *        </p>
      *        </li>
      *        </ul>

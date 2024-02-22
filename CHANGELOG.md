@@ -1,3 +1,12 @@
+# __1.12.665__ __2024-02-22__
+## __Amazon CloudWatch Internet Monitor__
+  - ### Features
+    - This release adds IPv4 prefixes to health events
+
+## __Amazon Kinesis Video Streams__
+  - ### Features
+    - Increasing NextToken parameter length restriction for List APIs from 512 to 1024.
+
 # __1.12.664__ __2024-02-21__
 ## __AWS Elemental MediaLive__
   - ### Features

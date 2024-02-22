@@ -104,6 +104,12 @@ public class ImpactedLocationJsonUnmarshaller implements Unmarshaller<ImpactedLo
                     context.nextToken();
                     impactedLocation.setInternetHealth(InternetHealthJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Ipv4Prefixes", targetDepth)) {
+                    context.nextToken();
+                    impactedLocation.setIpv4Prefixes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

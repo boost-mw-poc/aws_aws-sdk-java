@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.internetmonitor.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -55,6 +56,8 @@ public class ImpactedLocationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CausedBy").build();
     private static final MarshallingInfo<StructuredPojo> INTERNETHEALTH_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InternetHealth").build();
+    private static final MarshallingInfo<List> IPV4PREFIXES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Ipv4Prefixes").build();
 
     private static final ImpactedLocationMarshaller instance = new ImpactedLocationMarshaller();
 
@@ -86,6 +89,7 @@ public class ImpactedLocationMarshaller {
             protocolMarshaller.marshall(impactedLocation.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(impactedLocation.getCausedBy(), CAUSEDBY_BINDING);
             protocolMarshaller.marshall(impactedLocation.getInternetHealth(), INTERNETHEALTH_BINDING);
+            protocolMarshaller.marshall(impactedLocation.getIpv4Prefixes(), IPV4PREFIXES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
