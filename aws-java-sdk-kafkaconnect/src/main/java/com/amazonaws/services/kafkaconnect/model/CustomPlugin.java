@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A plugin is an AWS resource that contains the code that defines a connector's logic.
+ * A plugin is an Amazon Web Services resource that contains the code that defines a connector's logic.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafkaconnect-2021-09-14/CustomPlugin" target="_top">AWS API

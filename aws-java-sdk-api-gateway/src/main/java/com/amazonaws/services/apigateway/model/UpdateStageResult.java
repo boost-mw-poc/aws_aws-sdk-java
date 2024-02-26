@@ -51,7 +51,8 @@ public class UpdateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String description;
     /**
      * <p>
-     * Specifies whether a cache cluster is enabled for the stage.
+     * Specifies whether a cache cluster is enabled for the stage. To activate a method-level cache, set
+     * <code>CachingEnabled</code> to <code>true</code> for a method.
      * </p>
      */
     private Boolean cacheClusterEnabled;
@@ -307,11 +308,13 @@ public class UpdateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies whether a cache cluster is enabled for the stage.
+     * Specifies whether a cache cluster is enabled for the stage. To activate a method-level cache, set
+     * <code>CachingEnabled</code> to <code>true</code> for a method.
      * </p>
      * 
      * @param cacheClusterEnabled
-     *        Specifies whether a cache cluster is enabled for the stage.
+     *        Specifies whether a cache cluster is enabled for the stage. To activate a method-level cache, set
+     *        <code>CachingEnabled</code> to <code>true</code> for a method.
      */
 
     public void setCacheClusterEnabled(Boolean cacheClusterEnabled) {
@@ -320,10 +323,12 @@ public class UpdateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies whether a cache cluster is enabled for the stage.
+     * Specifies whether a cache cluster is enabled for the stage. To activate a method-level cache, set
+     * <code>CachingEnabled</code> to <code>true</code> for a method.
      * </p>
      * 
-     * @return Specifies whether a cache cluster is enabled for the stage.
+     * @return Specifies whether a cache cluster is enabled for the stage. To activate a method-level cache, set
+     *         <code>CachingEnabled</code> to <code>true</code> for a method.
      */
 
     public Boolean getCacheClusterEnabled() {
@@ -332,11 +337,13 @@ public class UpdateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies whether a cache cluster is enabled for the stage.
+     * Specifies whether a cache cluster is enabled for the stage. To activate a method-level cache, set
+     * <code>CachingEnabled</code> to <code>true</code> for a method.
      * </p>
      * 
      * @param cacheClusterEnabled
-     *        Specifies whether a cache cluster is enabled for the stage.
+     *        Specifies whether a cache cluster is enabled for the stage. To activate a method-level cache, set
+     *        <code>CachingEnabled</code> to <code>true</code> for a method.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -347,10 +354,12 @@ public class UpdateStageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * Specifies whether a cache cluster is enabled for the stage.
+     * Specifies whether a cache cluster is enabled for the stage. To activate a method-level cache, set
+     * <code>CachingEnabled</code> to <code>true</code> for a method.
      * </p>
      * 
-     * @return Specifies whether a cache cluster is enabled for the stage.
+     * @return Specifies whether a cache cluster is enabled for the stage. To activate a method-level cache, set
+     *         <code>CachingEnabled</code> to <code>true</code> for a method.
      */
 
     public Boolean isCacheClusterEnabled() {

@@ -37,6 +37,8 @@ public class ConversionPropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rootVolumeName").build();
     private static final MarshallingInfo<Map> VOLUMETOCONVERSIONMAP_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeToConversionMap").build();
+    private static final MarshallingInfo<Map> VOLUMETOPRODUCTCODES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeToProductCodes").build();
     private static final MarshallingInfo<Map> VOLUMETOVOLUMESIZE_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeToVolumeSize").build();
 
@@ -60,6 +62,7 @@ public class ConversionPropertiesMarshaller {
             protocolMarshaller.marshall(conversionProperties.getForceUefi(), FORCEUEFI_BINDING);
             protocolMarshaller.marshall(conversionProperties.getRootVolumeName(), ROOTVOLUMENAME_BINDING);
             protocolMarshaller.marshall(conversionProperties.getVolumeToConversionMap(), VOLUMETOCONVERSIONMAP_BINDING);
+            protocolMarshaller.marshall(conversionProperties.getVolumeToProductCodes(), VOLUMETOPRODUCTCODES_BINDING);
             protocolMarshaller.marshall(conversionProperties.getVolumeToVolumeSize(), VOLUMETOVOLUMESIZE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.kafkaconnect.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -35,6 +37,8 @@ public class CreateCustomPluginRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("location").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateCustomPluginRequestMarshaller instance = new CreateCustomPluginRequestMarshaller();
 
@@ -56,6 +60,7 @@ public class CreateCustomPluginRequestMarshaller {
             protocolMarshaller.marshall(createCustomPluginRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createCustomPluginRequest.getLocation(), LOCATION_BINDING);
             protocolMarshaller.marshall(createCustomPluginRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(createCustomPluginRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

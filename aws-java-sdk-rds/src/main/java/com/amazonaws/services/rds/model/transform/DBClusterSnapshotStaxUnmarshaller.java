@@ -179,6 +179,11 @@ public class DBClusterSnapshotStaxUnmarshaller implements Unmarshaller<DBCluster
                     dBClusterSnapshot.setDbClusterResourceId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("StorageThroughput", targetDepth)) {
+                    dBClusterSnapshot.setStorageThroughput(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBClusterSnapshot;

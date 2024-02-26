@@ -7642,7 +7642,7 @@ public class AmazonApiGatewayClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Changes information about a model.
+     * Changes information about a model. The maximum size of the model is 400 KB.
      * </p>
      * 
      * @param updateModelRequest

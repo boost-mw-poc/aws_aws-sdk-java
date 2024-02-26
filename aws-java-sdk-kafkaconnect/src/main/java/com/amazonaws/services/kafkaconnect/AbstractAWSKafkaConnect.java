@@ -53,6 +53,11 @@ public class AbstractAWSKafkaConnect implements AWSKafkaConnect {
     }
 
     @Override
+    public DeleteWorkerConfigurationResult deleteWorkerConfiguration(DeleteWorkerConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeConnectorResult describeConnector(DescribeConnectorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -78,7 +83,22 @@ public class AbstractAWSKafkaConnect implements AWSKafkaConnect {
     }
 
     @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListWorkerConfigurationsResult listWorkerConfigurations(ListWorkerConfigurationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

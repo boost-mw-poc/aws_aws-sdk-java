@@ -67,6 +67,13 @@ public class ConversionPropertiesJsonUnmarshaller implements Unmarshaller<Conver
                             .getUnmarshaller(String.class), new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class))).unmarshall(context));
                 }
+                if (context.testExpression("volumeToProductCodes", targetDepth)) {
+                    context.nextToken();
+                    conversionProperties.setVolumeToProductCodes(new MapUnmarshaller<String, java.util.List<ProductCode>>(
+                            context.getUnmarshaller(String.class), new ListUnmarshaller<ProductCode>(ProductCodeJsonUnmarshaller.getInstance())
+
+                    ).unmarshall(context));
+                }
                 if (context.testExpression("volumeToVolumeSize", targetDepth)) {
                     context.nextToken();
                     conversionProperties.setVolumeToVolumeSize(new MapUnmarshaller<String, Long>(context.getUnmarshaller(String.class), context

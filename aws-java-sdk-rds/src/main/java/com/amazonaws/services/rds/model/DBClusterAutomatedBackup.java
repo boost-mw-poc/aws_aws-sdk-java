@@ -197,6 +197,16 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
      * </p>
      */
     private String awsBackupRecoveryPointArn;
+    /**
+     * <p>
+     * The storage throughput for the automated backup. The throughput is automatically set based on the IOPS that you
+     * provision, and is not configurable.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private Integer storageThroughput;
 
     /**
      * <p>
@@ -1378,6 +1388,67 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The storage throughput for the automated backup. The throughput is automatically set based on the IOPS that you
+     * provision, and is not configurable.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        The storage throughput for the automated backup. The throughput is automatically set based on the IOPS
+     *        that you provision, and is not configurable.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setStorageThroughput(Integer storageThroughput) {
+        this.storageThroughput = storageThroughput;
+    }
+
+    /**
+     * <p>
+     * The storage throughput for the automated backup. The throughput is automatically set based on the IOPS that you
+     * provision, and is not configurable.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return The storage throughput for the automated backup. The throughput is automatically set based on the IOPS
+     *         that you provision, and is not configurable.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Integer getStorageThroughput() {
+        return this.storageThroughput;
+    }
+
+    /**
+     * <p>
+     * The storage throughput for the automated backup. The throughput is automatically set based on the IOPS that you
+     * provision, and is not configurable.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        The storage throughput for the automated backup. The throughput is automatically set based on the IOPS
+     *        that you provision, and is not configurable.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBClusterAutomatedBackup withStorageThroughput(Integer storageThroughput) {
+        setStorageThroughput(storageThroughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1436,7 +1507,9 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
         if (getIops() != null)
             sb.append("Iops: ").append(getIops()).append(",");
         if (getAwsBackupRecoveryPointArn() != null)
-            sb.append("AwsBackupRecoveryPointArn: ").append(getAwsBackupRecoveryPointArn());
+            sb.append("AwsBackupRecoveryPointArn: ").append(getAwsBackupRecoveryPointArn()).append(",");
+        if (getStorageThroughput() != null)
+            sb.append("StorageThroughput: ").append(getStorageThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -1548,6 +1621,10 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
             return false;
         if (other.getAwsBackupRecoveryPointArn() != null && other.getAwsBackupRecoveryPointArn().equals(this.getAwsBackupRecoveryPointArn()) == false)
             return false;
+        if (other.getStorageThroughput() == null ^ this.getStorageThroughput() == null)
+            return false;
+        if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -1580,6 +1657,7 @@ public class DBClusterAutomatedBackup implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         hashCode = prime * hashCode + ((getIops() == null) ? 0 : getIops().hashCode());
         hashCode = prime * hashCode + ((getAwsBackupRecoveryPointArn() == null) ? 0 : getAwsBackupRecoveryPointArn().hashCode());
+        hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         return hashCode;
     }
 

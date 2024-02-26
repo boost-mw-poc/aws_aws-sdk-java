@@ -51,6 +51,8 @@ public class CreateConnectorRequestMarshaller {
             .marshallLocationName("plugins").build();
     private static final MarshallingInfo<String> SERVICEEXECUTIONROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceExecutionRoleArn").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
     private static final MarshallingInfo<StructuredPojo> WORKERCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workerConfiguration").build();
 
@@ -81,6 +83,7 @@ public class CreateConnectorRequestMarshaller {
             protocolMarshaller.marshall(createConnectorRequest.getLogDelivery(), LOGDELIVERY_BINDING);
             protocolMarshaller.marshall(createConnectorRequest.getPlugins(), PLUGINS_BINDING);
             protocolMarshaller.marshall(createConnectorRequest.getServiceExecutionRoleArn(), SERVICEEXECUTIONROLEARN_BINDING);
+            protocolMarshaller.marshall(createConnectorRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createConnectorRequest.getWorkerConfiguration(), WORKERCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

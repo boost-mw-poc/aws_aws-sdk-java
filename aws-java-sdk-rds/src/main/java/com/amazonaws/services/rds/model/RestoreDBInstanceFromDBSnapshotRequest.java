@@ -704,7 +704,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private Integer storageThroughput;
     /**
      * <p>
-     * The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.
+     * The identifier for the Multi-AZ DB cluster snapshot to restore from.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -739,11 +739,6 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <li>
      * <p>
      * Can't be the identifier of an Aurora DB cluster snapshot.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
      * </p>
      * </li>
      * </ul>
@@ -5400,7 +5395,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.
+     * The identifier for the Multi-AZ DB cluster snapshot to restore from.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -5437,15 +5432,10 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Can't be the identifier of an Aurora DB cluster snapshot.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param dBClusterSnapshotIdentifier
-     *        The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.</p>
+     *        The identifier for the Multi-AZ DB cluster snapshot to restore from.</p>
      *        <p>
      *        For more information on Multi-AZ DB clusters, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
@@ -5481,11 +5471,6 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        Can't be the identifier of an Aurora DB cluster snapshot.
      *        </p>
      *        </li>
-     *        <li>
-     *        <p>
-     *        Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
-     *        </p>
-     *        </li>
      */
 
     public void setDBClusterSnapshotIdentifier(String dBClusterSnapshotIdentifier) {
@@ -5494,7 +5479,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.
+     * The identifier for the Multi-AZ DB cluster snapshot to restore from.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -5531,14 +5516,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Can't be the identifier of an Aurora DB cluster snapshot.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
-     * </p>
-     * </li>
      * </ul>
      * 
-     * @return The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.</p>
+     * @return The identifier for the Multi-AZ DB cluster snapshot to restore from.</p>
      *         <p>
      *         For more information on Multi-AZ DB clusters, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">
@@ -5574,11 +5554,6 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         Can't be the identifier of an Aurora DB cluster snapshot.
      *         </p>
      *         </li>
-     *         <li>
-     *         <p>
-     *         Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
-     *         </p>
-     *         </li>
      */
 
     public String getDBClusterSnapshotIdentifier() {
@@ -5587,7 +5562,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.
+     * The identifier for the Multi-AZ DB cluster snapshot to restore from.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -5624,15 +5599,10 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Can't be the identifier of an Aurora DB cluster snapshot.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param dBClusterSnapshotIdentifier
-     *        The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.</p>
+     *        The identifier for the Multi-AZ DB cluster snapshot to restore from.</p>
      *        <p>
      *        For more information on Multi-AZ DB clusters, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
@@ -5666,11 +5636,6 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <li>
      *        <p>
      *        Can't be the identifier of an Aurora DB cluster snapshot.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

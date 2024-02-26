@@ -201,6 +201,16 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * </p>
      */
     private String dbClusterResourceId;
+    /**
+     * <p>
+     * The storage throughput for the DB cluster snapshot. The throughput is automatically set based on the IOPS that
+     * you provision, and is not configurable.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private Integer storageThroughput;
 
     /**
      * <p>
@@ -1427,6 +1437,67 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The storage throughput for the DB cluster snapshot. The throughput is automatically set based on the IOPS that
+     * you provision, and is not configurable.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        The storage throughput for the DB cluster snapshot. The throughput is automatically set based on the IOPS
+     *        that you provision, and is not configurable.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setStorageThroughput(Integer storageThroughput) {
+        this.storageThroughput = storageThroughput;
+    }
+
+    /**
+     * <p>
+     * The storage throughput for the DB cluster snapshot. The throughput is automatically set based on the IOPS that
+     * you provision, and is not configurable.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return The storage throughput for the DB cluster snapshot. The throughput is automatically set based on the IOPS
+     *         that you provision, and is not configurable.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Integer getStorageThroughput() {
+        return this.storageThroughput;
+    }
+
+    /**
+     * <p>
+     * The storage throughput for the DB cluster snapshot. The throughput is automatically set based on the IOPS that
+     * you provision, and is not configurable.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param storageThroughput
+     *        The storage throughput for the DB cluster snapshot. The throughput is automatically set based on the IOPS
+     *        that you provision, and is not configurable.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBClusterSnapshot withStorageThroughput(Integer storageThroughput) {
+        setStorageThroughput(storageThroughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1487,7 +1558,9 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
         if (getStorageType() != null)
             sb.append("StorageType: ").append(getStorageType()).append(",");
         if (getDbClusterResourceId() != null)
-            sb.append("DbClusterResourceId: ").append(getDbClusterResourceId());
+            sb.append("DbClusterResourceId: ").append(getDbClusterResourceId()).append(",");
+        if (getStorageThroughput() != null)
+            sb.append("StorageThroughput: ").append(getStorageThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -1603,6 +1676,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
             return false;
         if (other.getDbClusterResourceId() != null && other.getDbClusterResourceId().equals(this.getDbClusterResourceId()) == false)
             return false;
+        if (other.getStorageThroughput() == null ^ this.getStorageThroughput() == null)
+            return false;
+        if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -1636,6 +1713,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
         hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         hashCode = prime * hashCode + ((getDbClusterResourceId() == null) ? 0 : getDbClusterResourceId().hashCode());
+        hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         return hashCode;
     }
 

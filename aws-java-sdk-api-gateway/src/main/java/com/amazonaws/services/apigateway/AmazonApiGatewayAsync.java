@@ -3335,7 +3335,7 @@ public interface AmazonApiGatewayAsync extends AmazonApiGateway {
 
     /**
      * <p>
-     * Changes information about a model.
+     * Changes information about a model. The maximum size of the model is 400 KB.
      * </p>
      * 
      * @param updateModelRequest
@@ -3347,7 +3347,7 @@ public interface AmazonApiGatewayAsync extends AmazonApiGateway {
 
     /**
      * <p>
-     * Changes information about a model.
+     * Changes information about a model. The maximum size of the model is 400 KB.
      * </p>
      * 
      * @param updateModelRequest

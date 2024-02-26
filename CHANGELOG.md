@@ -1,3 +1,20 @@
+# __1.12.667__ __2024-02-26__
+## __Amazon API Gateway__
+  - ### Features
+    - Documentation updates for Amazon API Gateway.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds support for gp3 data volumes for Multi-AZ DB Clusters.
+
+## __Elastic Disaster Recovery Service__
+  - ### Features
+    - Added volume status to DescribeSourceServer replicated volumes.
+
+## __Managed Streaming for Kafka Connect__
+  - ### Features
+    - Adds support for tagging, with new TagResource, UntagResource and ListTagsForResource APIs to manage tags and updates to existing APIs to allow tag on create. This release also adds support for the new DeleteWorkerConfiguration API.
+
 # __1.12.666__ __2024-02-23__
 ## __AWS AppSync__
   - ### Features

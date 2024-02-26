@@ -45,7 +45,8 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String description;
     /**
      * <p>
-     * The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4 model.
+     * The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4 model. The
+     * maximum size of the model is 400 KB.
      * </p>
      */
     private String schema;
@@ -178,12 +179,13 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4 model.
+     * The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4 model. The
+     * maximum size of the model is 400 KB.
      * </p>
      * 
      * @param schema
      *        The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4
-     *        model.
+     *        model. The maximum size of the model is 400 KB.
      */
 
     public void setSchema(String schema) {
@@ -192,11 +194,12 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4 model.
+     * The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4 model. The
+     * maximum size of the model is 400 KB.
      * </p>
      * 
      * @return The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4
-     *         model.
+     *         model. The maximum size of the model is 400 KB.
      */
 
     public String getSchema() {
@@ -205,12 +208,13 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4 model.
+     * The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4 model. The
+     * maximum size of the model is 400 KB.
      * </p>
      * 
      * @param schema
      *        The schema for the model. For <code>application/json</code> models, this should be JSON schema draft 4
-     *        model.
+     *        model. The maximum size of the model is 400 KB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

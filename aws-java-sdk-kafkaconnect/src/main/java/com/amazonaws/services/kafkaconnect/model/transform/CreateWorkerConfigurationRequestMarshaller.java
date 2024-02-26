@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.kafkaconnect.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +35,8 @@ public class CreateWorkerConfigurationRequestMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> PROPERTIESFILECONTENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("propertiesFileContent").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateWorkerConfigurationRequestMarshaller instance = new CreateWorkerConfigurationRequestMarshaller();
 
@@ -53,6 +57,7 @@ public class CreateWorkerConfigurationRequestMarshaller {
             protocolMarshaller.marshall(createWorkerConfigurationRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createWorkerConfigurationRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createWorkerConfigurationRequest.getPropertiesFileContent(), PROPERTIESFILECONTENT_BINDING);
+            protocolMarshaller.marshall(createWorkerConfigurationRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -37,6 +37,8 @@ public class WorkerConfigurationSummaryMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> WORKERCONFIGURATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workerConfigurationArn").build();
+    private static final MarshallingInfo<String> WORKERCONFIGURATIONSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workerConfigurationState").build();
 
     private static final WorkerConfigurationSummaryMarshaller instance = new WorkerConfigurationSummaryMarshaller();
 
@@ -59,6 +61,7 @@ public class WorkerConfigurationSummaryMarshaller {
             protocolMarshaller.marshall(workerConfigurationSummary.getLatestRevision(), LATESTREVISION_BINDING);
             protocolMarshaller.marshall(workerConfigurationSummary.getName(), NAME_BINDING);
             protocolMarshaller.marshall(workerConfigurationSummary.getWorkerConfigurationArn(), WORKERCONFIGURATIONARN_BINDING);
+            protocolMarshaller.marshall(workerConfigurationSummary.getWorkerConfigurationState(), WORKERCONFIGURATIONSTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

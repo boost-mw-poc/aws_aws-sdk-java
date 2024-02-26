@@ -68,6 +68,10 @@ public class WorkerConfigurationSummaryJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     workerConfigurationSummary.setWorkerConfigurationArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("workerConfigurationState", targetDepth)) {
+                    context.nextToken();
+                    workerConfigurationSummary.setWorkerConfigurationState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
