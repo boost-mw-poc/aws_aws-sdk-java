@@ -22,7 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * A structure that defines characteristics of an identity source that you can use to filter.
  * </p>
  * <p>
- * This data type is used as a request parameter for the <a
+ * This data type is a request parameter for the <a
  * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_ListIdentityStores.html"
  * >ListIdentityStores</a> operation.
  * </p>

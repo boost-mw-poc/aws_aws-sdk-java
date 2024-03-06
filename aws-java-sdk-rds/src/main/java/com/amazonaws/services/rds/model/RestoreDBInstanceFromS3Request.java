@@ -407,11 +407,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -3238,11 +3238,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -3251,11 +3251,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
-     *        Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     *        Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
-     *        <code>Iops</code> parameter.
+     *        If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for
+     *        the <code>Iops</code> parameter.
      *        </p>
      *        <p>
      *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -3270,11 +3270,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -3282,11 +3282,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @return Specifies the storage type to be associated with the DB instance.</p>
      *         <p>
-     *         Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     *         Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      *         </p>
      *         <p>
-     *         If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
-     *         <code>Iops</code> parameter.
+     *         If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for
+     *         the <code>Iops</code> parameter.
      *         </p>
      *         <p>
      *         Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -3301,11 +3301,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Specifies the storage type to be associated with the DB instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * <p>
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
@@ -3314,11 +3314,11 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * @param storageType
      *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
-     *        Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     *        Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
-     *        <code>Iops</code> parameter.
+     *        If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for
+     *        the <code>Iops</code> parameter.
      *        </p>
      *        <p>
      *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>

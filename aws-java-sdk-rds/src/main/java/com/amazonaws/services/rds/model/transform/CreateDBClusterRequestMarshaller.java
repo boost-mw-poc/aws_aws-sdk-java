@@ -349,6 +349,10 @@ public class CreateDBClusterRequestMarshaller implements Marshaller<Request<Crea
             request.addParameter("EnableLocalWriteForwarding", StringUtils.fromBoolean(createDBClusterRequest.getEnableLocalWriteForwarding()));
         }
 
+        if (createDBClusterRequest.getCACertificateIdentifier() != null) {
+            request.addParameter("CACertificateIdentifier", StringUtils.fromString(createDBClusterRequest.getCACertificateIdentifier()));
+        }
+
         if (createDBClusterRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBClusterRequest.getSourceRegion()));
         }

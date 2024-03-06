@@ -37,7 +37,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * If you retry the operation with the same <code>ClientToken</code>, but with different parameters, the retry fails
-     * with an <code>IdempotentParameterMismatch</code> error.
+     * with an <code>ConflictException</code> error.
+     * </p>
+     * <p>
+     * Verified Permissions recognizes a <code>ClientToken</code> for eight hours. After eight hours, the next request
+     * with the same parameters performs the operation again regardless of the value of <code>ClientToken</code>.
      * </p>
      */
     private String clientToken;
@@ -67,7 +71,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * If you retry the operation with the same <code>ClientToken</code>, but with different parameters, the retry fails
-     * with an <code>IdempotentParameterMismatch</code> error.
+     * with an <code>ConflictException</code> error.
+     * </p>
+     * <p>
+     * Verified Permissions recognizes a <code>ClientToken</code> for eight hours. After eight hours, the next request
+     * with the same parameters performs the operation again regardless of the value of <code>ClientToken</code>.
      * </p>
      * 
      * @param clientToken
@@ -81,7 +89,12 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        If you retry the operation with the same <code>ClientToken</code>, but with different parameters, the
-     *        retry fails with an <code>IdempotentParameterMismatch</code> error.
+     *        retry fails with an <code>ConflictException</code> error.
+     *        </p>
+     *        <p>
+     *        Verified Permissions recognizes a <code>ClientToken</code> for eight hours. After eight hours, the next
+     *        request with the same parameters performs the operation again regardless of the value of
+     *        <code>ClientToken</code>.
      */
 
     public void setClientToken(String clientToken) {
@@ -100,7 +113,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * If you retry the operation with the same <code>ClientToken</code>, but with different parameters, the retry fails
-     * with an <code>IdempotentParameterMismatch</code> error.
+     * with an <code>ConflictException</code> error.
+     * </p>
+     * <p>
+     * Verified Permissions recognizes a <code>ClientToken</code> for eight hours. After eight hours, the next request
+     * with the same parameters performs the operation again regardless of the value of <code>ClientToken</code>.
      * </p>
      * 
      * @return Specifies a unique, case-sensitive ID that you provide to ensure the idempotency of the request. This
@@ -113,7 +130,12 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </p>
      *         <p>
      *         If you retry the operation with the same <code>ClientToken</code>, but with different parameters, the
-     *         retry fails with an <code>IdempotentParameterMismatch</code> error.
+     *         retry fails with an <code>ConflictException</code> error.
+     *         </p>
+     *         <p>
+     *         Verified Permissions recognizes a <code>ClientToken</code> for eight hours. After eight hours, the next
+     *         request with the same parameters performs the operation again regardless of the value of
+     *         <code>ClientToken</code>.
      */
 
     public String getClientToken() {
@@ -132,7 +154,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * If you retry the operation with the same <code>ClientToken</code>, but with different parameters, the retry fails
-     * with an <code>IdempotentParameterMismatch</code> error.
+     * with an <code>ConflictException</code> error.
+     * </p>
+     * <p>
+     * Verified Permissions recognizes a <code>ClientToken</code> for eight hours. After eight hours, the next request
+     * with the same parameters performs the operation again regardless of the value of <code>ClientToken</code>.
      * </p>
      * 
      * @param clientToken
@@ -146,7 +172,12 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        If you retry the operation with the same <code>ClientToken</code>, but with different parameters, the
-     *        retry fails with an <code>IdempotentParameterMismatch</code> error.
+     *        retry fails with an <code>ConflictException</code> error.
+     *        </p>
+     *        <p>
+     *        Verified Permissions recognizes a <code>ClientToken</code> for eight hours. After eight hours, the next
+     *        request with the same parameters performs the operation again regardless of the value of
+     *        <code>ClientToken</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

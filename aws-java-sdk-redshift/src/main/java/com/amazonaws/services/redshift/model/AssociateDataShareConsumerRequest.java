@@ -27,7 +27,7 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare that the consumer is to use with the account or the namespace.
+     * The Amazon Resource Name (ARN) of the datashare that the consumer is to use.
      * </p>
      */
     private String dataShareArn;
@@ -39,7 +39,7 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
     private Boolean associateEntireAccount;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the consumer that is associated with the datashare.
+     * The Amazon Resource Name (ARN) of the consumer namespace associated with the datashare.
      * </p>
      */
     private String consumerArn;
@@ -59,12 +59,11 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare that the consumer is to use with the account or the namespace.
+     * The Amazon Resource Name (ARN) of the datashare that the consumer is to use.
      * </p>
      * 
      * @param dataShareArn
-     *        The Amazon Resource Name (ARN) of the datashare that the consumer is to use with the account or the
-     *        namespace.
+     *        The Amazon Resource Name (ARN) of the datashare that the consumer is to use.
      */
 
     public void setDataShareArn(String dataShareArn) {
@@ -73,11 +72,10 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare that the consumer is to use with the account or the namespace.
+     * The Amazon Resource Name (ARN) of the datashare that the consumer is to use.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the datashare that the consumer is to use with the account or the
-     *         namespace.
+     * @return The Amazon Resource Name (ARN) of the datashare that the consumer is to use.
      */
 
     public String getDataShareArn() {
@@ -86,12 +84,11 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare that the consumer is to use with the account or the namespace.
+     * The Amazon Resource Name (ARN) of the datashare that the consumer is to use.
      * </p>
      * 
      * @param dataShareArn
-     *        The Amazon Resource Name (ARN) of the datashare that the consumer is to use with the account or the
-     *        namespace.
+     *        The Amazon Resource Name (ARN) of the datashare that the consumer is to use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,11 +151,11 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the consumer that is associated with the datashare.
+     * The Amazon Resource Name (ARN) of the consumer namespace associated with the datashare.
      * </p>
      * 
      * @param consumerArn
-     *        The Amazon Resource Name (ARN) of the consumer that is associated with the datashare.
+     *        The Amazon Resource Name (ARN) of the consumer namespace associated with the datashare.
      */
 
     public void setConsumerArn(String consumerArn) {
@@ -167,10 +164,10 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the consumer that is associated with the datashare.
+     * The Amazon Resource Name (ARN) of the consumer namespace associated with the datashare.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the consumer that is associated with the datashare.
+     * @return The Amazon Resource Name (ARN) of the consumer namespace associated with the datashare.
      */
 
     public String getConsumerArn() {
@@ -179,11 +176,11 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the consumer that is associated with the datashare.
+     * The Amazon Resource Name (ARN) of the consumer namespace associated with the datashare.
      * </p>
      * 
      * @param consumerArn
-     *        The Amazon Resource Name (ARN) of the consumer that is associated with the datashare.
+     *        The Amazon Resource Name (ARN) of the consumer namespace associated with the datashare.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

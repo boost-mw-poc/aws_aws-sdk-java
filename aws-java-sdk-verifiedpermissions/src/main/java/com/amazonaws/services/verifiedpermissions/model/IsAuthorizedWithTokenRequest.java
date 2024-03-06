@@ -35,16 +35,24 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies an identity token for the principal to be authorized. This token is provided to you by the identity
-     * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, or both.
+     * provider (IdP) associated with the specified identity source. You must specify either an <code>accessToken</code>
+     * , an <code>identityToken</code>, or both.
+     * </p>
+     * <p>
+     * Must be an ID token. Verified Permissions returns an error if the <code>token_use</code> claim in the submitted
+     * token isn't <code>id</code>.
      * </p>
      */
     private String identityToken;
     /**
      * <p>
      * Specifies an access token for the principal to be authorized. This token is provided to you by the identity
-     * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * , or an <code>IdentityToken</code>, or both.
+     * provider (IdP) associated with the specified identity source. You must specify either an <code>accessToken</code>
+     * , an <code>identityToken</code>, or both.
+     * </p>
+     * <p>
+     * Must be an access token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     * submitted token isn't <code>access</code>.
      * </p>
      */
     private String accessToken;
@@ -143,14 +151,21 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies an identity token for the principal to be authorized. This token is provided to you by the identity
-     * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, or both.
+     * provider (IdP) associated with the specified identity source. You must specify either an <code>accessToken</code>
+     * , an <code>identityToken</code>, or both.
+     * </p>
+     * <p>
+     * Must be an ID token. Verified Permissions returns an error if the <code>token_use</code> claim in the submitted
+     * token isn't <code>id</code>.
      * </p>
      * 
      * @param identityToken
      *        Specifies an identity token for the principal to be authorized. This token is provided to you by the
      *        identity provider (IdP) associated with the specified identity source. You must specify either an
-     *        <code>AccessToken</code> or an <code>IdentityToken</code>, or both.
+     *        <code>accessToken</code>, an <code>identityToken</code>, or both.</p>
+     *        <p>
+     *        Must be an ID token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     *        submitted token isn't <code>id</code>.
      */
 
     public void setIdentityToken(String identityToken) {
@@ -160,13 +175,20 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies an identity token for the principal to be authorized. This token is provided to you by the identity
-     * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, or both.
+     * provider (IdP) associated with the specified identity source. You must specify either an <code>accessToken</code>
+     * , an <code>identityToken</code>, or both.
+     * </p>
+     * <p>
+     * Must be an ID token. Verified Permissions returns an error if the <code>token_use</code> claim in the submitted
+     * token isn't <code>id</code>.
      * </p>
      * 
      * @return Specifies an identity token for the principal to be authorized. This token is provided to you by the
      *         identity provider (IdP) associated with the specified identity source. You must specify either an
-     *         <code>AccessToken</code> or an <code>IdentityToken</code>, or both.
+     *         <code>accessToken</code>, an <code>identityToken</code>, or both.</p>
+     *         <p>
+     *         Must be an ID token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     *         submitted token isn't <code>id</code>.
      */
 
     public String getIdentityToken() {
@@ -176,14 +198,21 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies an identity token for the principal to be authorized. This token is provided to you by the identity
-     * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * or an <code>IdentityToken</code>, or both.
+     * provider (IdP) associated with the specified identity source. You must specify either an <code>accessToken</code>
+     * , an <code>identityToken</code>, or both.
+     * </p>
+     * <p>
+     * Must be an ID token. Verified Permissions returns an error if the <code>token_use</code> claim in the submitted
+     * token isn't <code>id</code>.
      * </p>
      * 
      * @param identityToken
      *        Specifies an identity token for the principal to be authorized. This token is provided to you by the
      *        identity provider (IdP) associated with the specified identity source. You must specify either an
-     *        <code>AccessToken</code> or an <code>IdentityToken</code>, or both.
+     *        <code>accessToken</code>, an <code>identityToken</code>, or both.</p>
+     *        <p>
+     *        Must be an ID token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     *        submitted token isn't <code>id</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,14 +224,21 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies an access token for the principal to be authorized. This token is provided to you by the identity
-     * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * , or an <code>IdentityToken</code>, or both.
+     * provider (IdP) associated with the specified identity source. You must specify either an <code>accessToken</code>
+     * , an <code>identityToken</code>, or both.
+     * </p>
+     * <p>
+     * Must be an access token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     * submitted token isn't <code>access</code>.
      * </p>
      * 
      * @param accessToken
      *        Specifies an access token for the principal to be authorized. This token is provided to you by the
      *        identity provider (IdP) associated with the specified identity source. You must specify either an
-     *        <code>AccessToken</code>, or an <code>IdentityToken</code>, or both.
+     *        <code>accessToken</code>, an <code>identityToken</code>, or both.</p>
+     *        <p>
+     *        Must be an access token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     *        submitted token isn't <code>access</code>.
      */
 
     public void setAccessToken(String accessToken) {
@@ -212,13 +248,20 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies an access token for the principal to be authorized. This token is provided to you by the identity
-     * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * , or an <code>IdentityToken</code>, or both.
+     * provider (IdP) associated with the specified identity source. You must specify either an <code>accessToken</code>
+     * , an <code>identityToken</code>, or both.
+     * </p>
+     * <p>
+     * Must be an access token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     * submitted token isn't <code>access</code>.
      * </p>
      * 
      * @return Specifies an access token for the principal to be authorized. This token is provided to you by the
      *         identity provider (IdP) associated with the specified identity source. You must specify either an
-     *         <code>AccessToken</code>, or an <code>IdentityToken</code>, or both.
+     *         <code>accessToken</code>, an <code>identityToken</code>, or both.</p>
+     *         <p>
+     *         Must be an access token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     *         submitted token isn't <code>access</code>.
      */
 
     public String getAccessToken() {
@@ -228,14 +271,21 @@ public class IsAuthorizedWithTokenRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies an access token for the principal to be authorized. This token is provided to you by the identity
-     * provider (IdP) associated with the specified identity source. You must specify either an <code>AccessToken</code>
-     * , or an <code>IdentityToken</code>, or both.
+     * provider (IdP) associated with the specified identity source. You must specify either an <code>accessToken</code>
+     * , an <code>identityToken</code>, or both.
+     * </p>
+     * <p>
+     * Must be an access token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     * submitted token isn't <code>access</code>.
      * </p>
      * 
      * @param accessToken
      *        Specifies an access token for the principal to be authorized. This token is provided to you by the
      *        identity provider (IdP) associated with the specified identity source. You must specify either an
-     *        <code>AccessToken</code>, or an <code>IdentityToken</code>, or both.
+     *        <code>accessToken</code>, an <code>identityToken</code>, or both.</p>
+     *        <p>
+     *        Must be an access token. Verified Permissions returns an error if the <code>token_use</code> claim in the
+     *        submitted token isn't <code>access</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

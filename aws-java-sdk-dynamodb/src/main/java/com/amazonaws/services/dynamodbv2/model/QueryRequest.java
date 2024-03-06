@@ -221,9 +221,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </p>
      * </note>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Query.FilterExpression"
-     * >Filter Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.FilterExpression.html">Filter
+     * Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      */
     private String filterExpression;
@@ -2105,9 +2105,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </p>
      * </note>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Query.FilterExpression"
-     * >Filter Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.FilterExpression.html">Filter
+     * Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * 
      * @param filterExpression
@@ -2125,9 +2125,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      *        </p>
      *        </note>
      *        <p>
-     *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Query.FilterExpression"
-     *        >Filter Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.FilterExpression.html">Filter
+     *        Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      */
 
     public void setFilterExpression(String filterExpression) {
@@ -2150,9 +2150,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </p>
      * </note>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Query.FilterExpression"
-     * >Filter Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.FilterExpression.html">Filter
+     * Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * 
      * @return A string that contains conditions that DynamoDB applies after the <code>Query</code> operation, but
@@ -2169,8 +2169,8 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      *         </p>
      *         </note>
      *         <p>
-     *         For more information, see <a href=
-     *         "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Query.FilterExpression"
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.FilterExpression.html"
      *         >Filter Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      */
 
@@ -2194,9 +2194,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </p>
      * </note>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Query.FilterExpression"
-     * >Filter Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.FilterExpression.html">Filter
+     * Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * 
      * @param filterExpression
@@ -2214,9 +2214,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      *        </p>
      *        </note>
      *        <p>
-     *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Query.FilterExpression"
-     *        >Filter Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.FilterExpression.html">Filter
+     *        Expressions</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

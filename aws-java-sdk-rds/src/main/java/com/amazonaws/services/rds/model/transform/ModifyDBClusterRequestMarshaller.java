@@ -297,6 +297,10 @@ public class ModifyDBClusterRequestMarshaller implements Marshaller<Request<Modi
             request.addParameter("EnableLimitlessDatabase", StringUtils.fromBoolean(modifyDBClusterRequest.getEnableLimitlessDatabase()));
         }
 
+        if (modifyDBClusterRequest.getCACertificateIdentifier() != null) {
+            request.addParameter("CACertificateIdentifier", StringUtils.fromString(modifyDBClusterRequest.getCACertificateIdentifier()));
+        }
+
         return request;
     }
 

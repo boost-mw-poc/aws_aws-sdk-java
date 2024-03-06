@@ -42,6 +42,10 @@ public class LifecycleExecutionResourceMarshaller {
             .marshallLocationName("snapshots").build();
     private static final MarshallingInfo<List> IMAGEURIS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("imageUris").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("unixTimestamp").build();
 
     private static final LifecycleExecutionResourceMarshaller instance = new LifecycleExecutionResourceMarshaller();
 
@@ -66,6 +70,8 @@ public class LifecycleExecutionResourceMarshaller {
             protocolMarshaller.marshall(lifecycleExecutionResource.getRegion(), REGION_BINDING);
             protocolMarshaller.marshall(lifecycleExecutionResource.getSnapshots(), SNAPSHOTS_BINDING);
             protocolMarshaller.marshall(lifecycleExecutionResource.getImageUris(), IMAGEURIS_BINDING);
+            protocolMarshaller.marshall(lifecycleExecutionResource.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(lifecycleExecutionResource.getEndTime(), ENDTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

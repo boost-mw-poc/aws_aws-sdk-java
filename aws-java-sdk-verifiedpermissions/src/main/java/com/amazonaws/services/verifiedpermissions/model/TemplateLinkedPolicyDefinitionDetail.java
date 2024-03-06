@@ -19,14 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about a policy that was
- * </p>
- * <p/>
- * <p>
- * created by instantiating a policy template.
- * </p>
- * <p>
- * This
+ * Contains information about a policy that was created by instantiating a policy template.
  * </p>
  * 
  * @see <a

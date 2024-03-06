@@ -687,8 +687,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * <p>
      * If you choose to migrate your DB instance from using standard storage to using Provisioned IOPS, or from using
@@ -702,7 +702,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * and creating a DB snapshot of the instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
      * Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -5779,8 +5779,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * <p>
      * If you choose to migrate your DB instance from using standard storage to using Provisioned IOPS, or from using
@@ -5794,7 +5794,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * and creating a DB snapshot of the instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
      * Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -5803,8 +5803,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param storageType
      *        The storage type to associate with the DB instance.</p>
      *        <p>
-     *        If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the
-     *        <code>Iops</code> parameter.
+     *        If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for
+     *        the <code>Iops</code> parameter.
      *        </p>
      *        <p>
      *        If you choose to migrate your DB instance from using standard storage to using Provisioned IOPS, or from
@@ -5818,7 +5818,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        instance, creating a read replica for the instance, and creating a DB snapshot of the instance.
      *        </p>
      *        <p>
-     *        Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     *        Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      *        </p>
      *        <p>
      *        Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -5833,8 +5833,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * <p>
      * If you choose to migrate your DB instance from using standard storage to using Provisioned IOPS, or from using
@@ -5848,7 +5848,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * and creating a DB snapshot of the instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
      * Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -5856,8 +5856,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return The storage type to associate with the DB instance.</p>
      *         <p>
-     *         If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the
-     *         <code>Iops</code> parameter.
+     *         If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for
+     *         the <code>Iops</code> parameter.
      *         </p>
      *         <p>
      *         If you choose to migrate your DB instance from using standard storage to using Provisioned IOPS, or from
@@ -5872,7 +5872,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         instance.
      *         </p>
      *         <p>
-     *         Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     *         Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      *         </p>
      *         <p>
      *         Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -5887,8 +5887,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * <p>
      * If you choose to migrate your DB instance from using standard storage to using Provisioned IOPS, or from using
@@ -5902,7 +5902,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * and creating a DB snapshot of the instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
      * Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -5911,8 +5911,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param storageType
      *        The storage type to associate with the DB instance.</p>
      *        <p>
-     *        If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the
-     *        <code>Iops</code> parameter.
+     *        If you specify <code>io1</code>), <code>io2</code>, or <code>gp3</code> you must also include a value for
+     *        the <code>Iops</code> parameter.
      *        </p>
      *        <p>
      *        If you choose to migrate your DB instance from using standard storage to using Provisioned IOPS, or from
@@ -5926,7 +5926,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        instance, creating a read replica for the instance, and creating a DB snapshot of the instance.
      *        </p>
      *        <p>
-     *        Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     *        Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      *        </p>
      *        <p>
      *        Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.

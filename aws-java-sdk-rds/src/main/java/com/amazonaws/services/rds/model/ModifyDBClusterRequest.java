@@ -947,6 +947,15 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private Boolean enableLimitlessDatabase;
+    /**
+     * <p>
+     * The CA certificate identifier to use for the DB cluster's server certificate.
+     * </p>
+     * <p>
+     * Valid for Cluster Type: Multi-AZ DB clusters
+     * </p>
+     */
+    private String cACertificateIdentifier;
 
     /**
      * <p>
@@ -7061,6 +7070,61 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The CA certificate identifier to use for the DB cluster's server certificate.
+     * </p>
+     * <p>
+     * Valid for Cluster Type: Multi-AZ DB clusters
+     * </p>
+     * 
+     * @param cACertificateIdentifier
+     *        The CA certificate identifier to use for the DB cluster's server certificate.</p>
+     *        <p>
+     *        Valid for Cluster Type: Multi-AZ DB clusters
+     */
+
+    public void setCACertificateIdentifier(String cACertificateIdentifier) {
+        this.cACertificateIdentifier = cACertificateIdentifier;
+    }
+
+    /**
+     * <p>
+     * The CA certificate identifier to use for the DB cluster's server certificate.
+     * </p>
+     * <p>
+     * Valid for Cluster Type: Multi-AZ DB clusters
+     * </p>
+     * 
+     * @return The CA certificate identifier to use for the DB cluster's server certificate.</p>
+     *         <p>
+     *         Valid for Cluster Type: Multi-AZ DB clusters
+     */
+
+    public String getCACertificateIdentifier() {
+        return this.cACertificateIdentifier;
+    }
+
+    /**
+     * <p>
+     * The CA certificate identifier to use for the DB cluster's server certificate.
+     * </p>
+     * <p>
+     * Valid for Cluster Type: Multi-AZ DB clusters
+     * </p>
+     * 
+     * @param cACertificateIdentifier
+     *        The CA certificate identifier to use for the DB cluster's server certificate.</p>
+     *        <p>
+     *        Valid for Cluster Type: Multi-AZ DB clusters
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyDBClusterRequest withCACertificateIdentifier(String cACertificateIdentifier) {
+        setCACertificateIdentifier(cACertificateIdentifier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -7159,7 +7223,9 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         if (getAwsBackupRecoveryPointArn() != null)
             sb.append("AwsBackupRecoveryPointArn: ").append(getAwsBackupRecoveryPointArn()).append(",");
         if (getEnableLimitlessDatabase() != null)
-            sb.append("EnableLimitlessDatabase: ").append(getEnableLimitlessDatabase());
+            sb.append("EnableLimitlessDatabase: ").append(getEnableLimitlessDatabase()).append(",");
+        if (getCACertificateIdentifier() != null)
+            sb.append("CACertificateIdentifier: ").append(getCACertificateIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -7354,6 +7420,10 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getEnableLimitlessDatabase() != null && other.getEnableLimitlessDatabase().equals(this.getEnableLimitlessDatabase()) == false)
             return false;
+        if (other.getCACertificateIdentifier() == null ^ this.getCACertificateIdentifier() == null)
+            return false;
+        if (other.getCACertificateIdentifier() != null && other.getCACertificateIdentifier().equals(this.getCACertificateIdentifier()) == false)
+            return false;
         return true;
     }
 
@@ -7406,6 +7476,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getEnableLocalWriteForwarding() == null) ? 0 : getEnableLocalWriteForwarding().hashCode());
         hashCode = prime * hashCode + ((getAwsBackupRecoveryPointArn() == null) ? 0 : getAwsBackupRecoveryPointArn().hashCode());
         hashCode = prime * hashCode + ((getEnableLimitlessDatabase() == null) ? 0 : getEnableLimitlessDatabase().hashCode());
+        hashCode = prime * hashCode + ((getCACertificateIdentifier() == null) ? 0 : getCACertificateIdentifier().hashCode());
         return hashCode;
     }
 

@@ -420,7 +420,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
      * Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -431,8 +431,8 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * </li>
      * </ul>
@@ -3443,7 +3443,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
      * Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -3454,8 +3454,8 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * </li>
      * </ul>
@@ -3463,7 +3463,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * @param storageType
      *        The storage type to associate with the DB instance.</p>
      *        <p>
-     *        Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     *        Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      *        </p>
      *        <p>
      *        Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -3474,8 +3474,8 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        <ul>
      *        <li>
      *        <p>
-     *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
-     *        <code>Iops</code> parameter.
+     *        If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for
+     *        the <code>Iops</code> parameter.
      *        </p>
      *        </li>
      */
@@ -3489,7 +3489,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
      * Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -3500,15 +3500,15 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * </li>
      * </ul>
      * 
      * @return The storage type to associate with the DB instance.</p>
      *         <p>
-     *         Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     *         Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      *         </p>
      *         <p>
      *         Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -3519,8 +3519,8 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *         <ul>
      *         <li>
      *         <p>
-     *         If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
-     *         <code>Iops</code> parameter.
+     *         If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for
+     *         the <code>Iops</code> parameter.
      *         </p>
      *         </li>
      */
@@ -3534,7 +3534,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * The storage type to associate with the DB instance.
      * </p>
      * <p>
-     * Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     * Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      * </p>
      * <p>
      * Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -3545,8 +3545,8 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <ul>
      * <li>
      * <p>
-     * If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the <code>Iops</code>
-     * parameter.
+     * If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for the
+     * <code>Iops</code> parameter.
      * </p>
      * </li>
      * </ul>
@@ -3554,7 +3554,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * @param storageType
      *        The storage type to associate with the DB instance.</p>
      *        <p>
-     *        Valid Values: <code>gp2 | gp3 | io1 | standard</code>
+     *        Valid Values: <code>gp2 | gp3 | io1 | io2 | standard</code>
      *        </p>
      *        <p>
      *        Default: <code>io1</code>, if the <code>Iops</code> parameter is specified. Otherwise, <code>gp2</code>.
@@ -3565,8 +3565,8 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        <ul>
      *        <li>
      *        <p>
-     *        If you specify <code>io1</code> or <code>gp3</code>, you must also include a value for the
-     *        <code>Iops</code> parameter.
+     *        If you specify <code>io1</code>, <code>io2</code>, or <code>gp3</code>, you must also include a value for
+     *        the <code>Iops</code> parameter.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

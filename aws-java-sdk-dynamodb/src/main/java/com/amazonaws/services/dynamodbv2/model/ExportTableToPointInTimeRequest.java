@@ -64,6 +64,11 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      * </p>
+     * <note>
+     * <p>
+     * S3BucketOwner is a required parameter when exporting to a S3 bucket in another account.
+     * </p>
+     * </note>
      */
     private String s3BucketOwner;
     /**
@@ -346,9 +351,17 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      * </p>
+     * <note>
+     * <p>
+     * S3BucketOwner is a required parameter when exporting to a S3 bucket in another account.
+     * </p>
+     * </note>
      * 
      * @param s3BucketOwner
-     *        The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
+     *        The ID of the Amazon Web Services account that owns the bucket the export will be stored in.</p> <note>
+     *        <p>
+     *        S3BucketOwner is a required parameter when exporting to a S3 bucket in another account.
+     *        </p>
      */
 
     public void setS3BucketOwner(String s3BucketOwner) {
@@ -359,8 +372,16 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      * </p>
+     * <note>
+     * <p>
+     * S3BucketOwner is a required parameter when exporting to a S3 bucket in another account.
+     * </p>
+     * </note>
      * 
-     * @return The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
+     * @return The ID of the Amazon Web Services account that owns the bucket the export will be stored in.</p> <note>
+     *         <p>
+     *         S3BucketOwner is a required parameter when exporting to a S3 bucket in another account.
+     *         </p>
      */
 
     public String getS3BucketOwner() {
@@ -371,9 +392,17 @@ public class ExportTableToPointInTimeRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
      * </p>
+     * <note>
+     * <p>
+     * S3BucketOwner is a required parameter when exporting to a S3 bucket in another account.
+     * </p>
+     * </note>
      * 
      * @param s3BucketOwner
-     *        The ID of the Amazon Web Services account that owns the bucket the export will be stored in.
+     *        The ID of the Amazon Web Services account that owns the bucket the export will be stored in.</p> <note>
+     *        <p>
+     *        S3BucketOwner is a required parameter when exporting to a S3 bucket in another account.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

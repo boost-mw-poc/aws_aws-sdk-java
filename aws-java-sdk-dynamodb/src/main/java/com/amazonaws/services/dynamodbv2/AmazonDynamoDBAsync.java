@@ -3802,7 +3802,7 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * 2017.11.29</a> of global tables. If you are using global tables <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
      * 2019.11.21</a> you can use <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_DescribeTable.html">DescribeTable</a>
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_UpdateTable.html">UpdateTable</a>
      * instead.
      * </p>
      * <p>
@@ -3866,7 +3866,7 @@ public interface AmazonDynamoDBAsync extends AmazonDynamoDB {
      * 2017.11.29</a> of global tables. If you are using global tables <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
      * 2019.11.21</a> you can use <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_DescribeTable.html">DescribeTable</a>
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_UpdateTable.html">UpdateTable</a>
      * instead.
      * </p>
      * <p>

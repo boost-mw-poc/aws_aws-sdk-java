@@ -27,7 +27,7 @@ public class DescribeDataSharesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the datashare to describe details of.
+     * The Amazon resource name (ARN) of the datashare to describe details of.
      * </p>
      */
     private String dataShareArn;
@@ -51,11 +51,11 @@ public class DescribeDataSharesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the datashare to describe details of.
+     * The Amazon resource name (ARN) of the datashare to describe details of.
      * </p>
      * 
      * @param dataShareArn
-     *        The identifier of the datashare to describe details of.
+     *        The Amazon resource name (ARN) of the datashare to describe details of.
      */
 
     public void setDataShareArn(String dataShareArn) {
@@ -64,10 +64,10 @@ public class DescribeDataSharesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the datashare to describe details of.
+     * The Amazon resource name (ARN) of the datashare to describe details of.
      * </p>
      * 
-     * @return The identifier of the datashare to describe details of.
+     * @return The Amazon resource name (ARN) of the datashare to describe details of.
      */
 
     public String getDataShareArn() {
@@ -76,11 +76,11 @@ public class DescribeDataSharesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the datashare to describe details of.
+     * The Amazon resource name (ARN) of the datashare to describe details of.
      * </p>
      * 
      * @param dataShareArn
-     *        The identifier of the datashare to describe details of.
+     *        The Amazon resource name (ARN) of the datashare to describe details of.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

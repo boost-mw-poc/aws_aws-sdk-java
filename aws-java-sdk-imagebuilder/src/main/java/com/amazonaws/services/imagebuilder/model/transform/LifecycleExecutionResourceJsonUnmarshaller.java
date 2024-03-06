@@ -81,6 +81,14 @@ public class LifecycleExecutionResourceJsonUnmarshaller implements Unmarshaller<
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("startTime", targetDepth)) {
+                    context.nextToken();
+                    lifecycleExecutionResource.setStartTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("endTime", targetDepth)) {
+                    context.nextToken();
+                    lifecycleExecutionResource.setEndTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

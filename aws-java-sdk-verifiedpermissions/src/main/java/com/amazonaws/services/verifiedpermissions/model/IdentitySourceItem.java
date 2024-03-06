@@ -22,9 +22,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * A structure that defines an identity source.
  * </p>
  * <p>
- * This data type is used as a request parameter for the <a
- * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_ListIdentityStores.html"
- * >ListIdentityStores</a> operation.
+ * This data type is a response parameter to the <a
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_ListIdentitySources.html"
+ * >ListIdentitySources</a> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/IdentitySourceItem"
@@ -44,6 +44,7 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
      * A structure that contains the details of the associated identity provider (IdP).
      * </p>
      */
+    @Deprecated
     private IdentitySourceItemDetails details;
     /**
      * <p>
@@ -69,6 +70,12 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String principalEntityType;
+    /**
+     * <p>
+     * Contains configuration information about an identity source.
+     * </p>
+     */
+    private ConfigurationItem configuration;
 
     /**
      * <p>
@@ -118,7 +125,7 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
      * @param details
      *        A structure that contains the details of the associated identity provider (IdP).
      */
-
+    @Deprecated
     public void setDetails(IdentitySourceItemDetails details) {
         this.details = details;
     }
@@ -130,7 +137,7 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
      * 
      * @return A structure that contains the details of the associated identity provider (IdP).
      */
-
+    @Deprecated
     public IdentitySourceItemDetails getDetails() {
         return this.details;
     }
@@ -144,7 +151,7 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
      *        A structure that contains the details of the associated identity provider (IdP).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public IdentitySourceItem withDetails(IdentitySourceItemDetails details) {
         setDetails(details);
         return this;
@@ -311,6 +318,46 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Contains configuration information about an identity source.
+     * </p>
+     * 
+     * @param configuration
+     *        Contains configuration information about an identity source.
+     */
+
+    public void setConfiguration(ConfigurationItem configuration) {
+        this.configuration = configuration;
+    }
+
+    /**
+     * <p>
+     * Contains configuration information about an identity source.
+     * </p>
+     * 
+     * @return Contains configuration information about an identity source.
+     */
+
+    public ConfigurationItem getConfiguration() {
+        return this.configuration;
+    }
+
+    /**
+     * <p>
+     * Contains configuration information about an identity source.
+     * </p>
+     * 
+     * @param configuration
+     *        Contains configuration information about an identity source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdentitySourceItem withConfiguration(ConfigurationItem configuration) {
+        setConfiguration(configuration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -333,7 +380,9 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
         if (getPolicyStoreId() != null)
             sb.append("PolicyStoreId: ").append(getPolicyStoreId()).append(",");
         if (getPrincipalEntityType() != null)
-            sb.append("PrincipalEntityType: ").append("***Sensitive Data Redacted***");
+            sb.append("PrincipalEntityType: ").append("***Sensitive Data Redacted***").append(",");
+        if (getConfiguration() != null)
+            sb.append("Configuration: ").append(getConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -372,6 +421,10 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getPrincipalEntityType() != null && other.getPrincipalEntityType().equals(this.getPrincipalEntityType()) == false)
             return false;
+        if (other.getConfiguration() == null ^ this.getConfiguration() == null)
+            return false;
+        if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -386,6 +439,7 @@ public class IdentitySourceItem implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getLastUpdatedDate() == null) ? 0 : getLastUpdatedDate().hashCode());
         hashCode = prime * hashCode + ((getPolicyStoreId() == null) ? 0 : getPolicyStoreId().hashCode());
         hashCode = prime * hashCode + ((getPrincipalEntityType() == null) ? 0 : getPrincipalEntityType().hashCode());
+        hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
         return hashCode;
     }
 

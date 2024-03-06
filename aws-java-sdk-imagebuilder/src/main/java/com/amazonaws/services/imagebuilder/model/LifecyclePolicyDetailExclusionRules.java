@@ -30,7 +30,8 @@ public class LifecyclePolicyDetailExclusionRules implements Serializable, Clonea
 
     /**
      * <p>
-     * Contains a list of tags that Image Builder uses to skip lifecycle actions for resources that have them.
+     * Contains a list of tags that Image Builder uses to skip lifecycle actions for Image Builder image resources that
+     * have them.
      * </p>
      */
     private java.util.Map<String, String> tagMap;
@@ -43,10 +44,12 @@ public class LifecyclePolicyDetailExclusionRules implements Serializable, Clonea
 
     /**
      * <p>
-     * Contains a list of tags that Image Builder uses to skip lifecycle actions for resources that have them.
+     * Contains a list of tags that Image Builder uses to skip lifecycle actions for Image Builder image resources that
+     * have them.
      * </p>
      * 
-     * @return Contains a list of tags that Image Builder uses to skip lifecycle actions for resources that have them.
+     * @return Contains a list of tags that Image Builder uses to skip lifecycle actions for Image Builder image
+     *         resources that have them.
      */
 
     public java.util.Map<String, String> getTagMap() {
@@ -55,11 +58,13 @@ public class LifecyclePolicyDetailExclusionRules implements Serializable, Clonea
 
     /**
      * <p>
-     * Contains a list of tags that Image Builder uses to skip lifecycle actions for resources that have them.
+     * Contains a list of tags that Image Builder uses to skip lifecycle actions for Image Builder image resources that
+     * have them.
      * </p>
      * 
      * @param tagMap
-     *        Contains a list of tags that Image Builder uses to skip lifecycle actions for resources that have them.
+     *        Contains a list of tags that Image Builder uses to skip lifecycle actions for Image Builder image
+     *        resources that have them.
      */
 
     public void setTagMap(java.util.Map<String, String> tagMap) {
@@ -68,11 +73,13 @@ public class LifecyclePolicyDetailExclusionRules implements Serializable, Clonea
 
     /**
      * <p>
-     * Contains a list of tags that Image Builder uses to skip lifecycle actions for resources that have them.
+     * Contains a list of tags that Image Builder uses to skip lifecycle actions for Image Builder image resources that
+     * have them.
      * </p>
      * 
      * @param tagMap
-     *        Contains a list of tags that Image Builder uses to skip lifecycle actions for resources that have them.
+     *        Contains a list of tags that Image Builder uses to skip lifecycle actions for Image Builder image
+     *        resources that have them.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

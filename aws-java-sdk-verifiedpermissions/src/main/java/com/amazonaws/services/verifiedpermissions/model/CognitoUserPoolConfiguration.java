@@ -25,8 +25,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * This data type is used as a field that is part of an <a
  * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_Configuration.html">Configuration</a>
- * structure that is used as a parameter to the <a
- * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_Configuration.html">Configuration</a>.
+ * structure that is used as a parameter to <a
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html"
+ * >CreateIdentitySource</a>.
  * </p>
  * <p>
  * Example:

@@ -1181,6 +1181,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private Boolean enableLocalWriteForwarding;
+    /**
+     * <p>
+     * The CA certificate identifier to use for the DB cluster's server certificate.
+     * </p>
+     * <p>
+     * Valid for Cluster Type: Multi-AZ DB clusters
+     * </p>
+     */
+    private String cACertificateIdentifier;
     /** The region where the source instance is located. */
     private String sourceRegion;
 
@@ -8881,6 +8890,61 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The CA certificate identifier to use for the DB cluster's server certificate.
+     * </p>
+     * <p>
+     * Valid for Cluster Type: Multi-AZ DB clusters
+     * </p>
+     * 
+     * @param cACertificateIdentifier
+     *        The CA certificate identifier to use for the DB cluster's server certificate.</p>
+     *        <p>
+     *        Valid for Cluster Type: Multi-AZ DB clusters
+     */
+
+    public void setCACertificateIdentifier(String cACertificateIdentifier) {
+        this.cACertificateIdentifier = cACertificateIdentifier;
+    }
+
+    /**
+     * <p>
+     * The CA certificate identifier to use for the DB cluster's server certificate.
+     * </p>
+     * <p>
+     * Valid for Cluster Type: Multi-AZ DB clusters
+     * </p>
+     * 
+     * @return The CA certificate identifier to use for the DB cluster's server certificate.</p>
+     *         <p>
+     *         Valid for Cluster Type: Multi-AZ DB clusters
+     */
+
+    public String getCACertificateIdentifier() {
+        return this.cACertificateIdentifier;
+    }
+
+    /**
+     * <p>
+     * The CA certificate identifier to use for the DB cluster's server certificate.
+     * </p>
+     * <p>
+     * Valid for Cluster Type: Multi-AZ DB clusters
+     * </p>
+     * 
+     * @param cACertificateIdentifier
+     *        The CA certificate identifier to use for the DB cluster's server certificate.</p>
+     *        <p>
+     *        Valid for Cluster Type: Multi-AZ DB clusters
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBClusterRequest withCACertificateIdentifier(String cACertificateIdentifier) {
+        setCACertificateIdentifier(cACertificateIdentifier);
+        return this;
+    }
+
+    /**
      * The region where the source instance is located.
      * 
      * @param sourceRegion
@@ -9030,6 +9094,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("MasterUserSecretKmsKeyId: ").append(getMasterUserSecretKmsKeyId()).append(",");
         if (getEnableLocalWriteForwarding() != null)
             sb.append("EnableLocalWriteForwarding: ").append(getEnableLocalWriteForwarding()).append(",");
+        if (getCACertificateIdentifier() != null)
+            sb.append("CACertificateIdentifier: ").append(getCACertificateIdentifier()).append(",");
         if (getSourceRegion() != null)
             sb.append("SourceRegion: ").append(getSourceRegion());
         sb.append("}");
@@ -9258,6 +9324,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getEnableLocalWriteForwarding() != null && other.getEnableLocalWriteForwarding().equals(this.getEnableLocalWriteForwarding()) == false)
             return false;
+        if (other.getCACertificateIdentifier() == null ^ this.getCACertificateIdentifier() == null)
+            return false;
+        if (other.getCACertificateIdentifier() != null && other.getCACertificateIdentifier().equals(this.getCACertificateIdentifier()) == false)
+            return false;
         if (other.getSourceRegion() == null ^ this.getSourceRegion() == null)
             return false;
         if (other.getSourceRegion() != null && other.getSourceRegion().equals(this.getSourceRegion()) == false)
@@ -9322,6 +9392,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getManageMasterUserPassword() == null) ? 0 : getManageMasterUserPassword().hashCode());
         hashCode = prime * hashCode + ((getMasterUserSecretKmsKeyId() == null) ? 0 : getMasterUserSecretKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getEnableLocalWriteForwarding() == null) ? 0 : getEnableLocalWriteForwarding().hashCode());
+        hashCode = prime * hashCode + ((getCACertificateIdentifier() == null) ? 0 : getCACertificateIdentifier().hashCode());
         hashCode = prime * hashCode + ((getSourceRegion() == null) ? 0 : getSourceRegion().hashCode());
         return hashCode;
     }

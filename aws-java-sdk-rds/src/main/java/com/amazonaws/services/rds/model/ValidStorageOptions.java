@@ -29,7 +29,7 @@ public class ValidStorageOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The valid storage types for your DB instance. For example: gp2, gp3, io1.
+     * The valid storage types for your DB instance. For example: gp2, gp3, io1, io2.
      * </p>
      */
     private String storageType;
@@ -74,11 +74,11 @@ public class ValidStorageOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The valid storage types for your DB instance. For example: gp2, gp3, io1.
+     * The valid storage types for your DB instance. For example: gp2, gp3, io1, io2.
      * </p>
      * 
      * @param storageType
-     *        The valid storage types for your DB instance. For example: gp2, gp3, io1.
+     *        The valid storage types for your DB instance. For example: gp2, gp3, io1, io2.
      */
 
     public void setStorageType(String storageType) {
@@ -87,10 +87,10 @@ public class ValidStorageOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The valid storage types for your DB instance. For example: gp2, gp3, io1.
+     * The valid storage types for your DB instance. For example: gp2, gp3, io1, io2.
      * </p>
      * 
-     * @return The valid storage types for your DB instance. For example: gp2, gp3, io1.
+     * @return The valid storage types for your DB instance. For example: gp2, gp3, io1, io2.
      */
 
     public String getStorageType() {
@@ -99,11 +99,11 @@ public class ValidStorageOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The valid storage types for your DB instance. For example: gp2, gp3, io1.
+     * The valid storage types for your DB instance. For example: gp2, gp3, io1, io2.
      * </p>
      * 
      * @param storageType
-     *        The valid storage types for your DB instance. For example: gp2, gp3, io1.
+     *        The valid storage types for your DB instance. For example: gp2, gp3, io1, io2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

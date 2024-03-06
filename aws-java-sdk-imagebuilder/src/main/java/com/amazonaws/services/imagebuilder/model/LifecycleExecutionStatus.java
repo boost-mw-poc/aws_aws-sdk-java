@@ -24,7 +24,8 @@ public enum LifecycleExecutionStatus {
     CANCELLED("CANCELLED"),
     CANCELLING("CANCELLING"),
     FAILED("FAILED"),
-    SUCCESS("SUCCESS");
+    SUCCESS("SUCCESS"),
+    PENDING("PENDING");
 
     private String value;
 

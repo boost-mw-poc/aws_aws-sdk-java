@@ -39,6 +39,8 @@ public class IdentitySourceItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("policyStoreId").build();
     private static final MarshallingInfo<String> PRINCIPALENTITYTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("principalEntityType").build();
+    private static final MarshallingInfo<StructuredPojo> CONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuration").build();
 
     private static final IdentitySourceItemMarshaller instance = new IdentitySourceItemMarshaller();
 
@@ -62,6 +64,7 @@ public class IdentitySourceItemMarshaller {
             protocolMarshaller.marshall(identitySourceItem.getLastUpdatedDate(), LASTUPDATEDDATE_BINDING);
             protocolMarshaller.marshall(identitySourceItem.getPolicyStoreId(), POLICYSTOREID_BINDING);
             protocolMarshaller.marshall(identitySourceItem.getPrincipalEntityType(), PRINCIPALENTITYTYPE_BINDING);
+            protocolMarshaller.marshall(identitySourceItem.getConfiguration(), CONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

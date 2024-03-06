@@ -27,7 +27,7 @@ public class DescribeDataSharesForConsumerRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the consumer that returns in the list of datashares.
+     * The Amazon Resource Name (ARN) of the consumer namespace that returns in the list of datashares.
      * </p>
      */
     private String consumerArn;
@@ -59,11 +59,11 @@ public class DescribeDataSharesForConsumerRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the consumer that returns in the list of datashares.
+     * The Amazon Resource Name (ARN) of the consumer namespace that returns in the list of datashares.
      * </p>
      * 
      * @param consumerArn
-     *        The Amazon Resource Name (ARN) of the consumer that returns in the list of datashares.
+     *        The Amazon Resource Name (ARN) of the consumer namespace that returns in the list of datashares.
      */
 
     public void setConsumerArn(String consumerArn) {
@@ -72,10 +72,10 @@ public class DescribeDataSharesForConsumerRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the consumer that returns in the list of datashares.
+     * The Amazon Resource Name (ARN) of the consumer namespace that returns in the list of datashares.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the consumer that returns in the list of datashares.
+     * @return The Amazon Resource Name (ARN) of the consumer namespace that returns in the list of datashares.
      */
 
     public String getConsumerArn() {
@@ -84,11 +84,11 @@ public class DescribeDataSharesForConsumerRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the consumer that returns in the list of datashares.
+     * The Amazon Resource Name (ARN) of the consumer namespace that returns in the list of datashares.
      * </p>
      * 
      * @param consumerArn
-     *        The Amazon Resource Name (ARN) of the consumer that returns in the list of datashares.
+     *        The Amazon Resource Name (ARN) of the consumer namespace that returns in the list of datashares.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

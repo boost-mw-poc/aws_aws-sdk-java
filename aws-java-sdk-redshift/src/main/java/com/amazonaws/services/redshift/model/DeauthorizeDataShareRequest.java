@@ -27,7 +27,7 @@ public class DeauthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare to remove authorization from.
+     * The namespace Amazon Resource Name (ARN) of the datashare to remove authorization from.
      * </p>
      */
     private String dataShareArn;
@@ -41,11 +41,11 @@ public class DeauthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare to remove authorization from.
+     * The namespace Amazon Resource Name (ARN) of the datashare to remove authorization from.
      * </p>
      * 
      * @param dataShareArn
-     *        The Amazon Resource Name (ARN) of the datashare to remove authorization from.
+     *        The namespace Amazon Resource Name (ARN) of the datashare to remove authorization from.
      */
 
     public void setDataShareArn(String dataShareArn) {
@@ -54,10 +54,10 @@ public class DeauthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare to remove authorization from.
+     * The namespace Amazon Resource Name (ARN) of the datashare to remove authorization from.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the datashare to remove authorization from.
+     * @return The namespace Amazon Resource Name (ARN) of the datashare to remove authorization from.
      */
 
     public String getDataShareArn() {
@@ -66,11 +66,11 @@ public class DeauthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare to remove authorization from.
+     * The namespace Amazon Resource Name (ARN) of the datashare to remove authorization from.
      * </p>
      * 
      * @param dataShareArn
-     *        The Amazon Resource Name (ARN) of the datashare to remove authorization from.
+     *        The namespace Amazon Resource Name (ARN) of the datashare to remove authorization from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

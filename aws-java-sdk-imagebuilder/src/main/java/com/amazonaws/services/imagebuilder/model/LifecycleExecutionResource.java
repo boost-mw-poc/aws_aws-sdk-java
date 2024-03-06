@@ -88,6 +88,18 @@ public class LifecycleExecutionResource implements Serializable, Cloneable, Stru
      * </p>
      */
     private java.util.List<String> imageUris;
+    /**
+     * <p>
+     * The starting timestamp from the lifecycle action that was applied to the resource.
+     * </p>
+     */
+    private java.util.Date startTime;
+    /**
+     * <p>
+     * The ending timestamp from the lifecycle action that was applied to the resource.
+     * </p>
+     */
+    private java.util.Date endTime;
 
     /**
      * <p>
@@ -537,6 +549,86 @@ public class LifecycleExecutionResource implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The starting timestamp from the lifecycle action that was applied to the resource.
+     * </p>
+     * 
+     * @param startTime
+     *        The starting timestamp from the lifecycle action that was applied to the resource.
+     */
+
+    public void setStartTime(java.util.Date startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * <p>
+     * The starting timestamp from the lifecycle action that was applied to the resource.
+     * </p>
+     * 
+     * @return The starting timestamp from the lifecycle action that was applied to the resource.
+     */
+
+    public java.util.Date getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * <p>
+     * The starting timestamp from the lifecycle action that was applied to the resource.
+     * </p>
+     * 
+     * @param startTime
+     *        The starting timestamp from the lifecycle action that was applied to the resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LifecycleExecutionResource withStartTime(java.util.Date startTime) {
+        setStartTime(startTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ending timestamp from the lifecycle action that was applied to the resource.
+     * </p>
+     * 
+     * @param endTime
+     *        The ending timestamp from the lifecycle action that was applied to the resource.
+     */
+
+    public void setEndTime(java.util.Date endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * <p>
+     * The ending timestamp from the lifecycle action that was applied to the resource.
+     * </p>
+     * 
+     * @return The ending timestamp from the lifecycle action that was applied to the resource.
+     */
+
+    public java.util.Date getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * <p>
+     * The ending timestamp from the lifecycle action that was applied to the resource.
+     * </p>
+     * 
+     * @param endTime
+     *        The ending timestamp from the lifecycle action that was applied to the resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LifecycleExecutionResource withEndTime(java.util.Date endTime) {
+        setEndTime(endTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -561,7 +653,11 @@ public class LifecycleExecutionResource implements Serializable, Cloneable, Stru
         if (getSnapshots() != null)
             sb.append("Snapshots: ").append(getSnapshots()).append(",");
         if (getImageUris() != null)
-            sb.append("ImageUris: ").append(getImageUris());
+            sb.append("ImageUris: ").append(getImageUris()).append(",");
+        if (getStartTime() != null)
+            sb.append("StartTime: ").append(getStartTime()).append(",");
+        if (getEndTime() != null)
+            sb.append("EndTime: ").append(getEndTime());
         sb.append("}");
         return sb.toString();
     }
@@ -604,6 +700,14 @@ public class LifecycleExecutionResource implements Serializable, Cloneable, Stru
             return false;
         if (other.getImageUris() != null && other.getImageUris().equals(this.getImageUris()) == false)
             return false;
+        if (other.getStartTime() == null ^ this.getStartTime() == null)
+            return false;
+        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
+            return false;
+        if (other.getEndTime() == null ^ this.getEndTime() == null)
+            return false;
+        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
+            return false;
         return true;
     }
 
@@ -619,6 +723,8 @@ public class LifecycleExecutionResource implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
         hashCode = prime * hashCode + ((getSnapshots() == null) ? 0 : getSnapshots().hashCode());
         hashCode = prime * hashCode + ((getImageUris() == null) ? 0 : getImageUris().hashCode());
+        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
+        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         return hashCode;
     }
 

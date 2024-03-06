@@ -34,6 +34,7 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
      * A structure that describes the configuration of the identity source.
      * </p>
      */
+    @Deprecated
     private IdentitySourceDetails details;
     /**
      * <p>
@@ -59,6 +60,12 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      */
     private String principalEntityType;
+    /**
+     * <p>
+     * Contains configuration information about an identity source.
+     * </p>
+     */
+    private ConfigurationDetail configuration;
 
     /**
      * <p>
@@ -108,7 +115,7 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
      * @param details
      *        A structure that describes the configuration of the identity source.
      */
-
+    @Deprecated
     public void setDetails(IdentitySourceDetails details) {
         this.details = details;
     }
@@ -120,7 +127,7 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
      * 
      * @return A structure that describes the configuration of the identity source.
      */
-
+    @Deprecated
     public IdentitySourceDetails getDetails() {
         return this.details;
     }
@@ -134,7 +141,7 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
      *        A structure that describes the configuration of the identity source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public GetIdentitySourceResult withDetails(IdentitySourceDetails details) {
         setDetails(details);
         return this;
@@ -301,6 +308,46 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * Contains configuration information about an identity source.
+     * </p>
+     * 
+     * @param configuration
+     *        Contains configuration information about an identity source.
+     */
+
+    public void setConfiguration(ConfigurationDetail configuration) {
+        this.configuration = configuration;
+    }
+
+    /**
+     * <p>
+     * Contains configuration information about an identity source.
+     * </p>
+     * 
+     * @return Contains configuration information about an identity source.
+     */
+
+    public ConfigurationDetail getConfiguration() {
+        return this.configuration;
+    }
+
+    /**
+     * <p>
+     * Contains configuration information about an identity source.
+     * </p>
+     * 
+     * @param configuration
+     *        Contains configuration information about an identity source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetIdentitySourceResult withConfiguration(ConfigurationDetail configuration) {
+        setConfiguration(configuration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -323,7 +370,9 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
         if (getPolicyStoreId() != null)
             sb.append("PolicyStoreId: ").append(getPolicyStoreId()).append(",");
         if (getPrincipalEntityType() != null)
-            sb.append("PrincipalEntityType: ").append("***Sensitive Data Redacted***");
+            sb.append("PrincipalEntityType: ").append("***Sensitive Data Redacted***").append(",");
+        if (getConfiguration() != null)
+            sb.append("Configuration: ").append(getConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -362,6 +411,10 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getPrincipalEntityType() != null && other.getPrincipalEntityType().equals(this.getPrincipalEntityType()) == false)
             return false;
+        if (other.getConfiguration() == null ^ this.getConfiguration() == null)
+            return false;
+        if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -376,6 +429,7 @@ public class GetIdentitySourceResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getLastUpdatedDate() == null) ? 0 : getLastUpdatedDate().hashCode());
         hashCode = prime * hashCode + ((getPolicyStoreId() == null) ? 0 : getPolicyStoreId().hashCode());
         hashCode = prime * hashCode + ((getPrincipalEntityType() == null) ? 0 : getPrincipalEntityType().hashCode());
+        hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
         return hashCode;
     }
 

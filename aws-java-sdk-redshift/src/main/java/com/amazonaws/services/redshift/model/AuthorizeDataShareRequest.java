@@ -27,7 +27,7 @@ public class AuthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare that producers are to authorize sharing for.
+     * The Amazon Resource Name (ARN) of the datashare namespace that producers are to authorize sharing for.
      * </p>
      */
     private String dataShareArn;
@@ -47,11 +47,11 @@ public class AuthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare that producers are to authorize sharing for.
+     * The Amazon Resource Name (ARN) of the datashare namespace that producers are to authorize sharing for.
      * </p>
      * 
      * @param dataShareArn
-     *        The Amazon Resource Name (ARN) of the datashare that producers are to authorize sharing for.
+     *        The Amazon Resource Name (ARN) of the datashare namespace that producers are to authorize sharing for.
      */
 
     public void setDataShareArn(String dataShareArn) {
@@ -60,10 +60,10 @@ public class AuthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare that producers are to authorize sharing for.
+     * The Amazon Resource Name (ARN) of the datashare namespace that producers are to authorize sharing for.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the datashare that producers are to authorize sharing for.
+     * @return The Amazon Resource Name (ARN) of the datashare namespace that producers are to authorize sharing for.
      */
 
     public String getDataShareArn() {
@@ -72,11 +72,11 @@ public class AuthorizeDataShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the datashare that producers are to authorize sharing for.
+     * The Amazon Resource Name (ARN) of the datashare namespace that producers are to authorize sharing for.
      * </p>
      * 
      * @param dataShareArn
-     *        The Amazon Resource Name (ARN) of the datashare that producers are to authorize sharing for.
+     *        The Amazon Resource Name (ARN) of the datashare namespace that producers are to authorize sharing for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

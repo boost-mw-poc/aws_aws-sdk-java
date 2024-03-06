@@ -86,6 +86,8 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
      */
     private String storageType;
 
+    private CertificateDetails certificateDetails;
+
     /**
      * @param pendingCloudwatchLogsExports
      */
@@ -508,6 +510,32 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
     }
 
     /**
+     * @param certificateDetails
+     */
+
+    public void setCertificateDetails(CertificateDetails certificateDetails) {
+        this.certificateDetails = certificateDetails;
+    }
+
+    /**
+     * @return
+     */
+
+    public CertificateDetails getCertificateDetails() {
+        return this.certificateDetails;
+    }
+
+    /**
+     * @param certificateDetails
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterPendingModifiedValues withCertificateDetails(CertificateDetails certificateDetails) {
+        setCertificateDetails(certificateDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -538,7 +566,9 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
         if (getIops() != null)
             sb.append("Iops: ").append(getIops()).append(",");
         if (getStorageType() != null)
-            sb.append("StorageType: ").append(getStorageType());
+            sb.append("StorageType: ").append(getStorageType()).append(",");
+        if (getCertificateDetails() != null)
+            sb.append("CertificateDetails: ").append(getCertificateDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -595,6 +625,10 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
             return false;
         if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
             return false;
+        if (other.getCertificateDetails() == null ^ this.getCertificateDetails() == null)
+            return false;
+        if (other.getCertificateDetails() != null && other.getCertificateDetails().equals(this.getCertificateDetails()) == false)
+            return false;
         return true;
     }
 
@@ -613,6 +647,7 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getRdsCustomClusterConfiguration() == null) ? 0 : getRdsCustomClusterConfiguration().hashCode());
         hashCode = prime * hashCode + ((getIops() == null) ? 0 : getIops().hashCode());
         hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
+        hashCode = prime * hashCode + ((getCertificateDetails() == null) ? 0 : getCertificateDetails().hashCode());
         return hashCode;
     }
 

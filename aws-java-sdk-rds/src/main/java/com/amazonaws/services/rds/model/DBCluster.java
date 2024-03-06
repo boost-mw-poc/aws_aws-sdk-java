@@ -658,6 +658,8 @@ public class DBCluster implements Serializable, Cloneable {
      */
     private Integer storageThroughput;
 
+    private CertificateDetails certificateDetails;
+
     /**
      * <p>
      * For all database engines except Amazon Aurora, <code>AllocatedStorage</code> specifies the allocated storage size
@@ -5280,6 +5282,32 @@ public class DBCluster implements Serializable, Cloneable {
     }
 
     /**
+     * @param certificateDetails
+     */
+
+    public void setCertificateDetails(CertificateDetails certificateDetails) {
+        this.certificateDetails = certificateDetails;
+    }
+
+    /**
+     * @return
+     */
+
+    public CertificateDetails getCertificateDetails() {
+        return this.certificateDetails;
+    }
+
+    /**
+     * @param certificateDetails
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withCertificateDetails(CertificateDetails certificateDetails) {
+        setCertificateDetails(certificateDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5446,7 +5474,9 @@ public class DBCluster implements Serializable, Cloneable {
         if (getLimitlessDatabase() != null)
             sb.append("LimitlessDatabase: ").append(getLimitlessDatabase()).append(",");
         if (getStorageThroughput() != null)
-            sb.append("StorageThroughput: ").append(getStorageThroughput());
+            sb.append("StorageThroughput: ").append(getStorageThroughput()).append(",");
+        if (getCertificateDetails() != null)
+            sb.append("CertificateDetails: ").append(getCertificateDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -5782,6 +5812,10 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
             return false;
+        if (other.getCertificateDetails() == null ^ this.getCertificateDetails() == null)
+            return false;
+        if (other.getCertificateDetails() != null && other.getCertificateDetails().equals(this.getCertificateDetails()) == false)
+            return false;
         return true;
     }
 
@@ -5868,6 +5902,7 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getAwsBackupRecoveryPointArn() == null) ? 0 : getAwsBackupRecoveryPointArn().hashCode());
         hashCode = prime * hashCode + ((getLimitlessDatabase() == null) ? 0 : getLimitlessDatabase().hashCode());
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
+        hashCode = prime * hashCode + ((getCertificateDetails() == null) ? 0 : getCertificateDetails().hashCode());
         return hashCode;
     }
 

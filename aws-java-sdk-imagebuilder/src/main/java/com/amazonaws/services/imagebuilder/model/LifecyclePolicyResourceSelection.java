@@ -36,7 +36,8 @@ public class LifecyclePolicyResourceSelection implements Serializable, Cloneable
     private java.util.List<LifecyclePolicyResourceSelectionRecipe> recipes;
     /**
      * <p>
-     * A list of tags that are used as selection criteria for the resources that the lifecycle policy applies to.
+     * A list of tags that are used as selection criteria for the Image Builder image resources that the lifecycle
+     * policy applies to.
      * </p>
      */
     private java.util.Map<String, String> tagMap;
@@ -117,11 +118,12 @@ public class LifecyclePolicyResourceSelection implements Serializable, Cloneable
 
     /**
      * <p>
-     * A list of tags that are used as selection criteria for the resources that the lifecycle policy applies to.
+     * A list of tags that are used as selection criteria for the Image Builder image resources that the lifecycle
+     * policy applies to.
      * </p>
      * 
-     * @return A list of tags that are used as selection criteria for the resources that the lifecycle policy applies
-     *         to.
+     * @return A list of tags that are used as selection criteria for the Image Builder image resources that the
+     *         lifecycle policy applies to.
      */
 
     public java.util.Map<String, String> getTagMap() {
@@ -130,11 +132,13 @@ public class LifecyclePolicyResourceSelection implements Serializable, Cloneable
 
     /**
      * <p>
-     * A list of tags that are used as selection criteria for the resources that the lifecycle policy applies to.
+     * A list of tags that are used as selection criteria for the Image Builder image resources that the lifecycle
+     * policy applies to.
      * </p>
      * 
      * @param tagMap
-     *        A list of tags that are used as selection criteria for the resources that the lifecycle policy applies to.
+     *        A list of tags that are used as selection criteria for the Image Builder image resources that the
+     *        lifecycle policy applies to.
      */
 
     public void setTagMap(java.util.Map<String, String> tagMap) {
@@ -143,11 +147,13 @@ public class LifecyclePolicyResourceSelection implements Serializable, Cloneable
 
     /**
      * <p>
-     * A list of tags that are used as selection criteria for the resources that the lifecycle policy applies to.
+     * A list of tags that are used as selection criteria for the Image Builder image resources that the lifecycle
+     * policy applies to.
      * </p>
      * 
      * @param tagMap
-     *        A list of tags that are used as selection criteria for the resources that the lifecycle policy applies to.
+     *        A list of tags that are used as selection criteria for the Image Builder image resources that the
+     *        lifecycle policy applies to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

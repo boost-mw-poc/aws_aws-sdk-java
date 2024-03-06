@@ -218,8 +218,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </note> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -267,8 +267,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </note> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -314,8 +314,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </note> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -356,8 +356,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </note> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -386,8 +386,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </note> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -411,8 +411,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </note> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -440,8 +440,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -464,8 +464,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1057,8 +1057,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1080,8 +1080,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1106,8 +1106,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1127,8 +1127,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1166,7 +1166,7 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </li>
      * <li>
      * <p>
-     * When you edit a static policy, You can change only certain elements of a static policy:
+     * When you edit a static policy, you can change only certain elements of a static policy:
      * </p>
      * <ul>
      * <li>
@@ -1215,8 +1215,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </note> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1249,7 +1249,7 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </li>
      * <li>
      * <p>
-     * When you edit a static policy, You can change only certain elements of a static policy:
+     * When you edit a static policy, you can change only certain elements of a static policy:
      * </p>
      * <ul>
      * <li>
@@ -1298,8 +1298,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </note> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1323,8 +1323,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1343,8 +1343,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1375,8 +1375,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </important> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 
@@ -1402,8 +1402,8 @@ public interface AmazonVerifiedPermissionsAsync extends AmazonVerifiedPermission
      * </important> <note>
      * <p>
      * Verified Permissions is <i> <a href="https://wikipedia.org/wiki/Eventual_consistency">eventually consistent</a>
-     * </i>. It can take a few seconds for a new or changed element to be propagate through the service and be visible
-     * in the results of other Verified Permissions operations.
+     * </i>. It can take a few seconds for a new or changed element to propagate through the service and be visible in
+     * the results of other Verified Permissions operations.
      * </p>
      * </note>
      * 

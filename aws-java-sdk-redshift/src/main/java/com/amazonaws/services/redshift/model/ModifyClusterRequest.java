@@ -402,6 +402,22 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The option to change the port of an Amazon Redshift cluster.
      * </p>
+     * <p>
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For clusters with ra3 nodes - Select a port within the ranges <code>5431-5455</code> or <code>8191-8215</code>.
+     * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to these ranges.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     * </p>
+     * </li>
+     * </ul>
      */
     private Integer port;
     /**
@@ -2936,9 +2952,41 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The option to change the port of an Amazon Redshift cluster.
      * </p>
+     * <p>
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For clusters with ra3 nodes - Select a port within the ranges <code>5431-5455</code> or <code>8191-8215</code>.
+     * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to these ranges.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param port
-     *        The option to change the port of an Amazon Redshift cluster.
+     *        The option to change the port of an Amazon Redshift cluster.</p>
+     *        <p>
+     *        Valid Values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For clusters with ra3 nodes - Select a port within the ranges <code>5431-5455</code> or
+     *        <code>8191-8215</code>. (If you have an existing cluster with ra3 nodes, it isn't required that you change
+     *        the port to these ranges.)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     *        </p>
+     *        </li>
      */
 
     public void setPort(Integer port) {
@@ -2949,8 +2997,40 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The option to change the port of an Amazon Redshift cluster.
      * </p>
+     * <p>
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For clusters with ra3 nodes - Select a port within the ranges <code>5431-5455</code> or <code>8191-8215</code>.
+     * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to these ranges.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The option to change the port of an Amazon Redshift cluster.
+     * @return The option to change the port of an Amazon Redshift cluster.</p>
+     *         <p>
+     *         Valid Values:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For clusters with ra3 nodes - Select a port within the ranges <code>5431-5455</code> or
+     *         <code>8191-8215</code>. (If you have an existing cluster with ra3 nodes, it isn't required that you
+     *         change the port to these ranges.)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     *         </p>
+     *         </li>
      */
 
     public Integer getPort() {
@@ -2961,9 +3041,41 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The option to change the port of an Amazon Redshift cluster.
      * </p>
+     * <p>
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For clusters with ra3 nodes - Select a port within the ranges <code>5431-5455</code> or <code>8191-8215</code>.
+     * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to these ranges.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param port
-     *        The option to change the port of an Amazon Redshift cluster.
+     *        The option to change the port of an Amazon Redshift cluster.</p>
+     *        <p>
+     *        Valid Values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For clusters with ra3 nodes - Select a port within the ranges <code>5431-5455</code> or
+     *        <code>8191-8215</code>. (If you have an existing cluster with ra3 nodes, it isn't required that you change
+     *        the port to these ranges.)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For clusters with ds2 or dc2 nodes - Select a port within the range <code>1150-65535</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

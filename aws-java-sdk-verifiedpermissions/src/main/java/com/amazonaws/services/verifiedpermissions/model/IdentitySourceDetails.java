@@ -22,14 +22,17 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * A structure that contains configuration of the identity source.
  * </p>
  * <p>
- * This data type is used as a response parameter for the <a
- * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html"
- * >CreateIdentitySource</a> operation.
+ * This data type was a response parameter for the <a
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_GetIdentitySource.html"
+ * >GetIdentitySource</a> operation. Replaced by <a
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_ConfigurationDetail.html"
+ * >ConfigurationDetail</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/IdentitySourceDetails"
  *      target="_top">AWS API Documentation</a>
  */
+@Deprecated
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class IdentitySourceDetails implements Serializable, Cloneable, StructuredPojo {
 
@@ -39,6 +42,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      * identity source.
      * </p>
      */
+    @Deprecated
     private java.util.List<String> clientIds;
     /**
      * <p>
@@ -47,6 +51,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      * store.
      * </p>
      */
+    @Deprecated
     private String userPoolArn;
     /**
      * <p>
@@ -58,6 +63,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      * <code>https://cognito-idp.<i>&lt;region&gt;</i>.amazonaws.com/<i>&lt;user-pool-id&gt;</i>/.well-known/openid-configuration</code>
      * </p>
      */
+    @Deprecated
     private String discoveryUrl;
     /**
      * <p>
@@ -67,6 +73,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      * At this time, the only valid value is <code>cognito</code>.
      * </p>
      */
+    @Deprecated
     private String openIdIssuer;
 
     /**
@@ -78,7 +85,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      * @return The application client IDs associated with the specified Amazon Cognito user pool that are enabled for
      *         this identity source.
      */
-
+    @Deprecated
     public java.util.List<String> getClientIds() {
         return clientIds;
     }
@@ -93,7 +100,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *        The application client IDs associated with the specified Amazon Cognito user pool that are enabled for
      *        this identity source.
      */
-
+    @Deprecated
     public void setClientIds(java.util.Collection<String> clientIds) {
         if (clientIds == null) {
             this.clientIds = null;
@@ -119,7 +126,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *        this identity source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public IdentitySourceDetails withClientIds(String... clientIds) {
         if (this.clientIds == null) {
             setClientIds(new java.util.ArrayList<String>(clientIds.length));
@@ -141,7 +148,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *        this identity source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public IdentitySourceDetails withClientIds(java.util.Collection<String> clientIds) {
         setClientIds(clientIds);
         return this;
@@ -159,7 +166,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *        Name (ARN)</a> of the Amazon Cognito user pool whose identities are accessible to this Verified
      *        Permissions policy store.
      */
-
+    @Deprecated
     public void setUserPoolArn(String userPoolArn) {
         this.userPoolArn = userPoolArn;
     }
@@ -175,7 +182,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *         Name (ARN)</a> of the Amazon Cognito user pool whose identities are accessible to this Verified
      *         Permissions policy store.
      */
-
+    @Deprecated
     public String getUserPoolArn() {
         return this.userPoolArn;
     }
@@ -193,7 +200,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *        Permissions policy store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public IdentitySourceDetails withUserPoolArn(String userPoolArn) {
         setUserPoolArn(userPoolArn);
         return this;
@@ -216,7 +223,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *        <p>
      *        <code>https://cognito-idp.<i>&lt;region&gt;</i>.amazonaws.com/<i>&lt;user-pool-id&gt;</i>/.well-known/openid-configuration</code>
      */
-
+    @Deprecated
     public void setDiscoveryUrl(String discoveryUrl) {
         this.discoveryUrl = discoveryUrl;
     }
@@ -237,7 +244,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *         <p>
      *         <code>https://cognito-idp.<i>&lt;region&gt;</i>.amazonaws.com/<i>&lt;user-pool-id&gt;</i>/.well-known/openid-configuration</code>
      */
-
+    @Deprecated
     public String getDiscoveryUrl() {
         return this.discoveryUrl;
     }
@@ -260,7 +267,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *        <code>https://cognito-idp.<i>&lt;region&gt;</i>.amazonaws.com/<i>&lt;user-pool-id&gt;</i>/.well-known/openid-configuration</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public IdentitySourceDetails withDiscoveryUrl(String discoveryUrl) {
         setDiscoveryUrl(discoveryUrl);
         return this;
@@ -280,7 +287,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *        At this time, the only valid value is <code>cognito</code>.
      * @see OpenIdIssuer
      */
-
+    @Deprecated
     public void setOpenIdIssuer(String openIdIssuer) {
         this.openIdIssuer = openIdIssuer;
     }
@@ -298,7 +305,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      *         At this time, the only valid value is <code>cognito</code>.
      * @see OpenIdIssuer
      */
-
+    @Deprecated
     public String getOpenIdIssuer() {
         return this.openIdIssuer;
     }
@@ -318,7 +325,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OpenIdIssuer
      */
-
+    @Deprecated
     public IdentitySourceDetails withOpenIdIssuer(String openIdIssuer) {
         setOpenIdIssuer(openIdIssuer);
         return this;
@@ -339,7 +346,7 @@ public class IdentitySourceDetails implements Serializable, Cloneable, Structure
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OpenIdIssuer
      */
-
+    @Deprecated
     public IdentitySourceDetails withOpenIdIssuer(OpenIdIssuer openIdIssuer) {
         this.openIdIssuer = openIdIssuer.toString();
         return this;

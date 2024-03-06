@@ -48,7 +48,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code> <code>2.8.1</code>
      * </p>
      */
     private String airflowVersion;
@@ -354,7 +354,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code> <code>2.8.1</code>
      * </p>
      * 
      * @param airflowVersion
@@ -364,7 +364,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        Amazon Managed Workflows for Apache Airflow (MWAA)</a>.</p>
      *        <p>
      *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
+     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code> <code>2.8.1</code>
      */
 
     public void setAirflowVersion(String airflowVersion) {
@@ -379,7 +379,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code> <code>2.8.1</code>
      * </p>
      * 
      * @return The Apache Airflow version for your environment. If no value is specified, it defaults to the latest
@@ -388,7 +388,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *         Amazon Managed Workflows for Apache Airflow (MWAA)</a>.</p>
      *         <p>
      *         Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     *         <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
+     *         <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code> <code>2.8.1</code>
      */
 
     public String getAirflowVersion() {
@@ -403,7 +403,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code> <code>2.8.1</code>
      * </p>
      * 
      * @param airflowVersion
@@ -413,7 +413,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        Amazon Managed Workflows for Apache Airflow (MWAA)</a>.</p>
      *        <p>
      *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
+     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code> <code>2.8.1</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
