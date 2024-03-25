@@ -52,6 +52,10 @@ public class ResourceJsonUnmarshaller implements Unmarshaller<Resource, JsonUnma
                     context.nextToken();
                     resource.setEndpointId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Cidr", targetDepth)) {
+                    context.nextToken();
+                    resource.setCidr(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Region", targetDepth)) {
                     context.nextToken();
                     resource.setRegion(context.getUnmarshaller(String.class).unmarshall(context));

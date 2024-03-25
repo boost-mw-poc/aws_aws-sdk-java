@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum SourceAuthType {
 
-    OAUTH("OAUTH");
+    OAUTH("OAUTH"),
+    CODECONNECTIONS("CODECONNECTIONS");
 
     private String value;
 

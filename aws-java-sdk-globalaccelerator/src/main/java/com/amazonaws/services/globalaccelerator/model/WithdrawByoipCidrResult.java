@@ -25,18 +25,18 @@ public class WithdrawByoipCidrResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Information about the address pool.
+     * Information about the BYOIP address pool.
      * </p>
      */
     private ByoipCidr byoipCidr;
 
     /**
      * <p>
-     * Information about the address pool.
+     * Information about the BYOIP address pool.
      * </p>
      * 
      * @param byoipCidr
-     *        Information about the address pool.
+     *        Information about the BYOIP address pool.
      */
 
     public void setByoipCidr(ByoipCidr byoipCidr) {
@@ -45,10 +45,10 @@ public class WithdrawByoipCidrResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Information about the address pool.
+     * Information about the BYOIP address pool.
      * </p>
      * 
-     * @return Information about the address pool.
+     * @return Information about the BYOIP address pool.
      */
 
     public ByoipCidr getByoipCidr() {
@@ -57,11 +57,11 @@ public class WithdrawByoipCidrResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Information about the address pool.
+     * Information about the BYOIP address pool.
      * </p>
      * 
      * @param byoipCidr
-     *        Information about the address pool.
+     *        Information about the BYOIP address pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

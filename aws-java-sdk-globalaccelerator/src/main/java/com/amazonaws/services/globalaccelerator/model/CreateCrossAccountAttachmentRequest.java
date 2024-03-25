@@ -33,15 +33,16 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     private String name;
     /**
      * <p>
-     * The principals to list in the cross-account attachment. A principal can be an Amazon Web Services account number
-     * or the Amazon Resource Name (ARN) for an accelerator.
+     * The principals to include in the cross-account attachment. A principal can be an Amazon Web Services account
+     * number or the Amazon Resource Name (ARN) for an accelerator.
      * </p>
      */
     private java.util.List<String> principals;
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources to list in the cross-account attachment. A resource can be any
-     * supported Amazon Web Services resource type for Global Accelerator.
+     * The Amazon Resource Names (ARNs) for the resources to include in the cross-account attachment. A resource can be
+     * any supported Amazon Web Services resource type for Global Accelerator or a CIDR range for a bring your own IP
+     * address (BYOIP) address pool.
      * </p>
      */
     private java.util.List<Resource> resources;
@@ -54,7 +55,7 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     private String idempotencyToken;
     /**
      * <p>
-     * Create tags for cross-account attachment.
+     * Add tags for a cross-account attachment.
      * </p>
      * <p>
      * For more information, see <a
@@ -106,12 +107,12 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The principals to list in the cross-account attachment. A principal can be an Amazon Web Services account number
-     * or the Amazon Resource Name (ARN) for an accelerator.
+     * The principals to include in the cross-account attachment. A principal can be an Amazon Web Services account
+     * number or the Amazon Resource Name (ARN) for an accelerator.
      * </p>
      * 
-     * @return The principals to list in the cross-account attachment. A principal can be an Amazon Web Services account
-     *         number or the Amazon Resource Name (ARN) for an accelerator.
+     * @return The principals to include in the cross-account attachment. A principal can be an Amazon Web Services
+     *         account number or the Amazon Resource Name (ARN) for an accelerator.
      */
 
     public java.util.List<String> getPrincipals() {
@@ -120,13 +121,13 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The principals to list in the cross-account attachment. A principal can be an Amazon Web Services account number
-     * or the Amazon Resource Name (ARN) for an accelerator.
+     * The principals to include in the cross-account attachment. A principal can be an Amazon Web Services account
+     * number or the Amazon Resource Name (ARN) for an accelerator.
      * </p>
      * 
      * @param principals
-     *        The principals to list in the cross-account attachment. A principal can be an Amazon Web Services account
-     *        number or the Amazon Resource Name (ARN) for an accelerator.
+     *        The principals to include in the cross-account attachment. A principal can be an Amazon Web Services
+     *        account number or the Amazon Resource Name (ARN) for an accelerator.
      */
 
     public void setPrincipals(java.util.Collection<String> principals) {
@@ -140,8 +141,8 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The principals to list in the cross-account attachment. A principal can be an Amazon Web Services account number
-     * or the Amazon Resource Name (ARN) for an accelerator.
+     * The principals to include in the cross-account attachment. A principal can be an Amazon Web Services account
+     * number or the Amazon Resource Name (ARN) for an accelerator.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -150,8 +151,8 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param principals
-     *        The principals to list in the cross-account attachment. A principal can be an Amazon Web Services account
-     *        number or the Amazon Resource Name (ARN) for an accelerator.
+     *        The principals to include in the cross-account attachment. A principal can be an Amazon Web Services
+     *        account number or the Amazon Resource Name (ARN) for an accelerator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -167,13 +168,13 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The principals to list in the cross-account attachment. A principal can be an Amazon Web Services account number
-     * or the Amazon Resource Name (ARN) for an accelerator.
+     * The principals to include in the cross-account attachment. A principal can be an Amazon Web Services account
+     * number or the Amazon Resource Name (ARN) for an accelerator.
      * </p>
      * 
      * @param principals
-     *        The principals to list in the cross-account attachment. A principal can be an Amazon Web Services account
-     *        number or the Amazon Resource Name (ARN) for an accelerator.
+     *        The principals to include in the cross-account attachment. A principal can be an Amazon Web Services
+     *        account number or the Amazon Resource Name (ARN) for an accelerator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,12 +185,14 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources to list in the cross-account attachment. A resource can be any
-     * supported Amazon Web Services resource type for Global Accelerator.
+     * The Amazon Resource Names (ARNs) for the resources to include in the cross-account attachment. A resource can be
+     * any supported Amazon Web Services resource type for Global Accelerator or a CIDR range for a bring your own IP
+     * address (BYOIP) address pool.
      * </p>
      * 
-     * @return The Amazon Resource Names (ARNs) for the resources to list in the cross-account attachment. A resource
-     *         can be any supported Amazon Web Services resource type for Global Accelerator.
+     * @return The Amazon Resource Names (ARNs) for the resources to include in the cross-account attachment. A resource
+     *         can be any supported Amazon Web Services resource type for Global Accelerator or a CIDR range for a bring
+     *         your own IP address (BYOIP) address pool.
      */
 
     public java.util.List<Resource> getResources() {
@@ -198,13 +201,15 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources to list in the cross-account attachment. A resource can be any
-     * supported Amazon Web Services resource type for Global Accelerator.
+     * The Amazon Resource Names (ARNs) for the resources to include in the cross-account attachment. A resource can be
+     * any supported Amazon Web Services resource type for Global Accelerator or a CIDR range for a bring your own IP
+     * address (BYOIP) address pool.
      * </p>
      * 
      * @param resources
-     *        The Amazon Resource Names (ARNs) for the resources to list in the cross-account attachment. A resource can
-     *        be any supported Amazon Web Services resource type for Global Accelerator.
+     *        The Amazon Resource Names (ARNs) for the resources to include in the cross-account attachment. A resource
+     *        can be any supported Amazon Web Services resource type for Global Accelerator or a CIDR range for a bring
+     *        your own IP address (BYOIP) address pool.
      */
 
     public void setResources(java.util.Collection<Resource> resources) {
@@ -218,8 +223,9 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources to list in the cross-account attachment. A resource can be any
-     * supported Amazon Web Services resource type for Global Accelerator.
+     * The Amazon Resource Names (ARNs) for the resources to include in the cross-account attachment. A resource can be
+     * any supported Amazon Web Services resource type for Global Accelerator or a CIDR range for a bring your own IP
+     * address (BYOIP) address pool.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -228,8 +234,9 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param resources
-     *        The Amazon Resource Names (ARNs) for the resources to list in the cross-account attachment. A resource can
-     *        be any supported Amazon Web Services resource type for Global Accelerator.
+     *        The Amazon Resource Names (ARNs) for the resources to include in the cross-account attachment. A resource
+     *        can be any supported Amazon Web Services resource type for Global Accelerator or a CIDR range for a bring
+     *        your own IP address (BYOIP) address pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,13 +252,15 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) for the resources to list in the cross-account attachment. A resource can be any
-     * supported Amazon Web Services resource type for Global Accelerator.
+     * The Amazon Resource Names (ARNs) for the resources to include in the cross-account attachment. A resource can be
+     * any supported Amazon Web Services resource type for Global Accelerator or a CIDR range for a bring your own IP
+     * address (BYOIP) address pool.
      * </p>
      * 
      * @param resources
-     *        The Amazon Resource Names (ARNs) for the resources to list in the cross-account attachment. A resource can
-     *        be any supported Amazon Web Services resource type for Global Accelerator.
+     *        The Amazon Resource Names (ARNs) for the resources to include in the cross-account attachment. A resource
+     *        can be any supported Amazon Web Services resource type for Global Accelerator or a CIDR range for a bring
+     *        your own IP address (BYOIP) address pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -308,7 +317,7 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Create tags for cross-account attachment.
+     * Add tags for a cross-account attachment.
      * </p>
      * <p>
      * For more information, see <a
@@ -316,7 +325,7 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
      * </p>
      * 
-     * @return Create tags for cross-account attachment.</p>
+     * @return Add tags for a cross-account attachment.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html"
@@ -329,7 +338,7 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Create tags for cross-account attachment.
+     * Add tags for a cross-account attachment.
      * </p>
      * <p>
      * For more information, see <a
@@ -338,7 +347,7 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param tags
-     *        Create tags for cross-account attachment.</p>
+     *        Add tags for a cross-account attachment.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html">Tagging
@@ -356,7 +365,7 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Create tags for cross-account attachment.
+     * Add tags for a cross-account attachment.
      * </p>
      * <p>
      * For more information, see <a
@@ -370,7 +379,7 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param tags
-     *        Create tags for cross-account attachment.</p>
+     *        Add tags for a cross-account attachment.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html">Tagging
@@ -390,7 +399,7 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Create tags for cross-account attachment.
+     * Add tags for a cross-account attachment.
      * </p>
      * <p>
      * For more information, see <a
@@ -399,7 +408,7 @@ public class CreateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param tags
-     *        Create tags for cross-account attachment.</p>
+     *        Add tags for a cross-account attachment.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html">Tagging

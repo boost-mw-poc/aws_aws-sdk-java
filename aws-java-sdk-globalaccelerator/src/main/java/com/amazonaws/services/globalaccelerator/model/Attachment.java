@@ -20,8 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A cross-account attachment in Global Accelerator. A cross-account attachment specifies the <i>principals</i> who have
- * permission to add to accelerators in their own account the resources in your account that you also list in the
- * attachment.
+ * permission to work with <i>resources</i> in your account, which you also list in the attachment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/Attachment" target="_top">AWS API

@@ -149,7 +149,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * capacity providers</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -377,6 +377,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * aren't propagated. Tags can only be propagated to the task during task creation. To add tags to a task after task
      * creation, use the <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
+     * </p>
+     * <p>
+     * You must set this to a value other than <code>NONE</code> when you use Cost Explorer. For more information, see
+     * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html">Amazon ECS usage
+     * reports</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
      * The default is <code>NONE</code>.
@@ -1281,7 +1286,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * capacity providers</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -1308,7 +1313,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
-     *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     *        capacity providers</a> in the <i>Amazon ECS Developer Guide</i>.
      *        </p>
      *        </note>
      *        <p>
@@ -1342,7 +1347,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * capacity providers</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -1368,7 +1373,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html"
-     *         >Fargate capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     *         >Fargate capacity providers</a> in the <i>Amazon ECS Developer Guide</i>.
      *         </p>
      *         </note>
      *         <p>
@@ -1402,7 +1407,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * capacity providers</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -1429,7 +1434,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
-     *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     *        capacity providers</a> in the <i>Amazon ECS Developer Guide</i>.
      *        </p>
      *        </note>
      *        <p>
@@ -1465,7 +1470,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     * capacity providers</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -1492,7 +1497,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-capacity-providers.html">Fargate
-     *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
+     *        capacity providers</a> in the <i>Amazon ECS Developer Guide</i>.
      *        </p>
      *        </note>
      *        <p>
@@ -3140,6 +3145,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
      * </p>
      * <p>
+     * You must set this to a value other than <code>NONE</code> when you use Cost Explorer. For more information, see
+     * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html">Amazon ECS usage
+     * reports</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
      * The default is <code>NONE</code>.
      * </p>
      * 
@@ -3149,6 +3159,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        task after task creation, use the <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API
      *        action.</p>
+     *        <p>
+     *        You must set this to a value other than <code>NONE</code> when you use Cost Explorer. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html">Amazon ECS usage
+     *        reports</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        </p>
      *        <p>
      *        The default is <code>NONE</code>.
      * @see PropagateTags
@@ -3166,6 +3182,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
      * </p>
      * <p>
+     * You must set this to a value other than <code>NONE</code> when you use Cost Explorer. For more information, see
+     * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html">Amazon ECS usage
+     * reports</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
      * The default is <code>NONE</code>.
      * </p>
      * 
@@ -3174,6 +3195,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         a task after task creation, use the <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API
      *         action.</p>
+     *         <p>
+     *         You must set this to a value other than <code>NONE</code> when you use Cost Explorer. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html">Amazon ECS usage
+     *         reports</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *         </p>
      *         <p>
      *         The default is <code>NONE</code>.
      * @see PropagateTags
@@ -3191,6 +3218,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
      * </p>
      * <p>
+     * You must set this to a value other than <code>NONE</code> when you use Cost Explorer. For more information, see
+     * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html">Amazon ECS usage
+     * reports</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
      * The default is <code>NONE</code>.
      * </p>
      * 
@@ -3200,6 +3232,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        task after task creation, use the <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API
      *        action.</p>
+     *        <p>
+     *        You must set this to a value other than <code>NONE</code> when you use Cost Explorer. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html">Amazon ECS usage
+     *        reports</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        </p>
      *        <p>
      *        The default is <code>NONE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3219,6 +3257,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API action.
      * </p>
      * <p>
+     * You must set this to a value other than <code>NONE</code> when you use Cost Explorer. For more information, see
+     * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html">Amazon ECS usage
+     * reports</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * </p>
+     * <p>
      * The default is <code>NONE</code>.
      * </p>
      * 
@@ -3228,6 +3271,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        task after task creation, use the <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html">TagResource</a> API
      *        action.</p>
+     *        <p>
+     *        You must set this to a value other than <code>NONE</code> when you use Cost Explorer. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html">Amazon ECS usage
+     *        reports</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        </p>
      *        <p>
      *        The default is <code>NONE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -20835,6 +20835,51 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Gets the default instance metadata service (IMDS) settings that are set at the account level in the specified
+     * Amazon Web Services&#x2028; Region.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param getInstanceMetadataDefaultsRequest
+     * @return A Java Future containing the result of the GetInstanceMetadataDefaults operation returned by the service.
+     * @sample AmazonEC2Async.GetInstanceMetadataDefaults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceMetadataDefaults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetInstanceMetadataDefaultsResult> getInstanceMetadataDefaultsAsync(
+            GetInstanceMetadataDefaultsRequest getInstanceMetadataDefaultsRequest);
+
+    /**
+     * <p>
+     * Gets the default instance metadata service (IMDS) settings that are set at the account level in the specified
+     * Amazon Web Services&#x2028; Region.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param getInstanceMetadataDefaultsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetInstanceMetadataDefaults operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.GetInstanceMetadataDefaults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceMetadataDefaults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetInstanceMetadataDefaultsResult> getInstanceMetadataDefaultsAsync(
+            GetInstanceMetadataDefaultsRequest getInstanceMetadataDefaultsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetInstanceMetadataDefaultsRequest, GetInstanceMetadataDefaultsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of instance types with the specified instance attributes. You can use the response to preview the
      * instance types without launching instances. Note that the response does not consider capacity.
      * </p>
@@ -23666,6 +23711,59 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<ModifyInstanceMaintenanceOptionsResult> modifyInstanceMaintenanceOptionsAsync(
             ModifyInstanceMaintenanceOptionsRequest modifyInstanceMaintenanceOptionsRequest,
             com.amazonaws.handlers.AsyncHandler<ModifyInstanceMaintenanceOptionsRequest, ModifyInstanceMaintenanceOptionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the default instance metadata service (IMDS) settings at the account level in the specified Amazon Web
+     * Services&#x2028; Region.
+     * </p>
+     * <note>
+     * <p>
+     * To remove a parameter's account-level default setting, specify <code>no-preference</code>. At instance launch,
+     * the value will come from the AMI, or from the launch parameter if specified. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * </note>
+     * 
+     * @param modifyInstanceMetadataDefaultsRequest
+     * @return A Java Future containing the result of the ModifyInstanceMetadataDefaults operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.ModifyInstanceMetadataDefaults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceMetadataDefaults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyInstanceMetadataDefaultsResult> modifyInstanceMetadataDefaultsAsync(
+            ModifyInstanceMetadataDefaultsRequest modifyInstanceMetadataDefaultsRequest);
+
+    /**
+     * <p>
+     * Modifies the default instance metadata service (IMDS) settings at the account level in the specified Amazon Web
+     * Services&#x2028; Region.
+     * </p>
+     * <note>
+     * <p>
+     * To remove a parameter's account-level default setting, specify <code>no-preference</code>. At instance launch,
+     * the value will come from the AMI, or from the launch parameter if specified. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * </note>
+     * 
+     * @param modifyInstanceMetadataDefaultsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyInstanceMetadataDefaults operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.ModifyInstanceMetadataDefaults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceMetadataDefaults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyInstanceMetadataDefaultsResult> modifyInstanceMetadataDefaultsAsync(
+            ModifyInstanceMetadataDefaultsRequest modifyInstanceMetadataDefaultsRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyInstanceMetadataDefaultsRequest, ModifyInstanceMetadataDefaultsResult> asyncHandler);
 
     /**
      * <p>

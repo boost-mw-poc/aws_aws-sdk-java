@@ -36,7 +36,7 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      * when you add it as an endpoint.
      * </p>
      * <p>
-     * An Application Load Balancer can be either internal or internet-facing.
+     * For cross-account endpoints, this must be the ARN of the resource.
      * </p>
      */
     private String endpointId;
@@ -75,7 +75,7 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * be added to accelerators and principals that have permission to add the endpoints.
      * </p>
      */
     private String attachmentArn;
@@ -88,7 +88,7 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      * when you add it as an endpoint.
      * </p>
      * <p>
-     * An Application Load Balancer can be either internal or internet-facing.
+     * For cross-account endpoints, this must be the ARN of the resource.
      * </p>
      * 
      * @param endpointId
@@ -97,7 +97,7 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      *        Elastic IP address allocation ID. For Amazon EC2 instances, this is the EC2 instance ID. A resource must
      *        be valid and active when you add it as an endpoint.</p>
      *        <p>
-     *        An Application Load Balancer can be either internal or internet-facing.
+     *        For cross-account endpoints, this must be the ARN of the resource.
      */
 
     public void setEndpointId(String endpointId) {
@@ -112,7 +112,7 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      * when you add it as an endpoint.
      * </p>
      * <p>
-     * An Application Load Balancer can be either internal or internet-facing.
+     * For cross-account endpoints, this must be the ARN of the resource.
      * </p>
      * 
      * @return An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is
@@ -120,7 +120,7 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      *         Elastic IP address allocation ID. For Amazon EC2 instances, this is the EC2 instance ID. A resource must
      *         be valid and active when you add it as an endpoint.</p>
      *         <p>
-     *         An Application Load Balancer can be either internal or internet-facing.
+     *         For cross-account endpoints, this must be the ARN of the resource.
      */
 
     public String getEndpointId() {
@@ -135,7 +135,7 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      * when you add it as an endpoint.
      * </p>
      * <p>
-     * An Application Load Balancer can be either internal or internet-facing.
+     * For cross-account endpoints, this must be the ARN of the resource.
      * </p>
      * 
      * @param endpointId
@@ -144,7 +144,7 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
      *        Elastic IP address allocation ID. For Amazon EC2 instances, this is the EC2 instance ID. A resource must
      *        be valid and active when you add it as an endpoint.</p>
      *        <p>
-     *        An Application Load Balancer can be either internal or internet-facing.
+     *        For cross-account endpoints, this must be the ARN of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -397,13 +397,12 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * be added to accelerators and principals that have permission to add the endpoints.
      * </p>
      * 
      * @param attachmentArn
      *        The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources)
-     *        that can be added to accelerators and principals that have permission to add the endpoints to
-     *        accelerators.
+     *        that can be added to accelerators and principals that have permission to add the endpoints.
      */
 
     public void setAttachmentArn(String attachmentArn) {
@@ -413,12 +412,11 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * be added to accelerators and principals that have permission to add the endpoints.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources)
-     *         that can be added to accelerators and principals that have permission to add the endpoints to
-     *         accelerators.
+     *         that can be added to accelerators and principals that have permission to add the endpoints.
      */
 
     public String getAttachmentArn() {
@@ -428,13 +426,12 @@ public class EndpointConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * be added to accelerators and principals that have permission to add the endpoints.
      * </p>
      * 
      * @param attachmentArn
      *        The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources)
-     *        that can be added to accelerators and principals that have permission to add the endpoints to
-     *        accelerators.
+     *        that can be added to accelerators and principals that have permission to add the endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

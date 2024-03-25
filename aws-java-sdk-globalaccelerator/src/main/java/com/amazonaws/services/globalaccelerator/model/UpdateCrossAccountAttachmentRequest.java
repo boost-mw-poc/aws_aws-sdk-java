@@ -40,8 +40,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to add to the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that the attachment gives permission to add the resources from another account, listed in
-     * the attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To add more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
@@ -51,8 +51,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to remove from the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that is given permission to add the resources from another account, listed in the
-     * cross-account attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To remove more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
@@ -61,8 +61,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     private java.util.List<String> removePrincipals;
     /**
      * <p>
-     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator by the principals that are listed in the attachment.
+     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be used
+     * with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To add more than one resource, separate the resource ARNs with commas.
@@ -72,7 +72,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The resources to remove from the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator fy principals that are listed in the cross-account attachment.
+     * used with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To remove more than one resource, separate the resource ARNs with commas.
@@ -163,16 +163,16 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to add to the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that the attachment gives permission to add the resources from another account, listed in
-     * the attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To add more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
      * </p>
      * 
      * @return The principals to add to the cross-account attachment. A principal is an account or the Amazon Resource
-     *         Name (ARN) of an accelerator that the attachment gives permission to add the resources from another
-     *         account, listed in the attachment.</p>
+     *         Name (ARN) of an accelerator that the attachment gives permission to work with resources from another
+     *         account. The resources are also listed in the attachment.</p>
      *         <p>
      *         To add more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
      */
@@ -184,8 +184,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to add to the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that the attachment gives permission to add the resources from another account, listed in
-     * the attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To add more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
@@ -193,8 +193,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param addPrincipals
      *        The principals to add to the cross-account attachment. A principal is an account or the Amazon Resource
-     *        Name (ARN) of an accelerator that the attachment gives permission to add the resources from another
-     *        account, listed in the attachment.</p>
+     *        Name (ARN) of an accelerator that the attachment gives permission to work with resources from another
+     *        account. The resources are also listed in the attachment.</p>
      *        <p>
      *        To add more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
      */
@@ -211,8 +211,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to add to the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that the attachment gives permission to add the resources from another account, listed in
-     * the attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To add more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
@@ -225,8 +225,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param addPrincipals
      *        The principals to add to the cross-account attachment. A principal is an account or the Amazon Resource
-     *        Name (ARN) of an accelerator that the attachment gives permission to add the resources from another
-     *        account, listed in the attachment.</p>
+     *        Name (ARN) of an accelerator that the attachment gives permission to work with resources from another
+     *        account. The resources are also listed in the attachment.</p>
      *        <p>
      *        To add more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -245,8 +245,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to add to the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that the attachment gives permission to add the resources from another account, listed in
-     * the attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To add more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
@@ -254,8 +254,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param addPrincipals
      *        The principals to add to the cross-account attachment. A principal is an account or the Amazon Resource
-     *        Name (ARN) of an accelerator that the attachment gives permission to add the resources from another
-     *        account, listed in the attachment.</p>
+     *        Name (ARN) of an accelerator that the attachment gives permission to work with resources from another
+     *        account. The resources are also listed in the attachment.</p>
      *        <p>
      *        To add more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -269,16 +269,16 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to remove from the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that is given permission to add the resources from another account, listed in the
-     * cross-account attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To remove more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
      * </p>
      * 
      * @return The principals to remove from the cross-account attachment. A principal is an account or the Amazon
-     *         Resource Name (ARN) of an accelerator that is given permission to add the resources from another account,
-     *         listed in the cross-account attachment.</p>
+     *         Resource Name (ARN) of an accelerator that the attachment gives permission to work with resources from
+     *         another account. The resources are also listed in the attachment.</p>
      *         <p>
      *         To remove more than one principal, separate the account numbers or accelerator ARNs, or both, with
      *         commas.
@@ -291,8 +291,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to remove from the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that is given permission to add the resources from another account, listed in the
-     * cross-account attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To remove more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
@@ -300,8 +300,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param removePrincipals
      *        The principals to remove from the cross-account attachment. A principal is an account or the Amazon
-     *        Resource Name (ARN) of an accelerator that is given permission to add the resources from another account,
-     *        listed in the cross-account attachment.</p>
+     *        Resource Name (ARN) of an accelerator that the attachment gives permission to work with resources from
+     *        another account. The resources are also listed in the attachment.</p>
      *        <p>
      *        To remove more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
      */
@@ -318,8 +318,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to remove from the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that is given permission to add the resources from another account, listed in the
-     * cross-account attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To remove more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
@@ -332,8 +332,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param removePrincipals
      *        The principals to remove from the cross-account attachment. A principal is an account or the Amazon
-     *        Resource Name (ARN) of an accelerator that is given permission to add the resources from another account,
-     *        listed in the cross-account attachment.</p>
+     *        Resource Name (ARN) of an accelerator that the attachment gives permission to work with resources from
+     *        another account. The resources are also listed in the attachment.</p>
      *        <p>
      *        To remove more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -352,8 +352,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The principals to remove from the cross-account attachment. A principal is an account or the Amazon Resource Name
-     * (ARN) of an accelerator that is given permission to add the resources from another account, listed in the
-     * cross-account attachment.
+     * (ARN) of an accelerator that the attachment gives permission to work with resources from another account. The
+     * resources are also listed in the attachment.
      * </p>
      * <p>
      * To remove more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
@@ -361,8 +361,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param removePrincipals
      *        The principals to remove from the cross-account attachment. A principal is an account or the Amazon
-     *        Resource Name (ARN) of an accelerator that is given permission to add the resources from another account,
-     *        listed in the cross-account attachment.</p>
+     *        Resource Name (ARN) of an accelerator that the attachment gives permission to work with resources from
+     *        another account. The resources are also listed in the attachment.</p>
      *        <p>
      *        To remove more than one principal, separate the account numbers or accelerator ARNs, or both, with commas.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -375,15 +375,15 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator by the principals that are listed in the attachment.
+     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be used
+     * with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To add more than one resource, separate the resource ARNs with commas.
      * </p>
      * 
      * @return The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can
-     *         be added to an accelerator by the principals that are listed in the attachment.</p>
+     *         be used with an accelerator by the principals that are listed in the attachment.</p>
      *         <p>
      *         To add more than one resource, separate the resource ARNs with commas.
      */
@@ -394,8 +394,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator by the principals that are listed in the attachment.
+     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be used
+     * with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To add more than one resource, separate the resource ARNs with commas.
@@ -403,7 +403,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param addResources
      *        The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can
-     *        be added to an accelerator by the principals that are listed in the attachment.</p>
+     *        be used with an accelerator by the principals that are listed in the attachment.</p>
      *        <p>
      *        To add more than one resource, separate the resource ARNs with commas.
      */
@@ -419,8 +419,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator by the principals that are listed in the attachment.
+     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be used
+     * with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To add more than one resource, separate the resource ARNs with commas.
@@ -433,7 +433,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param addResources
      *        The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can
-     *        be added to an accelerator by the principals that are listed in the attachment.</p>
+     *        be used with an accelerator by the principals that are listed in the attachment.</p>
      *        <p>
      *        To add more than one resource, separate the resource ARNs with commas.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -451,8 +451,8 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator by the principals that are listed in the attachment.
+     * The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can be used
+     * with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To add more than one resource, separate the resource ARNs with commas.
@@ -460,7 +460,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param addResources
      *        The resources to add to the cross-account attachment. A resource listed in a cross-account attachment can
-     *        be added to an accelerator by the principals that are listed in the attachment.</p>
+     *        be used with an accelerator by the principals that are listed in the attachment.</p>
      *        <p>
      *        To add more than one resource, separate the resource ARNs with commas.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -474,15 +474,14 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The resources to remove from the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator fy principals that are listed in the cross-account attachment.
+     * used with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To remove more than one resource, separate the resource ARNs with commas.
      * </p>
      * 
      * @return The resources to remove from the cross-account attachment. A resource listed in a cross-account
-     *         attachment can be added to an accelerator fy principals that are listed in the cross-account
-     *         attachment.</p>
+     *         attachment can be used with an accelerator by the principals that are listed in the attachment.</p>
      *         <p>
      *         To remove more than one resource, separate the resource ARNs with commas.
      */
@@ -494,7 +493,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The resources to remove from the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator fy principals that are listed in the cross-account attachment.
+     * used with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To remove more than one resource, separate the resource ARNs with commas.
@@ -502,7 +501,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param removeResources
      *        The resources to remove from the cross-account attachment. A resource listed in a cross-account attachment
-     *        can be added to an accelerator fy principals that are listed in the cross-account attachment.</p>
+     *        can be used with an accelerator by the principals that are listed in the attachment.</p>
      *        <p>
      *        To remove more than one resource, separate the resource ARNs with commas.
      */
@@ -519,7 +518,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The resources to remove from the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator fy principals that are listed in the cross-account attachment.
+     * used with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To remove more than one resource, separate the resource ARNs with commas.
@@ -532,7 +531,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param removeResources
      *        The resources to remove from the cross-account attachment. A resource listed in a cross-account attachment
-     *        can be added to an accelerator fy principals that are listed in the cross-account attachment.</p>
+     *        can be used with an accelerator by the principals that are listed in the attachment.</p>
      *        <p>
      *        To remove more than one resource, separate the resource ARNs with commas.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -551,7 +550,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
     /**
      * <p>
      * The resources to remove from the cross-account attachment. A resource listed in a cross-account attachment can be
-     * added to an accelerator fy principals that are listed in the cross-account attachment.
+     * used with an accelerator by the principals that are listed in the attachment.
      * </p>
      * <p>
      * To remove more than one resource, separate the resource ARNs with commas.
@@ -559,7 +558,7 @@ public class UpdateCrossAccountAttachmentRequest extends com.amazonaws.AmazonWeb
      * 
      * @param removeResources
      *        The resources to remove from the cross-account attachment. A resource listed in a cross-account attachment
-     *        can be added to an accelerator fy principals that are listed in the cross-account attachment.</p>
+     *        can be used with an accelerator by the principals that are listed in the attachment.</p>
      *        <p>
      *        To remove more than one resource, separate the resource ARNs with commas.
      * @return Returns a reference to this object so that method calls can be chained together.

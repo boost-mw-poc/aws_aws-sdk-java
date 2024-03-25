@@ -29,8 +29,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * they take precedence over the variables contained within an environment file. If multiple environment files are
  * specified that contain the same variable, they're processed from the top down. We recommend that you use unique
  * variable names. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/taskdef-envfiles.html">Specifying environment
- * variables</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+ * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/use-environment-file.html">Use a file to pass
+ * environment variables to a container</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+ * </p>
+ * <p>
+ * Environment variable files are objects in Amazon S3 and all Amazon S3 security considerations apply.
  * </p>
  * <p>
  * You must use the following platforms for the Fargate launch type:
@@ -82,7 +85,7 @@ public class EnvironmentFile implements Serializable, Cloneable, StructuredPojo 
     private String value;
     /**
      * <p>
-     * The file type to use. The only supported value is <code>s3</code>.
+     * The file type to use. Environment files are objects in Amazon S3. The only supported value is <code>s3</code>.
      * </p>
      */
     private String type;
@@ -129,11 +132,12 @@ public class EnvironmentFile implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The file type to use. The only supported value is <code>s3</code>.
+     * The file type to use. Environment files are objects in Amazon S3. The only supported value is <code>s3</code>.
      * </p>
      * 
      * @param type
-     *        The file type to use. The only supported value is <code>s3</code>.
+     *        The file type to use. Environment files are objects in Amazon S3. The only supported value is
+     *        <code>s3</code>.
      * @see EnvironmentFileType
      */
 
@@ -143,10 +147,11 @@ public class EnvironmentFile implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The file type to use. The only supported value is <code>s3</code>.
+     * The file type to use. Environment files are objects in Amazon S3. The only supported value is <code>s3</code>.
      * </p>
      * 
-     * @return The file type to use. The only supported value is <code>s3</code>.
+     * @return The file type to use. Environment files are objects in Amazon S3. The only supported value is
+     *         <code>s3</code>.
      * @see EnvironmentFileType
      */
 
@@ -156,11 +161,12 @@ public class EnvironmentFile implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The file type to use. The only supported value is <code>s3</code>.
+     * The file type to use. Environment files are objects in Amazon S3. The only supported value is <code>s3</code>.
      * </p>
      * 
      * @param type
-     *        The file type to use. The only supported value is <code>s3</code>.
+     *        The file type to use. Environment files are objects in Amazon S3. The only supported value is
+     *        <code>s3</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnvironmentFileType
      */
@@ -172,11 +178,12 @@ public class EnvironmentFile implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The file type to use. The only supported value is <code>s3</code>.
+     * The file type to use. Environment files are objects in Amazon S3. The only supported value is <code>s3</code>.
      * </p>
      * 
      * @param type
-     *        The file type to use. The only supported value is <code>s3</code>.
+     *        The file type to use. Environment files are objects in Amazon S3. The only supported value is
+     *        <code>s3</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnvironmentFileType
      */

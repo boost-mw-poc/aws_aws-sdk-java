@@ -62,9 +62,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
      * </p>
      * <p>
-     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
-     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
-     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
+     * For Elastic Block Storage, this includes <code>roleArn</code>, <code>deleteOnTermination</code>,
+     * <code>volumeName</code>, <code>volumeId</code>, and <code>statusReason</code> (only when the attachment fails to
+     * create or attach).
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<KeyValuePair> details;
@@ -220,9 +220,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
      * </p>
      * <p>
-     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
-     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
-     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
+     * For Elastic Block Storage, this includes <code>roleArn</code>, <code>deleteOnTermination</code>,
+     * <code>volumeName</code>, <code>volumeId</code>, and <code>statusReason</code> (only when the attachment fails to
+     * create or attach).
      * </p>
      * 
      * @return Details of the attachment.</p>
@@ -235,10 +235,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      *         <code>discoveryName</code>, and <code>ingressPortOverride</code>.
      *         </p>
      *         <p>
-     *         For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
-     *         <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
-     *         <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and
-     *         <code>volumeType</code>.
+     *         For Elastic Block Storage, this includes <code>roleArn</code>, <code>deleteOnTermination</code>,
+     *         <code>volumeName</code>, <code>volumeId</code>, and <code>statusReason</code> (only when the attachment
+     *         fails to create or attach).
      */
 
     public java.util.List<KeyValuePair> getDetails() {
@@ -261,9 +260,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
      * </p>
      * <p>
-     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
-     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
-     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
+     * For Elastic Block Storage, this includes <code>roleArn</code>, <code>deleteOnTermination</code>,
+     * <code>volumeName</code>, <code>volumeId</code>, and <code>statusReason</code> (only when the attachment fails to
+     * create or attach).
      * </p>
      * 
      * @param details
@@ -277,10 +276,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      *        <code>discoveryName</code>, and <code>ingressPortOverride</code>.
      *        </p>
      *        <p>
-     *        For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
-     *        <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
-     *        <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and
-     *        <code>volumeType</code>.
+     *        For Elastic Block Storage, this includes <code>roleArn</code>, <code>deleteOnTermination</code>,
+     *        <code>volumeName</code>, <code>volumeId</code>, and <code>statusReason</code> (only when the attachment
+     *        fails to create or attach).
      */
 
     public void setDetails(java.util.Collection<KeyValuePair> details) {
@@ -305,9 +303,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
      * </p>
      * <p>
-     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
-     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
-     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
+     * For Elastic Block Storage, this includes <code>roleArn</code>, <code>deleteOnTermination</code>,
+     * <code>volumeName</code>, <code>volumeId</code>, and <code>statusReason</code> (only when the attachment fails to
+     * create or attach).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -326,10 +324,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      *        <code>discoveryName</code>, and <code>ingressPortOverride</code>.
      *        </p>
      *        <p>
-     *        For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
-     *        <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
-     *        <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and
-     *        <code>volumeType</code>.
+     *        For Elastic Block Storage, this includes <code>roleArn</code>, <code>deleteOnTermination</code>,
+     *        <code>volumeName</code>, <code>volumeId</code>, and <code>statusReason</code> (only when the attachment
+     *        fails to create or attach).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -356,9 +353,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      * <code>discoveryName</code>, and <code>ingressPortOverride</code>.
      * </p>
      * <p>
-     * For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
-     * <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
-     * <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and <code>volumeType</code>.
+     * For Elastic Block Storage, this includes <code>roleArn</code>, <code>deleteOnTermination</code>,
+     * <code>volumeName</code>, <code>volumeId</code>, and <code>statusReason</code> (only when the attachment fails to
+     * create or attach).
      * </p>
      * 
      * @param details
@@ -372,10 +369,9 @@ public class Attachment implements Serializable, Cloneable, StructuredPojo {
      *        <code>discoveryName</code>, and <code>ingressPortOverride</code>.
      *        </p>
      *        <p>
-     *        For elastic block storage, this includes <code>roleArn</code>, <code>encrypted</code>,
-     *        <code>filesystemType</code>, <code>iops</code>, <code>kmsKeyId</code>, <code>sizeInGiB</code>,
-     *        <code>snapshotId</code>, <code>tagSpecifications</code>, <code>throughput</code>, and
-     *        <code>volumeType</code>.
+     *        For Elastic Block Storage, this includes <code>roleArn</code>, <code>deleteOnTermination</code>,
+     *        <code>volumeName</code>, <code>volumeId</code>, and <code>statusReason</code> (only when the attachment
+     *        fails to create or attach).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

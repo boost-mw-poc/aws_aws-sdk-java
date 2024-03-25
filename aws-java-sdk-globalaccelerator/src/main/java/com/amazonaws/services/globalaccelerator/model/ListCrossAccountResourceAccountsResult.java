@@ -26,20 +26,20 @@ public class ListCrossAccountResourceAccountsResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The account IDs of principals (resource owners) in a cross-account attachment who can add endpoints (resources)
-     * listed in the same attachment.
+     * The account IDs of principals (resource owners) in a cross-account attachment who can work with resources listed
+     * in the same attachment.
      * </p>
      */
     private java.util.List<String> resourceOwnerAwsAccountIds;
 
     /**
      * <p>
-     * The account IDs of principals (resource owners) in a cross-account attachment who can add endpoints (resources)
-     * listed in the same attachment.
+     * The account IDs of principals (resource owners) in a cross-account attachment who can work with resources listed
+     * in the same attachment.
      * </p>
      * 
-     * @return The account IDs of principals (resource owners) in a cross-account attachment who can add endpoints
-     *         (resources) listed in the same attachment.
+     * @return The account IDs of principals (resource owners) in a cross-account attachment who can work with resources
+     *         listed in the same attachment.
      */
 
     public java.util.List<String> getResourceOwnerAwsAccountIds() {
@@ -48,13 +48,13 @@ public class ListCrossAccountResourceAccountsResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The account IDs of principals (resource owners) in a cross-account attachment who can add endpoints (resources)
-     * listed in the same attachment.
+     * The account IDs of principals (resource owners) in a cross-account attachment who can work with resources listed
+     * in the same attachment.
      * </p>
      * 
      * @param resourceOwnerAwsAccountIds
-     *        The account IDs of principals (resource owners) in a cross-account attachment who can add endpoints
-     *        (resources) listed in the same attachment.
+     *        The account IDs of principals (resource owners) in a cross-account attachment who can work with resources
+     *        listed in the same attachment.
      */
 
     public void setResourceOwnerAwsAccountIds(java.util.Collection<String> resourceOwnerAwsAccountIds) {
@@ -68,8 +68,8 @@ public class ListCrossAccountResourceAccountsResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The account IDs of principals (resource owners) in a cross-account attachment who can add endpoints (resources)
-     * listed in the same attachment.
+     * The account IDs of principals (resource owners) in a cross-account attachment who can work with resources listed
+     * in the same attachment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,8 +78,8 @@ public class ListCrossAccountResourceAccountsResult extends com.amazonaws.Amazon
      * </p>
      * 
      * @param resourceOwnerAwsAccountIds
-     *        The account IDs of principals (resource owners) in a cross-account attachment who can add endpoints
-     *        (resources) listed in the same attachment.
+     *        The account IDs of principals (resource owners) in a cross-account attachment who can work with resources
+     *        listed in the same attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,13 +95,13 @@ public class ListCrossAccountResourceAccountsResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The account IDs of principals (resource owners) in a cross-account attachment who can add endpoints (resources)
-     * listed in the same attachment.
+     * The account IDs of principals (resource owners) in a cross-account attachment who can work with resources listed
+     * in the same attachment.
      * </p>
      * 
      * @param resourceOwnerAwsAccountIds
-     *        The account IDs of principals (resource owners) in a cross-account attachment who can add endpoints
-     *        (resources) listed in the same attachment.
+     *        The account IDs of principals (resource owners) in a cross-account attachment who can work with resources
+     *        listed in the same attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

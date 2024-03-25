@@ -105,6 +105,11 @@ public class ByoipCidr implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The address range, in CIDR notation.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
      */
     private String cidr;
     /**
@@ -125,9 +130,18 @@ public class ByoipCidr implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The address range, in CIDR notation.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
      * 
      * @param cidr
-     *        The address range, in CIDR notation.
+     *        The address range, in CIDR notation.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP
+     *        addresses (BYOIP)</a> in the Global Accelerator Developer Guide.
      */
 
     public void setCidr(String cidr) {
@@ -138,8 +152,17 @@ public class ByoipCidr implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The address range, in CIDR notation.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
      * 
-     * @return The address range, in CIDR notation.
+     * @return The address range, in CIDR notation.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP
+     *         addresses (BYOIP)</a> in the Global Accelerator Developer Guide.
      */
 
     public String getCidr() {
@@ -150,9 +173,18 @@ public class ByoipCidr implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The address range, in CIDR notation.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
      * 
      * @param cidr
-     *        The address range, in CIDR notation.
+     *        The address range, in CIDR notation.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP
+     *        addresses (BYOIP)</a> in the Global Accelerator Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

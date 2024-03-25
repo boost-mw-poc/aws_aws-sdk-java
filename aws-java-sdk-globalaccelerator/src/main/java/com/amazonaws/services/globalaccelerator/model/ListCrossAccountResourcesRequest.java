@@ -39,7 +39,7 @@ public class ListCrossAccountResourcesRequest extends com.amazonaws.AmazonWebSer
     private String resourceOwnerAwsAccountId;
     /**
      * <p>
-     * The number of cross-account endpoints objects that you want to return with this call. The default value is 10.
+     * The number of cross-account resource objects that you want to return with this call. The default value is 10.
      * </p>
      */
     private Integer maxResults;
@@ -132,11 +132,11 @@ public class ListCrossAccountResourcesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The number of cross-account endpoints objects that you want to return with this call. The default value is 10.
+     * The number of cross-account resource objects that you want to return with this call. The default value is 10.
      * </p>
      * 
      * @param maxResults
-     *        The number of cross-account endpoints objects that you want to return with this call. The default value is
+     *        The number of cross-account resource objects that you want to return with this call. The default value is
      *        10.
      */
 
@@ -146,11 +146,11 @@ public class ListCrossAccountResourcesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The number of cross-account endpoints objects that you want to return with this call. The default value is 10.
+     * The number of cross-account resource objects that you want to return with this call. The default value is 10.
      * </p>
      * 
-     * @return The number of cross-account endpoints objects that you want to return with this call. The default value
-     *         is 10.
+     * @return The number of cross-account resource objects that you want to return with this call. The default value is
+     *         10.
      */
 
     public Integer getMaxResults() {
@@ -159,11 +159,11 @@ public class ListCrossAccountResourcesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The number of cross-account endpoints objects that you want to return with this call. The default value is 10.
+     * The number of cross-account resource objects that you want to return with this call. The default value is 10.
      * </p>
      * 
      * @param maxResults
-     *        The number of cross-account endpoints objects that you want to return with this call. The default value is
+     *        The number of cross-account resource objects that you want to return with this call. The default value is
      *        10.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

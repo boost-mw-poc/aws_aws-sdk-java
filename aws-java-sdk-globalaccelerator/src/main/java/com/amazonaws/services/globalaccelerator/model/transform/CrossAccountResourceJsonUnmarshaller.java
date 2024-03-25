@@ -52,6 +52,10 @@ public class CrossAccountResourceJsonUnmarshaller implements Unmarshaller<CrossA
                     context.nextToken();
                     crossAccountResource.setEndpointId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Cidr", targetDepth)) {
+                    context.nextToken();
+                    crossAccountResource.setCidr(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("AttachmentArn", targetDepth)) {
                     context.nextToken();
                     crossAccountResource.setAttachmentArn(context.getUnmarshaller(String.class).unmarshall(context));

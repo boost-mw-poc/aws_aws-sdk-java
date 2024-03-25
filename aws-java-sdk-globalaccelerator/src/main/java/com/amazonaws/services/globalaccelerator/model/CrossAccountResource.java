@@ -19,8 +19,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An endpoint (Amazon Web Services resource) that is listed in a cross-account attachment and can be added to an
- * accelerator by specified principals, that are also listed in the attachment.
+ * An endpoint (Amazon Web Services resource) or an IP address range, in CIDR format, that is listed in a cross-account
+ * attachment. A cross-account resource can be added to an accelerator by specified principals, which are also listed in
+ * the attachment.
+ * </p>
+ * <p>
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/cross-account-resources.html"> Working with
+ * cross-account attachments and resources in Global Accelerator</a> in the <i> Global Accelerator Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CrossAccountResource"
@@ -38,8 +44,21 @@ public class CrossAccountResource implements Serializable, Cloneable, Structured
     private String endpointId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * An IP address range, in CIDR format, that is specified as an Amazon Web Services resource. The address must be
+     * provisioned and advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for
+     * Global Accelerator.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
+     */
+    private String cidr;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the resources (endpoints or CIDR
+     * range) that can be added to accelerators and principals that have permission to add them.
      * </p>
      */
     private String attachmentArn;
@@ -92,14 +111,92 @@ public class CrossAccountResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * An IP address range, in CIDR format, that is specified as an Amazon Web Services resource. The address must be
+     * provisioned and advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for
+     * Global Accelerator.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
+     * 
+     * @param cidr
+     *        An IP address range, in CIDR format, that is specified as an Amazon Web Services resource. The address
+     *        must be provisioned and advertised in Global Accelerator by following the bring your own IP address
+     *        (BYOIP) process for Global Accelerator.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP
+     *        addresses (BYOIP)</a> in the Global Accelerator Developer Guide.
+     */
+
+    public void setCidr(String cidr) {
+        this.cidr = cidr;
+    }
+
+    /**
+     * <p>
+     * An IP address range, in CIDR format, that is specified as an Amazon Web Services resource. The address must be
+     * provisioned and advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for
+     * Global Accelerator.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
+     * 
+     * @return An IP address range, in CIDR format, that is specified as an Amazon Web Services resource. The address
+     *         must be provisioned and advertised in Global Accelerator by following the bring your own IP address
+     *         (BYOIP) process for Global Accelerator.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP
+     *         addresses (BYOIP)</a> in the Global Accelerator Developer Guide.
+     */
+
+    public String getCidr() {
+        return this.cidr;
+    }
+
+    /**
+     * <p>
+     * An IP address range, in CIDR format, that is specified as an Amazon Web Services resource. The address must be
+     * provisioned and advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for
+     * Global Accelerator.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
+     * 
+     * @param cidr
+     *        An IP address range, in CIDR format, that is specified as an Amazon Web Services resource. The address
+     *        must be provisioned and advertised in Global Accelerator by following the bring your own IP address
+     *        (BYOIP) process for Global Accelerator.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP
+     *        addresses (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CrossAccountResource withCidr(String cidr) {
+        setCidr(cidr);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the resources (endpoints or CIDR
+     * range) that can be added to accelerators and principals that have permission to add them.
      * </p>
      * 
      * @param attachmentArn
-     *        The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources)
-     *        that can be added to accelerators and principals that have permission to add the endpoints to
-     *        accelerators.
+     *        The Amazon Resource Name (ARN) of the cross-account attachment that specifies the resources (endpoints or
+     *        CIDR range) that can be added to accelerators and principals that have permission to add them.
      */
 
     public void setAttachmentArn(String attachmentArn) {
@@ -108,13 +205,12 @@ public class CrossAccountResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the resources (endpoints or CIDR
+     * range) that can be added to accelerators and principals that have permission to add them.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources)
-     *         that can be added to accelerators and principals that have permission to add the endpoints to
-     *         accelerators.
+     * @return The Amazon Resource Name (ARN) of the cross-account attachment that specifies the resources (endpoints or
+     *         CIDR range) that can be added to accelerators and principals that have permission to add them.
      */
 
     public String getAttachmentArn() {
@@ -123,14 +219,13 @@ public class CrossAccountResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the resources (endpoints or CIDR
+     * range) that can be added to accelerators and principals that have permission to add them.
      * </p>
      * 
      * @param attachmentArn
-     *        The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources)
-     *        that can be added to accelerators and principals that have permission to add the endpoints to
-     *        accelerators.
+     *        The Amazon Resource Name (ARN) of the cross-account attachment that specifies the resources (endpoints or
+     *        CIDR range) that can be added to accelerators and principals that have permission to add them.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,6 +248,8 @@ public class CrossAccountResource implements Serializable, Cloneable, Structured
         sb.append("{");
         if (getEndpointId() != null)
             sb.append("EndpointId: ").append(getEndpointId()).append(",");
+        if (getCidr() != null)
+            sb.append("Cidr: ").append(getCidr()).append(",");
         if (getAttachmentArn() != null)
             sb.append("AttachmentArn: ").append(getAttachmentArn());
         sb.append("}");
@@ -173,6 +270,10 @@ public class CrossAccountResource implements Serializable, Cloneable, Structured
             return false;
         if (other.getEndpointId() != null && other.getEndpointId().equals(this.getEndpointId()) == false)
             return false;
+        if (other.getCidr() == null ^ this.getCidr() == null)
+            return false;
+        if (other.getCidr() != null && other.getCidr().equals(this.getCidr()) == false)
+            return false;
         if (other.getAttachmentArn() == null ^ this.getAttachmentArn() == null)
             return false;
         if (other.getAttachmentArn() != null && other.getAttachmentArn().equals(this.getAttachmentArn()) == false)
@@ -186,6 +287,7 @@ public class CrossAccountResource implements Serializable, Cloneable, Structured
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEndpointId() == null) ? 0 : getEndpointId().hashCode());
+        hashCode = prime * hashCode + ((getCidr() == null) ? 0 : getCidr().hashCode());
         hashCode = prime * hashCode + ((getAttachmentArn() == null) ? 0 : getAttachmentArn().hashCode());
         return hashCode;
     }

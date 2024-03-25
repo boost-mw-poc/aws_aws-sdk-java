@@ -29,6 +29,8 @@ public class ResourceMarshaller {
 
     private static final MarshallingInfo<String> ENDPOINTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointId").build();
+    private static final MarshallingInfo<String> CIDR_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Cidr").build();
     private static final MarshallingInfo<String> REGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Region").build();
 
@@ -49,6 +51,7 @@ public class ResourceMarshaller {
 
         try {
             protocolMarshaller.marshall(resource.getEndpointId(), ENDPOINTID_BINDING);
+            protocolMarshaller.marshall(resource.getCidr(), CIDR_BINDING);
             protocolMarshaller.marshall(resource.getRegion(), REGION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

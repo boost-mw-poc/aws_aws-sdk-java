@@ -28147,6 +28147,68 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Gets the default instance metadata service (IMDS) settings that are set at the account level in the specified
+     * Amazon Web Services&#x2028; Region.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param getInstanceMetadataDefaultsRequest
+     * @return Result of the GetInstanceMetadataDefaults operation returned by the service.
+     * @sample AmazonEC2.GetInstanceMetadataDefaults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceMetadataDefaults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetInstanceMetadataDefaultsResult getInstanceMetadataDefaults(GetInstanceMetadataDefaultsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetInstanceMetadataDefaults(request);
+    }
+
+    @SdkInternalApi
+    final GetInstanceMetadataDefaultsResult executeGetInstanceMetadataDefaults(GetInstanceMetadataDefaultsRequest getInstanceMetadataDefaultsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getInstanceMetadataDefaultsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetInstanceMetadataDefaultsRequest> request = null;
+        Response<GetInstanceMetadataDefaultsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetInstanceMetadataDefaultsRequestMarshaller().marshall(super.beforeMarshalling(getInstanceMetadataDefaultsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetInstanceMetadataDefaults");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetInstanceMetadataDefaultsResult> responseHandler = new StaxResponseHandler<GetInstanceMetadataDefaultsResult>(
+                    new GetInstanceMetadataDefaultsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of instance types with the specified instance attributes. You can use the response to preview the
      * instance types without launching instances. Note that the response does not consider capacity.
      * </p>
@@ -31987,6 +32049,71 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<ModifyInstanceMaintenanceOptionsResult> responseHandler = new StaxResponseHandler<ModifyInstanceMaintenanceOptionsResult>(
                     new ModifyInstanceMaintenanceOptionsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Modifies the default instance metadata service (IMDS) settings at the account level in the specified Amazon Web
+     * Services&#x2028; Region.
+     * </p>
+     * <note>
+     * <p>
+     * To remove a parameter's account-level default setting, specify <code>no-preference</code>. At instance launch,
+     * the value will come from the AMI, or from the launch parameter if specified. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * </note>
+     * 
+     * @param modifyInstanceMetadataDefaultsRequest
+     * @return Result of the ModifyInstanceMetadataDefaults operation returned by the service.
+     * @sample AmazonEC2.ModifyInstanceMetadataDefaults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceMetadataDefaults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ModifyInstanceMetadataDefaultsResult modifyInstanceMetadataDefaults(ModifyInstanceMetadataDefaultsRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyInstanceMetadataDefaults(request);
+    }
+
+    @SdkInternalApi
+    final ModifyInstanceMetadataDefaultsResult executeModifyInstanceMetadataDefaults(ModifyInstanceMetadataDefaultsRequest modifyInstanceMetadataDefaultsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyInstanceMetadataDefaultsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyInstanceMetadataDefaultsRequest> request = null;
+        Response<ModifyInstanceMetadataDefaultsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyInstanceMetadataDefaultsRequestMarshaller().marshall(super.beforeMarshalling(modifyInstanceMetadataDefaultsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyInstanceMetadataDefaults");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyInstanceMetadataDefaultsResult> responseHandler = new StaxResponseHandler<ModifyInstanceMetadataDefaultsResult>(
+                    new ModifyInstanceMetadataDefaultsResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

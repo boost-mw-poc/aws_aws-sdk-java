@@ -87,6 +87,18 @@ public class H265SettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("timecodeInsertion").build();
     private static final MarshallingInfo<StructuredPojo> TIMECODEBURNINSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("timecodeBurninSettings").build();
+    private static final MarshallingInfo<String> MVOVERPICTUREBOUNDARIES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("mvOverPictureBoundaries").build();
+    private static final MarshallingInfo<String> MVTEMPORALPREDICTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("mvTemporalPredictor").build();
+    private static final MarshallingInfo<Integer> TILEHEIGHT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tileHeight").build();
+    private static final MarshallingInfo<String> TILEPADDING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tilePadding").build();
+    private static final MarshallingInfo<Integer> TILEWIDTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tileWidth").build();
+    private static final MarshallingInfo<String> TREEBLOCKSIZE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("treeblockSize").build();
 
     private static final H265SettingsMarshaller instance = new H265SettingsMarshaller();
 
@@ -134,6 +146,12 @@ public class H265SettingsMarshaller {
             protocolMarshaller.marshall(h265Settings.getTier(), TIER_BINDING);
             protocolMarshaller.marshall(h265Settings.getTimecodeInsertion(), TIMECODEINSERTION_BINDING);
             protocolMarshaller.marshall(h265Settings.getTimecodeBurninSettings(), TIMECODEBURNINSETTINGS_BINDING);
+            protocolMarshaller.marshall(h265Settings.getMvOverPictureBoundaries(), MVOVERPICTUREBOUNDARIES_BINDING);
+            protocolMarshaller.marshall(h265Settings.getMvTemporalPredictor(), MVTEMPORALPREDICTOR_BINDING);
+            protocolMarshaller.marshall(h265Settings.getTileHeight(), TILEHEIGHT_BINDING);
+            protocolMarshaller.marshall(h265Settings.getTilePadding(), TILEPADDING_BINDING);
+            protocolMarshaller.marshall(h265Settings.getTileWidth(), TILEWIDTH_BINDING);
+            protocolMarshaller.marshall(h265Settings.getTreeblockSize(), TREEBLOCKSIZE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

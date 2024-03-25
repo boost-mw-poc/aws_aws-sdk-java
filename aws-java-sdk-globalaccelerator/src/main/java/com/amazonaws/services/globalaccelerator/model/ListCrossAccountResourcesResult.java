@@ -25,7 +25,7 @@ public class ListCrossAccountResourcesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The endpoints attached to an accelerator in a cross-account attachment.
+     * The cross-account resources used with an accelerator.
      * </p>
      */
     private java.util.List<CrossAccountResource> crossAccountResources;
@@ -38,10 +38,10 @@ public class ListCrossAccountResourcesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The endpoints attached to an accelerator in a cross-account attachment.
+     * The cross-account resources used with an accelerator.
      * </p>
      * 
-     * @return The endpoints attached to an accelerator in a cross-account attachment.
+     * @return The cross-account resources used with an accelerator.
      */
 
     public java.util.List<CrossAccountResource> getCrossAccountResources() {
@@ -50,11 +50,11 @@ public class ListCrossAccountResourcesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The endpoints attached to an accelerator in a cross-account attachment.
+     * The cross-account resources used with an accelerator.
      * </p>
      * 
      * @param crossAccountResources
-     *        The endpoints attached to an accelerator in a cross-account attachment.
+     *        The cross-account resources used with an accelerator.
      */
 
     public void setCrossAccountResources(java.util.Collection<CrossAccountResource> crossAccountResources) {
@@ -68,7 +68,7 @@ public class ListCrossAccountResourcesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The endpoints attached to an accelerator in a cross-account attachment.
+     * The cross-account resources used with an accelerator.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListCrossAccountResourcesResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param crossAccountResources
-     *        The endpoints attached to an accelerator in a cross-account attachment.
+     *        The cross-account resources used with an accelerator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListCrossAccountResourcesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The endpoints attached to an accelerator in a cross-account attachment.
+     * The cross-account resources used with an accelerator.
      * </p>
      * 
      * @param crossAccountResources
-     *        The endpoints attached to an accelerator in a cross-account attachment.
+     *        The cross-account resources used with an accelerator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

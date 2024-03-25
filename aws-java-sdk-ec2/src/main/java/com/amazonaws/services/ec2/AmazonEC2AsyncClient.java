@@ -16266,6 +16266,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<GetInstanceMetadataDefaultsResult> getInstanceMetadataDefaultsAsync(GetInstanceMetadataDefaultsRequest request) {
+
+        return getInstanceMetadataDefaultsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInstanceMetadataDefaultsResult> getInstanceMetadataDefaultsAsync(final GetInstanceMetadataDefaultsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetInstanceMetadataDefaultsRequest, GetInstanceMetadataDefaultsResult> asyncHandler) {
+        final GetInstanceMetadataDefaultsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetInstanceMetadataDefaultsResult>() {
+            @Override
+            public GetInstanceMetadataDefaultsResult call() throws Exception {
+                GetInstanceMetadataDefaultsResult result = null;
+
+                try {
+                    result = executeGetInstanceMetadataDefaults(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetInstanceTypesFromInstanceRequirementsResult> getInstanceTypesFromInstanceRequirementsAsync(
             GetInstanceTypesFromInstanceRequirementsRequest request) {
 
@@ -18354,6 +18387,40 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeModifyInstanceMaintenanceOptions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyInstanceMetadataDefaultsResult> modifyInstanceMetadataDefaultsAsync(ModifyInstanceMetadataDefaultsRequest request) {
+
+        return modifyInstanceMetadataDefaultsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyInstanceMetadataDefaultsResult> modifyInstanceMetadataDefaultsAsync(
+            final ModifyInstanceMetadataDefaultsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifyInstanceMetadataDefaultsRequest, ModifyInstanceMetadataDefaultsResult> asyncHandler) {
+        final ModifyInstanceMetadataDefaultsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ModifyInstanceMetadataDefaultsResult>() {
+            @Override
+            public ModifyInstanceMetadataDefaultsResult call() throws Exception {
+                ModifyInstanceMetadataDefaultsResult result = null;
+
+                try {
+                    result = executeModifyInstanceMetadataDefaults(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

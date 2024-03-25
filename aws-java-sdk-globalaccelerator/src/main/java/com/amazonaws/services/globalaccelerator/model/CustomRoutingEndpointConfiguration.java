@@ -37,7 +37,7 @@ public class CustomRoutingEndpointConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * be added to accelerators and principals that have permission to add the endpoints.
      * </p>
      */
     private String attachmentArn;
@@ -88,13 +88,12 @@ public class CustomRoutingEndpointConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * be added to accelerators and principals that have permission to add the endpoints.
      * </p>
      * 
      * @param attachmentArn
      *        The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources)
-     *        that can be added to accelerators and principals that have permission to add the endpoints to
-     *        accelerators.
+     *        that can be added to accelerators and principals that have permission to add the endpoints.
      */
 
     public void setAttachmentArn(String attachmentArn) {
@@ -104,12 +103,11 @@ public class CustomRoutingEndpointConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * be added to accelerators and principals that have permission to add the endpoints.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources)
-     *         that can be added to accelerators and principals that have permission to add the endpoints to
-     *         accelerators.
+     *         that can be added to accelerators and principals that have permission to add the endpoints.
      */
 
     public String getAttachmentArn() {
@@ -119,13 +117,12 @@ public class CustomRoutingEndpointConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources) that can
-     * be added to accelerators and principals that have permission to add the endpoints to accelerators.
+     * be added to accelerators and principals that have permission to add the endpoints.
      * </p>
      * 
      * @param attachmentArn
      *        The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints (resources)
-     *        that can be added to accelerators and principals that have permission to add the endpoints to
-     *        accelerators.
+     *        that can be added to accelerators and principals that have permission to add the endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

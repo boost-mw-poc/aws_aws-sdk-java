@@ -192,11 +192,8 @@ public interface AmazonECS {
      * </p>
      * <note>
      * <p>
-     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
-     * will help current customers migrate their workloads to options that offer better price and performance. After
-     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
-     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
-     * 30-day period are considered current customers and will be able to continue using the service.
+     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
+     * resolves the task definition revision before it authorizes the task definition.
      * </p>
      * </note>
      * <p>
@@ -293,7 +290,14 @@ public interface AmazonECS {
      * When the service scheduler launches new tasks, it determines task placement. For information about task placement
      * and task placement strategies, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement.html">Amazon ECS task
-     * placement</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * placement</a> in the <i>Amazon Elastic Container Service Developer Guide</i>
+     * </p>
+     * <p>
+     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
+     * will help current customers migrate their workloads to options that offer better price and performance. After
+     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
+     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
+     * 30-day period are considered current customers and will be able to continue using the service.
      * </p>
      * 
      * @param createServiceRequest
@@ -332,6 +336,12 @@ public interface AmazonECS {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon ECS deployment
      * types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
+     * resolves the task definition revision before it authorizes the task definition.
+     * </p>
+     * </note>
      * <p>
      * For information about the maximum number of task sets and otther quotas, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS service
@@ -1521,6 +1531,12 @@ public interface AmazonECS {
      * <p>
      * Starts a new task using the specified task definition.
      * </p>
+     * <note>
+     * <p>
+     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
+     * resolves the task definition revision before it authorizes the task definition.
+     * </p>
+     * </note>
      * <p>
      * You can allow Amazon ECS to place tasks for you, or you can customize how Amazon ECS places tasks using placement
      * constraints and placement strategies. For more information, see <a
@@ -1531,7 +1547,6 @@ public interface AmazonECS {
      * Alternatively, you can use <a>StartTask</a> to use your own scheduler or place tasks manually on specific
      * container instances.
      * </p>
-     * <note>
      * <p>
      * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
      * will help current customers migrate their workloads to options that offer better price and performance. After
@@ -1539,7 +1554,6 @@ public interface AmazonECS {
      * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
      * 30-day period are considered current customers and will be able to continue using the service.
      * </p>
-     * </note>
      * <p>
      * You can attach Amazon EBS volumes to Amazon ECS tasks by configuring the volume when creating or updating a
      * service. For more infomation, see <a
@@ -1628,13 +1642,17 @@ public interface AmazonECS {
      * </p>
      * <note>
      * <p>
+     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
+     * resolves the task definition revision before it authorizes the task definition.
+     * </p>
+     * </note>
+     * <p>
      * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
      * will help current customers migrate their workloads to options that offer better price and performance. After
      * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
      * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
      * 30-day period are considered current customers and will be able to continue using the service.
      * </p>
-     * </note>
      * <p>
      * Alternatively, you can use <a>RunTask</a> to place tasks for you. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html">Scheduling Tasks</a> in
@@ -2070,6 +2088,12 @@ public interface AmazonECS {
      * <p>
      * Modifies the parameters of a service.
      * </p>
+     * <note>
+     * <p>
+     * The following change began on March 21, 2024. When the task definition revision is not specified, Amazon ECS
+     * resolves the task definition revision before it authorizes the task definition.
+     * </p>
+     * </note>
      * <p>
      * For services using the rolling update (<code>ECS</code>) you can update the desired count, deployment
      * configuration, network configuration, load balancers, service registries, enable ECS managed tags option,

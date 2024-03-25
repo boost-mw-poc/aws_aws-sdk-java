@@ -149,8 +149,7 @@ public class Image implements Serializable, Cloneable {
     private String hypervisor;
     /**
      * <p>
-     * The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon Web
-     * Services account ID of the AMI owner.
+     * The owner alias (<code>amazon</code> | <code>aws-marketplace</code>).
      * </p>
      */
     private String imageOwnerAlias;
@@ -1311,13 +1310,11 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon Web
-     * Services account ID of the AMI owner.
+     * The owner alias (<code>amazon</code> | <code>aws-marketplace</code>).
      * </p>
      * 
      * @param imageOwnerAlias
-     *        The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon
-     *        Web Services account ID of the AMI owner.
+     *        The owner alias (<code>amazon</code> | <code>aws-marketplace</code>).
      */
 
     public void setImageOwnerAlias(String imageOwnerAlias) {
@@ -1326,12 +1323,10 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon Web
-     * Services account ID of the AMI owner.
+     * The owner alias (<code>amazon</code> | <code>aws-marketplace</code>).
      * </p>
      * 
-     * @return The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon
-     *         Web Services account ID of the AMI owner.
+     * @return The owner alias (<code>amazon</code> | <code>aws-marketplace</code>).
      */
 
     public String getImageOwnerAlias() {
@@ -1340,13 +1335,11 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon Web
-     * Services account ID of the AMI owner.
+     * The owner alias (<code>amazon</code> | <code>aws-marketplace</code>).
      * </p>
      * 
      * @param imageOwnerAlias
-     *        The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon
-     *        Web Services account ID of the AMI owner.
+     *        The owner alias (<code>amazon</code> | <code>aws-marketplace</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

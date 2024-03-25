@@ -41,6 +41,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * unavailability.
  * </p>
  * <p>
+ * Amazon ECS performs health checks on containers with the default that launched the container instance or the task.
+ * </p>
+ * <p>
  * The following describes the possible <code>healthStatus</code> values for a container:
  * </p>
  * <ul>

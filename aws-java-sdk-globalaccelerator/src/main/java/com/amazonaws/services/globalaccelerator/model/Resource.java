@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An Amazon Web Services resource that is supported by Global Accelerator and can be added as an endpoint for an
- * accelerator.
+ * A resource is one of the following: the ARN for an Amazon Web Services resource that is supported by Global
+ * Accelerator to be added as an endpoint, or a CIDR range that specifies a bring your own IP (BYOIP) address pool.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/Resource" target="_top">AWS API
@@ -31,24 +31,48 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The endpoint ID for the endpoint (Amazon Web Services resource).
+     * The endpoint ID for the endpoint that is specified as a Amazon Web Services resource.
+     * </p>
+     * <p>
+     * An endpoint ID for the cross-account feature is the ARN of an Amazon Web Services resource, such as a Network
+     * Load Balancer, that Global Accelerator supports as an endpoint for an accelerator.
      * </p>
      */
     private String endpointId;
     /**
      * <p>
-     * The Amazon Web Services Region where a resource is located.
+     * An IP address range, in CIDR format, that is specified as resource. The address must be provisioned and
+     * advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for Global
+     * Accelerator
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
+     */
+    private String cidr;
+    /**
+     * <p>
+     * The Amazon Web Services Region where a shared endpoint resource is located.
      * </p>
      */
     private String region;
 
     /**
      * <p>
-     * The endpoint ID for the endpoint (Amazon Web Services resource).
+     * The endpoint ID for the endpoint that is specified as a Amazon Web Services resource.
+     * </p>
+     * <p>
+     * An endpoint ID for the cross-account feature is the ARN of an Amazon Web Services resource, such as a Network
+     * Load Balancer, that Global Accelerator supports as an endpoint for an accelerator.
      * </p>
      * 
      * @param endpointId
-     *        The endpoint ID for the endpoint (Amazon Web Services resource).
+     *        The endpoint ID for the endpoint that is specified as a Amazon Web Services resource. </p>
+     *        <p>
+     *        An endpoint ID for the cross-account feature is the ARN of an Amazon Web Services resource, such as a
+     *        Network Load Balancer, that Global Accelerator supports as an endpoint for an accelerator.
      */
 
     public void setEndpointId(String endpointId) {
@@ -57,10 +81,17 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The endpoint ID for the endpoint (Amazon Web Services resource).
+     * The endpoint ID for the endpoint that is specified as a Amazon Web Services resource.
+     * </p>
+     * <p>
+     * An endpoint ID for the cross-account feature is the ARN of an Amazon Web Services resource, such as a Network
+     * Load Balancer, that Global Accelerator supports as an endpoint for an accelerator.
      * </p>
      * 
-     * @return The endpoint ID for the endpoint (Amazon Web Services resource).
+     * @return The endpoint ID for the endpoint that is specified as a Amazon Web Services resource. </p>
+     *         <p>
+     *         An endpoint ID for the cross-account feature is the ARN of an Amazon Web Services resource, such as a
+     *         Network Load Balancer, that Global Accelerator supports as an endpoint for an accelerator.
      */
 
     public String getEndpointId() {
@@ -69,11 +100,18 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The endpoint ID for the endpoint (Amazon Web Services resource).
+     * The endpoint ID for the endpoint that is specified as a Amazon Web Services resource.
+     * </p>
+     * <p>
+     * An endpoint ID for the cross-account feature is the ARN of an Amazon Web Services resource, such as a Network
+     * Load Balancer, that Global Accelerator supports as an endpoint for an accelerator.
      * </p>
      * 
      * @param endpointId
-     *        The endpoint ID for the endpoint (Amazon Web Services resource).
+     *        The endpoint ID for the endpoint that is specified as a Amazon Web Services resource. </p>
+     *        <p>
+     *        An endpoint ID for the cross-account feature is the ARN of an Amazon Web Services resource, such as a
+     *        Network Load Balancer, that Global Accelerator supports as an endpoint for an accelerator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,11 +122,90 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services Region where a resource is located.
+     * An IP address range, in CIDR format, that is specified as resource. The address must be provisioned and
+     * advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for Global
+     * Accelerator
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
+     * 
+     * @param cidr
+     *        An IP address range, in CIDR format, that is specified as resource. The address must be provisioned and
+     *        advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for Global
+     *        Accelerator</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP
+     *        addresses (BYOIP)</a> in the Global Accelerator Developer Guide.
+     */
+
+    public void setCidr(String cidr) {
+        this.cidr = cidr;
+    }
+
+    /**
+     * <p>
+     * An IP address range, in CIDR format, that is specified as resource. The address must be provisioned and
+     * advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for Global
+     * Accelerator
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
+     * 
+     * @return An IP address range, in CIDR format, that is specified as resource. The address must be provisioned and
+     *         advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for Global
+     *         Accelerator</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP
+     *         addresses (BYOIP)</a> in the Global Accelerator Developer Guide.
+     */
+
+    public String getCidr() {
+        return this.cidr;
+    }
+
+    /**
+     * <p>
+     * An IP address range, in CIDR format, that is specified as resource. The address must be provisioned and
+     * advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for Global
+     * Accelerator
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP addresses
+     * (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * </p>
+     * 
+     * @param cidr
+     *        An IP address range, in CIDR format, that is specified as resource. The address must be provisioned and
+     *        advertised in Global Accelerator by following the bring your own IP address (BYOIP) process for Global
+     *        Accelerator</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring your own IP
+     *        addresses (BYOIP)</a> in the Global Accelerator Developer Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Resource withCidr(String cidr) {
+        setCidr(cidr);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services Region where a shared endpoint resource is located.
      * </p>
      * 
      * @param region
-     *        The Amazon Web Services Region where a resource is located.
+     *        The Amazon Web Services Region where a shared endpoint resource is located.
      */
 
     public void setRegion(String region) {
@@ -97,10 +214,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services Region where a resource is located.
+     * The Amazon Web Services Region where a shared endpoint resource is located.
      * </p>
      * 
-     * @return The Amazon Web Services Region where a resource is located.
+     * @return The Amazon Web Services Region where a shared endpoint resource is located.
      */
 
     public String getRegion() {
@@ -109,11 +226,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services Region where a resource is located.
+     * The Amazon Web Services Region where a shared endpoint resource is located.
      * </p>
      * 
      * @param region
-     *        The Amazon Web Services Region where a resource is located.
+     *        The Amazon Web Services Region where a shared endpoint resource is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,6 +253,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getEndpointId() != null)
             sb.append("EndpointId: ").append(getEndpointId()).append(",");
+        if (getCidr() != null)
+            sb.append("Cidr: ").append(getCidr()).append(",");
         if (getRegion() != null)
             sb.append("Region: ").append(getRegion());
         sb.append("}");
@@ -156,6 +275,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEndpointId() != null && other.getEndpointId().equals(this.getEndpointId()) == false)
             return false;
+        if (other.getCidr() == null ^ this.getCidr() == null)
+            return false;
+        if (other.getCidr() != null && other.getCidr().equals(this.getCidr()) == false)
+            return false;
         if (other.getRegion() == null ^ this.getRegion() == null)
             return false;
         if (other.getRegion() != null && other.getRegion().equals(this.getRegion()) == false)
@@ -169,6 +292,7 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEndpointId() == null) ? 0 : getEndpointId().hashCode());
+        hashCode = prime * hashCode + ((getCidr() == null) ? 0 : getCidr().hashCode());
         hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
         return hashCode;
     }

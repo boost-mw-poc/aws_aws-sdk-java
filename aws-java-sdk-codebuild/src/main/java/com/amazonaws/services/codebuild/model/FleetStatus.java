@@ -50,6 +50,11 @@ public class FleetStatus implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>PENDING_DELETION</code>: The compute fleet is pending deletion.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DELETING</code>: The compute fleet is being deleted.
      * </p>
      * </li>
@@ -119,6 +124,11 @@ public class FleetStatus implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>PENDING_DELETION</code>: The compute fleet is pending deletion.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DELETING</code>: The compute fleet is being deleted.
      * </p>
      * </li>
@@ -156,6 +166,11 @@ public class FleetStatus implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>ROTATING</code>: The compute fleet is being rotated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PENDING_DELETION</code>: The compute fleet is pending deletion.
      *        </p>
      *        </li>
      *        <li>
@@ -208,6 +223,11 @@ public class FleetStatus implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>PENDING_DELETION</code>: The compute fleet is pending deletion.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DELETING</code>: The compute fleet is being deleted.
      * </p>
      * </li>
@@ -244,6 +264,11 @@ public class FleetStatus implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>ROTATING</code>: The compute fleet is being rotated.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PENDING_DELETION</code>: The compute fleet is pending deletion.
      *         </p>
      *         </li>
      *         <li>
@@ -296,6 +321,11 @@ public class FleetStatus implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>PENDING_DELETION</code>: The compute fleet is pending deletion.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DELETING</code>: The compute fleet is being deleted.
      * </p>
      * </li>
@@ -333,6 +363,11 @@ public class FleetStatus implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>ROTATING</code>: The compute fleet is being rotated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PENDING_DELETION</code>: The compute fleet is pending deletion.
      *        </p>
      *        </li>
      *        <li>
@@ -387,6 +422,11 @@ public class FleetStatus implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>PENDING_DELETION</code>: The compute fleet is pending deletion.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DELETING</code>: The compute fleet is being deleted.
      * </p>
      * </li>
@@ -424,6 +464,11 @@ public class FleetStatus implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>ROTATING</code>: The compute fleet is being rotated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PENDING_DELETION</code>: The compute fleet is pending deletion.
      *        </p>
      *        </li>
      *        <li>

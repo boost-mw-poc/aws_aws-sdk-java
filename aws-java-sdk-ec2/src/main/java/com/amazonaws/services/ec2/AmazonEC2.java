@@ -9036,6 +9036,25 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Gets the default instance metadata service (IMDS) settings that are set at the account level in the specified
+     * Amazon Web Services&#x2028; Region.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param getInstanceMetadataDefaultsRequest
+     * @return Result of the GetInstanceMetadataDefaults operation returned by the service.
+     * @sample AmazonEC2.GetInstanceMetadataDefaults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceMetadataDefaults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetInstanceMetadataDefaultsResult getInstanceMetadataDefaults(GetInstanceMetadataDefaultsRequest getInstanceMetadataDefaultsRequest);
+
+    /**
+     * <p>
      * Returns a list of instance types with the specified instance attributes. You can use the response to preview the
      * instance types without launching instances. Note that the response does not consider capacity.
      * </p>
@@ -10248,6 +10267,28 @@ public interface AmazonEC2 {
      *      target="_top">AWS API Documentation</a>
      */
     ModifyInstanceMaintenanceOptionsResult modifyInstanceMaintenanceOptions(ModifyInstanceMaintenanceOptionsRequest modifyInstanceMaintenanceOptionsRequest);
+
+    /**
+     * <p>
+     * Modifies the default instance metadata service (IMDS) settings at the account level in the specified Amazon Web
+     * Services&#x2028; Region.
+     * </p>
+     * <note>
+     * <p>
+     * To remove a parameter's account-level default setting, specify <code>no-preference</code>. At instance launch,
+     * the value will come from the AMI, or from the launch parameter if specified. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * </note>
+     * 
+     * @param modifyInstanceMetadataDefaultsRequest
+     * @return Result of the ModifyInstanceMetadataDefaults operation returned by the service.
+     * @sample AmazonEC2.ModifyInstanceMetadataDefaults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceMetadataDefaults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ModifyInstanceMetadataDefaultsResult modifyInstanceMetadataDefaults(ModifyInstanceMetadataDefaultsRequest modifyInstanceMetadataDefaultsRequest);
 
     /**
      * <p>

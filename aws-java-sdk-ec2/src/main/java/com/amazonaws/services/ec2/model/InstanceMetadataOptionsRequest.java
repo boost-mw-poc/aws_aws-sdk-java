@@ -33,33 +33,44 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
-     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
-     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
-     * credentials.
+     * <code>optional</code> - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
-     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
-     * credentials are not available.
+     * <code>required</code> - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use IMDSv2.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String httpTokens;
     /**
      * <p>
-     * The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further
-     * instance metadata requests can travel.
-     * </p>
-     * <p>
-     * Default: 1
+     * The maximum number of hops that the metadata token can travel.
      * </p>
      * <p>
      * Possible values: Integers from 1 to 64
@@ -107,23 +118,38 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
-     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
-     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
-     * credentials.
+     * <code>optional</code> - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
-     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
-     * credentials are not available.
+     * <code>required</code> - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use IMDSv2.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param httpTokens
@@ -131,23 +157,39 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your
-     *        instance metadata retrieval requests. If you retrieve IAM role credentials without a session token, you
-     *        receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a valid session token, you
-     *        receive the IMDSv2 role credentials.
+     *        <code>optional</code> - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata
-     *        retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
-     *        credentials; IMDSv1 credentials are not available.
+     *        <code>required</code> - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use IMDSv2.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     *        <code>v2.0</code>, the default is <code>required</code>.
+     *        Default:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     *        <code>required</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     *        <code>optional</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The default value can also be affected by other combinations of parameters. For more information, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     *        >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * @see HttpTokensState
      */
 
@@ -162,46 +204,77 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
-     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
-     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
-     * credentials.
+     * <code>optional</code> - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
-     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
-     * credentials are not available.
+     * <code>required</code> - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use IMDSv2.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Indicates whether IMDSv2 is required.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your
-     *         instance metadata retrieval requests. If you retrieve IAM role credentials without a session token, you
-     *         receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a valid session token,
-     *         you receive the IMDSv2 role credentials.
+     *         <code>optional</code> - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata
-     *         retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
-     *         credentials; IMDSv1 credentials are not available.
+     *         <code>required</code> - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use IMDSv2.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     *         <code>v2.0</code>, the default is <code>required</code>.
+     *         Default:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *         <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     *         <code>required</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *         <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     *         <code>optional</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         The default value can also be affected by other combinations of parameters. For more information, see <a
+     *         href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     *         >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * @see HttpTokensState
      */
 
@@ -216,23 +289,38 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
-     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
-     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
-     * credentials.
+     * <code>optional</code> - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
-     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
-     * credentials are not available.
+     * <code>required</code> - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use IMDSv2.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param httpTokens
@@ -240,23 +328,39 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your
-     *        instance metadata retrieval requests. If you retrieve IAM role credentials without a session token, you
-     *        receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a valid session token, you
-     *        receive the IMDSv2 role credentials.
+     *        <code>optional</code> - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata
-     *        retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
-     *        credentials; IMDSv1 credentials are not available.
+     *        <code>required</code> - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use IMDSv2.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     *        <code>v2.0</code>, the default is <code>required</code>.
+     *        Default:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     *        <code>required</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     *        <code>optional</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The default value can also be affected by other combinations of parameters. For more information, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     *        >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HttpTokensState
      */
@@ -273,23 +377,38 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your instance
-     * metadata retrieval requests. If you retrieve IAM role credentials without a session token, you receive the IMDSv1
-     * role credentials. If you retrieve IAM role credentials using a valid session token, you receive the IMDSv2 role
-     * credentials.
+     * <code>optional</code> - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata retrieval
-     * requests. With this option, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1
-     * credentials are not available.
+     * <code>required</code> - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use IMDSv2.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param httpTokens
@@ -297,23 +416,39 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>optional</code> - IMDSv2 is optional. You can choose whether to send a session token in your
-     *        instance metadata retrieval requests. If you retrieve IAM role credentials without a session token, you
-     *        receive the IMDSv1 role credentials. If you retrieve IAM role credentials using a valid session token, you
-     *        receive the IMDSv2 role credentials.
+     *        <code>optional</code> - IMDSv2 is optional, which means that you can use either IMDSv2 or IMDSv1.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>required</code> - IMDSv2 is required. You must send a session token in your instance metadata
-     *        retrieval requests. With this option, retrieving the IAM role credentials always returns IMDSv2
-     *        credentials; IMDSv1 credentials are not available.
+     *        <code>required</code> - IMDSv2 is required, which means that IMDSv1 is disabled, and you must use IMDSv2.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     *        <code>v2.0</code>, the default is <code>required</code>.
+     *        Default:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     *        <code>required</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     *        <code>optional</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The default value can also be affected by other combinations of parameters. For more information, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     *        >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HttpTokensState
      */
@@ -325,22 +460,14 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further
-     * instance metadata requests can travel.
-     * </p>
-     * <p>
-     * Default: 1
+     * The maximum number of hops that the metadata token can travel.
      * </p>
      * <p>
      * Possible values: Integers from 1 to 64
      * </p>
      * 
      * @param httpPutResponseHopLimit
-     *        The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further
-     *        instance metadata requests can travel.</p>
-     *        <p>
-     *        Default: 1
-     *        </p>
+     *        The maximum number of hops that the metadata token can travel.</p>
      *        <p>
      *        Possible values: Integers from 1 to 64
      */
@@ -351,21 +478,13 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further
-     * instance metadata requests can travel.
-     * </p>
-     * <p>
-     * Default: 1
+     * The maximum number of hops that the metadata token can travel.
      * </p>
      * <p>
      * Possible values: Integers from 1 to 64
      * </p>
      * 
-     * @return The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the
-     *         further instance metadata requests can travel.</p>
-     *         <p>
-     *         Default: 1
-     *         </p>
+     * @return The maximum number of hops that the metadata token can travel.</p>
      *         <p>
      *         Possible values: Integers from 1 to 64
      */
@@ -376,22 +495,14 @@ public class InstanceMetadataOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further
-     * instance metadata requests can travel.
-     * </p>
-     * <p>
-     * Default: 1
+     * The maximum number of hops that the metadata token can travel.
      * </p>
      * <p>
      * Possible values: Integers from 1 to 64
      * </p>
      * 
      * @param httpPutResponseHopLimit
-     *        The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further
-     *        instance metadata requests can travel.</p>
-     *        <p>
-     *        Default: 1
-     *        </p>
+     *        The maximum number of hops that the metadata token can travel.</p>
      *        <p>
      *        Possible values: Integers from 1 to 64
      * @return Returns a reference to this object so that method calls can be chained together.

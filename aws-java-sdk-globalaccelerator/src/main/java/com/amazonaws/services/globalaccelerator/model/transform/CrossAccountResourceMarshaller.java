@@ -29,6 +29,8 @@ public class CrossAccountResourceMarshaller {
 
     private static final MarshallingInfo<String> ENDPOINTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointId").build();
+    private static final MarshallingInfo<String> CIDR_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Cidr").build();
     private static final MarshallingInfo<String> ATTACHMENTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttachmentArn").build();
 
@@ -49,6 +51,7 @@ public class CrossAccountResourceMarshaller {
 
         try {
             protocolMarshaller.marshall(crossAccountResource.getEndpointId(), ENDPOINTID_BINDING);
+            protocolMarshaller.marshall(crossAccountResource.getCidr(), CIDR_BINDING);
             protocolMarshaller.marshall(crossAccountResource.getAttachmentArn(), ATTACHMENTARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

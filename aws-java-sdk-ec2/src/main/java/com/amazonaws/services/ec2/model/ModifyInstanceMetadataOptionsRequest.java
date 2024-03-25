@@ -54,8 +54,28 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String httpTokens;
@@ -158,8 +178,28 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param httpTokens
@@ -182,8 +222,29 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     *        <code>v2.0</code>, the default is <code>required</code>.
+     *        Default:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     *        <code>required</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     *        <code>optional</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The default value can also be affected by other combinations of parameters. For more information, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     *        >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * @see HttpTokensState
      */
 
@@ -213,8 +274,28 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Indicates whether IMDSv2 is required.</p>
@@ -236,8 +317,29 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      *         </li>
      *         </ul>
      *         <p>
-     *         Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     *         <code>v2.0</code>, the default is <code>required</code>.
+     *         Default:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *         <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     *         <code>required</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *         <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     *         <code>optional</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         The default value can also be affected by other combinations of parameters. For more information, see <a
+     *         href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     *         >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * @see HttpTokensState
      */
 
@@ -267,8 +369,28 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param httpTokens
@@ -291,8 +413,29 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     *        <code>v2.0</code>, the default is <code>required</code>.
+     *        Default:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     *        <code>required</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     *        <code>optional</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The default value can also be affected by other combinations of parameters. For more information, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     *        >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HttpTokensState
      */
@@ -324,8 +467,28 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     * <code>v2.0</code>, the default is <code>required</code>.
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     * <code>required</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     * <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     * <code>optional</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The default value can also be affected by other combinations of parameters. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     * >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param httpTokens
@@ -348,8 +511,29 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
-     *        <code>v2.0</code>, the default is <code>required</code>.
+     *        Default:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code> and the account level default is set to <code>no-preference</code>, the default is
+     *        <code>required</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI) for your instance is
+     *        <code>v2.0</code>, but the account level default is set to <code>V1 or V2</code>, the default is
+     *        <code>optional</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The default value can also be affected by other combinations of parameters. For more information, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html#instance-metadata-options-order-of-precedence"
+     *        >Order of precedence for instance metadata options</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HttpTokensState
      */

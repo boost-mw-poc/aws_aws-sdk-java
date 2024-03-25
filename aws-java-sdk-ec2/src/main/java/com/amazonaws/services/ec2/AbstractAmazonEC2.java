@@ -2521,6 +2521,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public GetInstanceMetadataDefaultsResult getInstanceMetadataDefaults(GetInstanceMetadataDefaultsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetInstanceTypesFromInstanceRequirementsResult getInstanceTypesFromInstanceRequirements(GetInstanceTypesFromInstanceRequirementsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2836,6 +2841,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public ModifyInstanceMaintenanceOptionsResult modifyInstanceMaintenanceOptions(ModifyInstanceMaintenanceOptionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifyInstanceMetadataDefaultsResult modifyInstanceMetadataDefaults(ModifyInstanceMetadataDefaultsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
