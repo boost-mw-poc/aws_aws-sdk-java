@@ -1227,6 +1227,39 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
 
     /**
      * <p>
+     * Deletes the specified time series form for the specified asset.
+     * </p>
+     * 
+     * @param deleteTimeSeriesDataPointsRequest
+     * @return A Java Future containing the result of the DeleteTimeSeriesDataPoints operation returned by the service.
+     * @sample AmazonDataZoneAsync.DeleteTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTimeSeriesDataPointsResult> deleteTimeSeriesDataPointsAsync(
+            DeleteTimeSeriesDataPointsRequest deleteTimeSeriesDataPointsRequest);
+
+    /**
+     * <p>
+     * Deletes the specified time series form for the specified asset.
+     * </p>
+     * 
+     * @param deleteTimeSeriesDataPointsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteTimeSeriesDataPoints operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.DeleteTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTimeSeriesDataPointsResult> deleteTimeSeriesDataPointsAsync(
+            DeleteTimeSeriesDataPointsRequest deleteTimeSeriesDataPointsRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteTimeSeriesDataPointsRequest, DeleteTimeSeriesDataPointsResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets an Amazon DataZone asset.
      * </p>
      * 
@@ -1886,6 +1919,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
 
     /**
      * <p>
+     * Gets the existing data point for the asset.
+     * </p>
+     * 
+     * @param getTimeSeriesDataPointRequest
+     * @return A Java Future containing the result of the GetTimeSeriesDataPoint operation returned by the service.
+     * @sample AmazonDataZoneAsync.GetTimeSeriesDataPoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetTimeSeriesDataPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTimeSeriesDataPointResult> getTimeSeriesDataPointAsync(GetTimeSeriesDataPointRequest getTimeSeriesDataPointRequest);
+
+    /**
+     * <p>
+     * Gets the existing data point for the asset.
+     * </p>
+     * 
+     * @param getTimeSeriesDataPointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTimeSeriesDataPoint operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.GetTimeSeriesDataPoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetTimeSeriesDataPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTimeSeriesDataPointResult> getTimeSeriesDataPointAsync(GetTimeSeriesDataPointRequest getTimeSeriesDataPointRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTimeSeriesDataPointRequest, GetTimeSeriesDataPointResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a user profile in Amazon DataZone.
      * </p>
      * 
@@ -2482,6 +2546,68 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists time series data points.
+     * </p>
+     * 
+     * @param listTimeSeriesDataPointsRequest
+     * @return A Java Future containing the result of the ListTimeSeriesDataPoints operation returned by the service.
+     * @sample AmazonDataZoneAsync.ListTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTimeSeriesDataPointsResult> listTimeSeriesDataPointsAsync(ListTimeSeriesDataPointsRequest listTimeSeriesDataPointsRequest);
+
+    /**
+     * <p>
+     * Lists time series data points.
+     * </p>
+     * 
+     * @param listTimeSeriesDataPointsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTimeSeriesDataPoints operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.ListTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTimeSeriesDataPointsResult> listTimeSeriesDataPointsAsync(ListTimeSeriesDataPointsRequest listTimeSeriesDataPointsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTimeSeriesDataPointsRequest, ListTimeSeriesDataPointsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Posts time series data points to Amazon DataZone for the specified asset.
+     * </p>
+     * 
+     * @param postTimeSeriesDataPointsRequest
+     * @return A Java Future containing the result of the PostTimeSeriesDataPoints operation returned by the service.
+     * @sample AmazonDataZoneAsync.PostTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/PostTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PostTimeSeriesDataPointsResult> postTimeSeriesDataPointsAsync(PostTimeSeriesDataPointsRequest postTimeSeriesDataPointsRequest);
+
+    /**
+     * <p>
+     * Posts time series data points to Amazon DataZone for the specified asset.
+     * </p>
+     * 
+     * @param postTimeSeriesDataPointsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PostTimeSeriesDataPoints operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.PostTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/PostTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PostTimeSeriesDataPointsResult> postTimeSeriesDataPointsAsync(PostTimeSeriesDataPointsRequest postTimeSeriesDataPointsRequest,
+            com.amazonaws.handlers.AsyncHandler<PostTimeSeriesDataPointsRequest, PostTimeSeriesDataPointsResult> asyncHandler);
 
     /**
      * <p>

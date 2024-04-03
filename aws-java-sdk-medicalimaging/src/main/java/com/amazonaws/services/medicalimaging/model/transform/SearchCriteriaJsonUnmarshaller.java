@@ -54,6 +54,10 @@ public class SearchCriteriaJsonUnmarshaller implements Unmarshaller<SearchCriter
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("sort", targetDepth)) {
+                    context.nextToken();
+                    searchCriteria.setSort(SortJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

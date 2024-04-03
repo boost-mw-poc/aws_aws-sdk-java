@@ -55,6 +55,10 @@ public class SearchImageSetsResultJsonUnmarshaller implements Unmarshaller<Searc
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("sort", targetDepth)) {
+                    context.nextToken();
+                    searchImageSetsResult.setSort(SortJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("nextToken", targetDepth)) {
                     context.nextToken();
                     searchImageSetsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));

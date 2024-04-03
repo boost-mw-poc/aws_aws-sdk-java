@@ -107,6 +107,14 @@ public class DescribeContactResultJsonUnmarshaller implements Unmarshaller<Descr
                     describeContactResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("visibilityEndTime", targetDepth)) {
+                    context.nextToken();
+                    describeContactResult.setVisibilityEndTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("visibilityStartTime", targetDepth)) {
+                    context.nextToken();
+                    describeContactResult.setVisibilityStartTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

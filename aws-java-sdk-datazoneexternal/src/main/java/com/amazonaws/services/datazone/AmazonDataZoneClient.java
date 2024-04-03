@@ -2803,6 +2803,75 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Deletes the specified time series form for the specified asset.
+     * </p>
+     * 
+     * @param deleteTimeSeriesDataPointsRequest
+     * @return Result of the DeleteTimeSeriesDataPoints operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.DeleteTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteTimeSeriesDataPointsResult deleteTimeSeriesDataPoints(DeleteTimeSeriesDataPointsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteTimeSeriesDataPoints(request);
+    }
+
+    @SdkInternalApi
+    final DeleteTimeSeriesDataPointsResult executeDeleteTimeSeriesDataPoints(DeleteTimeSeriesDataPointsRequest deleteTimeSeriesDataPointsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteTimeSeriesDataPointsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteTimeSeriesDataPointsRequest> request = null;
+        Response<DeleteTimeSeriesDataPointsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteTimeSeriesDataPointsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteTimeSeriesDataPointsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteTimeSeriesDataPoints");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteTimeSeriesDataPointsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteTimeSeriesDataPointsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets an Amazon DataZone asset.
      * </p>
      * 
@@ -4233,6 +4302,74 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Gets the existing data point for the asset.
+     * </p>
+     * 
+     * @param getTimeSeriesDataPointRequest
+     * @return Result of the GetTimeSeriesDataPoint operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.GetTimeSeriesDataPoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetTimeSeriesDataPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetTimeSeriesDataPointResult getTimeSeriesDataPoint(GetTimeSeriesDataPointRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetTimeSeriesDataPoint(request);
+    }
+
+    @SdkInternalApi
+    final GetTimeSeriesDataPointResult executeGetTimeSeriesDataPoint(GetTimeSeriesDataPointRequest getTimeSeriesDataPointRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getTimeSeriesDataPointRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetTimeSeriesDataPointRequest> request = null;
+        Response<GetTimeSeriesDataPointResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetTimeSeriesDataPointRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getTimeSeriesDataPointRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetTimeSeriesDataPoint");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetTimeSeriesDataPointResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetTimeSeriesDataPointResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets a user profile in Amazon DataZone.
      * </p>
      * 
@@ -5521,6 +5658,148 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists time series data points.
+     * </p>
+     * 
+     * @param listTimeSeriesDataPointsRequest
+     * @return Result of the ListTimeSeriesDataPoints operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.ListTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListTimeSeriesDataPointsResult listTimeSeriesDataPoints(ListTimeSeriesDataPointsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTimeSeriesDataPoints(request);
+    }
+
+    @SdkInternalApi
+    final ListTimeSeriesDataPointsResult executeListTimeSeriesDataPoints(ListTimeSeriesDataPointsRequest listTimeSeriesDataPointsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTimeSeriesDataPointsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTimeSeriesDataPointsRequest> request = null;
+        Response<ListTimeSeriesDataPointsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTimeSeriesDataPointsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listTimeSeriesDataPointsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTimeSeriesDataPoints");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTimeSeriesDataPointsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListTimeSeriesDataPointsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Posts time series data points to Amazon DataZone for the specified asset.
+     * </p>
+     * 
+     * @param postTimeSeriesDataPointsRequest
+     * @return Result of the PostTimeSeriesDataPoints operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ServiceQuotaExceededException
+     *         The request has exceeded the specified service quota.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.PostTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/PostTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PostTimeSeriesDataPointsResult postTimeSeriesDataPoints(PostTimeSeriesDataPointsRequest request) {
+        request = beforeClientExecution(request);
+        return executePostTimeSeriesDataPoints(request);
+    }
+
+    @SdkInternalApi
+    final PostTimeSeriesDataPointsResult executePostTimeSeriesDataPoints(PostTimeSeriesDataPointsRequest postTimeSeriesDataPointsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(postTimeSeriesDataPointsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PostTimeSeriesDataPointsRequest> request = null;
+        Response<PostTimeSeriesDataPointsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PostTimeSeriesDataPointsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(postTimeSeriesDataPointsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PostTimeSeriesDataPoints");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PostTimeSeriesDataPointsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PostTimeSeriesDataPointsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

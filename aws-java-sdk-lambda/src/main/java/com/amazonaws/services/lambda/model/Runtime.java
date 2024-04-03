@@ -52,6 +52,7 @@ public enum Runtime {
     Python310("python3.10"),
     Java17("java17"),
     Ruby32("ruby3.2"),
+    Ruby33("ruby3.3"),
     Python311("python3.11"),
     Nodejs20X("nodejs20.x"),
     ProvidedAl2023("provided.al2023"),

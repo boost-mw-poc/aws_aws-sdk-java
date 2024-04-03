@@ -27,18 +27,18 @@ public class DescribeSecurityPolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specify the text name of the security policy for which you want the details.
      * </p>
      */
     private String securityPolicyName;
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specify the text name of the security policy for which you want the details.
      * </p>
      * 
      * @param securityPolicyName
-     *        Specifies the name of the security policy that is attached to the server.
+     *        Specify the text name of the security policy for which you want the details.
      */
 
     public void setSecurityPolicyName(String securityPolicyName) {
@@ -47,10 +47,10 @@ public class DescribeSecurityPolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specify the text name of the security policy for which you want the details.
      * </p>
      * 
-     * @return Specifies the name of the security policy that is attached to the server.
+     * @return Specify the text name of the security policy for which you want the details.
      */
 
     public String getSecurityPolicyName() {
@@ -59,11 +59,11 @@ public class DescribeSecurityPolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specify the text name of the security policy for which you want the details.
      * </p>
      * 
      * @param securityPolicyName
-     *        Specifies the name of the security policy that is attached to the server.
+     *        Specify the text name of the security policy for which you want the details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

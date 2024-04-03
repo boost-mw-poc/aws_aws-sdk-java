@@ -2212,4 +2212,37 @@ public interface AmazonDocDBAsync extends AmazonDocDB {
     java.util.concurrent.Future<DBCluster> stopDBClusterAsync(StopDBClusterRequest stopDBClusterRequest,
             com.amazonaws.handlers.AsyncHandler<StopDBClusterRequest, DBCluster> asyncHandler);
 
+    /**
+     * <p>
+     * Switches over the specified secondary Amazon DocumentDB cluster to be the new primary Amazon DocumentDB cluster
+     * in the global database cluster.
+     * </p>
+     * 
+     * @param switchoverGlobalClusterRequest
+     * @return A Java Future containing the result of the SwitchoverGlobalCluster operation returned by the service.
+     * @sample AmazonDocDBAsync.SwitchoverGlobalCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/SwitchoverGlobalCluster" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GlobalCluster> switchoverGlobalClusterAsync(SwitchoverGlobalClusterRequest switchoverGlobalClusterRequest);
+
+    /**
+     * <p>
+     * Switches over the specified secondary Amazon DocumentDB cluster to be the new primary Amazon DocumentDB cluster
+     * in the global database cluster.
+     * </p>
+     * 
+     * @param switchoverGlobalClusterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SwitchoverGlobalCluster operation returned by the service.
+     * @sample AmazonDocDBAsyncHandler.SwitchoverGlobalCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/SwitchoverGlobalCluster" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GlobalCluster> switchoverGlobalClusterAsync(SwitchoverGlobalClusterRequest switchoverGlobalClusterRequest,
+            com.amazonaws.handlers.AsyncHandler<SwitchoverGlobalClusterRequest, GlobalCluster> asyncHandler);
+
 }

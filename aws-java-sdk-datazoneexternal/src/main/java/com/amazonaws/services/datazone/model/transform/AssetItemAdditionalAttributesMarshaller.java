@@ -30,6 +30,8 @@ public class AssetItemAdditionalAttributesMarshaller {
 
     private static final MarshallingInfo<List> FORMSOUTPUT_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("formsOutput").build();
+    private static final MarshallingInfo<List> LATESTTIMESERIESDATAPOINTFORMSOUTPUT_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latestTimeSeriesDataPointFormsOutput").build();
     private static final MarshallingInfo<List> READONLYFORMSOUTPUT_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("readOnlyFormsOutput").build();
 
@@ -50,6 +52,7 @@ public class AssetItemAdditionalAttributesMarshaller {
 
         try {
             protocolMarshaller.marshall(assetItemAdditionalAttributes.getFormsOutput(), FORMSOUTPUT_BINDING);
+            protocolMarshaller.marshall(assetItemAdditionalAttributes.getLatestTimeSeriesDataPointFormsOutput(), LATESTTIMESERIESDATAPOINTFORMSOUTPUT_BINDING);
             protocolMarshaller.marshall(assetItemAdditionalAttributes.getReadOnlyFormsOutput(), READONLYFORMSOUTPUT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

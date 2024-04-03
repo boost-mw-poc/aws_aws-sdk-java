@@ -112,6 +112,12 @@ public class DescribedConnector implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private java.util.List<String> serviceManagedEgressIpAddresses;
+    /**
+     * <p>
+     * The text name of the security policy for the specified connector.
+     * </p>
+     */
+    private String securityPolicyName;
 
     /**
      * <p>
@@ -716,6 +722,46 @@ public class DescribedConnector implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The text name of the security policy for the specified connector.
+     * </p>
+     * 
+     * @param securityPolicyName
+     *        The text name of the security policy for the specified connector.
+     */
+
+    public void setSecurityPolicyName(String securityPolicyName) {
+        this.securityPolicyName = securityPolicyName;
+    }
+
+    /**
+     * <p>
+     * The text name of the security policy for the specified connector.
+     * </p>
+     * 
+     * @return The text name of the security policy for the specified connector.
+     */
+
+    public String getSecurityPolicyName() {
+        return this.securityPolicyName;
+    }
+
+    /**
+     * <p>
+     * The text name of the security policy for the specified connector.
+     * </p>
+     * 
+     * @param securityPolicyName
+     *        The text name of the security policy for the specified connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribedConnector withSecurityPolicyName(String securityPolicyName) {
+        setSecurityPolicyName(securityPolicyName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -744,7 +790,9 @@ public class DescribedConnector implements Serializable, Cloneable, StructuredPo
         if (getSftpConfig() != null)
             sb.append("SftpConfig: ").append(getSftpConfig()).append(",");
         if (getServiceManagedEgressIpAddresses() != null)
-            sb.append("ServiceManagedEgressIpAddresses: ").append(getServiceManagedEgressIpAddresses());
+            sb.append("ServiceManagedEgressIpAddresses: ").append(getServiceManagedEgressIpAddresses()).append(",");
+        if (getSecurityPolicyName() != null)
+            sb.append("SecurityPolicyName: ").append(getSecurityPolicyName());
         sb.append("}");
         return sb.toString();
     }
@@ -796,6 +844,10 @@ public class DescribedConnector implements Serializable, Cloneable, StructuredPo
         if (other.getServiceManagedEgressIpAddresses() != null
                 && other.getServiceManagedEgressIpAddresses().equals(this.getServiceManagedEgressIpAddresses()) == false)
             return false;
+        if (other.getSecurityPolicyName() == null ^ this.getSecurityPolicyName() == null)
+            return false;
+        if (other.getSecurityPolicyName() != null && other.getSecurityPolicyName().equals(this.getSecurityPolicyName()) == false)
+            return false;
         return true;
     }
 
@@ -813,6 +865,7 @@ public class DescribedConnector implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getSftpConfig() == null) ? 0 : getSftpConfig().hashCode());
         hashCode = prime * hashCode + ((getServiceManagedEgressIpAddresses() == null) ? 0 : getServiceManagedEgressIpAddresses().hashCode());
+        hashCode = prime * hashCode + ((getSecurityPolicyName() == null) ? 0 : getSecurityPolicyName().hashCode());
         return hashCode;
     }
 

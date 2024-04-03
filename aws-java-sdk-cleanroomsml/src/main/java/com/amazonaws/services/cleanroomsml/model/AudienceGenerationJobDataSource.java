@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the Amazon S3 bucket where the training data for the configured audience is stored.
+ * Defines the Amazon S3 bucket where the seed audience for the generating audience is stored.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanroomsml-2023-09-06/AudienceGenerationJobDataSource"
@@ -30,7 +30,17 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The Amazon S3 bucket where the training data for the configured audience is stored.
+     * Defines the Amazon S3 bucket where the seed audience for the generating audience is stored. A valid data source
+     * is a JSON line file in the following format:
+     * </p>
+     * <p>
+     * <code>{"user_id": "111111"}</code>
+     * </p>
+     * <p>
+     * <code>{"user_id": "222222"}</code>
+     * </p>
+     * <p>
+     * <code>...</code>
      * </p>
      */
     private S3ConfigMap dataSource;
@@ -43,11 +53,30 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The Amazon S3 bucket where the training data for the configured audience is stored.
+     * Defines the Amazon S3 bucket where the seed audience for the generating audience is stored. A valid data source
+     * is a JSON line file in the following format:
+     * </p>
+     * <p>
+     * <code>{"user_id": "111111"}</code>
+     * </p>
+     * <p>
+     * <code>{"user_id": "222222"}</code>
+     * </p>
+     * <p>
+     * <code>...</code>
      * </p>
      * 
      * @param dataSource
-     *        The Amazon S3 bucket where the training data for the configured audience is stored.
+     *        Defines the Amazon S3 bucket where the seed audience for the generating audience is stored. A valid data
+     *        source is a JSON line file in the following format:</p>
+     *        <p>
+     *        <code>{"user_id": "111111"}</code>
+     *        </p>
+     *        <p>
+     *        <code>{"user_id": "222222"}</code>
+     *        </p>
+     *        <p>
+     *        <code>...</code>
      */
 
     public void setDataSource(S3ConfigMap dataSource) {
@@ -56,10 +85,29 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The Amazon S3 bucket where the training data for the configured audience is stored.
+     * Defines the Amazon S3 bucket where the seed audience for the generating audience is stored. A valid data source
+     * is a JSON line file in the following format:
+     * </p>
+     * <p>
+     * <code>{"user_id": "111111"}</code>
+     * </p>
+     * <p>
+     * <code>{"user_id": "222222"}</code>
+     * </p>
+     * <p>
+     * <code>...</code>
      * </p>
      * 
-     * @return The Amazon S3 bucket where the training data for the configured audience is stored.
+     * @return Defines the Amazon S3 bucket where the seed audience for the generating audience is stored. A valid data
+     *         source is a JSON line file in the following format:</p>
+     *         <p>
+     *         <code>{"user_id": "111111"}</code>
+     *         </p>
+     *         <p>
+     *         <code>{"user_id": "222222"}</code>
+     *         </p>
+     *         <p>
+     *         <code>...</code>
      */
 
     public S3ConfigMap getDataSource() {
@@ -68,11 +116,30 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The Amazon S3 bucket where the training data for the configured audience is stored.
+     * Defines the Amazon S3 bucket where the seed audience for the generating audience is stored. A valid data source
+     * is a JSON line file in the following format:
+     * </p>
+     * <p>
+     * <code>{"user_id": "111111"}</code>
+     * </p>
+     * <p>
+     * <code>{"user_id": "222222"}</code>
+     * </p>
+     * <p>
+     * <code>...</code>
      * </p>
      * 
      * @param dataSource
-     *        The Amazon S3 bucket where the training data for the configured audience is stored.
+     *        Defines the Amazon S3 bucket where the seed audience for the generating audience is stored. A valid data
+     *        source is a JSON line file in the following format:</p>
+     *        <p>
+     *        <code>{"user_id": "111111"}</code>
+     *        </p>
+     *        <p>
+     *        <code>{"user_id": "222222"}</code>
+     *        </p>
+     *        <p>
+     *        <code>...</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

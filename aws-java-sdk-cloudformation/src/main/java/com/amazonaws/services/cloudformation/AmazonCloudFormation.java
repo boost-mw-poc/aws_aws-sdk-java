@@ -142,7 +142,7 @@ public interface AmazonCloudFormation {
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
      * >SetTypeConfiguration</a> to specify configuration properties for the extension. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -165,7 +165,7 @@ public interface AmazonCloudFormation {
      * </p>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -1722,7 +1722,7 @@ public interface AmazonCloudFormation {
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
      * >SetTypeConfiguration</a> to specify configuration properties for the extension. For more information, see <a
      * href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -1810,7 +1810,7 @@ public interface AmazonCloudFormation {
      * <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html">DescribeType</a>.
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * <important>

@@ -1401,6 +1401,28 @@ public interface AmazonDocDB {
     DBCluster stopDBCluster(StopDBClusterRequest stopDBClusterRequest);
 
     /**
+     * <p>
+     * Switches over the specified secondary Amazon DocumentDB cluster to be the new primary Amazon DocumentDB cluster
+     * in the global database cluster.
+     * </p>
+     * 
+     * @param switchoverGlobalClusterRequest
+     * @return Result of the SwitchoverGlobalCluster operation returned by the service.
+     * @throws GlobalClusterNotFoundException
+     *         The <code>GlobalClusterIdentifier</code> doesn't refer to an existing global cluster.
+     * @throws InvalidGlobalClusterStateException
+     *         The requested operation can't be performed while the cluster is in this state.
+     * @throws DBClusterNotFoundException
+     *         <code>DBClusterIdentifier</code> doesn't refer to an existing cluster.
+     * @throws InvalidDBClusterStateException
+     *         The cluster isn't in a valid state.
+     * @sample AmazonDocDB.SwitchoverGlobalCluster
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/SwitchoverGlobalCluster" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GlobalCluster switchoverGlobalCluster(SwitchoverGlobalClusterRequest switchoverGlobalClusterRequest);
+
+    /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and
      * callers are not expected to call it, but can if they want to explicitly release any open resources. Once a client
      * has been shutdown, it should not be used to make any more requests.

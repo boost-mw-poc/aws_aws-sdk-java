@@ -48,6 +48,10 @@ public class GlueRunConfigurationInputJsonUnmarshaller implements Unmarshaller<G
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("autoImportDataQualityResult", targetDepth)) {
+                    context.nextToken();
+                    glueRunConfigurationInput.setAutoImportDataQualityResult(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("dataAccessRole", targetDepth)) {
                     context.nextToken();
                     glueRunConfigurationInput.setDataAccessRole(context.getUnmarshaller(String.class).unmarshall(context));

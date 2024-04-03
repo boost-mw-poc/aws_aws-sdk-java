@@ -47,6 +47,16 @@ public class CaptionDescription implements Serializable, Cloneable, StructuredPo
      * within an event.
      */
     private String name;
+    /**
+     * Identifies the DASH roles to assign to this captions output. Applies only when the captions output is configured
+     * for DVB DASH accessibility signaling.
+     */
+    private java.util.List<String> captionDashRoles;
+    /**
+     * Identifies DVB DASH accessibility signaling in this captions output. Used in Microsoft Smooth Streaming outputs
+     * to signal accessibility information to packagers.
+     */
+    private String dvbDashAccessibility;
 
     /**
      * Indicates whether the caption track implements accessibility features such as written descriptions of spoken
@@ -294,6 +304,163 @@ public class CaptionDescription implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * Identifies the DASH roles to assign to this captions output. Applies only when the captions output is configured
+     * for DVB DASH accessibility signaling.
+     * 
+     * @return Identifies the DASH roles to assign to this captions output. Applies only when the captions output is
+     *         configured for DVB DASH accessibility signaling.
+     * @see DashRoleCaption
+     */
+
+    public java.util.List<String> getCaptionDashRoles() {
+        return captionDashRoles;
+    }
+
+    /**
+     * Identifies the DASH roles to assign to this captions output. Applies only when the captions output is configured
+     * for DVB DASH accessibility signaling.
+     * 
+     * @param captionDashRoles
+     *        Identifies the DASH roles to assign to this captions output. Applies only when the captions output is
+     *        configured for DVB DASH accessibility signaling.
+     * @see DashRoleCaption
+     */
+
+    public void setCaptionDashRoles(java.util.Collection<String> captionDashRoles) {
+        if (captionDashRoles == null) {
+            this.captionDashRoles = null;
+            return;
+        }
+
+        this.captionDashRoles = new java.util.ArrayList<String>(captionDashRoles);
+    }
+
+    /**
+     * Identifies the DASH roles to assign to this captions output. Applies only when the captions output is configured
+     * for DVB DASH accessibility signaling.
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCaptionDashRoles(java.util.Collection)} or {@link #withCaptionDashRoles(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param captionDashRoles
+     *        Identifies the DASH roles to assign to this captions output. Applies only when the captions output is
+     *        configured for DVB DASH accessibility signaling.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DashRoleCaption
+     */
+
+    public CaptionDescription withCaptionDashRoles(String... captionDashRoles) {
+        if (this.captionDashRoles == null) {
+            setCaptionDashRoles(new java.util.ArrayList<String>(captionDashRoles.length));
+        }
+        for (String ele : captionDashRoles) {
+            this.captionDashRoles.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * Identifies the DASH roles to assign to this captions output. Applies only when the captions output is configured
+     * for DVB DASH accessibility signaling.
+     * 
+     * @param captionDashRoles
+     *        Identifies the DASH roles to assign to this captions output. Applies only when the captions output is
+     *        configured for DVB DASH accessibility signaling.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DashRoleCaption
+     */
+
+    public CaptionDescription withCaptionDashRoles(java.util.Collection<String> captionDashRoles) {
+        setCaptionDashRoles(captionDashRoles);
+        return this;
+    }
+
+    /**
+     * Identifies the DASH roles to assign to this captions output. Applies only when the captions output is configured
+     * for DVB DASH accessibility signaling.
+     * 
+     * @param captionDashRoles
+     *        Identifies the DASH roles to assign to this captions output. Applies only when the captions output is
+     *        configured for DVB DASH accessibility signaling.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DashRoleCaption
+     */
+
+    public CaptionDescription withCaptionDashRoles(DashRoleCaption... captionDashRoles) {
+        java.util.ArrayList<String> captionDashRolesCopy = new java.util.ArrayList<String>(captionDashRoles.length);
+        for (DashRoleCaption value : captionDashRoles) {
+            captionDashRolesCopy.add(value.toString());
+        }
+        if (getCaptionDashRoles() == null) {
+            setCaptionDashRoles(captionDashRolesCopy);
+        } else {
+            getCaptionDashRoles().addAll(captionDashRolesCopy);
+        }
+        return this;
+    }
+
+    /**
+     * Identifies DVB DASH accessibility signaling in this captions output. Used in Microsoft Smooth Streaming outputs
+     * to signal accessibility information to packagers.
+     * 
+     * @param dvbDashAccessibility
+     *        Identifies DVB DASH accessibility signaling in this captions output. Used in Microsoft Smooth Streaming
+     *        outputs to signal accessibility information to packagers.
+     * @see DvbDashAccessibility
+     */
+
+    public void setDvbDashAccessibility(String dvbDashAccessibility) {
+        this.dvbDashAccessibility = dvbDashAccessibility;
+    }
+
+    /**
+     * Identifies DVB DASH accessibility signaling in this captions output. Used in Microsoft Smooth Streaming outputs
+     * to signal accessibility information to packagers.
+     * 
+     * @return Identifies DVB DASH accessibility signaling in this captions output. Used in Microsoft Smooth Streaming
+     *         outputs to signal accessibility information to packagers.
+     * @see DvbDashAccessibility
+     */
+
+    public String getDvbDashAccessibility() {
+        return this.dvbDashAccessibility;
+    }
+
+    /**
+     * Identifies DVB DASH accessibility signaling in this captions output. Used in Microsoft Smooth Streaming outputs
+     * to signal accessibility information to packagers.
+     * 
+     * @param dvbDashAccessibility
+     *        Identifies DVB DASH accessibility signaling in this captions output. Used in Microsoft Smooth Streaming
+     *        outputs to signal accessibility information to packagers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DvbDashAccessibility
+     */
+
+    public CaptionDescription withDvbDashAccessibility(String dvbDashAccessibility) {
+        setDvbDashAccessibility(dvbDashAccessibility);
+        return this;
+    }
+
+    /**
+     * Identifies DVB DASH accessibility signaling in this captions output. Used in Microsoft Smooth Streaming outputs
+     * to signal accessibility information to packagers.
+     * 
+     * @param dvbDashAccessibility
+     *        Identifies DVB DASH accessibility signaling in this captions output. Used in Microsoft Smooth Streaming
+     *        outputs to signal accessibility information to packagers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DvbDashAccessibility
+     */
+
+    public CaptionDescription withDvbDashAccessibility(DvbDashAccessibility dvbDashAccessibility) {
+        this.dvbDashAccessibility = dvbDashAccessibility.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -316,7 +483,11 @@ public class CaptionDescription implements Serializable, Cloneable, StructuredPo
         if (getLanguageDescription() != null)
             sb.append("LanguageDescription: ").append(getLanguageDescription()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getCaptionDashRoles() != null)
+            sb.append("CaptionDashRoles: ").append(getCaptionDashRoles()).append(",");
+        if (getDvbDashAccessibility() != null)
+            sb.append("DvbDashAccessibility: ").append(getDvbDashAccessibility());
         sb.append("}");
         return sb.toString();
     }
@@ -355,6 +526,14 @@ public class CaptionDescription implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getCaptionDashRoles() == null ^ this.getCaptionDashRoles() == null)
+            return false;
+        if (other.getCaptionDashRoles() != null && other.getCaptionDashRoles().equals(this.getCaptionDashRoles()) == false)
+            return false;
+        if (other.getDvbDashAccessibility() == null ^ this.getDvbDashAccessibility() == null)
+            return false;
+        if (other.getDvbDashAccessibility() != null && other.getDvbDashAccessibility().equals(this.getDvbDashAccessibility()) == false)
+            return false;
         return true;
     }
 
@@ -369,6 +548,8 @@ public class CaptionDescription implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getLanguageCode() == null) ? 0 : getLanguageCode().hashCode());
         hashCode = prime * hashCode + ((getLanguageDescription() == null) ? 0 : getLanguageDescription().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getCaptionDashRoles() == null) ? 0 : getCaptionDashRoles().hashCode());
+        hashCode = prime * hashCode + ((getDvbDashAccessibility() == null) ? 0 : getDvbDashAccessibility().hashCode());
         return hashCode;
     }
 

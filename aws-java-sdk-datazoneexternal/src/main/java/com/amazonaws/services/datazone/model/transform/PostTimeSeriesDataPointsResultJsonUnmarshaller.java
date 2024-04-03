@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.cleanroomsml.model.transform;
+package com.amazonaws.services.datazone.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.cleanroomsml.model.*;
+import com.amazonaws.services.datazone.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * AudienceModelMetric JSON Unmarshaller
+ * PostTimeSeriesDataPointsResult JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class AudienceModelMetricJsonUnmarshaller implements Unmarshaller<AudienceModelMetric, JsonUnmarshallerContext> {
+public class PostTimeSeriesDataPointsResultJsonUnmarshaller implements Unmarshaller<PostTimeSeriesDataPointsResult, JsonUnmarshallerContext> {
 
-    public AudienceModelMetric unmarshall(JsonUnmarshallerContext context) throws Exception {
-        AudienceModelMetric audienceModelMetric = new AudienceModelMetric();
+    public PostTimeSeriesDataPointsResult unmarshall(JsonUnmarshallerContext context) throws Exception {
+        PostTimeSeriesDataPointsResult postTimeSeriesDataPointsResult = new PostTimeSeriesDataPointsResult();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -40,7 +40,7 @@ public class AudienceModelMetricJsonUnmarshaller implements Unmarshaller<Audienc
         if (token == null)
             token = context.nextToken();
         if (token == VALUE_NULL) {
-            return null;
+            return postTimeSeriesDataPointsResult;
         }
 
         while (true) {
@@ -48,17 +48,24 @@ public class AudienceModelMetricJsonUnmarshaller implements Unmarshaller<Audienc
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("forTopKItemPredictions", targetDepth)) {
+                if (context.testExpression("domainId", targetDepth)) {
                     context.nextToken();
-                    audienceModelMetric.setForTopKItemPredictions(context.getUnmarshaller(Integer.class).unmarshall(context));
+                    postTimeSeriesDataPointsResult.setDomainId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("type", targetDepth)) {
+                if (context.testExpression("entityId", targetDepth)) {
                     context.nextToken();
-                    audienceModelMetric.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                    postTimeSeriesDataPointsResult.setEntityId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("value", targetDepth)) {
+                if (context.testExpression("entityType", targetDepth)) {
                     context.nextToken();
-                    audienceModelMetric.setValue(context.getUnmarshaller(Double.class).unmarshall(context));
+                    postTimeSeriesDataPointsResult.setEntityType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("forms", targetDepth)) {
+                    context.nextToken();
+                    postTimeSeriesDataPointsResult.setForms(new ListUnmarshaller<TimeSeriesDataPointFormOutput>(TimeSeriesDataPointFormOutputJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -69,14 +76,14 @@ public class AudienceModelMetricJsonUnmarshaller implements Unmarshaller<Audienc
             token = context.nextToken();
         }
 
-        return audienceModelMetric;
+        return postTimeSeriesDataPointsResult;
     }
 
-    private static AudienceModelMetricJsonUnmarshaller instance;
+    private static PostTimeSeriesDataPointsResultJsonUnmarshaller instance;
 
-    public static AudienceModelMetricJsonUnmarshaller getInstance() {
+    public static PostTimeSeriesDataPointsResultJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new AudienceModelMetricJsonUnmarshaller();
+            instance = new PostTimeSeriesDataPointsResultJsonUnmarshaller();
         return instance;
     }
 }

@@ -47,6 +47,14 @@ public class DICOMTagsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMNumberOfStudyRelatedInstances").build();
     private static final MarshallingInfo<String> DICOMACCESSIONNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMAccessionNumber").build();
+    private static final MarshallingInfo<String> DICOMSERIESINSTANCEUID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMSeriesInstanceUID").build();
+    private static final MarshallingInfo<String> DICOMSERIESMODALITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMSeriesModality").build();
+    private static final MarshallingInfo<String> DICOMSERIESBODYPART_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMSeriesBodyPart").build();
+    private static final MarshallingInfo<Integer> DICOMSERIESNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMSeriesNumber").build();
     private static final MarshallingInfo<String> DICOMSTUDYDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMStudyDate").build();
     private static final MarshallingInfo<String> DICOMSTUDYTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -78,6 +86,10 @@ public class DICOMTagsMarshaller {
             protocolMarshaller.marshall(dICOMTags.getDICOMNumberOfStudyRelatedSeries(), DICOMNUMBEROFSTUDYRELATEDSERIES_BINDING);
             protocolMarshaller.marshall(dICOMTags.getDICOMNumberOfStudyRelatedInstances(), DICOMNUMBEROFSTUDYRELATEDINSTANCES_BINDING);
             protocolMarshaller.marshall(dICOMTags.getDICOMAccessionNumber(), DICOMACCESSIONNUMBER_BINDING);
+            protocolMarshaller.marshall(dICOMTags.getDICOMSeriesInstanceUID(), DICOMSERIESINSTANCEUID_BINDING);
+            protocolMarshaller.marshall(dICOMTags.getDICOMSeriesModality(), DICOMSERIESMODALITY_BINDING);
+            protocolMarshaller.marshall(dICOMTags.getDICOMSeriesBodyPart(), DICOMSERIESBODYPART_BINDING);
+            protocolMarshaller.marshall(dICOMTags.getDICOMSeriesNumber(), DICOMSERIESNUMBER_BINDING);
             protocolMarshaller.marshall(dICOMTags.getDICOMStudyDate(), DICOMSTUDYDATE_BINDING);
             protocolMarshaller.marshall(dICOMTags.getDICOMStudyTime(), DICOMSTUDYTIME_BINDING);
         } catch (Exception e) {

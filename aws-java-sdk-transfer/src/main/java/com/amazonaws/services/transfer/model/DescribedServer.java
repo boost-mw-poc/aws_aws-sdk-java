@@ -234,7 +234,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
     private java.util.List<String> protocols;
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      * </p>
      */
     private String securityPolicyName;
@@ -1980,11 +1980,11 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      * </p>
      * 
      * @param securityPolicyName
-     *        Specifies the name of the security policy that is attached to the server.
+     *        Specifies the name of the security policy for the server.
      */
 
     public void setSecurityPolicyName(String securityPolicyName) {
@@ -1993,10 +1993,10 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      * </p>
      * 
-     * @return Specifies the name of the security policy that is attached to the server.
+     * @return Specifies the name of the security policy for the server.
      */
 
     public String getSecurityPolicyName() {
@@ -2005,11 +2005,11 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      * </p>
      * 
      * @param securityPolicyName
-     *        Specifies the name of the security policy that is attached to the server.
+     *        Specifies the name of the security policy for the server.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -40,6 +40,8 @@ public class AssetListingMarshaller {
             .marshallLocationName("forms").build();
     private static final MarshallingInfo<List> GLOSSARYTERMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("glossaryTerms").build();
+    private static final MarshallingInfo<List> LATESTTIMESERIESDATAPOINTFORMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latestTimeSeriesDataPointForms").build();
     private static final MarshallingInfo<String> OWNINGPROJECTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("owningProjectId").build();
 
@@ -65,6 +67,7 @@ public class AssetListingMarshaller {
             protocolMarshaller.marshall(assetListing.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(assetListing.getForms(), FORMS_BINDING);
             protocolMarshaller.marshall(assetListing.getGlossaryTerms(), GLOSSARYTERMS_BINDING);
+            protocolMarshaller.marshall(assetListing.getLatestTimeSeriesDataPointForms(), LATESTTIMESERIESDATAPOINTFORMS_BINDING);
             protocolMarshaller.marshall(assetListing.getOwningProjectId(), OWNINGPROJECTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

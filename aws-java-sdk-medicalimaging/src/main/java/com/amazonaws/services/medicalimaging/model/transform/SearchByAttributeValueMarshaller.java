@@ -35,8 +35,12 @@ public class SearchByAttributeValueMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMStudyId").build();
     private static final MarshallingInfo<String> DICOMSTUDYINSTANCEUID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMStudyInstanceUID").build();
+    private static final MarshallingInfo<String> DICOMSERIESINSTANCEUID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMSeriesInstanceUID").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<StructuredPojo> DICOMSTUDYDATEANDTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMStudyDateAndTime").build();
 
@@ -60,7 +64,9 @@ public class SearchByAttributeValueMarshaller {
             protocolMarshaller.marshall(searchByAttributeValue.getDICOMAccessionNumber(), DICOMACCESSIONNUMBER_BINDING);
             protocolMarshaller.marshall(searchByAttributeValue.getDICOMStudyId(), DICOMSTUDYID_BINDING);
             protocolMarshaller.marshall(searchByAttributeValue.getDICOMStudyInstanceUID(), DICOMSTUDYINSTANCEUID_BINDING);
+            protocolMarshaller.marshall(searchByAttributeValue.getDICOMSeriesInstanceUID(), DICOMSERIESINSTANCEUID_BINDING);
             protocolMarshaller.marshall(searchByAttributeValue.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(searchByAttributeValue.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(searchByAttributeValue.getDICOMStudyDateAndTime(), DICOMSTUDYDATEANDTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

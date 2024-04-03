@@ -54,10 +54,22 @@ public class SearchByAttributeValue implements Serializable, Cloneable, Structur
     private String dICOMStudyInstanceUID;
     /**
      * <p>
+     * The Series Instance UID input for search.
+     * </p>
+     */
+    private String dICOMSeriesInstanceUID;
+    /**
+     * <p>
      * The created at time of the image set provided for search.
      * </p>
      */
     private java.util.Date createdAt;
+    /**
+     * <p>
+     * The timestamp input for search.
+     * </p>
+     */
+    private java.util.Date updatedAt;
     /**
      * <p>
      * The aggregated structure containing DICOM study date and study time for search.
@@ -227,6 +239,46 @@ public class SearchByAttributeValue implements Serializable, Cloneable, Structur
 
     /**
      * <p>
+     * The Series Instance UID input for search.
+     * </p>
+     * 
+     * @param dICOMSeriesInstanceUID
+     *        The Series Instance UID input for search.
+     */
+
+    public void setDICOMSeriesInstanceUID(String dICOMSeriesInstanceUID) {
+        this.dICOMSeriesInstanceUID = dICOMSeriesInstanceUID;
+    }
+
+    /**
+     * <p>
+     * The Series Instance UID input for search.
+     * </p>
+     * 
+     * @return The Series Instance UID input for search.
+     */
+
+    public String getDICOMSeriesInstanceUID() {
+        return this.dICOMSeriesInstanceUID;
+    }
+
+    /**
+     * <p>
+     * The Series Instance UID input for search.
+     * </p>
+     * 
+     * @param dICOMSeriesInstanceUID
+     *        The Series Instance UID input for search.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchByAttributeValue withDICOMSeriesInstanceUID(String dICOMSeriesInstanceUID) {
+        setDICOMSeriesInstanceUID(dICOMSeriesInstanceUID);
+        return this;
+    }
+
+    /**
+     * <p>
      * The created at time of the image set provided for search.
      * </p>
      * 
@@ -262,6 +314,46 @@ public class SearchByAttributeValue implements Serializable, Cloneable, Structur
 
     public SearchByAttributeValue withCreatedAt(java.util.Date createdAt) {
         setCreatedAt(createdAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The timestamp input for search.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The timestamp input for search.
+     */
+
+    public void setUpdatedAt(java.util.Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    /**
+     * <p>
+     * The timestamp input for search.
+     * </p>
+     * 
+     * @return The timestamp input for search.
+     */
+
+    public java.util.Date getUpdatedAt() {
+        return this.updatedAt;
+    }
+
+    /**
+     * <p>
+     * The timestamp input for search.
+     * </p>
+     * 
+     * @param updatedAt
+     *        The timestamp input for search.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchByAttributeValue withUpdatedAt(java.util.Date updatedAt) {
+        setUpdatedAt(updatedAt);
         return this;
     }
 
@@ -325,8 +417,12 @@ public class SearchByAttributeValue implements Serializable, Cloneable, Structur
             sb.append("DICOMStudyId: ").append("***Sensitive Data Redacted***").append(",");
         if (getDICOMStudyInstanceUID() != null)
             sb.append("DICOMStudyInstanceUID: ").append("***Sensitive Data Redacted***").append(",");
+        if (getDICOMSeriesInstanceUID() != null)
+            sb.append("DICOMSeriesInstanceUID: ").append("***Sensitive Data Redacted***").append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getUpdatedAt() != null)
+            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
         if (getDICOMStudyDateAndTime() != null)
             sb.append("DICOMStudyDateAndTime: ").append(getDICOMStudyDateAndTime());
         sb.append("}");
@@ -359,9 +455,17 @@ public class SearchByAttributeValue implements Serializable, Cloneable, Structur
             return false;
         if (other.getDICOMStudyInstanceUID() != null && other.getDICOMStudyInstanceUID().equals(this.getDICOMStudyInstanceUID()) == false)
             return false;
+        if (other.getDICOMSeriesInstanceUID() == null ^ this.getDICOMSeriesInstanceUID() == null)
+            return false;
+        if (other.getDICOMSeriesInstanceUID() != null && other.getDICOMSeriesInstanceUID().equals(this.getDICOMSeriesInstanceUID()) == false)
+            return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+            return false;
+        if (other.getUpdatedAt() == null ^ this.getUpdatedAt() == null)
+            return false;
+        if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
             return false;
         if (other.getDICOMStudyDateAndTime() == null ^ this.getDICOMStudyDateAndTime() == null)
             return false;
@@ -379,7 +483,9 @@ public class SearchByAttributeValue implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getDICOMAccessionNumber() == null) ? 0 : getDICOMAccessionNumber().hashCode());
         hashCode = prime * hashCode + ((getDICOMStudyId() == null) ? 0 : getDICOMStudyId().hashCode());
         hashCode = prime * hashCode + ((getDICOMStudyInstanceUID() == null) ? 0 : getDICOMStudyInstanceUID().hashCode());
+        hashCode = prime * hashCode + ((getDICOMSeriesInstanceUID() == null) ? 0 : getDICOMSeriesInstanceUID().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getDICOMStudyDateAndTime() == null) ? 0 : getDICOMStudyDateAndTime().hashCode());
         return hashCode;
     }

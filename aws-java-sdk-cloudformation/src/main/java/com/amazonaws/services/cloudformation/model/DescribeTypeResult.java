@@ -312,7 +312,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * To set the configuration data for an extension, use <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
      * >SetTypeConfiguration</a>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
@@ -2519,7 +2519,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * To set the configuration data for an extension, use <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
      * >SetTypeConfiguration</a>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -2530,7 +2530,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        To set the configuration data for an extension, use <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
      *        >SetTypeConfiguration</a>. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      *        >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      */
 
@@ -2546,7 +2546,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * To set the configuration data for an extension, use <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
      * >SetTypeConfiguration</a>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -2556,7 +2556,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *         To set the configuration data for an extension, use <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
      *         >SetTypeConfiguration</a>. For more information, see <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      *         >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      */
 
@@ -2572,7 +2572,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * To set the configuration data for an extension, use <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
      * >SetTypeConfiguration</a>. For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      * >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
@@ -2583,7 +2583,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        To set the configuration data for an extension, use <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html"
      *        >SetTypeConfiguration</a>. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration"
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration"
      *        >Configuring extensions at the account level</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

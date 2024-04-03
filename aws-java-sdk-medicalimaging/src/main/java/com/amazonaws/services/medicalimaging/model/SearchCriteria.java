@@ -34,6 +34,12 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<SearchFilter> filters;
+    /**
+     * <p>
+     * The sort input for search criteria.
+     * </p>
+     */
+    private Sort sort;
 
     /**
      * <p>
@@ -106,6 +112,46 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The sort input for search criteria.
+     * </p>
+     * 
+     * @param sort
+     *        The sort input for search criteria.
+     */
+
+    public void setSort(Sort sort) {
+        this.sort = sort;
+    }
+
+    /**
+     * <p>
+     * The sort input for search criteria.
+     * </p>
+     * 
+     * @return The sort input for search criteria.
+     */
+
+    public Sort getSort() {
+        return this.sort;
+    }
+
+    /**
+     * <p>
+     * The sort input for search criteria.
+     * </p>
+     * 
+     * @param sort
+     *        The sort input for search criteria.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchCriteria withSort(Sort sort) {
+        setSort(sort);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -118,7 +164,9 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getFilters() != null)
-            sb.append("Filters: ").append(getFilters());
+            sb.append("Filters: ").append(getFilters()).append(",");
+        if (getSort() != null)
+            sb.append("Sort: ").append(getSort());
         sb.append("}");
         return sb.toString();
     }
@@ -137,6 +185,10 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getFilters() != null && other.getFilters().equals(this.getFilters()) == false)
             return false;
+        if (other.getSort() == null ^ this.getSort() == null)
+            return false;
+        if (other.getSort() != null && other.getSort().equals(this.getSort()) == false)
+            return false;
         return true;
     }
 
@@ -146,6 +198,7 @@ public class SearchCriteria implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
+        hashCode = prime * hashCode + ((getSort() == null) ? 0 : getSort().hashCode());
         return hashCode;
     }
 

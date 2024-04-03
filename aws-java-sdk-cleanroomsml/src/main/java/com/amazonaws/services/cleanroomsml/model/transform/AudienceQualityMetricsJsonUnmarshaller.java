@@ -48,6 +48,10 @@ public class AudienceQualityMetricsJsonUnmarshaller implements Unmarshaller<Audi
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("recallMetric", targetDepth)) {
+                    context.nextToken();
+                    audienceQualityMetrics.setRecallMetric(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
                 if (context.testExpression("relevanceMetrics", targetDepth)) {
                     context.nextToken();
                     audienceQualityMetrics.setRelevanceMetrics(new ListUnmarshaller<RelevanceMetric>(RelevanceMetricJsonUnmarshaller.getInstance())

@@ -17,16 +17,22 @@ package com.amazonaws.auth;
 /**
  * Simple session credentials with keys and session token.
  */
-public class BasicSessionCredentials implements AWSSessionCredentials {
+public class BasicSessionCredentials implements AWSSessionCredentials, AccountIdAware {
 
     private final String awsAccessKey;
     private final String awsSecretKey;
     private final String sessionToken;
+    private final String accountId;
     
     public BasicSessionCredentials(String awsAccessKey, String awsSecretKey, String sessionToken) {
+        this(awsAccessKey, awsSecretKey, sessionToken, null);
+    }
+
+    public BasicSessionCredentials(String awsAccessKey, String awsSecretKey, String sessionToken, String accountId) {
         this.awsAccessKey = awsAccessKey;
         this.awsSecretKey = awsSecretKey;
         this.sessionToken = sessionToken;
+        this.accountId = accountId;
     }
 
     public String getAWSAccessKeyId() {
@@ -41,4 +47,7 @@ public class BasicSessionCredentials implements AWSSessionCredentials {
         return sessionToken;
     }
 
+    public String getAccountId() {
+        return accountId;
+    }
 }

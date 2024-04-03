@@ -28,14 +28,15 @@ public class CreateMissionProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amount of time after a contact ends that you’d like to receive a CloudWatch event indicating the pass has
-     * finished.
+     * Amount of time after a contact ends that you’d like to receive a Ground Station Contact State Change event
+     * indicating the pass has finished.
      * </p>
      */
     private Integer contactPostPassDurationSeconds;
     /**
      * <p>
-     * Amount of time prior to contact start you’d like to receive a CloudWatch event indicating an upcoming pass.
+     * Amount of time prior to contact start you’d like to receive a Ground Station Contact State Change event
+     * indicating an upcoming pass.
      * </p>
      */
     private Integer contactPrePassDurationSeconds;
@@ -86,13 +87,13 @@ public class CreateMissionProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amount of time after a contact ends that you’d like to receive a CloudWatch event indicating the pass has
-     * finished.
+     * Amount of time after a contact ends that you’d like to receive a Ground Station Contact State Change event
+     * indicating the pass has finished.
      * </p>
      * 
      * @param contactPostPassDurationSeconds
-     *        Amount of time after a contact ends that you’d like to receive a CloudWatch event indicating the pass has
-     *        finished.
+     *        Amount of time after a contact ends that you’d like to receive a Ground Station Contact State Change event
+     *        indicating the pass has finished.
      */
 
     public void setContactPostPassDurationSeconds(Integer contactPostPassDurationSeconds) {
@@ -101,12 +102,12 @@ public class CreateMissionProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amount of time after a contact ends that you’d like to receive a CloudWatch event indicating the pass has
-     * finished.
+     * Amount of time after a contact ends that you’d like to receive a Ground Station Contact State Change event
+     * indicating the pass has finished.
      * </p>
      * 
-     * @return Amount of time after a contact ends that you’d like to receive a CloudWatch event indicating the pass has
-     *         finished.
+     * @return Amount of time after a contact ends that you’d like to receive a Ground Station Contact State Change
+     *         event indicating the pass has finished.
      */
 
     public Integer getContactPostPassDurationSeconds() {
@@ -115,13 +116,13 @@ public class CreateMissionProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amount of time after a contact ends that you’d like to receive a CloudWatch event indicating the pass has
-     * finished.
+     * Amount of time after a contact ends that you’d like to receive a Ground Station Contact State Change event
+     * indicating the pass has finished.
      * </p>
      * 
      * @param contactPostPassDurationSeconds
-     *        Amount of time after a contact ends that you’d like to receive a CloudWatch event indicating the pass has
-     *        finished.
+     *        Amount of time after a contact ends that you’d like to receive a Ground Station Contact State Change event
+     *        indicating the pass has finished.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,12 +133,13 @@ public class CreateMissionProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amount of time prior to contact start you’d like to receive a CloudWatch event indicating an upcoming pass.
+     * Amount of time prior to contact start you’d like to receive a Ground Station Contact State Change event
+     * indicating an upcoming pass.
      * </p>
      * 
      * @param contactPrePassDurationSeconds
-     *        Amount of time prior to contact start you’d like to receive a CloudWatch event indicating an upcoming
-     *        pass.
+     *        Amount of time prior to contact start you’d like to receive a Ground Station Contact State Change event
+     *        indicating an upcoming pass.
      */
 
     public void setContactPrePassDurationSeconds(Integer contactPrePassDurationSeconds) {
@@ -146,11 +148,12 @@ public class CreateMissionProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amount of time prior to contact start you’d like to receive a CloudWatch event indicating an upcoming pass.
+     * Amount of time prior to contact start you’d like to receive a Ground Station Contact State Change event
+     * indicating an upcoming pass.
      * </p>
      * 
-     * @return Amount of time prior to contact start you’d like to receive a CloudWatch event indicating an upcoming
-     *         pass.
+     * @return Amount of time prior to contact start you’d like to receive a Ground Station Contact State Change event
+     *         indicating an upcoming pass.
      */
 
     public Integer getContactPrePassDurationSeconds() {
@@ -159,12 +162,13 @@ public class CreateMissionProfileRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amount of time prior to contact start you’d like to receive a CloudWatch event indicating an upcoming pass.
+     * Amount of time prior to contact start you’d like to receive a Ground Station Contact State Change event
+     * indicating an upcoming pass.
      * </p>
      * 
      * @param contactPrePassDurationSeconds
-     *        Amount of time prior to contact start you’d like to receive a CloudWatch event indicating an upcoming
-     *        pass.
+     *        Amount of time prior to contact start you’d like to receive a Ground Station Contact State Change event
+     *        indicating an upcoming pass.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

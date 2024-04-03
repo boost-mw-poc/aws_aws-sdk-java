@@ -39,6 +39,8 @@ public class UpdateConnectorRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LoggingRole").build();
     private static final MarshallingInfo<StructuredPojo> SFTPCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SftpConfig").build();
+    private static final MarshallingInfo<String> SECURITYPOLICYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityPolicyName").build();
 
     private static final UpdateConnectorRequestMarshaller instance = new UpdateConnectorRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class UpdateConnectorRequestMarshaller {
             protocolMarshaller.marshall(updateConnectorRequest.getAccessRole(), ACCESSROLE_BINDING);
             protocolMarshaller.marshall(updateConnectorRequest.getLoggingRole(), LOGGINGROLE_BINDING);
             protocolMarshaller.marshall(updateConnectorRequest.getSftpConfig(), SFTPCONFIG_BINDING);
+            protocolMarshaller.marshall(updateConnectorRequest.getSecurityPolicyName(), SECURITYPOLICYNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

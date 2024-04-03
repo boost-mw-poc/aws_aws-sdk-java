@@ -36,6 +36,12 @@ public class AssetItemAdditionalAttributes implements Serializable, Cloneable, S
     private java.util.List<FormOutput> formsOutput;
     /**
      * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     */
+    private java.util.List<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointFormsOutput;
+    /**
+     * <p>
      * The read-only forms included in the additional attributes of an inventory asset.
      * </p>
      */
@@ -108,6 +114,78 @@ public class AssetItemAdditionalAttributes implements Serializable, Cloneable, S
 
     public AssetItemAdditionalAttributes withFormsOutput(java.util.Collection<FormOutput> formsOutput) {
         setFormsOutput(formsOutput);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * 
+     * @return The latest time series data points forms included in the additional attributes of an asset.
+     */
+
+    public java.util.List<TimeSeriesDataPointSummaryFormOutput> getLatestTimeSeriesDataPointFormsOutput() {
+        return latestTimeSeriesDataPointFormsOutput;
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointFormsOutput
+     *        The latest time series data points forms included in the additional attributes of an asset.
+     */
+
+    public void setLatestTimeSeriesDataPointFormsOutput(java.util.Collection<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointFormsOutput) {
+        if (latestTimeSeriesDataPointFormsOutput == null) {
+            this.latestTimeSeriesDataPointFormsOutput = null;
+            return;
+        }
+
+        this.latestTimeSeriesDataPointFormsOutput = new java.util.ArrayList<TimeSeriesDataPointSummaryFormOutput>(latestTimeSeriesDataPointFormsOutput);
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLatestTimeSeriesDataPointFormsOutput(java.util.Collection)} or
+     * {@link #withLatestTimeSeriesDataPointFormsOutput(java.util.Collection)} if you want to override the existing
+     * values.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointFormsOutput
+     *        The latest time series data points forms included in the additional attributes of an asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssetItemAdditionalAttributes withLatestTimeSeriesDataPointFormsOutput(TimeSeriesDataPointSummaryFormOutput... latestTimeSeriesDataPointFormsOutput) {
+        if (this.latestTimeSeriesDataPointFormsOutput == null) {
+            setLatestTimeSeriesDataPointFormsOutput(new java.util.ArrayList<TimeSeriesDataPointSummaryFormOutput>(latestTimeSeriesDataPointFormsOutput.length));
+        }
+        for (TimeSeriesDataPointSummaryFormOutput ele : latestTimeSeriesDataPointFormsOutput) {
+            this.latestTimeSeriesDataPointFormsOutput.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointFormsOutput
+     *        The latest time series data points forms included in the additional attributes of an asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssetItemAdditionalAttributes withLatestTimeSeriesDataPointFormsOutput(
+            java.util.Collection<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointFormsOutput) {
+        setLatestTimeSeriesDataPointFormsOutput(latestTimeSeriesDataPointFormsOutput);
         return this;
     }
 
@@ -195,6 +273,8 @@ public class AssetItemAdditionalAttributes implements Serializable, Cloneable, S
         sb.append("{");
         if (getFormsOutput() != null)
             sb.append("FormsOutput: ").append(getFormsOutput()).append(",");
+        if (getLatestTimeSeriesDataPointFormsOutput() != null)
+            sb.append("LatestTimeSeriesDataPointFormsOutput: ").append(getLatestTimeSeriesDataPointFormsOutput()).append(",");
         if (getReadOnlyFormsOutput() != null)
             sb.append("ReadOnlyFormsOutput: ").append(getReadOnlyFormsOutput());
         sb.append("}");
@@ -215,6 +295,11 @@ public class AssetItemAdditionalAttributes implements Serializable, Cloneable, S
             return false;
         if (other.getFormsOutput() != null && other.getFormsOutput().equals(this.getFormsOutput()) == false)
             return false;
+        if (other.getLatestTimeSeriesDataPointFormsOutput() == null ^ this.getLatestTimeSeriesDataPointFormsOutput() == null)
+            return false;
+        if (other.getLatestTimeSeriesDataPointFormsOutput() != null
+                && other.getLatestTimeSeriesDataPointFormsOutput().equals(this.getLatestTimeSeriesDataPointFormsOutput()) == false)
+            return false;
         if (other.getReadOnlyFormsOutput() == null ^ this.getReadOnlyFormsOutput() == null)
             return false;
         if (other.getReadOnlyFormsOutput() != null && other.getReadOnlyFormsOutput().equals(this.getReadOnlyFormsOutput()) == false)
@@ -228,6 +313,7 @@ public class AssetItemAdditionalAttributes implements Serializable, Cloneable, S
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getFormsOutput() == null) ? 0 : getFormsOutput().hashCode());
+        hashCode = prime * hashCode + ((getLatestTimeSeriesDataPointFormsOutput() == null) ? 0 : getLatestTimeSeriesDataPointFormsOutput().hashCode());
         hashCode = prime * hashCode + ((getReadOnlyFormsOutput() == null) ? 0 : getReadOnlyFormsOutput().hashCode());
         return hashCode;
     }

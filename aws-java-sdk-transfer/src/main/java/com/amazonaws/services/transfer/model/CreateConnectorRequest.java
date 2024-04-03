@@ -91,6 +91,12 @@ public class CreateConnectorRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private SftpConnectorConfig sftpConfig;
+    /**
+     * <p>
+     * Specifies the name of the security policy for the connector.
+     * </p>
+     */
+    private String securityPolicyName;
 
     /**
      * <p>
@@ -545,6 +551,46 @@ public class CreateConnectorRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Specifies the name of the security policy for the connector.
+     * </p>
+     * 
+     * @param securityPolicyName
+     *        Specifies the name of the security policy for the connector.
+     */
+
+    public void setSecurityPolicyName(String securityPolicyName) {
+        this.securityPolicyName = securityPolicyName;
+    }
+
+    /**
+     * <p>
+     * Specifies the name of the security policy for the connector.
+     * </p>
+     * 
+     * @return Specifies the name of the security policy for the connector.
+     */
+
+    public String getSecurityPolicyName() {
+        return this.securityPolicyName;
+    }
+
+    /**
+     * <p>
+     * Specifies the name of the security policy for the connector.
+     * </p>
+     * 
+     * @param securityPolicyName
+     *        Specifies the name of the security policy for the connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateConnectorRequest withSecurityPolicyName(String securityPolicyName) {
+        setSecurityPolicyName(securityPolicyName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -567,7 +613,9 @@ public class CreateConnectorRequest extends com.amazonaws.AmazonWebServiceReques
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getSftpConfig() != null)
-            sb.append("SftpConfig: ").append(getSftpConfig());
+            sb.append("SftpConfig: ").append(getSftpConfig()).append(",");
+        if (getSecurityPolicyName() != null)
+            sb.append("SecurityPolicyName: ").append(getSecurityPolicyName());
         sb.append("}");
         return sb.toString();
     }
@@ -606,6 +654,10 @@ public class CreateConnectorRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getSftpConfig() != null && other.getSftpConfig().equals(this.getSftpConfig()) == false)
             return false;
+        if (other.getSecurityPolicyName() == null ^ this.getSecurityPolicyName() == null)
+            return false;
+        if (other.getSecurityPolicyName() != null && other.getSecurityPolicyName().equals(this.getSecurityPolicyName()) == false)
+            return false;
         return true;
     }
 
@@ -620,6 +672,7 @@ public class CreateConnectorRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getLoggingRole() == null) ? 0 : getLoggingRole().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getSftpConfig() == null) ? 0 : getSftpConfig().hashCode());
+        hashCode = prime * hashCode + ((getSecurityPolicyName() == null) ? 0 : getSecurityPolicyName().hashCode());
         return hashCode;
     }
 

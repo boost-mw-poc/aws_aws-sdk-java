@@ -40,6 +40,12 @@ public class DescribedSecurityPolicyMarshaller {
             .marshallLocationName("SshMacs").build();
     private static final MarshallingInfo<List> TLSCIPHERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("TlsCiphers").build();
+    private static final MarshallingInfo<List> SSHHOSTKEYALGORITHMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SshHostKeyAlgorithms").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Type").build();
+    private static final MarshallingInfo<List> PROTOCOLS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Protocols").build();
 
     private static final DescribedSecurityPolicyMarshaller instance = new DescribedSecurityPolicyMarshaller();
 
@@ -63,6 +69,9 @@ public class DescribedSecurityPolicyMarshaller {
             protocolMarshaller.marshall(describedSecurityPolicy.getSshKexs(), SSHKEXS_BINDING);
             protocolMarshaller.marshall(describedSecurityPolicy.getSshMacs(), SSHMACS_BINDING);
             protocolMarshaller.marshall(describedSecurityPolicy.getTlsCiphers(), TLSCIPHERS_BINDING);
+            protocolMarshaller.marshall(describedSecurityPolicy.getSshHostKeyAlgorithms(), SSHHOSTKEYALGORITHMS_BINDING);
+            protocolMarshaller.marshall(describedSecurityPolicy.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(describedSecurityPolicy.getProtocols(), PROTOCOLS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

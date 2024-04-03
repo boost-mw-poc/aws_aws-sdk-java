@@ -1333,6 +1333,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteTimeSeriesDataPointsResult> deleteTimeSeriesDataPointsAsync(DeleteTimeSeriesDataPointsRequest request) {
+
+        return deleteTimeSeriesDataPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTimeSeriesDataPointsResult> deleteTimeSeriesDataPointsAsync(final DeleteTimeSeriesDataPointsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteTimeSeriesDataPointsRequest, DeleteTimeSeriesDataPointsResult> asyncHandler) {
+        final DeleteTimeSeriesDataPointsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteTimeSeriesDataPointsResult>() {
+            @Override
+            public DeleteTimeSeriesDataPointsResult call() throws Exception {
+                DeleteTimeSeriesDataPointsResult result = null;
+
+                try {
+                    result = executeDeleteTimeSeriesDataPoints(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAssetResult> getAssetAsync(GetAssetRequest request) {
 
         return getAssetAsync(request, null);
@@ -2029,6 +2062,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetTimeSeriesDataPointResult> getTimeSeriesDataPointAsync(GetTimeSeriesDataPointRequest request) {
+
+        return getTimeSeriesDataPointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTimeSeriesDataPointResult> getTimeSeriesDataPointAsync(final GetTimeSeriesDataPointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTimeSeriesDataPointRequest, GetTimeSeriesDataPointResult> asyncHandler) {
+        final GetTimeSeriesDataPointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTimeSeriesDataPointResult>() {
+            @Override
+            public GetTimeSeriesDataPointResult call() throws Exception {
+                GetTimeSeriesDataPointResult result = null;
+
+                try {
+                    result = executeGetTimeSeriesDataPoint(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetUserProfileResult> getUserProfileAsync(GetUserProfileRequest request) {
 
         return getUserProfileAsync(request, null);
@@ -2642,6 +2708,72 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTimeSeriesDataPointsResult> listTimeSeriesDataPointsAsync(ListTimeSeriesDataPointsRequest request) {
+
+        return listTimeSeriesDataPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTimeSeriesDataPointsResult> listTimeSeriesDataPointsAsync(final ListTimeSeriesDataPointsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTimeSeriesDataPointsRequest, ListTimeSeriesDataPointsResult> asyncHandler) {
+        final ListTimeSeriesDataPointsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTimeSeriesDataPointsResult>() {
+            @Override
+            public ListTimeSeriesDataPointsResult call() throws Exception {
+                ListTimeSeriesDataPointsResult result = null;
+
+                try {
+                    result = executeListTimeSeriesDataPoints(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PostTimeSeriesDataPointsResult> postTimeSeriesDataPointsAsync(PostTimeSeriesDataPointsRequest request) {
+
+        return postTimeSeriesDataPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PostTimeSeriesDataPointsResult> postTimeSeriesDataPointsAsync(final PostTimeSeriesDataPointsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PostTimeSeriesDataPointsRequest, PostTimeSeriesDataPointsResult> asyncHandler) {
+        final PostTimeSeriesDataPointsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PostTimeSeriesDataPointsResult>() {
+            @Override
+            public PostTimeSeriesDataPointsResult call() throws Exception {
+                PostTimeSeriesDataPointsResult result = null;
+
+                try {
+                    result = executePostTimeSeriesDataPoints(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

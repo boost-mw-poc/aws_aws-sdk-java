@@ -54,6 +54,13 @@ public class AssetItemAdditionalAttributesJsonUnmarshaller implements Unmarshall
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("latestTimeSeriesDataPointFormsOutput", targetDepth)) {
+                    context.nextToken();
+                    assetItemAdditionalAttributes.setLatestTimeSeriesDataPointFormsOutput(new ListUnmarshaller<TimeSeriesDataPointSummaryFormOutput>(
+                            TimeSeriesDataPointSummaryFormOutputJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("readOnlyFormsOutput", targetDepth)) {
                     context.nextToken();
                     assetItemAdditionalAttributes.setReadOnlyFormsOutput(new ListUnmarshaller<FormOutput>(FormOutputJsonUnmarshaller.getInstance())

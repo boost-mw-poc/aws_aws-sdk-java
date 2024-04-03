@@ -43,6 +43,8 @@ public class OutputSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("rtmpOutputSettings").build();
     private static final MarshallingInfo<StructuredPojo> UDPOUTPUTSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("udpOutputSettings").build();
+    private static final MarshallingInfo<StructuredPojo> CMAFINGESTOUTPUTSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cmafIngestOutputSettings").build();
 
     private static final OutputSettingsMarshaller instance = new OutputSettingsMarshaller();
 
@@ -68,6 +70,7 @@ public class OutputSettingsMarshaller {
             protocolMarshaller.marshall(outputSettings.getMultiplexOutputSettings(), MULTIPLEXOUTPUTSETTINGS_BINDING);
             protocolMarshaller.marshall(outputSettings.getRtmpOutputSettings(), RTMPOUTPUTSETTINGS_BINDING);
             protocolMarshaller.marshall(outputSettings.getUdpOutputSettings(), UDPOUTPUTSETTINGS_BINDING);
+            protocolMarshaller.marshall(outputSettings.getCmafIngestOutputSettings(), CMAFINGESTOUTPUTSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

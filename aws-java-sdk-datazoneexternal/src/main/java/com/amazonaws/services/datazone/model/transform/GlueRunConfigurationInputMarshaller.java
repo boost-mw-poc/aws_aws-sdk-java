@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GlueRunConfigurationInputMarshaller {
 
+    private static final MarshallingInfo<Boolean> AUTOIMPORTDATAQUALITYRESULT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoImportDataQualityResult").build();
     private static final MarshallingInfo<String> DATAACCESSROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataAccessRole").build();
     private static final MarshallingInfo<List> RELATIONALFILTERCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -49,6 +51,7 @@ public class GlueRunConfigurationInputMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(glueRunConfigurationInput.getAutoImportDataQualityResult(), AUTOIMPORTDATAQUALITYRESULT_BINDING);
             protocolMarshaller.marshall(glueRunConfigurationInput.getDataAccessRole(), DATAACCESSROLE_BINDING);
             protocolMarshaller.marshall(glueRunConfigurationInput.getRelationalFilterConfigurations(), RELATIONALFILTERCONFIGURATIONS_BINDING);
         } catch (Exception e) {

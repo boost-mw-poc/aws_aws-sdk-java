@@ -10,24 +10,22 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.cleanroomsml.model;
+package com.amazonaws.services.medialive.model;
 
 import javax.annotation.Generated;
 
 /**
- * 
+ * Cmaf Ingest Segment Length Units
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public enum AudienceModelMetricType {
+public enum CmafIngestSegmentLengthUnits {
 
-    NORMALIZED_DISCOUNTED_CUMULATIVE_GAIN("NORMALIZED_DISCOUNTED_CUMULATIVE_GAIN"),
-    MEAN_RECIPROCAL_RANK("MEAN_RECIPROCAL_RANK"),
-    PRECISION("PRECISION"),
-    RECALL("RECALL");
+    MILLISECONDS("MILLISECONDS"),
+    SECONDS("SECONDS");
 
     private String value;
 
-    private AudienceModelMetricType(String value) {
+    private CmafIngestSegmentLengthUnits(String value) {
         this.value = value;
     }
 
@@ -41,17 +39,17 @@ public enum AudienceModelMetricType {
      *
      * @param value
      *        real value
-     * @return AudienceModelMetricType corresponding to the value
+     * @return CmafIngestSegmentLengthUnits corresponding to the value
      *
      * @throws IllegalArgumentException
      *         If the specified value does not map to one of the known values in this enum.
      */
-    public static AudienceModelMetricType fromValue(String value) {
+    public static CmafIngestSegmentLengthUnits fromValue(String value) {
         if (value == null || "".equals(value)) {
             throw new IllegalArgumentException("Value cannot be null or empty!");
         }
 
-        for (AudienceModelMetricType enumEntry : AudienceModelMetricType.values()) {
+        for (CmafIngestSegmentLengthUnits enumEntry : CmafIngestSegmentLengthUnits.values()) {
             if (enumEntry.toString().equals(value)) {
                 return enumEntry;
             }

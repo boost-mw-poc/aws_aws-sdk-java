@@ -30,6 +30,8 @@ public class GlueRunConfigurationOutputMarshaller {
 
     private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("accountId").build();
+    private static final MarshallingInfo<Boolean> AUTOIMPORTDATAQUALITYRESULT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoImportDataQualityResult").build();
     private static final MarshallingInfo<String> DATAACCESSROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataAccessRole").build();
     private static final MarshallingInfo<String> REGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -54,6 +56,7 @@ public class GlueRunConfigurationOutputMarshaller {
 
         try {
             protocolMarshaller.marshall(glueRunConfigurationOutput.getAccountId(), ACCOUNTID_BINDING);
+            protocolMarshaller.marshall(glueRunConfigurationOutput.getAutoImportDataQualityResult(), AUTOIMPORTDATAQUALITYRESULT_BINDING);
             protocolMarshaller.marshall(glueRunConfigurationOutput.getDataAccessRole(), DATAACCESSROLE_BINDING);
             protocolMarshaller.marshall(glueRunConfigurationOutput.getRegion(), REGION_BINDING);
             protocolMarshaller.marshall(glueRunConfigurationOutput.getRelationalFilterConfigurations(), RELATIONALFILTERCONFIGURATIONS_BINDING);

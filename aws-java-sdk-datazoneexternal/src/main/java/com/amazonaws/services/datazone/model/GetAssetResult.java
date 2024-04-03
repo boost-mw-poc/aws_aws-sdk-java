@@ -85,6 +85,12 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     private String id;
     /**
      * <p>
+     * The latest data point that was imported into the time series form for the asset.
+     * </p>
+     */
+    private java.util.List<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointFormsOutput;
+    /**
+     * <p>
      * The listing of the asset.
      * </p>
      */
@@ -588,6 +594,78 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
+     * The latest data point that was imported into the time series form for the asset.
+     * </p>
+     * 
+     * @return The latest data point that was imported into the time series form for the asset.
+     */
+
+    public java.util.List<TimeSeriesDataPointSummaryFormOutput> getLatestTimeSeriesDataPointFormsOutput() {
+        return latestTimeSeriesDataPointFormsOutput;
+    }
+
+    /**
+     * <p>
+     * The latest data point that was imported into the time series form for the asset.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointFormsOutput
+     *        The latest data point that was imported into the time series form for the asset.
+     */
+
+    public void setLatestTimeSeriesDataPointFormsOutput(java.util.Collection<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointFormsOutput) {
+        if (latestTimeSeriesDataPointFormsOutput == null) {
+            this.latestTimeSeriesDataPointFormsOutput = null;
+            return;
+        }
+
+        this.latestTimeSeriesDataPointFormsOutput = new java.util.ArrayList<TimeSeriesDataPointSummaryFormOutput>(latestTimeSeriesDataPointFormsOutput);
+    }
+
+    /**
+     * <p>
+     * The latest data point that was imported into the time series form for the asset.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLatestTimeSeriesDataPointFormsOutput(java.util.Collection)} or
+     * {@link #withLatestTimeSeriesDataPointFormsOutput(java.util.Collection)} if you want to override the existing
+     * values.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointFormsOutput
+     *        The latest data point that was imported into the time series form for the asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAssetResult withLatestTimeSeriesDataPointFormsOutput(TimeSeriesDataPointSummaryFormOutput... latestTimeSeriesDataPointFormsOutput) {
+        if (this.latestTimeSeriesDataPointFormsOutput == null) {
+            setLatestTimeSeriesDataPointFormsOutput(new java.util.ArrayList<TimeSeriesDataPointSummaryFormOutput>(latestTimeSeriesDataPointFormsOutput.length));
+        }
+        for (TimeSeriesDataPointSummaryFormOutput ele : latestTimeSeriesDataPointFormsOutput) {
+            this.latestTimeSeriesDataPointFormsOutput.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The latest data point that was imported into the time series form for the asset.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointFormsOutput
+     *        The latest data point that was imported into the time series form for the asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAssetResult withLatestTimeSeriesDataPointFormsOutput(
+            java.util.Collection<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointFormsOutput) {
+        setLatestTimeSeriesDataPointFormsOutput(latestTimeSeriesDataPointFormsOutput);
+        return this;
+    }
+
+    /**
+     * <p>
      * The listing of the asset.
      * </p>
      * 
@@ -928,6 +1006,8 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
             sb.append("GlossaryTerms: ").append(getGlossaryTerms()).append(",");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
+        if (getLatestTimeSeriesDataPointFormsOutput() != null)
+            sb.append("LatestTimeSeriesDataPointFormsOutput: ").append(getLatestTimeSeriesDataPointFormsOutput()).append(",");
         if (getListing() != null)
             sb.append("Listing: ").append(getListing()).append(",");
         if (getName() != null)
@@ -996,6 +1076,11 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
             return false;
+        if (other.getLatestTimeSeriesDataPointFormsOutput() == null ^ this.getLatestTimeSeriesDataPointFormsOutput() == null)
+            return false;
+        if (other.getLatestTimeSeriesDataPointFormsOutput() != null
+                && other.getLatestTimeSeriesDataPointFormsOutput().equals(this.getLatestTimeSeriesDataPointFormsOutput()) == false)
+            return false;
         if (other.getListing() == null ^ this.getListing() == null)
             return false;
         if (other.getListing() != null && other.getListing().equals(this.getListing()) == false)
@@ -1042,6 +1127,7 @@ public class GetAssetResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         hashCode = prime * hashCode + ((getFormsOutput() == null) ? 0 : getFormsOutput().hashCode());
         hashCode = prime * hashCode + ((getGlossaryTerms() == null) ? 0 : getGlossaryTerms().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
+        hashCode = prime * hashCode + ((getLatestTimeSeriesDataPointFormsOutput() == null) ? 0 : getLatestTimeSeriesDataPointFormsOutput().hashCode());
         hashCode = prime * hashCode + ((getListing() == null) ? 0 : getListing().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getOwningProjectId() == null) ? 0 : getOwningProjectId().hashCode());

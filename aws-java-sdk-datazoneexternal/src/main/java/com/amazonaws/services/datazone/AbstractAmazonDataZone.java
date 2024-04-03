@@ -218,6 +218,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public DeleteTimeSeriesDataPointsResult deleteTimeSeriesDataPoints(DeleteTimeSeriesDataPointsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAssetResult getAsset(GetAssetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -323,6 +328,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public GetTimeSeriesDataPointResult getTimeSeriesDataPoint(GetTimeSeriesDataPointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetUserProfileResult getUserProfile(GetUserProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -414,6 +424,16 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTimeSeriesDataPointsResult listTimeSeriesDataPoints(ListTimeSeriesDataPointsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PostTimeSeriesDataPointsResult postTimeSeriesDataPoints(PostTimeSeriesDataPointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

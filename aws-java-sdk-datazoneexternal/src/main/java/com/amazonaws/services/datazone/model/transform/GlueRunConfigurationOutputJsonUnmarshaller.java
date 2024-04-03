@@ -52,6 +52,10 @@ public class GlueRunConfigurationOutputJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     glueRunConfigurationOutput.setAccountId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("autoImportDataQualityResult", targetDepth)) {
+                    context.nextToken();
+                    glueRunConfigurationOutput.setAutoImportDataQualityResult(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("dataAccessRole", targetDepth)) {
                     context.nextToken();
                     glueRunConfigurationOutput.setDataAccessRole(context.getUnmarshaller(String.class).unmarshall(context));

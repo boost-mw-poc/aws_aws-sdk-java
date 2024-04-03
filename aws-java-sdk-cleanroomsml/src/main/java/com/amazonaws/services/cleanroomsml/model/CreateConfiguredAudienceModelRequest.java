@@ -64,7 +64,7 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model.
+     * audience model. The default value is 500.
      * </p>
      */
     private Integer minMatchingSeedSize;
@@ -134,8 +134,8 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * <p>
      * Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is reserved for
      * AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If a tag value has aws
-     * as its prefix but the key does not, then Forecast considers it to be a user tag and will count against the limit
-     * of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
+     * as its prefix but the key does not, then Clean Rooms ML considers it to be a user tag and will count against the
+     * limit of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -408,12 +408,12 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model.
+     * audience model. The default value is 500.
      * </p>
      * 
      * @param minMatchingSeedSize
      *        The minimum number of users from the seed audience that must match with users in the training data of the
-     *        audience model.
+     *        audience model. The default value is 500.
      */
 
     public void setMinMatchingSeedSize(Integer minMatchingSeedSize) {
@@ -423,11 +423,11 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model.
+     * audience model. The default value is 500.
      * </p>
      * 
      * @return The minimum number of users from the seed audience that must match with users in the training data of the
-     *         audience model.
+     *         audience model. The default value is 500.
      */
 
     public Integer getMinMatchingSeedSize() {
@@ -437,12 +437,12 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model.
+     * audience model. The default value is 500.
      * </p>
      * 
      * @param minMatchingSeedSize
      *        The minimum number of users from the seed audience that must match with users in the training data of the
-     *        audience model.
+     *        audience model. The default value is 500.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -692,8 +692,8 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * <p>
      * Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is reserved for
      * AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If a tag value has aws
-     * as its prefix but the key does not, then Forecast considers it to be a user tag and will count against the limit
-     * of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
+     * as its prefix but the key does not, then Clean Rooms ML considers it to be a user tag and will count against the
+     * limit of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -740,9 +740,9 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      *         <p>
      *         Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is
      *         reserved for AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix.
-     *         If a tag value has aws as its prefix but the key does not, then Forecast considers it to be a user tag
-     *         and will count against the limit of 50 tags. Tags with only the key prefix of aws do not count against
-     *         your tags per resource limit.
+     *         If a tag value has aws as its prefix but the key does not, then Clean Rooms ML considers it to be a user
+     *         tag and will count against the limit of 50 tags. Tags with only the key prefix of aws do not count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      */
@@ -796,8 +796,8 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * <p>
      * Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is reserved for
      * AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If a tag value has aws
-     * as its prefix but the key does not, then Forecast considers it to be a user tag and will count against the limit
-     * of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
+     * as its prefix but the key does not, then Clean Rooms ML considers it to be a user tag and will count against the
+     * limit of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -845,9 +845,9 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      *        <p>
      *        Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is
      *        reserved for AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If
-     *        a tag value has aws as its prefix but the key does not, then Forecast considers it to be a user tag and
-     *        will count against the limit of 50 tags. Tags with only the key prefix of aws do not count against your
-     *        tags per resource limit.
+     *        a tag value has aws as its prefix but the key does not, then Clean Rooms ML considers it to be a user tag
+     *        and will count against the limit of 50 tags. Tags with only the key prefix of aws do not count against
+     *        your tags per resource limit.
      *        </p>
      *        </li>
      */
@@ -901,8 +901,8 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * <p>
      * Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is reserved for
      * AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If a tag value has aws
-     * as its prefix but the key does not, then Forecast considers it to be a user tag and will count against the limit
-     * of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
+     * as its prefix but the key does not, then Clean Rooms ML considers it to be a user tag and will count against the
+     * limit of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -950,9 +950,9 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      *        <p>
      *        Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is
      *        reserved for AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If
-     *        a tag value has aws as its prefix but the key does not, then Forecast considers it to be a user tag and
-     *        will count against the limit of 50 tags. Tags with only the key prefix of aws do not count against your
-     *        tags per resource limit.
+     *        a tag value has aws as its prefix but the key does not, then Clean Rooms ML considers it to be a user tag
+     *        and will count against the limit of 50 tags. Tags with only the key prefix of aws do not count against
+     *        your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

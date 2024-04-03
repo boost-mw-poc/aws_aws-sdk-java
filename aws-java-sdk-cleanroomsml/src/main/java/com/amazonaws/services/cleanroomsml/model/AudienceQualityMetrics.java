@@ -30,10 +30,80 @@ public class AudienceQualityMetrics implements Serializable, Cloneable, Structur
 
     /**
      * <p>
+     * The recall score of the generated audience. Recall is the percentage of the most similar users (by default, the
+     * most similar 20%) from a sample of the training data that are included in the seed audience by the audience
+     * generation job. Values range from 0-1, larger values indicate a better audience. A recall value approximately
+     * equal to the maximum bin size indicates that the audience model is equivalent to random selection.
+     * </p>
+     */
+    private Double recallMetric;
+    /**
+     * <p>
      * The relevance scores of the generated audience.
      * </p>
      */
     private java.util.List<RelevanceMetric> relevanceMetrics;
+
+    /**
+     * <p>
+     * The recall score of the generated audience. Recall is the percentage of the most similar users (by default, the
+     * most similar 20%) from a sample of the training data that are included in the seed audience by the audience
+     * generation job. Values range from 0-1, larger values indicate a better audience. A recall value approximately
+     * equal to the maximum bin size indicates that the audience model is equivalent to random selection.
+     * </p>
+     * 
+     * @param recallMetric
+     *        The recall score of the generated audience. Recall is the percentage of the most similar users (by
+     *        default, the most similar 20%) from a sample of the training data that are included in the seed audience
+     *        by the audience generation job. Values range from 0-1, larger values indicate a better audience. A recall
+     *        value approximately equal to the maximum bin size indicates that the audience model is equivalent to
+     *        random selection.
+     */
+
+    public void setRecallMetric(Double recallMetric) {
+        this.recallMetric = recallMetric;
+    }
+
+    /**
+     * <p>
+     * The recall score of the generated audience. Recall is the percentage of the most similar users (by default, the
+     * most similar 20%) from a sample of the training data that are included in the seed audience by the audience
+     * generation job. Values range from 0-1, larger values indicate a better audience. A recall value approximately
+     * equal to the maximum bin size indicates that the audience model is equivalent to random selection.
+     * </p>
+     * 
+     * @return The recall score of the generated audience. Recall is the percentage of the most similar users (by
+     *         default, the most similar 20%) from a sample of the training data that are included in the seed audience
+     *         by the audience generation job. Values range from 0-1, larger values indicate a better audience. A recall
+     *         value approximately equal to the maximum bin size indicates that the audience model is equivalent to
+     *         random selection.
+     */
+
+    public Double getRecallMetric() {
+        return this.recallMetric;
+    }
+
+    /**
+     * <p>
+     * The recall score of the generated audience. Recall is the percentage of the most similar users (by default, the
+     * most similar 20%) from a sample of the training data that are included in the seed audience by the audience
+     * generation job. Values range from 0-1, larger values indicate a better audience. A recall value approximately
+     * equal to the maximum bin size indicates that the audience model is equivalent to random selection.
+     * </p>
+     * 
+     * @param recallMetric
+     *        The recall score of the generated audience. Recall is the percentage of the most similar users (by
+     *        default, the most similar 20%) from a sample of the training data that are included in the seed audience
+     *        by the audience generation job. Values range from 0-1, larger values indicate a better audience. A recall
+     *        value approximately equal to the maximum bin size indicates that the audience model is equivalent to
+     *        random selection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudienceQualityMetrics withRecallMetric(Double recallMetric) {
+        setRecallMetric(recallMetric);
+        return this;
+    }
 
     /**
      * <p>
@@ -117,6 +187,8 @@ public class AudienceQualityMetrics implements Serializable, Cloneable, Structur
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getRecallMetric() != null)
+            sb.append("RecallMetric: ").append(getRecallMetric()).append(",");
         if (getRelevanceMetrics() != null)
             sb.append("RelevanceMetrics: ").append(getRelevanceMetrics());
         sb.append("}");
@@ -133,6 +205,10 @@ public class AudienceQualityMetrics implements Serializable, Cloneable, Structur
         if (obj instanceof AudienceQualityMetrics == false)
             return false;
         AudienceQualityMetrics other = (AudienceQualityMetrics) obj;
+        if (other.getRecallMetric() == null ^ this.getRecallMetric() == null)
+            return false;
+        if (other.getRecallMetric() != null && other.getRecallMetric().equals(this.getRecallMetric()) == false)
+            return false;
         if (other.getRelevanceMetrics() == null ^ this.getRelevanceMetrics() == null)
             return false;
         if (other.getRelevanceMetrics() != null && other.getRelevanceMetrics().equals(this.getRelevanceMetrics()) == false)
@@ -145,6 +221,7 @@ public class AudienceQualityMetrics implements Serializable, Cloneable, Structur
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getRecallMetric() == null) ? 0 : getRecallMetric().hashCode());
         hashCode = prime * hashCode + ((getRelevanceMetrics() == null) ? 0 : getRelevanceMetrics().hashCode());
         return hashCode;
     }

@@ -524,6 +524,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteTimeSeriesDataPointsResult> deleteTimeSeriesDataPointsAsync(DeleteTimeSeriesDataPointsRequest request) {
+
+        return deleteTimeSeriesDataPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTimeSeriesDataPointsResult> deleteTimeSeriesDataPointsAsync(DeleteTimeSeriesDataPointsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteTimeSeriesDataPointsRequest, DeleteTimeSeriesDataPointsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAssetResult> getAssetAsync(GetAssetRequest request) {
 
         return getAssetAsync(request, null);
@@ -799,6 +812,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetTimeSeriesDataPointResult> getTimeSeriesDataPointAsync(GetTimeSeriesDataPointRequest request) {
+
+        return getTimeSeriesDataPointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTimeSeriesDataPointResult> getTimeSeriesDataPointAsync(GetTimeSeriesDataPointRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTimeSeriesDataPointRequest, GetTimeSeriesDataPointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetUserProfileResult> getUserProfileAsync(GetUserProfileRequest request) {
 
         return getUserProfileAsync(request, null);
@@ -1043,6 +1069,32 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTimeSeriesDataPointsResult> listTimeSeriesDataPointsAsync(ListTimeSeriesDataPointsRequest request) {
+
+        return listTimeSeriesDataPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTimeSeriesDataPointsResult> listTimeSeriesDataPointsAsync(ListTimeSeriesDataPointsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTimeSeriesDataPointsRequest, ListTimeSeriesDataPointsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PostTimeSeriesDataPointsResult> postTimeSeriesDataPointsAsync(PostTimeSeriesDataPointsRequest request) {
+
+        return postTimeSeriesDataPointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PostTimeSeriesDataPointsResult> postTimeSeriesDataPointsAsync(PostTimeSeriesDataPointsRequest request,
+            com.amazonaws.handlers.AsyncHandler<PostTimeSeriesDataPointsRequest, PostTimeSeriesDataPointsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

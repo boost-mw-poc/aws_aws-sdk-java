@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.datazone.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,8 @@ public class AssetListingItemAdditionalAttributesMarshaller {
 
     private static final MarshallingInfo<String> FORMS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("forms").build();
+    private static final MarshallingInfo<List> LATESTTIMESERIESDATAPOINTFORMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latestTimeSeriesDataPointForms").build();
 
     private static final AssetListingItemAdditionalAttributesMarshaller instance = new AssetListingItemAdditionalAttributesMarshaller();
 
@@ -47,6 +50,7 @@ public class AssetListingItemAdditionalAttributesMarshaller {
 
         try {
             protocolMarshaller.marshall(assetListingItemAdditionalAttributes.getForms(), FORMS_BINDING);
+            protocolMarshaller.marshall(assetListingItemAdditionalAttributes.getLatestTimeSeriesDataPointForms(), LATESTTIMESERIESDATAPOINTFORMS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

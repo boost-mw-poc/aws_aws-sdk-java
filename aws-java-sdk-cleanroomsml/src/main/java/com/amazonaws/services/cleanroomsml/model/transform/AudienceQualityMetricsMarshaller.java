@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AudienceQualityMetricsMarshaller {
 
+    private static final MarshallingInfo<Double> RECALLMETRIC_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recallMetric").build();
     private static final MarshallingInfo<List> RELEVANCEMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("relevanceMetrics").build();
 
@@ -47,6 +49,7 @@ public class AudienceQualityMetricsMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(audienceQualityMetrics.getRecallMetric(), RECALLMETRIC_BINDING);
             protocolMarshaller.marshall(audienceQualityMetrics.getRelevanceMetrics(), RELEVANCEMETRICS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

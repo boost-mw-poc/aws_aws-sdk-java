@@ -66,7 +66,7 @@ public interface AWSCleanRoomsML {
      * @param createAudienceModelRequest
      * @return Result of the CreateAudienceModel operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException
@@ -89,7 +89,7 @@ public interface AWSCleanRoomsML {
      * @param createConfiguredAudienceModelRequest
      * @return Result of the CreateConfiguredAudienceModel operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException
@@ -106,7 +106,7 @@ public interface AWSCleanRoomsML {
 
     /**
      * <p>
-     * Defines the information necessary to create a training dataset, or seed audience. In Clean Rooms ML, the
+     * Defines the information necessary to create a training dataset. In Clean Rooms ML, the
      * <code>TrainingDataset</code> is metadata that points to a Glue table, which is read only during
      * <code>AudienceModel</code> creation.
      * </p>
@@ -114,7 +114,7 @@ public interface AWSCleanRoomsML {
      * @param createTrainingDatasetRequest
      * @return Result of the CreateTrainingDataset operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException
@@ -133,7 +133,7 @@ public interface AWSCleanRoomsML {
      * @param deleteAudienceGenerationJobRequest
      * @return Result of the DeleteAudienceGenerationJob operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException
@@ -155,7 +155,7 @@ public interface AWSCleanRoomsML {
      * @param deleteAudienceModelRequest
      * @return Result of the DeleteAudienceModel operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException
@@ -178,7 +178,7 @@ public interface AWSCleanRoomsML {
      * @param deleteConfiguredAudienceModelRequest
      * @return Result of the DeleteConfiguredAudienceModel operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException
@@ -222,7 +222,7 @@ public interface AWSCleanRoomsML {
      * @param deleteTrainingDatasetRequest
      * @return Result of the DeleteTrainingDataset operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException
@@ -461,7 +461,7 @@ public interface AWSCleanRoomsML {
      * @param startAudienceExportJobRequest
      * @return Result of the StartAudienceExportJob operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException
@@ -484,7 +484,7 @@ public interface AWSCleanRoomsML {
      * @param startAudienceGenerationJobRequest
      * @return Result of the StartAudienceGenerationJob operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException
@@ -546,7 +546,7 @@ public interface AWSCleanRoomsML {
      * @param updateConfiguredAudienceModelRequest
      * @return Result of the UpdateConfiguredAudienceModel operation returned by the service.
      * @throws ConflictException
-     *         A resource with that name already exists in this region.
+     *         You can't complete this action because another resource depends on this resource.
      * @throws ValidationException
      *         The request parameters for this request are incorrect.
      * @throws AccessDeniedException

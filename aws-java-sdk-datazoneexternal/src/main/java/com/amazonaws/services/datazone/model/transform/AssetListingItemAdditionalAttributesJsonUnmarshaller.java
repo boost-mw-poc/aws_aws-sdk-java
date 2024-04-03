@@ -52,6 +52,13 @@ public class AssetListingItemAdditionalAttributesJsonUnmarshaller implements Unm
                     context.nextToken();
                     assetListingItemAdditionalAttributes.setForms(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("latestTimeSeriesDataPointForms", targetDepth)) {
+                    context.nextToken();
+                    assetListingItemAdditionalAttributes.setLatestTimeSeriesDataPointForms(new ListUnmarshaller<TimeSeriesDataPointSummaryFormOutput>(
+                            TimeSeriesDataPointSummaryFormOutputJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

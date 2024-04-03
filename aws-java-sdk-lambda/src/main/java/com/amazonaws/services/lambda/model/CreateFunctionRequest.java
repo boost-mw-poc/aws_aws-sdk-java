@@ -191,8 +191,8 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Container image <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-images.html#configuration-images-settings"
-     * >configuration values</a> that override the values in the container image Dockerfile.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms">configuration values</a> that
+     * override the values in the container image Dockerfile.
      * </p>
      */
     private ImageConfig imageConfig;
@@ -1505,14 +1505,14 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Container image <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-images.html#configuration-images-settings"
-     * >configuration values</a> that override the values in the container image Dockerfile.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms">configuration values</a> that
+     * override the values in the container image Dockerfile.
      * </p>
      * 
      * @param imageConfig
-     *        Container image <a href=
-     *        "https://docs.aws.amazon.com/lambda/latest/dg/configuration-images.html#configuration-images-settings"
-     *        >configuration values</a> that override the values in the container image Dockerfile.
+     *        Container image <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms">configuration
+     *        values</a> that override the values in the container image Dockerfile.
      */
 
     public void setImageConfig(ImageConfig imageConfig) {
@@ -1522,13 +1522,13 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Container image <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-images.html#configuration-images-settings"
-     * >configuration values</a> that override the values in the container image Dockerfile.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms">configuration values</a> that
+     * override the values in the container image Dockerfile.
      * </p>
      * 
      * @return Container image <a
-     *         href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-images.html#configuration-images-settings"
-     *         >configuration values</a> that override the values in the container image Dockerfile.
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms">configuration
+     *         values</a> that override the values in the container image Dockerfile.
      */
 
     public ImageConfig getImageConfig() {
@@ -1538,14 +1538,14 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Container image <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-images.html#configuration-images-settings"
-     * >configuration values</a> that override the values in the container image Dockerfile.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms">configuration values</a> that
+     * override the values in the container image Dockerfile.
      * </p>
      * 
      * @param imageConfig
-     *        Container image <a href=
-     *        "https://docs.aws.amazon.com/lambda/latest/dg/configuration-images.html#configuration-images-settings"
-     *        >configuration values</a> that override the values in the container image Dockerfile.
+     *        Container image <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms">configuration
+     *        values</a> that override the values in the container image Dockerfile.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

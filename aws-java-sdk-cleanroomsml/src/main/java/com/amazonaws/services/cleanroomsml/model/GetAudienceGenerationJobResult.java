@@ -64,7 +64,7 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
     private Boolean includeSeedInOutput;
     /**
      * <p>
-     * The relevance scores for different audience sizes.
+     * The relevance scores for different audience sizes and the recall score of the generated audience.
      * </p>
      */
     private AudienceQualityMetrics metrics;
@@ -392,11 +392,11 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The relevance scores for different audience sizes.
+     * The relevance scores for different audience sizes and the recall score of the generated audience.
      * </p>
      * 
      * @param metrics
-     *        The relevance scores for different audience sizes.
+     *        The relevance scores for different audience sizes and the recall score of the generated audience.
      */
 
     public void setMetrics(AudienceQualityMetrics metrics) {
@@ -405,10 +405,10 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The relevance scores for different audience sizes.
+     * The relevance scores for different audience sizes and the recall score of the generated audience.
      * </p>
      * 
-     * @return The relevance scores for different audience sizes.
+     * @return The relevance scores for different audience sizes and the recall score of the generated audience.
      */
 
     public AudienceQualityMetrics getMetrics() {
@@ -417,11 +417,11 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The relevance scores for different audience sizes.
+     * The relevance scores for different audience sizes and the recall score of the generated audience.
      * </p>
      * 
      * @param metrics
-     *        The relevance scores for different audience sizes.
+     *        The relevance scores for different audience sizes and the recall score of the generated audience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

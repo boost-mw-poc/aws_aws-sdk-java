@@ -34,6 +34,12 @@ public class AssetListingItemAdditionalAttributes implements Serializable, Clone
      * </p>
      */
     private String forms;
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     */
+    private java.util.List<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointForms;
 
     /**
      * <p>
@@ -76,6 +82,77 @@ public class AssetListingItemAdditionalAttributes implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * 
+     * @return The latest time series data points forms included in the additional attributes of an asset.
+     */
+
+    public java.util.List<TimeSeriesDataPointSummaryFormOutput> getLatestTimeSeriesDataPointForms() {
+        return latestTimeSeriesDataPointForms;
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointForms
+     *        The latest time series data points forms included in the additional attributes of an asset.
+     */
+
+    public void setLatestTimeSeriesDataPointForms(java.util.Collection<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointForms) {
+        if (latestTimeSeriesDataPointForms == null) {
+            this.latestTimeSeriesDataPointForms = null;
+            return;
+        }
+
+        this.latestTimeSeriesDataPointForms = new java.util.ArrayList<TimeSeriesDataPointSummaryFormOutput>(latestTimeSeriesDataPointForms);
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLatestTimeSeriesDataPointForms(java.util.Collection)} or
+     * {@link #withLatestTimeSeriesDataPointForms(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointForms
+     *        The latest time series data points forms included in the additional attributes of an asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssetListingItemAdditionalAttributes withLatestTimeSeriesDataPointForms(TimeSeriesDataPointSummaryFormOutput... latestTimeSeriesDataPointForms) {
+        if (this.latestTimeSeriesDataPointForms == null) {
+            setLatestTimeSeriesDataPointForms(new java.util.ArrayList<TimeSeriesDataPointSummaryFormOutput>(latestTimeSeriesDataPointForms.length));
+        }
+        for (TimeSeriesDataPointSummaryFormOutput ele : latestTimeSeriesDataPointForms) {
+            this.latestTimeSeriesDataPointForms.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointForms
+     *        The latest time series data points forms included in the additional attributes of an asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssetListingItemAdditionalAttributes withLatestTimeSeriesDataPointForms(
+            java.util.Collection<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointForms) {
+        setLatestTimeSeriesDataPointForms(latestTimeSeriesDataPointForms);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +165,9 @@ public class AssetListingItemAdditionalAttributes implements Serializable, Clone
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getForms() != null)
-            sb.append("Forms: ").append(getForms());
+            sb.append("Forms: ").append(getForms()).append(",");
+        if (getLatestTimeSeriesDataPointForms() != null)
+            sb.append("LatestTimeSeriesDataPointForms: ").append(getLatestTimeSeriesDataPointForms());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +186,11 @@ public class AssetListingItemAdditionalAttributes implements Serializable, Clone
             return false;
         if (other.getForms() != null && other.getForms().equals(this.getForms()) == false)
             return false;
+        if (other.getLatestTimeSeriesDataPointForms() == null ^ this.getLatestTimeSeriesDataPointForms() == null)
+            return false;
+        if (other.getLatestTimeSeriesDataPointForms() != null
+                && other.getLatestTimeSeriesDataPointForms().equals(this.getLatestTimeSeriesDataPointForms()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +200,7 @@ public class AssetListingItemAdditionalAttributes implements Serializable, Clone
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getForms() == null) ? 0 : getForms().hashCode());
+        hashCode = prime * hashCode + ((getLatestTimeSeriesDataPointForms() == null) ? 0 : getLatestTimeSeriesDataPointForms().hashCode());
         return hashCode;
     }
 

@@ -76,8 +76,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is reserved for
      * AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If a tag value has aws
-     * as its prefix but the key does not, then Forecast considers it to be a user tag and will count against the limit
-     * of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
+     * as its prefix but the key does not, then Clean Rooms considers it to be a user tag and will count against the
+     * limit of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -169,8 +169,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is reserved for
      * AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If a tag value has aws
-     * as its prefix but the key does not, then Forecast considers it to be a user tag and will count against the limit
-     * of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
+     * as its prefix but the key does not, then Clean Rooms considers it to be a user tag and will count against the
+     * limit of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -217,7 +217,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <p>
      *         Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is
      *         reserved for AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix.
-     *         If a tag value has aws as its prefix but the key does not, then Forecast considers it to be a user tag
+     *         If a tag value has aws as its prefix but the key does not, then Clean Rooms considers it to be a user tag
      *         and will count against the limit of 50 tags. Tags with only the key prefix of aws do not count against
      *         your tags per resource limit.
      *         </p>
@@ -273,8 +273,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is reserved for
      * AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If a tag value has aws
-     * as its prefix but the key does not, then Forecast considers it to be a user tag and will count against the limit
-     * of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
+     * as its prefix but the key does not, then Clean Rooms considers it to be a user tag and will count against the
+     * limit of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -322,7 +322,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is
      *        reserved for AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If
-     *        a tag value has aws as its prefix but the key does not, then Forecast considers it to be a user tag and
+     *        a tag value has aws as its prefix but the key does not, then Clean Rooms considers it to be a user tag and
      *        will count against the limit of 50 tags. Tags with only the key prefix of aws do not count against your
      *        tags per resource limit.
      *        </p>
@@ -378,8 +378,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is reserved for
      * AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If a tag value has aws
-     * as its prefix but the key does not, then Forecast considers it to be a user tag and will count against the limit
-     * of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
+     * as its prefix but the key does not, then Clean Rooms considers it to be a user tag and will count against the
+     * limit of 50 tags. Tags with only the key prefix of aws do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -427,7 +427,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        Do not use aws:, AWS:, or any upper or lowercase combination of such as a prefix for keys as it is
      *        reserved for AWS use. You cannot edit or delete tag keys with this prefix. Values can have this prefix. If
-     *        a tag value has aws as its prefix but the key does not, then Forecast considers it to be a user tag and
+     *        a tag value has aws as its prefix but the key does not, then Clean Rooms considers it to be a user tag and
      *        will count against the limit of 50 tags. Tags with only the key prefix of aws do not count against your
      *        tags per resource limit.
      *        </p>

@@ -45,6 +45,11 @@ public class ResourceChangeStaxUnmarshaller implements Unmarshaller<ResourceChan
 
             if (xmlEvent.isAttribute() || xmlEvent.isStartElement()) {
 
+                if (context.testExpression("PolicyAction", targetDepth)) {
+                    resourceChange.setPolicyAction(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("Action", targetDepth)) {
                     resourceChange.setAction(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

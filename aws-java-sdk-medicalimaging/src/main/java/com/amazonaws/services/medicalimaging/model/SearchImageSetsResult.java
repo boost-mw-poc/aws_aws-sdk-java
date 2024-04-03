@@ -31,6 +31,12 @@ public class SearchImageSetsResult extends com.amazonaws.AmazonWebServiceResult<
     private java.util.List<ImageSetsMetadataSummary> imageSetsMetadataSummaries;
     /**
      * <p>
+     * The sort order for image set search results.
+     * </p>
+     */
+    private Sort sort;
+    /**
+     * <p>
      * The token for pagination results.
      * </p>
      */
@@ -108,6 +114,46 @@ public class SearchImageSetsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
+     * The sort order for image set search results.
+     * </p>
+     * 
+     * @param sort
+     *        The sort order for image set search results.
+     */
+
+    public void setSort(Sort sort) {
+        this.sort = sort;
+    }
+
+    /**
+     * <p>
+     * The sort order for image set search results.
+     * </p>
+     * 
+     * @return The sort order for image set search results.
+     */
+
+    public Sort getSort() {
+        return this.sort;
+    }
+
+    /**
+     * <p>
+     * The sort order for image set search results.
+     * </p>
+     * 
+     * @param sort
+     *        The sort order for image set search results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchImageSetsResult withSort(Sort sort) {
+        setSort(sort);
+        return this;
+    }
+
+    /**
+     * <p>
      * The token for pagination results.
      * </p>
      * 
@@ -160,6 +206,8 @@ public class SearchImageSetsResult extends com.amazonaws.AmazonWebServiceResult<
         sb.append("{");
         if (getImageSetsMetadataSummaries() != null)
             sb.append("ImageSetsMetadataSummaries: ").append(getImageSetsMetadataSummaries()).append(",");
+        if (getSort() != null)
+            sb.append("Sort: ").append(getSort()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
@@ -180,6 +228,10 @@ public class SearchImageSetsResult extends com.amazonaws.AmazonWebServiceResult<
             return false;
         if (other.getImageSetsMetadataSummaries() != null && other.getImageSetsMetadataSummaries().equals(this.getImageSetsMetadataSummaries()) == false)
             return false;
+        if (other.getSort() == null ^ this.getSort() == null)
+            return false;
+        if (other.getSort() != null && other.getSort().equals(this.getSort()) == false)
+            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
@@ -193,6 +245,7 @@ public class SearchImageSetsResult extends com.amazonaws.AmazonWebServiceResult<
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getImageSetsMetadataSummaries() == null) ? 0 : getImageSetsMetadataSummaries().hashCode());
+        hashCode = prime * hashCode + ((getSort() == null) ? 0 : getSort().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }

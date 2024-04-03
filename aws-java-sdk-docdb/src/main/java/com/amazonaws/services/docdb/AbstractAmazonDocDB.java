@@ -294,6 +294,11 @@ public class AbstractAmazonDocDB implements AmazonDocDB {
     }
 
     @Override
+    public GlobalCluster switchoverGlobalCluster(SwitchoverGlobalClusterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

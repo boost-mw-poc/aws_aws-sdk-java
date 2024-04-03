@@ -88,6 +88,22 @@ public class DICOMTagsJsonUnmarshaller implements Unmarshaller<DICOMTags, JsonUn
                     context.nextToken();
                     dICOMTags.setDICOMAccessionNumber(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DICOMSeriesInstanceUID", targetDepth)) {
+                    context.nextToken();
+                    dICOMTags.setDICOMSeriesInstanceUID(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DICOMSeriesModality", targetDepth)) {
+                    context.nextToken();
+                    dICOMTags.setDICOMSeriesModality(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DICOMSeriesBodyPart", targetDepth)) {
+                    context.nextToken();
+                    dICOMTags.setDICOMSeriesBodyPart(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DICOMSeriesNumber", targetDepth)) {
+                    context.nextToken();
+                    dICOMTags.setDICOMSeriesNumber(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("DICOMStudyDate", targetDepth)) {
                     context.nextToken();
                     dICOMTags.setDICOMStudyDate(context.getUnmarshaller(String.class).unmarshall(context));

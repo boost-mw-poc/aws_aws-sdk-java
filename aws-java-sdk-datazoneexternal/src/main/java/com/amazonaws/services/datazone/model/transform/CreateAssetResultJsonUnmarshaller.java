@@ -92,6 +92,13 @@ public class CreateAssetResultJsonUnmarshaller implements Unmarshaller<CreateAss
                     context.nextToken();
                     createAssetResult.setId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("latestTimeSeriesDataPointFormsOutput", targetDepth)) {
+                    context.nextToken();
+                    createAssetResult.setLatestTimeSeriesDataPointFormsOutput(new ListUnmarshaller<TimeSeriesDataPointSummaryFormOutput>(
+                            TimeSeriesDataPointSummaryFormOutputJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("listing", targetDepth)) {
                     context.nextToken();
                     createAssetResult.setListing(AssetListingDetailsJsonUnmarshaller.getInstance().unmarshall(context));

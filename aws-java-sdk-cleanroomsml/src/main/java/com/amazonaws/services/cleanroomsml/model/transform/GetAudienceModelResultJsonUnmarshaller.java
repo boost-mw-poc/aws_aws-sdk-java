@@ -64,12 +64,6 @@ public class GetAudienceModelResultJsonUnmarshaller implements Unmarshaller<GetA
                     context.nextToken();
                     getAudienceModelResult.setKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("metrics", targetDepth)) {
-                    context.nextToken();
-                    getAudienceModelResult.setMetrics(new ListUnmarshaller<AudienceModelMetric>(AudienceModelMetricJsonUnmarshaller.getInstance())
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     getAudienceModelResult.setName(context.getUnmarshaller(String.class).unmarshall(context));

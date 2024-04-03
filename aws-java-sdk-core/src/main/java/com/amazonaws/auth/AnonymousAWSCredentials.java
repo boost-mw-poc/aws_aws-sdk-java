@@ -21,7 +21,7 @@ package com.amazonaws.auth;
  * before sending to the service.  Any service that does not accept unsigned requests
  * will return a service exception in this case.
  */
-public class AnonymousAWSCredentials implements AWSCredentials {
+public class AnonymousAWSCredentials implements AWSCredentials, AccountIdAware {
 
     /* (non-Javadoc)
      * @see com.amazonaws.auth.AWSCredentials#getAWSAccessKeyId()
@@ -34,6 +34,13 @@ public class AnonymousAWSCredentials implements AWSCredentials {
      * @see com.amazonaws.auth.AWSCredentials#getAWSSecretKey()
      */
     public String getAWSSecretKey() {
+        return null;
+    }
+
+    /* (non-Javadoc)
+     * @see com.amazonaws.auth.AccountIdAware#getAccountId()
+     */
+    public String getAccountId() {
         return null;
     }
 }

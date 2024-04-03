@@ -1071,6 +1071,31 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Deletes the specified time series form for the specified asset.
+     * </p>
+     * 
+     * @param deleteTimeSeriesDataPointsRequest
+     * @return Result of the DeleteTimeSeriesDataPoints operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.DeleteTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteTimeSeriesDataPointsResult deleteTimeSeriesDataPoints(DeleteTimeSeriesDataPointsRequest deleteTimeSeriesDataPointsRequest);
+
+    /**
+     * <p>
      * Gets an Amazon DataZone asset.
      * </p>
      * 
@@ -1609,6 +1634,31 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Gets the existing data point for the asset.
+     * </p>
+     * 
+     * @param getTimeSeriesDataPointRequest
+     * @return Result of the GetTimeSeriesDataPoint operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.GetTimeSeriesDataPoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetTimeSeriesDataPoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetTimeSeriesDataPointResult getTimeSeriesDataPoint(GetTimeSeriesDataPointRequest getTimeSeriesDataPointRequest);
+
+    /**
+     * <p>
      * Gets a user profile in Amazon DataZone.
      * </p>
      * 
@@ -2092,6 +2142,60 @@ public interface AmazonDataZone {
      *      API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Lists time series data points.
+     * </p>
+     * 
+     * @param listTimeSeriesDataPointsRequest
+     * @return Result of the ListTimeSeriesDataPoints operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.ListTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTimeSeriesDataPointsResult listTimeSeriesDataPoints(ListTimeSeriesDataPointsRequest listTimeSeriesDataPointsRequest);
+
+    /**
+     * <p>
+     * Posts time series data points to Amazon DataZone for the specified asset.
+     * </p>
+     * 
+     * @param postTimeSeriesDataPointsRequest
+     * @return Result of the PostTimeSeriesDataPoints operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ServiceQuotaExceededException
+     *         The request has exceeded the specified service quota.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.PostTimeSeriesDataPoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/PostTimeSeriesDataPoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PostTimeSeriesDataPointsResult postTimeSeriesDataPoints(PostTimeSeriesDataPointsRequest postTimeSeriesDataPointsRequest);
 
     /**
      * <p>

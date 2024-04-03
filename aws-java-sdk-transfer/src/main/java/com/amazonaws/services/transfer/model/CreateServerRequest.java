@@ -342,7 +342,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     private ProtocolDetails protocolDetails;
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      * </p>
      */
     private String securityPolicyName;
@@ -2754,11 +2754,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      * </p>
      * 
      * @param securityPolicyName
-     *        Specifies the name of the security policy that is attached to the server.
+     *        Specifies the name of the security policy for the server.
      */
 
     public void setSecurityPolicyName(String securityPolicyName) {
@@ -2767,10 +2767,10 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      * </p>
      * 
-     * @return Specifies the name of the security policy that is attached to the server.
+     * @return Specifies the name of the security policy for the server.
      */
 
     public String getSecurityPolicyName() {
@@ -2779,11 +2779,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      * </p>
      * 
      * @param securityPolicyName
-     *        Specifies the name of the security policy that is attached to the server.
+     *        Specifies the name of the security policy for the server.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

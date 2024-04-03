@@ -64,9 +64,17 @@ public class SearchByAttributeValueJsonUnmarshaller implements Unmarshaller<Sear
                     context.nextToken();
                     searchByAttributeValue.setDICOMStudyInstanceUID(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DICOMSeriesInstanceUID", targetDepth)) {
+                    context.nextToken();
+                    searchByAttributeValue.setDICOMSeriesInstanceUID(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("createdAt", targetDepth)) {
                     context.nextToken();
                     searchByAttributeValue.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("updatedAt", targetDepth)) {
+                    context.nextToken();
+                    searchByAttributeValue.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("DICOMStudyDateAndTime", targetDepth)) {
                     context.nextToken();

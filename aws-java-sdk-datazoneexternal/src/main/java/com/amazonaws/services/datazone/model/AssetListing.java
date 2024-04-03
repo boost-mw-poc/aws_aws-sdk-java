@@ -66,6 +66,12 @@ public class AssetListing implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<DetailedGlossaryTerm> glossaryTerms;
     /**
      * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     */
+    private java.util.List<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointForms;
+    /**
+     * <p>
      * The identifier of the project where an asset published in an Amazon DataZone catalog exists.
      * </p>
      */
@@ -343,6 +349,76 @@ public class AssetListing implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * 
+     * @return The latest time series data points forms included in the additional attributes of an asset.
+     */
+
+    public java.util.List<TimeSeriesDataPointSummaryFormOutput> getLatestTimeSeriesDataPointForms() {
+        return latestTimeSeriesDataPointForms;
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointForms
+     *        The latest time series data points forms included in the additional attributes of an asset.
+     */
+
+    public void setLatestTimeSeriesDataPointForms(java.util.Collection<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointForms) {
+        if (latestTimeSeriesDataPointForms == null) {
+            this.latestTimeSeriesDataPointForms = null;
+            return;
+        }
+
+        this.latestTimeSeriesDataPointForms = new java.util.ArrayList<TimeSeriesDataPointSummaryFormOutput>(latestTimeSeriesDataPointForms);
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLatestTimeSeriesDataPointForms(java.util.Collection)} or
+     * {@link #withLatestTimeSeriesDataPointForms(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointForms
+     *        The latest time series data points forms included in the additional attributes of an asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssetListing withLatestTimeSeriesDataPointForms(TimeSeriesDataPointSummaryFormOutput... latestTimeSeriesDataPointForms) {
+        if (this.latestTimeSeriesDataPointForms == null) {
+            setLatestTimeSeriesDataPointForms(new java.util.ArrayList<TimeSeriesDataPointSummaryFormOutput>(latestTimeSeriesDataPointForms.length));
+        }
+        for (TimeSeriesDataPointSummaryFormOutput ele : latestTimeSeriesDataPointForms) {
+            this.latestTimeSeriesDataPointForms.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The latest time series data points forms included in the additional attributes of an asset.
+     * </p>
+     * 
+     * @param latestTimeSeriesDataPointForms
+     *        The latest time series data points forms included in the additional attributes of an asset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssetListing withLatestTimeSeriesDataPointForms(java.util.Collection<TimeSeriesDataPointSummaryFormOutput> latestTimeSeriesDataPointForms) {
+        setLatestTimeSeriesDataPointForms(latestTimeSeriesDataPointForms);
+        return this;
+    }
+
+    /**
+     * <p>
      * The identifier of the project where an asset published in an Amazon DataZone catalog exists.
      * </p>
      * 
@@ -405,6 +481,8 @@ public class AssetListing implements Serializable, Cloneable, StructuredPojo {
             sb.append("Forms: ").append(getForms()).append(",");
         if (getGlossaryTerms() != null)
             sb.append("GlossaryTerms: ").append(getGlossaryTerms()).append(",");
+        if (getLatestTimeSeriesDataPointForms() != null)
+            sb.append("LatestTimeSeriesDataPointForms: ").append(getLatestTimeSeriesDataPointForms()).append(",");
         if (getOwningProjectId() != null)
             sb.append("OwningProjectId: ").append(getOwningProjectId());
         sb.append("}");
@@ -445,6 +523,11 @@ public class AssetListing implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getGlossaryTerms() != null && other.getGlossaryTerms().equals(this.getGlossaryTerms()) == false)
             return false;
+        if (other.getLatestTimeSeriesDataPointForms() == null ^ this.getLatestTimeSeriesDataPointForms() == null)
+            return false;
+        if (other.getLatestTimeSeriesDataPointForms() != null
+                && other.getLatestTimeSeriesDataPointForms().equals(this.getLatestTimeSeriesDataPointForms()) == false)
+            return false;
         if (other.getOwningProjectId() == null ^ this.getOwningProjectId() == null)
             return false;
         if (other.getOwningProjectId() != null && other.getOwningProjectId().equals(this.getOwningProjectId()) == false)
@@ -463,6 +546,7 @@ public class AssetListing implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getForms() == null) ? 0 : getForms().hashCode());
         hashCode = prime * hashCode + ((getGlossaryTerms() == null) ? 0 : getGlossaryTerms().hashCode());
+        hashCode = prime * hashCode + ((getLatestTimeSeriesDataPointForms() == null) ? 0 : getLatestTimeSeriesDataPointForms().hashCode());
         hashCode = prime * hashCode + ((getOwningProjectId() == null) ? 0 : getOwningProjectId().hashCode());
         return hashCode;
     }

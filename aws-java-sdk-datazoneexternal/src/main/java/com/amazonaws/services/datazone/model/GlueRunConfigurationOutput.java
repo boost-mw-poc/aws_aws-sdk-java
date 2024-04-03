@@ -37,6 +37,12 @@ public class GlueRunConfigurationOutput implements Serializable, Cloneable, Stru
     private String accountId;
     /**
      * <p>
+     * Specifies whether to automatically import data quality metrics as part of the data source run.
+     * </p>
+     */
+    private Boolean autoImportDataQualityResult;
+    /**
+     * <p>
      * The data access role included in the configuration details of the Amazon Web Services Glue data source.
      * </p>
      */
@@ -99,6 +105,58 @@ public class GlueRunConfigurationOutput implements Serializable, Cloneable, Stru
     public GlueRunConfigurationOutput withAccountId(String accountId) {
         setAccountId(accountId);
         return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to automatically import data quality metrics as part of the data source run.
+     * </p>
+     * 
+     * @param autoImportDataQualityResult
+     *        Specifies whether to automatically import data quality metrics as part of the data source run.
+     */
+
+    public void setAutoImportDataQualityResult(Boolean autoImportDataQualityResult) {
+        this.autoImportDataQualityResult = autoImportDataQualityResult;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to automatically import data quality metrics as part of the data source run.
+     * </p>
+     * 
+     * @return Specifies whether to automatically import data quality metrics as part of the data source run.
+     */
+
+    public Boolean getAutoImportDataQualityResult() {
+        return this.autoImportDataQualityResult;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to automatically import data quality metrics as part of the data source run.
+     * </p>
+     * 
+     * @param autoImportDataQualityResult
+     *        Specifies whether to automatically import data quality metrics as part of the data source run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GlueRunConfigurationOutput withAutoImportDataQualityResult(Boolean autoImportDataQualityResult) {
+        setAutoImportDataQualityResult(autoImportDataQualityResult);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to automatically import data quality metrics as part of the data source run.
+     * </p>
+     * 
+     * @return Specifies whether to automatically import data quality metrics as part of the data source run.
+     */
+
+    public Boolean isAutoImportDataQualityResult() {
+        return this.autoImportDataQualityResult;
     }
 
     /**
@@ -276,6 +334,8 @@ public class GlueRunConfigurationOutput implements Serializable, Cloneable, Stru
         sb.append("{");
         if (getAccountId() != null)
             sb.append("AccountId: ").append(getAccountId()).append(",");
+        if (getAutoImportDataQualityResult() != null)
+            sb.append("AutoImportDataQualityResult: ").append(getAutoImportDataQualityResult()).append(",");
         if (getDataAccessRole() != null)
             sb.append("DataAccessRole: ").append(getDataAccessRole()).append(",");
         if (getRegion() != null)
@@ -300,6 +360,10 @@ public class GlueRunConfigurationOutput implements Serializable, Cloneable, Stru
             return false;
         if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
             return false;
+        if (other.getAutoImportDataQualityResult() == null ^ this.getAutoImportDataQualityResult() == null)
+            return false;
+        if (other.getAutoImportDataQualityResult() != null && other.getAutoImportDataQualityResult().equals(this.getAutoImportDataQualityResult()) == false)
+            return false;
         if (other.getDataAccessRole() == null ^ this.getDataAccessRole() == null)
             return false;
         if (other.getDataAccessRole() != null && other.getDataAccessRole().equals(this.getDataAccessRole()) == false)
@@ -322,6 +386,7 @@ public class GlueRunConfigurationOutput implements Serializable, Cloneable, Stru
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
+        hashCode = prime * hashCode + ((getAutoImportDataQualityResult() == null) ? 0 : getAutoImportDataQualityResult().hashCode());
         hashCode = prime * hashCode + ((getDataAccessRole() == null) ? 0 : getDataAccessRole().hashCode());
         hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
         hashCode = prime * hashCode + ((getRelationalFilterConfigurations() == null) ? 0 : getRelationalFilterConfigurations().hashCode());

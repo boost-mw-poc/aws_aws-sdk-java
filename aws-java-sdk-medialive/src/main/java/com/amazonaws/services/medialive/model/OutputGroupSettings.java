@@ -42,6 +42,8 @@ public class OutputGroupSettings implements Serializable, Cloneable, StructuredP
 
     private UdpGroupSettings udpGroupSettings;
 
+    private CmafIngestGroupSettings cmafIngestGroupSettings;
+
     /**
      * @param archiveGroupSettings
      */
@@ -251,6 +253,32 @@ public class OutputGroupSettings implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * @param cmafIngestGroupSettings
+     */
+
+    public void setCmafIngestGroupSettings(CmafIngestGroupSettings cmafIngestGroupSettings) {
+        this.cmafIngestGroupSettings = cmafIngestGroupSettings;
+    }
+
+    /**
+     * @return
+     */
+
+    public CmafIngestGroupSettings getCmafIngestGroupSettings() {
+        return this.cmafIngestGroupSettings;
+    }
+
+    /**
+     * @param cmafIngestGroupSettings
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OutputGroupSettings withCmafIngestGroupSettings(CmafIngestGroupSettings cmafIngestGroupSettings) {
+        setCmafIngestGroupSettings(cmafIngestGroupSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -277,7 +305,9 @@ public class OutputGroupSettings implements Serializable, Cloneable, StructuredP
         if (getRtmpGroupSettings() != null)
             sb.append("RtmpGroupSettings: ").append(getRtmpGroupSettings()).append(",");
         if (getUdpGroupSettings() != null)
-            sb.append("UdpGroupSettings: ").append(getUdpGroupSettings());
+            sb.append("UdpGroupSettings: ").append(getUdpGroupSettings()).append(",");
+        if (getCmafIngestGroupSettings() != null)
+            sb.append("CmafIngestGroupSettings: ").append(getCmafIngestGroupSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -324,6 +354,10 @@ public class OutputGroupSettings implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getUdpGroupSettings() != null && other.getUdpGroupSettings().equals(this.getUdpGroupSettings()) == false)
             return false;
+        if (other.getCmafIngestGroupSettings() == null ^ this.getCmafIngestGroupSettings() == null)
+            return false;
+        if (other.getCmafIngestGroupSettings() != null && other.getCmafIngestGroupSettings().equals(this.getCmafIngestGroupSettings()) == false)
+            return false;
         return true;
     }
 
@@ -340,6 +374,7 @@ public class OutputGroupSettings implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getMultiplexGroupSettings() == null) ? 0 : getMultiplexGroupSettings().hashCode());
         hashCode = prime * hashCode + ((getRtmpGroupSettings() == null) ? 0 : getRtmpGroupSettings().hashCode());
         hashCode = prime * hashCode + ((getUdpGroupSettings() == null) ? 0 : getUdpGroupSettings().hashCode());
+        hashCode = prime * hashCode + ((getCmafIngestGroupSettings() == null) ? 0 : getCmafIngestGroupSettings().hashCode());
         return hashCode;
     }
 

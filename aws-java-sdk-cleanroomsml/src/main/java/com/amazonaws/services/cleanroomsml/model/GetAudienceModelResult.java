@@ -49,12 +49,6 @@ public class GetAudienceModelResult extends com.amazonaws.AmazonWebServiceResult
     private String kmsKeyArn;
     /**
      * <p>
-     * Accuracy metrics for the model.
-     * </p>
-     */
-    private java.util.List<AudienceModelMetric> metrics;
-    /**
-     * <p>
      * The name of the audience model.
      * </p>
      */
@@ -259,76 +253,6 @@ public class GetAudienceModelResult extends com.amazonaws.AmazonWebServiceResult
 
     public GetAudienceModelResult withKmsKeyArn(String kmsKeyArn) {
         setKmsKeyArn(kmsKeyArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Accuracy metrics for the model.
-     * </p>
-     * 
-     * @return Accuracy metrics for the model.
-     */
-
-    public java.util.List<AudienceModelMetric> getMetrics() {
-        return metrics;
-    }
-
-    /**
-     * <p>
-     * Accuracy metrics for the model.
-     * </p>
-     * 
-     * @param metrics
-     *        Accuracy metrics for the model.
-     */
-
-    public void setMetrics(java.util.Collection<AudienceModelMetric> metrics) {
-        if (metrics == null) {
-            this.metrics = null;
-            return;
-        }
-
-        this.metrics = new java.util.ArrayList<AudienceModelMetric>(metrics);
-    }
-
-    /**
-     * <p>
-     * Accuracy metrics for the model.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setMetrics(java.util.Collection)} or {@link #withMetrics(java.util.Collection)} if you want to override
-     * the existing values.
-     * </p>
-     * 
-     * @param metrics
-     *        Accuracy metrics for the model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetAudienceModelResult withMetrics(AudienceModelMetric... metrics) {
-        if (this.metrics == null) {
-            setMetrics(new java.util.ArrayList<AudienceModelMetric>(metrics.length));
-        }
-        for (AudienceModelMetric ele : metrics) {
-            this.metrics.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * Accuracy metrics for the model.
-     * </p>
-     * 
-     * @param metrics
-     *        Accuracy metrics for the model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetAudienceModelResult withMetrics(java.util.Collection<AudienceModelMetric> metrics) {
-        setMetrics(metrics);
         return this;
     }
 
@@ -719,8 +643,6 @@ public class GetAudienceModelResult extends com.amazonaws.AmazonWebServiceResult
             sb.append("Description: ").append(getDescription()).append(",");
         if (getKmsKeyArn() != null)
             sb.append("KmsKeyArn: ").append(getKmsKeyArn()).append(",");
-        if (getMetrics() != null)
-            sb.append("Metrics: ").append(getMetrics()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getStatus() != null)
@@ -767,10 +689,6 @@ public class GetAudienceModelResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
             return false;
-        if (other.getMetrics() == null ^ this.getMetrics() == null)
-            return false;
-        if (other.getMetrics() != null && other.getMetrics().equals(this.getMetrics()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
@@ -815,7 +733,6 @@ public class GetAudienceModelResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
-        hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getStatusDetails() == null) ? 0 : getStatusDetails().hashCode());

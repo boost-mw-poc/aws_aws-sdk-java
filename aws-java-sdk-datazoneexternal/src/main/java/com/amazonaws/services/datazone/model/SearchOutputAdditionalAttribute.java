@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum SearchOutputAdditionalAttribute {
 
-    FORMS("FORMS");
+    FORMS("FORMS"),
+    TIME_SERIES_DATA_POINT_FORMS("TIME_SERIES_DATA_POINT_FORMS");
 
     private String value;
 

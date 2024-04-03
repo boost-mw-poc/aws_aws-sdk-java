@@ -30,6 +30,8 @@ public class SearchCriteriaMarshaller {
 
     private static final MarshallingInfo<List> FILTERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("filters").build();
+    private static final MarshallingInfo<StructuredPojo> SORT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sort").build();
 
     private static final SearchCriteriaMarshaller instance = new SearchCriteriaMarshaller();
 
@@ -48,6 +50,7 @@ public class SearchCriteriaMarshaller {
 
         try {
             protocolMarshaller.marshall(searchCriteria.getFilters(), FILTERS_BINDING);
+            protocolMarshaller.marshall(searchCriteria.getSort(), SORT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
