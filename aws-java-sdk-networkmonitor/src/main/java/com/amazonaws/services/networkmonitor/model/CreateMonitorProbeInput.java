@@ -36,7 +36,7 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
     private String sourceArn;
     /**
      * <p>
-     * The destination IP address. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * The destination IP address. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      */
     private String destination;
@@ -49,14 +49,14 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
     private Integer destinationPort;
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      */
     private String protocol;
     /**
      * <p>
-     * The size of the packets sent between the source and destination. This will be a number between <code>56</code>
+     * The size of the packets sent between the source and destination. This must be a number between <code>56</code>
      * and <code>8500</code>.
      * </p>
      */
@@ -110,11 +110,11 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The destination IP address. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * The destination IP address. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
      * @param destination
-     *        The destination IP address. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     *        The destination IP address. This must be either <code>IPV4</code> or <code>IPV6</code>.
      */
 
     public void setDestination(String destination) {
@@ -123,10 +123,10 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The destination IP address. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * The destination IP address. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
-     * @return The destination IP address. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * @return The destination IP address. This must be either <code>IPV4</code> or <code>IPV6</code>.
      */
 
     public String getDestination() {
@@ -135,11 +135,11 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The destination IP address. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * The destination IP address. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
      * @param destination
-     *        The destination IP address. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     *        The destination IP address. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,13 +196,13 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the network traffic between the <code>source</code> and <code>destination</code>.
-     *        This will be either <code>TCP</code> or <code>ICMP</code>.
+     *        This must be either <code>TCP</code> or <code>ICMP</code>.
      * @see Protocol
      */
 
@@ -212,12 +212,12 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      * 
      * @return The protocol used for the network traffic between the <code>source</code> and <code>destination</code>.
-     *         This will be either <code>TCP</code> or <code>ICMP</code>.
+     *         This must be either <code>TCP</code> or <code>ICMP</code>.
      * @see Protocol
      */
 
@@ -227,13 +227,13 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the network traffic between the <code>source</code> and <code>destination</code>.
-     *        This will be either <code>TCP</code> or <code>ICMP</code>.
+     *        This must be either <code>TCP</code> or <code>ICMP</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Protocol
      */
@@ -245,13 +245,13 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the network traffic between the <code>source</code> and <code>destination</code>.
-     *        This will be either <code>TCP</code> or <code>ICMP</code>.
+     *        This must be either <code>TCP</code> or <code>ICMP</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Protocol
      */
@@ -263,12 +263,12 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The size of the packets sent between the source and destination. This will be a number between <code>56</code>
+     * The size of the packets sent between the source and destination. This must be a number between <code>56</code>
      * and <code>8500</code>.
      * </p>
      * 
      * @param packetSize
-     *        The size of the packets sent between the source and destination. This will be a number between
+     *        The size of the packets sent between the source and destination. This must be a number between
      *        <code>56</code> and <code>8500</code>.
      */
 
@@ -278,11 +278,11 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The size of the packets sent between the source and destination. This will be a number between <code>56</code>
+     * The size of the packets sent between the source and destination. This must be a number between <code>56</code>
      * and <code>8500</code>.
      * </p>
      * 
-     * @return The size of the packets sent between the source and destination. This will be a number between
+     * @return The size of the packets sent between the source and destination. This must be a number between
      *         <code>56</code> and <code>8500</code>.
      */
 
@@ -292,12 +292,12 @@ public class CreateMonitorProbeInput implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The size of the packets sent between the source and destination. This will be a number between <code>56</code>
+     * The size of the packets sent between the source and destination. This must be a number between <code>56</code>
      * and <code>8500</code>.
      * </p>
      * 
      * @param packetSize
-     *        The size of the packets sent between the source and destination. This will be a number between
+     *        The size of the packets sent between the source and destination. This must be a number between
      *        <code>56</code> and <code>8500</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

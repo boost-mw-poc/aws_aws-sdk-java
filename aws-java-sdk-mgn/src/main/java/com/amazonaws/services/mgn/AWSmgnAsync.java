@@ -2089,6 +2089,11 @@ public interface AWSmgnAsync extends AWSmgn {
      * <p>
      * Updates multiple LaunchConfigurations by Source Server ID.
      * </p>
+     * <note>
+     * <p>
+     * bootMode valid values are <code>LEGACY_BIOS | UEFI</code>
+     * </p>
+     * </note>
      * 
      * @param updateLaunchConfigurationRequest
      * @return A Java Future containing the result of the UpdateLaunchConfiguration operation returned by the service.
@@ -2103,6 +2108,11 @@ public interface AWSmgnAsync extends AWSmgn {
      * <p>
      * Updates multiple LaunchConfigurations by Source Server ID.
      * </p>
+     * <note>
+     * <p>
+     * bootMode valid values are <code>LEGACY_BIOS | UEFI</code>
+     * </p>
+     * </note>
      * 
      * @param updateLaunchConfigurationRequest
      * @param asyncHandler

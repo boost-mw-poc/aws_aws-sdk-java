@@ -28,7 +28,7 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The name identifying the monitor. It can contain only letters, underscores (_), or dashes (-), and can be up to
-     * 255 characters.
+     * 200 characters.
      * </p>
      */
     private String monitorName;
@@ -62,12 +62,12 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The name identifying the monitor. It can contain only letters, underscores (_), or dashes (-), and can be up to
-     * 255 characters.
+     * 200 characters.
      * </p>
      * 
      * @param monitorName
      *        The name identifying the monitor. It can contain only letters, underscores (_), or dashes (-), and can be
-     *        up to 255 characters.
+     *        up to 200 characters.
      */
 
     public void setMonitorName(String monitorName) {
@@ -77,11 +77,11 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The name identifying the monitor. It can contain only letters, underscores (_), or dashes (-), and can be up to
-     * 255 characters.
+     * 200 characters.
      * </p>
      * 
      * @return The name identifying the monitor. It can contain only letters, underscores (_), or dashes (-), and can be
-     *         up to 255 characters.
+     *         up to 200 characters.
      */
 
     public String getMonitorName() {
@@ -91,12 +91,12 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The name identifying the monitor. It can contain only letters, underscores (_), or dashes (-), and can be up to
-     * 255 characters.
+     * 200 characters.
      * </p>
      * 
      * @param monitorName
      *        The name identifying the monitor. It can contain only letters, underscores (_), or dashes (-), and can be
-     *        up to 255 characters.
+     *        up to 200 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -4079,6 +4079,11 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
      * <p>
      * Updates multiple LaunchConfigurations by Source Server ID.
      * </p>
+     * <note>
+     * <p>
+     * bootMode valid values are <code>LEGACY_BIOS | UEFI</code>
+     * </p>
+     * </note>
      * 
      * @param updateLaunchConfigurationRequest
      * @return Result of the UpdateLaunchConfiguration operation returned by the service.

@@ -49,7 +49,7 @@ public class UpdateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String destination;
     /**
      * <p>
-     * The updated destination port. This will be a number between <code>1</code> and <code>65536</code>.
+     * The updated destination port. This must be a number between <code>1</code> and <code>65536</code>.
      * </p>
      */
     private Integer destinationPort;
@@ -67,7 +67,7 @@ public class UpdateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
     private Integer packetSize;
     /**
      * <p>
-     * The updated IP address family. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * The updated IP address family. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      */
     private String addressFamily;
@@ -264,11 +264,11 @@ public class UpdateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The updated destination port. This will be a number between <code>1</code> and <code>65536</code>.
+     * The updated destination port. This must be a number between <code>1</code> and <code>65536</code>.
      * </p>
      * 
      * @param destinationPort
-     *        The updated destination port. This will be a number between <code>1</code> and <code>65536</code>.
+     *        The updated destination port. This must be a number between <code>1</code> and <code>65536</code>.
      */
 
     public void setDestinationPort(Integer destinationPort) {
@@ -277,10 +277,10 @@ public class UpdateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The updated destination port. This will be a number between <code>1</code> and <code>65536</code>.
+     * The updated destination port. This must be a number between <code>1</code> and <code>65536</code>.
      * </p>
      * 
-     * @return The updated destination port. This will be a number between <code>1</code> and <code>65536</code>.
+     * @return The updated destination port. This must be a number between <code>1</code> and <code>65536</code>.
      */
 
     public Integer getDestinationPort() {
@@ -289,11 +289,11 @@ public class UpdateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The updated destination port. This will be a number between <code>1</code> and <code>65536</code>.
+     * The updated destination port. This must be a number between <code>1</code> and <code>65536</code>.
      * </p>
      * 
      * @param destinationPort
-     *        The updated destination port. This will be a number between <code>1</code> and <code>65536</code>.
+     *        The updated destination port. This must be a number between <code>1</code> and <code>65536</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -403,11 +403,11 @@ public class UpdateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The updated IP address family. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * The updated IP address family. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
      * @param addressFamily
-     *        The updated IP address family. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     *        The updated IP address family. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * @see AddressFamily
      */
 
@@ -417,10 +417,10 @@ public class UpdateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The updated IP address family. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * The updated IP address family. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
-     * @return The updated IP address family. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * @return The updated IP address family. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * @see AddressFamily
      */
 
@@ -430,11 +430,11 @@ public class UpdateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The updated IP address family. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * The updated IP address family. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
      * @param addressFamily
-     *        The updated IP address family. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     *        The updated IP address family. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AddressFamily
      */
@@ -446,11 +446,11 @@ public class UpdateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The updated IP address family. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     * The updated IP address family. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
      * @param addressFamily
-     *        The updated IP address family. This will be either <code>IPV4</code> or <code>IPV6</code>.
+     *        The updated IP address family. This must be either <code>IPV4</code> or <code>IPV6</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AddressFamily
      */

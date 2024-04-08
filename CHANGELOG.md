@@ -1,3 +1,16 @@
+# __1.12.697__ __2024-04-08__
+## __AWS Control Catalog__
+  - ### Features
+    - This is the initial SDK release for AWS Control Catalog, a central catalog for AWS managed controls. This release includes 3 new APIs - ListDomains, ListObjectives, and ListCommonControls - that vend high-level data to categorize controls across the AWS platform.
+
+## __Amazon CloudWatch Network Monitor__
+  - ### Features
+    - Updated the allowed monitorName length for CloudWatch Network Monitor.
+
+## __Application Migration Service__
+  - ### Features
+    - Added USE_SOURCE as default option to LaunchConfigurationTemplate bootMode parameter.
+
 # __1.12.696__ __2024-04-05__
 ## __AWS Resource Groups__
   - ### Features

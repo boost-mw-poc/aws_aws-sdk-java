@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum BootMode {
 
     LEGACY_BIOS("LEGACY_BIOS"),
-    UEFI("UEFI");
+    UEFI("UEFI"),
+    USE_SOURCE("USE_SOURCE");
 
     private String value;
 

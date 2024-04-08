@@ -43,7 +43,7 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String sourceArn;
     /**
      * <p>
-     * The destination IP address for the monitor. This will be either an IPv4 or IPv6 address.
+     * The destination IP address for the monitor. This must be either an IPv4 or IPv6 address.
      * </p>
      */
     private String destination;
@@ -56,14 +56,14 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
     private Integer destinationPort;
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      */
     private String protocol;
     /**
      * <p>
-     * The size of the packets sent between the source and destination. This will be a number between <code>56</code>
+     * The size of the packets sent between the source and destination. This must be a number between <code>56</code>
      * and <code>8500</code>.
      * </p>
      */
@@ -227,11 +227,11 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The destination IP address for the monitor. This will be either an IPv4 or IPv6 address.
+     * The destination IP address for the monitor. This must be either an IPv4 or IPv6 address.
      * </p>
      * 
      * @param destination
-     *        The destination IP address for the monitor. This will be either an IPv4 or IPv6 address.
+     *        The destination IP address for the monitor. This must be either an IPv4 or IPv6 address.
      */
 
     public void setDestination(String destination) {
@@ -240,10 +240,10 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The destination IP address for the monitor. This will be either an IPv4 or IPv6 address.
+     * The destination IP address for the monitor. This must be either an IPv4 or IPv6 address.
      * </p>
      * 
-     * @return The destination IP address for the monitor. This will be either an IPv4 or IPv6 address.
+     * @return The destination IP address for the monitor. This must be either an IPv4 or IPv6 address.
      */
 
     public String getDestination() {
@@ -252,11 +252,11 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The destination IP address for the monitor. This will be either an IPv4 or IPv6 address.
+     * The destination IP address for the monitor. This must be either an IPv4 or IPv6 address.
      * </p>
      * 
      * @param destination
-     *        The destination IP address for the monitor. This will be either an IPv4 or IPv6 address.
+     *        The destination IP address for the monitor. This must be either an IPv4 or IPv6 address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -313,13 +313,13 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the network traffic between the <code>source</code> and <code>destination</code>.
-     *        This will be either <code>TCP</code> or <code>ICMP</code>.
+     *        This must be either <code>TCP</code> or <code>ICMP</code>.
      * @see Protocol
      */
 
@@ -329,12 +329,12 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      * 
      * @return The protocol used for the network traffic between the <code>source</code> and <code>destination</code>.
-     *         This will be either <code>TCP</code> or <code>ICMP</code>.
+     *         This must be either <code>TCP</code> or <code>ICMP</code>.
      * @see Protocol
      */
 
@@ -344,13 +344,13 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the network traffic between the <code>source</code> and <code>destination</code>.
-     *        This will be either <code>TCP</code> or <code>ICMP</code>.
+     *        This must be either <code>TCP</code> or <code>ICMP</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Protocol
      */
@@ -362,13 +362,13 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This will
+     * The protocol used for the network traffic between the <code>source</code> and <code>destination</code>. This must
      * be either <code>TCP</code> or <code>ICMP</code>.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the network traffic between the <code>source</code> and <code>destination</code>.
-     *        This will be either <code>TCP</code> or <code>ICMP</code>.
+     *        This must be either <code>TCP</code> or <code>ICMP</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Protocol
      */
@@ -380,12 +380,12 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The size of the packets sent between the source and destination. This will be a number between <code>56</code>
+     * The size of the packets sent between the source and destination. This must be a number between <code>56</code>
      * and <code>8500</code>.
      * </p>
      * 
      * @param packetSize
-     *        The size of the packets sent between the source and destination. This will be a number between
+     *        The size of the packets sent between the source and destination. This must be a number between
      *        <code>56</code> and <code>8500</code>.
      */
 
@@ -395,11 +395,11 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The size of the packets sent between the source and destination. This will be a number between <code>56</code>
+     * The size of the packets sent between the source and destination. This must be a number between <code>56</code>
      * and <code>8500</code>.
      * </p>
      * 
-     * @return The size of the packets sent between the source and destination. This will be a number between
+     * @return The size of the packets sent between the source and destination. This must be a number between
      *         <code>56</code> and <code>8500</code>.
      */
 
@@ -409,12 +409,12 @@ public class CreateProbeResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The size of the packets sent between the source and destination. This will be a number between <code>56</code>
+     * The size of the packets sent between the source and destination. This must be a number between <code>56</code>
      * and <code>8500</code>.
      * </p>
      * 
      * @param packetSize
-     *        The size of the packets sent between the source and destination. This will be a number between
+     *        The size of the packets sent between the source and destination. This must be a number between
      *        <code>56</code> and <code>8500</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

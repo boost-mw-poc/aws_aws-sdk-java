@@ -43,7 +43,7 @@ public class CreateMonitorResult extends com.amazonaws.AmazonWebServiceResult<co
     private String state;
     /**
      * <p>
-     * The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This will be either
+     * The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This must be either
      * <code>30</code> or <code>60</code>.
      * </p>
      */
@@ -196,12 +196,12 @@ public class CreateMonitorResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This will be either
+     * The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This must be either
      * <code>30</code> or <code>60</code>.
      * </p>
      * 
      * @param aggregationPeriod
-     *        The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This will be either
+     *        The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This must be either
      *        <code>30</code> or <code>60</code>.
      */
 
@@ -211,11 +211,11 @@ public class CreateMonitorResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This will be either
+     * The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This must be either
      * <code>30</code> or <code>60</code>.
      * </p>
      * 
-     * @return The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This will be either
+     * @return The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This must be either
      *         <code>30</code> or <code>60</code>.
      */
 
@@ -225,12 +225,12 @@ public class CreateMonitorResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This will be either
+     * The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This must be either
      * <code>30</code> or <code>60</code>.
      * </p>
      * 
      * @param aggregationPeriod
-     *        The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This will be either
+     *        The number of seconds that metrics are aggregated by and sent to Amazon CloudWatch. This must be either
      *        <code>30</code> or <code>60</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
