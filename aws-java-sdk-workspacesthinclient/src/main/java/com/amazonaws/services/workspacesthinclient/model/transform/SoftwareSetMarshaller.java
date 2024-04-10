@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.workspacesthinclient.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -42,6 +43,8 @@ public class SoftwareSetMarshaller {
             .marshallLocationName("software").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final SoftwareSetMarshaller instance = new SoftwareSetMarshaller();
 
@@ -66,6 +69,7 @@ public class SoftwareSetMarshaller {
             protocolMarshaller.marshall(softwareSet.getValidationStatus(), VALIDATIONSTATUS_BINDING);
             protocolMarshaller.marshall(softwareSet.getSoftware(), SOFTWARE_BINDING);
             protocolMarshaller.marshall(softwareSet.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(softwareSet.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

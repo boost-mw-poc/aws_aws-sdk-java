@@ -66,10 +66,10 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q.
+     * invoke Amazon Q in Connect.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -341,10 +341,10 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q.
+     * invoke Amazon Q in Connect.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -354,10 +354,10 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
      *        <p>
      *        This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      *        <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the
-     *        key to invoke Amazon Q.
+     *        key to invoke Amazon Q in Connect.
      *        </p>
      *        <p>
-     *        For more information about setting up a customer managed key for Amazon Q, see <a
+     *        For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *        your instance</a>.
      */
@@ -373,10 +373,10 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q.
+     * invoke Amazon Q in Connect.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -385,10 +385,10 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
      *         <p>
      *         This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      *         <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the
-     *         key to invoke Amazon Q.
+     *         key to invoke Amazon Q in Connect.
      *         </p>
      *         <p>
-     *         For more information about setting up a customer managed key for Amazon Q, see <a
+     *         For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      *         href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *         your instance</a>.
      */
@@ -404,10 +404,10 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q.
+     * invoke Amazon Q in Connect.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -417,10 +417,10 @@ public class CreateKnowledgeBaseRequest extends com.amazonaws.AmazonWebServiceRe
      *        <p>
      *        This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      *        <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the
-     *        key to invoke Amazon Q.
+     *        key to invoke Amazon Q in Connect.
      *        </p>
      *        <p>
-     *        For more information about setting up a customer managed key for Amazon Q, see <a
+     *        For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *        your instance</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

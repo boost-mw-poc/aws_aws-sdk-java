@@ -54,8 +54,7 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
     private String knowledgeBaseArn;
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      */
     private String knowledgeBaseId;
@@ -68,8 +67,8 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing
-     * data between an external system and Amazon Q, you can store an external version identifier as metadata to utilize
-     * for determining drift.
+     * data between an external system and Amazon Q in Connect, you can store an external version identifier as metadata
+     * to utilize for determining drift.
      * </p>
      */
     private java.util.Map<String, String> metadata;
@@ -278,13 +277,11 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it.
+     *        The identifier of the knowledge base.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -293,12 +290,10 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      * 
-     * @return The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *         storing Amazon Q Content resource to it.
+     * @return The identifier of the knowledge base.
      */
 
     public String getKnowledgeBaseId() {
@@ -307,13 +302,11 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it.
+     *        The identifier of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -365,13 +358,13 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing
-     * data between an external system and Amazon Q, you can store an external version identifier as metadata to utilize
-     * for determining drift.
+     * data between an external system and Amazon Q in Connect, you can store an external version identifier as metadata
+     * to utilize for determining drift.
      * </p>
      * 
      * @return A key/value map to store attributes without affecting tagging or recommendations. For example, when
-     *         synchronizing data between an external system and Amazon Q, you can store an external version identifier
-     *         as metadata to utilize for determining drift.
+     *         synchronizing data between an external system and Amazon Q in Connect, you can store an external version
+     *         identifier as metadata to utilize for determining drift.
      */
 
     public java.util.Map<String, String> getMetadata() {
@@ -381,14 +374,14 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing
-     * data between an external system and Amazon Q, you can store an external version identifier as metadata to utilize
-     * for determining drift.
+     * data between an external system and Amazon Q in Connect, you can store an external version identifier as metadata
+     * to utilize for determining drift.
      * </p>
      * 
      * @param metadata
      *        A key/value map to store attributes without affecting tagging or recommendations. For example, when
-     *        synchronizing data between an external system and Amazon Q, you can store an external version identifier
-     *        as metadata to utilize for determining drift.
+     *        synchronizing data between an external system and Amazon Q in Connect, you can store an external version
+     *        identifier as metadata to utilize for determining drift.
      */
 
     public void setMetadata(java.util.Map<String, String> metadata) {
@@ -398,14 +391,14 @@ public class ContentData implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing
-     * data between an external system and Amazon Q, you can store an external version identifier as metadata to utilize
-     * for determining drift.
+     * data between an external system and Amazon Q in Connect, you can store an external version identifier as metadata
+     * to utilize for determining drift.
      * </p>
      * 
      * @param metadata
      *        A key/value map to store attributes without affecting tagging or recommendations. For example, when
-     *        synchronizing data between an external system and Amazon Q, you can store an external version identifier
-     *        as metadata to utilize for determining drift.
+     *        synchronizing data between an external system and Amazon Q in Connect, you can store an external version
+     *        identifier as metadata to utilize for determining drift.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -112,12 +112,6 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String arn;
-    /**
-     * <p>
-     * The tag keys and optional values for the resource.
-     * </p>
-     */
-    private EmbeddedTag tags;
 
     /**
      * <p>
@@ -740,46 +734,6 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p>
-     * The tag keys and optional values for the resource.
-     * </p>
-     * 
-     * @param tags
-     *        The tag keys and optional values for the resource.
-     */
-
-    public void setTags(EmbeddedTag tags) {
-        this.tags = tags;
-    }
-
-    /**
-     * <p>
-     * The tag keys and optional values for the resource.
-     * </p>
-     * 
-     * @return The tag keys and optional values for the resource.
-     */
-
-    public EmbeddedTag getTags() {
-        return this.tags;
-    }
-
-    /**
-     * <p>
-     * The tag keys and optional values for the resource.
-     * </p>
-     * 
-     * @param tags
-     *        The tag keys and optional values for the resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public EnvironmentSummary withTags(EmbeddedTag tags) {
-        setTags(tags);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -818,9 +772,7 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
         if (getUpdatedAt() != null)
             sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
         if (getArn() != null)
-            sb.append("Arn: ").append(getArn()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append("***Sensitive Data Redacted***");
+            sb.append("Arn: ").append(getArn());
         sb.append("}");
         return sb.toString();
     }
@@ -891,10 +843,6 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getTags() == null ^ this.getTags() == null)
-            return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
-            return false;
         return true;
     }
 
@@ -917,7 +865,6 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

@@ -57,8 +57,6 @@ public class DeviceSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
-    private static final MarshallingInfo<StructuredPojo> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tags").build();
 
     private static final DeviceSummaryMarshaller instance = new DeviceSummaryMarshaller();
 
@@ -91,7 +89,6 @@ public class DeviceSummaryMarshaller {
             protocolMarshaller.marshall(deviceSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(deviceSummary.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(deviceSummary.getArn(), ARN_BINDING);
-            protocolMarshaller.marshall(deviceSummary.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

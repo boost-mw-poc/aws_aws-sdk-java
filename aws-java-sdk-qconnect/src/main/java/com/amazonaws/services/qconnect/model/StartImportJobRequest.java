@@ -52,13 +52,13 @@ public class StartImportJobRequest extends com.amazonaws.AmazonWebServiceRequest
     private String importJobType;
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * For importing Amazon Q quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge base.
+     * For importing Amazon Q in Connect quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge
+     * base.
      * </p>
      * </li>
      * </ul>
@@ -66,7 +66,7 @@ public class StartImportJobRequest extends com.amazonaws.AmazonWebServiceRequest
     private String knowledgeBaseId;
     /**
      * <p>
-     * The metadata fields of the imported Amazon Q resources.
+     * The metadata fields of the imported Amazon Q in Connect resources.
      * </p>
      */
     private java.util.Map<String, String> metadata;
@@ -271,24 +271,24 @@ public class StartImportJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * For importing Amazon Q quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge base.
+     * For importing Amazon Q in Connect quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge
+     * base.
      * </p>
      * </li>
      * </ul>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.</p>
+     *        The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        For importing Amazon Q quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge base.
+     *        For importing Amazon Q in Connect quick responses, this should be a <code>QUICK_RESPONSES</code> type
+     *        knowledge base.
      *        </p>
      *        </li>
      */
@@ -299,25 +299,23 @@ public class StartImportJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * For importing Amazon Q quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge base.
+     * For importing Amazon Q in Connect quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge
+     * base.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *         storing Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the
-     *         ARN.</p>
+     * @return The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         For importing Amazon Q quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge
-     *         base.
+     *         For importing Amazon Q in Connect quick responses, this should be a <code>QUICK_RESPONSES</code> type
+     *         knowledge base.
      *         </p>
      *         </li>
      */
@@ -328,24 +326,24 @@ public class StartImportJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * For importing Amazon Q quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge base.
+     * For importing Amazon Q in Connect quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge
+     * base.
      * </p>
      * </li>
      * </ul>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.</p>
+     *        The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        For importing Amazon Q quick responses, this should be a <code>QUICK_RESPONSES</code> type knowledge base.
+     *        For importing Amazon Q in Connect quick responses, this should be a <code>QUICK_RESPONSES</code> type
+     *        knowledge base.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -358,10 +356,10 @@ public class StartImportJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The metadata fields of the imported Amazon Q resources.
+     * The metadata fields of the imported Amazon Q in Connect resources.
      * </p>
      * 
-     * @return The metadata fields of the imported Amazon Q resources.
+     * @return The metadata fields of the imported Amazon Q in Connect resources.
      */
 
     public java.util.Map<String, String> getMetadata() {
@@ -370,11 +368,11 @@ public class StartImportJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The metadata fields of the imported Amazon Q resources.
+     * The metadata fields of the imported Amazon Q in Connect resources.
      * </p>
      * 
      * @param metadata
-     *        The metadata fields of the imported Amazon Q resources.
+     *        The metadata fields of the imported Amazon Q in Connect resources.
      */
 
     public void setMetadata(java.util.Map<String, String> metadata) {
@@ -383,11 +381,11 @@ public class StartImportJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The metadata fields of the imported Amazon Q resources.
+     * The metadata fields of the imported Amazon Q in Connect resources.
      * </p>
      * 
      * @param metadata
-     *        The metadata fields of the imported Amazon Q resources.
+     *        The metadata fields of the imported Amazon Q in Connect resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

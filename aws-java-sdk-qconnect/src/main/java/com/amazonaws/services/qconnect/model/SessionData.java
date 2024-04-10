@@ -60,6 +60,12 @@ public class SessionData implements Serializable, Cloneable, StructuredPojo {
     private String sessionId;
     /**
      * <p>
+     * An object that can be used to specify Tag conditions.
+     * </p>
+     */
+    private TagFilter tagFilter;
+    /**
+     * <p>
      * The tags used to organize, track, or control access for this resource.
      * </p>
      */
@@ -267,6 +273,46 @@ public class SessionData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * An object that can be used to specify Tag conditions.
+     * </p>
+     * 
+     * @param tagFilter
+     *        An object that can be used to specify Tag conditions.
+     */
+
+    public void setTagFilter(TagFilter tagFilter) {
+        this.tagFilter = tagFilter;
+    }
+
+    /**
+     * <p>
+     * An object that can be used to specify Tag conditions.
+     * </p>
+     * 
+     * @return An object that can be used to specify Tag conditions.
+     */
+
+    public TagFilter getTagFilter() {
+        return this.tagFilter;
+    }
+
+    /**
+     * <p>
+     * An object that can be used to specify Tag conditions.
+     * </p>
+     * 
+     * @param tagFilter
+     *        An object that can be used to specify Tag conditions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SessionData withTagFilter(TagFilter tagFilter) {
+        setTagFilter(tagFilter);
+        return this;
+    }
+
+    /**
+     * <p>
      * The tags used to organize, track, or control access for this resource.
      * </p>
      * 
@@ -355,6 +401,8 @@ public class SessionData implements Serializable, Cloneable, StructuredPojo {
             sb.append("SessionArn: ").append(getSessionArn()).append(",");
         if (getSessionId() != null)
             sb.append("SessionId: ").append(getSessionId()).append(",");
+        if (getTagFilter() != null)
+            sb.append("TagFilter: ").append(getTagFilter()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -391,6 +439,10 @@ public class SessionData implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSessionId() != null && other.getSessionId().equals(this.getSessionId()) == false)
             return false;
+        if (other.getTagFilter() == null ^ this.getTagFilter() == null)
+            return false;
+        if (other.getTagFilter() != null && other.getTagFilter().equals(this.getTagFilter()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -408,6 +460,7 @@ public class SessionData implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getSessionArn() == null) ? 0 : getSessionArn().hashCode());
         hashCode = prime * hashCode + ((getSessionId() == null) ? 0 : getSessionId().hashCode());
+        hashCode = prime * hashCode + ((getTagFilter() == null) ? 0 : getTagFilter().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

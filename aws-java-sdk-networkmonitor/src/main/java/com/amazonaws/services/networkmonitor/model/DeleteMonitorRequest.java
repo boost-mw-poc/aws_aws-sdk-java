@@ -27,21 +27,18 @@ public class DeleteMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the monitor to delete. Use the <code>ListMonitors</code> action to get a list of your current
-     * monitors.
+     * The name of the monitor to delete.
      * </p>
      */
     private String monitorName;
 
     /**
      * <p>
-     * The name of the monitor to delete. Use the <code>ListMonitors</code> action to get a list of your current
-     * monitors.
+     * The name of the monitor to delete.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor to delete. Use the <code>ListMonitors</code> action to get a list of your current
-     *        monitors.
+     *        The name of the monitor to delete.
      */
 
     public void setMonitorName(String monitorName) {
@@ -50,12 +47,10 @@ public class DeleteMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the monitor to delete. Use the <code>ListMonitors</code> action to get a list of your current
-     * monitors.
+     * The name of the monitor to delete.
      * </p>
      * 
-     * @return The name of the monitor to delete. Use the <code>ListMonitors</code> action to get a list of your current
-     *         monitors.
+     * @return The name of the monitor to delete.
      */
 
     public String getMonitorName() {
@@ -64,13 +59,11 @@ public class DeleteMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the monitor to delete. Use the <code>ListMonitors</code> action to get a list of your current
-     * monitors.
+     * The name of the monitor to delete.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor to delete. Use the <code>ListMonitors</code> action to get a list of your current
-     *        monitors.
+     *        The name of the monitor to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

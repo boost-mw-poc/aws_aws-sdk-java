@@ -42,8 +42,7 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
     private String knowledgeBaseArn;
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      */
     private String knowledgeBaseId;
@@ -72,10 +71,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q.
+     * invoke Amazon Q in Connect.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -182,13 +181,11 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it.
+     *        The identifier of the knowledge base.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -197,12 +194,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      * 
-     * @return The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *         storing Amazon Q Content resource to it.
+     * @return The identifier of the knowledge base.
      */
 
     public String getKnowledgeBaseId() {
@@ -211,13 +206,11 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it.
+     *        The identifier of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -372,10 +365,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q.
+     * invoke Amazon Q in Connect.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -385,10 +378,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
      *        <p>
      *        This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      *        <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the
-     *        key to invoke Amazon Q.
+     *        key to invoke Amazon Q in Connect.
      *        </p>
      *        <p>
-     *        For more information about setting up a customer managed key for Amazon Q, see <a
+     *        For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *        your instance</a>.
      */
@@ -404,10 +397,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q.
+     * invoke Amazon Q in Connect.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -416,10 +409,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
      *         <p>
      *         This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      *         <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the
-     *         key to invoke Amazon Q.
+     *         key to invoke Amazon Q in Connect.
      *         </p>
      *         <p>
-     *         For more information about setting up a customer managed key for Amazon Q, see <a
+     *         For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      *         href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *         your instance</a>.
      */
@@ -435,10 +428,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q.
+     * invoke Amazon Q in Connect.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -448,10 +441,10 @@ public class KnowledgeBaseSummary implements Serializable, Cloneable, Structured
      *        <p>
      *        This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      *        <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the
-     *        key to invoke Amazon Q.
+     *        key to invoke Amazon Q in Connect.
      *        </p>
      *        <p>
-     *        For more information about setting up a customer managed key for Amazon Q, see <a
+     *        For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *        your instance</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration information of the grouping of Amazon Q users.
+ * The configuration information of the grouping of Amazon Q in Connect users.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/GroupingConfiguration" target="_top">AWS API
@@ -30,7 +30,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The criteria used for grouping Amazon Q users.
+     * The criteria used for grouping Amazon Q in Connect users.
      * </p>
      * <p>
      * The following is the list of supported criteria values.
@@ -52,7 +52,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
     private String criteria;
     /**
      * <p>
-     * The list of values that define different groups of Amazon Q users.
+     * The list of values that define different groups of Amazon Q in Connect users.
      * </p>
      * <ul>
      * <li>
@@ -68,7 +68,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The criteria used for grouping Amazon Q users.
+     * The criteria used for grouping Amazon Q in Connect users.
      * </p>
      * <p>
      * The following is the list of supported criteria values.
@@ -88,7 +88,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
      * </ul>
      * 
      * @param criteria
-     *        The criteria used for grouping Amazon Q users.</p>
+     *        The criteria used for grouping Amazon Q in Connect users.</p>
      *        <p>
      *        The following is the list of supported criteria values.
      *        </p>
@@ -112,7 +112,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The criteria used for grouping Amazon Q users.
+     * The criteria used for grouping Amazon Q in Connect users.
      * </p>
      * <p>
      * The following is the list of supported criteria values.
@@ -131,7 +131,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * 
-     * @return The criteria used for grouping Amazon Q users.</p>
+     * @return The criteria used for grouping Amazon Q in Connect users.</p>
      *         <p>
      *         The following is the list of supported criteria values.
      *         </p>
@@ -155,7 +155,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The criteria used for grouping Amazon Q users.
+     * The criteria used for grouping Amazon Q in Connect users.
      * </p>
      * <p>
      * The following is the list of supported criteria values.
@@ -175,7 +175,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
      * </ul>
      * 
      * @param criteria
-     *        The criteria used for grouping Amazon Q users.</p>
+     *        The criteria used for grouping Amazon Q in Connect users.</p>
      *        <p>
      *        The following is the list of supported criteria values.
      *        </p>
@@ -201,7 +201,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The list of values that define different groups of Amazon Q users.
+     * The list of values that define different groups of Amazon Q in Connect users.
      * </p>
      * <ul>
      * <li>
@@ -213,7 +213,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * 
-     * @return The list of values that define different groups of Amazon Q users.</p>
+     * @return The list of values that define different groups of Amazon Q in Connect users.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -230,7 +230,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The list of values that define different groups of Amazon Q users.
+     * The list of values that define different groups of Amazon Q in Connect users.
      * </p>
      * <ul>
      * <li>
@@ -243,7 +243,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
      * </ul>
      * 
      * @param values
-     *        The list of values that define different groups of Amazon Q users.</p>
+     *        The list of values that define different groups of Amazon Q in Connect users.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -265,7 +265,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The list of values that define different groups of Amazon Q users.
+     * The list of values that define different groups of Amazon Q in Connect users.
      * </p>
      * <ul>
      * <li>
@@ -283,7 +283,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param values
-     *        The list of values that define different groups of Amazon Q users.</p>
+     *        The list of values that define different groups of Amazon Q in Connect users.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -307,7 +307,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The list of values that define different groups of Amazon Q users.
+     * The list of values that define different groups of Amazon Q in Connect users.
      * </p>
      * <ul>
      * <li>
@@ -320,7 +320,7 @@ public class GroupingConfiguration implements Serializable, Cloneable, Structure
      * </ul>
      * 
      * @param values
-     *        The list of values that define different groups of Amazon Q users.</p>
+     *        The list of values that define different groups of Amazon Q in Connect users.</p>
      *        <ul>
      *        <li>
      *        <p>

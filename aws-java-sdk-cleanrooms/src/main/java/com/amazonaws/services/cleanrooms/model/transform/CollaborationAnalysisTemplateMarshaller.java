@@ -54,6 +54,8 @@ public class CollaborationAnalysisTemplateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("source").build();
     private static final MarshallingInfo<List> ANALYSISPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("analysisParameters").build();
+    private static final MarshallingInfo<List> VALIDATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("validations").build();
 
     private static final CollaborationAnalysisTemplateMarshaller instance = new CollaborationAnalysisTemplateMarshaller();
 
@@ -84,6 +86,7 @@ public class CollaborationAnalysisTemplateMarshaller {
             protocolMarshaller.marshall(collaborationAnalysisTemplate.getFormat(), FORMAT_BINDING);
             protocolMarshaller.marshall(collaborationAnalysisTemplate.getSource(), SOURCE_BINDING);
             protocolMarshaller.marshall(collaborationAnalysisTemplate.getAnalysisParameters(), ANALYSISPARAMETERS_BINDING);
+            protocolMarshaller.marshall(collaborationAnalysisTemplate.getValidations(), VALIDATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

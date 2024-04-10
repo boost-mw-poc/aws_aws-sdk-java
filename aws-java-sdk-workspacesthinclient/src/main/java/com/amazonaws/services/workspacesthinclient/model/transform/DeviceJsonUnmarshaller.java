@@ -130,7 +130,8 @@ public class DeviceJsonUnmarshaller implements Unmarshaller<Device, JsonUnmarsha
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
-                    device.setTags(EmbeddedTagJsonUnmarshaller.getInstance().unmarshall(context));
+                    device.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
+                            .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

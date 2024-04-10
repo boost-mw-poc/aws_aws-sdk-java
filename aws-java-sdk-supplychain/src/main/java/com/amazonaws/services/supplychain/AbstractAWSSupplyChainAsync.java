@@ -53,4 +53,17 @@ public class AbstractAWSSupplyChainAsync extends AbstractAWSSupplyChain implemen
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<SendDataIntegrationEventResult> sendDataIntegrationEventAsync(SendDataIntegrationEventRequest request) {
+
+        return sendDataIntegrationEventAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SendDataIntegrationEventResult> sendDataIntegrationEventAsync(SendDataIntegrationEventRequest request,
+            com.amazonaws.handlers.AsyncHandler<SendDataIntegrationEventRequest, SendDataIntegrationEventResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

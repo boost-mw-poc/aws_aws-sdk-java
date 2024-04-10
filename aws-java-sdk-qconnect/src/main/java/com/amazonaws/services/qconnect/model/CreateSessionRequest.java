@@ -27,7 +27,8 @@ public class CreateSessionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain the
+     * ARN.
      * </p>
      */
     private String assistantId;
@@ -54,6 +55,12 @@ public class CreateSessionRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String name;
     /**
      * <p>
+     * An object that can be used to specify Tag conditions.
+     * </p>
+     */
+    private TagFilter tagFilter;
+    /**
+     * <p>
      * The tags used to organize, track, or control access for this resource.
      * </p>
      */
@@ -61,11 +68,13 @@ public class CreateSessionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain the
+     * ARN.
      * </p>
      * 
      * @param assistantId
-     *        The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *        The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain
+     *        the ARN.
      */
 
     public void setAssistantId(String assistantId) {
@@ -74,10 +83,12 @@ public class CreateSessionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain the
+     * ARN.
      * </p>
      * 
-     * @return The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * @return The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain
+     *         the ARN.
      */
 
     public String getAssistantId() {
@@ -86,11 +97,13 @@ public class CreateSessionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain the
+     * ARN.
      * </p>
      * 
      * @param assistantId
-     *        The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *        The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain
+     *        the ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -239,6 +252,46 @@ public class CreateSessionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * An object that can be used to specify Tag conditions.
+     * </p>
+     * 
+     * @param tagFilter
+     *        An object that can be used to specify Tag conditions.
+     */
+
+    public void setTagFilter(TagFilter tagFilter) {
+        this.tagFilter = tagFilter;
+    }
+
+    /**
+     * <p>
+     * An object that can be used to specify Tag conditions.
+     * </p>
+     * 
+     * @return An object that can be used to specify Tag conditions.
+     */
+
+    public TagFilter getTagFilter() {
+        return this.tagFilter;
+    }
+
+    /**
+     * <p>
+     * An object that can be used to specify Tag conditions.
+     * </p>
+     * 
+     * @param tagFilter
+     *        An object that can be used to specify Tag conditions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSessionRequest withTagFilter(TagFilter tagFilter) {
+        setTagFilter(tagFilter);
+        return this;
+    }
+
+    /**
+     * <p>
      * The tags used to organize, track, or control access for this resource.
      * </p>
      * 
@@ -325,6 +378,8 @@ public class CreateSessionRequest extends com.amazonaws.AmazonWebServiceRequest 
             sb.append("Description: ").append(getDescription()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getTagFilter() != null)
+            sb.append("TagFilter: ").append(getTagFilter()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -357,6 +412,10 @@ public class CreateSessionRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getTagFilter() == null ^ this.getTagFilter() == null)
+            return false;
+        if (other.getTagFilter() != null && other.getTagFilter().equals(this.getTagFilter()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -373,6 +432,7 @@ public class CreateSessionRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getTagFilter() == null) ? 0 : getTagFilter().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

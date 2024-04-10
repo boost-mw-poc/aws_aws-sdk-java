@@ -41,7 +41,7 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The time, in seconds, that metrics are aggregated and sent to Amazon CloudWatch. Valid values are either
-     * <code>30</code> or <code>60</code>.
+     * <code>30</code> or <code>60</code>. <code>60</code> is the default if no period is chosen.
      * </p>
      */
     private Long aggregationPeriod;
@@ -178,12 +178,12 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The time, in seconds, that metrics are aggregated and sent to Amazon CloudWatch. Valid values are either
-     * <code>30</code> or <code>60</code>.
+     * <code>30</code> or <code>60</code>. <code>60</code> is the default if no period is chosen.
      * </p>
      * 
      * @param aggregationPeriod
      *        The time, in seconds, that metrics are aggregated and sent to Amazon CloudWatch. Valid values are either
-     *        <code>30</code> or <code>60</code>.
+     *        <code>30</code> or <code>60</code>. <code>60</code> is the default if no period is chosen.
      */
 
     public void setAggregationPeriod(Long aggregationPeriod) {
@@ -193,11 +193,11 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The time, in seconds, that metrics are aggregated and sent to Amazon CloudWatch. Valid values are either
-     * <code>30</code> or <code>60</code>.
+     * <code>30</code> or <code>60</code>. <code>60</code> is the default if no period is chosen.
      * </p>
      * 
      * @return The time, in seconds, that metrics are aggregated and sent to Amazon CloudWatch. Valid values are either
-     *         <code>30</code> or <code>60</code>.
+     *         <code>30</code> or <code>60</code>. <code>60</code> is the default if no period is chosen.
      */
 
     public Long getAggregationPeriod() {
@@ -207,12 +207,12 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The time, in seconds, that metrics are aggregated and sent to Amazon CloudWatch. Valid values are either
-     * <code>30</code> or <code>60</code>.
+     * <code>30</code> or <code>60</code>. <code>60</code> is the default if no period is chosen.
      * </p>
      * 
      * @param aggregationPeriod
      *        The time, in seconds, that metrics are aggregated and sent to Amazon CloudWatch. Valid values are either
-     *        <code>30</code> or <code>60</code>.
+     *        <code>30</code> or <code>60</code>. <code>60</code> is the default if no period is chosen.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

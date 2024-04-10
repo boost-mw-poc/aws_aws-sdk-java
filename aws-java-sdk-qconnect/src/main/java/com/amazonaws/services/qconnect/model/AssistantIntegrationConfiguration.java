@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration information for the Amazon Q assistant integration.
+ * The configuration information for the Amazon Q in Connect assistant integration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/AssistantIntegrationConfiguration"

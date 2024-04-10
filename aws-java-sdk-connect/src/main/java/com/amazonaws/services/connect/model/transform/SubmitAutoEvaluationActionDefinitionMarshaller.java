@@ -10,46 +10,43 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.workspacesthinclient.model.transform;
+package com.amazonaws.services.connect.model.transform;
 
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.services.workspacesthinclient.model.*;
+import com.amazonaws.services.connect.model.*;
 
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * EmbeddedTagMarshaller
+ * SubmitAutoEvaluationActionDefinitionMarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
-public class EmbeddedTagMarshaller {
+public class SubmitAutoEvaluationActionDefinitionMarshaller {
 
-    private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceArn").build();
-    private static final MarshallingInfo<String> INTERNALID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("internalId").build();
+    private static final MarshallingInfo<String> EVALUATIONFORMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EvaluationFormId").build();
 
-    private static final EmbeddedTagMarshaller instance = new EmbeddedTagMarshaller();
+    private static final SubmitAutoEvaluationActionDefinitionMarshaller instance = new SubmitAutoEvaluationActionDefinitionMarshaller();
 
-    public static EmbeddedTagMarshaller getInstance() {
+    public static SubmitAutoEvaluationActionDefinitionMarshaller getInstance() {
         return instance;
     }
 
     /**
      * Marshall the given parameter object.
      */
-    public void marshall(EmbeddedTag embeddedTag, ProtocolMarshaller protocolMarshaller) {
+    public void marshall(SubmitAutoEvaluationActionDefinition submitAutoEvaluationActionDefinition, ProtocolMarshaller protocolMarshaller) {
 
-        if (embeddedTag == null) {
+        if (submitAutoEvaluationActionDefinition == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
         try {
-            protocolMarshaller.marshall(embeddedTag.getResourceArn(), RESOURCEARN_BINDING);
-            protocolMarshaller.marshall(embeddedTag.getInternalId(), INTERNALID_BINDING);
+            protocolMarshaller.marshall(submitAutoEvaluationActionDefinition.getEvaluationFormId(), EVALUATIONFORMID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -30,19 +30,19 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * </p>
      */
     private String assistantArn;
     /**
      * <p>
-     * The identifier of the Amazon Q assistant.
+     * The identifier of the Amazon Q in Connect assistant.
      * </p>
      */
     private String assistantId;
     /**
      * <p>
-     * The configuration information for the Amazon Q assistant capability.
+     * The configuration information for the Amazon Q in Connect assistant capability.
      * </p>
      */
     private AssistantCapabilityConfiguration capabilityConfiguration;
@@ -54,7 +54,7 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The configuration information for the Amazon Q assistant integration.
+     * The configuration information for the Amazon Q in Connect assistant integration.
      * </p>
      */
     private AssistantIntegrationConfiguration integrationConfiguration;
@@ -71,12 +71,12 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q. To use Amazon Q with chat, the key policy must also allow <code>kms:Decrypt</code>,
-     * <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
+     * invoke Amazon Q in Connect. To use Amazon Q in Connect with chat, the key policy must also allow
+     * <code>kms:Decrypt</code>, <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
      * <code>connect.amazonaws.com</code> service principal.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -103,11 +103,11 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * </p>
      * 
      * @param assistantArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     *        The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      */
 
     public void setAssistantArn(String assistantArn) {
@@ -116,10 +116,10 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * @return The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      */
 
     public String getAssistantArn() {
@@ -128,11 +128,11 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * </p>
      * 
      * @param assistantArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     *        The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,11 +143,11 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant.
+     * The identifier of the Amazon Q in Connect assistant.
      * </p>
      * 
      * @param assistantId
-     *        The identifier of the Amazon Q assistant.
+     *        The identifier of the Amazon Q in Connect assistant.
      */
 
     public void setAssistantId(String assistantId) {
@@ -156,10 +156,10 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant.
+     * The identifier of the Amazon Q in Connect assistant.
      * </p>
      * 
-     * @return The identifier of the Amazon Q assistant.
+     * @return The identifier of the Amazon Q in Connect assistant.
      */
 
     public String getAssistantId() {
@@ -168,11 +168,11 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant.
+     * The identifier of the Amazon Q in Connect assistant.
      * </p>
      * 
      * @param assistantId
-     *        The identifier of the Amazon Q assistant.
+     *        The identifier of the Amazon Q in Connect assistant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -183,11 +183,11 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration information for the Amazon Q assistant capability.
+     * The configuration information for the Amazon Q in Connect assistant capability.
      * </p>
      * 
      * @param capabilityConfiguration
-     *        The configuration information for the Amazon Q assistant capability.
+     *        The configuration information for the Amazon Q in Connect assistant capability.
      */
 
     public void setCapabilityConfiguration(AssistantCapabilityConfiguration capabilityConfiguration) {
@@ -196,10 +196,10 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration information for the Amazon Q assistant capability.
+     * The configuration information for the Amazon Q in Connect assistant capability.
      * </p>
      * 
-     * @return The configuration information for the Amazon Q assistant capability.
+     * @return The configuration information for the Amazon Q in Connect assistant capability.
      */
 
     public AssistantCapabilityConfiguration getCapabilityConfiguration() {
@@ -208,11 +208,11 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration information for the Amazon Q assistant capability.
+     * The configuration information for the Amazon Q in Connect assistant capability.
      * </p>
      * 
      * @param capabilityConfiguration
-     *        The configuration information for the Amazon Q assistant capability.
+     *        The configuration information for the Amazon Q in Connect assistant capability.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -263,11 +263,11 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration information for the Amazon Q assistant integration.
+     * The configuration information for the Amazon Q in Connect assistant integration.
      * </p>
      * 
      * @param integrationConfiguration
-     *        The configuration information for the Amazon Q assistant integration.
+     *        The configuration information for the Amazon Q in Connect assistant integration.
      */
 
     public void setIntegrationConfiguration(AssistantIntegrationConfiguration integrationConfiguration) {
@@ -276,10 +276,10 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration information for the Amazon Q assistant integration.
+     * The configuration information for the Amazon Q in Connect assistant integration.
      * </p>
      * 
-     * @return The configuration information for the Amazon Q assistant integration.
+     * @return The configuration information for the Amazon Q in Connect assistant integration.
      */
 
     public AssistantIntegrationConfiguration getIntegrationConfiguration() {
@@ -288,11 +288,11 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration information for the Amazon Q assistant integration.
+     * The configuration information for the Amazon Q in Connect assistant integration.
      * </p>
      * 
      * @param integrationConfiguration
-     *        The configuration information for the Amazon Q assistant integration.
+     *        The configuration information for the Amazon Q in Connect assistant integration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -348,12 +348,12 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q. To use Amazon Q with chat, the key policy must also allow <code>kms:Decrypt</code>,
-     * <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
+     * invoke Amazon Q in Connect. To use Amazon Q in Connect with chat, the key policy must also allow
+     * <code>kms:Decrypt</code>, <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
      * <code>connect.amazonaws.com</code> service principal.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -363,11 +363,12 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      *        <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the
-     *        key to invoke Amazon Q. To use Amazon Q with chat, the key policy must also allow <code>kms:Decrypt</code>, <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
-     *        <code>connect.amazonaws.com</code> service principal.
+     *        key to invoke Amazon Q in Connect. To use Amazon Q in Connect with chat, the key policy must also allow
+     *        <code>kms:Decrypt</code>, <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions
+     *        to the <code>connect.amazonaws.com</code> service principal.
      *        </p>
      *        <p>
-     *        For more information about setting up a customer managed key for Amazon Q, see <a
+     *        For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *        your instance</a>.
      */
@@ -383,12 +384,12 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q. To use Amazon Q with chat, the key policy must also allow <code>kms:Decrypt</code>,
-     * <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
+     * invoke Amazon Q in Connect. To use Amazon Q in Connect with chat, the key policy must also allow
+     * <code>kms:Decrypt</code>, <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
      * <code>connect.amazonaws.com</code> service principal.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -397,12 +398,12 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      *         <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the
-     *         key to invoke Amazon Q. To use Amazon Q with chat, the key policy must also allow
+     *         key to invoke Amazon Q in Connect. To use Amazon Q in Connect with chat, the key policy must also allow
      *         <code>kms:Decrypt</code>, <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions
      *         to the <code>connect.amazonaws.com</code> service principal.
      *         </p>
      *         <p>
-     *         For more information about setting up a customer managed key for Amazon Q, see <a
+     *         For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      *         href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *         your instance</a>.
      */
@@ -418,12 +419,12 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      * <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the key to
-     * invoke Amazon Q. To use Amazon Q with chat, the key policy must also allow <code>kms:Decrypt</code>,
-     * <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
+     * invoke Amazon Q in Connect. To use Amazon Q in Connect with chat, the key policy must also allow
+     * <code>kms:Decrypt</code>, <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
      * <code>connect.amazonaws.com</code> service principal.
      * </p>
      * <p>
-     * For more information about setting up a customer managed key for Amazon Q, see <a
+     * For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for your
      * instance</a>.
      * </p>
@@ -433,11 +434,12 @@ public class AssistantData implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        This KMS key must have a policy that allows <code>kms:CreateGrant</code>, <code>kms:DescribeKey</code>,
      *        <code>kms:Decrypt</code>, and <code>kms:GenerateDataKey*</code> permissions to the IAM identity using the
-     *        key to invoke Amazon Q. To use Amazon Q with chat, the key policy must also allow <code>kms:Decrypt</code>, <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions to the
-     *        <code>connect.amazonaws.com</code> service principal.
+     *        key to invoke Amazon Q in Connect. To use Amazon Q in Connect with chat, the key policy must also allow
+     *        <code>kms:Decrypt</code>, <code>kms:GenerateDataKey*</code>, and <code>kms:DescribeKey</code> permissions
+     *        to the <code>connect.amazonaws.com</code> service principal.
      *        </p>
      *        <p>
-     *        For more information about setting up a customer managed key for Amazon Q, see <a
+     *        For more information about setting up a customer managed key for Amazon Q in Connect, see <a
      *        href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *        your instance</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

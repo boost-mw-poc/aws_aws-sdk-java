@@ -106,6 +106,13 @@ public class AnalysisTemplateJsonUnmarshaller implements Unmarshaller<AnalysisTe
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("validations", targetDepth)) {
+                    context.nextToken();
+                    analysisTemplate.setValidations(new ListUnmarshaller<AnalysisTemplateValidationStatusDetail>(
+                            AnalysisTemplateValidationStatusDetailJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

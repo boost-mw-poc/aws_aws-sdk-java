@@ -85,8 +85,8 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
     private String appIntegrationArn;
     /**
      * <p>
-     * The fields from the source that are made available to your agents in Amazon Q. Optional if ObjectConfiguration is
-     * included in the provided DataIntegration.
+     * The fields from the source that are made available to your agents in Amazon Q in Connect. Optional if
+     * ObjectConfiguration is included in the provided DataIntegration.
      * </p>
      * <ul>
      * <li>
@@ -451,8 +451,8 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The fields from the source that are made available to your agents in Amazon Q. Optional if ObjectConfiguration is
-     * included in the provided DataIntegration.
+     * The fields from the source that are made available to your agents in Amazon Q in Connect. Optional if
+     * ObjectConfiguration is included in the provided DataIntegration.
      * </p>
      * <ul>
      * <li>
@@ -481,7 +481,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      * Make sure to include additional fields. These fields are indexed and used to source recommendations.
      * </p>
      * 
-     * @return The fields from the source that are made available to your agents in Amazon Q. Optional if
+     * @return The fields from the source that are made available to your agents in Amazon Q in Connect. Optional if
      *         ObjectConfiguration is included in the provided DataIntegration. </p>
      *         <ul>
      *         <li>
@@ -517,8 +517,8 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The fields from the source that are made available to your agents in Amazon Q. Optional if ObjectConfiguration is
-     * included in the provided DataIntegration.
+     * The fields from the source that are made available to your agents in Amazon Q in Connect. Optional if
+     * ObjectConfiguration is included in the provided DataIntegration.
      * </p>
      * <ul>
      * <li>
@@ -548,7 +548,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      * </p>
      * 
      * @param objectFields
-     *        The fields from the source that are made available to your agents in Amazon Q. Optional if
+     *        The fields from the source that are made available to your agents in Amazon Q in Connect. Optional if
      *        ObjectConfiguration is included in the provided DataIntegration. </p>
      *        <ul>
      *        <li>
@@ -589,8 +589,8 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The fields from the source that are made available to your agents in Amazon Q. Optional if ObjectConfiguration is
-     * included in the provided DataIntegration.
+     * The fields from the source that are made available to your agents in Amazon Q in Connect. Optional if
+     * ObjectConfiguration is included in the provided DataIntegration.
      * </p>
      * <ul>
      * <li>
@@ -625,7 +625,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      * </p>
      * 
      * @param objectFields
-     *        The fields from the source that are made available to your agents in Amazon Q. Optional if
+     *        The fields from the source that are made available to your agents in Amazon Q in Connect. Optional if
      *        ObjectConfiguration is included in the provided DataIntegration. </p>
      *        <ul>
      *        <li>
@@ -668,8 +668,8 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The fields from the source that are made available to your agents in Amazon Q. Optional if ObjectConfiguration is
-     * included in the provided DataIntegration.
+     * The fields from the source that are made available to your agents in Amazon Q in Connect. Optional if
+     * ObjectConfiguration is included in the provided DataIntegration.
      * </p>
      * <ul>
      * <li>
@@ -699,7 +699,7 @@ public class AppIntegrationsConfiguration implements Serializable, Cloneable, St
      * </p>
      * 
      * @param objectFields
-     *        The fields from the source that are made available to your agents in Amazon Q. Optional if
+     *        The fields from the source that are made available to your agents in Amazon Q in Connect. Optional if
      *        ObjectConfiguration is included in the provided DataIntegration. </p>
      *        <ul>
      *        <li>

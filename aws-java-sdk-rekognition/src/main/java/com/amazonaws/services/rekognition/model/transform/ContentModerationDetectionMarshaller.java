@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.rekognition.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -37,6 +38,8 @@ public class ContentModerationDetectionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndTimestampMillis").build();
     private static final MarshallingInfo<Long> DURATIONMILLIS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DurationMillis").build();
+    private static final MarshallingInfo<List> CONTENTTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ContentTypes").build();
 
     private static final ContentModerationDetectionMarshaller instance = new ContentModerationDetectionMarshaller();
 
@@ -59,6 +62,7 @@ public class ContentModerationDetectionMarshaller {
             protocolMarshaller.marshall(contentModerationDetection.getStartTimestampMillis(), STARTTIMESTAMPMILLIS_BINDING);
             protocolMarshaller.marshall(contentModerationDetection.getEndTimestampMillis(), ENDTIMESTAMPMILLIS_BINDING);
             protocolMarshaller.marshall(contentModerationDetection.getDurationMillis(), DURATIONMILLIS_BINDING);
+            protocolMarshaller.marshall(contentModerationDetection.getContentTypes(), CONTENTTYPES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

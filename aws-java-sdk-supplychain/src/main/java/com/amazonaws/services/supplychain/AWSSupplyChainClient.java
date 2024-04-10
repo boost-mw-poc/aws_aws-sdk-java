@@ -307,6 +307,78 @@ public class AWSSupplyChainClient extends AmazonWebServiceClient implements AWSS
     }
 
     /**
+     * <p>
+     * Send transactional data events with real-time data for analysis or monitoring.
+     * </p>
+     * 
+     * @param sendDataIntegrationEventRequest
+     *        The request parameters for SendDataIntegrationEvent.
+     * @return Result of the SendDataIntegrationEvent operation returned by the service.
+     * @throws ServiceQuotaExceededException
+     *         Request would cause a service quota to be exceeded.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have the required privileges to perform this action.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an AWS service.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @sample AWSSupplyChain.SendDataIntegrationEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/supplychain-2024-01-01/SendDataIntegrationEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public SendDataIntegrationEventResult sendDataIntegrationEvent(SendDataIntegrationEventRequest request) {
+        request = beforeClientExecution(request);
+        return executeSendDataIntegrationEvent(request);
+    }
+
+    @SdkInternalApi
+    final SendDataIntegrationEventResult executeSendDataIntegrationEvent(SendDataIntegrationEventRequest sendDataIntegrationEventRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(sendDataIntegrationEventRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SendDataIntegrationEventRequest> request = null;
+        Response<SendDataIntegrationEventResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SendDataIntegrationEventRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(sendDataIntegrationEventRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SupplyChain");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SendDataIntegrationEvent");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SendDataIntegrationEventResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new SendDataIntegrationEventResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * Returns additional metadata for a previously executed successful, request, typically used for debugging issues
      * where a service isn't acting as expected. This data isn't considered part of the result data returned by an
      * operation, so it's available through this separate, diagnostic interface.

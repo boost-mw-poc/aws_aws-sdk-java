@@ -39,10 +39,10 @@ import java.util.concurrent.ExecutorService;
  * accurately.
  * </p>
  * <p>
- * Amazon Q automatically detects customer intent during calls and chats using conversational analytics and natural
- * language understanding (NLU). It then provides agents with immediate, real-time generative responses and suggested
- * actions, and links to relevant documents and articles. Agents can also query Amazon Q directly using natural language
- * or keywords to answer customer requests.
+ * Amazon Q in Connect automatically detects customer intent during calls and chats using conversational analytics and
+ * natural language understanding (NLU). It then provides agents with immediate, real-time generative responses and
+ * suggested actions, and links to relevant documents and articles. Agents can also query Amazon Q in Connect directly
+ * using natural language or keywords to answer customer requests.
  * </p>
  * <p>
  * Use the Amazon Q in Connect APIs to create an assistant and a knowledge base, for example, or manage content by
@@ -1478,6 +1478,39 @@ public class AmazonQConnectAsyncClient extends AmazonQConnectClient implements A
 
                 try {
                     result = executeUpdateQuickResponse(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSessionResult> updateSessionAsync(UpdateSessionRequest request) {
+
+        return updateSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSessionResult> updateSessionAsync(final UpdateSessionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSessionRequest, UpdateSessionResult> asyncHandler) {
+        final UpdateSessionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSessionResult>() {
+            @Override
+            public UpdateSessionResult call() throws Exception {
+                UpdateSessionResult result = null;
+
+                try {
+                    result = executeUpdateSession(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

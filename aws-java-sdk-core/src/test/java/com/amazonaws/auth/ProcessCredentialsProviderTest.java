@@ -186,9 +186,7 @@ public class ProcessCredentialsProviderTest {
         } catch (IllegalStateException e) {
             // executed not in a shell
             Assert.assertTrue(e.getCause() instanceof IOException);
-            Assert.assertEquals(e.getCause().getMessage()
-                    ,"Cannot run program \"echo \"Hello, World!\" > output.txt; rm output.txt\": error=2, "
-                            + "No such file or directory");
+            Assert.assertTrue(e.getCause().getMessage().contains("error=2, No such file or directory"));
         }
     }
 

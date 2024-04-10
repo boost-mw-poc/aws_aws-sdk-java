@@ -33,8 +33,7 @@ public class DeleteContentRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String contentId;
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      */
     private String knowledgeBaseId;
@@ -81,13 +80,11 @@ public class DeleteContentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *        The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -96,12 +93,10 @@ public class DeleteContentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * 
-     * @return The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *         storing Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * @return The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      */
 
     public String getKnowledgeBaseId() {
@@ -110,13 +105,11 @@ public class DeleteContentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *        The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -153,7 +153,7 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
      * The tag keys and optional values for the resource.
      * </p>
      */
-    private EmbeddedTag tags;
+    private java.util.Map<String, String> tags;
 
     /**
      * <p>
@@ -1036,12 +1036,11 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
      * The tag keys and optional values for the resource.
      * </p>
      * 
-     * @param tags
-     *        The tag keys and optional values for the resource.
+     * @return The tag keys and optional values for the resource.
      */
 
-    public void setTags(EmbeddedTag tags) {
-        this.tags = tags;
+    public java.util.Map<String, String> getTags() {
+        return tags;
     }
 
     /**
@@ -1049,11 +1048,12 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
      * The tag keys and optional values for the resource.
      * </p>
      * 
-     * @return The tag keys and optional values for the resource.
+     * @param tags
+     *        The tag keys and optional values for the resource.
      */
 
-    public EmbeddedTag getTags() {
-        return this.tags;
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
     }
 
     /**
@@ -1066,8 +1066,36 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Device withTags(EmbeddedTag tags) {
+    public Device withTags(java.util.Map<String, String> tags) {
         setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see Device#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Device addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Device clearTagsEntries() {
+        this.tags = null;
         return this;
     }
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The capability configuration for an Amazon Q assistant.
+ * The capability configuration for an Amazon Q in Connect assistant.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/AssistantCapabilityConfiguration"
@@ -30,18 +30,18 @@ public class AssistantCapabilityConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The type of Amazon Q assistant capability.
+     * The type of Amazon Q in Connect assistant capability.
      * </p>
      */
     private String type;
 
     /**
      * <p>
-     * The type of Amazon Q assistant capability.
+     * The type of Amazon Q in Connect assistant capability.
      * </p>
      * 
      * @param type
-     *        The type of Amazon Q assistant capability.
+     *        The type of Amazon Q in Connect assistant capability.
      * @see AssistantCapabilityType
      */
 
@@ -51,10 +51,10 @@ public class AssistantCapabilityConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The type of Amazon Q assistant capability.
+     * The type of Amazon Q in Connect assistant capability.
      * </p>
      * 
-     * @return The type of Amazon Q assistant capability.
+     * @return The type of Amazon Q in Connect assistant capability.
      * @see AssistantCapabilityType
      */
 
@@ -64,11 +64,11 @@ public class AssistantCapabilityConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The type of Amazon Q assistant capability.
+     * The type of Amazon Q in Connect assistant capability.
      * </p>
      * 
      * @param type
-     *        The type of Amazon Q assistant capability.
+     *        The type of Amazon Q in Connect assistant capability.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssistantCapabilityType
      */
@@ -80,11 +80,11 @@ public class AssistantCapabilityConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The type of Amazon Q assistant capability.
+     * The type of Amazon Q in Connect assistant capability.
      * </p>
      * 
      * @param type
-     *        The type of Amazon Q assistant capability.
+     *        The type of Amazon Q in Connect assistant capability.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssistantCapabilityType
      */

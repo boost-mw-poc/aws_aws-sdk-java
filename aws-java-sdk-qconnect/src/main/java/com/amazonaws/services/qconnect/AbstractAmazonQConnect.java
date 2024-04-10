@@ -240,6 +240,11 @@ public class AbstractAmazonQConnect implements AmazonQConnect {
     }
 
     @Override
+    public UpdateSessionResult updateSession(UpdateSessionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

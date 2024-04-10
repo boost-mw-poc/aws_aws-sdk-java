@@ -25,13 +25,13 @@ public class PutFeedbackResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * </p>
      */
     private String assistantArn;
     /**
      * <p>
-     * The identifier of the Amazon Q assistant.
+     * The identifier of the Amazon Q in Connect assistant.
      * </p>
      */
     private String assistantId;
@@ -56,11 +56,11 @@ public class PutFeedbackResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * </p>
      * 
      * @param assistantArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     *        The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      */
 
     public void setAssistantArn(String assistantArn) {
@@ -69,10 +69,10 @@ public class PutFeedbackResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * @return The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      */
 
     public String getAssistantArn() {
@@ -81,11 +81,11 @@ public class PutFeedbackResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     * The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * </p>
      * 
      * @param assistantArn
-     *        The Amazon Resource Name (ARN) of the Amazon Q assistant.
+     *        The Amazon Resource Name (ARN) of the Amazon Q in Connect assistant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,11 +96,11 @@ public class PutFeedbackResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant.
+     * The identifier of the Amazon Q in Connect assistant.
      * </p>
      * 
      * @param assistantId
-     *        The identifier of the Amazon Q assistant.
+     *        The identifier of the Amazon Q in Connect assistant.
      */
 
     public void setAssistantId(String assistantId) {
@@ -109,10 +109,10 @@ public class PutFeedbackResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant.
+     * The identifier of the Amazon Q in Connect assistant.
      * </p>
      * 
-     * @return The identifier of the Amazon Q assistant.
+     * @return The identifier of the Amazon Q in Connect assistant.
      */
 
     public String getAssistantId() {
@@ -121,11 +121,11 @@ public class PutFeedbackResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant.
+     * The identifier of the Amazon Q in Connect assistant.
      * </p>
      * 
      * @param assistantId
-     *        The identifier of the Amazon Q assistant.
+     *        The identifier of the Amazon Q in Connect assistant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

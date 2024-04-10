@@ -80,6 +80,10 @@ public class RuleActionJsonUnmarshaller implements Unmarshaller<RuleAction, Json
                     context.nextToken();
                     ruleAction.setEndAssociatedTasksAction(EndAssociatedTasksActionDefinitionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SubmitAutoEvaluationAction", targetDepth)) {
+                    context.nextToken();
+                    ruleAction.setSubmitAutoEvaluationAction(SubmitAutoEvaluationActionDefinitionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

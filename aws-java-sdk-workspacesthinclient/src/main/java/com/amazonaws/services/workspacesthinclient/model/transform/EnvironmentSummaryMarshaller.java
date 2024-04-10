@@ -55,8 +55,6 @@ public class EnvironmentSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
-    private static final MarshallingInfo<StructuredPojo> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tags").build();
 
     private static final EnvironmentSummaryMarshaller instance = new EnvironmentSummaryMarshaller();
 
@@ -88,7 +86,6 @@ public class EnvironmentSummaryMarshaller {
             protocolMarshaller.marshall(environmentSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(environmentSummary.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(environmentSummary.getArn(), ARN_BINDING);
-            protocolMarshaller.marshall(environmentSummary.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

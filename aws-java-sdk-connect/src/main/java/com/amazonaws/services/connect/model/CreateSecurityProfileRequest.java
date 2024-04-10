@@ -76,9 +76,6 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
     private java.util.List<String> tagRestrictedResources;
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of third-party applications that the security profile will give access to.
      * </p>
      */
@@ -546,15 +543,10 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of third-party applications that the security profile will give access to.
      * </p>
      * 
-     * @return This API is in preview release for Amazon Connect and is subject to change.</p>
-     *         <p>
-     *         A list of third-party applications that the security profile will give access to.
+     * @return A list of third-party applications that the security profile will give access to.
      */
 
     public java.util.List<Application> getApplications() {
@@ -563,15 +555,10 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of third-party applications that the security profile will give access to.
      * </p>
      * 
      * @param applications
-     *        This API is in preview release for Amazon Connect and is subject to change.</p>
-     *        <p>
      *        A list of third-party applications that the security profile will give access to.
      */
 
@@ -586,9 +573,6 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of third-party applications that the security profile will give access to.
      * </p>
      * <p>
@@ -598,8 +582,6 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param applications
-     *        This API is in preview release for Amazon Connect and is subject to change.</p>
-     *        <p>
      *        A list of third-party applications that the security profile will give access to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -616,15 +598,10 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of third-party applications that the security profile will give access to.
      * </p>
      * 
      * @param applications
-     *        This API is in preview release for Amazon Connect and is subject to change.</p>
-     *        <p>
      *        A list of third-party applications that the security profile will give access to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

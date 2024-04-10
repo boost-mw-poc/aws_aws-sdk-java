@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.workspacesthinclient.model.transform;
+package com.amazonaws.services.qconnect.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.workspacesthinclient.model.*;
+import com.amazonaws.services.qconnect.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * EmbeddedTag JSON Unmarshaller
+ * TagFilter JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class EmbeddedTagJsonUnmarshaller implements Unmarshaller<EmbeddedTag, JsonUnmarshallerContext> {
+public class TagFilterJsonUnmarshaller implements Unmarshaller<TagFilter, JsonUnmarshallerContext> {
 
-    public EmbeddedTag unmarshall(JsonUnmarshallerContext context) throws Exception {
-        EmbeddedTag embeddedTag = new EmbeddedTag();
+    public TagFilter unmarshall(JsonUnmarshallerContext context) throws Exception {
+        TagFilter tagFilter = new TagFilter();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -48,13 +48,21 @@ public class EmbeddedTagJsonUnmarshaller implements Unmarshaller<EmbeddedTag, Js
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("resourceArn", targetDepth)) {
+                if (context.testExpression("andConditions", targetDepth)) {
                     context.nextToken();
-                    embeddedTag.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    tagFilter.setAndConditions(new ListUnmarshaller<TagCondition>(TagConditionJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
                 }
-                if (context.testExpression("internalId", targetDepth)) {
+                if (context.testExpression("orConditions", targetDepth)) {
                     context.nextToken();
-                    embeddedTag.setInternalId(context.getUnmarshaller(String.class).unmarshall(context));
+                    tagFilter.setOrConditions(new ListUnmarshaller<OrCondition>(OrConditionJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("tagCondition", targetDepth)) {
+                    context.nextToken();
+                    tagFilter.setTagCondition(TagConditionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -65,14 +73,14 @@ public class EmbeddedTagJsonUnmarshaller implements Unmarshaller<EmbeddedTag, Js
             token = context.nextToken();
         }
 
-        return embeddedTag;
+        return tagFilter;
     }
 
-    private static EmbeddedTagJsonUnmarshaller instance;
+    private static TagFilterJsonUnmarshaller instance;
 
-    public static EmbeddedTagJsonUnmarshaller getInstance() {
+    public static TagFilterJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new EmbeddedTagJsonUnmarshaller();
+            instance = new TagFilterJsonUnmarshaller();
         return instance;
     }
 }

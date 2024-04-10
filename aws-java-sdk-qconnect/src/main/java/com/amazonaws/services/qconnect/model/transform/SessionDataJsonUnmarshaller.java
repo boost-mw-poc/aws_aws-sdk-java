@@ -68,6 +68,10 @@ public class SessionDataJsonUnmarshaller implements Unmarshaller<SessionData, Js
                     context.nextToken();
                     sessionData.setSessionId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("tagFilter", targetDepth)) {
+                    context.nextToken();
+                    sessionData.setTagFilter(TagFilterJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     sessionData.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))

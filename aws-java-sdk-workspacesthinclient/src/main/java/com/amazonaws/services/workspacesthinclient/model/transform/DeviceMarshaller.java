@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.workspacesthinclient.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -67,8 +69,8 @@ public class DeviceMarshaller {
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> KMSKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("kmsKeyArn").build();
-    private static final MarshallingInfo<StructuredPojo> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tags").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final DeviceMarshaller instance = new DeviceMarshaller();
 

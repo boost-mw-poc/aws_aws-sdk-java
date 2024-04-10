@@ -27,7 +27,7 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the monitor to update. Run <code>ListMonitors</code> to get a list of monitor names.
+     * The name of the monitor to update.
      * </p>
      */
     private String monitorName;
@@ -40,11 +40,11 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the monitor to update. Run <code>ListMonitors</code> to get a list of monitor names.
+     * The name of the monitor to update.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor to update. Run <code>ListMonitors</code> to get a list of monitor names.
+     *        The name of the monitor to update.
      */
 
     public void setMonitorName(String monitorName) {
@@ -53,10 +53,10 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the monitor to update. Run <code>ListMonitors</code> to get a list of monitor names.
+     * The name of the monitor to update.
      * </p>
      * 
-     * @return The name of the monitor to update. Run <code>ListMonitors</code> to get a list of monitor names.
+     * @return The name of the monitor to update.
      */
 
     public String getMonitorName() {
@@ -65,11 +65,11 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the monitor to update. Run <code>ListMonitors</code> to get a list of monitor names.
+     * The name of the monitor to update.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor to update. Run <code>ListMonitors</code> to get a list of monitor names.
+     *        The name of the monitor to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

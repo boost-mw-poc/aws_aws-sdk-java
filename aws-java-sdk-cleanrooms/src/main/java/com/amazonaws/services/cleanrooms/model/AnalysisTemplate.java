@@ -112,6 +112,12 @@ public class AnalysisTemplate implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private java.util.List<AnalysisParameter> analysisParameters;
+    /**
+     * <p>
+     * Information about the validations performed on the analysis template.
+     * </p>
+     */
+    private java.util.List<AnalysisTemplateValidationStatusDetail> validations;
 
     /**
      * <p>
@@ -723,6 +729,76 @@ public class AnalysisTemplate implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Information about the validations performed on the analysis template.
+     * </p>
+     * 
+     * @return Information about the validations performed on the analysis template.
+     */
+
+    public java.util.List<AnalysisTemplateValidationStatusDetail> getValidations() {
+        return validations;
+    }
+
+    /**
+     * <p>
+     * Information about the validations performed on the analysis template.
+     * </p>
+     * 
+     * @param validations
+     *        Information about the validations performed on the analysis template.
+     */
+
+    public void setValidations(java.util.Collection<AnalysisTemplateValidationStatusDetail> validations) {
+        if (validations == null) {
+            this.validations = null;
+            return;
+        }
+
+        this.validations = new java.util.ArrayList<AnalysisTemplateValidationStatusDetail>(validations);
+    }
+
+    /**
+     * <p>
+     * Information about the validations performed on the analysis template.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setValidations(java.util.Collection)} or {@link #withValidations(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param validations
+     *        Information about the validations performed on the analysis template.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnalysisTemplate withValidations(AnalysisTemplateValidationStatusDetail... validations) {
+        if (this.validations == null) {
+            setValidations(new java.util.ArrayList<AnalysisTemplateValidationStatusDetail>(validations.length));
+        }
+        for (AnalysisTemplateValidationStatusDetail ele : validations) {
+            this.validations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the validations performed on the analysis template.
+     * </p>
+     * 
+     * @param validations
+     *        Information about the validations performed on the analysis template.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnalysisTemplate withValidations(java.util.Collection<AnalysisTemplateValidationStatusDetail> validations) {
+        setValidations(validations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -761,7 +837,9 @@ public class AnalysisTemplate implements Serializable, Cloneable, StructuredPojo
         if (getSource() != null)
             sb.append("Source: ").append("***Sensitive Data Redacted***").append(",");
         if (getAnalysisParameters() != null)
-            sb.append("AnalysisParameters: ").append("***Sensitive Data Redacted***");
+            sb.append("AnalysisParameters: ").append("***Sensitive Data Redacted***").append(",");
+        if (getValidations() != null)
+            sb.append("Validations: ").append(getValidations());
         sb.append("}");
         return sb.toString();
     }
@@ -832,6 +910,10 @@ public class AnalysisTemplate implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getAnalysisParameters() != null && other.getAnalysisParameters().equals(this.getAnalysisParameters()) == false)
             return false;
+        if (other.getValidations() == null ^ this.getValidations() == null)
+            return false;
+        if (other.getValidations() != null && other.getValidations().equals(this.getValidations()) == false)
+            return false;
         return true;
     }
 
@@ -854,6 +936,7 @@ public class AnalysisTemplate implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getFormat() == null) ? 0 : getFormat().hashCode());
         hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
         hashCode = prime * hashCode + ((getAnalysisParameters() == null) ? 0 : getAnalysisParameters().hashCode());
+        hashCode = prime * hashCode + ((getValidations() == null) ? 0 : getValidations().hashCode());
         return hashCode;
     }
 

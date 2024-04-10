@@ -27,7 +27,8 @@ public class SearchSessionsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain the
+     * ARN.
      * </p>
      */
     private String assistantId;
@@ -53,11 +54,13 @@ public class SearchSessionsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain the
+     * ARN.
      * </p>
      * 
      * @param assistantId
-     *        The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *        The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain
+     *        the ARN.
      */
 
     public void setAssistantId(String assistantId) {
@@ -66,10 +69,12 @@ public class SearchSessionsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain the
+     * ARN.
      * </p>
      * 
-     * @return The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * @return The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain
+     *         the ARN.
      */
 
     public String getAssistantId() {
@@ -78,11 +83,13 @@ public class SearchSessionsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     * The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain the
+     * ARN.
      * </p>
      * 
      * @param assistantId
-     *        The identifier of the Amazon Q assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     *        The identifier of the Amazon Q in Connect assistant. Can be either the ID or the ARN. URLs cannot contain
+     *        the ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

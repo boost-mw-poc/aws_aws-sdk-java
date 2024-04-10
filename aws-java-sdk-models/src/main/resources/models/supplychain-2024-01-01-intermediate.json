@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -208,6 +208,67 @@
         "documentation" : "<p>The response parameters for GetBillOfMaterialsImportJob.</p>"
       },
       "syncReturnType" : "GetBillOfMaterialsImportJobResult"
+    },
+    "SendDataIntegrationEvent" : {
+      "asyncCallableType" : "java.util.concurrent.Callable<SendDataIntegrationEventResult>",
+      "asyncFutureType" : "java.util.concurrent.Future<SendDataIntegrationEventResult>",
+      "asyncHandlerType" : "com.amazonaws.handlers.AsyncHandler<SendDataIntegrationEventRequest, SendDataIntegrationEventResult>",
+      "asyncReturnType" : "SendDataIntegrationEventResult",
+      "authenticated" : true,
+      "deprecated" : false,
+      "documentation" : "<p>Send transactional data events with real-time data for analysis or monitoring.</p>",
+      "endpointCacheRequired" : false,
+      "endpointDiscovery" : null,
+      "endpointOperation" : false,
+      "endpointTrait" : null,
+      "exceptions" : [ {
+        "exceptionName" : "ServiceQuotaExceededException",
+        "documentation" : "<p>Request would cause a service quota to be exceeded.</p>",
+        "httpStatusCode" : 402
+      }, {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>Request references a resource which does not exist.</p>",
+        "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>Request was denied due to request throttling.</p>",
+        "httpStatusCode" : 429
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>You do not have the required privileges to perform this action.</p>",
+        "httpStatusCode" : 403
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The input does not satisfy the constraints specified by an AWS service.</p>",
+        "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "InternalServerException",
+        "documentation" : "<p>Unexpected error during processing of request.</p>",
+        "httpStatusCode" : 500
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>Updating or deleting a resource can cause an inconsistent state.</p>",
+        "httpStatusCode" : 409
+      } ],
+      "hasBlobMemberAsPayload" : false,
+      "hostPrefixProcessor" : null,
+      "input" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "SendDataIntegrationEventRequest",
+        "variableName" : "sendDataIntegrationEventRequest",
+        "variableType" : "SendDataIntegrationEventRequest",
+        "documentation" : "<p>The request parameters for SendDataIntegrationEvent.</p>",
+        "simpleType" : "SendDataIntegrationEventRequest",
+        "variableSetterType" : "SendDataIntegrationEventRequest"
+      },
+      "inputStreamPropertyName" : null,
+      "methodName" : "sendDataIntegrationEvent",
+      "operationName" : "SendDataIntegrationEvent",
+      "returnType" : {
+        "returnType" : "SendDataIntegrationEventResult",
+        "documentation" : "<p>The response parameters for SendDataIntegrationEvent.</p>"
+      },
+      "syncReturnType" : "SendDataIntegrationEventResult"
     }
   },
   "shapes" : {
@@ -1742,6 +1803,95 @@
       },
       "wrapper" : false
     },
+    "DataIntegrationEventType" : {
+      "c2jName" : "DataIntegrationEventType",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : [ {
+        "name" : "ScnDataForecast",
+        "value" : "scn.data.forecast"
+      }, {
+        "name" : "ScnDataInventorylevel",
+        "value" : "scn.data.inventorylevel"
+      }, {
+        "name" : "ScnDataInboundorder",
+        "value" : "scn.data.inboundorder"
+      }, {
+        "name" : "ScnDataInboundorderline",
+        "value" : "scn.data.inboundorderline"
+      }, {
+        "name" : "ScnDataInboundorderlineschedule",
+        "value" : "scn.data.inboundorderlineschedule"
+      }, {
+        "name" : "ScnDataOutboundorderline",
+        "value" : "scn.data.outboundorderline"
+      }, {
+        "name" : "ScnDataOutboundshipment",
+        "value" : "scn.data.outboundshipment"
+      }, {
+        "name" : "ScnDataProcessheader",
+        "value" : "scn.data.processheader"
+      }, {
+        "name" : "ScnDataProcessoperation",
+        "value" : "scn.data.processoperation"
+      }, {
+        "name" : "ScnDataProcessproduct",
+        "value" : "scn.data.processproduct"
+      }, {
+        "name" : "ScnDataReservation",
+        "value" : "scn.data.reservation"
+      }, {
+        "name" : "ScnDataShipment",
+        "value" : "scn.data.shipment"
+      }, {
+        "name" : "ScnDataShipmentstop",
+        "value" : "scn.data.shipmentstop"
+      }, {
+        "name" : "ScnDataShipmentstoporder",
+        "value" : "scn.data.shipmentstoporder"
+      }, {
+        "name" : "ScnDataSupplyplan",
+        "value" : "scn.data.supplyplan"
+      } ],
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.supplychain.enum.DataIntegrationEventType",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.supplychain.enum",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "DataIntegrationEventType",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "DataIntegrationEventType",
+        "variableName" : "dataIntegrationEventType",
+        "variableType" : "DataIntegrationEventType",
+        "documentation" : null,
+        "simpleType" : "DataIntegrationEventType",
+        "variableSetterType" : "DataIntegrationEventType"
+      },
+      "wrapper" : false
+    },
     "GetBillOfMaterialsImportJobRequest" : {
       "c2jName" : "GetBillOfMaterialsImportJobRequest",
       "customization" : {
@@ -2335,6 +2485,1073 @@
       },
       "wrapper" : false
     },
+    "SendDataIntegrationEventRequest" : {
+      "c2jName" : "SendDataIntegrationEventRequest",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The request parameters for SendDataIntegrationEvent.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.supplychain.request.SendDataIntegrationEventRequest",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : {
+        "action" : "SendDataIntegrationEvent",
+        "locationName" : null,
+        "requestUri" : "/api-data/data-integration/instance/{instanceId}/data-integration-events",
+        "target" : null,
+        "verb" : "POST",
+        "xmlNameSpaceUri" : null
+      },
+      "members" : [ {
+        "c2jName" : "instanceId",
+        "c2jShape" : "UUID",
+        "deprecated" : false,
+        "documentation" : "<p>The AWS Supply Chain instance identifier.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The AWS Supply Chain instance identifier.</p>\n@param instanceId The AWS Supply Chain instance identifier.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withInstanceId",
+        "getterDocumentation" : "/**<p>The AWS Supply Chain instance identifier.</p>\n@return The AWS Supply Chain instance identifier.*/",
+        "getterMethodName" : "getInstanceId",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : "uri",
+          "marshallLocation" : "PATH",
+          "marshallLocationName" : "instanceId",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "instanceId",
+          "uri" : true
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "InstanceId",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The AWS Supply Chain instance identifier.</p>\n@param instanceId The AWS Supply Chain instance identifier.*/",
+        "setterMethodName" : "setInstanceId",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "instanceId",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The AWS Supply Chain instance identifier.</p>\n@param instanceId The AWS Supply Chain instance identifier.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "instanceId",
+          "variableType" : "String",
+          "documentation" : "<p>The AWS Supply Chain instance identifier.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "eventType",
+        "c2jShape" : "DataIntegrationEventType",
+        "deprecated" : false,
+        "documentation" : "<p>The data event type.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "DataIntegrationEventType",
+        "fluentSetterDocumentation" : "/**<p>The data event type.</p>\n@param eventType The data event type.\n@return Returns a reference to this object so that method calls can be chained together.\n@see DataIntegrationEventType*/",
+        "fluentSetterMethodName" : "withEventType",
+        "getterDocumentation" : "/**<p>The data event type.</p>\n@return The data event type.\n@see DataIntegrationEventType*/",
+        "getterMethodName" : "getEventType",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "eventType",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "eventType",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "EventType",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The data event type.</p>\n@param eventType The data event type.\n@see DataIntegrationEventType*/",
+        "setterMethodName" : "setEventType",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "eventType",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The data event type.</p>\n@param eventType The data event type.\n@return Returns a reference to this object so that method calls can be chained together.\n@see DataIntegrationEventType*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "eventType",
+          "variableType" : "String",
+          "documentation" : "<p>The data event type.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "data",
+        "c2jShape" : "DataIntegrationEventData",
+        "deprecated" : false,
+        "documentation" : "<p>The data payload of the event.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The data payload of the event.</p>\n@param data The data payload of the event.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withData",
+        "getterDocumentation" : "/**<p>The data payload of the event.</p>\n@return The data payload of the event.*/",
+        "getterMethodName" : "getData",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "data",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "data",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Data",
+        "sensitive" : true,
+        "setterDocumentation" : "/**<p>The data payload of the event.</p>\n@param data The data payload of the event.*/",
+        "setterMethodName" : "setData",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "data",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The data payload of the event.</p>\n@param data The data payload of the event.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "data",
+          "variableType" : "String",
+          "documentation" : "<p>The data payload of the event.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "eventGroupId",
+        "c2jShape" : "DataIntegrationEventGroupId",
+        "deprecated" : false,
+        "documentation" : "<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>\n@param eventGroupId Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withEventGroupId",
+        "getterDocumentation" : "/**<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>\n@return Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.*/",
+        "getterMethodName" : "getEventGroupId",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "eventGroupId",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "eventGroupId",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "EventGroupId",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>\n@param eventGroupId Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.*/",
+        "setterMethodName" : "setEventGroupId",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "eventGroupId",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>\n@param eventGroupId Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "eventGroupId",
+          "variableType" : "String",
+          "documentation" : "<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "eventTimestamp",
+        "c2jShape" : "SyntheticTimestamp_epoch_seconds",
+        "deprecated" : false,
+        "documentation" : "<p>The event timestamp (in epoch seconds).</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The event timestamp (in epoch seconds).</p>\n@param eventTimestamp The event timestamp (in epoch seconds).\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withEventTimestamp",
+        "getterDocumentation" : "/**<p>The event timestamp (in epoch seconds).</p>\n@return The event timestamp (in epoch seconds).*/",
+        "getterMethodName" : "getEventTimestamp",
+        "getterModel" : {
+          "returnType" : "java.util.Date",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "eventTimestamp",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "eventTimestamp",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "java.util.Date",
+        "marshallingType" : "DATE",
+        "name" : "EventTimestamp",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The event timestamp (in epoch seconds).</p>\n@param eventTimestamp The event timestamp (in epoch seconds).*/",
+        "setterMethodName" : "setEventTimestamp",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "java.util.Date",
+          "variableName" : "eventTimestamp",
+          "variableType" : "java.util.Date",
+          "documentation" : "",
+          "simpleType" : "Date",
+          "variableSetterType" : "java.util.Date"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The event timestamp (in epoch seconds).</p>\n@param eventTimestamp The event timestamp (in epoch seconds).\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : "unixTimestamp",
+          "variableDeclarationType" : "java.util.Date",
+          "variableName" : "eventTimestamp",
+          "variableType" : "java.util.Date",
+          "documentation" : "<p>The event timestamp (in epoch seconds).</p>",
+          "simpleType" : "Date",
+          "variableSetterType" : "java.util.Date"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "clientToken",
+        "c2jShape" : "ClientToken",
+        "deprecated" : false,
+        "documentation" : "<p>The idempotent client token.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The idempotent client token.</p>\n@param clientToken The idempotent client token.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withClientToken",
+        "getterDocumentation" : "/**<p>The idempotent client token.</p>\n@return The idempotent client token.*/",
+        "getterMethodName" : "getClientToken",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "clientToken",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "clientToken",
+          "uri" : false
+        },
+        "idempotencyToken" : true,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "ClientToken",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The idempotent client token.</p>\n@param clientToken The idempotent client token.*/",
+        "setterMethodName" : "setClientToken",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "clientToken",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The idempotent client token.</p>\n@param clientToken The idempotent client token.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "clientToken",
+          "variableType" : "String",
+          "documentation" : "<p>The idempotent client token.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "ClientToken" : {
+          "c2jName" : "clientToken",
+          "c2jShape" : "ClientToken",
+          "deprecated" : false,
+          "documentation" : "<p>The idempotent client token.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The idempotent client token.</p>\n@param clientToken The idempotent client token.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withClientToken",
+          "getterDocumentation" : "/**<p>The idempotent client token.</p>\n@return The idempotent client token.*/",
+          "getterMethodName" : "getClientToken",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "clientToken",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "clientToken",
+            "uri" : false
+          },
+          "idempotencyToken" : true,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "ClientToken",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The idempotent client token.</p>\n@param clientToken The idempotent client token.*/",
+          "setterMethodName" : "setClientToken",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "clientToken",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The idempotent client token.</p>\n@param clientToken The idempotent client token.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "clientToken",
+            "variableType" : "String",
+            "documentation" : "<p>The idempotent client token.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "Data" : {
+          "c2jName" : "data",
+          "c2jShape" : "DataIntegrationEventData",
+          "deprecated" : false,
+          "documentation" : "<p>The data payload of the event.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The data payload of the event.</p>\n@param data The data payload of the event.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withData",
+          "getterDocumentation" : "/**<p>The data payload of the event.</p>\n@return The data payload of the event.*/",
+          "getterMethodName" : "getData",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "data",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "data",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Data",
+          "sensitive" : true,
+          "setterDocumentation" : "/**<p>The data payload of the event.</p>\n@param data The data payload of the event.*/",
+          "setterMethodName" : "setData",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "data",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The data payload of the event.</p>\n@param data The data payload of the event.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "data",
+            "variableType" : "String",
+            "documentation" : "<p>The data payload of the event.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "EventGroupId" : {
+          "c2jName" : "eventGroupId",
+          "c2jShape" : "DataIntegrationEventGroupId",
+          "deprecated" : false,
+          "documentation" : "<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>\n@param eventGroupId Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withEventGroupId",
+          "getterDocumentation" : "/**<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>\n@return Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.*/",
+          "getterMethodName" : "getEventGroupId",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "eventGroupId",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "eventGroupId",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "EventGroupId",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>\n@param eventGroupId Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.*/",
+          "setterMethodName" : "setEventGroupId",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "eventGroupId",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>\n@param eventGroupId Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "eventGroupId",
+            "variableType" : "String",
+            "documentation" : "<p>Event identifier (for example, orderId for InboundOrder) used for data sharing or partitioning.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "EventTimestamp" : {
+          "c2jName" : "eventTimestamp",
+          "c2jShape" : "SyntheticTimestamp_epoch_seconds",
+          "deprecated" : false,
+          "documentation" : "<p>The event timestamp (in epoch seconds).</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The event timestamp (in epoch seconds).</p>\n@param eventTimestamp The event timestamp (in epoch seconds).\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withEventTimestamp",
+          "getterDocumentation" : "/**<p>The event timestamp (in epoch seconds).</p>\n@return The event timestamp (in epoch seconds).*/",
+          "getterMethodName" : "getEventTimestamp",
+          "getterModel" : {
+            "returnType" : "java.util.Date",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "eventTimestamp",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "eventTimestamp",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "java.util.Date",
+          "marshallingType" : "DATE",
+          "name" : "EventTimestamp",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The event timestamp (in epoch seconds).</p>\n@param eventTimestamp The event timestamp (in epoch seconds).*/",
+          "setterMethodName" : "setEventTimestamp",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "java.util.Date",
+            "variableName" : "eventTimestamp",
+            "variableType" : "java.util.Date",
+            "documentation" : "",
+            "simpleType" : "Date",
+            "variableSetterType" : "java.util.Date"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The event timestamp (in epoch seconds).</p>\n@param eventTimestamp The event timestamp (in epoch seconds).\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : "unixTimestamp",
+            "variableDeclarationType" : "java.util.Date",
+            "variableName" : "eventTimestamp",
+            "variableType" : "java.util.Date",
+            "documentation" : "<p>The event timestamp (in epoch seconds).</p>",
+            "simpleType" : "Date",
+            "variableSetterType" : "java.util.Date"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "EventType" : {
+          "c2jName" : "eventType",
+          "c2jShape" : "DataIntegrationEventType",
+          "deprecated" : false,
+          "documentation" : "<p>The data event type.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "DataIntegrationEventType",
+          "fluentSetterDocumentation" : "/**<p>The data event type.</p>\n@param eventType The data event type.\n@return Returns a reference to this object so that method calls can be chained together.\n@see DataIntegrationEventType*/",
+          "fluentSetterMethodName" : "withEventType",
+          "getterDocumentation" : "/**<p>The data event type.</p>\n@return The data event type.\n@see DataIntegrationEventType*/",
+          "getterMethodName" : "getEventType",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "eventType",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "eventType",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "EventType",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The data event type.</p>\n@param eventType The data event type.\n@see DataIntegrationEventType*/",
+          "setterMethodName" : "setEventType",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "eventType",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The data event type.</p>\n@param eventType The data event type.\n@return Returns a reference to this object so that method calls can be chained together.\n@see DataIntegrationEventType*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "eventType",
+            "variableType" : "String",
+            "documentation" : "<p>The data event type.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "InstanceId" : {
+          "c2jName" : "instanceId",
+          "c2jShape" : "UUID",
+          "deprecated" : false,
+          "documentation" : "<p>The AWS Supply Chain instance identifier.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The AWS Supply Chain instance identifier.</p>\n@param instanceId The AWS Supply Chain instance identifier.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withInstanceId",
+          "getterDocumentation" : "/**<p>The AWS Supply Chain instance identifier.</p>\n@return The AWS Supply Chain instance identifier.*/",
+          "getterMethodName" : "getInstanceId",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : "uri",
+            "marshallLocation" : "PATH",
+            "marshallLocationName" : "instanceId",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "instanceId",
+            "uri" : true
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "InstanceId",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The AWS Supply Chain instance identifier.</p>\n@param instanceId The AWS Supply Chain instance identifier.*/",
+          "setterMethodName" : "setInstanceId",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "instanceId",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The AWS Supply Chain instance identifier.</p>\n@param instanceId The AWS Supply Chain instance identifier.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "instanceId",
+            "variableType" : "String",
+            "documentation" : "<p>The AWS Supply Chain instance identifier.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.supplychain.request",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ "instanceId", "eventType", "data", "eventGroupId" ],
+      "shapeName" : "SendDataIntegrationEventRequest",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "SendDataIntegrationEventRequest",
+        "variableName" : "sendDataIntegrationEventRequest",
+        "variableType" : "SendDataIntegrationEventRequest",
+        "documentation" : null,
+        "simpleType" : "SendDataIntegrationEventRequest",
+        "variableSetterType" : "SendDataIntegrationEventRequest"
+      },
+      "wrapper" : false
+    },
+    "SendDataIntegrationEventResult" : {
+      "c2jName" : "SendDataIntegrationEventResponse",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The response parameters for SendDataIntegrationEvent.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.supplychain.response.SendDataIntegrationEventResult",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ {
+        "c2jName" : "eventId",
+        "c2jShape" : "UUID",
+        "deprecated" : false,
+        "documentation" : "<p>The unique event identifier.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The unique event identifier.</p>\n@param eventId The unique event identifier.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withEventId",
+        "getterDocumentation" : "/**<p>The unique event identifier.</p>\n@return The unique event identifier.*/",
+        "getterMethodName" : "getEventId",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "eventId",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "eventId",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "EventId",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The unique event identifier.</p>\n@param eventId The unique event identifier.*/",
+        "setterMethodName" : "setEventId",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "eventId",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The unique event identifier.</p>\n@param eventId The unique event identifier.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "eventId",
+          "variableType" : "String",
+          "documentation" : "<p>The unique event identifier.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "EventId" : {
+          "c2jName" : "eventId",
+          "c2jShape" : "UUID",
+          "deprecated" : false,
+          "documentation" : "<p>The unique event identifier.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The unique event identifier.</p>\n@param eventId The unique event identifier.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withEventId",
+          "getterDocumentation" : "/**<p>The unique event identifier.</p>\n@return The unique event identifier.*/",
+          "getterMethodName" : "getEventId",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "eventId",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "eventId",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "EventId",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The unique event identifier.</p>\n@param eventId The unique event identifier.*/",
+          "setterMethodName" : "setEventId",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "eventId",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The unique event identifier.</p>\n@param eventId The unique event identifier.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "eventId",
+            "variableType" : "String",
+            "documentation" : "<p>The unique event identifier.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.supplychain.response",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ "eventId" ],
+      "shapeName" : "SendDataIntegrationEventResult",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "SendDataIntegrationEventResult",
+        "variableName" : "sendDataIntegrationEventResult",
+        "variableType" : "SendDataIntegrationEventResult",
+        "documentation" : null,
+        "simpleType" : "SendDataIntegrationEventResult",
+        "variableSetterType" : "SendDataIntegrationEventResult"
+      },
+      "wrapper" : false
+    },
     "ServiceQuotaExceededException" : {
       "c2jName" : "ServiceQuotaExceededException",
       "customization" : {
@@ -2461,7 +3678,284 @@
   },
   "clientConfigFactory" : "ClientConfigurationFactory",
   "examples" : {
-    "examples" : { },
+    "examples" : {
+      "CreateBillOfMaterialsImportJob" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "instanceId" : "60f82bbd-71f7-4fcd-a941-472f574c5243",
+          "s3uri" : "s3://mybucketname/pathelemene/file.csv",
+          "clientToken" : "550e8400-e29b-41d4-a716-446655440000"
+        },
+        "output" : {
+          "jobId" : "f79b359b-1515-4436-a3bf-bae7b33e47b4"
+        },
+        "title" : "Invoke CreateBillOfMaterialsImportJob"
+      } ],
+      "GetBillOfMaterialsImportJob" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "instanceId" : "60f82bbd-71f7-4fcd-a941-472f574c5243",
+          "jobId" : "f79b359b-1515-4436-a3bf-bae7b33e47b4"
+        },
+        "output" : {
+          "job" : {
+            "instanceId" : "60f82bbd-71f7-4fcd-a941-472f574c5243",
+            "jobId" : "f79b359b-1515-4436-a3bf-bae7b33e47b4",
+            "status" : "SUCCESS",
+            "s3uri" : "s3://mybucketname/pathelemene/file.csv",
+            "message" : "Import job completed successfully."
+          }
+        },
+        "title" : "Invoke GetBillOfMaterialsImportJob for a successful job"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-2",
+        "input" : {
+          "instanceId" : "60f82bbd-71f7-4fcd-a941-472f574c5243",
+          "jobId" : "f79b359b-1515-4436-a3bf-bae7b33e47b4"
+        },
+        "output" : {
+          "job" : {
+            "instanceId" : "60f82bbd-71f7-4fcd-a941-472f574c5243",
+            "jobId" : "f79b359b-1515-4436-a3bf-bae7b33e47b4",
+            "status" : "IN_PROGRESS",
+            "s3uri" : "s3://mybucketname/pathelemene/file.csv"
+          }
+        },
+        "title" : "Invoke GetBillOfMaterialsImportJob for an in-progress job"
+      } ],
+      "SendDataIntegrationEvent" : [ {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-1",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.inboundorder",
+          "data" : "{\"id\": \"inbound-order-id-test-123\", \"tpartner_id\": \"partner-id-test-123\" }",
+          "eventGroupId" : "inboundOrderId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "c4132c1d-8f60-44a2-9932-f723c4f7b8a7"
+        },
+        "title" : "Successful SendDataIntegrationEvent for inboundorder event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-2",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.inboundorderline",
+          "data" : "{\"id\": \"inbound-order-line-id-test-123\", \"order_id\": \"order-id-test-123\", \"tpartner_id\": \"partner-id-test-123\", \"product_id\": \"product-id-test-123\", \"quantity_submitted\": \"100.0\" }",
+          "eventGroupId" : "inboundOrderLineId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "45d95db2-d106-40e0-aa98-f1204230a691"
+        },
+        "title" : "Successful SendDataIntegrationEvent for inboundorderline event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-3",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.inboundorderlineschedule",
+          "data" : "{\"id\": \"inbound-order-line-schedule-id-test-123\", \"order_id\": \"order-id-test-123\", \"order_line_id\": \"order-line-id-test-123\", \"product_id\": \"product-id-test-123\"}",
+          "eventGroupId" : "inboundOrderLineScheduleId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "5abba995-7735-4d1e-95c4-7cc93e48cf9f"
+        },
+        "title" : "Successful SendDataIntegrationEvent for inboundorderlineschedule event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-4",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.forecast",
+          "data" : "{\"snapshot_date\": \"1672470400000\", \"product_id\": \"product-id-test-123\", \"site_id\": \"site-id-test-123\", \"region_id\": \"region-id-test-123\", \"product_group_id\": \"product-group-id-test-123\", \"forecast_start_dttm\": \"1672470400000\", \"forecast_end_dttm\": \"1672470400000\" }",
+          "eventGroupId" : "forecastId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "29312d5b-f499-4dcd-b017-3dab3cd34d61"
+        },
+        "title" : "Successful SendDataIntegrationEvent for forecast event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-5",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.inventorylevel",
+          "data" : "{\"snapshot_date\": \"1672470400000\", \"site_id\": \"site-id-test-123\", \"product_id\": \"product-id-test-123\", \"on_hand_inventory\": \"100.0\", \"inv_condition\": \"good\", \"lot_number\": \"lot-number-test-123\"}",
+          "eventGroupId" : "inventoryLevelId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "3aa78324-acd8-4fdd-a19e-231ea003c2b3"
+        },
+        "title" : "Successful SendDataIntegrationEvent for inventorylevel event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-6",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.outboundorderline",
+          "data" : "{\"id\": \"outbound-orderline-id-test-123\", \"cust_order_id\": \"cust-order-id-test-123\", \"product_id\": \"product-id-test-123\" }",
+          "eventGroupId" : "outboundOrderLineId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "959b7ef9-5e2d-4795-b1ca-5b16a3eb6b89"
+        },
+        "title" : "Successful SendDataIntegrationEvent for outboundorderline event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-7",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.outboundshipment",
+          "data" : "{\"id\": \"outbound-shipment-id-test-123\", \"cust_order_id\": \"cust-order-id-test-123\", \"cust_order_line_id\": \"cust-order-line-id-test-123\", \"product_id\": \"product-id-test-123\" }",
+          "eventGroupId" : "outboundShipmentId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "59feded3-5e46-4126-81bf-0137ca176ee0"
+        },
+        "title" : "Successful SendDataIntegrationEvent for outboundshipment event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-8",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.processheader",
+          "data" : "{\"process_id\": \"process-id-test-123\" }",
+          "eventGroupId" : "processHeaderId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "564130eb-2d8a-4550-a768-ddf0daf7b4a9"
+        },
+        "title" : "Successful SendDataIntegrationEvent for processheader event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-9",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.processoperation",
+          "data" : "{\"process_operation_id\": \"process-operation-id-test-123\", \"process_id\": \"process-id-test-123\" }",
+          "eventGroupId" : "processOperationId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "db5df408-89c7-4b9f-a326-016f6c2b3396"
+        },
+        "title" : "Successful SendDataIntegrationEvent for processoperation event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-10",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.processproduct",
+          "data" : "{\"process_product_id\": \"process-product-id-test-123\", \"process_id\": \"process-id-test-123\" }",
+          "eventGroupId" : "processProductId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "6929b275-485e-4035-a798-99077ca6d669"
+        },
+        "title" : "Successful SendDataIntegrationEvent for processproduct event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-11",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.reservation",
+          "data" : "{\"reservation_id\": \"reservation-id-test-123\", \"reservation_detail_id\": \"reservation-detail-id-test-123\" }",
+          "eventGroupId" : "reservationId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "f6c55a8b-fde2-44f6-848a-9b4336c77209"
+        },
+        "title" : "Successful SendDataIntegrationEvent for reservation event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-12",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.shipment",
+          "data" : "{\"id\": \"shipment-id-test-123\", \"supplier_tpartner_id\": \"supplier-tpartner-id-test-123\", \"product_id\": \"product-id-test-123\", \"order_id\": \"order-id-test-123\", \"order_line_id\": \"order-line-id-test-123\", \"package_id\": \"package-id-test-123\" }",
+          "eventGroupId" : "shipmentId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "61d079d8-3f56-49bb-b35a-c0271a4e4f0a"
+        },
+        "title" : "Successful SendDataIntegrationEvent for shipment event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-13",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.shipmentstop",
+          "data" : "{\"shipment_stop_id\": \"shipment-stop-id-test-123\", \"shipment_id\": \"shipment-id-test-123\" }",
+          "eventGroupId" : "shipmentStopId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "3610992a-fc2f-4da4-9beb-724994622ba1"
+        },
+        "title" : "Successful SendDataIntegrationEvent for shipmentstop event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-14",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.shipmentstoporder",
+          "data" : "{\"shipment_stop_order_id\": \"shipment-stop-order-id-test-123\", \"shipment_stop_id\": \"shipment-stop-id-test-123\", \"shipment_id\": \"shipment-id-test-123\" }",
+          "eventGroupId" : "shipmentStopOrderId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "1d550a60-9321-4d25-a132-9dd4b2d9e934"
+        },
+        "title" : "Successful SendDataIntegrationEvent for shipmentstoporder event type"
+      }, {
+        "comments" : null,
+        "description" : null,
+        "id" : "example-15",
+        "input" : {
+          "instanceId" : "8928ae12-15e5-4441-825d-ec2184f0a43a",
+          "eventType" : "scn.data.supplyplan",
+          "data" : "{\"supply_plan_id\": \"supply-plan-id-test-123\" }",
+          "eventGroupId" : "supplyPlanId",
+          "eventTimestamp" : 1.515531081123E9
+        },
+        "output" : {
+          "eventId" : "9abaee56-5dc4-4c31-8250-3206a651d8a1"
+        },
+        "title" : "Successful SendDataIntegrationEvent for supplyplan event type"
+      } ]
+    },
     "version" : "1.0"
   },
   "exceptionUnmarshallerImpl" : null,

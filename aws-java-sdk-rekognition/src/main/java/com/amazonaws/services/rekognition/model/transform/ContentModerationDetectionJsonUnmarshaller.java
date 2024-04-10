@@ -68,6 +68,12 @@ public class ContentModerationDetectionJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     contentModerationDetection.setDurationMillis(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("ContentTypes", targetDepth)) {
+                    context.nextToken();
+                    contentModerationDetection.setContentTypes(new ListUnmarshaller<ContentType>(ContentTypeJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

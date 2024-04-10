@@ -40,10 +40,10 @@ import com.amazonaws.services.qconnect.model.*;
  * accurately.
  * </p>
  * <p>
- * Amazon Q automatically detects customer intent during calls and chats using conversational analytics and natural
- * language understanding (NLU). It then provides agents with immediate, real-time generative responses and suggested
- * actions, and links to relevant documents and articles. Agents can also query Amazon Q directly using natural language
- * or keywords to answer customer requests.
+ * Amazon Q in Connect automatically detects customer intent during calls and chats using conversational analytics and
+ * natural language understanding (NLU). It then provides agents with immediate, real-time generative responses and
+ * suggested actions, and links to relevant documents and articles. Agents can also query Amazon Q in Connect directly
+ * using natural language or keywords to answer customer requests.
  * </p>
  * <p>
  * Use the Amazon Q in Connect APIs to create an assistant and a knowledge base, for example, or manage content by
@@ -119,7 +119,7 @@ public interface AmazonQConnect {
 
     /**
      * <p>
-     * Creates Amazon Q content. Before to calling this API, use <a
+     * Creates Amazon Q in Connect content. Before to calling this API, use <a
      * href="https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_StartContentUpload.html"
      * >StartContentUpload</a> to upload an asset.
      * </p>
@@ -208,7 +208,7 @@ public interface AmazonQConnect {
 
     /**
      * <p>
-     * Creates an Amazon Q quick response.
+     * Creates an Amazon Q in Connect quick response.
      * </p>
      * 
      * @param createQuickResponseRequest
@@ -235,7 +235,7 @@ public interface AmazonQConnect {
     /**
      * <p>
      * Creates a session. A session is a contextual container used for generating recommendations. Amazon Connect
-     * creates a new Amazon Q session for each contact on which Amazon Q is enabled.
+     * creates a new Amazon Q in Connect session for each contact on which Amazon Q in Connect is enabled.
      * </p>
      * 
      * @param createSessionRequest
@@ -246,6 +246,8 @@ public interface AmazonQConnect {
      *         conflicting resource (usually with the same name) is being created or mutated.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @sample AmazonQConnect.CreateSession
@@ -522,6 +524,13 @@ public interface AmazonQConnect {
     GetQuickResponseResult getQuickResponse(GetQuickResponseRequest getQuickResponseRequest);
 
     /**
+     * <important>
+     * <p>
+     * This API will be discontinued starting June 1, 2024. To receive generative responses after March 1, 2024, you
+     * will need to create a new Assistant in the Amazon Connect console and integrate the Amazon Q in Connect
+     * JavaScript library (amazon-q-connectjs) into your applications.
+     * </p>
+     * </important>
      * <p>
      * Retrieves recommendations for the specified session. To avoid retrieving the same recommendations in subsequent
      * calls, use <a
@@ -734,6 +743,13 @@ public interface AmazonQConnect {
     PutFeedbackResult putFeedback(PutFeedbackRequest putFeedbackRequest);
 
     /**
+     * <important>
+     * <p>
+     * This API will be discontinued starting June 1, 2024. To receive generative responses after March 1, 2024, you
+     * will need to create a new Assistant in the Amazon Connect console and integrate the Amazon Q in Connect
+     * JavaScript library (amazon-q-connectjs) into your applications.
+     * </p>
+     * </important>
      * <p>
      * Performs a manual search against the specified assistant. To retrieve recommendations for an assistant, use <a
      * href="https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_GetRecommendations.html">
@@ -799,7 +815,7 @@ public interface AmazonQConnect {
 
     /**
      * <p>
-     * Searches existing Amazon Q quick responses in an Amazon Q knowledge base.
+     * Searches existing Amazon Q in Connect quick responses in an Amazon Q in Connect knowledge base.
      * </p>
      * 
      * @param searchQuickResponsesRequest
@@ -865,16 +881,16 @@ public interface AmazonQConnect {
 
     /**
      * <p>
-     * Start an asynchronous job to import Amazon Q resources from an uploaded source file. Before calling this API, use
-     * <a
+     * Start an asynchronous job to import Amazon Q in Connect resources from an uploaded source file. Before calling
+     * this API, use <a
      * href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_StartContentUpload.html">StartContentUpload</a>
      * to upload an asset that contains the resource data.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * For importing Amazon Q quick responses, you need to upload a csv file including the quick responses. For
-     * information about how to format the csv file for importing quick responses, see <a
+     * For importing Amazon Q in Connect quick responses, you need to upload a csv file including the quick responses.
+     * For information about how to format the csv file for importing quick responses, see <a
      * href="https://docs.aws.amazon.com/console/connect/quick-responses/add-data">Import quick responses</a>.
      * </p>
      * </li>
@@ -958,9 +974,9 @@ public interface AmazonQConnect {
     /**
      * <p>
      * Updates the template URI of a knowledge base. This is only supported for knowledge bases of type EXTERNAL.
-     * Include a single variable in <code>${variable}</code> format; this interpolated by Amazon Q using ingested
-     * content. For example, if you ingest a Salesforce article, it has an <code>Id</code> value, and you can set the
-     * template URI to
+     * Include a single variable in <code>${variable}</code> format; this interpolated by Amazon Q in Connect using
+     * ingested content. For example, if you ingest a Salesforce article, it has an <code>Id</code> value, and you can
+     * set the template URI to
      * <code>https://myInstanceName.lightning.force.com/lightning/r/Knowledge__kav/*${Id}*&#47;view</code>.
      * </p>
      * 
@@ -980,7 +996,7 @@ public interface AmazonQConnect {
 
     /**
      * <p>
-     * Updates an existing Amazon Q quick response.
+     * Updates an existing Amazon Q in Connect quick response.
      * </p>
      * 
      * @param updateQuickResponseRequest
@@ -1003,6 +1019,26 @@ public interface AmazonQConnect {
      *      API Documentation</a>
      */
     UpdateQuickResponseResult updateQuickResponse(UpdateQuickResponseRequest updateQuickResponseRequest);
+
+    /**
+     * <p>
+     * Updates a session. A session is a contextual container used for generating recommendations. Amazon Connect
+     * updates the existing Amazon Q in Connect session for each contact on which Amazon Q in Connect is enabled.
+     * </p>
+     * 
+     * @param updateSessionRequest
+     * @return Result of the UpdateSession operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by a service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonQConnect.UpdateSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/UpdateSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateSessionResult updateSession(UpdateSessionRequest updateSessionRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

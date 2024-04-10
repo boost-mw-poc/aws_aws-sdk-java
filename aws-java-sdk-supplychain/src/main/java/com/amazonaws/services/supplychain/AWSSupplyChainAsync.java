@@ -124,4 +124,37 @@ public interface AWSSupplyChainAsync extends AWSSupplyChain {
             GetBillOfMaterialsImportJobRequest getBillOfMaterialsImportJobRequest,
             com.amazonaws.handlers.AsyncHandler<GetBillOfMaterialsImportJobRequest, GetBillOfMaterialsImportJobResult> asyncHandler);
 
+    /**
+     * <p>
+     * Send transactional data events with real-time data for analysis or monitoring.
+     * </p>
+     * 
+     * @param sendDataIntegrationEventRequest
+     *        The request parameters for SendDataIntegrationEvent.
+     * @return A Java Future containing the result of the SendDataIntegrationEvent operation returned by the service.
+     * @sample AWSSupplyChainAsync.SendDataIntegrationEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/supplychain-2024-01-01/SendDataIntegrationEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SendDataIntegrationEventResult> sendDataIntegrationEventAsync(SendDataIntegrationEventRequest sendDataIntegrationEventRequest);
+
+    /**
+     * <p>
+     * Send transactional data events with real-time data for analysis or monitoring.
+     * </p>
+     * 
+     * @param sendDataIntegrationEventRequest
+     *        The request parameters for SendDataIntegrationEvent.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SendDataIntegrationEvent operation returned by the service.
+     * @sample AWSSupplyChainAsyncHandler.SendDataIntegrationEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/supplychain-2024-01-01/SendDataIntegrationEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SendDataIntegrationEventResult> sendDataIntegrationEventAsync(SendDataIntegrationEventRequest sendDataIntegrationEventRequest,
+            com.amazonaws.handlers.AsyncHandler<SendDataIntegrationEventRequest, SendDataIntegrationEventResult> asyncHandler);
+
 }

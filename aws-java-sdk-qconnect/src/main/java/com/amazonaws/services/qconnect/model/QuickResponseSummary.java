@@ -79,8 +79,7 @@ public class QuickResponseSummary implements Serializable, Cloneable, Structured
     private String knowledgeBaseArn;
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      */
     private String knowledgeBaseId;
@@ -488,13 +487,11 @@ public class QuickResponseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it.
+     *        The identifier of the knowledge base.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -503,12 +500,10 @@ public class QuickResponseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      * 
-     * @return The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *         storing Amazon Q Content resource to it.
+     * @return The identifier of the knowledge base.
      */
 
     public String getKnowledgeBaseId() {
@@ -517,13 +512,11 @@ public class QuickResponseSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it.
+     *        The identifier of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

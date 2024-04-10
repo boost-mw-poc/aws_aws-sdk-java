@@ -27,8 +27,7 @@ public class DeleteQuickResponseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The knowledge base from which the quick response is deleted. The identifier of the knowledge base. This should
-     * not be a QUICK_RESPONSES type knowledge base if you're storing Amazon Q Content resource to it.
+     * The knowledge base from which the quick response is deleted. The identifier of the knowledge base.
      * </p>
      */
     private String knowledgeBaseId;
@@ -41,13 +40,11 @@ public class DeleteQuickResponseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The knowledge base from which the quick response is deleted. The identifier of the knowledge base. This should
-     * not be a QUICK_RESPONSES type knowledge base if you're storing Amazon Q Content resource to it.
+     * The knowledge base from which the quick response is deleted. The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The knowledge base from which the quick response is deleted. The identifier of the knowledge base. This
-     *        should not be a QUICK_RESPONSES type knowledge base if you're storing Amazon Q Content resource to it.
+     *        The knowledge base from which the quick response is deleted. The identifier of the knowledge base.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -56,12 +53,10 @@ public class DeleteQuickResponseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The knowledge base from which the quick response is deleted. The identifier of the knowledge base. This should
-     * not be a QUICK_RESPONSES type knowledge base if you're storing Amazon Q Content resource to it.
+     * The knowledge base from which the quick response is deleted. The identifier of the knowledge base.
      * </p>
      * 
-     * @return The knowledge base from which the quick response is deleted. The identifier of the knowledge base. This
-     *         should not be a QUICK_RESPONSES type knowledge base if you're storing Amazon Q Content resource to it.
+     * @return The knowledge base from which the quick response is deleted. The identifier of the knowledge base.
      */
 
     public String getKnowledgeBaseId() {
@@ -70,13 +65,11 @@ public class DeleteQuickResponseRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The knowledge base from which the quick response is deleted. The identifier of the knowledge base. This should
-     * not be a QUICK_RESPONSES type knowledge base if you're storing Amazon Q Content resource to it.
+     * The knowledge base from which the quick response is deleted. The identifier of the knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The knowledge base from which the quick response is deleted. The identifier of the knowledge base. This
-     *        should not be a QUICK_RESPONSES type knowledge base if you're storing Amazon Q Content resource to it.
+     *        The knowledge base from which the quick response is deleted. The identifier of the knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

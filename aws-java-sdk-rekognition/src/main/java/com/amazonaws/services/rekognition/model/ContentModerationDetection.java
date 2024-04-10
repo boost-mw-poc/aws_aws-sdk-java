@@ -60,6 +60,13 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
      * </p>
      */
     private Long durationMillis;
+    /**
+     * <p>
+     * A list of predicted results for the type of content an image contains. For example, the image content might be
+     * from animation, sports, or a video game.
+     * </p>
+     */
+    private java.util.List<ContentType> contentTypes;
 
     /**
      * <p>
@@ -292,6 +299,84 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * A list of predicted results for the type of content an image contains. For example, the image content might be
+     * from animation, sports, or a video game.
+     * </p>
+     * 
+     * @return A list of predicted results for the type of content an image contains. For example, the image content
+     *         might be from animation, sports, or a video game.
+     */
+
+    public java.util.List<ContentType> getContentTypes() {
+        return contentTypes;
+    }
+
+    /**
+     * <p>
+     * A list of predicted results for the type of content an image contains. For example, the image content might be
+     * from animation, sports, or a video game.
+     * </p>
+     * 
+     * @param contentTypes
+     *        A list of predicted results for the type of content an image contains. For example, the image content
+     *        might be from animation, sports, or a video game.
+     */
+
+    public void setContentTypes(java.util.Collection<ContentType> contentTypes) {
+        if (contentTypes == null) {
+            this.contentTypes = null;
+            return;
+        }
+
+        this.contentTypes = new java.util.ArrayList<ContentType>(contentTypes);
+    }
+
+    /**
+     * <p>
+     * A list of predicted results for the type of content an image contains. For example, the image content might be
+     * from animation, sports, or a video game.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setContentTypes(java.util.Collection)} or {@link #withContentTypes(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param contentTypes
+     *        A list of predicted results for the type of content an image contains. For example, the image content
+     *        might be from animation, sports, or a video game.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContentModerationDetection withContentTypes(ContentType... contentTypes) {
+        if (this.contentTypes == null) {
+            setContentTypes(new java.util.ArrayList<ContentType>(contentTypes.length));
+        }
+        for (ContentType ele : contentTypes) {
+            this.contentTypes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of predicted results for the type of content an image contains. For example, the image content might be
+     * from animation, sports, or a video game.
+     * </p>
+     * 
+     * @param contentTypes
+     *        A list of predicted results for the type of content an image contains. For example, the image content
+     *        might be from animation, sports, or a video game.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContentModerationDetection withContentTypes(java.util.Collection<ContentType> contentTypes) {
+        setContentTypes(contentTypes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -312,7 +397,9 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
         if (getEndTimestampMillis() != null)
             sb.append("EndTimestampMillis: ").append(getEndTimestampMillis()).append(",");
         if (getDurationMillis() != null)
-            sb.append("DurationMillis: ").append(getDurationMillis());
+            sb.append("DurationMillis: ").append(getDurationMillis()).append(",");
+        if (getContentTypes() != null)
+            sb.append("ContentTypes: ").append(getContentTypes());
         sb.append("}");
         return sb.toString();
     }
@@ -347,6 +434,10 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
             return false;
         if (other.getDurationMillis() != null && other.getDurationMillis().equals(this.getDurationMillis()) == false)
             return false;
+        if (other.getContentTypes() == null ^ this.getContentTypes() == null)
+            return false;
+        if (other.getContentTypes() != null && other.getContentTypes().equals(this.getContentTypes()) == false)
+            return false;
         return true;
     }
 
@@ -360,6 +451,7 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getStartTimestampMillis() == null) ? 0 : getStartTimestampMillis().hashCode());
         hashCode = prime * hashCode + ((getEndTimestampMillis() == null) ? 0 : getEndTimestampMillis().hashCode());
         hashCode = prime * hashCode + ((getDurationMillis() == null) ? 0 : getDurationMillis().hashCode());
+        hashCode = prime * hashCode + ((getContentTypes() == null) ? 0 : getContentTypes().hashCode());
         return hashCode;
     }
 

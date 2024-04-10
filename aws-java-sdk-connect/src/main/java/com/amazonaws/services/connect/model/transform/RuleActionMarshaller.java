@@ -43,6 +43,8 @@ public class RuleActionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdateCaseAction").build();
     private static final MarshallingInfo<StructuredPojo> ENDASSOCIATEDTASKSACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndAssociatedTasksAction").build();
+    private static final MarshallingInfo<StructuredPojo> SUBMITAUTOEVALUATIONACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubmitAutoEvaluationAction").build();
 
     private static final RuleActionMarshaller instance = new RuleActionMarshaller();
 
@@ -68,6 +70,7 @@ public class RuleActionMarshaller {
             protocolMarshaller.marshall(ruleAction.getCreateCaseAction(), CREATECASEACTION_BINDING);
             protocolMarshaller.marshall(ruleAction.getUpdateCaseAction(), UPDATECASEACTION_BINDING);
             protocolMarshaller.marshall(ruleAction.getEndAssociatedTasksAction(), ENDASSOCIATEDTASKSACTION_BINDING);
+            protocolMarshaller.marshall(ruleAction.getSubmitAutoEvaluationAction(), SUBMITAUTOEVALUATIONACTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

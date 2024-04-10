@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes information about a monitor probe.
+ * Describes information about a network monitor probe.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmonitor-2023-08-01/Probe" target="_top">AWS API

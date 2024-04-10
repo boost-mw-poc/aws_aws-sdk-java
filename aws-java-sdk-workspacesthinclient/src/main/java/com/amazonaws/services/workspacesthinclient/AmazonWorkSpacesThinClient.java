@@ -301,10 +301,14 @@ public interface AmazonWorkSpacesThinClient {
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws ValidationException
      *         The input fails to satisfy the specified constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
      *         The resource specified in the request was not found.
-     * @throws InternalServiceException
-     *         Request processing failed due to some unknown error, exception, or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The server encountered an internal error and is unable to complete the request.
      * @sample AmazonWorkSpacesThinClient.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-thin-client-2023-08-22/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -320,10 +324,17 @@ public interface AmazonWorkSpacesThinClient {
      * @return Result of the TagResource operation returned by the service.
      * @throws ValidationException
      *         The input fails to satisfy the specified constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
      *         The resource specified in the request was not found.
-     * @throws InternalServiceException
-     *         Request processing failed due to some unknown error, exception, or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The requested operation would cause a conflict with the current state of a service resource associated
+     *         with the request. Resolve the conflict before retrying this request.
+     * @throws InternalServerException
+     *         The server encountered an internal error and is unable to complete the request.
      * @sample AmazonWorkSpacesThinClient.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-thin-client-2023-08-22/TagResource"
      *      target="_top">AWS API Documentation</a>
@@ -339,10 +350,17 @@ public interface AmazonWorkSpacesThinClient {
      * @return Result of the UntagResource operation returned by the service.
      * @throws ValidationException
      *         The input fails to satisfy the specified constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws ResourceNotFoundException
      *         The resource specified in the request was not found.
-     * @throws InternalServiceException
-     *         Request processing failed due to some unknown error, exception, or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         The requested operation would cause a conflict with the current state of a service resource associated
+     *         with the request. Resolve the conflict before retrying this request.
+     * @throws InternalServerException
+     *         The server encountered an internal error and is unable to complete the request.
      * @sample AmazonWorkSpacesThinClient.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-thin-client-2023-08-22/UntagResource"
      *      target="_top">AWS API Documentation</a>

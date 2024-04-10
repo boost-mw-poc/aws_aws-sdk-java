@@ -31,14 +31,13 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private String monitorArn;
     /**
      * <p>
-     * The name of the monitor. To get a list of the current monitors and their names, use the <code>ListMonitors</code>
-     * action.
+     * The name of the monitor.
      * </p>
      */
     private String monitorName;
     /**
      * <p>
-     * Returns a list of the state of each monitor.
+     * Lists the status of the <code>state</code> of each monitor.
      * </p>
      */
     private String state;
@@ -115,13 +114,11 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The name of the monitor. To get a list of the current monitors and their names, use the <code>ListMonitors</code>
-     * action.
+     * The name of the monitor.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor. To get a list of the current monitors and their names, use the
-     *        <code>ListMonitors</code> action.
+     *        The name of the monitor.
      */
 
     public void setMonitorName(String monitorName) {
@@ -130,12 +127,10 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The name of the monitor. To get a list of the current monitors and their names, use the <code>ListMonitors</code>
-     * action.
+     * The name of the monitor.
      * </p>
      * 
-     * @return The name of the monitor. To get a list of the current monitors and their names, use the
-     *         <code>ListMonitors</code> action.
+     * @return The name of the monitor.
      */
 
     public String getMonitorName() {
@@ -144,13 +139,11 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The name of the monitor. To get a list of the current monitors and their names, use the <code>ListMonitors</code>
-     * action.
+     * The name of the monitor.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor. To get a list of the current monitors and their names, use the
-     *        <code>ListMonitors</code> action.
+     *        The name of the monitor.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,11 +154,11 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * Returns a list of the state of each monitor.
+     * Lists the status of the <code>state</code> of each monitor.
      * </p>
      * 
      * @param state
-     *        Returns a list of the state of each monitor.
+     *        Lists the status of the <code>state</code> of each monitor.
      * @see MonitorState
      */
 
@@ -175,10 +168,10 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * Returns a list of the state of each monitor.
+     * Lists the status of the <code>state</code> of each monitor.
      * </p>
      * 
-     * @return Returns a list of the state of each monitor.
+     * @return Lists the status of the <code>state</code> of each monitor.
      * @see MonitorState
      */
 
@@ -188,11 +181,11 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * Returns a list of the state of each monitor.
+     * Lists the status of the <code>state</code> of each monitor.
      * </p>
      * 
      * @param state
-     *        Returns a list of the state of each monitor.
+     *        Lists the status of the <code>state</code> of each monitor.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MonitorState
      */
@@ -204,11 +197,11 @@ public class GetMonitorResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * Returns a list of the state of each monitor.
+     * Lists the status of the <code>state</code> of each monitor.
      * </p>
      * 
      * @param state
-     *        Returns a list of the state of each monitor.
+     *        Lists the status of the <code>state</code> of each monitor.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MonitorState
      */

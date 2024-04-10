@@ -27,28 +27,24 @@ public class DeleteProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the monitor to delete. For a list of the available monitors, use the <code>ListMonitors</code>
-     * action.
+     * The name of the monitor to delete.
      * </p>
      */
     private String monitorName;
     /**
      * <p>
-     * The ID of the probe to delete. Run <code>GetMonitor</code> to get a lst of all probes and probe IDs associated
-     * with the monitor.
+     * The ID of the probe to delete.
      * </p>
      */
     private String probeId;
 
     /**
      * <p>
-     * The name of the monitor to delete. For a list of the available monitors, use the <code>ListMonitors</code>
-     * action.
+     * The name of the monitor to delete.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor to delete. For a list of the available monitors, use the <code>ListMonitors</code>
-     *        action.
+     *        The name of the monitor to delete.
      */
 
     public void setMonitorName(String monitorName) {
@@ -57,12 +53,10 @@ public class DeleteProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the monitor to delete. For a list of the available monitors, use the <code>ListMonitors</code>
-     * action.
+     * The name of the monitor to delete.
      * </p>
      * 
-     * @return The name of the monitor to delete. For a list of the available monitors, use the
-     *         <code>ListMonitors</code> action.
+     * @return The name of the monitor to delete.
      */
 
     public String getMonitorName() {
@@ -71,13 +65,11 @@ public class DeleteProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the monitor to delete. For a list of the available monitors, use the <code>ListMonitors</code>
-     * action.
+     * The name of the monitor to delete.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor to delete. For a list of the available monitors, use the <code>ListMonitors</code>
-     *        action.
+     *        The name of the monitor to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,13 +80,11 @@ public class DeleteProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ID of the probe to delete. Run <code>GetMonitor</code> to get a lst of all probes and probe IDs associated
-     * with the monitor.
+     * The ID of the probe to delete.
      * </p>
      * 
      * @param probeId
-     *        The ID of the probe to delete. Run <code>GetMonitor</code> to get a lst of all probes and probe IDs
-     *        associated with the monitor.
+     *        The ID of the probe to delete.
      */
 
     public void setProbeId(String probeId) {
@@ -103,12 +93,10 @@ public class DeleteProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ID of the probe to delete. Run <code>GetMonitor</code> to get a lst of all probes and probe IDs associated
-     * with the monitor.
+     * The ID of the probe to delete.
      * </p>
      * 
-     * @return The ID of the probe to delete. Run <code>GetMonitor</code> to get a lst of all probes and probe IDs
-     *         associated with the monitor.
+     * @return The ID of the probe to delete.
      */
 
     public String getProbeId() {
@@ -117,13 +105,11 @@ public class DeleteProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ID of the probe to delete. Run <code>GetMonitor</code> to get a lst of all probes and probe IDs associated
-     * with the monitor.
+     * The ID of the probe to delete.
      * </p>
      * 
      * @param probeId
-     *        The ID of the probe to delete. Run <code>GetMonitor</code> to get a lst of all probes and probe IDs
-     *        associated with the monitor.
+     *        The ID of the probe to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

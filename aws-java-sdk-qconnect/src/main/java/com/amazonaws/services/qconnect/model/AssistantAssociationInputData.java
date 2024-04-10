@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The data that is input into Amazon Q as a result of the assistant association.
+ * The data that is input into Amazon Q in Connect as a result of the assistant association.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/qconnect-2020-10-19/AssistantAssociationInputData"
@@ -30,21 +30,18 @@ public class AssistantAssociationInputData implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base.
      * </p>
      */
     private String knowledgeBaseId;
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it.
+     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base.
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -53,12 +50,10 @@ public class AssistantAssociationInputData implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base.
      * </p>
      * 
-     * @return The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *         storing Amazon Q Content resource to it.
+     * @return The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base.
      */
 
     public String getKnowledgeBaseId() {
@@ -67,13 +62,11 @@ public class AssistantAssociationInputData implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it.
+     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base.
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it.
+     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

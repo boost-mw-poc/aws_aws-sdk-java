@@ -27,8 +27,7 @@ public class CreateProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the monitor to associated with the probe. To get a list of available monitors, use
-     * <code>ListMonitors</code>.
+     * The name of the monitor to associated with the probe.
      * </p>
      */
     private String monitorName;
@@ -54,13 +53,11 @@ public class CreateProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the monitor to associated with the probe. To get a list of available monitors, use
-     * <code>ListMonitors</code>.
+     * The name of the monitor to associated with the probe.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor to associated with the probe. To get a list of available monitors, use
-     *        <code>ListMonitors</code>.
+     *        The name of the monitor to associated with the probe.
      */
 
     public void setMonitorName(String monitorName) {
@@ -69,12 +66,10 @@ public class CreateProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the monitor to associated with the probe. To get a list of available monitors, use
-     * <code>ListMonitors</code>.
+     * The name of the monitor to associated with the probe.
      * </p>
      * 
-     * @return The name of the monitor to associated with the probe. To get a list of available monitors, use
-     *         <code>ListMonitors</code>.
+     * @return The name of the monitor to associated with the probe.
      */
 
     public String getMonitorName() {
@@ -83,13 +78,11 @@ public class CreateProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the monitor to associated with the probe. To get a list of available monitors, use
-     * <code>ListMonitors</code>.
+     * The name of the monitor to associated with the probe.
      * </p>
      * 
      * @param monitorName
-     *        The name of the monitor to associated with the probe. To get a list of available monitors, use
-     *        <code>ListMonitors</code>.
+     *        The name of the monitor to associated with the probe.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

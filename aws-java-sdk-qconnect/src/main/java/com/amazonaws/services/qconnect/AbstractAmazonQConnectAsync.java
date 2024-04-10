@@ -577,4 +577,17 @@ public class AbstractAmazonQConnectAsync extends AbstractAmazonQConnect implemen
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateSessionResult> updateSessionAsync(UpdateSessionRequest request) {
+
+        return updateSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSessionResult> updateSessionAsync(UpdateSessionRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateSessionRequest, UpdateSessionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

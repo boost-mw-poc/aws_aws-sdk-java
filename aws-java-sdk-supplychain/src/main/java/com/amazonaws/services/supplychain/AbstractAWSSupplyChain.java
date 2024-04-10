@@ -38,6 +38,11 @@ public class AbstractAWSSupplyChain implements AWSSupplyChain {
     }
 
     @Override
+    public SendDataIntegrationEventResult sendDataIntegrationEvent(SendDataIntegrationEventRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

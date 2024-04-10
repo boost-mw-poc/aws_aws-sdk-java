@@ -67,9 +67,6 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
     private java.util.List<String> tagRestrictedResources;
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of the third-party application's metadata.
      * </p>
      */
@@ -447,15 +444,10 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of the third-party application's metadata.
      * </p>
      * 
-     * @return This API is in preview release for Amazon Connect and is subject to change.</p>
-     *         <p>
-     *         A list of the third-party application's metadata.
+     * @return A list of the third-party application's metadata.
      */
 
     public java.util.List<Application> getApplications() {
@@ -464,15 +456,10 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of the third-party application's metadata.
      * </p>
      * 
      * @param applications
-     *        This API is in preview release for Amazon Connect and is subject to change.</p>
-     *        <p>
      *        A list of the third-party application's metadata.
      */
 
@@ -487,9 +474,6 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of the third-party application's metadata.
      * </p>
      * <p>
@@ -499,8 +483,6 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param applications
-     *        This API is in preview release for Amazon Connect and is subject to change.</p>
-     *        <p>
      *        A list of the third-party application's metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -517,15 +499,10 @@ public class UpdateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * A list of the third-party application's metadata.
      * </p>
      * 
      * @param applications
-     *        This API is in preview release for Amazon Connect and is subject to change.</p>
-     *        <p>
      *        A list of the third-party application's metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

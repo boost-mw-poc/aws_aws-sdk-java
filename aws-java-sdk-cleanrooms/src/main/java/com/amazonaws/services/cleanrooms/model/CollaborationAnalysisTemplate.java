@@ -108,6 +108,12 @@ public class CollaborationAnalysisTemplate implements Serializable, Cloneable, S
      * </p>
      */
     private java.util.List<AnalysisParameter> analysisParameters;
+    /**
+     * <p>
+     * The validations that were performed.
+     * </p>
+     */
+    private java.util.List<AnalysisTemplateValidationStatusDetail> validations;
 
     /**
      * <p>
@@ -691,6 +697,76 @@ public class CollaborationAnalysisTemplate implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The validations that were performed.
+     * </p>
+     * 
+     * @return The validations that were performed.
+     */
+
+    public java.util.List<AnalysisTemplateValidationStatusDetail> getValidations() {
+        return validations;
+    }
+
+    /**
+     * <p>
+     * The validations that were performed.
+     * </p>
+     * 
+     * @param validations
+     *        The validations that were performed.
+     */
+
+    public void setValidations(java.util.Collection<AnalysisTemplateValidationStatusDetail> validations) {
+        if (validations == null) {
+            this.validations = null;
+            return;
+        }
+
+        this.validations = new java.util.ArrayList<AnalysisTemplateValidationStatusDetail>(validations);
+    }
+
+    /**
+     * <p>
+     * The validations that were performed.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setValidations(java.util.Collection)} or {@link #withValidations(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param validations
+     *        The validations that were performed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CollaborationAnalysisTemplate withValidations(AnalysisTemplateValidationStatusDetail... validations) {
+        if (this.validations == null) {
+            setValidations(new java.util.ArrayList<AnalysisTemplateValidationStatusDetail>(validations.length));
+        }
+        for (AnalysisTemplateValidationStatusDetail ele : validations) {
+            this.validations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The validations that were performed.
+     * </p>
+     * 
+     * @param validations
+     *        The validations that were performed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CollaborationAnalysisTemplate withValidations(java.util.Collection<AnalysisTemplateValidationStatusDetail> validations) {
+        setValidations(validations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -727,7 +803,9 @@ public class CollaborationAnalysisTemplate implements Serializable, Cloneable, S
         if (getSource() != null)
             sb.append("Source: ").append("***Sensitive Data Redacted***").append(",");
         if (getAnalysisParameters() != null)
-            sb.append("AnalysisParameters: ").append("***Sensitive Data Redacted***");
+            sb.append("AnalysisParameters: ").append("***Sensitive Data Redacted***").append(",");
+        if (getValidations() != null)
+            sb.append("Validations: ").append(getValidations());
         sb.append("}");
         return sb.toString();
     }
@@ -794,6 +872,10 @@ public class CollaborationAnalysisTemplate implements Serializable, Cloneable, S
             return false;
         if (other.getAnalysisParameters() != null && other.getAnalysisParameters().equals(this.getAnalysisParameters()) == false)
             return false;
+        if (other.getValidations() == null ^ this.getValidations() == null)
+            return false;
+        if (other.getValidations() != null && other.getValidations().equals(this.getValidations()) == false)
+            return false;
         return true;
     }
 
@@ -815,6 +897,7 @@ public class CollaborationAnalysisTemplate implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getFormat() == null) ? 0 : getFormat().hashCode());
         hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
         hashCode = prime * hashCode + ((getAnalysisParameters() == null) ? 0 : getAnalysisParameters().hashCode());
+        hashCode = prime * hashCode + ((getValidations() == null) ? 0 : getValidations().hashCode());
         return hashCode;
     }
 

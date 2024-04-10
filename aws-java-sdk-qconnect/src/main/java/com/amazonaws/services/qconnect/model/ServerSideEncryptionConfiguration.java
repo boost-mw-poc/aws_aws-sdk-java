@@ -31,8 +31,8 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * The customer managed key used for encryption. For more information about setting up a customer managed key for
-     * Amazon Q, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in
-     * Connect for your instance</a>. For information about valid ID values, see <a
+     * Amazon Q in Connect, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable
+     * Amazon Q in Connect for your instance</a>. For information about valid ID values, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a>.
      * </p>
      */
@@ -41,15 +41,16 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * The customer managed key used for encryption. For more information about setting up a customer managed key for
-     * Amazon Q, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in
-     * Connect for your instance</a>. For information about valid ID values, see <a
+     * Amazon Q in Connect, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable
+     * Amazon Q in Connect for your instance</a>. For information about valid ID values, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a>.
      * </p>
      * 
      * @param kmsKeyId
      *        The customer managed key used for encryption. For more information about setting up a customer managed key
-     *        for Amazon Q, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable
-     *        Amazon Q in Connect for your instance</a>. For information about valid ID values, see <a
+     *        for Amazon Q in Connect, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
+     *        your instance</a>. For information about valid ID values, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers
      *        (KeyId)</a>.
      */
@@ -61,13 +62,13 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * The customer managed key used for encryption. For more information about setting up a customer managed key for
-     * Amazon Q, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in
-     * Connect for your instance</a>. For information about valid ID values, see <a
+     * Amazon Q in Connect, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable
+     * Amazon Q in Connect for your instance</a>. For information about valid ID values, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a>.
      * </p>
      * 
      * @return The customer managed key used for encryption. For more information about setting up a customer managed
-     *         key for Amazon Q, see <a
+     *         key for Amazon Q in Connect, see <a
      *         href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
      *         your instance</a>. For information about valid ID values, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers
@@ -81,15 +82,16 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * The customer managed key used for encryption. For more information about setting up a customer managed key for
-     * Amazon Q, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in
-     * Connect for your instance</a>. For information about valid ID values, see <a
+     * Amazon Q in Connect, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable
+     * Amazon Q in Connect for your instance</a>. For information about valid ID values, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers (KeyId)</a>.
      * </p>
      * 
      * @param kmsKeyId
      *        The customer managed key used for encryption. For more information about setting up a customer managed key
-     *        for Amazon Q, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable
-     *        Amazon Q in Connect for your instance</a>. For information about valid ID values, see <a
+     *        for Amazon Q in Connect, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html">Enable Amazon Q in Connect for
+     *        your instance</a>. For information about valid ID values, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id">Key identifiers
      *        (KeyId)</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

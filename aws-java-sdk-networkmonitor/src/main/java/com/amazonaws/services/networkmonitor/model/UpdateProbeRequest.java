@@ -33,7 +33,7 @@ public class UpdateProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String monitorName;
     /**
      * <p>
-     * Run <code>GetMonitor</code> to get a list of probes and probe IDs.
+     * The ID of the probe to update.
      * </p>
      */
     private String probeId;
@@ -113,11 +113,11 @@ public class UpdateProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Run <code>GetMonitor</code> to get a list of probes and probe IDs.
+     * The ID of the probe to update.
      * </p>
      * 
      * @param probeId
-     *        Run <code>GetMonitor</code> to get a list of probes and probe IDs.
+     *        The ID of the probe to update.
      */
 
     public void setProbeId(String probeId) {
@@ -126,10 +126,10 @@ public class UpdateProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Run <code>GetMonitor</code> to get a list of probes and probe IDs.
+     * The ID of the probe to update.
      * </p>
      * 
-     * @return Run <code>GetMonitor</code> to get a list of probes and probe IDs.
+     * @return The ID of the probe to update.
      */
 
     public String getProbeId() {
@@ -138,11 +138,11 @@ public class UpdateProbeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Run <code>GetMonitor</code> to get a list of probes and probe IDs.
+     * The ID of the probe to update.
      * </p>
      * 
      * @param probeId
-     *        Run <code>GetMonitor</code> to get a list of probes and probe IDs.
+     *        The ID of the probe to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

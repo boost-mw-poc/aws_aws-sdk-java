@@ -33,16 +33,16 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String contentId;
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN
+     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base. Can be either the
+     * ID or the ARN
      * </p>
      */
     private String knowledgeBaseId;
     /**
      * <p>
      * A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing
-     * data between an external system and Amazon Q, you can store an external version identifier as metadata to utilize
-     * for determining drift.
+     * data between an external system and Amazon Q in Connect, you can store an external version identifier as metadata
+     * to utilize for determining drift.
      * </p>
      */
     private java.util.Map<String, String> metadata;
@@ -126,13 +126,13 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN
+     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base. Can be either the
+     * ID or the ARN
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it. Can be either the ID or the ARN
+     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base. Can be
+     *        either the ID or the ARN
      */
 
     public void setKnowledgeBaseId(String knowledgeBaseId) {
@@ -141,12 +141,12 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN
+     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base. Can be either the
+     * ID or the ARN
      * </p>
      * 
-     * @return The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *         storing Amazon Q Content resource to it. Can be either the ID or the ARN
+     * @return The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base. Can be
+     *         either the ID or the ARN
      */
 
     public String getKnowledgeBaseId() {
@@ -155,13 +155,13 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're storing
-     * Amazon Q Content resource to it. Can be either the ID or the ARN
+     * The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base. Can be either the
+     * ID or the ARN
      * </p>
      * 
      * @param knowledgeBaseId
-     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base if you're
-     *        storing Amazon Q Content resource to it. Can be either the ID or the ARN
+     *        The identifier of the knowledge base. This should not be a QUICK_RESPONSES type knowledge base. Can be
+     *        either the ID or the ARN
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,13 +173,13 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing
-     * data between an external system and Amazon Q, you can store an external version identifier as metadata to utilize
-     * for determining drift.
+     * data between an external system and Amazon Q in Connect, you can store an external version identifier as metadata
+     * to utilize for determining drift.
      * </p>
      * 
      * @return A key/value map to store attributes without affecting tagging or recommendations. For example, when
-     *         synchronizing data between an external system and Amazon Q, you can store an external version identifier
-     *         as metadata to utilize for determining drift.
+     *         synchronizing data between an external system and Amazon Q in Connect, you can store an external version
+     *         identifier as metadata to utilize for determining drift.
      */
 
     public java.util.Map<String, String> getMetadata() {
@@ -189,14 +189,14 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing
-     * data between an external system and Amazon Q, you can store an external version identifier as metadata to utilize
-     * for determining drift.
+     * data between an external system and Amazon Q in Connect, you can store an external version identifier as metadata
+     * to utilize for determining drift.
      * </p>
      * 
      * @param metadata
      *        A key/value map to store attributes without affecting tagging or recommendations. For example, when
-     *        synchronizing data between an external system and Amazon Q, you can store an external version identifier
-     *        as metadata to utilize for determining drift.
+     *        synchronizing data between an external system and Amazon Q in Connect, you can store an external version
+     *        identifier as metadata to utilize for determining drift.
      */
 
     public void setMetadata(java.util.Map<String, String> metadata) {
@@ -206,14 +206,14 @@ public class UpdateContentRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing
-     * data between an external system and Amazon Q, you can store an external version identifier as metadata to utilize
-     * for determining drift.
+     * data between an external system and Amazon Q in Connect, you can store an external version identifier as metadata
+     * to utilize for determining drift.
      * </p>
      * 
      * @param metadata
      *        A key/value map to store attributes without affecting tagging or recommendations. For example, when
-     *        synchronizing data between an external system and Amazon Q, you can store an external version identifier
-     *        as metadata to utilize for determining drift.
+     *        synchronizing data between an external system and Amazon Q in Connect, you can store an external version
+     *        identifier as metadata to utilize for determining drift.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

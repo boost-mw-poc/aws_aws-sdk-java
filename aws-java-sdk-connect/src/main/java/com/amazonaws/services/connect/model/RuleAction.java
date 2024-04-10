@@ -106,6 +106,12 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private EndAssociatedTasksActionDefinition endAssociatedTasksAction;
+    /**
+     * <p>
+     * Information about the submit automated evaluation action.
+     * </p>
+     */
+    private SubmitAutoEvaluationActionDefinition submitAutoEvaluationAction;
 
     /**
      * <p>
@@ -612,6 +618,46 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Information about the submit automated evaluation action.
+     * </p>
+     * 
+     * @param submitAutoEvaluationAction
+     *        Information about the submit automated evaluation action.
+     */
+
+    public void setSubmitAutoEvaluationAction(SubmitAutoEvaluationActionDefinition submitAutoEvaluationAction) {
+        this.submitAutoEvaluationAction = submitAutoEvaluationAction;
+    }
+
+    /**
+     * <p>
+     * Information about the submit automated evaluation action.
+     * </p>
+     * 
+     * @return Information about the submit automated evaluation action.
+     */
+
+    public SubmitAutoEvaluationActionDefinition getSubmitAutoEvaluationAction() {
+        return this.submitAutoEvaluationAction;
+    }
+
+    /**
+     * <p>
+     * Information about the submit automated evaluation action.
+     * </p>
+     * 
+     * @param submitAutoEvaluationAction
+     *        Information about the submit automated evaluation action.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleAction withSubmitAutoEvaluationAction(SubmitAutoEvaluationActionDefinition submitAutoEvaluationAction) {
+        setSubmitAutoEvaluationAction(submitAutoEvaluationAction);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -638,7 +684,9 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
         if (getUpdateCaseAction() != null)
             sb.append("UpdateCaseAction: ").append(getUpdateCaseAction()).append(",");
         if (getEndAssociatedTasksAction() != null)
-            sb.append("EndAssociatedTasksAction: ").append(getEndAssociatedTasksAction());
+            sb.append("EndAssociatedTasksAction: ").append(getEndAssociatedTasksAction()).append(",");
+        if (getSubmitAutoEvaluationAction() != null)
+            sb.append("SubmitAutoEvaluationAction: ").append(getSubmitAutoEvaluationAction());
         sb.append("}");
         return sb.toString();
     }
@@ -685,6 +733,10 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEndAssociatedTasksAction() != null && other.getEndAssociatedTasksAction().equals(this.getEndAssociatedTasksAction()) == false)
             return false;
+        if (other.getSubmitAutoEvaluationAction() == null ^ this.getSubmitAutoEvaluationAction() == null)
+            return false;
+        if (other.getSubmitAutoEvaluationAction() != null && other.getSubmitAutoEvaluationAction().equals(this.getSubmitAutoEvaluationAction()) == false)
+            return false;
         return true;
     }
 
@@ -701,6 +753,7 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreateCaseAction() == null) ? 0 : getCreateCaseAction().hashCode());
         hashCode = prime * hashCode + ((getUpdateCaseAction() == null) ? 0 : getUpdateCaseAction().hashCode());
         hashCode = prime * hashCode + ((getEndAssociatedTasksAction() == null) ? 0 : getEndAssociatedTasksAction().hashCode());
+        hashCode = prime * hashCode + ((getSubmitAutoEvaluationAction() == null) ? 0 : getSubmitAutoEvaluationAction().hashCode());
         return hashCode;
     }
 

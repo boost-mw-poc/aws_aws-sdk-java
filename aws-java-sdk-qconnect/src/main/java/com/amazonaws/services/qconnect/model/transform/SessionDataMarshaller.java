@@ -39,6 +39,8 @@ public class SessionDataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sessionArn").build();
     private static final MarshallingInfo<String> SESSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sessionId").build();
+    private static final MarshallingInfo<StructuredPojo> TAGFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tagFilter").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -63,6 +65,7 @@ public class SessionDataMarshaller {
             protocolMarshaller.marshall(sessionData.getName(), NAME_BINDING);
             protocolMarshaller.marshall(sessionData.getSessionArn(), SESSIONARN_BINDING);
             protocolMarshaller.marshall(sessionData.getSessionId(), SESSIONID_BINDING);
+            protocolMarshaller.marshall(sessionData.getTagFilter(), TAGFILTER_BINDING);
             protocolMarshaller.marshall(sessionData.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

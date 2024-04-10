@@ -113,6 +113,34 @@ public interface AWSSupplyChain {
     GetBillOfMaterialsImportJobResult getBillOfMaterialsImportJob(GetBillOfMaterialsImportJobRequest getBillOfMaterialsImportJobRequest);
 
     /**
+     * <p>
+     * Send transactional data events with real-time data for analysis or monitoring.
+     * </p>
+     * 
+     * @param sendDataIntegrationEventRequest
+     *        The request parameters for SendDataIntegrationEvent.
+     * @return Result of the SendDataIntegrationEvent operation returned by the service.
+     * @throws ServiceQuotaExceededException
+     *         Request would cause a service quota to be exceeded.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have the required privileges to perform this action.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an AWS service.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @sample AWSSupplyChain.SendDataIntegrationEvent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/supplychain-2024-01-01/SendDataIntegrationEvent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    SendDataIntegrationEventResult sendDataIntegrationEvent(SendDataIntegrationEventRequest sendDataIntegrationEventRequest);
+
+    /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and
      * callers are not expected to call it, but can if they want to explicitly release any open resources. Once a client
      * has been shutdown, it should not be used to make any more requests.
