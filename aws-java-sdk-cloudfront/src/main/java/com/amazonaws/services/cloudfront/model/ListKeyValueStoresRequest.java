@@ -27,30 +27,30 @@ public class ListKeyValueStoresRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The marker associated with the Key Value Stores list.
+     * The marker associated with the key value stores list.
      * </p>
      */
     private String marker;
     /**
      * <p>
-     * The maximum number of items in the Key Value Stores list.
+     * The maximum number of items in the key value stores list.
      * </p>
      */
     private String maxItems;
     /**
      * <p>
-     * The status of the request for the Key Value Stores list.
+     * The status of the request for the key value stores list.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The marker associated with the Key Value Stores list.
+     * The marker associated with the key value stores list.
      * </p>
      * 
      * @param marker
-     *        The marker associated with the Key Value Stores list.
+     *        The marker associated with the key value stores list.
      */
 
     public void setMarker(String marker) {
@@ -59,10 +59,10 @@ public class ListKeyValueStoresRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The marker associated with the Key Value Stores list.
+     * The marker associated with the key value stores list.
      * </p>
      * 
-     * @return The marker associated with the Key Value Stores list.
+     * @return The marker associated with the key value stores list.
      */
 
     public String getMarker() {
@@ -71,11 +71,11 @@ public class ListKeyValueStoresRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The marker associated with the Key Value Stores list.
+     * The marker associated with the key value stores list.
      * </p>
      * 
      * @param marker
-     *        The marker associated with the Key Value Stores list.
+     *        The marker associated with the key value stores list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +86,11 @@ public class ListKeyValueStoresRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The maximum number of items in the Key Value Stores list.
+     * The maximum number of items in the key value stores list.
      * </p>
      * 
      * @param maxItems
-     *        The maximum number of items in the Key Value Stores list.
+     *        The maximum number of items in the key value stores list.
      */
 
     public void setMaxItems(String maxItems) {
@@ -99,10 +99,10 @@ public class ListKeyValueStoresRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The maximum number of items in the Key Value Stores list.
+     * The maximum number of items in the key value stores list.
      * </p>
      * 
-     * @return The maximum number of items in the Key Value Stores list.
+     * @return The maximum number of items in the key value stores list.
      */
 
     public String getMaxItems() {
@@ -111,11 +111,11 @@ public class ListKeyValueStoresRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The maximum number of items in the Key Value Stores list.
+     * The maximum number of items in the key value stores list.
      * </p>
      * 
      * @param maxItems
-     *        The maximum number of items in the Key Value Stores list.
+     *        The maximum number of items in the key value stores list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +126,11 @@ public class ListKeyValueStoresRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The status of the request for the Key Value Stores list.
+     * The status of the request for the key value stores list.
      * </p>
      * 
      * @param status
-     *        The status of the request for the Key Value Stores list.
+     *        The status of the request for the key value stores list.
      */
 
     public void setStatus(String status) {
@@ -139,10 +139,10 @@ public class ListKeyValueStoresRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The status of the request for the Key Value Stores list.
+     * The status of the request for the key value stores list.
      * </p>
      * 
-     * @return The status of the request for the Key Value Stores list.
+     * @return The status of the request for the key value stores list.
      */
 
     public String getStatus() {
@@ -151,11 +151,11 @@ public class ListKeyValueStoresRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The status of the request for the Key Value Stores list.
+     * The status of the request for the key value stores list.
      * </p>
      * 
      * @param status
-     *        The status of the request for the Key Value Stores list.
+     *        The status of the request for the key value stores list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

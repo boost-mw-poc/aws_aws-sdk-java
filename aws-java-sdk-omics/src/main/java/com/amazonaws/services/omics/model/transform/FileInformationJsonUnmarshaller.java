@@ -60,6 +60,10 @@ public class FileInformationJsonUnmarshaller implements Unmarshaller<FileInforma
                     context.nextToken();
                     fileInformation.setContentLength(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("s3Access", targetDepth)) {
+                    context.nextToken();
+                    fileInformation.setS3Access(ReadSetS3AccessJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

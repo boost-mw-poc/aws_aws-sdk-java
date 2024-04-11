@@ -80,6 +80,11 @@ public class AnomalyDetectorStaxUnmarshaller implements Unmarshaller<AnomalyDete
                     continue;
                 }
 
+                if (context.testExpression("MetricCharacteristics", targetDepth)) {
+                    anomalyDetector.setMetricCharacteristics(MetricCharacteristicsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("SingleMetricAnomalyDetector", targetDepth)) {
                     anomalyDetector.setSingleMetricAnomalyDetector(SingleMetricAnomalyDetectorStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Key Value Store entity limit has been exceeded.
+ * The key value store entity limit has been exceeded.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

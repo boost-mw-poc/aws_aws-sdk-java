@@ -107,6 +107,16 @@ public class PutAnomalyDetectorRequestMarshaller implements Marshaller<Request<P
         }
 
         {
+            MetricCharacteristics metricCharacteristics = putAnomalyDetectorRequest.getMetricCharacteristics();
+            if (metricCharacteristics != null) {
+
+                if (metricCharacteristics.getPeriodicSpikes() != null) {
+                    request.addParameter("MetricCharacteristics.PeriodicSpikes", StringUtils.fromBoolean(metricCharacteristics.getPeriodicSpikes()));
+                }
+            }
+        }
+
+        {
             SingleMetricAnomalyDetector singleMetricAnomalyDetector = putAnomalyDetectorRequest.getSingleMetricAnomalyDetector();
             if (singleMetricAnomalyDetector != null) {
 

@@ -162,7 +162,8 @@ public class DistributionSummary implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<AliasICPRecordal> aliasICPRecordals;
     /**
      * <p>
-     * Whether the primary distribution has a staging distribution enabled.
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
      * </p>
      */
     private Boolean staging;
@@ -1204,11 +1205,13 @@ public class DistributionSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether the primary distribution has a staging distribution enabled.
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
      * </p>
      * 
      * @param staging
-     *        Whether the primary distribution has a staging distribution enabled.
+     *        A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>,
+     *        this is a staging distribution. When this value is <code>false</code>, this is not a staging distribution.
      */
 
     public void setStaging(Boolean staging) {
@@ -1217,10 +1220,13 @@ public class DistributionSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether the primary distribution has a staging distribution enabled.
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
      * </p>
      * 
-     * @return Whether the primary distribution has a staging distribution enabled.
+     * @return A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>,
+     *         this is a staging distribution. When this value is <code>false</code>, this is not a staging
+     *         distribution.
      */
 
     public Boolean getStaging() {
@@ -1229,11 +1235,13 @@ public class DistributionSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether the primary distribution has a staging distribution enabled.
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
      * </p>
      * 
      * @param staging
-     *        Whether the primary distribution has a staging distribution enabled.
+     *        A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>,
+     *        this is a staging distribution. When this value is <code>false</code>, this is not a staging distribution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1244,10 +1252,13 @@ public class DistributionSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Whether the primary distribution has a staging distribution enabled.
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
      * </p>
      * 
-     * @return Whether the primary distribution has a staging distribution enabled.
+     * @return A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>,
+     *         this is a staging distribution. When this value is <code>false</code>, this is not a staging
+     *         distribution.
      */
 
     public Boolean isStaging() {

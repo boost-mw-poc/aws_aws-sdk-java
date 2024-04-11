@@ -307,6 +307,10 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
             exceptionUnmarshallersMap.put("NotSupportedService", new ServiceNotSupportedExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new ServiceNotSupportedExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("OpenIdIdpCommunicationError") == null) {
+            exceptionUnmarshallersMap.put("OpenIdIdpCommunicationError", new OpenIdIdpCommunicationErrorExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new OpenIdIdpCommunicationErrorExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("ReportInProgress") == null) {
             exceptionUnmarshallersMap.put("ReportInProgress", new CredentialReportNotReadyExceptionUnmarshaller());
         }
@@ -1436,6 +1440,8 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
      *         Wait a few minutes and submit your request again.
      * @throws ServiceFailureException
      *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws OpenIdIdpCommunicationErrorException
+     *         The request failed because IAM cannot connect to the OpenID Connect identity provider URL.
      * @sample AmazonIdentityManagement.CreateOpenIDConnectProvider
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/CreateOpenIDConnectProvider"
      *      target="_top">AWS API Documentation</a>
@@ -9626,7 +9632,7 @@ public class AmazonIdentityManagementClient extends AmazonWebServiceClient imple
 
     /**
      * <p>
-     * Removes the specified IAM role from the specified EC2 instance profile.
+     * Removes the specified IAM role from the specified Amazon EC2 instance profile.
      * </p>
      * <important>
      * <p>

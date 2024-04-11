@@ -31,7 +31,7 @@ public class CreateMultipartReadSetUploadResult extends com.amazonaws.AmazonWebS
     private String sequenceStoreId;
     /**
      * <p>
-     * he ID for the initiated multipart upload.
+     * The ID for the initiated multipart upload.
      * </p>
      */
     private String uploadId;
@@ -132,11 +132,11 @@ public class CreateMultipartReadSetUploadResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * he ID for the initiated multipart upload.
+     * The ID for the initiated multipart upload.
      * </p>
      * 
      * @param uploadId
-     *        he ID for the initiated multipart upload.
+     *        The ID for the initiated multipart upload.
      */
 
     public void setUploadId(String uploadId) {
@@ -145,10 +145,10 @@ public class CreateMultipartReadSetUploadResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * he ID for the initiated multipart upload.
+     * The ID for the initiated multipart upload.
      * </p>
      * 
-     * @return he ID for the initiated multipart upload.
+     * @return The ID for the initiated multipart upload.
      */
 
     public String getUploadId() {
@@ -157,11 +157,11 @@ public class CreateMultipartReadSetUploadResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * he ID for the initiated multipart upload.
+     * The ID for the initiated multipart upload.
      * </p>
      * 
      * @param uploadId
-     *        he ID for the initiated multipart upload.
+     *        The ID for the initiated multipart upload.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

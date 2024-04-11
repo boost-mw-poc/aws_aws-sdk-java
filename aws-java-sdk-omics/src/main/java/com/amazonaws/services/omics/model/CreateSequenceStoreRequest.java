@@ -61,6 +61,12 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String fallbackLocation;
+    /**
+     * <p>
+     * The ETag algorithm family to use for ingested read sets.
+     * </p>
+     */
+    private String eTagAlgorithmFamily;
 
     /**
      * <p>
@@ -331,6 +337,65 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The ETag algorithm family to use for ingested read sets.
+     * </p>
+     * 
+     * @param eTagAlgorithmFamily
+     *        The ETag algorithm family to use for ingested read sets.
+     * @see ETagAlgorithmFamily
+     */
+
+    public void setETagAlgorithmFamily(String eTagAlgorithmFamily) {
+        this.eTagAlgorithmFamily = eTagAlgorithmFamily;
+    }
+
+    /**
+     * <p>
+     * The ETag algorithm family to use for ingested read sets.
+     * </p>
+     * 
+     * @return The ETag algorithm family to use for ingested read sets.
+     * @see ETagAlgorithmFamily
+     */
+
+    public String getETagAlgorithmFamily() {
+        return this.eTagAlgorithmFamily;
+    }
+
+    /**
+     * <p>
+     * The ETag algorithm family to use for ingested read sets.
+     * </p>
+     * 
+     * @param eTagAlgorithmFamily
+     *        The ETag algorithm family to use for ingested read sets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ETagAlgorithmFamily
+     */
+
+    public CreateSequenceStoreRequest withETagAlgorithmFamily(String eTagAlgorithmFamily) {
+        setETagAlgorithmFamily(eTagAlgorithmFamily);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ETag algorithm family to use for ingested read sets.
+     * </p>
+     * 
+     * @param eTagAlgorithmFamily
+     *        The ETag algorithm family to use for ingested read sets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ETagAlgorithmFamily
+     */
+
+    public CreateSequenceStoreRequest withETagAlgorithmFamily(ETagAlgorithmFamily eTagAlgorithmFamily) {
+        this.eTagAlgorithmFamily = eTagAlgorithmFamily.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -353,7 +418,9 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getFallbackLocation() != null)
-            sb.append("FallbackLocation: ").append(getFallbackLocation());
+            sb.append("FallbackLocation: ").append(getFallbackLocation()).append(",");
+        if (getETagAlgorithmFamily() != null)
+            sb.append("ETagAlgorithmFamily: ").append(getETagAlgorithmFamily());
         sb.append("}");
         return sb.toString();
     }
@@ -392,6 +459,10 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getFallbackLocation() != null && other.getFallbackLocation().equals(this.getFallbackLocation()) == false)
             return false;
+        if (other.getETagAlgorithmFamily() == null ^ this.getETagAlgorithmFamily() == null)
+            return false;
+        if (other.getETagAlgorithmFamily() != null && other.getETagAlgorithmFamily().equals(this.getETagAlgorithmFamily()) == false)
+            return false;
         return true;
     }
 
@@ -406,6 +477,7 @@ public class CreateSequenceStoreRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getFallbackLocation() == null) ? 0 : getFallbackLocation().hashCode());
+        hashCode = prime * hashCode + ((getETagAlgorithmFamily() == null) ? 0 : getETagAlgorithmFamily().hashCode());
         return hashCode;
     }
 

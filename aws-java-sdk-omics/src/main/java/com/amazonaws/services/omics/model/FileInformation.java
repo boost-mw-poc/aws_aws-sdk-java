@@ -46,6 +46,12 @@ public class FileInformation implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private Long contentLength;
+    /**
+     * <p>
+     * The S3 URI metadata of a sequence store.
+     * </p>
+     */
+    private ReadSetS3Access s3Access;
 
     /**
      * <p>
@@ -168,6 +174,46 @@ public class FileInformation implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The S3 URI metadata of a sequence store.
+     * </p>
+     * 
+     * @param s3Access
+     *        The S3 URI metadata of a sequence store.
+     */
+
+    public void setS3Access(ReadSetS3Access s3Access) {
+        this.s3Access = s3Access;
+    }
+
+    /**
+     * <p>
+     * The S3 URI metadata of a sequence store.
+     * </p>
+     * 
+     * @return The S3 URI metadata of a sequence store.
+     */
+
+    public ReadSetS3Access getS3Access() {
+        return this.s3Access;
+    }
+
+    /**
+     * <p>
+     * The S3 URI metadata of a sequence store.
+     * </p>
+     * 
+     * @param s3Access
+     *        The S3 URI metadata of a sequence store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FileInformation withS3Access(ReadSetS3Access s3Access) {
+        setS3Access(s3Access);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +230,9 @@ public class FileInformation implements Serializable, Cloneable, StructuredPojo 
         if (getPartSize() != null)
             sb.append("PartSize: ").append(getPartSize()).append(",");
         if (getContentLength() != null)
-            sb.append("ContentLength: ").append(getContentLength());
+            sb.append("ContentLength: ").append(getContentLength()).append(",");
+        if (getS3Access() != null)
+            sb.append("S3Access: ").append(getS3Access());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +259,10 @@ public class FileInformation implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getContentLength() != null && other.getContentLength().equals(this.getContentLength()) == false)
             return false;
+        if (other.getS3Access() == null ^ this.getS3Access() == null)
+            return false;
+        if (other.getS3Access() != null && other.getS3Access().equals(this.getS3Access()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +274,7 @@ public class FileInformation implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getTotalParts() == null) ? 0 : getTotalParts().hashCode());
         hashCode = prime * hashCode + ((getPartSize() == null) ? 0 : getPartSize().hashCode());
         hashCode = prime * hashCode + ((getContentLength() == null) ? 0 : getContentLength().hashCode());
+        hashCode = prime * hashCode + ((getS3Access() == null) ? 0 : getS3Access().hashCode());
         return hashCode;
     }
 

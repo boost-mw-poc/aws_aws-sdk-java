@@ -22,7 +22,13 @@ public enum ETagAlgorithm {
 
     FASTQ_MD5up("FASTQ_MD5up"),
     BAM_MD5up("BAM_MD5up"),
-    CRAM_MD5up("CRAM_MD5up");
+    CRAM_MD5up("CRAM_MD5up"),
+    FASTQ_SHA256up("FASTQ_SHA256up"),
+    BAM_SHA256up("BAM_SHA256up"),
+    CRAM_SHA256up("CRAM_SHA256up"),
+    FASTQ_SHA512up("FASTQ_SHA512up"),
+    BAM_SHA512up("BAM_SHA512up"),
+    CRAM_SHA512up("CRAM_SHA512up");
 
     private String value;
 

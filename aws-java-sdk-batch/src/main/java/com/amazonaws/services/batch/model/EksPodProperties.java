@@ -66,8 +66,8 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
     private String dnsPolicy;
     /**
      * <p>
-     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
-     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * References a Kubernetes secret resource. It holds a list of secrets. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      * <p>
      * <code>ImagePullSecret$name</code> is required when this object is used.
@@ -375,16 +375,15 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
-     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * References a Kubernetes secret resource. It holds a list of secrets. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      * <p>
      * <code>ImagePullSecret$name</code> is required when this object is used.
      * </p>
      * 
-     * @return References a Kubernetes secret resource. This object must start and end with an alphanumeric character,
-     *         is required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253
-     *         characters.</p>
+     * @return References a Kubernetes secret resource. It holds a list of secrets. These secrets help to gain access to
+     *         pull an images from a private registry.</p>
      *         <p>
      *         <code>ImagePullSecret$name</code> is required when this object is used.
      */
@@ -395,17 +394,16 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
-     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * References a Kubernetes secret resource. It holds a list of secrets. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      * <p>
      * <code>ImagePullSecret$name</code> is required when this object is used.
      * </p>
      * 
      * @param imagePullSecrets
-     *        References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
-     *        required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253
-     *        characters.</p>
+     *        References a Kubernetes secret resource. It holds a list of secrets. These secrets help to gain access to
+     *        pull an images from a private registry.</p>
      *        <p>
      *        <code>ImagePullSecret$name</code> is required when this object is used.
      */
@@ -421,8 +419,8 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
-     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * References a Kubernetes secret resource. It holds a list of secrets. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      * <p>
      * <code>ImagePullSecret$name</code> is required when this object is used.
@@ -434,9 +432,8 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param imagePullSecrets
-     *        References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
-     *        required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253
-     *        characters.</p>
+     *        References a Kubernetes secret resource. It holds a list of secrets. These secrets help to gain access to
+     *        pull an images from a private registry.</p>
      *        <p>
      *        <code>ImagePullSecret$name</code> is required when this object is used.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -454,17 +451,16 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
-     * required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+     * References a Kubernetes secret resource. It holds a list of secrets. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      * <p>
      * <code>ImagePullSecret$name</code> is required when this object is used.
      * </p>
      * 
      * @param imagePullSecrets
-     *        References a Kubernetes secret resource. This object must start and end with an alphanumeric character, is
-     *        required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253
-     *        characters.</p>
+     *        References a Kubernetes secret resource. It holds a list of secrets. These secrets help to gain access to
+     *        pull an images from a private registry.</p>
      *        <p>
      *        <code>ImagePullSecret$name</code> is required when this object is used.
      * @return Returns a reference to this object so that method calls can be chained together.

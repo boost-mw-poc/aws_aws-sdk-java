@@ -65,6 +65,18 @@ public class GetSequenceStoreResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      */
     private String fallbackLocation;
+    /**
+     * <p>
+     * The S3 metadata of a sequence store, including the ARN and S3 URI of the S3 bucket.
+     * </p>
+     */
+    private SequenceStoreS3Access s3Access;
+    /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     */
+    private String eTagAlgorithmFamily;
 
     /**
      * <p>
@@ -347,6 +359,105 @@ public class GetSequenceStoreResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The S3 metadata of a sequence store, including the ARN and S3 URI of the S3 bucket.
+     * </p>
+     * 
+     * @param s3Access
+     *        The S3 metadata of a sequence store, including the ARN and S3 URI of the S3 bucket.
+     */
+
+    public void setS3Access(SequenceStoreS3Access s3Access) {
+        this.s3Access = s3Access;
+    }
+
+    /**
+     * <p>
+     * The S3 metadata of a sequence store, including the ARN and S3 URI of the S3 bucket.
+     * </p>
+     * 
+     * @return The S3 metadata of a sequence store, including the ARN and S3 URI of the S3 bucket.
+     */
+
+    public SequenceStoreS3Access getS3Access() {
+        return this.s3Access;
+    }
+
+    /**
+     * <p>
+     * The S3 metadata of a sequence store, including the ARN and S3 URI of the S3 bucket.
+     * </p>
+     * 
+     * @param s3Access
+     *        The S3 metadata of a sequence store, including the ARN and S3 URI of the S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSequenceStoreResult withS3Access(SequenceStoreS3Access s3Access) {
+        setS3Access(s3Access);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     * 
+     * @param eTagAlgorithmFamily
+     *        The algorithm family of the ETag.
+     * @see ETagAlgorithmFamily
+     */
+
+    public void setETagAlgorithmFamily(String eTagAlgorithmFamily) {
+        this.eTagAlgorithmFamily = eTagAlgorithmFamily;
+    }
+
+    /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     * 
+     * @return The algorithm family of the ETag.
+     * @see ETagAlgorithmFamily
+     */
+
+    public String getETagAlgorithmFamily() {
+        return this.eTagAlgorithmFamily;
+    }
+
+    /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     * 
+     * @param eTagAlgorithmFamily
+     *        The algorithm family of the ETag.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ETagAlgorithmFamily
+     */
+
+    public GetSequenceStoreResult withETagAlgorithmFamily(String eTagAlgorithmFamily) {
+        setETagAlgorithmFamily(eTagAlgorithmFamily);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     * 
+     * @param eTagAlgorithmFamily
+     *        The algorithm family of the ETag.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ETagAlgorithmFamily
+     */
+
+    public GetSequenceStoreResult withETagAlgorithmFamily(ETagAlgorithmFamily eTagAlgorithmFamily) {
+        this.eTagAlgorithmFamily = eTagAlgorithmFamily.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -371,7 +482,11 @@ public class GetSequenceStoreResult extends com.amazonaws.AmazonWebServiceResult
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getFallbackLocation() != null)
-            sb.append("FallbackLocation: ").append(getFallbackLocation());
+            sb.append("FallbackLocation: ").append(getFallbackLocation()).append(",");
+        if (getS3Access() != null)
+            sb.append("S3Access: ").append(getS3Access()).append(",");
+        if (getETagAlgorithmFamily() != null)
+            sb.append("ETagAlgorithmFamily: ").append(getETagAlgorithmFamily());
         sb.append("}");
         return sb.toString();
     }
@@ -414,6 +529,14 @@ public class GetSequenceStoreResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getFallbackLocation() != null && other.getFallbackLocation().equals(this.getFallbackLocation()) == false)
             return false;
+        if (other.getS3Access() == null ^ this.getS3Access() == null)
+            return false;
+        if (other.getS3Access() != null && other.getS3Access().equals(this.getS3Access()) == false)
+            return false;
+        if (other.getETagAlgorithmFamily() == null ^ this.getETagAlgorithmFamily() == null)
+            return false;
+        if (other.getETagAlgorithmFamily() != null && other.getETagAlgorithmFamily().equals(this.getETagAlgorithmFamily()) == false)
+            return false;
         return true;
     }
 
@@ -429,6 +552,8 @@ public class GetSequenceStoreResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getSseConfig() == null) ? 0 : getSseConfig().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getFallbackLocation() == null) ? 0 : getFallbackLocation().hashCode());
+        hashCode = prime * hashCode + ((getS3Access() == null) ? 0 : getS3Access().hashCode());
+        hashCode = prime * hashCode + ((getETagAlgorithmFamily() == null) ? 0 : getETagAlgorithmFamily().hashCode());
         return hashCode;
     }
 

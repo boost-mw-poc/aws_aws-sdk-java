@@ -76,6 +76,10 @@ public class SequenceStoreDetailJsonUnmarshaller implements Unmarshaller<Sequenc
                     context.nextToken();
                     sequenceStoreDetail.setFallbackLocation(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("eTagAlgorithmFamily", targetDepth)) {
+                    context.nextToken();
+                    sequenceStoreDetail.setETagAlgorithmFamily(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

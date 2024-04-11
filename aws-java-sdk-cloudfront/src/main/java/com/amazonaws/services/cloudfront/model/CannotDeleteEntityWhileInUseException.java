@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Key Value Store entity cannot be deleted while it is in use.
+ * The key value store entity cannot be deleted while it is in use.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

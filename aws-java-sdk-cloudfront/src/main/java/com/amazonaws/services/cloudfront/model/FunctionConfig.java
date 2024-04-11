@@ -40,7 +40,7 @@ public class FunctionConfig implements Serializable, Cloneable {
     private String runtime;
     /**
      * <p>
-     * The configuration for the Key Value Store associations.
+     * The configuration for the key value store associations.
      * </p>
      */
     private KeyValueStoreAssociations keyValueStoreAssociations;
@@ -146,11 +146,11 @@ public class FunctionConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The configuration for the Key Value Store associations.
+     * The configuration for the key value store associations.
      * </p>
      * 
      * @param keyValueStoreAssociations
-     *        The configuration for the Key Value Store associations.
+     *        The configuration for the key value store associations.
      */
 
     public void setKeyValueStoreAssociations(KeyValueStoreAssociations keyValueStoreAssociations) {
@@ -159,10 +159,10 @@ public class FunctionConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The configuration for the Key Value Store associations.
+     * The configuration for the key value store associations.
      * </p>
      * 
-     * @return The configuration for the Key Value Store associations.
+     * @return The configuration for the key value store associations.
      */
 
     public KeyValueStoreAssociations getKeyValueStoreAssociations() {
@@ -171,11 +171,11 @@ public class FunctionConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The configuration for the Key Value Store associations.
+     * The configuration for the key value store associations.
      * </p>
      * 
      * @param keyValueStoreAssociations
-     *        The configuration for the Key Value Store associations.
+     *        The configuration for the key value store associations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -37,7 +37,7 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
     private String reason;
     /**
      * <p>
-     * The state of the job needed to trigger the action. The only supported value is "<code>RUNNABLE</code>".
+     * The state of the job needed to trigger the action. The only supported value is <code>RUNNABLE</code>.
      * </p>
      */
     private String state;
@@ -51,7 +51,7 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The action to take when a job is at the head of the job queue in the specified state for the specified period of
-     * time. The only supported value is "<code>CANCEL</code>", which will cancel the job.
+     * time. The only supported value is <code>CANCEL</code>, which will cancel the job.
      * </p>
      */
     private String action;
@@ -98,11 +98,11 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The state of the job needed to trigger the action. The only supported value is "<code>RUNNABLE</code>".
+     * The state of the job needed to trigger the action. The only supported value is <code>RUNNABLE</code>.
      * </p>
      * 
      * @param state
-     *        The state of the job needed to trigger the action. The only supported value is "<code>RUNNABLE</code>".
+     *        The state of the job needed to trigger the action. The only supported value is <code>RUNNABLE</code>.
      * @see JobStateTimeLimitActionsState
      */
 
@@ -112,10 +112,10 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The state of the job needed to trigger the action. The only supported value is "<code>RUNNABLE</code>".
+     * The state of the job needed to trigger the action. The only supported value is <code>RUNNABLE</code>.
      * </p>
      * 
-     * @return The state of the job needed to trigger the action. The only supported value is "<code>RUNNABLE</code>".
+     * @return The state of the job needed to trigger the action. The only supported value is <code>RUNNABLE</code>.
      * @see JobStateTimeLimitActionsState
      */
 
@@ -125,11 +125,11 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The state of the job needed to trigger the action. The only supported value is "<code>RUNNABLE</code>".
+     * The state of the job needed to trigger the action. The only supported value is <code>RUNNABLE</code>.
      * </p>
      * 
      * @param state
-     *        The state of the job needed to trigger the action. The only supported value is "<code>RUNNABLE</code>".
+     *        The state of the job needed to trigger the action. The only supported value is <code>RUNNABLE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see JobStateTimeLimitActionsState
      */
@@ -141,11 +141,11 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The state of the job needed to trigger the action. The only supported value is "<code>RUNNABLE</code>".
+     * The state of the job needed to trigger the action. The only supported value is <code>RUNNABLE</code>.
      * </p>
      * 
      * @param state
-     *        The state of the job needed to trigger the action. The only supported value is "<code>RUNNABLE</code>".
+     *        The state of the job needed to trigger the action. The only supported value is <code>RUNNABLE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see JobStateTimeLimitActionsState
      */
@@ -204,12 +204,12 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The action to take when a job is at the head of the job queue in the specified state for the specified period of
-     * time. The only supported value is "<code>CANCEL</code>", which will cancel the job.
+     * time. The only supported value is <code>CANCEL</code>, which will cancel the job.
      * </p>
      * 
      * @param action
      *        The action to take when a job is at the head of the job queue in the specified state for the specified
-     *        period of time. The only supported value is "<code>CANCEL</code>", which will cancel the job.
+     *        period of time. The only supported value is <code>CANCEL</code>, which will cancel the job.
      * @see JobStateTimeLimitActionsAction
      */
 
@@ -220,11 +220,11 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The action to take when a job is at the head of the job queue in the specified state for the specified period of
-     * time. The only supported value is "<code>CANCEL</code>", which will cancel the job.
+     * time. The only supported value is <code>CANCEL</code>, which will cancel the job.
      * </p>
      * 
      * @return The action to take when a job is at the head of the job queue in the specified state for the specified
-     *         period of time. The only supported value is "<code>CANCEL</code>", which will cancel the job.
+     *         period of time. The only supported value is <code>CANCEL</code>, which will cancel the job.
      * @see JobStateTimeLimitActionsAction
      */
 
@@ -235,12 +235,12 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The action to take when a job is at the head of the job queue in the specified state for the specified period of
-     * time. The only supported value is "<code>CANCEL</code>", which will cancel the job.
+     * time. The only supported value is <code>CANCEL</code>, which will cancel the job.
      * </p>
      * 
      * @param action
      *        The action to take when a job is at the head of the job queue in the specified state for the specified
-     *        period of time. The only supported value is "<code>CANCEL</code>", which will cancel the job.
+     *        period of time. The only supported value is <code>CANCEL</code>, which will cancel the job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see JobStateTimeLimitActionsAction
      */
@@ -253,12 +253,12 @@ public class JobStateTimeLimitAction implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The action to take when a job is at the head of the job queue in the specified state for the specified period of
-     * time. The only supported value is "<code>CANCEL</code>", which will cancel the job.
+     * time. The only supported value is <code>CANCEL</code>, which will cancel the job.
      * </p>
      * 
      * @param action
      *        The action to take when a job is at the head of the job queue in the specified state for the specified
-     *        period of time. The only supported value is "<code>CANCEL</code>", which will cancel the job.
+     *        period of time. The only supported value is <code>CANCEL</code>, which will cancel the job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see JobStateTimeLimitActionsAction
      */

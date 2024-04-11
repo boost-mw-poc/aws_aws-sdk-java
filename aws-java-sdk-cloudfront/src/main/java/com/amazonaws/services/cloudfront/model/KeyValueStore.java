@@ -17,8 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Key Value Store. Use this to separate data from function code, allowing you to update data without having to
- * publish a new version of a function. The Key Value Store holds keys and their corresponding values.
+ * The key value store. Use this to separate data from function code, allowing you to update data without having to
+ * publish a new version of a function. The key value store holds keys and their corresponding values.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/KeyValueStore" target="_top">AWS API
@@ -29,48 +29,48 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The unique Id for the Key Value Store.
+     * The unique Id for the key value store.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * A comment for the Key Value Store.
+     * A comment for the key value store.
      * </p>
      */
     private String comment;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Value Store.
+     * The Amazon Resource Name (ARN) of the key value store.
      * </p>
      */
     private String aRN;
     /**
      * <p>
-     * The status of the Key Value Store.
+     * The status of the key value store.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The last-modified time of the Key Value Store.
+     * The last-modified time of the key value store.
      * </p>
      */
     private java.util.Date lastModifiedTime;
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store.
+     *        The name of the key value store.
      */
 
     public void setName(String name) {
@@ -79,10 +79,10 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      * 
-     * @return The name of the Key Value Store.
+     * @return The name of the key value store.
      */
 
     public String getName() {
@@ -91,11 +91,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store.
+     *        The name of the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,11 +106,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unique Id for the Key Value Store.
+     * The unique Id for the key value store.
      * </p>
      * 
      * @param id
-     *        The unique Id for the Key Value Store.
+     *        The unique Id for the key value store.
      */
 
     public void setId(String id) {
@@ -119,10 +119,10 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unique Id for the Key Value Store.
+     * The unique Id for the key value store.
      * </p>
      * 
-     * @return The unique Id for the Key Value Store.
+     * @return The unique Id for the key value store.
      */
 
     public String getId() {
@@ -131,11 +131,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The unique Id for the Key Value Store.
+     * The unique Id for the key value store.
      * </p>
      * 
      * @param id
-     *        The unique Id for the Key Value Store.
+     *        The unique Id for the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -146,11 +146,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A comment for the Key Value Store.
+     * A comment for the key value store.
      * </p>
      * 
      * @param comment
-     *        A comment for the Key Value Store.
+     *        A comment for the key value store.
      */
 
     public void setComment(String comment) {
@@ -159,10 +159,10 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A comment for the Key Value Store.
+     * A comment for the key value store.
      * </p>
      * 
-     * @return A comment for the Key Value Store.
+     * @return A comment for the key value store.
      */
 
     public String getComment() {
@@ -171,11 +171,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A comment for the Key Value Store.
+     * A comment for the key value store.
      * </p>
      * 
      * @param comment
-     *        A comment for the Key Value Store.
+     *        A comment for the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,11 +186,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Value Store.
+     * The Amazon Resource Name (ARN) of the key value store.
      * </p>
      * 
      * @param aRN
-     *        The Amazon Resource Name (ARN) of the Key Value Store.
+     *        The Amazon Resource Name (ARN) of the key value store.
      */
 
     public void setARN(String aRN) {
@@ -199,10 +199,10 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Value Store.
+     * The Amazon Resource Name (ARN) of the key value store.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Key Value Store.
+     * @return The Amazon Resource Name (ARN) of the key value store.
      */
 
     public String getARN() {
@@ -211,11 +211,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Value Store.
+     * The Amazon Resource Name (ARN) of the key value store.
      * </p>
      * 
      * @param aRN
-     *        The Amazon Resource Name (ARN) of the Key Value Store.
+     *        The Amazon Resource Name (ARN) of the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -226,11 +226,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the Key Value Store.
+     * The status of the key value store.
      * </p>
      * 
      * @param status
-     *        The status of the Key Value Store.
+     *        The status of the key value store.
      */
 
     public void setStatus(String status) {
@@ -239,10 +239,10 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the Key Value Store.
+     * The status of the key value store.
      * </p>
      * 
-     * @return The status of the Key Value Store.
+     * @return The status of the key value store.
      */
 
     public String getStatus() {
@@ -251,11 +251,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The status of the Key Value Store.
+     * The status of the key value store.
      * </p>
      * 
      * @param status
-     *        The status of the Key Value Store.
+     *        The status of the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -266,11 +266,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The last-modified time of the Key Value Store.
+     * The last-modified time of the key value store.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The last-modified time of the Key Value Store.
+     *        The last-modified time of the key value store.
      */
 
     public void setLastModifiedTime(java.util.Date lastModifiedTime) {
@@ -279,10 +279,10 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The last-modified time of the Key Value Store.
+     * The last-modified time of the key value store.
      * </p>
      * 
-     * @return The last-modified time of the Key Value Store.
+     * @return The last-modified time of the key value store.
      */
 
     public java.util.Date getLastModifiedTime() {
@@ -291,11 +291,11 @@ public class KeyValueStore implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The last-modified time of the Key Value Store.
+     * The last-modified time of the key value store.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The last-modified time of the Key Value Store.
+     *        The last-modified time of the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -54,6 +54,18 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you increase the allocated storage for a DB instance that uses Provisioned IOPS (<code>gp3</code>,
+     * <code>io1</code>, or <code>io2</code> storage type), you must also specify the <code>Iops</code> parameter. You
+     * can use the current value for <code>Iops</code>.
+     * </p>
+     * </li>
+     * </ul>
      */
     private Integer allocatedStorage;
     /**
@@ -618,6 +630,12 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * For RDS for MariaDB, RDS for MySQL, RDS for Oracle, and RDS for PostgreSQL - The value supplied must be at least
      * 10% greater than the current value. Values that are not at least 10% greater than the existing value are rounded
      * up so that they are 10% greater than the current value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * When you increase the Provisioned IOPS, you must also specify the <code>AllocatedStorage</code> parameter. You
+     * can use the current value for <code>AllocatedStorage</code>.
      * </p>
      * </li>
      * </ul>
@@ -1612,6 +1630,18 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you increase the allocated storage for a DB instance that uses Provisioned IOPS (<code>gp3</code>,
+     * <code>io1</code>, or <code>io2</code> storage type), you must also specify the <code>Iops</code> parameter. You
+     * can use the current value for <code>Iops</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param allocatedStorage
      *        The new amount of storage in gibibytes (GiB) to allocate for the DB instance.</p>
@@ -1622,6 +1652,18 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        When you increase the allocated storage for a DB instance that uses Provisioned IOPS (<code>gp3</code>,
+     *        <code>io1</code>, or <code>io2</code> storage type), you must also specify the <code>Iops</code>
+     *        parameter. You can use the current value for <code>Iops</code>.
+     *        </p>
+     *        </li>
      */
 
     public void setAllocatedStorage(Integer allocatedStorage) {
@@ -1640,6 +1682,18 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you increase the allocated storage for a DB instance that uses Provisioned IOPS (<code>gp3</code>,
+     * <code>io1</code>, or <code>io2</code> storage type), you must also specify the <code>Iops</code> parameter. You
+     * can use the current value for <code>Iops</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The new amount of storage in gibibytes (GiB) to allocate for the DB instance.</p>
      *         <p>
@@ -1649,6 +1703,18 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.
+     *         </p>
+     *         <p>
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         When you increase the allocated storage for a DB instance that uses Provisioned IOPS (<code>gp3</code>,
+     *         <code>io1</code>, or <code>io2</code> storage type), you must also specify the <code>Iops</code>
+     *         parameter. You can use the current value for <code>Iops</code>.
+     *         </p>
+     *         </li>
      */
 
     public Integer getAllocatedStorage() {
@@ -1667,6 +1733,18 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you increase the allocated storage for a DB instance that uses Provisioned IOPS (<code>gp3</code>,
+     * <code>io1</code>, or <code>io2</code> storage type), you must also specify the <code>Iops</code> parameter. You
+     * can use the current value for <code>Iops</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param allocatedStorage
      *        The new amount of storage in gibibytes (GiB) to allocate for the DB instance.</p>
@@ -1677,6 +1755,18 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        When you increase the allocated storage for a DB instance that uses Provisioned IOPS (<code>gp3</code>,
+     *        <code>io1</code>, or <code>io2</code> storage type), you must also specify the <code>Iops</code>
+     *        parameter. You can use the current value for <code>Iops</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5232,6 +5322,12 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * up so that they are 10% greater than the current value.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * When you increase the Provisioned IOPS, you must also specify the <code>AllocatedStorage</code> parameter. You
+     * can use the current value for <code>AllocatedStorage</code>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * Default: Uses existing setting
@@ -5265,6 +5361,12 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        For RDS for MariaDB, RDS for MySQL, RDS for Oracle, and RDS for PostgreSQL - The value supplied must be at
      *        least 10% greater than the current value. Values that are not at least 10% greater than the existing value
      *        are rounded up so that they are 10% greater than the current value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        When you increase the Provisioned IOPS, you must also specify the <code>AllocatedStorage</code> parameter.
+     *        You can use the current value for <code>AllocatedStorage</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -5308,6 +5410,12 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * up so that they are 10% greater than the current value.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * When you increase the Provisioned IOPS, you must also specify the <code>AllocatedStorage</code> parameter. You
+     * can use the current value for <code>AllocatedStorage</code>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * Default: Uses existing setting
@@ -5341,6 +5449,12 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         For RDS for MariaDB, RDS for MySQL, RDS for Oracle, and RDS for PostgreSQL - The value supplied must be
      *         at least 10% greater than the current value. Values that are not at least 10% greater than the existing
      *         value are rounded up so that they are 10% greater than the current value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         When you increase the Provisioned IOPS, you must also specify the <code>AllocatedStorage</code>
+     *         parameter. You can use the current value for <code>AllocatedStorage</code>.
      *         </p>
      *         </li>
      *         </ul>
@@ -5384,6 +5498,12 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * up so that they are 10% greater than the current value.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * When you increase the Provisioned IOPS, you must also specify the <code>AllocatedStorage</code> parameter. You
+     * can use the current value for <code>AllocatedStorage</code>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * Default: Uses existing setting
@@ -5417,6 +5537,12 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        For RDS for MariaDB, RDS for MySQL, RDS for Oracle, and RDS for PostgreSQL - The value supplied must be at
      *        least 10% greater than the current value. Values that are not at least 10% greater than the existing value
      *        are rounded up so that they are 10% greater than the current value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        When you increase the Provisioned IOPS, you must also specify the <code>AllocatedStorage</code> parameter.
+     *        You can use the current value for <code>AllocatedStorage</code>.
      *        </p>
      *        </li>
      *        </ul>

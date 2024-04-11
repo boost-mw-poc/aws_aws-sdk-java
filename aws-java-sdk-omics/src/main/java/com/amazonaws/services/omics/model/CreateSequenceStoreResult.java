@@ -65,6 +65,12 @@ public class CreateSequenceStoreResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      */
     private String fallbackLocation;
+    /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     */
+    private String eTagAlgorithmFamily;
 
     /**
      * <p>
@@ -347,6 +353,65 @@ public class CreateSequenceStoreResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     * 
+     * @param eTagAlgorithmFamily
+     *        The algorithm family of the ETag.
+     * @see ETagAlgorithmFamily
+     */
+
+    public void setETagAlgorithmFamily(String eTagAlgorithmFamily) {
+        this.eTagAlgorithmFamily = eTagAlgorithmFamily;
+    }
+
+    /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     * 
+     * @return The algorithm family of the ETag.
+     * @see ETagAlgorithmFamily
+     */
+
+    public String getETagAlgorithmFamily() {
+        return this.eTagAlgorithmFamily;
+    }
+
+    /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     * 
+     * @param eTagAlgorithmFamily
+     *        The algorithm family of the ETag.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ETagAlgorithmFamily
+     */
+
+    public CreateSequenceStoreResult withETagAlgorithmFamily(String eTagAlgorithmFamily) {
+        setETagAlgorithmFamily(eTagAlgorithmFamily);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The algorithm family of the ETag.
+     * </p>
+     * 
+     * @param eTagAlgorithmFamily
+     *        The algorithm family of the ETag.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ETagAlgorithmFamily
+     */
+
+    public CreateSequenceStoreResult withETagAlgorithmFamily(ETagAlgorithmFamily eTagAlgorithmFamily) {
+        this.eTagAlgorithmFamily = eTagAlgorithmFamily.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -371,7 +436,9 @@ public class CreateSequenceStoreResult extends com.amazonaws.AmazonWebServiceRes
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getFallbackLocation() != null)
-            sb.append("FallbackLocation: ").append(getFallbackLocation());
+            sb.append("FallbackLocation: ").append(getFallbackLocation()).append(",");
+        if (getETagAlgorithmFamily() != null)
+            sb.append("ETagAlgorithmFamily: ").append(getETagAlgorithmFamily());
         sb.append("}");
         return sb.toString();
     }
@@ -414,6 +481,10 @@ public class CreateSequenceStoreResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getFallbackLocation() != null && other.getFallbackLocation().equals(this.getFallbackLocation()) == false)
             return false;
+        if (other.getETagAlgorithmFamily() == null ^ this.getETagAlgorithmFamily() == null)
+            return false;
+        if (other.getETagAlgorithmFamily() != null && other.getETagAlgorithmFamily().equals(this.getETagAlgorithmFamily()) == false)
+            return false;
         return true;
     }
 
@@ -429,6 +500,7 @@ public class CreateSequenceStoreResult extends com.amazonaws.AmazonWebServiceRes
         hashCode = prime * hashCode + ((getSseConfig() == null) ? 0 : getSseConfig().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getFallbackLocation() == null) ? 0 : getFallbackLocation().hashCode());
+        hashCode = prime * hashCode + ((getETagAlgorithmFamily() == null) ? 0 : getETagAlgorithmFamily().hashCode());
         return hashCode;
     }
 

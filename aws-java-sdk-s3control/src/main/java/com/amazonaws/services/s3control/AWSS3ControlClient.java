@@ -948,8 +948,8 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * <dd>
      * <p>
      * For information about permissions required to use the Batch Operations, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Granting permissions for S3 Batch
-     * Operations</a> in the <i>Amazon S3 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-iam-role-policies.html">Granting
+     * permissions for S3 Batch Operations</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * </dd>
      * </dl>
@@ -1066,9 +1066,9 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <p>
      * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
-     * around managing Multi-Region Access Points, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
-     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * around working with Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRestrictions.html">Multi-Region
+     * Access Point restrictions and limitations</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * This request is asynchronous, meaning that you might receive a response before the command has completed. When
@@ -2800,9 +2800,9 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <p>
      * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
-     * around managing Multi-Region Access Points, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
-     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * around working with Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRestrictions.html">Multi-Region
+     * Access Point restrictions and limitations</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * This request is asynchronous, meaning that you might receive a response before the command has completed. When
@@ -3358,8 +3358,8 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * <p>
      * Retrieves the status of an asynchronous request to manage a Multi-Region Access Point. For more information about
      * managing Multi-Region Access Points and how asynchronous requests work, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
-     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MrapOperations.html">Using Multi-Region Access
+     * Points</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * The following actions are related to <code>GetMultiRegionAccessPoint</code>:
@@ -4601,13 +4601,11 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
     }
 
     /**
-     * <note>
      * <p>
      * Gets an Amazon S3 on Outposts bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html"> Using Amazon S3 on Outposts</a>
      * in the <i>Amazon S3 User Guide</i>.
      * </p>
-     * </note>
      * <p>
      * If you are using an identity other than the root user of the Amazon Web Services account that owns the Outposts
      * bucket, the calling identity must have the <code>s3-outposts:GetBucket</code> permissions on the specified
@@ -5496,7 +5494,7 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * <p>
      * The IAM role that S3 Access Grants assumes must have the following permissions specified in the trust policy when
      * registering the location: <code>sts:AssumeRole</code>, for directory users or groups <code>sts:SetContext</code>,
-     * and for IAM users or roles <code>sts:SourceIdentity</code>.
+     * and for IAM users or roles <code>sts:SetSourceIdentity</code>.
      * </p>
      * </dd>
      * </dl>
@@ -5675,9 +5673,9 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <p>
      * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
-     * around managing Multi-Region Access Points, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
-     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * around working with Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRestrictions.html">Multi-Region
+     * Access Point restrictions and limitations</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * The following actions are related to <code>GetMultiRegionAccessPoint</code>:
@@ -5783,9 +5781,9 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <p>
      * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
-     * around managing Multi-Region Access Points, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
-     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * around working with Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRestrictions.html">Multi-Region
+     * Access Point restrictions and limitations</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * The following actions are related to <code>GetMultiRegionAccessPointPolicy</code>:
@@ -5880,9 +5878,9 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <p>
      * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
-     * around managing Multi-Region Access Points, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
-     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * around working with Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRestrictions.html">Multi-Region
+     * Access Point restrictions and limitations</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * The following actions are related to <code>GetMultiRegionAccessPointPolicyStatus</code>:
@@ -6008,11 +6006,6 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * </li>
      * </ul>
-     * <note>
-     * <p>
-     * Your Amazon S3 bucket does not need to be in these five Regions.
-     * </p>
-     * </note>
      * 
      * @param getMultiRegionAccessPointRoutesRequest
      * @return Result of the GetMultiRegionAccessPointRoutes operation returned by the service.
@@ -6881,7 +6874,7 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Lists current S3 Batch Operations jobs as well as the jobs that have ended within the last 30 days for the Amazon
+     * Lists current S3 Batch Operations jobs as well as the jobs that have ended within the last 90 days for the Amazon
      * Web Services account making the request. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the
      * <i>Amazon S3 User Guide</i>.
@@ -7001,9 +6994,9 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <p>
      * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
-     * around managing Multi-Region Access Points, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
-     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * around working with Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRestrictions.html">Multi-Region
+     * Access Point restrictions and limitations</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * The following actions are related to <code>ListMultiRegionAccessPoint</code>:
@@ -8844,9 +8837,9 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * <p>
      * This action will always be routed to the US West (Oregon) Region. For more information about the restrictions
-     * around managing Multi-Region Access Points, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ManagingMultiRegionAccessPoints.html">Managing
-     * Multi-Region Access Points</a> in the <i>Amazon S3 User Guide</i>.
+     * around working with Multi-Region Access Points, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRestrictions.html">Multi-Region
+     * Access Point restrictions and limitations</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * The following actions are related to <code>PutMultiRegionAccessPointPolicy</code>:
@@ -9247,11 +9240,6 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * </p>
      * </li>
      * </ul>
-     * <note>
-     * <p>
-     * Your Amazon S3 bucket does not need to be in these five Regions.
-     * </p>
-     * </note>
      * 
      * @param submitMultiRegionAccessPointRoutesRequest
      * @return Result of the SubmitMultiRegionAccessPointRoutes operation returned by the service.

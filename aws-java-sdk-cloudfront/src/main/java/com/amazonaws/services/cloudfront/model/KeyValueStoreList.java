@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Key Value Store list.
+ * The key value store list.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/KeyValueStoreList" target="_top">AWS API
@@ -28,36 +28,36 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The next marker associated with the Key Value Store list.
+     * The next marker associated with the key value store list.
      * </p>
      */
     private String nextMarker;
     /**
      * <p>
-     * The maximum number of items in the Key Value Store list.
+     * The maximum number of items in the key value store list.
      * </p>
      */
     private Integer maxItems;
     /**
      * <p>
-     * The quantity of the Key Value Store list.
+     * The quantity of the key value store list.
      * </p>
      */
     private Integer quantity;
     /**
      * <p>
-     * The items of the Key Value Store list.
+     * The items of the key value store list.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<KeyValueStore> items;
 
     /**
      * <p>
-     * The next marker associated with the Key Value Store list.
+     * The next marker associated with the key value store list.
      * </p>
      * 
      * @param nextMarker
-     *        The next marker associated with the Key Value Store list.
+     *        The next marker associated with the key value store list.
      */
 
     public void setNextMarker(String nextMarker) {
@@ -66,10 +66,10 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The next marker associated with the Key Value Store list.
+     * The next marker associated with the key value store list.
      * </p>
      * 
-     * @return The next marker associated with the Key Value Store list.
+     * @return The next marker associated with the key value store list.
      */
 
     public String getNextMarker() {
@@ -78,11 +78,11 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The next marker associated with the Key Value Store list.
+     * The next marker associated with the key value store list.
      * </p>
      * 
      * @param nextMarker
-     *        The next marker associated with the Key Value Store list.
+     *        The next marker associated with the key value store list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum number of items in the Key Value Store list.
+     * The maximum number of items in the key value store list.
      * </p>
      * 
      * @param maxItems
-     *        The maximum number of items in the Key Value Store list.
+     *        The maximum number of items in the key value store list.
      */
 
     public void setMaxItems(Integer maxItems) {
@@ -106,10 +106,10 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum number of items in the Key Value Store list.
+     * The maximum number of items in the key value store list.
      * </p>
      * 
-     * @return The maximum number of items in the Key Value Store list.
+     * @return The maximum number of items in the key value store list.
      */
 
     public Integer getMaxItems() {
@@ -118,11 +118,11 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum number of items in the Key Value Store list.
+     * The maximum number of items in the key value store list.
      * </p>
      * 
      * @param maxItems
-     *        The maximum number of items in the Key Value Store list.
+     *        The maximum number of items in the key value store list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The quantity of the Key Value Store list.
+     * The quantity of the key value store list.
      * </p>
      * 
      * @param quantity
-     *        The quantity of the Key Value Store list.
+     *        The quantity of the key value store list.
      */
 
     public void setQuantity(Integer quantity) {
@@ -146,10 +146,10 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The quantity of the Key Value Store list.
+     * The quantity of the key value store list.
      * </p>
      * 
-     * @return The quantity of the Key Value Store list.
+     * @return The quantity of the key value store list.
      */
 
     public Integer getQuantity() {
@@ -158,11 +158,11 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The quantity of the Key Value Store list.
+     * The quantity of the key value store list.
      * </p>
      * 
      * @param quantity
-     *        The quantity of the Key Value Store list.
+     *        The quantity of the key value store list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,10 +173,10 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The items of the Key Value Store list.
+     * The items of the key value store list.
      * </p>
      * 
-     * @return The items of the Key Value Store list.
+     * @return The items of the key value store list.
      */
 
     public java.util.List<KeyValueStore> getItems() {
@@ -188,11 +188,11 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The items of the Key Value Store list.
+     * The items of the key value store list.
      * </p>
      * 
      * @param items
-     *        The items of the Key Value Store list.
+     *        The items of the key value store list.
      */
 
     public void setItems(java.util.Collection<KeyValueStore> items) {
@@ -206,7 +206,7 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The items of the Key Value Store list.
+     * The items of the key value store list.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -215,7 +215,7 @@ public class KeyValueStoreList implements Serializable, Cloneable {
      * </p>
      * 
      * @param items
-     *        The items of the Key Value Store list.
+     *        The items of the key value store list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -231,11 +231,11 @@ public class KeyValueStoreList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The items of the Key Value Store list.
+     * The items of the key value store list.
      * </p>
      * 
      * @param items
-     *        The items of the Key Value Store list.
+     *        The items of the key value store list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

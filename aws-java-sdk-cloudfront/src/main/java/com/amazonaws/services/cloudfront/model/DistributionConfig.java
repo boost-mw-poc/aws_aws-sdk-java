@@ -184,9 +184,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * <p>
      * A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution. To specify a web
      * ACL created using the latest version of WAF, use the ACL ARN, for example
-     * <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>
+     * <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>
      * . To specify a web ACL created using WAF Classic, use the ACL ID, for example
-     * <code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.
+     * <code>a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>.
      * </p>
      * <p>
      * WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that are forwarded to
@@ -200,9 +200,9 @@ public class DistributionConfig implements Serializable, Cloneable {
     private String webACLId;
     /**
      * <p>
-     * (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with CloudFront. The
-     * default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically
-     * use an earlier HTTP version.
+     * (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The default
+     * value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically use an
+     * earlier HTTP version.
      * </p>
      * <p>
      * For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server Name
@@ -1386,9 +1386,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * <p>
      * A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution. To specify a web
      * ACL created using the latest version of WAF, use the ACL ARN, for example
-     * <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>
+     * <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>
      * . To specify a web ACL created using WAF Classic, use the ACL ID, for example
-     * <code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.
+     * <code>a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>.
      * </p>
      * <p>
      * WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that are forwarded to
@@ -1402,9 +1402,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * @param webACLId
      *        A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution. To
      *        specify a web ACL created using the latest version of WAF, use the ACL ARN, for example
-     *        <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>
+     *        <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>
      *        . To specify a web ACL created using WAF Classic, use the ACL ID, for example
-     *        <code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.</p>
+     *        <code>a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>.</p>
      *        <p>
      *        WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that are forwarded to
      *        CloudFront, and lets you control access to your content. Based on conditions that you specify, such as the
@@ -1423,9 +1423,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * <p>
      * A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution. To specify a web
      * ACL created using the latest version of WAF, use the ACL ARN, for example
-     * <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>
+     * <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>
      * . To specify a web ACL created using WAF Classic, use the ACL ID, for example
-     * <code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.
+     * <code>a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>.
      * </p>
      * <p>
      * WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that are forwarded to
@@ -1438,9 +1438,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * 
      * @return A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution. To
      *         specify a web ACL created using the latest version of WAF, use the ACL ARN, for example
-     *         <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>
+     *         <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>
      *         . To specify a web ACL created using WAF Classic, use the ACL ID, for example
-     *         <code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.</p>
+     *         <code>a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>.</p>
      *         <p>
      *         WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that are forwarded to
      *         CloudFront, and lets you control access to your content. Based on conditions that you specify, such as
@@ -1459,9 +1459,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * <p>
      * A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution. To specify a web
      * ACL created using the latest version of WAF, use the ACL ARN, for example
-     * <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>
+     * <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>
      * . To specify a web ACL created using WAF Classic, use the ACL ID, for example
-     * <code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.
+     * <code>a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>.
      * </p>
      * <p>
      * WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that are forwarded to
@@ -1475,9 +1475,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * @param webACLId
      *        A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution. To
      *        specify a web ACL created using the latest version of WAF, use the ACL ARN, for example
-     *        <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>
+     *        <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>
      *        . To specify a web ACL created using WAF Classic, use the ACL ID, for example
-     *        <code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.</p>
+     *        <code>a1b2c3d4-5678-90ab-cdef-EXAMPLE11111</code>.</p>
      *        <p>
      *        WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that are forwarded to
      *        CloudFront, and lets you control access to your content. Based on conditions that you specify, such as the
@@ -1496,9 +1496,9 @@ public class DistributionConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with CloudFront. The
-     * default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically
-     * use an earlier HTTP version.
+     * (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The default
+     * value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically use an
+     * earlier HTTP version.
      * </p>
      * <p>
      * For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server Name
@@ -1515,9 +1515,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * </p>
      * 
      * @param httpVersion
-     *        (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with
-     *        CloudFront. The default value for new web distributions is <code>http2</code>. Viewers that don't support
-     *        HTTP/2 automatically use an earlier HTTP version.</p>
+     *        (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The
+     *        default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2
+     *        automatically use an earlier HTTP version.</p>
      *        <p>
      *        For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server
      *        Name Indication (SNI).
@@ -1539,9 +1539,9 @@ public class DistributionConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with CloudFront. The
-     * default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically
-     * use an earlier HTTP version.
+     * (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The default
+     * value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically use an
+     * earlier HTTP version.
      * </p>
      * <p>
      * For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server Name
@@ -1557,9 +1557,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * >Supported protocols and ciphers between viewers and CloudFront</a>.
      * </p>
      * 
-     * @return (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with
-     *         CloudFront. The default value for new web distributions is <code>http2</code>. Viewers that don't support
-     *         HTTP/2 automatically use an earlier HTTP version.</p>
+     * @return (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The
+     *         default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2
+     *         automatically use an earlier HTTP version.</p>
      *         <p>
      *         For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server
      *         Name Indication (SNI).
@@ -1581,9 +1581,9 @@ public class DistributionConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with CloudFront. The
-     * default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically
-     * use an earlier HTTP version.
+     * (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The default
+     * value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically use an
+     * earlier HTTP version.
      * </p>
      * <p>
      * For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server Name
@@ -1600,9 +1600,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * </p>
      * 
      * @param httpVersion
-     *        (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with
-     *        CloudFront. The default value for new web distributions is <code>http2</code>. Viewers that don't support
-     *        HTTP/2 automatically use an earlier HTTP version.</p>
+     *        (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The
+     *        default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2
+     *        automatically use an earlier HTTP version.</p>
      *        <p>
      *        For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server
      *        Name Indication (SNI).
@@ -1626,9 +1626,9 @@ public class DistributionConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with CloudFront. The
-     * default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically
-     * use an earlier HTTP version.
+     * (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The default
+     * value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically use an
+     * earlier HTTP version.
      * </p>
      * <p>
      * For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server Name
@@ -1645,9 +1645,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * </p>
      * 
      * @param httpVersion
-     *        (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with
-     *        CloudFront. The default value for new web distributions is <code>http2</code>. Viewers that don't support
-     *        HTTP/2 automatically use an earlier HTTP version.</p>
+     *        (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The
+     *        default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2
+     *        automatically use an earlier HTTP version.</p>
      *        <p>
      *        For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server
      *        Name Indication (SNI).
@@ -1669,9 +1669,9 @@ public class DistributionConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with CloudFront. The
-     * default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically
-     * use an earlier HTTP version.
+     * (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The default
+     * value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2 automatically use an
+     * earlier HTTP version.
      * </p>
      * <p>
      * For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server Name
@@ -1688,9 +1688,9 @@ public class DistributionConfig implements Serializable, Cloneable {
      * </p>
      * 
      * @param httpVersion
-     *        (Optional) Specify the maximum HTTP version(s) that you want viewers to use to communicate with
-     *        CloudFront. The default value for new web distributions is <code>http2</code>. Viewers that don't support
-     *        HTTP/2 automatically use an earlier HTTP version.</p>
+     *        (Optional) Specify the HTTP version(s) that you want viewers to use to communicate with CloudFront. The
+     *        default value for new web distributions is <code>http2</code>. Viewers that don't support HTTP/2
+     *        automatically use an earlier HTTP version.</p>
      *        <p>
      *        For viewers and CloudFront to use HTTP/2, viewers must support TLSv1.2 or later, and must support Server
      *        Name Indication (SNI).

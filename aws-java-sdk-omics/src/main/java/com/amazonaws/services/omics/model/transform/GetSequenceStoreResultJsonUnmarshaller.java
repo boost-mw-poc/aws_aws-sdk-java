@@ -76,6 +76,14 @@ public class GetSequenceStoreResultJsonUnmarshaller implements Unmarshaller<GetS
                     context.nextToken();
                     getSequenceStoreResult.setFallbackLocation(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("s3Access", targetDepth)) {
+                    context.nextToken();
+                    getSequenceStoreResult.setS3Access(SequenceStoreS3AccessJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("eTagAlgorithmFamily", targetDepth)) {
+                    context.nextToken();
+                    getSequenceStoreResult.setETagAlgorithmFamily(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

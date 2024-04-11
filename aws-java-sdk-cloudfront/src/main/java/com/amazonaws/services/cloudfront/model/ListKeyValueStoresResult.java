@@ -25,18 +25,18 @@ public class ListKeyValueStoresResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The resulting Key Value Stores list.
+     * The resulting key value stores list.
      * </p>
      */
     private KeyValueStoreList keyValueStoreList;
 
     /**
      * <p>
-     * The resulting Key Value Stores list.
+     * The resulting key value stores list.
      * </p>
      * 
      * @param keyValueStoreList
-     *        The resulting Key Value Stores list.
+     *        The resulting key value stores list.
      */
 
     public void setKeyValueStoreList(KeyValueStoreList keyValueStoreList) {
@@ -45,10 +45,10 @@ public class ListKeyValueStoresResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The resulting Key Value Stores list.
+     * The resulting key value stores list.
      * </p>
      * 
-     * @return The resulting Key Value Stores list.
+     * @return The resulting key value stores list.
      */
 
     public KeyValueStoreList getKeyValueStoreList() {
@@ -57,11 +57,11 @@ public class ListKeyValueStoresResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The resulting Key Value Stores list.
+     * The resulting key value stores list.
      * </p>
      * 
      * @param keyValueStoreList
-     *        The resulting Key Value Stores list.
+     *        The resulting key value stores list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

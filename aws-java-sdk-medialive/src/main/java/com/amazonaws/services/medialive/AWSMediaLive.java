@@ -272,6 +272,106 @@ public interface AWSMediaLive {
     CreateChannelResult createChannel(CreateChannelRequest createChannelRequest);
 
     /**
+     * Creates a cloudwatch alarm template to dynamically generate cloudwatch metric alarms on targeted resource types.
+     * 
+     * @param createCloudWatchAlarmTemplateRequest
+     *        Placeholder documentation for CreateCloudWatchAlarmTemplateRequest
+     * @return Result of the CreateCloudWatchAlarmTemplate operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.CreateCloudWatchAlarmTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateCloudWatchAlarmTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateCloudWatchAlarmTemplateResult createCloudWatchAlarmTemplate(CreateCloudWatchAlarmTemplateRequest createCloudWatchAlarmTemplateRequest);
+
+    /**
+     * Creates a cloudwatch alarm template group to group your cloudwatch alarm templates and to attach to signal maps
+     * for dynamically creating alarms.
+     * 
+     * @param createCloudWatchAlarmTemplateGroupRequest
+     *        Placeholder documentation for CreateCloudWatchAlarmTemplateGroupRequest
+     * @return Result of the CreateCloudWatchAlarmTemplateGroup operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.CreateCloudWatchAlarmTemplateGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateCloudWatchAlarmTemplateGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateCloudWatchAlarmTemplateGroupResult createCloudWatchAlarmTemplateGroup(
+            CreateCloudWatchAlarmTemplateGroupRequest createCloudWatchAlarmTemplateGroupRequest);
+
+    /**
+     * Creates an eventbridge rule template to monitor events and send notifications to your targeted resources.
+     * 
+     * @param createEventBridgeRuleTemplateRequest
+     *        Placeholder documentation for CreateEventBridgeRuleTemplateRequest
+     * @return Result of the CreateEventBridgeRuleTemplate operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.CreateEventBridgeRuleTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateEventBridgeRuleTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateEventBridgeRuleTemplateResult createEventBridgeRuleTemplate(CreateEventBridgeRuleTemplateRequest createEventBridgeRuleTemplateRequest);
+
+    /**
+     * Creates an eventbridge rule template group to group your eventbridge rule templates and to attach to signal maps
+     * for dynamically creating notification rules.
+     * 
+     * @param createEventBridgeRuleTemplateGroupRequest
+     *        Placeholder documentation for CreateEventBridgeRuleTemplateGroupRequest
+     * @return Result of the CreateEventBridgeRuleTemplateGroup operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.CreateEventBridgeRuleTemplateGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateEventBridgeRuleTemplateGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateEventBridgeRuleTemplateGroupResult createEventBridgeRuleTemplateGroup(
+            CreateEventBridgeRuleTemplateGroupRequest createEventBridgeRuleTemplateGroupRequest);
+
+    /**
      * Create an input
      * 
      * @param createInputRequest
@@ -402,6 +502,31 @@ public interface AWSMediaLive {
     CreatePartnerInputResult createPartnerInput(CreatePartnerInputRequest createPartnerInputRequest);
 
     /**
+     * Initiates the creation of a new signal map. Will discover a new mediaResourceMap based on the provided
+     * discoveryEntryPointArn.
+     * 
+     * @param createSignalMapRequest
+     *        Placeholder documentation for CreateSignalMapRequest
+     * @return Result of the CreateSignalMap operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.CreateSignalMap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CreateSignalMap" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateSignalMapResult createSignalMap(CreateSignalMapRequest createSignalMapRequest);
+
+    /**
      * Create tags for a resource
      * 
      * @param createTagsRequest
@@ -448,6 +573,106 @@ public interface AWSMediaLive {
      *      Documentation</a>
      */
     DeleteChannelResult deleteChannel(DeleteChannelRequest deleteChannelRequest);
+
+    /**
+     * Deletes a cloudwatch alarm template.
+     * 
+     * @param deleteCloudWatchAlarmTemplateRequest
+     *        Placeholder documentation for DeleteCloudWatchAlarmTemplateRequest
+     * @return Result of the DeleteCloudWatchAlarmTemplate operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.DeleteCloudWatchAlarmTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteCloudWatchAlarmTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteCloudWatchAlarmTemplateResult deleteCloudWatchAlarmTemplate(DeleteCloudWatchAlarmTemplateRequest deleteCloudWatchAlarmTemplateRequest);
+
+    /**
+     * Deletes a cloudwatch alarm template group. You must detach this group from all signal maps and ensure its
+     * existing templates are moved to another group or deleted.
+     * 
+     * @param deleteCloudWatchAlarmTemplateGroupRequest
+     *        Placeholder documentation for DeleteCloudWatchAlarmTemplateGroupRequest
+     * @return Result of the DeleteCloudWatchAlarmTemplateGroup operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.DeleteCloudWatchAlarmTemplateGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteCloudWatchAlarmTemplateGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteCloudWatchAlarmTemplateGroupResult deleteCloudWatchAlarmTemplateGroup(
+            DeleteCloudWatchAlarmTemplateGroupRequest deleteCloudWatchAlarmTemplateGroupRequest);
+
+    /**
+     * Deletes an eventbridge rule template.
+     * 
+     * @param deleteEventBridgeRuleTemplateRequest
+     *        Placeholder documentation for DeleteEventBridgeRuleTemplateRequest
+     * @return Result of the DeleteEventBridgeRuleTemplate operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.DeleteEventBridgeRuleTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteEventBridgeRuleTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteEventBridgeRuleTemplateResult deleteEventBridgeRuleTemplate(DeleteEventBridgeRuleTemplateRequest deleteEventBridgeRuleTemplateRequest);
+
+    /**
+     * Deletes an eventbridge rule template group. You must detach this group from all signal maps and ensure its
+     * existing templates are moved to another group or deleted.
+     * 
+     * @param deleteEventBridgeRuleTemplateGroupRequest
+     *        Placeholder documentation for DeleteEventBridgeRuleTemplateGroupRequest
+     * @return Result of the DeleteEventBridgeRuleTemplateGroup operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.DeleteEventBridgeRuleTemplateGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteEventBridgeRuleTemplateGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteEventBridgeRuleTemplateGroupResult deleteEventBridgeRuleTemplateGroup(
+            DeleteEventBridgeRuleTemplateGroupRequest deleteEventBridgeRuleTemplateGroupRequest);
 
     /**
      * Deletes the input end point
@@ -612,6 +837,30 @@ public interface AWSMediaLive {
      *      Documentation</a>
      */
     DeleteScheduleResult deleteSchedule(DeleteScheduleRequest deleteScheduleRequest);
+
+    /**
+     * Deletes the specified signal map.
+     * 
+     * @param deleteSignalMapRequest
+     *        Placeholder documentation for DeleteSignalMapRequest
+     * @return Result of the DeleteSignalMap operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.DeleteSignalMap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/DeleteSignalMap" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteSignalMapResult deleteSignalMap(DeleteSignalMapRequest deleteSignalMapRequest);
 
     /**
      * Removes tags for a resource
@@ -947,6 +1196,116 @@ public interface AWSMediaLive {
     DescribeThumbnailsResult describeThumbnails(DescribeThumbnailsRequest describeThumbnailsRequest);
 
     /**
+     * Retrieves the specified cloudwatch alarm template.
+     * 
+     * @param getCloudWatchAlarmTemplateRequest
+     *        Placeholder documentation for GetCloudWatchAlarmTemplateRequest
+     * @return Result of the GetCloudWatchAlarmTemplate operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.GetCloudWatchAlarmTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/GetCloudWatchAlarmTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetCloudWatchAlarmTemplateResult getCloudWatchAlarmTemplate(GetCloudWatchAlarmTemplateRequest getCloudWatchAlarmTemplateRequest);
+
+    /**
+     * Retrieves the specified cloudwatch alarm template group.
+     * 
+     * @param getCloudWatchAlarmTemplateGroupRequest
+     *        Placeholder documentation for GetCloudWatchAlarmTemplateGroupRequest
+     * @return Result of the GetCloudWatchAlarmTemplateGroup operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.GetCloudWatchAlarmTemplateGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/GetCloudWatchAlarmTemplateGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetCloudWatchAlarmTemplateGroupResult getCloudWatchAlarmTemplateGroup(GetCloudWatchAlarmTemplateGroupRequest getCloudWatchAlarmTemplateGroupRequest);
+
+    /**
+     * Retrieves the specified eventbridge rule template.
+     * 
+     * @param getEventBridgeRuleTemplateRequest
+     *        Placeholder documentation for GetEventBridgeRuleTemplateRequest
+     * @return Result of the GetEventBridgeRuleTemplate operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.GetEventBridgeRuleTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/GetEventBridgeRuleTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetEventBridgeRuleTemplateResult getEventBridgeRuleTemplate(GetEventBridgeRuleTemplateRequest getEventBridgeRuleTemplateRequest);
+
+    /**
+     * Retrieves the specified eventbridge rule template group.
+     * 
+     * @param getEventBridgeRuleTemplateGroupRequest
+     *        Placeholder documentation for GetEventBridgeRuleTemplateGroupRequest
+     * @return Result of the GetEventBridgeRuleTemplateGroup operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.GetEventBridgeRuleTemplateGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/GetEventBridgeRuleTemplateGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetEventBridgeRuleTemplateGroupResult getEventBridgeRuleTemplateGroup(GetEventBridgeRuleTemplateGroupRequest getEventBridgeRuleTemplateGroupRequest);
+
+    /**
+     * Retrieves the specified signal map.
+     * 
+     * @param getSignalMapRequest
+     *        Placeholder documentation for GetSignalMapRequest
+     * @return Result of the GetSignalMap operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.GetSignalMap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/GetSignalMap" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetSignalMapResult getSignalMap(GetSignalMapRequest getSignalMapRequest);
+
+    /**
      * Produces list of channels that have been created
      * 
      * @param listChannelsRequest
@@ -969,6 +1328,94 @@ public interface AWSMediaLive {
      *      Documentation</a>
      */
     ListChannelsResult listChannels(ListChannelsRequest listChannelsRequest);
+
+    /**
+     * Lists cloudwatch alarm template groups.
+     * 
+     * @param listCloudWatchAlarmTemplateGroupsRequest
+     *        Placeholder documentation for ListCloudWatchAlarmTemplateGroupsRequest
+     * @return Result of the ListCloudWatchAlarmTemplateGroups operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.ListCloudWatchAlarmTemplateGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListCloudWatchAlarmTemplateGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListCloudWatchAlarmTemplateGroupsResult listCloudWatchAlarmTemplateGroups(ListCloudWatchAlarmTemplateGroupsRequest listCloudWatchAlarmTemplateGroupsRequest);
+
+    /**
+     * Lists cloudwatch alarm templates.
+     * 
+     * @param listCloudWatchAlarmTemplatesRequest
+     *        Placeholder documentation for ListCloudWatchAlarmTemplatesRequest
+     * @return Result of the ListCloudWatchAlarmTemplates operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.ListCloudWatchAlarmTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListCloudWatchAlarmTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListCloudWatchAlarmTemplatesResult listCloudWatchAlarmTemplates(ListCloudWatchAlarmTemplatesRequest listCloudWatchAlarmTemplatesRequest);
+
+    /**
+     * Lists eventbridge rule template groups.
+     * 
+     * @param listEventBridgeRuleTemplateGroupsRequest
+     *        Placeholder documentation for ListEventBridgeRuleTemplateGroupsRequest
+     * @return Result of the ListEventBridgeRuleTemplateGroups operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.ListEventBridgeRuleTemplateGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListEventBridgeRuleTemplateGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEventBridgeRuleTemplateGroupsResult listEventBridgeRuleTemplateGroups(ListEventBridgeRuleTemplateGroupsRequest listEventBridgeRuleTemplateGroupsRequest);
+
+    /**
+     * Lists eventbridge rule templates.
+     * 
+     * @param listEventBridgeRuleTemplatesRequest
+     *        Placeholder documentation for ListEventBridgeRuleTemplatesRequest
+     * @return Result of the ListEventBridgeRuleTemplates operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.ListEventBridgeRuleTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListEventBridgeRuleTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEventBridgeRuleTemplatesResult listEventBridgeRuleTemplates(ListEventBridgeRuleTemplatesRequest listEventBridgeRuleTemplatesRequest);
 
     /**
      * List input devices that are currently being transferred. List input devices that you are transferring from your
@@ -1171,6 +1618,28 @@ public interface AWSMediaLive {
     ListReservationsResult listReservations(ListReservationsRequest listReservationsRequest);
 
     /**
+     * Lists signal maps.
+     * 
+     * @param listSignalMapsRequest
+     *        Placeholder documentation for ListSignalMapsRequest
+     * @return Result of the ListSignalMaps operation returned by the service.
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @sample AWSMediaLive.ListSignalMaps
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/ListSignalMaps" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListSignalMapsResult listSignalMaps(ListSignalMapsRequest listSignalMapsRequest);
+
+    /**
      * Produces list of tags that have been created for a resource
      * 
      * @param listTagsForResourceRequest
@@ -1337,6 +1806,30 @@ public interface AWSMediaLive {
     StartChannelResult startChannel(StartChannelRequest startChannelRequest);
 
     /**
+     * Initiates a deployment to delete the monitor of the specified signal map.
+     * 
+     * @param startDeleteMonitorDeploymentRequest
+     *        Placeholder documentation for StartDeleteMonitorDeploymentRequest
+     * @return Result of the StartDeleteMonitorDeployment operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.StartDeleteMonitorDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/StartDeleteMonitorDeployment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartDeleteMonitorDeploymentResult startDeleteMonitorDeployment(StartDeleteMonitorDeploymentRequest startDeleteMonitorDeploymentRequest);
+
+    /**
      * Start an input device that is attached to a MediaConnect flow. (There is no need to start a device that is
      * attached to a MediaLive input; MediaLive starts the device when the channel starts.)
      * 
@@ -1399,6 +1892,30 @@ public interface AWSMediaLive {
     StartInputDeviceMaintenanceWindowResult startInputDeviceMaintenanceWindow(StartInputDeviceMaintenanceWindowRequest startInputDeviceMaintenanceWindowRequest);
 
     /**
+     * Initiates a deployment to deploy the latest monitor of the specified signal map.
+     * 
+     * @param startMonitorDeploymentRequest
+     *        Placeholder documentation for StartMonitorDeploymentRequest
+     * @return Result of the StartMonitorDeployment operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.StartMonitorDeployment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/StartMonitorDeployment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartMonitorDeploymentResult startMonitorDeployment(StartMonitorDeploymentRequest startMonitorDeploymentRequest);
+
+    /**
      * Start (run) the multiplex. Starting the multiplex does not start the channels. You must explicitly start each
      * channel.
      * 
@@ -1427,6 +1944,31 @@ public interface AWSMediaLive {
      *      Documentation</a>
      */
     StartMultiplexResult startMultiplex(StartMultiplexRequest startMultiplexRequest);
+
+    /**
+     * Initiates an update for the specified signal map. Will discover a new signal map if a changed
+     * discoveryEntryPointArn is provided.
+     * 
+     * @param startUpdateSignalMapRequest
+     *        Placeholder documentation for StartUpdateSignalMapRequest
+     * @return Result of the StartUpdateSignalMap operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.StartUpdateSignalMap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/StartUpdateSignalMap" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StartUpdateSignalMapResult startUpdateSignalMap(StartUpdateSignalMapRequest startUpdateSignalMapRequest);
 
     /**
      * Stops a running channel
@@ -1626,6 +2168,104 @@ public interface AWSMediaLive {
      *      API Documentation</a>
      */
     UpdateChannelClassResult updateChannelClass(UpdateChannelClassRequest updateChannelClassRequest);
+
+    /**
+     * Updates the specified cloudwatch alarm template.
+     * 
+     * @param updateCloudWatchAlarmTemplateRequest
+     *        Placeholder documentation for UpdateCloudWatchAlarmTemplateRequest
+     * @return Result of the UpdateCloudWatchAlarmTemplate operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.UpdateCloudWatchAlarmTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateCloudWatchAlarmTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateCloudWatchAlarmTemplateResult updateCloudWatchAlarmTemplate(UpdateCloudWatchAlarmTemplateRequest updateCloudWatchAlarmTemplateRequest);
+
+    /**
+     * Updates the specified cloudwatch alarm template group.
+     * 
+     * @param updateCloudWatchAlarmTemplateGroupRequest
+     *        Placeholder documentation for UpdateCloudWatchAlarmTemplateGroupRequest
+     * @return Result of the UpdateCloudWatchAlarmTemplateGroup operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.UpdateCloudWatchAlarmTemplateGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateCloudWatchAlarmTemplateGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateCloudWatchAlarmTemplateGroupResult updateCloudWatchAlarmTemplateGroup(
+            UpdateCloudWatchAlarmTemplateGroupRequest updateCloudWatchAlarmTemplateGroupRequest);
+
+    /**
+     * Updates the specified eventbridge rule template.
+     * 
+     * @param updateEventBridgeRuleTemplateRequest
+     *        Placeholder documentation for UpdateEventBridgeRuleTemplateRequest
+     * @return Result of the UpdateEventBridgeRuleTemplate operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.UpdateEventBridgeRuleTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateEventBridgeRuleTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateEventBridgeRuleTemplateResult updateEventBridgeRuleTemplate(UpdateEventBridgeRuleTemplateRequest updateEventBridgeRuleTemplateRequest);
+
+    /**
+     * Updates the specified eventbridge rule template group.
+     * 
+     * @param updateEventBridgeRuleTemplateGroupRequest
+     *        Placeholder documentation for UpdateEventBridgeRuleTemplateGroupRequest
+     * @return Result of the UpdateEventBridgeRuleTemplateGroup operation returned by the service.
+     * @throws BadRequestException
+     *         BadRequestException 400 response
+     * @throws InternalServerErrorException
+     *         InternalServerErrorException 500 response
+     * @throws ForbiddenException
+     *         ForbiddenException 403 response
+     * @throws NotFoundException
+     *         NotFoundException 404 response
+     * @throws TooManyRequestsException
+     *         TooManyRequestsException 429 response
+     * @throws ConflictException
+     *         ConflictException 409 response
+     * @sample AWSMediaLive.UpdateEventBridgeRuleTemplateGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/UpdateEventBridgeRuleTemplateGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateEventBridgeRuleTemplateGroupResult updateEventBridgeRuleTemplateGroup(
+            UpdateEventBridgeRuleTemplateGroupRequest updateEventBridgeRuleTemplateGroupRequest);
 
     /**
      * Updates an input.

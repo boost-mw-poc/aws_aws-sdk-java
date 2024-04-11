@@ -74,7 +74,8 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
     private String dnsPolicy;
     /**
      * <p>
-     * Displays the reference pointer to the Kubernetes secret resource.
+     * Displays the reference pointer to the Kubernetes secret resource. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      */
     private java.util.List<ImagePullSecret> imagePullSecrets;
@@ -436,10 +437,12 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Displays the reference pointer to the Kubernetes secret resource.
+     * Displays the reference pointer to the Kubernetes secret resource. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      * 
-     * @return Displays the reference pointer to the Kubernetes secret resource.
+     * @return Displays the reference pointer to the Kubernetes secret resource. These secrets help to gain access to
+     *         pull an images from a private registry.
      */
 
     public java.util.List<ImagePullSecret> getImagePullSecrets() {
@@ -448,11 +451,13 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Displays the reference pointer to the Kubernetes secret resource.
+     * Displays the reference pointer to the Kubernetes secret resource. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      * 
      * @param imagePullSecrets
-     *        Displays the reference pointer to the Kubernetes secret resource.
+     *        Displays the reference pointer to the Kubernetes secret resource. These secrets help to gain access to
+     *        pull an images from a private registry.
      */
 
     public void setImagePullSecrets(java.util.Collection<ImagePullSecret> imagePullSecrets) {
@@ -466,7 +471,8 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Displays the reference pointer to the Kubernetes secret resource.
+     * Displays the reference pointer to the Kubernetes secret resource. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -475,7 +481,8 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param imagePullSecrets
-     *        Displays the reference pointer to the Kubernetes secret resource.
+     *        Displays the reference pointer to the Kubernetes secret resource. These secrets help to gain access to
+     *        pull an images from a private registry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -491,11 +498,13 @@ public class EksPodPropertiesDetail implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Displays the reference pointer to the Kubernetes secret resource.
+     * Displays the reference pointer to the Kubernetes secret resource. These secrets help to gain access to pull an
+     * images from a private registry.
      * </p>
      * 
      * @param imagePullSecrets
-     *        Displays the reference pointer to the Kubernetes secret resource.
+     *        Displays the reference pointer to the Kubernetes secret resource. These secrets help to gain access to
+     *        pull an images from a private registry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

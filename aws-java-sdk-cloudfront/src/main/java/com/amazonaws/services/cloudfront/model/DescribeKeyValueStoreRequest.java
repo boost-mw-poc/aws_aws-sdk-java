@@ -27,18 +27,18 @@ public class DescribeKeyValueStoreRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      */
     private String name;
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store.
+     *        The name of the key value store.
      */
 
     public void setName(String name) {
@@ -47,10 +47,10 @@ public class DescribeKeyValueStoreRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      * 
-     * @return The name of the Key Value Store.
+     * @return The name of the key value store.
      */
 
     public String getName() {
@@ -59,11 +59,11 @@ public class DescribeKeyValueStoreRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store.
+     *        The name of the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

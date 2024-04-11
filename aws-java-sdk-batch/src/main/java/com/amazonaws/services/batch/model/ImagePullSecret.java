@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * References a Kubernetes configuration resource that holds a list of secrets. These secrets help to gain access to
- * pull an image from a private registry.
+ * References a Kubernetes secret resource. This name of the secret must start and end with an alphanumeric character,
+ * is required to be lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/ImagePullSecret" target="_top">AWS API

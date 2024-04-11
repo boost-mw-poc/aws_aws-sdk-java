@@ -33,6 +33,8 @@ public class FileInformationMarshaller {
             .marshallLocationName("partSize").build();
     private static final MarshallingInfo<Long> CONTENTLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("contentLength").build();
+    private static final MarshallingInfo<StructuredPojo> S3ACCESS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3Access").build();
 
     private static final FileInformationMarshaller instance = new FileInformationMarshaller();
 
@@ -53,6 +55,7 @@ public class FileInformationMarshaller {
             protocolMarshaller.marshall(fileInformation.getTotalParts(), TOTALPARTS_BINDING);
             protocolMarshaller.marshall(fileInformation.getPartSize(), PARTSIZE_BINDING);
             protocolMarshaller.marshall(fileInformation.getContentLength(), CONTENTLENGTH_BINDING);
+            protocolMarshaller.marshall(fileInformation.getS3Access(), S3ACCESS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

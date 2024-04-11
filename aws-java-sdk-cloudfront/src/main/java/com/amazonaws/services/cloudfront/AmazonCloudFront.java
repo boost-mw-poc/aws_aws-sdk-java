@@ -30,8 +30,9 @@ import com.amazonaws.services.cloudfront.waiters.AmazonCloudFrontWaiters;
  * <fullname>Amazon CloudFront</fullname>
  * <p>
  * This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about
- * CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon
- * CloudFront Developer Guide</i>.
+ * CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html">Amazon CloudFront
+ * Developer Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -968,7 +969,9 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
-     * Create a new invalidation.
+     * Create a new invalidation. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html">Invalidating
+     * files</a> in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param createInvalidationRequest
@@ -1038,8 +1041,8 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
-     * Specifies the Key Value Store resource to add to your account. In your account, the Key Value Store names must be
-     * unique. You can also import Key Value Store data in JSON format from an S3 bucket by providing a valid
+     * Specifies the key value store resource to add to your account. In your account, the key value store names must be
+     * unique. You can also import key value store data in JSON format from an S3 bucket by providing a valid
      * <code>ImportSource</code> that you own.
      * </p>
      * 
@@ -1048,13 +1051,15 @@ public interface AmazonCloudFront {
      * @throws AccessDeniedException
      *         Access denied.
      * @throws EntityLimitExceededException
-     *         The Key Value Store entity limit has been exceeded.
+     *         The key value store entity limit has been exceeded.
      * @throws EntityAlreadyExistsException
-     *         The Key Value Store entity already exists. You must provide a unique Key Value Store entity.
+     *         The key value store entity already exists. You must provide a unique key value store entity.
      * @throws EntitySizeLimitExceededException
-     *         The Key Value Store entity size limit was exceeded.
+     *         The key value store entity size limit was exceeded.
      * @throws InvalidArgumentException
      *         An argument is invalid.
+     * @throws UnsupportedOperationException
+     *         This operation is not supported in this region.
      * @sample AmazonCloudFront.CreateKeyValueStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateKeyValueStore" target="_top">AWS
      *      API Documentation</a>
@@ -1693,7 +1698,7 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
-     * Specifies the Key Value Store to delete.
+     * Specifies the key value store to delete.
      * </p>
      * 
      * @param deleteKeyValueStoreRequest
@@ -1703,11 +1708,13 @@ public interface AmazonCloudFront {
      * @throws InvalidIfMatchVersionException
      *         The <code>If-Match</code> version is missing or not valid.
      * @throws EntityNotFoundException
-     *         The Key Value Store entity was not found.
+     *         The key value store entity was not found.
      * @throws CannotDeleteEntityWhileInUseException
-     *         The Key Value Store entity cannot be deleted while it is in use.
+     *         The key value store entity cannot be deleted while it is in use.
      * @throws PreconditionFailedException
      *         The precondition in one or more of the request fields evaluated to <code>false</code>.
+     * @throws UnsupportedOperationException
+     *         This operation is not supported in this region.
      * @sample AmazonCloudFront.DeleteKeyValueStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteKeyValueStore" target="_top">AWS
      *      API Documentation</a>
@@ -1994,7 +2001,7 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
-     * Specifies the Key Value Store and its configuration.
+     * Specifies the key value store and its configuration.
      * </p>
      * 
      * @param describeKeyValueStoreRequest
@@ -2004,7 +2011,9 @@ public interface AmazonCloudFront {
      * @throws InvalidArgumentException
      *         An argument is invalid.
      * @throws EntityNotFoundException
-     *         The Key Value Store entity was not found.
+     *         The key value store entity was not found.
+     * @throws UnsupportedOperationException
+     *         This operation is not supported in this region.
      * @sample AmazonCloudFront.DescribeKeyValueStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DescribeKeyValueStore"
      *      target="_top">AWS API Documentation</a>
@@ -2974,7 +2983,7 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
-     * Specifies the Key Value Stores to list.
+     * Specifies the key value stores to list.
      * </p>
      * 
      * @param listKeyValueStoresRequest
@@ -2983,6 +2992,8 @@ public interface AmazonCloudFront {
      *         Access denied.
      * @throws InvalidArgumentException
      *         An argument is invalid.
+     * @throws UnsupportedOperationException
+     *         This operation is not supported in this region.
      * @sample AmazonCloudFront.ListKeyValueStores
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListKeyValueStores" target="_top">AWS
      *      API Documentation</a>
@@ -3994,7 +4005,7 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
-     * Specifies the Key Value Store to update.
+     * Specifies the key value store to update.
      * </p>
      * 
      * @param updateKeyValueStoreRequest
@@ -4004,11 +4015,13 @@ public interface AmazonCloudFront {
      * @throws InvalidArgumentException
      *         An argument is invalid.
      * @throws EntityNotFoundException
-     *         The Key Value Store entity was not found.
+     *         The key value store entity was not found.
      * @throws InvalidIfMatchVersionException
      *         The <code>If-Match</code> version is missing or not valid.
      * @throws PreconditionFailedException
      *         The precondition in one or more of the request fields evaluated to <code>false</code>.
+     * @throws UnsupportedOperationException
+     *         This operation is not supported in this region.
      * @sample AmazonCloudFront.UpdateKeyValueStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateKeyValueStore" target="_top">AWS
      *      API Documentation</a>

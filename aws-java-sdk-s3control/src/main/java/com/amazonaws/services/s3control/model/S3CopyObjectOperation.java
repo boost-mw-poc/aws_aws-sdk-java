@@ -43,9 +43,9 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <li>
      * <p>
      * <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
-     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>, set the
+     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az1</code>, set the
      * <code>TargetResource</code> property to
-     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az1</i>--x-s3</code>
      * .
      * </p>
      * </li>
@@ -223,9 +223,9 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <li>
      * <p>
      * <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
-     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>, set the
+     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az1</code>, set the
      * <code>TargetResource</code> property to
-     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az1</i>--x-s3</code>
      * .
      * </p>
      * </li>
@@ -244,9 +244,9 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
-     *        <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>,
+     *        <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az1</code>,
      *        set the <code>TargetResource</code> property to
-     *        <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     *        <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az1</i>--x-s3</code>
      *        .
      *        </p>
      *        </li>
@@ -271,9 +271,9 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <li>
      * <p>
      * <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
-     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>, set the
+     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az1</code>, set the
      * <code>TargetResource</code> property to
-     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az1</i>--x-s3</code>
      * .
      * </p>
      * </li>
@@ -291,9 +291,9 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      *         <li>
      *         <p>
      *         <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
-     *         <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>,
+     *         <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az1</code>,
      *         set the <code>TargetResource</code> property to
-     *         <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     *         <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az1</i>--x-s3</code>
      *         .
      *         </p>
      *         </li>
@@ -318,9 +318,9 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * <li>
      * <p>
      * <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
-     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>, set the
+     * <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az1</code>, set the
      * <code>TargetResource</code> property to
-     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     * <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az1</i>--x-s3</code>
      * .
      * </p>
      * </li>
@@ -339,9 +339,9 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        <b>Directory buckets</b> - For example, to copy objects to a directory bucket named
-     *        <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az2</code>,
+     *        <code>destinationBucket</code> in the Availability Zone; identified by the AZ ID <code>usw2-az1</code>,
      *        set the <code>TargetResource</code> property to
-     *        <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az2</i>--x-s3</code>
+     *        <code>arn:aws:s3express:<i>region</i>:<i>account_id</i>:/bucket/<i>destination_bucket_base_name</i>--<i>usw2-az1</i>--x-s3</code>
      *        .
      *        </p>
      *        </li>

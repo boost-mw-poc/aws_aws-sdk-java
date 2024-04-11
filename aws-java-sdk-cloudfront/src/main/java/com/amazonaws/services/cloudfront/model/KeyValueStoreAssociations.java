@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Key Value Store associations.
+ * The key value store associations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/KeyValueStoreAssociations"
@@ -28,24 +28,24 @@ public class KeyValueStoreAssociations implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The quantity of Key Value Store associations.
+     * The quantity of key value store associations.
      * </p>
      */
     private Integer quantity;
     /**
      * <p>
-     * The items of the Key Value Store association.
+     * The items of the key value store association.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<KeyValueStoreAssociation> items;
 
     /**
      * <p>
-     * The quantity of Key Value Store associations.
+     * The quantity of key value store associations.
      * </p>
      * 
      * @param quantity
-     *        The quantity of Key Value Store associations.
+     *        The quantity of key value store associations.
      */
 
     public void setQuantity(Integer quantity) {
@@ -54,10 +54,10 @@ public class KeyValueStoreAssociations implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The quantity of Key Value Store associations.
+     * The quantity of key value store associations.
      * </p>
      * 
-     * @return The quantity of Key Value Store associations.
+     * @return The quantity of key value store associations.
      */
 
     public Integer getQuantity() {
@@ -66,11 +66,11 @@ public class KeyValueStoreAssociations implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The quantity of Key Value Store associations.
+     * The quantity of key value store associations.
      * </p>
      * 
      * @param quantity
-     *        The quantity of Key Value Store associations.
+     *        The quantity of key value store associations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -81,10 +81,10 @@ public class KeyValueStoreAssociations implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The items of the Key Value Store association.
+     * The items of the key value store association.
      * </p>
      * 
-     * @return The items of the Key Value Store association.
+     * @return The items of the key value store association.
      */
 
     public java.util.List<KeyValueStoreAssociation> getItems() {
@@ -96,11 +96,11 @@ public class KeyValueStoreAssociations implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The items of the Key Value Store association.
+     * The items of the key value store association.
      * </p>
      * 
      * @param items
-     *        The items of the Key Value Store association.
+     *        The items of the key value store association.
      */
 
     public void setItems(java.util.Collection<KeyValueStoreAssociation> items) {
@@ -114,7 +114,7 @@ public class KeyValueStoreAssociations implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The items of the Key Value Store association.
+     * The items of the key value store association.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -123,7 +123,7 @@ public class KeyValueStoreAssociations implements Serializable, Cloneable {
      * </p>
      * 
      * @param items
-     *        The items of the Key Value Store association.
+     *        The items of the key value store association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -139,11 +139,11 @@ public class KeyValueStoreAssociations implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The items of the Key Value Store association.
+     * The items of the key value store association.
      * </p>
      * 
      * @param items
-     *        The items of the Key Value Store association.
+     *        The items of the key value store association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

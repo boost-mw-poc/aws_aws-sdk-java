@@ -34,7 +34,8 @@ public class ImportSourceCredentialsRequest extends com.amazonaws.AmazonWebServi
     private String username;
     /**
      * <p>
-     * For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is the app password.
+     * For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is either the access
+     * token or the app password.
      * </p>
      */
     private String token;
@@ -107,12 +108,13 @@ public class ImportSourceCredentialsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is the app password.
+     * For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is either the access
+     * token or the app password.
      * </p>
      * 
      * @param token
-     *        For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is the app
-     *        password.
+     *        For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is either the
+     *        access token or the app password.
      */
 
     public void setToken(String token) {
@@ -121,11 +123,12 @@ public class ImportSourceCredentialsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is the app password.
+     * For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is either the access
+     * token or the app password.
      * </p>
      * 
-     * @return For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is the app
-     *         password.
+     * @return For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is either the
+     *         access token or the app password.
      */
 
     public String getToken() {
@@ -134,12 +137,13 @@ public class ImportSourceCredentialsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is the app password.
+     * For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is either the access
+     * token or the app password.
      * </p>
      * 
      * @param token
-     *        For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is the app
-     *        password.
+     *        For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is either the
+     *        access token or the app password.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

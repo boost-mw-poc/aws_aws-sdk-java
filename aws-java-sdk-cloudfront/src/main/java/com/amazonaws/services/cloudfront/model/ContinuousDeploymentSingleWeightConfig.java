@@ -28,7 +28,8 @@ public class ContinuousDeploymentSingleWeightConfig implements Serializable, Clo
 
     /**
      * <p>
-     * The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and .15.
+     * The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and 0.15.
+     * For example, a value of 0.10 means 10% of traffic is sent to the staging distribution.
      * </p>
      */
     private Float weight;
@@ -37,12 +38,13 @@ public class ContinuousDeploymentSingleWeightConfig implements Serializable, Clo
 
     /**
      * <p>
-     * The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and .15.
+     * The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and 0.15.
+     * For example, a value of 0.10 means 10% of traffic is sent to the staging distribution.
      * </p>
      * 
      * @param weight
      *        The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and
-     *        .15.
+     *        0.15. For example, a value of 0.10 means 10% of traffic is sent to the staging distribution.
      */
 
     public void setWeight(Float weight) {
@@ -51,11 +53,12 @@ public class ContinuousDeploymentSingleWeightConfig implements Serializable, Clo
 
     /**
      * <p>
-     * The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and .15.
+     * The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and 0.15.
+     * For example, a value of 0.10 means 10% of traffic is sent to the staging distribution.
      * </p>
      * 
      * @return The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and
-     *         .15.
+     *         0.15. For example, a value of 0.10 means 10% of traffic is sent to the staging distribution.
      */
 
     public Float getWeight() {
@@ -64,12 +67,13 @@ public class ContinuousDeploymentSingleWeightConfig implements Serializable, Clo
 
     /**
      * <p>
-     * The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and .15.
+     * The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and 0.15.
+     * For example, a value of 0.10 means 10% of traffic is sent to the staging distribution.
      * </p>
      * 
      * @param weight
      *        The percentage of traffic to send to a staging distribution, expressed as a decimal number between 0 and
-     *        .15.
+     *        0.15. For example, a value of 0.10 means 10% of traffic is sent to the staging distribution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

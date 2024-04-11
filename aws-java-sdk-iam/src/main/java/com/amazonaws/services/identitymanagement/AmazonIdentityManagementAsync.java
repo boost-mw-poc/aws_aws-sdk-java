@@ -7275,7 +7275,7 @@ public interface AmazonIdentityManagementAsync extends AmazonIdentityManagement 
 
     /**
      * <p>
-     * Removes the specified IAM role from the specified EC2 instance profile.
+     * Removes the specified IAM role from the specified Amazon EC2 instance profile.
      * </p>
      * <important>
      * <p>
@@ -7304,7 +7304,7 @@ public interface AmazonIdentityManagementAsync extends AmazonIdentityManagement 
 
     /**
      * <p>
-     * Removes the specified IAM role from the specified EC2 instance profile.
+     * Removes the specified IAM role from the specified Amazon EC2 instance profile.
      * </p>
      * <important>
      * <p>

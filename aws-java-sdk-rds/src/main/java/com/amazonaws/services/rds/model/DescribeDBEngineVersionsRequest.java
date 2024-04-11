@@ -50,6 +50,21 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-ee-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>db2-ae</code>
      * </p>
      * </li>
@@ -310,6 +325,21 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-ee-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>db2-ae</code>
      * </p>
      * </li>
@@ -394,6 +424,21 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <code>custom-oracle-ee</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-ee-cdb</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2-cdb</code>
      *        </p>
      *        </li>
      *        <li>
@@ -492,6 +537,21 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-ee-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>db2-ae</code>
      * </p>
      * </li>
@@ -575,6 +635,21 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *         <li>
      *         <p>
      *         <code>custom-oracle-ee</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-ee-cdb</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-se2</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-se2-cdb</code>
      *         </p>
      *         </li>
      *         <li>
@@ -673,6 +748,21 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-ee-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>db2-ae</code>
      * </p>
      * </li>
@@ -757,6 +847,21 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <code>custom-oracle-ee</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-ee-cdb</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2-cdb</code>
      *        </p>
      *        </li>
      *        <li>

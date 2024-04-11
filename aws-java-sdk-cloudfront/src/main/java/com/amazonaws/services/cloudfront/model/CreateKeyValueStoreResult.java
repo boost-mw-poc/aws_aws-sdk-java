@@ -25,30 +25,30 @@ public class CreateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The resulting Key Value Store.
+     * The resulting key value store.
      * </p>
      */
     private KeyValueStore keyValueStore;
     /**
      * <p>
-     * The ETag in the resulting Key Value Store.
+     * The <code>ETag</code> in the resulting key value store.
      * </p>
      */
     private String eTag;
     /**
      * <p>
-     * The location of the resulting Key Value Store.
+     * The location of the resulting key value store.
      * </p>
      */
     private String location;
 
     /**
      * <p>
-     * The resulting Key Value Store.
+     * The resulting key value store.
      * </p>
      * 
      * @param keyValueStore
-     *        The resulting Key Value Store.
+     *        The resulting key value store.
      */
 
     public void setKeyValueStore(KeyValueStore keyValueStore) {
@@ -57,10 +57,10 @@ public class CreateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The resulting Key Value Store.
+     * The resulting key value store.
      * </p>
      * 
-     * @return The resulting Key Value Store.
+     * @return The resulting key value store.
      */
 
     public KeyValueStore getKeyValueStore() {
@@ -69,11 +69,11 @@ public class CreateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The resulting Key Value Store.
+     * The resulting key value store.
      * </p>
      * 
      * @param keyValueStore
-     *        The resulting Key Value Store.
+     *        The resulting key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,11 +84,11 @@ public class CreateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The ETag in the resulting Key Value Store.
+     * The <code>ETag</code> in the resulting key value store.
      * </p>
      * 
      * @param eTag
-     *        The ETag in the resulting Key Value Store.
+     *        The <code>ETag</code> in the resulting key value store.
      */
 
     public void setETag(String eTag) {
@@ -97,10 +97,10 @@ public class CreateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The ETag in the resulting Key Value Store.
+     * The <code>ETag</code> in the resulting key value store.
      * </p>
      * 
-     * @return The ETag in the resulting Key Value Store.
+     * @return The <code>ETag</code> in the resulting key value store.
      */
 
     public String getETag() {
@@ -109,11 +109,11 @@ public class CreateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The ETag in the resulting Key Value Store.
+     * The <code>ETag</code> in the resulting key value store.
      * </p>
      * 
      * @param eTag
-     *        The ETag in the resulting Key Value Store.
+     *        The <code>ETag</code> in the resulting key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,11 +124,11 @@ public class CreateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The location of the resulting Key Value Store.
+     * The location of the resulting key value store.
      * </p>
      * 
      * @param location
-     *        The location of the resulting Key Value Store.
+     *        The location of the resulting key value store.
      */
 
     public void setLocation(String location) {
@@ -137,10 +137,10 @@ public class CreateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The location of the resulting Key Value Store.
+     * The location of the resulting key value store.
      * </p>
      * 
-     * @return The location of the resulting Key Value Store.
+     * @return The location of the resulting key value store.
      */
 
     public String getLocation() {
@@ -149,11 +149,11 @@ public class CreateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The location of the resulting Key Value Store.
+     * The location of the resulting key value store.
      * </p>
      * 
      * @param location
-     *        The location of the resulting Key Value Store.
+     *        The location of the resulting key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

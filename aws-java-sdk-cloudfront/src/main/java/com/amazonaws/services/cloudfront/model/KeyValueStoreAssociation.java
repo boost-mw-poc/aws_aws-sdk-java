@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Key Value Store association.
+ * The key value store association.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/KeyValueStoreAssociation"
@@ -28,18 +28,18 @@ public class KeyValueStoreAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Value Store association.
+     * The Amazon Resource Name (ARN) of the key value store association.
      * </p>
      */
     private String keyValueStoreARN;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Value Store association.
+     * The Amazon Resource Name (ARN) of the key value store association.
      * </p>
      * 
      * @param keyValueStoreARN
-     *        The Amazon Resource Name (ARN) of the Key Value Store association.
+     *        The Amazon Resource Name (ARN) of the key value store association.
      */
 
     public void setKeyValueStoreARN(String keyValueStoreARN) {
@@ -48,10 +48,10 @@ public class KeyValueStoreAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Value Store association.
+     * The Amazon Resource Name (ARN) of the key value store association.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Key Value Store association.
+     * @return The Amazon Resource Name (ARN) of the key value store association.
      */
 
     public String getKeyValueStoreARN() {
@@ -60,11 +60,11 @@ public class KeyValueStoreAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Value Store association.
+     * The Amazon Resource Name (ARN) of the key value store association.
      * </p>
      * 
      * @param keyValueStoreARN
-     *        The Amazon Resource Name (ARN) of the Key Value Store association.
+     *        The Amazon Resource Name (ARN) of the key value store association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

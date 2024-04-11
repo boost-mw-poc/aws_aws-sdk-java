@@ -37,7 +37,7 @@ public class MultiRegionAccessPointReport implements Serializable, Cloneable {
      * The alias for the Multi-Region Access Point. For more information about the distinction between the name and the
      * alias of an Multi-Region Access Point, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html#multi-region-access-point-naming"
-     * >Managing Multi-Region Access Points</a>.
+     * >Rules for naming Amazon S3 Multi-Region Access Points</a>.
      * </p>
      */
     private String alias;
@@ -114,14 +114,14 @@ public class MultiRegionAccessPointReport implements Serializable, Cloneable {
      * The alias for the Multi-Region Access Point. For more information about the distinction between the name and the
      * alias of an Multi-Region Access Point, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html#multi-region-access-point-naming"
-     * >Managing Multi-Region Access Points</a>.
+     * >Rules for naming Amazon S3 Multi-Region Access Points</a>.
      * </p>
      * 
      * @param alias
      *        The alias for the Multi-Region Access Point. For more information about the distinction between the name
      *        and the alias of an Multi-Region Access Point, see <a href=
      *        "https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html#multi-region-access-point-naming"
-     *        >Managing Multi-Region Access Points</a>.
+     *        >Rules for naming Amazon S3 Multi-Region Access Points</a>.
      */
 
     public void setAlias(String alias) {
@@ -133,13 +133,13 @@ public class MultiRegionAccessPointReport implements Serializable, Cloneable {
      * The alias for the Multi-Region Access Point. For more information about the distinction between the name and the
      * alias of an Multi-Region Access Point, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html#multi-region-access-point-naming"
-     * >Managing Multi-Region Access Points</a>.
+     * >Rules for naming Amazon S3 Multi-Region Access Points</a>.
      * </p>
      * 
      * @return The alias for the Multi-Region Access Point. For more information about the distinction between the name
      *         and the alias of an Multi-Region Access Point, see <a href=
      *         "https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html#multi-region-access-point-naming"
-     *         >Managing Multi-Region Access Points</a>.
+     *         >Rules for naming Amazon S3 Multi-Region Access Points</a>.
      */
 
     public String getAlias() {
@@ -151,14 +151,14 @@ public class MultiRegionAccessPointReport implements Serializable, Cloneable {
      * The alias for the Multi-Region Access Point. For more information about the distinction between the name and the
      * alias of an Multi-Region Access Point, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html#multi-region-access-point-naming"
-     * >Managing Multi-Region Access Points</a>.
+     * >Rules for naming Amazon S3 Multi-Region Access Points</a>.
      * </p>
      * 
      * @param alias
      *        The alias for the Multi-Region Access Point. For more information about the distinction between the name
      *        and the alias of an Multi-Region Access Point, see <a href=
      *        "https://docs.aws.amazon.com/AmazonS3/latest/userguide/CreatingMultiRegionAccessPoints.html#multi-region-access-point-naming"
-     *        >Managing Multi-Region Access Points</a>.
+     *        >Rules for naming Amazon S3 Multi-Region Access Points</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

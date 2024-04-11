@@ -140,8 +140,8 @@ public class DefaultCacheBehavior implements Serializable, Cloneable {
     private LambdaFunctionAssociations lambdaFunctionAssociations;
     /**
      * <p>
-     * A list of CloudFront functions that are associated with this cache behavior. CloudFront functions must be
-     * published to the <code>LIVE</code> stage to associate them with a cache behavior.
+     * A list of CloudFront functions that are associated with this cache behavior. Your functions must be published to
+     * the <code>LIVE</code> stage to associate them with a cache behavior.
      * </p>
      */
     private FunctionAssociations functionAssociations;
@@ -1214,12 +1214,12 @@ public class DefaultCacheBehavior implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of CloudFront functions that are associated with this cache behavior. CloudFront functions must be
-     * published to the <code>LIVE</code> stage to associate them with a cache behavior.
+     * A list of CloudFront functions that are associated with this cache behavior. Your functions must be published to
+     * the <code>LIVE</code> stage to associate them with a cache behavior.
      * </p>
      * 
      * @param functionAssociations
-     *        A list of CloudFront functions that are associated with this cache behavior. CloudFront functions must be
+     *        A list of CloudFront functions that are associated with this cache behavior. Your functions must be
      *        published to the <code>LIVE</code> stage to associate them with a cache behavior.
      */
 
@@ -1229,11 +1229,11 @@ public class DefaultCacheBehavior implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of CloudFront functions that are associated with this cache behavior. CloudFront functions must be
-     * published to the <code>LIVE</code> stage to associate them with a cache behavior.
+     * A list of CloudFront functions that are associated with this cache behavior. Your functions must be published to
+     * the <code>LIVE</code> stage to associate them with a cache behavior.
      * </p>
      * 
-     * @return A list of CloudFront functions that are associated with this cache behavior. CloudFront functions must be
+     * @return A list of CloudFront functions that are associated with this cache behavior. Your functions must be
      *         published to the <code>LIVE</code> stage to associate them with a cache behavior.
      */
 
@@ -1243,12 +1243,12 @@ public class DefaultCacheBehavior implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of CloudFront functions that are associated with this cache behavior. CloudFront functions must be
-     * published to the <code>LIVE</code> stage to associate them with a cache behavior.
+     * A list of CloudFront functions that are associated with this cache behavior. Your functions must be published to
+     * the <code>LIVE</code> stage to associate them with a cache behavior.
      * </p>
      * 
      * @param functionAssociations
-     *        A list of CloudFront functions that are associated with this cache behavior. CloudFront functions must be
+     *        A list of CloudFront functions that are associated with this cache behavior. Your functions must be
      *        published to the <code>LIVE</code> stage to associate them with a cache behavior.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

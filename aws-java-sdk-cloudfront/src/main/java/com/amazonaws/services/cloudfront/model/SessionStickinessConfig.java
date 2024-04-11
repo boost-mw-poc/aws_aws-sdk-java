@@ -44,7 +44,7 @@ public class SessionStickinessConfig implements Serializable, Cloneable {
      * are 300–3600 seconds (5–60 minutes).
      * </p>
      * <p>
-     * The value must be less than or equal to <code>IdleTTL</code>.
+     * The value must be greater than or equal to <code>IdleTTL</code>.
      * </p>
      */
     private Integer maximumTTL;
@@ -116,14 +116,14 @@ public class SessionStickinessConfig implements Serializable, Cloneable {
      * are 300–3600 seconds (5–60 minutes).
      * </p>
      * <p>
-     * The value must be less than or equal to <code>IdleTTL</code>.
+     * The value must be greater than or equal to <code>IdleTTL</code>.
      * </p>
      * 
      * @param maximumTTL
      *        The maximum amount of time to consider requests from the viewer as being part of the same session. Allowed
      *        values are 300–3600 seconds (5–60 minutes).</p>
      *        <p>
-     *        The value must be less than or equal to <code>IdleTTL</code>.
+     *        The value must be greater than or equal to <code>IdleTTL</code>.
      */
 
     public void setMaximumTTL(Integer maximumTTL) {
@@ -136,13 +136,13 @@ public class SessionStickinessConfig implements Serializable, Cloneable {
      * are 300–3600 seconds (5–60 minutes).
      * </p>
      * <p>
-     * The value must be less than or equal to <code>IdleTTL</code>.
+     * The value must be greater than or equal to <code>IdleTTL</code>.
      * </p>
      * 
      * @return The maximum amount of time to consider requests from the viewer as being part of the same session.
      *         Allowed values are 300–3600 seconds (5–60 minutes).</p>
      *         <p>
-     *         The value must be less than or equal to <code>IdleTTL</code>.
+     *         The value must be greater than or equal to <code>IdleTTL</code>.
      */
 
     public Integer getMaximumTTL() {
@@ -155,14 +155,14 @@ public class SessionStickinessConfig implements Serializable, Cloneable {
      * are 300–3600 seconds (5–60 minutes).
      * </p>
      * <p>
-     * The value must be less than or equal to <code>IdleTTL</code>.
+     * The value must be greater than or equal to <code>IdleTTL</code>.
      * </p>
      * 
      * @param maximumTTL
      *        The maximum amount of time to consider requests from the viewer as being part of the same session. Allowed
      *        values are 300–3600 seconds (5–60 minutes).</p>
      *        <p>
-     *        The value must be less than or equal to <code>IdleTTL</code>.
+     *        The value must be greater than or equal to <code>IdleTTL</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

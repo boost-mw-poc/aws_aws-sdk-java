@@ -41,6 +41,8 @@ public class SequenceStoreDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> FALLBACKLOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fallbackLocation").build();
+    private static final MarshallingInfo<String> ETAGALGORITHMFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eTagAlgorithmFamily").build();
 
     private static final SequenceStoreDetailMarshaller instance = new SequenceStoreDetailMarshaller();
 
@@ -65,6 +67,7 @@ public class SequenceStoreDetailMarshaller {
             protocolMarshaller.marshall(sequenceStoreDetail.getSseConfig(), SSECONFIG_BINDING);
             protocolMarshaller.marshall(sequenceStoreDetail.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(sequenceStoreDetail.getFallbackLocation(), FALLBACKLOCATION_BINDING);
+            protocolMarshaller.marshall(sequenceStoreDetail.getETagAlgorithmFamily(), ETAGALGORITHMFAMILY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

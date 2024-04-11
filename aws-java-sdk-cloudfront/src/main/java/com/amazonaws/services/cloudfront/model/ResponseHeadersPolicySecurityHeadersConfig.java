@@ -94,7 +94,9 @@ public class ResponseHeadersPolicySecurityHeadersConfig implements Serializable,
      * header's value.
      * </p>
      * <p>
-     * For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a
+     * For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/understanding-response-headers-policies.html#understanding-response-headers-policies-security"
+     * >Security headers</a> in the <i>Amazon CloudFront Developer Guide</i> and <a
      * href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
      * >Strict-Transport-Security</a> in the MDN Web Docs.
      * </p>
@@ -472,7 +474,9 @@ public class ResponseHeadersPolicySecurityHeadersConfig implements Serializable,
      * header's value.
      * </p>
      * <p>
-     * For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a
+     * For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/understanding-response-headers-policies.html#understanding-response-headers-policies-security"
+     * >Security headers</a> in the <i>Amazon CloudFront Developer Guide</i> and <a
      * href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
      * >Strict-Transport-Security</a> in the MDN Web Docs.
      * </p>
@@ -481,7 +485,9 @@ public class ResponseHeadersPolicySecurityHeadersConfig implements Serializable,
      *        Determines whether CloudFront includes the <code>Strict-Transport-Security</code> HTTP response header and
      *        the header's value.</p>
      *        <p>
-     *        For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a
+     *        For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/understanding-response-headers-policies.html#understanding-response-headers-policies-security"
+     *        >Security headers</a> in the <i>Amazon CloudFront Developer Guide</i> and <a
      *        href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
      *        >Strict-Transport-Security</a> in the MDN Web Docs.
      */
@@ -496,7 +502,9 @@ public class ResponseHeadersPolicySecurityHeadersConfig implements Serializable,
      * header's value.
      * </p>
      * <p>
-     * For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a
+     * For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/understanding-response-headers-policies.html#understanding-response-headers-policies-security"
+     * >Security headers</a> in the <i>Amazon CloudFront Developer Guide</i> and <a
      * href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
      * >Strict-Transport-Security</a> in the MDN Web Docs.
      * </p>
@@ -504,7 +512,9 @@ public class ResponseHeadersPolicySecurityHeadersConfig implements Serializable,
      * @return Determines whether CloudFront includes the <code>Strict-Transport-Security</code> HTTP response header
      *         and the header's value.</p>
      *         <p>
-     *         For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a
+     *         For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/understanding-response-headers-policies.html#understanding-response-headers-policies-security"
+     *         >Security headers</a> in the <i>Amazon CloudFront Developer Guide</i> and <a
      *         href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
      *         >Strict-Transport-Security</a> in the MDN Web Docs.
      */
@@ -519,7 +529,9 @@ public class ResponseHeadersPolicySecurityHeadersConfig implements Serializable,
      * header's value.
      * </p>
      * <p>
-     * For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a
+     * For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/understanding-response-headers-policies.html#understanding-response-headers-policies-security"
+     * >Security headers</a> in the <i>Amazon CloudFront Developer Guide</i> and <a
      * href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
      * >Strict-Transport-Security</a> in the MDN Web Docs.
      * </p>
@@ -528,7 +540,9 @@ public class ResponseHeadersPolicySecurityHeadersConfig implements Serializable,
      *        Determines whether CloudFront includes the <code>Strict-Transport-Security</code> HTTP response header and
      *        the header's value.</p>
      *        <p>
-     *        For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a
+     *        For more information about the <code>Strict-Transport-Security</code> HTTP response header, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/understanding-response-headers-policies.html#understanding-response-headers-policies-security"
+     *        >Security headers</a> in the <i>Amazon CloudFront Developer Guide</i> and <a
      *        href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security"
      *        >Strict-Transport-Security</a> in the MDN Web Docs.
      * @return Returns a reference to this object so that method calls can be chained together.

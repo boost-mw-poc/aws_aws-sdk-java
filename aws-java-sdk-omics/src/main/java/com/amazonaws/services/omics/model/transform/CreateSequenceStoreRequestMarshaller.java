@@ -41,6 +41,8 @@ public class CreateSequenceStoreRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken").build();
     private static final MarshallingInfo<String> FALLBACKLOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fallbackLocation").build();
+    private static final MarshallingInfo<String> ETAGALGORITHMFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eTagAlgorithmFamily").build();
 
     private static final CreateSequenceStoreRequestMarshaller instance = new CreateSequenceStoreRequestMarshaller();
 
@@ -64,6 +66,7 @@ public class CreateSequenceStoreRequestMarshaller {
             protocolMarshaller.marshall(createSequenceStoreRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createSequenceStoreRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createSequenceStoreRequest.getFallbackLocation(), FALLBACKLOCATION_BINDING);
+            protocolMarshaller.marshall(createSequenceStoreRequest.getETagAlgorithmFamily(), ETAGALGORITHMFAMILY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -229,10 +229,10 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      * supported scenario values and the resources that you must define to run the simulation.
      * </p>
      * <p>
-     * Each of the EC2 scenarios requires that you specify instance, image, and security group resources. If your
-     * scenario includes an EBS volume, then you must specify that volume as a resource. If the EC2 scenario includes
-     * VPC, then you must supply the network interface resource. If it includes an IP subnet, then you must specify the
-     * subnet resource. For more information on the EC2 scenario options, see <a
+     * Each of the Amazon EC2 scenarios requires that you specify instance, image, and security group resources. If your
+     * scenario includes an EBS volume, then you must specify that volume as a resource. If the Amazon EC2 scenario
+     * includes VPC, then you must supply the network interface resource. If it includes an IP subnet, then you must
+     * specify the subnet resource. For more information on the Amazon EC2 scenario options, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html">Supported platforms</a>
      * in the <i>Amazon EC2 User Guide</i>.
      * </p>
@@ -1866,10 +1866,10 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      * supported scenario values and the resources that you must define to run the simulation.
      * </p>
      * <p>
-     * Each of the EC2 scenarios requires that you specify instance, image, and security group resources. If your
-     * scenario includes an EBS volume, then you must specify that volume as a resource. If the EC2 scenario includes
-     * VPC, then you must supply the network interface resource. If it includes an IP subnet, then you must specify the
-     * subnet resource. For more information on the EC2 scenario options, see <a
+     * Each of the Amazon EC2 scenarios requires that you specify instance, image, and security group resources. If your
+     * scenario includes an EBS volume, then you must specify that volume as a resource. If the Amazon EC2 scenario
+     * includes VPC, then you must supply the network interface resource. If it includes an IP subnet, then you must
+     * specify the subnet resource. For more information on the Amazon EC2 scenario options, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html">Supported platforms</a>
      * in the <i>Amazon EC2 User Guide</i>.
      * </p>
@@ -1916,10 +1916,11 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      *        following list shows each of the supported scenario values and the resources that you must define to run
      *        the simulation.</p>
      *        <p>
-     *        Each of the EC2 scenarios requires that you specify instance, image, and security group resources. If your
-     *        scenario includes an EBS volume, then you must specify that volume as a resource. If the EC2 scenario
-     *        includes VPC, then you must supply the network interface resource. If it includes an IP subnet, then you
-     *        must specify the subnet resource. For more information on the EC2 scenario options, see <a
+     *        Each of the Amazon EC2 scenarios requires that you specify instance, image, and security group resources.
+     *        If your scenario includes an EBS volume, then you must specify that volume as a resource. If the Amazon
+     *        EC2 scenario includes VPC, then you must supply the network interface resource. If it includes an IP
+     *        subnet, then you must specify the subnet resource. For more information on the Amazon EC2 scenario
+     *        options, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html">Supported
      *        platforms</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>
@@ -1971,10 +1972,10 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      * supported scenario values and the resources that you must define to run the simulation.
      * </p>
      * <p>
-     * Each of the EC2 scenarios requires that you specify instance, image, and security group resources. If your
-     * scenario includes an EBS volume, then you must specify that volume as a resource. If the EC2 scenario includes
-     * VPC, then you must supply the network interface resource. If it includes an IP subnet, then you must specify the
-     * subnet resource. For more information on the EC2 scenario options, see <a
+     * Each of the Amazon EC2 scenarios requires that you specify instance, image, and security group resources. If your
+     * scenario includes an EBS volume, then you must specify that volume as a resource. If the Amazon EC2 scenario
+     * includes VPC, then you must supply the network interface resource. If it includes an IP subnet, then you must
+     * specify the subnet resource. For more information on the Amazon EC2 scenario options, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html">Supported platforms</a>
      * in the <i>Amazon EC2 User Guide</i>.
      * </p>
@@ -2020,10 +2021,11 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      *         following list shows each of the supported scenario values and the resources that you must define to run
      *         the simulation.</p>
      *         <p>
-     *         Each of the EC2 scenarios requires that you specify instance, image, and security group resources. If
-     *         your scenario includes an EBS volume, then you must specify that volume as a resource. If the EC2
-     *         scenario includes VPC, then you must supply the network interface resource. If it includes an IP subnet,
-     *         then you must specify the subnet resource. For more information on the EC2 scenario options, see <a
+     *         Each of the Amazon EC2 scenarios requires that you specify instance, image, and security group resources.
+     *         If your scenario includes an EBS volume, then you must specify that volume as a resource. If the Amazon
+     *         EC2 scenario includes VPC, then you must supply the network interface resource. If it includes an IP
+     *         subnet, then you must specify the subnet resource. For more information on the Amazon EC2 scenario
+     *         options, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html">Supported
      *         platforms</a> in the <i>Amazon EC2 User Guide</i>.
      *         </p>
@@ -2075,10 +2077,10 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      * supported scenario values and the resources that you must define to run the simulation.
      * </p>
      * <p>
-     * Each of the EC2 scenarios requires that you specify instance, image, and security group resources. If your
-     * scenario includes an EBS volume, then you must specify that volume as a resource. If the EC2 scenario includes
-     * VPC, then you must supply the network interface resource. If it includes an IP subnet, then you must specify the
-     * subnet resource. For more information on the EC2 scenario options, see <a
+     * Each of the Amazon EC2 scenarios requires that you specify instance, image, and security group resources. If your
+     * scenario includes an EBS volume, then you must specify that volume as a resource. If the Amazon EC2 scenario
+     * includes VPC, then you must supply the network interface resource. If it includes an IP subnet, then you must
+     * specify the subnet resource. For more information on the Amazon EC2 scenario options, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html">Supported platforms</a>
      * in the <i>Amazon EC2 User Guide</i>.
      * </p>
@@ -2125,10 +2127,11 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      *        following list shows each of the supported scenario values and the resources that you must define to run
      *        the simulation.</p>
      *        <p>
-     *        Each of the EC2 scenarios requires that you specify instance, image, and security group resources. If your
-     *        scenario includes an EBS volume, then you must specify that volume as a resource. If the EC2 scenario
-     *        includes VPC, then you must supply the network interface resource. If it includes an IP subnet, then you
-     *        must specify the subnet resource. For more information on the EC2 scenario options, see <a
+     *        Each of the Amazon EC2 scenarios requires that you specify instance, image, and security group resources.
+     *        If your scenario includes an EBS volume, then you must specify that volume as a resource. If the Amazon
+     *        EC2 scenario includes VPC, then you must supply the network interface resource. If it includes an IP
+     *        subnet, then you must specify the subnet resource. For more information on the Amazon EC2 scenario
+     *        options, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html">Supported
      *        platforms</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>

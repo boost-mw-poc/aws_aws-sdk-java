@@ -25,24 +25,24 @@ public class UpdateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The resulting Key Value Store to update.
+     * The resulting key value store to update.
      * </p>
      */
     private KeyValueStore keyValueStore;
     /**
      * <p>
-     * The ETag of the resulting Key Value Store.
+     * The <code>ETag</code> of the resulting key value store.
      * </p>
      */
     private String eTag;
 
     /**
      * <p>
-     * The resulting Key Value Store to update.
+     * The resulting key value store to update.
      * </p>
      * 
      * @param keyValueStore
-     *        The resulting Key Value Store to update.
+     *        The resulting key value store to update.
      */
 
     public void setKeyValueStore(KeyValueStore keyValueStore) {
@@ -51,10 +51,10 @@ public class UpdateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The resulting Key Value Store to update.
+     * The resulting key value store to update.
      * </p>
      * 
-     * @return The resulting Key Value Store to update.
+     * @return The resulting key value store to update.
      */
 
     public KeyValueStore getKeyValueStore() {
@@ -63,11 +63,11 @@ public class UpdateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The resulting Key Value Store to update.
+     * The resulting key value store to update.
      * </p>
      * 
      * @param keyValueStore
-     *        The resulting Key Value Store to update.
+     *        The resulting key value store to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,11 +78,11 @@ public class UpdateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The ETag of the resulting Key Value Store.
+     * The <code>ETag</code> of the resulting key value store.
      * </p>
      * 
      * @param eTag
-     *        The ETag of the resulting Key Value Store.
+     *        The <code>ETag</code> of the resulting key value store.
      */
 
     public void setETag(String eTag) {
@@ -91,10 +91,10 @@ public class UpdateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The ETag of the resulting Key Value Store.
+     * The <code>ETag</code> of the resulting key value store.
      * </p>
      * 
-     * @return The ETag of the resulting Key Value Store.
+     * @return The <code>ETag</code> of the resulting key value store.
      */
 
     public String getETag() {
@@ -103,11 +103,11 @@ public class UpdateKeyValueStoreResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The ETag of the resulting Key Value Store.
+     * The <code>ETag</code> of the resulting key value store.
      * </p>
      * 
      * @param eTag
-     *        The ETag of the resulting Key Value Store.
+     *        The <code>ETag</code> of the resulting key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

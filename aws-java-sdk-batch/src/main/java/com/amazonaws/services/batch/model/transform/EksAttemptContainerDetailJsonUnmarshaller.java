@@ -48,6 +48,10 @@ public class EksAttemptContainerDetailJsonUnmarshaller implements Unmarshaller<E
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("name", targetDepth)) {
+                    context.nextToken();
+                    eksAttemptContainerDetail.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("exitCode", targetDepth)) {
                     context.nextToken();
                     eksAttemptContainerDetail.setExitCode(context.getUnmarshaller(Integer.class).unmarshall(context));

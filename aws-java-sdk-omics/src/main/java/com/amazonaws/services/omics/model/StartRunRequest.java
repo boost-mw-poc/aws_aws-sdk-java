@@ -69,7 +69,7 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private Integer priority;
     /**
      * <p>
-     * A storage capacity for the run in gigabytes.
+     * A storage capacity for the run in gibibytes.
      * </p>
      */
     private Integer storageCapacity;
@@ -405,11 +405,11 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * A storage capacity for the run in gigabytes.
+     * A storage capacity for the run in gibibytes.
      * </p>
      * 
      * @param storageCapacity
-     *        A storage capacity for the run in gigabytes.
+     *        A storage capacity for the run in gibibytes.
      */
 
     public void setStorageCapacity(Integer storageCapacity) {
@@ -418,10 +418,10 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * A storage capacity for the run in gigabytes.
+     * A storage capacity for the run in gibibytes.
      * </p>
      * 
-     * @return A storage capacity for the run in gigabytes.
+     * @return A storage capacity for the run in gibibytes.
      */
 
     public Integer getStorageCapacity() {
@@ -430,11 +430,11 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * A storage capacity for the run in gigabytes.
+     * A storage capacity for the run in gibibytes.
      * </p>
      * 
      * @param storageCapacity
-     *        A storage capacity for the run in gigabytes.
+     *        A storage capacity for the run in gibibytes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

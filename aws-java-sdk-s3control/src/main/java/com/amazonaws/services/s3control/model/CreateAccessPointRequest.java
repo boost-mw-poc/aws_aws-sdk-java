@@ -78,6 +78,11 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The Amazon Web Services account ID associated with the S3 bucket associated with this access point.
      * </p>
+     * <p>
+     * For same account access point when your bucket and access point belong to the same account owner, the
+     * <code>BucketAccountId</code> is not required. For cross-account access point when your bucket and access point
+     * are not in the same account, the <code>BucketAccountId</code> is required.
+     * </p>
      */
     private String bucketAccountId;
 
@@ -390,9 +395,18 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The Amazon Web Services account ID associated with the S3 bucket associated with this access point.
      * </p>
+     * <p>
+     * For same account access point when your bucket and access point belong to the same account owner, the
+     * <code>BucketAccountId</code> is not required. For cross-account access point when your bucket and access point
+     * are not in the same account, the <code>BucketAccountId</code> is required.
+     * </p>
      * 
      * @param bucketAccountId
-     *        The Amazon Web Services account ID associated with the S3 bucket associated with this access point.
+     *        The Amazon Web Services account ID associated with the S3 bucket associated with this access point.</p>
+     *        <p>
+     *        For same account access point when your bucket and access point belong to the same account owner, the
+     *        <code>BucketAccountId</code> is not required. For cross-account access point when your bucket and access
+     *        point are not in the same account, the <code>BucketAccountId</code> is required.
      */
 
     public void setBucketAccountId(String bucketAccountId) {
@@ -403,8 +417,17 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The Amazon Web Services account ID associated with the S3 bucket associated with this access point.
      * </p>
+     * <p>
+     * For same account access point when your bucket and access point belong to the same account owner, the
+     * <code>BucketAccountId</code> is not required. For cross-account access point when your bucket and access point
+     * are not in the same account, the <code>BucketAccountId</code> is required.
+     * </p>
      * 
-     * @return The Amazon Web Services account ID associated with the S3 bucket associated with this access point.
+     * @return The Amazon Web Services account ID associated with the S3 bucket associated with this access point.</p>
+     *         <p>
+     *         For same account access point when your bucket and access point belong to the same account owner, the
+     *         <code>BucketAccountId</code> is not required. For cross-account access point when your bucket and access
+     *         point are not in the same account, the <code>BucketAccountId</code> is required.
      */
 
     public String getBucketAccountId() {
@@ -415,9 +438,18 @@ public class CreateAccessPointRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The Amazon Web Services account ID associated with the S3 bucket associated with this access point.
      * </p>
+     * <p>
+     * For same account access point when your bucket and access point belong to the same account owner, the
+     * <code>BucketAccountId</code> is not required. For cross-account access point when your bucket and access point
+     * are not in the same account, the <code>BucketAccountId</code> is required.
+     * </p>
      * 
      * @param bucketAccountId
-     *        The Amazon Web Services account ID associated with the S3 bucket associated with this access point.
+     *        The Amazon Web Services account ID associated with the S3 bucket associated with this access point.</p>
+     *        <p>
+     *        For same account access point when your bucket and access point belong to the same account owner, the
+     *        <code>BucketAccountId</code> is not required. For cross-account access point when your bucket and access
+     *        point are not in the same account, the <code>BucketAccountId</code> is required.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

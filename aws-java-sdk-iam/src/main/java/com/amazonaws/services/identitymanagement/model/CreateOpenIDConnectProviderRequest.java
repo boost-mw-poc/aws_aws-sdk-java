@@ -63,12 +63,15 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * provider. This lets you maintain multiple thumbprints if the identity provider is rotating certificates.
      * </p>
      * <p>
+     * This parameter is optional. If it is not included, IAM will retrieve and use the top intermediate certificate
+     * authority (CA) thumbprint of the OpenID Connect identity provider server certificate.
+     * </p>
+     * <p>
      * The server certificate thumbprint is the hex-encoded SHA-1 hash value of the X.509 certificate used by the domain
      * where the OpenID Connect provider makes its keys available. It is always a 40-character string.
      * </p>
      * <p>
-     * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
-     * provider is <code>server.example.com</code> and the provider stores its keys at
+     * For example, assume that the OIDC provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
      * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
@@ -346,12 +349,15 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * provider. This lets you maintain multiple thumbprints if the identity provider is rotating certificates.
      * </p>
      * <p>
+     * This parameter is optional. If it is not included, IAM will retrieve and use the top intermediate certificate
+     * authority (CA) thumbprint of the OpenID Connect identity provider server certificate.
+     * </p>
+     * <p>
      * The server certificate thumbprint is the hex-encoded SHA-1 hash value of the X.509 certificate used by the domain
      * where the OpenID Connect provider makes its keys available. It is always a 40-character string.
      * </p>
      * <p>
-     * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
-     * provider is <code>server.example.com</code> and the provider stores its keys at
+     * For example, assume that the OIDC provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
      * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
@@ -366,14 +372,17 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *         thumbprints for an OIDC provider. This lets you maintain multiple thumbprints if the identity provider is
      *         rotating certificates.</p>
      *         <p>
+     *         This parameter is optional. If it is not included, IAM will retrieve and use the top intermediate
+     *         certificate authority (CA) thumbprint of the OpenID Connect identity provider server certificate.
+     *         </p>
+     *         <p>
      *         The server certificate thumbprint is the hex-encoded SHA-1 hash value of the X.509 certificate used by
      *         the domain where the OpenID Connect provider makes its keys available. It is always a 40-character
      *         string.
      *         </p>
      *         <p>
-     *         You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the
-     *         OIDC provider is <code>server.example.com</code> and the provider stores its keys at
-     *         https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
+     *         For example, assume that the OIDC provider is <code>server.example.com</code> and the provider stores its
+     *         keys at https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
      *         hex-encoded SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      *         </p>
      *         <p>
@@ -396,12 +405,15 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * provider. This lets you maintain multiple thumbprints if the identity provider is rotating certificates.
      * </p>
      * <p>
+     * This parameter is optional. If it is not included, IAM will retrieve and use the top intermediate certificate
+     * authority (CA) thumbprint of the OpenID Connect identity provider server certificate.
+     * </p>
+     * <p>
      * The server certificate thumbprint is the hex-encoded SHA-1 hash value of the X.509 certificate used by the domain
      * where the OpenID Connect provider makes its keys available. It is always a 40-character string.
      * </p>
      * <p>
-     * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
-     * provider is <code>server.example.com</code> and the provider stores its keys at
+     * For example, assume that the OIDC provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
      * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
@@ -417,13 +429,16 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *        thumbprints for an OIDC provider. This lets you maintain multiple thumbprints if the identity provider is
      *        rotating certificates.</p>
      *        <p>
+     *        This parameter is optional. If it is not included, IAM will retrieve and use the top intermediate
+     *        certificate authority (CA) thumbprint of the OpenID Connect identity provider server certificate.
+     *        </p>
+     *        <p>
      *        The server certificate thumbprint is the hex-encoded SHA-1 hash value of the X.509 certificate used by the
      *        domain where the OpenID Connect provider makes its keys available. It is always a 40-character string.
      *        </p>
      *        <p>
-     *        You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the
-     *        OIDC provider is <code>server.example.com</code> and the provider stores its keys at
-     *        https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
+     *        For example, assume that the OIDC provider is <code>server.example.com</code> and the provider stores its
+     *        keys at https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
      *        hex-encoded SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      *        </p>
      *        <p>
@@ -448,12 +463,15 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * provider. This lets you maintain multiple thumbprints if the identity provider is rotating certificates.
      * </p>
      * <p>
+     * This parameter is optional. If it is not included, IAM will retrieve and use the top intermediate certificate
+     * authority (CA) thumbprint of the OpenID Connect identity provider server certificate.
+     * </p>
+     * <p>
      * The server certificate thumbprint is the hex-encoded SHA-1 hash value of the X.509 certificate used by the domain
      * where the OpenID Connect provider makes its keys available. It is always a 40-character string.
      * </p>
      * <p>
-     * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
-     * provider is <code>server.example.com</code> and the provider stores its keys at
+     * For example, assume that the OIDC provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
      * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
@@ -474,13 +492,16 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *        thumbprints for an OIDC provider. This lets you maintain multiple thumbprints if the identity provider is
      *        rotating certificates.</p>
      *        <p>
+     *        This parameter is optional. If it is not included, IAM will retrieve and use the top intermediate
+     *        certificate authority (CA) thumbprint of the OpenID Connect identity provider server certificate.
+     *        </p>
+     *        <p>
      *        The server certificate thumbprint is the hex-encoded SHA-1 hash value of the X.509 certificate used by the
      *        domain where the OpenID Connect provider makes its keys available. It is always a 40-character string.
      *        </p>
      *        <p>
-     *        You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the
-     *        OIDC provider is <code>server.example.com</code> and the provider stores its keys at
-     *        https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
+     *        For example, assume that the OIDC provider is <code>server.example.com</code> and the provider stores its
+     *        keys at https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
      *        hex-encoded SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      *        </p>
      *        <p>
@@ -507,12 +528,15 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * provider. This lets you maintain multiple thumbprints if the identity provider is rotating certificates.
      * </p>
      * <p>
+     * This parameter is optional. If it is not included, IAM will retrieve and use the top intermediate certificate
+     * authority (CA) thumbprint of the OpenID Connect identity provider server certificate.
+     * </p>
+     * <p>
      * The server certificate thumbprint is the hex-encoded SHA-1 hash value of the X.509 certificate used by the domain
      * where the OpenID Connect provider makes its keys available. It is always a 40-character string.
      * </p>
      * <p>
-     * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
-     * provider is <code>server.example.com</code> and the provider stores its keys at
+     * For example, assume that the OIDC provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
      * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
@@ -528,13 +552,16 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *        thumbprints for an OIDC provider. This lets you maintain multiple thumbprints if the identity provider is
      *        rotating certificates.</p>
      *        <p>
+     *        This parameter is optional. If it is not included, IAM will retrieve and use the top intermediate
+     *        certificate authority (CA) thumbprint of the OpenID Connect identity provider server certificate.
+     *        </p>
+     *        <p>
      *        The server certificate thumbprint is the hex-encoded SHA-1 hash value of the X.509 certificate used by the
      *        domain where the OpenID Connect provider makes its keys available. It is always a 40-character string.
      *        </p>
      *        <p>
-     *        You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the
-     *        OIDC provider is <code>server.example.com</code> and the provider stores its keys at
-     *        https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
+     *        For example, assume that the OIDC provider is <code>server.example.com</code> and the provider stores its
+     *        keys at https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
      *        hex-encoded SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      *        </p>
      *        <p>

@@ -27,13 +27,13 @@ public class CreateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store. The maximum length of the name is 32 characters.
+     * The name of the key value store. The minimum length is 1 character and the maximum length is 64 characters.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The comment of the Key Value Store.
+     * The comment of the key value store.
      * </p>
      */
     private String comment;
@@ -46,11 +46,12 @@ public class CreateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store. The maximum length of the name is 32 characters.
+     * The name of the key value store. The minimum length is 1 character and the maximum length is 64 characters.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store. The maximum length of the name is 32 characters.
+     *        The name of the key value store. The minimum length is 1 character and the maximum length is 64
+     *        characters.
      */
 
     public void setName(String name) {
@@ -59,10 +60,11 @@ public class CreateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store. The maximum length of the name is 32 characters.
+     * The name of the key value store. The minimum length is 1 character and the maximum length is 64 characters.
      * </p>
      * 
-     * @return The name of the Key Value Store. The maximum length of the name is 32 characters.
+     * @return The name of the key value store. The minimum length is 1 character and the maximum length is 64
+     *         characters.
      */
 
     public String getName() {
@@ -71,11 +73,12 @@ public class CreateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store. The maximum length of the name is 32 characters.
+     * The name of the key value store. The minimum length is 1 character and the maximum length is 64 characters.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store. The maximum length of the name is 32 characters.
+     *        The name of the key value store. The minimum length is 1 character and the maximum length is 64
+     *        characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +89,11 @@ public class CreateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The comment of the Key Value Store.
+     * The comment of the key value store.
      * </p>
      * 
      * @param comment
-     *        The comment of the Key Value Store.
+     *        The comment of the key value store.
      */
 
     public void setComment(String comment) {
@@ -99,10 +102,10 @@ public class CreateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The comment of the Key Value Store.
+     * The comment of the key value store.
      * </p>
      * 
-     * @return The comment of the Key Value Store.
+     * @return The comment of the key value store.
      */
 
     public String getComment() {
@@ -111,11 +114,11 @@ public class CreateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The comment of the Key Value Store.
+     * The comment of the key value store.
      * </p>
      * 
      * @param comment
-     *        The comment of the Key Value Store.
+     *        The comment of the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

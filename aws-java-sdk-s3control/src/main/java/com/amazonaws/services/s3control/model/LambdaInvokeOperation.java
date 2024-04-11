@@ -38,10 +38,10 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      * Specifies the schema version for the payload that Batch Operations sends when invoking an Lambda function.
      * Version <code>1.0</code> is the default. Version <code>2.0</code> is required when you use Batch Operations to
      * invoke Lambda functions that act on directory buckets, or if you need to specify <code>UserArguments</code>. For
-     * more information, see <a
-     * href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/">Using
-     * Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web Services Storage
-     * Blog</i>.
+     * more information, see <a href=
+     * "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     * >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     * <i>Amazon Web Services Storage Blog</i>.
      * </p>
      * <important>
      * <p>
@@ -61,10 +61,10 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      * <p>
      * Key-value pairs that are passed in the payload that Batch Operations sends when invoking an Lambda function. You
      * must specify <code>InvocationSchemaVersion</code> <b>2.0</b> for <code>LambdaInvoke</code> operations that
-     * include <code>UserArguments</code>. For more information, see <a
-     * href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/">Using
-     * Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web Services Storage
-     * Blog</i>.
+     * include <code>UserArguments</code>. For more information, see <a href=
+     * "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     * >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     * <i>Amazon Web Services Storage Blog</i>.
      * </p>
      */
     private java.util.Map<String, String> userArguments;
@@ -120,10 +120,10 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      * Specifies the schema version for the payload that Batch Operations sends when invoking an Lambda function.
      * Version <code>1.0</code> is the default. Version <code>2.0</code> is required when you use Batch Operations to
      * invoke Lambda functions that act on directory buckets, or if you need to specify <code>UserArguments</code>. For
-     * more information, see <a
-     * href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/">Using
-     * Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web Services Storage
-     * Blog</i>.
+     * more information, see <a href=
+     * "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     * >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     * <i>Amazon Web Services Storage Blog</i>.
      * </p>
      * <important>
      * <p>
@@ -142,10 +142,10 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      *        Specifies the schema version for the payload that Batch Operations sends when invoking an Lambda function.
      *        Version <code>1.0</code> is the default. Version <code>2.0</code> is required when you use Batch
      *        Operations to invoke Lambda functions that act on directory buckets, or if you need to specify
-     *        <code>UserArguments</code>. For more information, see <a
-     *        href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/"
-     *        >Using Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web
-     *        Services Storage Blog</i>.</p> <important>
+     *        <code>UserArguments</code>. For more information, see <a href=
+     *        "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     *        >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     *        <i>Amazon Web Services Storage Blog</i>.</p> <important>
      *        <p>
      *        Ensure that your Lambda function code expects <code>InvocationSchemaVersion</code> <b>2.0</b> and uses
      *        bucket name rather than bucket ARN. If the <code>InvocationSchemaVersion</code> does not match what your
@@ -167,10 +167,10 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      * Specifies the schema version for the payload that Batch Operations sends when invoking an Lambda function.
      * Version <code>1.0</code> is the default. Version <code>2.0</code> is required when you use Batch Operations to
      * invoke Lambda functions that act on directory buckets, or if you need to specify <code>UserArguments</code>. For
-     * more information, see <a
-     * href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/">Using
-     * Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web Services Storage
-     * Blog</i>.
+     * more information, see <a href=
+     * "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     * >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     * <i>Amazon Web Services Storage Blog</i>.
      * </p>
      * <important>
      * <p>
@@ -188,10 +188,10 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      * @return Specifies the schema version for the payload that Batch Operations sends when invoking an Lambda
      *         function. Version <code>1.0</code> is the default. Version <code>2.0</code> is required when you use
      *         Batch Operations to invoke Lambda functions that act on directory buckets, or if you need to specify
-     *         <code>UserArguments</code>. For more information, see <a
-     *         href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/"
-     *         >Using Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web
-     *         Services Storage Blog</i>.</p> <important>
+     *         <code>UserArguments</code>. For more information, see <a href=
+     *         "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     *         >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     *         <i>Amazon Web Services Storage Blog</i>.</p> <important>
      *         <p>
      *         Ensure that your Lambda function code expects <code>InvocationSchemaVersion</code> <b>2.0</b> and uses
      *         bucket name rather than bucket ARN. If the <code>InvocationSchemaVersion</code> does not match what your
@@ -213,10 +213,10 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      * Specifies the schema version for the payload that Batch Operations sends when invoking an Lambda function.
      * Version <code>1.0</code> is the default. Version <code>2.0</code> is required when you use Batch Operations to
      * invoke Lambda functions that act on directory buckets, or if you need to specify <code>UserArguments</code>. For
-     * more information, see <a
-     * href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/">Using
-     * Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web Services Storage
-     * Blog</i>.
+     * more information, see <a href=
+     * "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     * >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     * <i>Amazon Web Services Storage Blog</i>.
      * </p>
      * <important>
      * <p>
@@ -235,10 +235,10 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      *        Specifies the schema version for the payload that Batch Operations sends when invoking an Lambda function.
      *        Version <code>1.0</code> is the default. Version <code>2.0</code> is required when you use Batch
      *        Operations to invoke Lambda functions that act on directory buckets, or if you need to specify
-     *        <code>UserArguments</code>. For more information, see <a
-     *        href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/"
-     *        >Using Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web
-     *        Services Storage Blog</i>.</p> <important>
+     *        <code>UserArguments</code>. For more information, see <a href=
+     *        "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     *        >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     *        <i>Amazon Web Services Storage Blog</i>.</p> <important>
      *        <p>
      *        Ensure that your Lambda function code expects <code>InvocationSchemaVersion</code> <b>2.0</b> and uses
      *        bucket name rather than bucket ARN. If the <code>InvocationSchemaVersion</code> does not match what your
@@ -261,18 +261,18 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      * <p>
      * Key-value pairs that are passed in the payload that Batch Operations sends when invoking an Lambda function. You
      * must specify <code>InvocationSchemaVersion</code> <b>2.0</b> for <code>LambdaInvoke</code> operations that
-     * include <code>UserArguments</code>. For more information, see <a
-     * href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/">Using
-     * Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web Services Storage
-     * Blog</i>.
+     * include <code>UserArguments</code>. For more information, see <a href=
+     * "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     * >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     * <i>Amazon Web Services Storage Blog</i>.
      * </p>
      * 
      * @return Key-value pairs that are passed in the payload that Batch Operations sends when invoking an Lambda
      *         function. You must specify <code>InvocationSchemaVersion</code> <b>2.0</b> for <code>LambdaInvoke</code>
-     *         operations that include <code>UserArguments</code>. For more information, see <a
-     *         href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/"
-     *         >Using Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web
-     *         Services Storage Blog</i>.
+     *         operations that include <code>UserArguments</code>. For more information, see <a href=
+     *         "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     *         >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     *         <i>Amazon Web Services Storage Blog</i>.
      */
 
     public java.util.Map<String, String> getUserArguments() {
@@ -283,19 +283,19 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      * <p>
      * Key-value pairs that are passed in the payload that Batch Operations sends when invoking an Lambda function. You
      * must specify <code>InvocationSchemaVersion</code> <b>2.0</b> for <code>LambdaInvoke</code> operations that
-     * include <code>UserArguments</code>. For more information, see <a
-     * href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/">Using
-     * Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web Services Storage
-     * Blog</i>.
+     * include <code>UserArguments</code>. For more information, see <a href=
+     * "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     * >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     * <i>Amazon Web Services Storage Blog</i>.
      * </p>
      * 
      * @param userArguments
      *        Key-value pairs that are passed in the payload that Batch Operations sends when invoking an Lambda
      *        function. You must specify <code>InvocationSchemaVersion</code> <b>2.0</b> for <code>LambdaInvoke</code>
-     *        operations that include <code>UserArguments</code>. For more information, see <a
-     *        href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/"
-     *        >Using Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web
-     *        Services Storage Blog</i>.
+     *        operations that include <code>UserArguments</code>. For more information, see <a href=
+     *        "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     *        >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     *        <i>Amazon Web Services Storage Blog</i>.
      */
 
     public void setUserArguments(java.util.Map<String, String> userArguments) {
@@ -306,19 +306,19 @@ public class LambdaInvokeOperation implements Serializable, Cloneable {
      * <p>
      * Key-value pairs that are passed in the payload that Batch Operations sends when invoking an Lambda function. You
      * must specify <code>InvocationSchemaVersion</code> <b>2.0</b> for <code>LambdaInvoke</code> operations that
-     * include <code>UserArguments</code>. For more information, see <a
-     * href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/">Using
-     * Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web Services Storage
-     * Blog</i>.
+     * include <code>UserArguments</code>. For more information, see <a href=
+     * "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     * >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     * <i>Amazon Web Services Storage Blog</i>.
      * </p>
      * 
      * @param userArguments
      *        Key-value pairs that are passed in the payload that Batch Operations sends when invoking an Lambda
      *        function. You must specify <code>InvocationSchemaVersion</code> <b>2.0</b> for <code>LambdaInvoke</code>
-     *        operations that include <code>UserArguments</code>. For more information, see <a
-     *        href="https://aws.amazon.com/blogs/storage/using-lambda-with-s3-batch-operations-and-s3-express-one-zone/"
-     *        >Using Lambda with Amazon S3 Batch Operations and Amazon S3 Express One Zone</a> in the <i>Amazon Web
-     *        Services Storage Blog</i>.
+     *        operations that include <code>UserArguments</code>. For more information, see <a href=
+     *        "https://aws.amazon.com/blogs/storage/automate-object-processing-in-amazon-s3-directory-buckets-with-s3-batch-operations-and-aws-lambda/"
+     *        >Automate object processing in Amazon S3 directory buckets with S3 Batch Operations and Lambda</a> in the
+     *        <i>Amazon Web Services Storage Blog</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

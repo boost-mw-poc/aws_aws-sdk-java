@@ -534,6 +534,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-se2</code> (for RDS Custom for Oracle DB instances)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code> (for RDS Custom for Oracle DB instances)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>custom-sqlserver-ee</code> (for RDS Custom for SQL Server DB instances)
      * </p>
      * </li>
@@ -2243,6 +2253,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li> <li>
      *        <p>
      *        <code>custom-oracle-ee-cdb</code> (for RDS Custom for Oracle DB instances)
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        <code>custom-oracle-se2</code> (for RDS Custom for Oracle DB instances)
+     *        </p>
+     *        </li> <li>
+     *        <p>
+     *        <code>custom-oracle-se2-cdb</code> (for RDS Custom for Oracle DB instances)
      *        </p>
      *        </li> <li>
      *        <p>
@@ -5290,6 +5308,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-se2</code> (for RDS Custom for Oracle DB instances)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code> (for RDS Custom for Oracle DB instances)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>custom-sqlserver-ee</code> (for RDS Custom for SQL Server DB instances)
      * </p>
      * </li>
@@ -5397,6 +5425,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        <code>custom-oracle-ee-cdb</code> (for RDS Custom for Oracle DB instances)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2</code> (for RDS Custom for Oracle DB instances)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2-cdb</code> (for RDS Custom for Oracle DB instances)
      *        </p>
      *        </li>
      *        <li>
@@ -5518,6 +5556,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-se2</code> (for RDS Custom for Oracle DB instances)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code> (for RDS Custom for Oracle DB instances)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>custom-sqlserver-ee</code> (for RDS Custom for SQL Server DB instances)
      * </p>
      * </li>
@@ -5624,6 +5672,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <li>
      *         <p>
      *         <code>custom-oracle-ee-cdb</code> (for RDS Custom for Oracle DB instances)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-se2</code> (for RDS Custom for Oracle DB instances)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-se2-cdb</code> (for RDS Custom for Oracle DB instances)
      *         </p>
      *         </li>
      *         <li>
@@ -5745,6 +5803,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-se2</code> (for RDS Custom for Oracle DB instances)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code> (for RDS Custom for Oracle DB instances)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>custom-sqlserver-ee</code> (for RDS Custom for SQL Server DB instances)
      * </p>
      * </li>
@@ -5852,6 +5920,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        <code>custom-oracle-ee-cdb</code> (for RDS Custom for Oracle DB instances)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2</code> (for RDS Custom for Oracle DB instances)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2-cdb</code> (for RDS Custom for Oracle DB instances)
      *        </p>
      *        </li>
      *        <li>

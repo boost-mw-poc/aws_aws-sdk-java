@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Key Value Store entity was not found.
+ * The key value store entity was not found.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

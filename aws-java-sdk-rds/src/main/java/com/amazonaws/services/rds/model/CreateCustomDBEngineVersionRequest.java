@@ -27,9 +27,30 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The database engine to use for your custom engine version (CEV). The only supported value is
-     * <code>custom-oracle-ee</code>.
+     * The database engine. RDS Custom for Oracle supports the following values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>custom-oracle-ee</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-ee-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String engine;
     /**
@@ -157,13 +178,54 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The database engine to use for your custom engine version (CEV). The only supported value is
-     * <code>custom-oracle-ee</code>.
+     * The database engine. RDS Custom for Oracle supports the following values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>custom-oracle-ee</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-ee-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param engine
-     *        The database engine to use for your custom engine version (CEV). The only supported value is
-     *        <code>custom-oracle-ee</code>.
+     *        The database engine. RDS Custom for Oracle supports the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-ee</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-ee-cdb</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2-cdb</code>
+     *        </p>
+     *        </li>
      */
 
     public void setEngine(String engine) {
@@ -172,12 +234,53 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The database engine to use for your custom engine version (CEV). The only supported value is
-     * <code>custom-oracle-ee</code>.
+     * The database engine. RDS Custom for Oracle supports the following values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>custom-oracle-ee</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-ee-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The database engine to use for your custom engine version (CEV). The only supported value is
-     *         <code>custom-oracle-ee</code>.
+     * @return The database engine. RDS Custom for Oracle supports the following values:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-ee</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-ee-cdb</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-se2</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-se2-cdb</code>
+     *         </p>
+     *         </li>
      */
 
     public String getEngine() {
@@ -186,13 +289,54 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The database engine to use for your custom engine version (CEV). The only supported value is
-     * <code>custom-oracle-ee</code>.
+     * The database engine. RDS Custom for Oracle supports the following values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>custom-oracle-ee</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-ee-cdb</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-se2-cdb</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param engine
-     *        The database engine to use for your custom engine version (CEV). The only supported value is
-     *        <code>custom-oracle-ee</code>.
+     *        The database engine. RDS Custom for Oracle supports the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-ee</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-ee-cdb</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-se2-cdb</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

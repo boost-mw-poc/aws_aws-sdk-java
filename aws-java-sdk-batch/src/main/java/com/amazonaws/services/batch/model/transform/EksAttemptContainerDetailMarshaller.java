@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EksAttemptContainerDetailMarshaller {
 
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("name").build();
     private static final MarshallingInfo<Integer> EXITCODE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("exitCode").build();
     private static final MarshallingInfo<String> REASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -48,6 +50,7 @@ public class EksAttemptContainerDetailMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(eksAttemptContainerDetail.getName(), NAME_BINDING);
             protocolMarshaller.marshall(eksAttemptContainerDetail.getExitCode(), EXITCODE_BINDING);
             protocolMarshaller.marshall(eksAttemptContainerDetail.getReason(), REASON_BINDING);
         } catch (Exception e) {

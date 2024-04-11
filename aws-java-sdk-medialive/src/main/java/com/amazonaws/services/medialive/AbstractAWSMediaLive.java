@@ -69,6 +69,26 @@ public class AbstractAWSMediaLive implements AWSMediaLive {
     }
 
     @Override
+    public CreateCloudWatchAlarmTemplateResult createCloudWatchAlarmTemplate(CreateCloudWatchAlarmTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateCloudWatchAlarmTemplateGroupResult createCloudWatchAlarmTemplateGroup(CreateCloudWatchAlarmTemplateGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateEventBridgeRuleTemplateResult createEventBridgeRuleTemplate(CreateEventBridgeRuleTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateEventBridgeRuleTemplateGroupResult createEventBridgeRuleTemplateGroup(CreateEventBridgeRuleTemplateGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateInputResult createInput(CreateInputRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -94,12 +114,37 @@ public class AbstractAWSMediaLive implements AWSMediaLive {
     }
 
     @Override
+    public CreateSignalMapResult createSignalMap(CreateSignalMapRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateTagsResult createTags(CreateTagsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DeleteChannelResult deleteChannel(DeleteChannelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteCloudWatchAlarmTemplateResult deleteCloudWatchAlarmTemplate(DeleteCloudWatchAlarmTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteCloudWatchAlarmTemplateGroupResult deleteCloudWatchAlarmTemplateGroup(DeleteCloudWatchAlarmTemplateGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteEventBridgeRuleTemplateResult deleteEventBridgeRuleTemplate(DeleteEventBridgeRuleTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteEventBridgeRuleTemplateGroupResult deleteEventBridgeRuleTemplateGroup(DeleteEventBridgeRuleTemplateGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -130,6 +175,11 @@ public class AbstractAWSMediaLive implements AWSMediaLive {
 
     @Override
     public DeleteScheduleResult deleteSchedule(DeleteScheduleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteSignalMapResult deleteSignalMap(DeleteSignalMapRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -199,7 +249,52 @@ public class AbstractAWSMediaLive implements AWSMediaLive {
     }
 
     @Override
+    public GetCloudWatchAlarmTemplateResult getCloudWatchAlarmTemplate(GetCloudWatchAlarmTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetCloudWatchAlarmTemplateGroupResult getCloudWatchAlarmTemplateGroup(GetCloudWatchAlarmTemplateGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetEventBridgeRuleTemplateResult getEventBridgeRuleTemplate(GetEventBridgeRuleTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetEventBridgeRuleTemplateGroupResult getEventBridgeRuleTemplateGroup(GetEventBridgeRuleTemplateGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetSignalMapResult getSignalMap(GetSignalMapRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListChannelsResult listChannels(ListChannelsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCloudWatchAlarmTemplateGroupsResult listCloudWatchAlarmTemplateGroups(ListCloudWatchAlarmTemplateGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCloudWatchAlarmTemplatesResult listCloudWatchAlarmTemplates(ListCloudWatchAlarmTemplatesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEventBridgeRuleTemplateGroupsResult listEventBridgeRuleTemplateGroups(ListEventBridgeRuleTemplateGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEventBridgeRuleTemplatesResult listEventBridgeRuleTemplates(ListEventBridgeRuleTemplatesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -244,6 +339,11 @@ public class AbstractAWSMediaLive implements AWSMediaLive {
     }
 
     @Override
+    public ListSignalMapsResult listSignalMaps(ListSignalMapsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -274,6 +374,11 @@ public class AbstractAWSMediaLive implements AWSMediaLive {
     }
 
     @Override
+    public StartDeleteMonitorDeploymentResult startDeleteMonitorDeployment(StartDeleteMonitorDeploymentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartInputDeviceResult startInputDevice(StartInputDeviceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -284,7 +389,17 @@ public class AbstractAWSMediaLive implements AWSMediaLive {
     }
 
     @Override
+    public StartMonitorDeploymentResult startMonitorDeployment(StartMonitorDeploymentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartMultiplexResult startMultiplex(StartMultiplexRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartUpdateSignalMapResult startUpdateSignalMap(StartUpdateSignalMapRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -320,6 +435,26 @@ public class AbstractAWSMediaLive implements AWSMediaLive {
 
     @Override
     public UpdateChannelClassResult updateChannelClass(UpdateChannelClassRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateCloudWatchAlarmTemplateResult updateCloudWatchAlarmTemplate(UpdateCloudWatchAlarmTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateCloudWatchAlarmTemplateGroupResult updateCloudWatchAlarmTemplateGroup(UpdateCloudWatchAlarmTemplateGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEventBridgeRuleTemplateResult updateEventBridgeRuleTemplate(UpdateEventBridgeRuleTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEventBridgeRuleTemplateGroupResult updateEventBridgeRuleTemplateGroup(UpdateEventBridgeRuleTemplateGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

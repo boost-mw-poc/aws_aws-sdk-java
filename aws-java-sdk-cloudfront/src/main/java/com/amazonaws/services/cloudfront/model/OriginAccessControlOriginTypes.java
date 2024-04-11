@@ -21,7 +21,9 @@ import javax.annotation.Generated;
 public enum OriginAccessControlOriginTypes {
 
     S3("s3"),
-    Mediastore("mediastore");
+    Mediastore("mediastore"),
+    Mediapackagev2("mediapackagev2"),
+    Lambda("lambda");
 
     private String value;
 

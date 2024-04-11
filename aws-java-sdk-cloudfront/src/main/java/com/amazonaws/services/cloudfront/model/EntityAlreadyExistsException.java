@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Key Value Store entity already exists. You must provide a unique Key Value Store entity.
+ * The key value store entity already exists. You must provide a unique key value store entity.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

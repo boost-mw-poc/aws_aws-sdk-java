@@ -28,7 +28,7 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A name to identify the origin access control.
+     * A name to identify the origin access control. You can specify up to 64 characters.
      * </p>
      */
     private String name;
@@ -91,11 +91,11 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A name to identify the origin access control.
+     * A name to identify the origin access control. You can specify up to 64 characters.
      * </p>
      * 
      * @param name
-     *        A name to identify the origin access control.
+     *        A name to identify the origin access control. You can specify up to 64 characters.
      */
 
     public void setName(String name) {
@@ -104,10 +104,10 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A name to identify the origin access control.
+     * A name to identify the origin access control. You can specify up to 64 characters.
      * </p>
      * 
-     * @return A name to identify the origin access control.
+     * @return A name to identify the origin access control. You can specify up to 64 characters.
      */
 
     public String getName() {
@@ -116,11 +116,11 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A name to identify the origin access control.
+     * A name to identify the origin access control. You can specify up to 64 characters.
      * </p>
      * 
      * @param name
-     *        A name to identify the origin access control.
+     *        A name to identify the origin access control. You can specify up to 64 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

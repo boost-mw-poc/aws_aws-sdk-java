@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The import source for the Key Value Store.
+ * The import source for the key value store.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ImportSource" target="_top">AWS API
@@ -28,24 +28,24 @@ public class ImportSource implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The source type of the import source for the Key Value Store.
+     * The source type of the import source for the key value store.
      * </p>
      */
     private String sourceType;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the import source for the Key Value Store.
+     * The Amazon Resource Name (ARN) of the import source for the key value store.
      * </p>
      */
     private String sourceARN;
 
     /**
      * <p>
-     * The source type of the import source for the Key Value Store.
+     * The source type of the import source for the key value store.
      * </p>
      * 
      * @param sourceType
-     *        The source type of the import source for the Key Value Store.
+     *        The source type of the import source for the key value store.
      * @see ImportSourceType
      */
 
@@ -55,10 +55,10 @@ public class ImportSource implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The source type of the import source for the Key Value Store.
+     * The source type of the import source for the key value store.
      * </p>
      * 
-     * @return The source type of the import source for the Key Value Store.
+     * @return The source type of the import source for the key value store.
      * @see ImportSourceType
      */
 
@@ -68,11 +68,11 @@ public class ImportSource implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The source type of the import source for the Key Value Store.
+     * The source type of the import source for the key value store.
      * </p>
      * 
      * @param sourceType
-     *        The source type of the import source for the Key Value Store.
+     *        The source type of the import source for the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportSourceType
      */
@@ -84,11 +84,11 @@ public class ImportSource implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The source type of the import source for the Key Value Store.
+     * The source type of the import source for the key value store.
      * </p>
      * 
      * @param sourceType
-     *        The source type of the import source for the Key Value Store.
+     *        The source type of the import source for the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportSourceType
      */
@@ -100,11 +100,11 @@ public class ImportSource implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the import source for the Key Value Store.
+     * The Amazon Resource Name (ARN) of the import source for the key value store.
      * </p>
      * 
      * @param sourceARN
-     *        The Amazon Resource Name (ARN) of the import source for the Key Value Store.
+     *        The Amazon Resource Name (ARN) of the import source for the key value store.
      */
 
     public void setSourceARN(String sourceARN) {
@@ -113,10 +113,10 @@ public class ImportSource implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the import source for the Key Value Store.
+     * The Amazon Resource Name (ARN) of the import source for the key value store.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the import source for the Key Value Store.
+     * @return The Amazon Resource Name (ARN) of the import source for the key value store.
      */
 
     public String getSourceARN() {
@@ -125,11 +125,11 @@ public class ImportSource implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the import source for the Key Value Store.
+     * The Amazon Resource Name (ARN) of the import source for the key value store.
      * </p>
      * 
      * @param sourceARN
-     *        The Amazon Resource Name (ARN) of the import source for the Key Value Store.
+     *        The Amazon Resource Name (ARN) of the import source for the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

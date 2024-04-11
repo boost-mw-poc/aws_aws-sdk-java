@@ -64,6 +64,12 @@ public class AttemptDetailJsonUnmarshaller implements Unmarshaller<AttemptDetail
                     context.nextToken();
                     attemptDetail.setStatusReason(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("taskProperties", targetDepth)) {
+                    context.nextToken();
+                    attemptDetail.setTaskProperties(new ListUnmarshaller<AttemptEcsTaskDetails>(AttemptEcsTaskDetailsJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

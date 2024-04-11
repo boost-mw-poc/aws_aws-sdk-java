@@ -27,30 +27,30 @@ public class UpdateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store to update.
+     * The name of the key value store to update.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The comment of the Key Value Store to update.
+     * The comment of the key value store to update.
      * </p>
      */
     private String comment;
     /**
      * <p>
-     * The Key Value Store to update, if a match occurs.
+     * The key value store to update, if a match occurs.
      * </p>
      */
     private String ifMatch;
 
     /**
      * <p>
-     * The name of the Key Value Store to update.
+     * The name of the key value store to update.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store to update.
+     *        The name of the key value store to update.
      */
 
     public void setName(String name) {
@@ -59,10 +59,10 @@ public class UpdateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store to update.
+     * The name of the key value store to update.
      * </p>
      * 
-     * @return The name of the Key Value Store to update.
+     * @return The name of the key value store to update.
      */
 
     public String getName() {
@@ -71,11 +71,11 @@ public class UpdateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store to update.
+     * The name of the key value store to update.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store to update.
+     *        The name of the key value store to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +86,11 @@ public class UpdateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The comment of the Key Value Store to update.
+     * The comment of the key value store to update.
      * </p>
      * 
      * @param comment
-     *        The comment of the Key Value Store to update.
+     *        The comment of the key value store to update.
      */
 
     public void setComment(String comment) {
@@ -99,10 +99,10 @@ public class UpdateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The comment of the Key Value Store to update.
+     * The comment of the key value store to update.
      * </p>
      * 
-     * @return The comment of the Key Value Store to update.
+     * @return The comment of the key value store to update.
      */
 
     public String getComment() {
@@ -111,11 +111,11 @@ public class UpdateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The comment of the Key Value Store to update.
+     * The comment of the key value store to update.
      * </p>
      * 
      * @param comment
-     *        The comment of the Key Value Store to update.
+     *        The comment of the key value store to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +126,11 @@ public class UpdateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Key Value Store to update, if a match occurs.
+     * The key value store to update, if a match occurs.
      * </p>
      * 
      * @param ifMatch
-     *        The Key Value Store to update, if a match occurs.
+     *        The key value store to update, if a match occurs.
      */
 
     public void setIfMatch(String ifMatch) {
@@ -139,10 +139,10 @@ public class UpdateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Key Value Store to update, if a match occurs.
+     * The key value store to update, if a match occurs.
      * </p>
      * 
-     * @return The Key Value Store to update, if a match occurs.
+     * @return The key value store to update, if a match occurs.
      */
 
     public String getIfMatch() {
@@ -151,11 +151,11 @@ public class UpdateKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Key Value Store to update, if a match occurs.
+     * The key value store to update, if a match occurs.
      * </p>
      * 
      * @param ifMatch
-     *        The Key Value Store to update, if a match occurs.
+     *        The key value store to update, if a match occurs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

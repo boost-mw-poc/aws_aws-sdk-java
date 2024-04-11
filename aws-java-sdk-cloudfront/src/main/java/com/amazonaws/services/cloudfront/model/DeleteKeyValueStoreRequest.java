@@ -27,24 +27,24 @@ public class DeleteKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The Key Value Store to delete, if a match occurs.
+     * The key value store to delete, if a match occurs.
      * </p>
      */
     private String ifMatch;
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store.
+     *        The name of the key value store.
      */
 
     public void setName(String name) {
@@ -53,10 +53,10 @@ public class DeleteKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      * 
-     * @return The name of the Key Value Store.
+     * @return The name of the key value store.
      */
 
     public String getName() {
@@ -65,11 +65,11 @@ public class DeleteKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the Key Value Store.
+     * The name of the key value store.
      * </p>
      * 
      * @param name
-     *        The name of the Key Value Store.
+     *        The name of the key value store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class DeleteKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Key Value Store to delete, if a match occurs.
+     * The key value store to delete, if a match occurs.
      * </p>
      * 
      * @param ifMatch
-     *        The Key Value Store to delete, if a match occurs.
+     *        The key value store to delete, if a match occurs.
      */
 
     public void setIfMatch(String ifMatch) {
@@ -93,10 +93,10 @@ public class DeleteKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Key Value Store to delete, if a match occurs.
+     * The key value store to delete, if a match occurs.
      * </p>
      * 
-     * @return The Key Value Store to delete, if a match occurs.
+     * @return The key value store to delete, if a match occurs.
      */
 
     public String getIfMatch() {
@@ -105,11 +105,11 @@ public class DeleteKeyValueStoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Key Value Store to delete, if a match occurs.
+     * The key value store to delete, if a match occurs.
      * </p>
      * 
      * @param ifMatch
-     *        The Key Value Store to delete, if a match occurs.
+     *        The key value store to delete, if a match occurs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
