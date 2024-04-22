@@ -28,12 +28,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ImportKeyRequestMarshaller {
 
-    private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Enabled").build();
-    private static final MarshallingInfo<String> KEYCHECKVALUEALGORITHM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCheckValueAlgorithm").build();
     private static final MarshallingInfo<StructuredPojo> KEYMATERIAL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyMaterial").build();
+    private static final MarshallingInfo<String> KEYCHECKVALUEALGORITHM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCheckValueAlgorithm").build();
+    private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Enabled").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -53,9 +53,9 @@ public class ImportKeyRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(importKeyRequest.getEnabled(), ENABLED_BINDING);
-            protocolMarshaller.marshall(importKeyRequest.getKeyCheckValueAlgorithm(), KEYCHECKVALUEALGORITHM_BINDING);
             protocolMarshaller.marshall(importKeyRequest.getKeyMaterial(), KEYMATERIAL_BINDING);
+            protocolMarshaller.marshall(importKeyRequest.getKeyCheckValueAlgorithm(), KEYCHECKVALUEALGORITHM_BINDING);
+            protocolMarshaller.marshall(importKeyRequest.getEnabled(), ENABLED_BINDING);
             protocolMarshaller.marshall(importKeyRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

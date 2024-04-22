@@ -33,6 +33,13 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private String keyState;
     /**
      * <p>
+     * Use this parameter in a subsequent request after you receive a response with truncated results. Set it to the
+     * value of <code>NextToken</code> from the truncated response you just received.
+     * </p>
+     */
+    private String nextToken;
+    /**
+     * <p>
      * Use this parameter to specify the maximum number of items to return. When this value is present, Amazon Web
      * Services Payment Cryptography does not return more than the specified number of items, but it might return fewer.
      * </p>
@@ -42,13 +49,6 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      */
     private Integer maxResults;
-    /**
-     * <p>
-     * Use this parameter in a subsequent request after you receive a response with truncated results. Set it to the
-     * value of <code>NextToken</code> from the truncated response you just received.
-     * </p>
-     */
-    private String nextToken;
 
     /**
      * <p>
@@ -106,6 +106,52 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     public ListKeysRequest withKeyState(KeyState keyState) {
         this.keyState = keyState.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use this parameter in a subsequent request after you receive a response with truncated results. Set it to the
+     * value of <code>NextToken</code> from the truncated response you just received.
+     * </p>
+     * 
+     * @param nextToken
+     *        Use this parameter in a subsequent request after you receive a response with truncated results. Set it to
+     *        the value of <code>NextToken</code> from the truncated response you just received.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * Use this parameter in a subsequent request after you receive a response with truncated results. Set it to the
+     * value of <code>NextToken</code> from the truncated response you just received.
+     * </p>
+     * 
+     * @return Use this parameter in a subsequent request after you receive a response with truncated results. Set it to
+     *         the value of <code>NextToken</code> from the truncated response you just received.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * Use this parameter in a subsequent request after you receive a response with truncated results. Set it to the
+     * value of <code>NextToken</code> from the truncated response you just received.
+     * </p>
+     * 
+     * @param nextToken
+     *        Use this parameter in a subsequent request after you receive a response with truncated results. Set it to
+     *        the value of <code>NextToken</code> from the truncated response you just received.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListKeysRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
         return this;
     }
 
@@ -180,52 +226,6 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
-     * <p>
-     * Use this parameter in a subsequent request after you receive a response with truncated results. Set it to the
-     * value of <code>NextToken</code> from the truncated response you just received.
-     * </p>
-     * 
-     * @param nextToken
-     *        Use this parameter in a subsequent request after you receive a response with truncated results. Set it to
-     *        the value of <code>NextToken</code> from the truncated response you just received.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * Use this parameter in a subsequent request after you receive a response with truncated results. Set it to the
-     * value of <code>NextToken</code> from the truncated response you just received.
-     * </p>
-     * 
-     * @return Use this parameter in a subsequent request after you receive a response with truncated results. Set it to
-     *         the value of <code>NextToken</code> from the truncated response you just received.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * Use this parameter in a subsequent request after you receive a response with truncated results. Set it to the
-     * value of <code>NextToken</code> from the truncated response you just received.
-     * </p>
-     * 
-     * @param nextToken
-     *        Use this parameter in a subsequent request after you receive a response with truncated results. Set it to
-     *        the value of <code>NextToken</code> from the truncated response you just received.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListKeysRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -239,10 +239,10 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
         sb.append("{");
         if (getKeyState() != null)
             sb.append("KeyState: ").append(getKeyState()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -261,13 +261,13 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
             return false;
         if (other.getKeyState() != null && other.getKeyState().equals(this.getKeyState()) == false)
             return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
-            return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         return true;
     }
@@ -278,8 +278,8 @@ public class ListKeysRequest extends com.amazonaws.AmazonWebServiceRequest imple
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getKeyState() == null) ? 0 : getKeyState().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

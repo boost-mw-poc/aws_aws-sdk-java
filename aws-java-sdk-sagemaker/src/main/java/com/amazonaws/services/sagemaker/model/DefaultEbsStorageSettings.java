@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A collection of default EBS storage settings that applies to private spaces created within a domain or user profile.
+ * A collection of default EBS storage settings that apply to spaces created within a domain or user profile.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DefaultEbsStorageSettings"
@@ -30,24 +30,24 @@ public class DefaultEbsStorageSettings implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The default size of the EBS storage volume for a private space.
+     * The default size of the EBS storage volume for a space.
      * </p>
      */
     private Integer defaultEbsVolumeSizeInGb;
     /**
      * <p>
-     * The maximum size of the EBS storage volume for a private space.
+     * The maximum size of the EBS storage volume for a space.
      * </p>
      */
     private Integer maximumEbsVolumeSizeInGb;
 
     /**
      * <p>
-     * The default size of the EBS storage volume for a private space.
+     * The default size of the EBS storage volume for a space.
      * </p>
      * 
      * @param defaultEbsVolumeSizeInGb
-     *        The default size of the EBS storage volume for a private space.
+     *        The default size of the EBS storage volume for a space.
      */
 
     public void setDefaultEbsVolumeSizeInGb(Integer defaultEbsVolumeSizeInGb) {
@@ -56,10 +56,10 @@ public class DefaultEbsStorageSettings implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The default size of the EBS storage volume for a private space.
+     * The default size of the EBS storage volume for a space.
      * </p>
      * 
-     * @return The default size of the EBS storage volume for a private space.
+     * @return The default size of the EBS storage volume for a space.
      */
 
     public Integer getDefaultEbsVolumeSizeInGb() {
@@ -68,11 +68,11 @@ public class DefaultEbsStorageSettings implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The default size of the EBS storage volume for a private space.
+     * The default size of the EBS storage volume for a space.
      * </p>
      * 
      * @param defaultEbsVolumeSizeInGb
-     *        The default size of the EBS storage volume for a private space.
+     *        The default size of the EBS storage volume for a space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class DefaultEbsStorageSettings implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The maximum size of the EBS storage volume for a private space.
+     * The maximum size of the EBS storage volume for a space.
      * </p>
      * 
      * @param maximumEbsVolumeSizeInGb
-     *        The maximum size of the EBS storage volume for a private space.
+     *        The maximum size of the EBS storage volume for a space.
      */
 
     public void setMaximumEbsVolumeSizeInGb(Integer maximumEbsVolumeSizeInGb) {
@@ -96,10 +96,10 @@ public class DefaultEbsStorageSettings implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The maximum size of the EBS storage volume for a private space.
+     * The maximum size of the EBS storage volume for a space.
      * </p>
      * 
-     * @return The maximum size of the EBS storage volume for a private space.
+     * @return The maximum size of the EBS storage volume for a space.
      */
 
     public Integer getMaximumEbsVolumeSizeInGb() {
@@ -108,11 +108,11 @@ public class DefaultEbsStorageSettings implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The maximum size of the EBS storage volume for a private space.
+     * The maximum size of the EBS storage volume for a space.
      * </p>
      * 
      * @param maximumEbsVolumeSizeInGb
-     *        The maximum size of the EBS storage volume for a private space.
+     *        The maximum size of the EBS storage volume for a space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

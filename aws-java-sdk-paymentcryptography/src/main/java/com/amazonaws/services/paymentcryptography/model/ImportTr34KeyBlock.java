@@ -36,12 +36,24 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
     private String certificateAuthorityPublicKeyIdentifier;
     /**
      * <p>
+     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
+     * </p>
+     */
+    private String signingKeyCertificate;
+    /**
+     * <p>
      * The import token that initiates key import using the asymmetric TR-34 key exchange method into Amazon Web
      * Services Payment Cryptography. It expires after 7 days. You can use the same import token to import multiple keys
      * to the same service account.
      * </p>
      */
     private String importToken;
+    /**
+     * <p>
+     * The TR-34 wrapped key block to import.
+     * </p>
+     */
+    private String wrappedKeyBlock;
     /**
      * <p>
      * The key block format to use during key import. The only value allowed is <code>X9_TR34_2012</code>.
@@ -55,18 +67,6 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String randomNonce;
-    /**
-     * <p>
-     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
-     * </p>
-     */
-    private String signingKeyCertificate;
-    /**
-     * <p>
-     * The TR-34 wrapped key block to import.
-     * </p>
-     */
-    private String wrappedKeyBlock;
 
     /**
      * <p>
@@ -108,6 +108,49 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     public ImportTr34KeyBlock withCertificateAuthorityPublicKeyIdentifier(String certificateAuthorityPublicKeyIdentifier) {
         setCertificateAuthorityPublicKeyIdentifier(certificateAuthorityPublicKeyIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
+     * </p>
+     * 
+     * @param signingKeyCertificate
+     *        The public key component in PEM certificate format of the private key that signs the KDH TR-34
+     *        WrappedKeyBlock.
+     */
+
+    public void setSigningKeyCertificate(String signingKeyCertificate) {
+        this.signingKeyCertificate = signingKeyCertificate;
+    }
+
+    /**
+     * <p>
+     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
+     * </p>
+     * 
+     * @return The public key component in PEM certificate format of the private key that signs the KDH TR-34
+     *         WrappedKeyBlock.
+     */
+
+    public String getSigningKeyCertificate() {
+        return this.signingKeyCertificate;
+    }
+
+    /**
+     * <p>
+     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
+     * </p>
+     * 
+     * @param signingKeyCertificate
+     *        The public key component in PEM certificate format of the private key that signs the KDH TR-34
+     *        WrappedKeyBlock.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportTr34KeyBlock withSigningKeyCertificate(String signingKeyCertificate) {
+        setSigningKeyCertificate(signingKeyCertificate);
         return this;
     }
 
@@ -160,6 +203,46 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     public ImportTr34KeyBlock withImportToken(String importToken) {
         setImportToken(importToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The TR-34 wrapped key block to import.
+     * </p>
+     * 
+     * @param wrappedKeyBlock
+     *        The TR-34 wrapped key block to import.
+     */
+
+    public void setWrappedKeyBlock(String wrappedKeyBlock) {
+        this.wrappedKeyBlock = wrappedKeyBlock;
+    }
+
+    /**
+     * <p>
+     * The TR-34 wrapped key block to import.
+     * </p>
+     * 
+     * @return The TR-34 wrapped key block to import.
+     */
+
+    public String getWrappedKeyBlock() {
+        return this.wrappedKeyBlock;
+    }
+
+    /**
+     * <p>
+     * The TR-34 wrapped key block to import.
+     * </p>
+     * 
+     * @param wrappedKeyBlock
+     *        The TR-34 wrapped key block to import.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportTr34KeyBlock withWrappedKeyBlock(String wrappedKeyBlock) {
+        setWrappedKeyBlock(wrappedKeyBlock);
         return this;
     }
 
@@ -269,89 +352,6 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p>
-     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
-     * </p>
-     * 
-     * @param signingKeyCertificate
-     *        The public key component in PEM certificate format of the private key that signs the KDH TR-34
-     *        WrappedKeyBlock.
-     */
-
-    public void setSigningKeyCertificate(String signingKeyCertificate) {
-        this.signingKeyCertificate = signingKeyCertificate;
-    }
-
-    /**
-     * <p>
-     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
-     * </p>
-     * 
-     * @return The public key component in PEM certificate format of the private key that signs the KDH TR-34
-     *         WrappedKeyBlock.
-     */
-
-    public String getSigningKeyCertificate() {
-        return this.signingKeyCertificate;
-    }
-
-    /**
-     * <p>
-     * The public key component in PEM certificate format of the private key that signs the KDH TR-34 WrappedKeyBlock.
-     * </p>
-     * 
-     * @param signingKeyCertificate
-     *        The public key component in PEM certificate format of the private key that signs the KDH TR-34
-     *        WrappedKeyBlock.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ImportTr34KeyBlock withSigningKeyCertificate(String signingKeyCertificate) {
-        setSigningKeyCertificate(signingKeyCertificate);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The TR-34 wrapped key block to import.
-     * </p>
-     * 
-     * @param wrappedKeyBlock
-     *        The TR-34 wrapped key block to import.
-     */
-
-    public void setWrappedKeyBlock(String wrappedKeyBlock) {
-        this.wrappedKeyBlock = wrappedKeyBlock;
-    }
-
-    /**
-     * <p>
-     * The TR-34 wrapped key block to import.
-     * </p>
-     * 
-     * @return The TR-34 wrapped key block to import.
-     */
-
-    public String getWrappedKeyBlock() {
-        return this.wrappedKeyBlock;
-    }
-
-    /**
-     * <p>
-     * The TR-34 wrapped key block to import.
-     * </p>
-     * 
-     * @param wrappedKeyBlock
-     *        The TR-34 wrapped key block to import.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ImportTr34KeyBlock withWrappedKeyBlock(String wrappedKeyBlock) {
-        setWrappedKeyBlock(wrappedKeyBlock);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -365,16 +365,16 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
         sb.append("{");
         if (getCertificateAuthorityPublicKeyIdentifier() != null)
             sb.append("CertificateAuthorityPublicKeyIdentifier: ").append(getCertificateAuthorityPublicKeyIdentifier()).append(",");
+        if (getSigningKeyCertificate() != null)
+            sb.append("SigningKeyCertificate: ").append("***Sensitive Data Redacted***").append(",");
         if (getImportToken() != null)
             sb.append("ImportToken: ").append(getImportToken()).append(",");
+        if (getWrappedKeyBlock() != null)
+            sb.append("WrappedKeyBlock: ").append(getWrappedKeyBlock()).append(",");
         if (getKeyBlockFormat() != null)
             sb.append("KeyBlockFormat: ").append(getKeyBlockFormat()).append(",");
         if (getRandomNonce() != null)
-            sb.append("RandomNonce: ").append(getRandomNonce()).append(",");
-        if (getSigningKeyCertificate() != null)
-            sb.append("SigningKeyCertificate: ").append("***Sensitive Data Redacted***").append(",");
-        if (getWrappedKeyBlock() != null)
-            sb.append("WrappedKeyBlock: ").append(getWrappedKeyBlock());
+            sb.append("RandomNonce: ").append(getRandomNonce());
         sb.append("}");
         return sb.toString();
     }
@@ -394,9 +394,17 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
         if (other.getCertificateAuthorityPublicKeyIdentifier() != null
                 && other.getCertificateAuthorityPublicKeyIdentifier().equals(this.getCertificateAuthorityPublicKeyIdentifier()) == false)
             return false;
+        if (other.getSigningKeyCertificate() == null ^ this.getSigningKeyCertificate() == null)
+            return false;
+        if (other.getSigningKeyCertificate() != null && other.getSigningKeyCertificate().equals(this.getSigningKeyCertificate()) == false)
+            return false;
         if (other.getImportToken() == null ^ this.getImportToken() == null)
             return false;
         if (other.getImportToken() != null && other.getImportToken().equals(this.getImportToken()) == false)
+            return false;
+        if (other.getWrappedKeyBlock() == null ^ this.getWrappedKeyBlock() == null)
+            return false;
+        if (other.getWrappedKeyBlock() != null && other.getWrappedKeyBlock().equals(this.getWrappedKeyBlock()) == false)
             return false;
         if (other.getKeyBlockFormat() == null ^ this.getKeyBlockFormat() == null)
             return false;
@@ -405,14 +413,6 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
         if (other.getRandomNonce() == null ^ this.getRandomNonce() == null)
             return false;
         if (other.getRandomNonce() != null && other.getRandomNonce().equals(this.getRandomNonce()) == false)
-            return false;
-        if (other.getSigningKeyCertificate() == null ^ this.getSigningKeyCertificate() == null)
-            return false;
-        if (other.getSigningKeyCertificate() != null && other.getSigningKeyCertificate().equals(this.getSigningKeyCertificate()) == false)
-            return false;
-        if (other.getWrappedKeyBlock() == null ^ this.getWrappedKeyBlock() == null)
-            return false;
-        if (other.getWrappedKeyBlock() != null && other.getWrappedKeyBlock().equals(this.getWrappedKeyBlock()) == false)
             return false;
         return true;
     }
@@ -423,11 +423,11 @@ public class ImportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCertificateAuthorityPublicKeyIdentifier() == null) ? 0 : getCertificateAuthorityPublicKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getSigningKeyCertificate() == null) ? 0 : getSigningKeyCertificate().hashCode());
         hashCode = prime * hashCode + ((getImportToken() == null) ? 0 : getImportToken().hashCode());
+        hashCode = prime * hashCode + ((getWrappedKeyBlock() == null) ? 0 : getWrappedKeyBlock().hashCode());
         hashCode = prime * hashCode + ((getKeyBlockFormat() == null) ? 0 : getKeyBlockFormat().hashCode());
         hashCode = prime * hashCode + ((getRandomNonce() == null) ? 0 : getRandomNonce().hashCode());
-        hashCode = prime * hashCode + ((getSigningKeyCertificate() == null) ? 0 : getSigningKeyCertificate().hashCode());
-        hashCode = prime * hashCode + ((getWrappedKeyBlock() == null) ? 0 : getWrappedKeyBlock().hashCode());
         return hashCode;
     }
 

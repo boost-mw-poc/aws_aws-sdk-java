@@ -30,22 +30,16 @@ public class KeySummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the key is enabled.
-     * </p>
-     */
-    private Boolean enabled;
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     */
-    private Boolean exportable;
-    /**
-     * <p>
      * The Amazon Resource Name (ARN) of the key.
      * </p>
      */
     private String keyArn;
+    /**
+     * <p>
+     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * </p>
+     */
+    private String keyState;
     /**
      * <p>
      * The role of the key, the algorithm it supports, and the cryptographic operations allowed with the key. This data
@@ -62,114 +56,16 @@ public class KeySummary implements Serializable, Cloneable, StructuredPojo {
     private String keyCheckValue;
     /**
      * <p>
-     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
      * </p>
      */
-    private String keyState;
-
+    private Boolean exportable;
     /**
      * <p>
      * Specifies whether the key is enabled.
      * </p>
-     * 
-     * @param enabled
-     *        Specifies whether the key is enabled.
      */
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is enabled.
-     * </p>
-     * 
-     * @return Specifies whether the key is enabled.
-     */
-
-    public Boolean getEnabled() {
-        return this.enabled;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is enabled.
-     * </p>
-     * 
-     * @param enabled
-     *        Specifies whether the key is enabled.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KeySummary withEnabled(Boolean enabled) {
-        setEnabled(enabled);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is enabled.
-     * </p>
-     * 
-     * @return Specifies whether the key is enabled.
-     */
-
-    public Boolean isEnabled() {
-        return this.enabled;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     * 
-     * @param exportable
-     *        Specifies whether the key is exportable. This data is immutable after the key is created.
-     */
-
-    public void setExportable(Boolean exportable) {
-        this.exportable = exportable;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     * 
-     * @return Specifies whether the key is exportable. This data is immutable after the key is created.
-     */
-
-    public Boolean getExportable() {
-        return this.exportable;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     * 
-     * @param exportable
-     *        Specifies whether the key is exportable. This data is immutable after the key is created.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public KeySummary withExportable(Boolean exportable) {
-        setExportable(exportable);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     * 
-     * @return Specifies whether the key is exportable. This data is immutable after the key is created.
-     */
-
-    public Boolean isExportable() {
-        return this.exportable;
-    }
+    private Boolean enabled;
 
     /**
      * <p>
@@ -208,6 +104,65 @@ public class KeySummary implements Serializable, Cloneable, StructuredPojo {
 
     public KeySummary withKeyArn(String keyArn) {
         setKeyArn(keyArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * </p>
+     * 
+     * @param keyState
+     *        The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * @see KeyState
+     */
+
+    public void setKeyState(String keyState) {
+        this.keyState = keyState;
+    }
+
+    /**
+     * <p>
+     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * </p>
+     * 
+     * @return The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * @see KeyState
+     */
+
+    public String getKeyState() {
+        return this.keyState;
+    }
+
+    /**
+     * <p>
+     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * </p>
+     * 
+     * @param keyState
+     *        The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyState
+     */
+
+    public KeySummary withKeyState(String keyState) {
+        setKeyState(keyState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * </p>
+     * 
+     * @param keyState
+     *        The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyState
+     */
+
+    public KeySummary withKeyState(KeyState keyState) {
+        this.keyState = keyState.toString();
         return this;
     }
 
@@ -305,61 +260,106 @@ public class KeySummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
      * </p>
      * 
-     * @param keyState
-     *        The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
-     * @see KeyState
+     * @param exportable
+     *        Specifies whether the key is exportable. This data is immutable after the key is created.
      */
 
-    public void setKeyState(String keyState) {
-        this.keyState = keyState;
+    public void setExportable(Boolean exportable) {
+        this.exportable = exportable;
     }
 
     /**
      * <p>
-     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
      * </p>
      * 
-     * @return The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
-     * @see KeyState
+     * @return Specifies whether the key is exportable. This data is immutable after the key is created.
      */
 
-    public String getKeyState() {
-        return this.keyState;
+    public Boolean getExportable() {
+        return this.exportable;
     }
 
     /**
      * <p>
-     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
      * </p>
      * 
-     * @param keyState
-     *        The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * @param exportable
+     *        Specifies whether the key is exportable. This data is immutable after the key is created.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyState
      */
 
-    public KeySummary withKeyState(String keyState) {
-        setKeyState(keyState);
+    public KeySummary withExportable(Boolean exportable) {
+        setExportable(exportable);
         return this;
     }
 
     /**
      * <p>
-     * The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
      * </p>
      * 
-     * @param keyState
-     *        The state of an Amazon Web Services Payment Cryptography that is being created or deleted.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyState
+     * @return Specifies whether the key is exportable. This data is immutable after the key is created.
      */
 
-    public KeySummary withKeyState(KeyState keyState) {
-        this.keyState = keyState.toString();
+    public Boolean isExportable() {
+        return this.exportable;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is enabled.
+     * </p>
+     * 
+     * @param enabled
+     *        Specifies whether the key is enabled.
+     */
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is enabled.
+     * </p>
+     * 
+     * @return Specifies whether the key is enabled.
+     */
+
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is enabled.
+     * </p>
+     * 
+     * @param enabled
+     *        Specifies whether the key is enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KeySummary withEnabled(Boolean enabled) {
+        setEnabled(enabled);
         return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is enabled.
+     * </p>
+     * 
+     * @return Specifies whether the key is enabled.
+     */
+
+    public Boolean isEnabled() {
+        return this.enabled;
     }
 
     /**
@@ -374,18 +374,18 @@ public class KeySummary implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEnabled() != null)
-            sb.append("Enabled: ").append(getEnabled()).append(",");
-        if (getExportable() != null)
-            sb.append("Exportable: ").append(getExportable()).append(",");
         if (getKeyArn() != null)
             sb.append("KeyArn: ").append(getKeyArn()).append(",");
+        if (getKeyState() != null)
+            sb.append("KeyState: ").append(getKeyState()).append(",");
         if (getKeyAttributes() != null)
             sb.append("KeyAttributes: ").append(getKeyAttributes()).append(",");
         if (getKeyCheckValue() != null)
             sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
-        if (getKeyState() != null)
-            sb.append("KeyState: ").append(getKeyState());
+        if (getExportable() != null)
+            sb.append("Exportable: ").append(getExportable()).append(",");
+        if (getEnabled() != null)
+            sb.append("Enabled: ").append(getEnabled());
         sb.append("}");
         return sb.toString();
     }
@@ -400,17 +400,13 @@ public class KeySummary implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof KeySummary == false)
             return false;
         KeySummary other = (KeySummary) obj;
-        if (other.getEnabled() == null ^ this.getEnabled() == null)
-            return false;
-        if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
-            return false;
-        if (other.getExportable() == null ^ this.getExportable() == null)
-            return false;
-        if (other.getExportable() != null && other.getExportable().equals(this.getExportable()) == false)
-            return false;
         if (other.getKeyArn() == null ^ this.getKeyArn() == null)
             return false;
         if (other.getKeyArn() != null && other.getKeyArn().equals(this.getKeyArn()) == false)
+            return false;
+        if (other.getKeyState() == null ^ this.getKeyState() == null)
+            return false;
+        if (other.getKeyState() != null && other.getKeyState().equals(this.getKeyState()) == false)
             return false;
         if (other.getKeyAttributes() == null ^ this.getKeyAttributes() == null)
             return false;
@@ -420,9 +416,13 @@ public class KeySummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getKeyCheckValue() != null && other.getKeyCheckValue().equals(this.getKeyCheckValue()) == false)
             return false;
-        if (other.getKeyState() == null ^ this.getKeyState() == null)
+        if (other.getExportable() == null ^ this.getExportable() == null)
             return false;
-        if (other.getKeyState() != null && other.getKeyState().equals(this.getKeyState()) == false)
+        if (other.getExportable() != null && other.getExportable().equals(this.getExportable()) == false)
+            return false;
+        if (other.getEnabled() == null ^ this.getEnabled() == null)
+            return false;
+        if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
             return false;
         return true;
     }
@@ -432,12 +432,12 @@ public class KeySummary implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
-        hashCode = prime * hashCode + ((getExportable() == null) ? 0 : getExportable().hashCode());
         hashCode = prime * hashCode + ((getKeyArn() == null) ? 0 : getKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getKeyState() == null) ? 0 : getKeyState().hashCode());
         hashCode = prime * hashCode + ((getKeyAttributes() == null) ? 0 : getKeyAttributes().hashCode());
         hashCode = prime * hashCode + ((getKeyCheckValue() == null) ? 0 : getKeyCheckValue().hashCode());
-        hashCode = prime * hashCode + ((getKeyState() == null) ? 0 : getKeyState().hashCode());
+        hashCode = prime * hashCode + ((getExportable() == null) ? 0 : getExportable().hashCode());
+        hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
         return hashCode;
     }
 

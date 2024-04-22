@@ -52,9 +52,17 @@ public class ImportTr34KeyBlockJsonUnmarshaller implements Unmarshaller<ImportTr
                     context.nextToken();
                     importTr34KeyBlock.setCertificateAuthorityPublicKeyIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SigningKeyCertificate", targetDepth)) {
+                    context.nextToken();
+                    importTr34KeyBlock.setSigningKeyCertificate(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ImportToken", targetDepth)) {
                     context.nextToken();
                     importTr34KeyBlock.setImportToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("WrappedKeyBlock", targetDepth)) {
+                    context.nextToken();
+                    importTr34KeyBlock.setWrappedKeyBlock(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("KeyBlockFormat", targetDepth)) {
                     context.nextToken();
@@ -63,14 +71,6 @@ public class ImportTr34KeyBlockJsonUnmarshaller implements Unmarshaller<ImportTr
                 if (context.testExpression("RandomNonce", targetDepth)) {
                     context.nextToken();
                     importTr34KeyBlock.setRandomNonce(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("SigningKeyCertificate", targetDepth)) {
-                    context.nextToken();
-                    importTr34KeyBlock.setSigningKeyCertificate(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("WrappedKeyBlock", targetDepth)) {
-                    context.nextToken();
-                    importTr34KeyBlock.setWrappedKeyBlock(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

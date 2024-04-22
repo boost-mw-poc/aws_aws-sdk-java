@@ -249,6 +249,11 @@ public class AbstractAWSTransfer implements AWSTransfer {
     }
 
     @Override
+    public StartDirectoryListingResult startDirectoryListing(StartDirectoryListingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartFileTransferResult startFileTransfer(StartFileTransferRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

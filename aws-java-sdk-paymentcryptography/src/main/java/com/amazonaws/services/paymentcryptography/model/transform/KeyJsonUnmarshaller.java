@@ -48,26 +48,6 @@ public class KeyJsonUnmarshaller implements Unmarshaller<Key, JsonUnmarshallerCo
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CreateTimestamp", targetDepth)) {
-                    context.nextToken();
-                    key.setCreateTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("DeletePendingTimestamp", targetDepth)) {
-                    context.nextToken();
-                    key.setDeletePendingTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("DeleteTimestamp", targetDepth)) {
-                    context.nextToken();
-                    key.setDeleteTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("Enabled", targetDepth)) {
-                    context.nextToken();
-                    key.setEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("Exportable", targetDepth)) {
-                    context.nextToken();
-                    key.setExportable(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
                 if (context.testExpression("KeyArn", targetDepth)) {
                     context.nextToken();
                     key.setKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -84,13 +64,25 @@ public class KeyJsonUnmarshaller implements Unmarshaller<Key, JsonUnmarshallerCo
                     context.nextToken();
                     key.setKeyCheckValueAlgorithm(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("KeyOrigin", targetDepth)) {
+                if (context.testExpression("Enabled", targetDepth)) {
                     context.nextToken();
-                    key.setKeyOrigin(context.getUnmarshaller(String.class).unmarshall(context));
+                    key.setEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("Exportable", targetDepth)) {
+                    context.nextToken();
+                    key.setExportable(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("KeyState", targetDepth)) {
                     context.nextToken();
                     key.setKeyState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("KeyOrigin", targetDepth)) {
+                    context.nextToken();
+                    key.setKeyOrigin(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreateTimestamp", targetDepth)) {
+                    context.nextToken();
+                    key.setCreateTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("UsageStartTimestamp", targetDepth)) {
                     context.nextToken();
@@ -99,6 +91,14 @@ public class KeyJsonUnmarshaller implements Unmarshaller<Key, JsonUnmarshallerCo
                 if (context.testExpression("UsageStopTimestamp", targetDepth)) {
                     context.nextToken();
                     key.setUsageStopTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("DeletePendingTimestamp", targetDepth)) {
+                    context.nextToken();
+                    key.setDeletePendingTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("DeleteTimestamp", targetDepth)) {
+                    context.nextToken();
+                    key.setDeleteTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

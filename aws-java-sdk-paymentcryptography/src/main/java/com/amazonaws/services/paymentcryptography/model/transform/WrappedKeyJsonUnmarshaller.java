@@ -48,6 +48,18 @@ public class WrappedKeyJsonUnmarshaller implements Unmarshaller<WrappedKey, Json
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("WrappingKeyArn", targetDepth)) {
+                    context.nextToken();
+                    wrappedKey.setWrappingKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("WrappedKeyMaterialFormat", targetDepth)) {
+                    context.nextToken();
+                    wrappedKey.setWrappedKeyMaterialFormat(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("KeyMaterial", targetDepth)) {
+                    context.nextToken();
+                    wrappedKey.setKeyMaterial(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("KeyCheckValue", targetDepth)) {
                     context.nextToken();
                     wrappedKey.setKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
@@ -55,18 +67,6 @@ public class WrappedKeyJsonUnmarshaller implements Unmarshaller<WrappedKey, Json
                 if (context.testExpression("KeyCheckValueAlgorithm", targetDepth)) {
                     context.nextToken();
                     wrappedKey.setKeyCheckValueAlgorithm(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("KeyMaterial", targetDepth)) {
-                    context.nextToken();
-                    wrappedKey.setKeyMaterial(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("WrappedKeyMaterialFormat", targetDepth)) {
-                    context.nextToken();
-                    wrappedKey.setWrappedKeyMaterialFormat(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("WrappingKeyArn", targetDepth)) {
-                    context.nextToken();
-                    wrappedKey.setWrappingKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

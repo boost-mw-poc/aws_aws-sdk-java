@@ -27,10 +27,11 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies whether import key is enabled.
+     * The key or public key certificate type to use during key material import, for example TR-34 or
+     * RootCertificatePublicKey.
      * </p>
      */
-    private Boolean enabled;
+    private ImportKeyMaterial keyMaterial;
     /**
      * <p>
      * The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is
@@ -46,15 +47,15 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String keyCheckValueAlgorithm;
     /**
      * <p>
-     * The key or public key certificate type to use during key material import, for example TR-34 or
-     * RootCertificatePublicKey.
+     * Specifies whether import key is enabled.
      * </p>
      */
-    private ImportKeyMaterial keyMaterial;
+    private Boolean enabled;
     /**
      * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -78,54 +79,48 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies whether import key is enabled.
+     * The key or public key certificate type to use during key material import, for example TR-34 or
+     * RootCertificatePublicKey.
      * </p>
      * 
-     * @param enabled
-     *        Specifies whether import key is enabled.
+     * @param keyMaterial
+     *        The key or public key certificate type to use during key material import, for example TR-34 or
+     *        RootCertificatePublicKey.
      */
 
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+    public void setKeyMaterial(ImportKeyMaterial keyMaterial) {
+        this.keyMaterial = keyMaterial;
     }
 
     /**
      * <p>
-     * Specifies whether import key is enabled.
+     * The key or public key certificate type to use during key material import, for example TR-34 or
+     * RootCertificatePublicKey.
      * </p>
      * 
-     * @return Specifies whether import key is enabled.
+     * @return The key or public key certificate type to use during key material import, for example TR-34 or
+     *         RootCertificatePublicKey.
      */
 
-    public Boolean getEnabled() {
-        return this.enabled;
+    public ImportKeyMaterial getKeyMaterial() {
+        return this.keyMaterial;
     }
 
     /**
      * <p>
-     * Specifies whether import key is enabled.
+     * The key or public key certificate type to use during key material import, for example TR-34 or
+     * RootCertificatePublicKey.
      * </p>
      * 
-     * @param enabled
-     *        Specifies whether import key is enabled.
+     * @param keyMaterial
+     *        The key or public key certificate type to use during key material import, for example TR-34 or
+     *        RootCertificatePublicKey.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ImportKeyRequest withEnabled(Boolean enabled) {
-        setEnabled(enabled);
+    public ImportKeyRequest withKeyMaterial(ImportKeyMaterial keyMaterial) {
+        setKeyMaterial(keyMaterial);
         return this;
-    }
-
-    /**
-     * <p>
-     * Specifies whether import key is enabled.
-     * </p>
-     * 
-     * @return Specifies whether import key is enabled.
-     */
-
-    public Boolean isEnabled() {
-        return this.enabled;
     }
 
     /**
@@ -241,54 +236,61 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The key or public key certificate type to use during key material import, for example TR-34 or
-     * RootCertificatePublicKey.
+     * Specifies whether import key is enabled.
      * </p>
      * 
-     * @param keyMaterial
-     *        The key or public key certificate type to use during key material import, for example TR-34 or
-     *        RootCertificatePublicKey.
+     * @param enabled
+     *        Specifies whether import key is enabled.
      */
 
-    public void setKeyMaterial(ImportKeyMaterial keyMaterial) {
-        this.keyMaterial = keyMaterial;
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 
     /**
      * <p>
-     * The key or public key certificate type to use during key material import, for example TR-34 or
-     * RootCertificatePublicKey.
+     * Specifies whether import key is enabled.
      * </p>
      * 
-     * @return The key or public key certificate type to use during key material import, for example TR-34 or
-     *         RootCertificatePublicKey.
+     * @return Specifies whether import key is enabled.
      */
 
-    public ImportKeyMaterial getKeyMaterial() {
-        return this.keyMaterial;
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     /**
      * <p>
-     * The key or public key certificate type to use during key material import, for example TR-34 or
-     * RootCertificatePublicKey.
+     * Specifies whether import key is enabled.
      * </p>
      * 
-     * @param keyMaterial
-     *        The key or public key certificate type to use during key material import, for example TR-34 or
-     *        RootCertificatePublicKey.
+     * @param enabled
+     *        Specifies whether import key is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ImportKeyRequest withKeyMaterial(ImportKeyMaterial keyMaterial) {
-        setKeyMaterial(keyMaterial);
+    public ImportKeyRequest withEnabled(Boolean enabled) {
+        setEnabled(enabled);
         return this;
     }
 
     /**
      * <p>
+     * Specifies whether import key is enabled.
+     * </p>
+     * 
+     * @return Specifies whether import key is enabled.
+     */
+
+    public Boolean isEnabled() {
+        return this.enabled;
+    }
+
+    /**
+     * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -309,8 +311,10 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </note>
      * 
      * @return Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
-     *         key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the
-     *         <a>TagResource</a> operation.</p>
+     *         key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     *         href=
+     *         "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource
+     *         </a> operation.</p>
      *         <p>
      *         Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
      *         tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
@@ -336,7 +340,8 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -358,8 +363,9 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param tags
      *        Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
-     *        key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the
-     *        <a>TagResource</a> operation.</p>
+     *        key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *        >TagResource</a> operation.</p>
      *        <p>
      *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
      *        tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
@@ -390,7 +396,8 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -417,8 +424,9 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param tags
      *        Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
-     *        key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the
-     *        <a>TagResource</a> operation.</p>
+     *        key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *        >TagResource</a> operation.</p>
      *        <p>
      *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
      *        tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
@@ -451,7 +459,8 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -473,8 +482,9 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param tags
      *        Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
-     *        key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the
-     *        <a>TagResource</a> operation.</p>
+     *        key when it is imported. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *        >TagResource</a> operation.</p>
      *        <p>
      *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
      *        tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
@@ -511,12 +521,12 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEnabled() != null)
-            sb.append("Enabled: ").append(getEnabled()).append(",");
-        if (getKeyCheckValueAlgorithm() != null)
-            sb.append("KeyCheckValueAlgorithm: ").append(getKeyCheckValueAlgorithm()).append(",");
         if (getKeyMaterial() != null)
             sb.append("KeyMaterial: ").append(getKeyMaterial()).append(",");
+        if (getKeyCheckValueAlgorithm() != null)
+            sb.append("KeyCheckValueAlgorithm: ").append(getKeyCheckValueAlgorithm()).append(",");
+        if (getEnabled() != null)
+            sb.append("Enabled: ").append(getEnabled()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -533,17 +543,17 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof ImportKeyRequest == false)
             return false;
         ImportKeyRequest other = (ImportKeyRequest) obj;
-        if (other.getEnabled() == null ^ this.getEnabled() == null)
+        if (other.getKeyMaterial() == null ^ this.getKeyMaterial() == null)
             return false;
-        if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
+        if (other.getKeyMaterial() != null && other.getKeyMaterial().equals(this.getKeyMaterial()) == false)
             return false;
         if (other.getKeyCheckValueAlgorithm() == null ^ this.getKeyCheckValueAlgorithm() == null)
             return false;
         if (other.getKeyCheckValueAlgorithm() != null && other.getKeyCheckValueAlgorithm().equals(this.getKeyCheckValueAlgorithm()) == false)
             return false;
-        if (other.getKeyMaterial() == null ^ this.getKeyMaterial() == null)
+        if (other.getEnabled() == null ^ this.getEnabled() == null)
             return false;
-        if (other.getKeyMaterial() != null && other.getKeyMaterial().equals(this.getKeyMaterial()) == false)
+        if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -557,9 +567,9 @@ public class ImportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
-        hashCode = prime * hashCode + ((getKeyCheckValueAlgorithm() == null) ? 0 : getKeyCheckValueAlgorithm().hashCode());
         hashCode = prime * hashCode + ((getKeyMaterial() == null) ? 0 : getKeyMaterial().hashCode());
+        hashCode = prime * hashCode + ((getKeyCheckValueAlgorithm() == null) ? 0 : getKeyCheckValueAlgorithm().hashCode());
+        hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

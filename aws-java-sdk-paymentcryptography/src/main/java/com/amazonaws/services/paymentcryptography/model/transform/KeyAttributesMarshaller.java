@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class KeyAttributesMarshaller {
 
-    private static final MarshallingInfo<String> KEYALGORITHM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyAlgorithm").build();
-    private static final MarshallingInfo<String> KEYCLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("KeyClass").build();
-    private static final MarshallingInfo<StructuredPojo> KEYMODESOFUSE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyModesOfUse").build();
     private static final MarshallingInfo<String> KEYUSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("KeyUsage").build();
+    private static final MarshallingInfo<String> KEYCLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("KeyClass").build();
+    private static final MarshallingInfo<String> KEYALGORITHM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyAlgorithm").build();
+    private static final MarshallingInfo<StructuredPojo> KEYMODESOFUSE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyModesOfUse").build();
 
     private static final KeyAttributesMarshaller instance = new KeyAttributesMarshaller();
 
@@ -52,10 +52,10 @@ public class KeyAttributesMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(keyAttributes.getKeyAlgorithm(), KEYALGORITHM_BINDING);
-            protocolMarshaller.marshall(keyAttributes.getKeyClass(), KEYCLASS_BINDING);
-            protocolMarshaller.marshall(keyAttributes.getKeyModesOfUse(), KEYMODESOFUSE_BINDING);
             protocolMarshaller.marshall(keyAttributes.getKeyUsage(), KEYUSAGE_BINDING);
+            protocolMarshaller.marshall(keyAttributes.getKeyClass(), KEYCLASS_BINDING);
+            protocolMarshaller.marshall(keyAttributes.getKeyAlgorithm(), KEYALGORITHM_BINDING);
+            protocolMarshaller.marshall(keyAttributes.getKeyModesOfUse(), KEYMODESOFUSE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

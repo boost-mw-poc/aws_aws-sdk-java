@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ImportTr31KeyBlockMarshaller {
 
-    private static final MarshallingInfo<String> WRAPPEDKEYBLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WrappedKeyBlock").build();
     private static final MarshallingInfo<String> WRAPPINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WrappingKeyIdentifier").build();
+    private static final MarshallingInfo<String> WRAPPEDKEYBLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WrappedKeyBlock").build();
 
     private static final ImportTr31KeyBlockMarshaller instance = new ImportTr31KeyBlockMarshaller();
 
@@ -48,8 +48,8 @@ public class ImportTr31KeyBlockMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(importTr31KeyBlock.getWrappedKeyBlock(), WRAPPEDKEYBLOCK_BINDING);
             protocolMarshaller.marshall(importTr31KeyBlock.getWrappingKeyIdentifier(), WRAPPINGKEYIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(importTr31KeyBlock.getWrappedKeyBlock(), WRAPPEDKEYBLOCK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ImportKeyMaterialMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> KEYCRYPTOGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCryptogram").build();
     private static final MarshallingInfo<StructuredPojo> ROOTCERTIFICATEPUBLICKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RootCertificatePublicKey").build();
+    private static final MarshallingInfo<StructuredPojo> TRUSTEDCERTIFICATEPUBLICKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrustedCertificatePublicKey").build();
     private static final MarshallingInfo<StructuredPojo> TR31KEYBLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tr31KeyBlock").build();
     private static final MarshallingInfo<StructuredPojo> TR34KEYBLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tr34KeyBlock").build();
-    private static final MarshallingInfo<StructuredPojo> TRUSTEDCERTIFICATEPUBLICKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrustedCertificatePublicKey").build();
+    private static final MarshallingInfo<StructuredPojo> KEYCRYPTOGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCryptogram").build();
 
     private static final ImportKeyMaterialMarshaller instance = new ImportKeyMaterialMarshaller();
 
@@ -54,11 +54,11 @@ public class ImportKeyMaterialMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(importKeyMaterial.getKeyCryptogram(), KEYCRYPTOGRAM_BINDING);
             protocolMarshaller.marshall(importKeyMaterial.getRootCertificatePublicKey(), ROOTCERTIFICATEPUBLICKEY_BINDING);
+            protocolMarshaller.marshall(importKeyMaterial.getTrustedCertificatePublicKey(), TRUSTEDCERTIFICATEPUBLICKEY_BINDING);
             protocolMarshaller.marshall(importKeyMaterial.getTr31KeyBlock(), TR31KEYBLOCK_BINDING);
             protocolMarshaller.marshall(importKeyMaterial.getTr34KeyBlock(), TR34KEYBLOCK_BINDING);
-            protocolMarshaller.marshall(importKeyMaterial.getTrustedCertificatePublicKey(), TRUSTEDCERTIFICATEPUBLICKEY_BINDING);
+            protocolMarshaller.marshall(importKeyMaterial.getKeyCryptogram(), KEYCRYPTOGRAM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

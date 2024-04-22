@@ -43,25 +43,8 @@ public class DescribedCertificate implements Serializable, Cloneable, Structured
     private String certificateId;
     /**
      * <p>
-     * Specifies how this certificate is used. It can be used in the following ways:
+     * Specifies whether this certificate is used for signing or encryption.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>SIGNING</code>: For signing AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ENCRYPTION</code>: For encrypting AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TLS</code>: For securing AS2 communications sent over HTTPS
-     * </p>
-     * </li>
-     * </ul>
      */
     private String usage;
     /**
@@ -221,44 +204,11 @@ public class DescribedCertificate implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies how this certificate is used. It can be used in the following ways:
+     * Specifies whether this certificate is used for signing or encryption.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>SIGNING</code>: For signing AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ENCRYPTION</code>: For encrypting AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TLS</code>: For securing AS2 communications sent over HTTPS
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param usage
-     *        Specifies how this certificate is used. It can be used in the following ways:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>SIGNING</code>: For signing AS2 messages
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>ENCRYPTION</code>: For encrypting AS2 messages
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>TLS</code>: For securing AS2 communications sent over HTTPS
-     *        </p>
-     *        </li>
+     *        Specifies whether this certificate is used for signing or encryption.
      * @see CertificateUsageType
      */
 
@@ -268,43 +218,10 @@ public class DescribedCertificate implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies how this certificate is used. It can be used in the following ways:
+     * Specifies whether this certificate is used for signing or encryption.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>SIGNING</code>: For signing AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ENCRYPTION</code>: For encrypting AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TLS</code>: For securing AS2 communications sent over HTTPS
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return Specifies how this certificate is used. It can be used in the following ways:</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>SIGNING</code>: For signing AS2 messages
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>ENCRYPTION</code>: For encrypting AS2 messages
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>TLS</code>: For securing AS2 communications sent over HTTPS
-     *         </p>
-     *         </li>
+     * @return Specifies whether this certificate is used for signing or encryption.
      * @see CertificateUsageType
      */
 
@@ -314,44 +231,11 @@ public class DescribedCertificate implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies how this certificate is used. It can be used in the following ways:
+     * Specifies whether this certificate is used for signing or encryption.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>SIGNING</code>: For signing AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ENCRYPTION</code>: For encrypting AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TLS</code>: For securing AS2 communications sent over HTTPS
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param usage
-     *        Specifies how this certificate is used. It can be used in the following ways:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>SIGNING</code>: For signing AS2 messages
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>ENCRYPTION</code>: For encrypting AS2 messages
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>TLS</code>: For securing AS2 communications sent over HTTPS
-     *        </p>
-     *        </li>
+     *        Specifies whether this certificate is used for signing or encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CertificateUsageType
      */
@@ -363,44 +247,11 @@ public class DescribedCertificate implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies how this certificate is used. It can be used in the following ways:
+     * Specifies whether this certificate is used for signing or encryption.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>SIGNING</code>: For signing AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ENCRYPTION</code>: For encrypting AS2 messages
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>TLS</code>: For securing AS2 communications sent over HTTPS
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param usage
-     *        Specifies how this certificate is used. It can be used in the following ways:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>SIGNING</code>: For signing AS2 messages
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>ENCRYPTION</code>: For encrypting AS2 messages
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>TLS</code>: For securing AS2 communications sent over HTTPS
-     *        </p>
-     *        </li>
+     *        Specifies whether this certificate is used for signing or encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CertificateUsageType
      */

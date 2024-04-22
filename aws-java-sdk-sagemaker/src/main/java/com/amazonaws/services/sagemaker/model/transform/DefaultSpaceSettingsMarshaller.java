@@ -36,6 +36,14 @@ public class DefaultSpaceSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JupyterServerAppSettings").build();
     private static final MarshallingInfo<StructuredPojo> KERNELGATEWAYAPPSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KernelGatewayAppSettings").build();
+    private static final MarshallingInfo<StructuredPojo> JUPYTERLABAPPSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JupyterLabAppSettings").build();
+    private static final MarshallingInfo<StructuredPojo> SPACESTORAGESETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SpaceStorageSettings").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMPOSIXUSERCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomPosixUserConfig").build();
+    private static final MarshallingInfo<List> CUSTOMFILESYSTEMCONFIGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomFileSystemConfigs").build();
 
     private static final DefaultSpaceSettingsMarshaller instance = new DefaultSpaceSettingsMarshaller();
 
@@ -57,6 +65,10 @@ public class DefaultSpaceSettingsMarshaller {
             protocolMarshaller.marshall(defaultSpaceSettings.getSecurityGroups(), SECURITYGROUPS_BINDING);
             protocolMarshaller.marshall(defaultSpaceSettings.getJupyterServerAppSettings(), JUPYTERSERVERAPPSETTINGS_BINDING);
             protocolMarshaller.marshall(defaultSpaceSettings.getKernelGatewayAppSettings(), KERNELGATEWAYAPPSETTINGS_BINDING);
+            protocolMarshaller.marshall(defaultSpaceSettings.getJupyterLabAppSettings(), JUPYTERLABAPPSETTINGS_BINDING);
+            protocolMarshaller.marshall(defaultSpaceSettings.getSpaceStorageSettings(), SPACESTORAGESETTINGS_BINDING);
+            protocolMarshaller.marshall(defaultSpaceSettings.getCustomPosixUserConfig(), CUSTOMPOSIXUSERCONFIG_BINDING);
+            protocolMarshaller.marshall(defaultSpaceSettings.getCustomFileSystemConfigs(), CUSTOMFILESYSTEMCONFIGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

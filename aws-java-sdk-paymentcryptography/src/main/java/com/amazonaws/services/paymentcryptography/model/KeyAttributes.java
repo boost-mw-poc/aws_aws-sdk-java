@@ -31,6 +31,21 @@ public class KeyAttributes implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of the
+     * TR-31 spec.
+     * </p>
+     */
+    private String keyUsage;
+    /**
+     * <p>
+     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
+     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
+     * asymmetric key pair.
+     * </p>
+     */
+    private String keyClass;
+    /**
+     * <p>
      * The key algorithm to be use during creation of an Amazon Web Services Payment Cryptography key.
      * </p>
      * <p>
@@ -42,25 +57,152 @@ public class KeyAttributes implements Serializable, Cloneable, StructuredPojo {
     private String keyAlgorithm;
     /**
      * <p>
-     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
-     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
-     * asymmetric key pair.
-     * </p>
-     */
-    private String keyClass;
-    /**
-     * <p>
      * The list of cryptographic operations that you can perform using the key.
      * </p>
      */
     private KeyModesOfUse keyModesOfUse;
+
     /**
      * <p>
      * The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of the
      * TR-31 spec.
      * </p>
+     * 
+     * @param keyUsage
+     *        The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of
+     *        the TR-31 spec.
+     * @see KeyUsage
      */
-    private String keyUsage;
+
+    public void setKeyUsage(String keyUsage) {
+        this.keyUsage = keyUsage;
+    }
+
+    /**
+     * <p>
+     * The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of the
+     * TR-31 spec.
+     * </p>
+     * 
+     * @return The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of
+     *         the TR-31 spec.
+     * @see KeyUsage
+     */
+
+    public String getKeyUsage() {
+        return this.keyUsage;
+    }
+
+    /**
+     * <p>
+     * The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of the
+     * TR-31 spec.
+     * </p>
+     * 
+     * @param keyUsage
+     *        The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of
+     *        the TR-31 spec.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyUsage
+     */
+
+    public KeyAttributes withKeyUsage(String keyUsage) {
+        setKeyUsage(keyUsage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of the
+     * TR-31 spec.
+     * </p>
+     * 
+     * @param keyUsage
+     *        The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of
+     *        the TR-31 spec.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyUsage
+     */
+
+    public KeyAttributes withKeyUsage(KeyUsage keyUsage) {
+        this.keyUsage = keyUsage.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
+     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
+     * asymmetric key pair.
+     * </p>
+     * 
+     * @param keyClass
+     *        The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of
+     *        the cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key
+     *        or an asymmetric key pair.
+     * @see KeyClass
+     */
+
+    public void setKeyClass(String keyClass) {
+        this.keyClass = keyClass;
+    }
+
+    /**
+     * <p>
+     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
+     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
+     * asymmetric key pair.
+     * </p>
+     * 
+     * @return The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of
+     *         the cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric
+     *         key or an asymmetric key pair.
+     * @see KeyClass
+     */
+
+    public String getKeyClass() {
+        return this.keyClass;
+    }
+
+    /**
+     * <p>
+     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
+     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
+     * asymmetric key pair.
+     * </p>
+     * 
+     * @param keyClass
+     *        The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of
+     *        the cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key
+     *        or an asymmetric key pair.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyClass
+     */
+
+    public KeyAttributes withKeyClass(String keyClass) {
+        setKeyClass(keyClass);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
+     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
+     * asymmetric key pair.
+     * </p>
+     * 
+     * @param keyClass
+     *        The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of
+     *        the cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key
+     *        or an asymmetric key pair.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyClass
+     */
+
+    public KeyAttributes withKeyClass(KeyClass keyClass) {
+        this.keyClass = keyClass.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -159,81 +301,6 @@ public class KeyAttributes implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
-     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
-     * asymmetric key pair.
-     * </p>
-     * 
-     * @param keyClass
-     *        The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of
-     *        the cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key
-     *        or an asymmetric key pair.
-     * @see KeyClass
-     */
-
-    public void setKeyClass(String keyClass) {
-        this.keyClass = keyClass;
-    }
-
-    /**
-     * <p>
-     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
-     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
-     * asymmetric key pair.
-     * </p>
-     * 
-     * @return The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of
-     *         the cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric
-     *         key or an asymmetric key pair.
-     * @see KeyClass
-     */
-
-    public String getKeyClass() {
-        return this.keyClass;
-    }
-
-    /**
-     * <p>
-     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
-     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
-     * asymmetric key pair.
-     * </p>
-     * 
-     * @param keyClass
-     *        The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of
-     *        the cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key
-     *        or an asymmetric key pair.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyClass
-     */
-
-    public KeyAttributes withKeyClass(String keyClass) {
-        setKeyClass(keyClass);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of the
-     * cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key or an
-     * asymmetric key pair.
-     * </p>
-     * 
-     * @param keyClass
-     *        The type of Amazon Web Services Payment Cryptography key to create, which determines the classiﬁcation of
-     *        the cryptographic method and whether Amazon Web Services Payment Cryptography key contains a symmetric key
-     *        or an asymmetric key pair.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyClass
-     */
-
-    public KeyAttributes withKeyClass(KeyClass keyClass) {
-        this.keyClass = keyClass.toString();
-        return this;
-    }
-
-    /**
-     * <p>
      * The list of cryptographic operations that you can perform using the key.
      * </p>
      * 
@@ -273,73 +340,6 @@ public class KeyAttributes implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p>
-     * The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of the
-     * TR-31 spec.
-     * </p>
-     * 
-     * @param keyUsage
-     *        The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of
-     *        the TR-31 spec.
-     * @see KeyUsage
-     */
-
-    public void setKeyUsage(String keyUsage) {
-        this.keyUsage = keyUsage;
-    }
-
-    /**
-     * <p>
-     * The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of the
-     * TR-31 spec.
-     * </p>
-     * 
-     * @return The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of
-     *         the TR-31 spec.
-     * @see KeyUsage
-     */
-
-    public String getKeyUsage() {
-        return this.keyUsage;
-    }
-
-    /**
-     * <p>
-     * The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of the
-     * TR-31 spec.
-     * </p>
-     * 
-     * @param keyUsage
-     *        The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of
-     *        the TR-31 spec.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyUsage
-     */
-
-    public KeyAttributes withKeyUsage(String keyUsage) {
-        setKeyUsage(keyUsage);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of the
-     * TR-31 spec.
-     * </p>
-     * 
-     * @param keyUsage
-     *        The cryptographic usage of an Amazon Web Services Payment Cryptography key as deﬁned in section A.5.2 of
-     *        the TR-31 spec.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyUsage
-     */
-
-    public KeyAttributes withKeyUsage(KeyUsage keyUsage) {
-        this.keyUsage = keyUsage.toString();
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -351,14 +351,14 @@ public class KeyAttributes implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKeyAlgorithm() != null)
-            sb.append("KeyAlgorithm: ").append(getKeyAlgorithm()).append(",");
+        if (getKeyUsage() != null)
+            sb.append("KeyUsage: ").append(getKeyUsage()).append(",");
         if (getKeyClass() != null)
             sb.append("KeyClass: ").append(getKeyClass()).append(",");
+        if (getKeyAlgorithm() != null)
+            sb.append("KeyAlgorithm: ").append(getKeyAlgorithm()).append(",");
         if (getKeyModesOfUse() != null)
-            sb.append("KeyModesOfUse: ").append(getKeyModesOfUse()).append(",");
-        if (getKeyUsage() != null)
-            sb.append("KeyUsage: ").append(getKeyUsage());
+            sb.append("KeyModesOfUse: ").append(getKeyModesOfUse());
         sb.append("}");
         return sb.toString();
     }
@@ -373,21 +373,21 @@ public class KeyAttributes implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof KeyAttributes == false)
             return false;
         KeyAttributes other = (KeyAttributes) obj;
-        if (other.getKeyAlgorithm() == null ^ this.getKeyAlgorithm() == null)
+        if (other.getKeyUsage() == null ^ this.getKeyUsage() == null)
             return false;
-        if (other.getKeyAlgorithm() != null && other.getKeyAlgorithm().equals(this.getKeyAlgorithm()) == false)
+        if (other.getKeyUsage() != null && other.getKeyUsage().equals(this.getKeyUsage()) == false)
             return false;
         if (other.getKeyClass() == null ^ this.getKeyClass() == null)
             return false;
         if (other.getKeyClass() != null && other.getKeyClass().equals(this.getKeyClass()) == false)
             return false;
+        if (other.getKeyAlgorithm() == null ^ this.getKeyAlgorithm() == null)
+            return false;
+        if (other.getKeyAlgorithm() != null && other.getKeyAlgorithm().equals(this.getKeyAlgorithm()) == false)
+            return false;
         if (other.getKeyModesOfUse() == null ^ this.getKeyModesOfUse() == null)
             return false;
         if (other.getKeyModesOfUse() != null && other.getKeyModesOfUse().equals(this.getKeyModesOfUse()) == false)
-            return false;
-        if (other.getKeyUsage() == null ^ this.getKeyUsage() == null)
-            return false;
-        if (other.getKeyUsage() != null && other.getKeyUsage().equals(this.getKeyUsage()) == false)
             return false;
         return true;
     }
@@ -397,10 +397,10 @@ public class KeyAttributes implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKeyAlgorithm() == null) ? 0 : getKeyAlgorithm().hashCode());
-        hashCode = prime * hashCode + ((getKeyClass() == null) ? 0 : getKeyClass().hashCode());
-        hashCode = prime * hashCode + ((getKeyModesOfUse() == null) ? 0 : getKeyModesOfUse().hashCode());
         hashCode = prime * hashCode + ((getKeyUsage() == null) ? 0 : getKeyUsage().hashCode());
+        hashCode = prime * hashCode + ((getKeyClass() == null) ? 0 : getKeyClass().hashCode());
+        hashCode = prime * hashCode + ((getKeyAlgorithm() == null) ? 0 : getKeyAlgorithm().hashCode());
+        hashCode = prime * hashCode + ((getKeyModesOfUse() == null) ? 0 : getKeyModesOfUse().hashCode());
         return hashCode;
     }
 

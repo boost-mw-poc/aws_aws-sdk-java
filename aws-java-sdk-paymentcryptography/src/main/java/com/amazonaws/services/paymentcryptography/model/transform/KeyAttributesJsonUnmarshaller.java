@@ -48,21 +48,21 @@ public class KeyAttributesJsonUnmarshaller implements Unmarshaller<KeyAttributes
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("KeyAlgorithm", targetDepth)) {
+                if (context.testExpression("KeyUsage", targetDepth)) {
                     context.nextToken();
-                    keyAttributes.setKeyAlgorithm(context.getUnmarshaller(String.class).unmarshall(context));
+                    keyAttributes.setKeyUsage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("KeyClass", targetDepth)) {
                     context.nextToken();
                     keyAttributes.setKeyClass(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("KeyAlgorithm", targetDepth)) {
+                    context.nextToken();
+                    keyAttributes.setKeyAlgorithm(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("KeyModesOfUse", targetDepth)) {
                     context.nextToken();
                     keyAttributes.setKeyModesOfUse(KeyModesOfUseJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("KeyUsage", targetDepth)) {
-                    context.nextToken();
-                    keyAttributes.setKeyUsage(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ExportKeyMaterialMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> KEYCRYPTOGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCryptogram").build();
     private static final MarshallingInfo<StructuredPojo> TR31KEYBLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tr31KeyBlock").build();
     private static final MarshallingInfo<StructuredPojo> TR34KEYBLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tr34KeyBlock").build();
+    private static final MarshallingInfo<StructuredPojo> KEYCRYPTOGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCryptogram").build();
 
     private static final ExportKeyMaterialMarshaller instance = new ExportKeyMaterialMarshaller();
 
@@ -50,9 +50,9 @@ public class ExportKeyMaterialMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(exportKeyMaterial.getKeyCryptogram(), KEYCRYPTOGRAM_BINDING);
             protocolMarshaller.marshall(exportKeyMaterial.getTr31KeyBlock(), TR31KEYBLOCK_BINDING);
             protocolMarshaller.marshall(exportKeyMaterial.getTr34KeyBlock(), TR34KEYBLOCK_BINDING);
+            protocolMarshaller.marshall(exportKeyMaterial.getKeyCryptogram(), KEYCRYPTOGRAM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

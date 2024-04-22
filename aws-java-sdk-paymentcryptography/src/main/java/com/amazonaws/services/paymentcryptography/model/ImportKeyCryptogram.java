@@ -28,6 +28,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ImportKeyCryptogram implements Serializable, Cloneable, StructuredPojo {
 
+    private KeyAttributes keyAttributes;
     /**
      * <p>
      * Specifies whether the key is exportable from the service.
@@ -36,26 +37,50 @@ public class ImportKeyCryptogram implements Serializable, Cloneable, StructuredP
     private Boolean exportable;
     /**
      * <p>
-     * The import token that initiates key import using the asymmetric RSA wrap and unwrap key exchange method into AWS
-     * Payment Cryptography. It expires after 7 days. You can use the same import token to import multiple keys to the
-     * same service account.
-     * </p>
-     */
-    private String importToken;
-
-    private KeyAttributes keyAttributes;
-    /**
-     * <p>
      * The RSA wrapped key cryptogram under import.
      * </p>
      */
     private String wrappedKeyCryptogram;
     /**
      * <p>
+     * The import token that initiates key import using the asymmetric RSA wrap and unwrap key exchange method into AWS
+     * Payment Cryptography. It expires after 7 days. You can use the same import token to import multiple keys to the
+     * same service account.
+     * </p>
+     */
+    private String importToken;
+    /**
+     * <p>
      * The wrapping spec for the wrapped key cryptogram.
      * </p>
      */
     private String wrappingSpec;
+
+    /**
+     * @param keyAttributes
+     */
+
+    public void setKeyAttributes(KeyAttributes keyAttributes) {
+        this.keyAttributes = keyAttributes;
+    }
+
+    /**
+     * @return
+     */
+
+    public KeyAttributes getKeyAttributes() {
+        return this.keyAttributes;
+    }
+
+    /**
+     * @param keyAttributes
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportKeyCryptogram withKeyAttributes(KeyAttributes keyAttributes) {
+        setKeyAttributes(keyAttributes);
+        return this;
+    }
 
     /**
      * <p>
@@ -111,6 +136,46 @@ public class ImportKeyCryptogram implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * The RSA wrapped key cryptogram under import.
+     * </p>
+     * 
+     * @param wrappedKeyCryptogram
+     *        The RSA wrapped key cryptogram under import.
+     */
+
+    public void setWrappedKeyCryptogram(String wrappedKeyCryptogram) {
+        this.wrappedKeyCryptogram = wrappedKeyCryptogram;
+    }
+
+    /**
+     * <p>
+     * The RSA wrapped key cryptogram under import.
+     * </p>
+     * 
+     * @return The RSA wrapped key cryptogram under import.
+     */
+
+    public String getWrappedKeyCryptogram() {
+        return this.wrappedKeyCryptogram;
+    }
+
+    /**
+     * <p>
+     * The RSA wrapped key cryptogram under import.
+     * </p>
+     * 
+     * @param wrappedKeyCryptogram
+     *        The RSA wrapped key cryptogram under import.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportKeyCryptogram withWrappedKeyCryptogram(String wrappedKeyCryptogram) {
+        setWrappedKeyCryptogram(wrappedKeyCryptogram);
+        return this;
+    }
+
+    /**
+     * <p>
      * The import token that initiates key import using the asymmetric RSA wrap and unwrap key exchange method into AWS
      * Payment Cryptography. It expires after 7 days. You can use the same import token to import multiple keys to the
      * same service account.
@@ -158,72 +223,6 @@ public class ImportKeyCryptogram implements Serializable, Cloneable, StructuredP
 
     public ImportKeyCryptogram withImportToken(String importToken) {
         setImportToken(importToken);
-        return this;
-    }
-
-    /**
-     * @param keyAttributes
-     */
-
-    public void setKeyAttributes(KeyAttributes keyAttributes) {
-        this.keyAttributes = keyAttributes;
-    }
-
-    /**
-     * @return
-     */
-
-    public KeyAttributes getKeyAttributes() {
-        return this.keyAttributes;
-    }
-
-    /**
-     * @param keyAttributes
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ImportKeyCryptogram withKeyAttributes(KeyAttributes keyAttributes) {
-        setKeyAttributes(keyAttributes);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The RSA wrapped key cryptogram under import.
-     * </p>
-     * 
-     * @param wrappedKeyCryptogram
-     *        The RSA wrapped key cryptogram under import.
-     */
-
-    public void setWrappedKeyCryptogram(String wrappedKeyCryptogram) {
-        this.wrappedKeyCryptogram = wrappedKeyCryptogram;
-    }
-
-    /**
-     * <p>
-     * The RSA wrapped key cryptogram under import.
-     * </p>
-     * 
-     * @return The RSA wrapped key cryptogram under import.
-     */
-
-    public String getWrappedKeyCryptogram() {
-        return this.wrappedKeyCryptogram;
-    }
-
-    /**
-     * <p>
-     * The RSA wrapped key cryptogram under import.
-     * </p>
-     * 
-     * @param wrappedKeyCryptogram
-     *        The RSA wrapped key cryptogram under import.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ImportKeyCryptogram withWrappedKeyCryptogram(String wrappedKeyCryptogram) {
-        setWrappedKeyCryptogram(wrappedKeyCryptogram);
         return this;
     }
 
@@ -298,14 +297,14 @@ public class ImportKeyCryptogram implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getExportable() != null)
-            sb.append("Exportable: ").append(getExportable()).append(",");
-        if (getImportToken() != null)
-            sb.append("ImportToken: ").append(getImportToken()).append(",");
         if (getKeyAttributes() != null)
             sb.append("KeyAttributes: ").append(getKeyAttributes()).append(",");
+        if (getExportable() != null)
+            sb.append("Exportable: ").append(getExportable()).append(",");
         if (getWrappedKeyCryptogram() != null)
             sb.append("WrappedKeyCryptogram: ").append(getWrappedKeyCryptogram()).append(",");
+        if (getImportToken() != null)
+            sb.append("ImportToken: ").append(getImportToken()).append(",");
         if (getWrappingSpec() != null)
             sb.append("WrappingSpec: ").append(getWrappingSpec());
         sb.append("}");
@@ -322,21 +321,21 @@ public class ImportKeyCryptogram implements Serializable, Cloneable, StructuredP
         if (obj instanceof ImportKeyCryptogram == false)
             return false;
         ImportKeyCryptogram other = (ImportKeyCryptogram) obj;
-        if (other.getExportable() == null ^ this.getExportable() == null)
-            return false;
-        if (other.getExportable() != null && other.getExportable().equals(this.getExportable()) == false)
-            return false;
-        if (other.getImportToken() == null ^ this.getImportToken() == null)
-            return false;
-        if (other.getImportToken() != null && other.getImportToken().equals(this.getImportToken()) == false)
-            return false;
         if (other.getKeyAttributes() == null ^ this.getKeyAttributes() == null)
             return false;
         if (other.getKeyAttributes() != null && other.getKeyAttributes().equals(this.getKeyAttributes()) == false)
             return false;
+        if (other.getExportable() == null ^ this.getExportable() == null)
+            return false;
+        if (other.getExportable() != null && other.getExportable().equals(this.getExportable()) == false)
+            return false;
         if (other.getWrappedKeyCryptogram() == null ^ this.getWrappedKeyCryptogram() == null)
             return false;
         if (other.getWrappedKeyCryptogram() != null && other.getWrappedKeyCryptogram().equals(this.getWrappedKeyCryptogram()) == false)
+            return false;
+        if (other.getImportToken() == null ^ this.getImportToken() == null)
+            return false;
+        if (other.getImportToken() != null && other.getImportToken().equals(this.getImportToken()) == false)
             return false;
         if (other.getWrappingSpec() == null ^ this.getWrappingSpec() == null)
             return false;
@@ -350,10 +349,10 @@ public class ImportKeyCryptogram implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getExportable() == null) ? 0 : getExportable().hashCode());
-        hashCode = prime * hashCode + ((getImportToken() == null) ? 0 : getImportToken().hashCode());
         hashCode = prime * hashCode + ((getKeyAttributes() == null) ? 0 : getKeyAttributes().hashCode());
+        hashCode = prime * hashCode + ((getExportable() == null) ? 0 : getExportable().hashCode());
         hashCode = prime * hashCode + ((getWrappedKeyCryptogram() == null) ? 0 : getWrappedKeyCryptogram().hashCode());
+        hashCode = prime * hashCode + ((getImportToken() == null) ? 0 : getImportToken().hashCode());
         hashCode = prime * hashCode + ((getWrappingSpec() == null) ? 0 : getWrappingSpec().hashCode());
         return hashCode;
     }

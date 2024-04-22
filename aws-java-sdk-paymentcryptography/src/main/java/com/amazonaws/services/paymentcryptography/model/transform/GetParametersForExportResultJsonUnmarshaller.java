@@ -48,18 +48,6 @@ public class GetParametersForExportResultJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("ExportToken", targetDepth)) {
-                    context.nextToken();
-                    getParametersForExportResult.setExportToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("ParametersValidUntilTimestamp", targetDepth)) {
-                    context.nextToken();
-                    getParametersForExportResult.setParametersValidUntilTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("SigningKeyAlgorithm", targetDepth)) {
-                    context.nextToken();
-                    getParametersForExportResult.setSigningKeyAlgorithm(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("SigningKeyCertificate", targetDepth)) {
                     context.nextToken();
                     getParametersForExportResult.setSigningKeyCertificate(context.getUnmarshaller(String.class).unmarshall(context));
@@ -67,6 +55,18 @@ public class GetParametersForExportResultJsonUnmarshaller implements Unmarshalle
                 if (context.testExpression("SigningKeyCertificateChain", targetDepth)) {
                     context.nextToken();
                     getParametersForExportResult.setSigningKeyCertificateChain(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SigningKeyAlgorithm", targetDepth)) {
+                    context.nextToken();
+                    getParametersForExportResult.setSigningKeyAlgorithm(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ExportToken", targetDepth)) {
+                    context.nextToken();
+                    getParametersForExportResult.setExportToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ParametersValidUntilTimestamp", targetDepth)) {
+                    context.nextToken();
+                    getParametersForExportResult.setParametersValidUntilTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

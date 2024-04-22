@@ -31,11 +31,85 @@ public class ActionGroupExecutor implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * To return the action group invocation results directly in the <code>InvokeAgent</code> response, specify
+     * <code>RETURN_CONTROL</code>.
+     * </p>
+     */
+    private String customControl;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is carried out upon
      * invoking the action.
      * </p>
      */
     private String lambda;
+
+    /**
+     * <p>
+     * To return the action group invocation results directly in the <code>InvokeAgent</code> response, specify
+     * <code>RETURN_CONTROL</code>.
+     * </p>
+     * 
+     * @param customControl
+     *        To return the action group invocation results directly in the <code>InvokeAgent</code> response, specify
+     *        <code>RETURN_CONTROL</code>.
+     * @see CustomControlMethod
+     */
+
+    public void setCustomControl(String customControl) {
+        this.customControl = customControl;
+    }
+
+    /**
+     * <p>
+     * To return the action group invocation results directly in the <code>InvokeAgent</code> response, specify
+     * <code>RETURN_CONTROL</code>.
+     * </p>
+     * 
+     * @return To return the action group invocation results directly in the <code>InvokeAgent</code> response, specify
+     *         <code>RETURN_CONTROL</code>.
+     * @see CustomControlMethod
+     */
+
+    public String getCustomControl() {
+        return this.customControl;
+    }
+
+    /**
+     * <p>
+     * To return the action group invocation results directly in the <code>InvokeAgent</code> response, specify
+     * <code>RETURN_CONTROL</code>.
+     * </p>
+     * 
+     * @param customControl
+     *        To return the action group invocation results directly in the <code>InvokeAgent</code> response, specify
+     *        <code>RETURN_CONTROL</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomControlMethod
+     */
+
+    public ActionGroupExecutor withCustomControl(String customControl) {
+        setCustomControl(customControl);
+        return this;
+    }
+
+    /**
+     * <p>
+     * To return the action group invocation results directly in the <code>InvokeAgent</code> response, specify
+     * <code>RETURN_CONTROL</code>.
+     * </p>
+     * 
+     * @param customControl
+     *        To return the action group invocation results directly in the <code>InvokeAgent</code> response, specify
+     *        <code>RETURN_CONTROL</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomControlMethod
+     */
+
+    public ActionGroupExecutor withCustomControl(CustomControlMethod customControl) {
+        this.customControl = customControl.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -95,6 +169,8 @@ public class ActionGroupExecutor implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getCustomControl() != null)
+            sb.append("CustomControl: ").append(getCustomControl()).append(",");
         if (getLambda() != null)
             sb.append("Lambda: ").append(getLambda());
         sb.append("}");
@@ -111,6 +187,10 @@ public class ActionGroupExecutor implements Serializable, Cloneable, StructuredP
         if (obj instanceof ActionGroupExecutor == false)
             return false;
         ActionGroupExecutor other = (ActionGroupExecutor) obj;
+        if (other.getCustomControl() == null ^ this.getCustomControl() == null)
+            return false;
+        if (other.getCustomControl() != null && other.getCustomControl().equals(this.getCustomControl()) == false)
+            return false;
         if (other.getLambda() == null ^ this.getLambda() == null)
             return false;
         if (other.getLambda() != null && other.getLambda().equals(this.getLambda()) == false)
@@ -123,6 +203,7 @@ public class ActionGroupExecutor implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getCustomControl() == null) ? 0 : getCustomControl().hashCode());
         hashCode = prime * hashCode + ((getLambda() == null) ? 0 : getLambda().hashCode());
         return hashCode;
     }

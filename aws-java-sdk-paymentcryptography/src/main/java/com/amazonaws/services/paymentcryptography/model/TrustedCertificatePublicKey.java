@@ -30,13 +30,6 @@ public class TrustedCertificatePublicKey implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted public key
-     * certificate import.
-     * </p>
-     */
-    private String certificateAuthorityPublicKeyIdentifier;
-    /**
-     * <p>
      * The role of the key, the algorithm it supports, and the cryptographic operations allowed with the key. This data
      * is immutable after a trusted public key is imported.
      * </p>
@@ -48,52 +41,13 @@ public class TrustedCertificatePublicKey implements Serializable, Cloneable, Str
      * </p>
      */
     private String publicKeyCertificate;
-
     /**
      * <p>
      * The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted public key
      * certificate import.
      * </p>
-     * 
-     * @param certificateAuthorityPublicKeyIdentifier
-     *        The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted
-     *        public key certificate import.
      */
-
-    public void setCertificateAuthorityPublicKeyIdentifier(String certificateAuthorityPublicKeyIdentifier) {
-        this.certificateAuthorityPublicKeyIdentifier = certificateAuthorityPublicKeyIdentifier;
-    }
-
-    /**
-     * <p>
-     * The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted public key
-     * certificate import.
-     * </p>
-     * 
-     * @return The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted
-     *         public key certificate import.
-     */
-
-    public String getCertificateAuthorityPublicKeyIdentifier() {
-        return this.certificateAuthorityPublicKeyIdentifier;
-    }
-
-    /**
-     * <p>
-     * The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted public key
-     * certificate import.
-     * </p>
-     * 
-     * @param certificateAuthorityPublicKeyIdentifier
-     *        The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted
-     *        public key certificate import.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public TrustedCertificatePublicKey withCertificateAuthorityPublicKeyIdentifier(String certificateAuthorityPublicKeyIdentifier) {
-        setCertificateAuthorityPublicKeyIdentifier(certificateAuthorityPublicKeyIdentifier);
-        return this;
-    }
+    private String certificateAuthorityPublicKeyIdentifier;
 
     /**
      * <p>
@@ -182,6 +136,52 @@ public class TrustedCertificatePublicKey implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted public key
+     * certificate import.
+     * </p>
+     * 
+     * @param certificateAuthorityPublicKeyIdentifier
+     *        The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted
+     *        public key certificate import.
+     */
+
+    public void setCertificateAuthorityPublicKeyIdentifier(String certificateAuthorityPublicKeyIdentifier) {
+        this.certificateAuthorityPublicKeyIdentifier = certificateAuthorityPublicKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted public key
+     * certificate import.
+     * </p>
+     * 
+     * @return The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted
+     *         public key certificate import.
+     */
+
+    public String getCertificateAuthorityPublicKeyIdentifier() {
+        return this.certificateAuthorityPublicKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted public key
+     * certificate import.
+     * </p>
+     * 
+     * @param certificateAuthorityPublicKeyIdentifier
+     *        The <code>KeyARN</code> of the root public key certificate or certificate chain that signs the trusted
+     *        public key certificate import.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TrustedCertificatePublicKey withCertificateAuthorityPublicKeyIdentifier(String certificateAuthorityPublicKeyIdentifier) {
+        setCertificateAuthorityPublicKeyIdentifier(certificateAuthorityPublicKeyIdentifier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -193,12 +193,12 @@ public class TrustedCertificatePublicKey implements Serializable, Cloneable, Str
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCertificateAuthorityPublicKeyIdentifier() != null)
-            sb.append("CertificateAuthorityPublicKeyIdentifier: ").append(getCertificateAuthorityPublicKeyIdentifier()).append(",");
         if (getKeyAttributes() != null)
             sb.append("KeyAttributes: ").append(getKeyAttributes()).append(",");
         if (getPublicKeyCertificate() != null)
-            sb.append("PublicKeyCertificate: ").append("***Sensitive Data Redacted***");
+            sb.append("PublicKeyCertificate: ").append("***Sensitive Data Redacted***").append(",");
+        if (getCertificateAuthorityPublicKeyIdentifier() != null)
+            sb.append("CertificateAuthorityPublicKeyIdentifier: ").append(getCertificateAuthorityPublicKeyIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -213,11 +213,6 @@ public class TrustedCertificatePublicKey implements Serializable, Cloneable, Str
         if (obj instanceof TrustedCertificatePublicKey == false)
             return false;
         TrustedCertificatePublicKey other = (TrustedCertificatePublicKey) obj;
-        if (other.getCertificateAuthorityPublicKeyIdentifier() == null ^ this.getCertificateAuthorityPublicKeyIdentifier() == null)
-            return false;
-        if (other.getCertificateAuthorityPublicKeyIdentifier() != null
-                && other.getCertificateAuthorityPublicKeyIdentifier().equals(this.getCertificateAuthorityPublicKeyIdentifier()) == false)
-            return false;
         if (other.getKeyAttributes() == null ^ this.getKeyAttributes() == null)
             return false;
         if (other.getKeyAttributes() != null && other.getKeyAttributes().equals(this.getKeyAttributes()) == false)
@@ -225,6 +220,11 @@ public class TrustedCertificatePublicKey implements Serializable, Cloneable, Str
         if (other.getPublicKeyCertificate() == null ^ this.getPublicKeyCertificate() == null)
             return false;
         if (other.getPublicKeyCertificate() != null && other.getPublicKeyCertificate().equals(this.getPublicKeyCertificate()) == false)
+            return false;
+        if (other.getCertificateAuthorityPublicKeyIdentifier() == null ^ this.getCertificateAuthorityPublicKeyIdentifier() == null)
+            return false;
+        if (other.getCertificateAuthorityPublicKeyIdentifier() != null
+                && other.getCertificateAuthorityPublicKeyIdentifier().equals(this.getCertificateAuthorityPublicKeyIdentifier()) == false)
             return false;
         return true;
     }
@@ -234,9 +234,9 @@ public class TrustedCertificatePublicKey implements Serializable, Cloneable, Str
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCertificateAuthorityPublicKeyIdentifier() == null) ? 0 : getCertificateAuthorityPublicKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getKeyAttributes() == null) ? 0 : getKeyAttributes().hashCode());
         hashCode = prime * hashCode + ((getPublicKeyCertificate() == null) ? 0 : getPublicKeyCertificate().hashCode());
+        hashCode = prime * hashCode + ((getCertificateAuthorityPublicKeyIdentifier() == null) ? 0 : getCertificateAuthorityPublicKeyIdentifier().hashCode());
         return hashCode;
     }
 

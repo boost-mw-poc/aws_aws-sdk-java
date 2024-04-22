@@ -30,18 +30,18 @@ public class OwnershipSettings implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The user profile who is the owner of the private space.
+     * The user profile who is the owner of the space.
      * </p>
      */
     private String ownerUserProfileName;
 
     /**
      * <p>
-     * The user profile who is the owner of the private space.
+     * The user profile who is the owner of the space.
      * </p>
      * 
      * @param ownerUserProfileName
-     *        The user profile who is the owner of the private space.
+     *        The user profile who is the owner of the space.
      */
 
     public void setOwnerUserProfileName(String ownerUserProfileName) {
@@ -50,10 +50,10 @@ public class OwnershipSettings implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The user profile who is the owner of the private space.
+     * The user profile who is the owner of the space.
      * </p>
      * 
-     * @return The user profile who is the owner of the private space.
+     * @return The user profile who is the owner of the space.
      */
 
     public String getOwnerUserProfileName() {
@@ -62,11 +62,11 @@ public class OwnershipSettings implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The user profile who is the owner of the private space.
+     * The user profile who is the owner of the space.
      * </p>
      * 
      * @param ownerUserProfileName
-     *        The user profile who is the owner of the private space.
+     *        The user profile who is the owner of the space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

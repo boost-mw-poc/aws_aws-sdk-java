@@ -38,7 +38,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * If the Amazon Web Services Payment Cryptography key doesn't have the specified tag key, Amazon Web Services
      * Payment Cryptography doesn't throw an exception or return a response. To confirm that the operation succeeded,
-     * use the <a>ListTagsForResource</a> operation.
+     * use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ListTagsForResource.html"
+     * >ListTagsForResource</a> operation.
      * </p>
      */
     private java.util.List<String> tagKeys;
@@ -90,14 +92,18 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * If the Amazon Web Services Payment Cryptography key doesn't have the specified tag key, Amazon Web Services
      * Payment Cryptography doesn't throw an exception or return a response. To confirm that the operation succeeded,
-     * use the <a>ListTagsForResource</a> operation.
+     * use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ListTagsForResource.html"
+     * >ListTagsForResource</a> operation.
      * </p>
      * 
      * @return One or more tag keys. Don't include the tag values.</p>
      *         <p>
      *         If the Amazon Web Services Payment Cryptography key doesn't have the specified tag key, Amazon Web
      *         Services Payment Cryptography doesn't throw an exception or return a response. To confirm that the
-     *         operation succeeded, use the <a>ListTagsForResource</a> operation.
+     *         operation succeeded, use the <a href=
+     *         "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ListTagsForResource.html"
+     *         >ListTagsForResource</a> operation.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -111,7 +117,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * If the Amazon Web Services Payment Cryptography key doesn't have the specified tag key, Amazon Web Services
      * Payment Cryptography doesn't throw an exception or return a response. To confirm that the operation succeeded,
-     * use the <a>ListTagsForResource</a> operation.
+     * use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ListTagsForResource.html"
+     * >ListTagsForResource</a> operation.
      * </p>
      * 
      * @param tagKeys
@@ -119,7 +127,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <p>
      *        If the Amazon Web Services Payment Cryptography key doesn't have the specified tag key, Amazon Web
      *        Services Payment Cryptography doesn't throw an exception or return a response. To confirm that the
-     *        operation succeeded, use the <a>ListTagsForResource</a> operation.
+     *        operation succeeded, use the <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ListTagsForResource.html"
+     *        >ListTagsForResource</a> operation.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -138,7 +148,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * If the Amazon Web Services Payment Cryptography key doesn't have the specified tag key, Amazon Web Services
      * Payment Cryptography doesn't throw an exception or return a response. To confirm that the operation succeeded,
-     * use the <a>ListTagsForResource</a> operation.
+     * use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ListTagsForResource.html"
+     * >ListTagsForResource</a> operation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -151,7 +163,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <p>
      *        If the Amazon Web Services Payment Cryptography key doesn't have the specified tag key, Amazon Web
      *        Services Payment Cryptography doesn't throw an exception or return a response. To confirm that the
-     *        operation succeeded, use the <a>ListTagsForResource</a> operation.
+     *        operation succeeded, use the <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ListTagsForResource.html"
+     *        >ListTagsForResource</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,7 +186,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * If the Amazon Web Services Payment Cryptography key doesn't have the specified tag key, Amazon Web Services
      * Payment Cryptography doesn't throw an exception or return a response. To confirm that the operation succeeded,
-     * use the <a>ListTagsForResource</a> operation.
+     * use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ListTagsForResource.html"
+     * >ListTagsForResource</a> operation.
      * </p>
      * 
      * @param tagKeys
@@ -180,7 +196,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <p>
      *        If the Amazon Web Services Payment Cryptography key doesn't have the specified tag key, Amazon Web
      *        Services Payment Cryptography doesn't throw an exception or return a response. To confirm that the
-     *        operation succeeded, use the <a>ListTagsForResource</a> operation.
+     *        operation succeeded, use the <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ListTagsForResource.html"
+     *        >ListTagsForResource</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

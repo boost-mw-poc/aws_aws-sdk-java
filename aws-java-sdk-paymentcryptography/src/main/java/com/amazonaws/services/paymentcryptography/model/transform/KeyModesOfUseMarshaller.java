@@ -27,24 +27,24 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class KeyModesOfUseMarshaller {
 
-    private static final MarshallingInfo<Boolean> DECRYPT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Decrypt").build();
-    private static final MarshallingInfo<Boolean> DERIVEKEY_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeriveKey").build();
     private static final MarshallingInfo<Boolean> ENCRYPT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Encrypt").build();
-    private static final MarshallingInfo<Boolean> GENERATE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Generate").build();
-    private static final MarshallingInfo<Boolean> NORESTRICTIONS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NoRestrictions").build();
-    private static final MarshallingInfo<Boolean> SIGN_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Sign").build();
-    private static final MarshallingInfo<Boolean> UNWRAP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Unwrap").build();
-    private static final MarshallingInfo<Boolean> VERIFY_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Verify").build();
+    private static final MarshallingInfo<Boolean> DECRYPT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Decrypt").build();
     private static final MarshallingInfo<Boolean> WRAP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Wrap").build();
+    private static final MarshallingInfo<Boolean> UNWRAP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Unwrap").build();
+    private static final MarshallingInfo<Boolean> GENERATE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Generate").build();
+    private static final MarshallingInfo<Boolean> SIGN_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Sign").build();
+    private static final MarshallingInfo<Boolean> VERIFY_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Verify").build();
+    private static final MarshallingInfo<Boolean> DERIVEKEY_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeriveKey").build();
+    private static final MarshallingInfo<Boolean> NORESTRICTIONS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NoRestrictions").build();
 
     private static final KeyModesOfUseMarshaller instance = new KeyModesOfUseMarshaller();
 
@@ -62,15 +62,15 @@ public class KeyModesOfUseMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(keyModesOfUse.getDecrypt(), DECRYPT_BINDING);
-            protocolMarshaller.marshall(keyModesOfUse.getDeriveKey(), DERIVEKEY_BINDING);
             protocolMarshaller.marshall(keyModesOfUse.getEncrypt(), ENCRYPT_BINDING);
-            protocolMarshaller.marshall(keyModesOfUse.getGenerate(), GENERATE_BINDING);
-            protocolMarshaller.marshall(keyModesOfUse.getNoRestrictions(), NORESTRICTIONS_BINDING);
-            protocolMarshaller.marshall(keyModesOfUse.getSign(), SIGN_BINDING);
-            protocolMarshaller.marshall(keyModesOfUse.getUnwrap(), UNWRAP_BINDING);
-            protocolMarshaller.marshall(keyModesOfUse.getVerify(), VERIFY_BINDING);
+            protocolMarshaller.marshall(keyModesOfUse.getDecrypt(), DECRYPT_BINDING);
             protocolMarshaller.marshall(keyModesOfUse.getWrap(), WRAP_BINDING);
+            protocolMarshaller.marshall(keyModesOfUse.getUnwrap(), UNWRAP_BINDING);
+            protocolMarshaller.marshall(keyModesOfUse.getGenerate(), GENERATE_BINDING);
+            protocolMarshaller.marshall(keyModesOfUse.getSign(), SIGN_BINDING);
+            protocolMarshaller.marshall(keyModesOfUse.getVerify(), VERIFY_BINDING);
+            protocolMarshaller.marshall(keyModesOfUse.getDeriveKey(), DERIVEKEY_BINDING);
+            protocolMarshaller.marshall(keyModesOfUse.getNoRestrictions(), NORESTRICTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

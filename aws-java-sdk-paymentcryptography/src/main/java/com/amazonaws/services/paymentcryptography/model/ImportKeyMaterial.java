@@ -31,16 +31,16 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
-     * </p>
-     */
-    private ImportKeyCryptogram keyCryptogram;
-    /**
-     * <p>
      * Parameter information for root public key certificate import.
      * </p>
      */
     private RootCertificatePublicKey rootCertificatePublicKey;
+    /**
+     * <p>
+     * Parameter information for trusted public key certificate import.
+     * </p>
+     */
+    private TrustedCertificatePublicKey trustedCertificatePublicKey;
     /**
      * <p>
      * Parameter information for key material import using symmetric TR-31 key exchange method.
@@ -55,50 +55,10 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
     private ImportTr34KeyBlock tr34KeyBlock;
     /**
      * <p>
-     * Parameter information for trusted public key certificate import.
-     * </p>
-     */
-    private TrustedCertificatePublicKey trustedCertificatePublicKey;
-
-    /**
-     * <p>
      * Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
      * </p>
-     * 
-     * @param keyCryptogram
-     *        Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
      */
-
-    public void setKeyCryptogram(ImportKeyCryptogram keyCryptogram) {
-        this.keyCryptogram = keyCryptogram;
-    }
-
-    /**
-     * <p>
-     * Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
-     * </p>
-     * 
-     * @return Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
-     */
-
-    public ImportKeyCryptogram getKeyCryptogram() {
-        return this.keyCryptogram;
-    }
-
-    /**
-     * <p>
-     * Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
-     * </p>
-     * 
-     * @param keyCryptogram
-     *        Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ImportKeyMaterial withKeyCryptogram(ImportKeyCryptogram keyCryptogram) {
-        setKeyCryptogram(keyCryptogram);
-        return this;
-    }
+    private ImportKeyCryptogram keyCryptogram;
 
     /**
      * <p>
@@ -137,6 +97,46 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     public ImportKeyMaterial withRootCertificatePublicKey(RootCertificatePublicKey rootCertificatePublicKey) {
         setRootCertificatePublicKey(rootCertificatePublicKey);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Parameter information for trusted public key certificate import.
+     * </p>
+     * 
+     * @param trustedCertificatePublicKey
+     *        Parameter information for trusted public key certificate import.
+     */
+
+    public void setTrustedCertificatePublicKey(TrustedCertificatePublicKey trustedCertificatePublicKey) {
+        this.trustedCertificatePublicKey = trustedCertificatePublicKey;
+    }
+
+    /**
+     * <p>
+     * Parameter information for trusted public key certificate import.
+     * </p>
+     * 
+     * @return Parameter information for trusted public key certificate import.
+     */
+
+    public TrustedCertificatePublicKey getTrustedCertificatePublicKey() {
+        return this.trustedCertificatePublicKey;
+    }
+
+    /**
+     * <p>
+     * Parameter information for trusted public key certificate import.
+     * </p>
+     * 
+     * @param trustedCertificatePublicKey
+     *        Parameter information for trusted public key certificate import.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportKeyMaterial withTrustedCertificatePublicKey(TrustedCertificatePublicKey trustedCertificatePublicKey) {
+        setTrustedCertificatePublicKey(trustedCertificatePublicKey);
         return this;
     }
 
@@ -222,41 +222,41 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for trusted public key certificate import.
+     * Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
      * </p>
      * 
-     * @param trustedCertificatePublicKey
-     *        Parameter information for trusted public key certificate import.
+     * @param keyCryptogram
+     *        Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
      */
 
-    public void setTrustedCertificatePublicKey(TrustedCertificatePublicKey trustedCertificatePublicKey) {
-        this.trustedCertificatePublicKey = trustedCertificatePublicKey;
+    public void setKeyCryptogram(ImportKeyCryptogram keyCryptogram) {
+        this.keyCryptogram = keyCryptogram;
     }
 
     /**
      * <p>
-     * Parameter information for trusted public key certificate import.
+     * Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
      * </p>
      * 
-     * @return Parameter information for trusted public key certificate import.
+     * @return Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
      */
 
-    public TrustedCertificatePublicKey getTrustedCertificatePublicKey() {
-        return this.trustedCertificatePublicKey;
+    public ImportKeyCryptogram getKeyCryptogram() {
+        return this.keyCryptogram;
     }
 
     /**
      * <p>
-     * Parameter information for trusted public key certificate import.
+     * Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
      * </p>
      * 
-     * @param trustedCertificatePublicKey
-     *        Parameter information for trusted public key certificate import.
+     * @param keyCryptogram
+     *        Parameter information for key material import using asymmetric RSA wrap and unwrap key exchange method.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ImportKeyMaterial withTrustedCertificatePublicKey(TrustedCertificatePublicKey trustedCertificatePublicKey) {
-        setTrustedCertificatePublicKey(trustedCertificatePublicKey);
+    public ImportKeyMaterial withKeyCryptogram(ImportKeyCryptogram keyCryptogram) {
+        setKeyCryptogram(keyCryptogram);
         return this;
     }
 
@@ -272,16 +272,16 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKeyCryptogram() != null)
-            sb.append("KeyCryptogram: ").append(getKeyCryptogram()).append(",");
         if (getRootCertificatePublicKey() != null)
             sb.append("RootCertificatePublicKey: ").append(getRootCertificatePublicKey()).append(",");
+        if (getTrustedCertificatePublicKey() != null)
+            sb.append("TrustedCertificatePublicKey: ").append(getTrustedCertificatePublicKey()).append(",");
         if (getTr31KeyBlock() != null)
             sb.append("Tr31KeyBlock: ").append(getTr31KeyBlock()).append(",");
         if (getTr34KeyBlock() != null)
             sb.append("Tr34KeyBlock: ").append(getTr34KeyBlock()).append(",");
-        if (getTrustedCertificatePublicKey() != null)
-            sb.append("TrustedCertificatePublicKey: ").append(getTrustedCertificatePublicKey());
+        if (getKeyCryptogram() != null)
+            sb.append("KeyCryptogram: ").append(getKeyCryptogram());
         sb.append("}");
         return sb.toString();
     }
@@ -296,13 +296,13 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
         if (obj instanceof ImportKeyMaterial == false)
             return false;
         ImportKeyMaterial other = (ImportKeyMaterial) obj;
-        if (other.getKeyCryptogram() == null ^ this.getKeyCryptogram() == null)
-            return false;
-        if (other.getKeyCryptogram() != null && other.getKeyCryptogram().equals(this.getKeyCryptogram()) == false)
-            return false;
         if (other.getRootCertificatePublicKey() == null ^ this.getRootCertificatePublicKey() == null)
             return false;
         if (other.getRootCertificatePublicKey() != null && other.getRootCertificatePublicKey().equals(this.getRootCertificatePublicKey()) == false)
+            return false;
+        if (other.getTrustedCertificatePublicKey() == null ^ this.getTrustedCertificatePublicKey() == null)
+            return false;
+        if (other.getTrustedCertificatePublicKey() != null && other.getTrustedCertificatePublicKey().equals(this.getTrustedCertificatePublicKey()) == false)
             return false;
         if (other.getTr31KeyBlock() == null ^ this.getTr31KeyBlock() == null)
             return false;
@@ -312,9 +312,9 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getTr34KeyBlock() != null && other.getTr34KeyBlock().equals(this.getTr34KeyBlock()) == false)
             return false;
-        if (other.getTrustedCertificatePublicKey() == null ^ this.getTrustedCertificatePublicKey() == null)
+        if (other.getKeyCryptogram() == null ^ this.getKeyCryptogram() == null)
             return false;
-        if (other.getTrustedCertificatePublicKey() != null && other.getTrustedCertificatePublicKey().equals(this.getTrustedCertificatePublicKey()) == false)
+        if (other.getKeyCryptogram() != null && other.getKeyCryptogram().equals(this.getKeyCryptogram()) == false)
             return false;
         return true;
     }
@@ -324,11 +324,11 @@ public class ImportKeyMaterial implements Serializable, Cloneable, StructuredPoj
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKeyCryptogram() == null) ? 0 : getKeyCryptogram().hashCode());
         hashCode = prime * hashCode + ((getRootCertificatePublicKey() == null) ? 0 : getRootCertificatePublicKey().hashCode());
+        hashCode = prime * hashCode + ((getTrustedCertificatePublicKey() == null) ? 0 : getTrustedCertificatePublicKey().hashCode());
         hashCode = prime * hashCode + ((getTr31KeyBlock() == null) ? 0 : getTr31KeyBlock().hashCode());
         hashCode = prime * hashCode + ((getTr34KeyBlock() == null) ? 0 : getTr34KeyBlock().hashCode());
-        hashCode = prime * hashCode + ((getTrustedCertificatePublicKey() == null) ? 0 : getTrustedCertificatePublicKey().hashCode());
+        hashCode = prime * hashCode + ((getKeyCryptogram() == null) ? 0 : getKeyCryptogram().hashCode());
         return hashCode;
     }
 

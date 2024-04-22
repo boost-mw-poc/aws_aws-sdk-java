@@ -35,6 +35,12 @@ public class ExportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String wrappingKeyIdentifier;
+    /**
+     * <p>
+     * Optional metadata for export associated with the key material. This data is signed but transmitted in clear text.
+     * </p>
+     */
+    private KeyBlockHeaders keyBlockHeaders;
 
     /**
      * <p>
@@ -83,6 +89,49 @@ public class ExportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Optional metadata for export associated with the key material. This data is signed but transmitted in clear text.
+     * </p>
+     * 
+     * @param keyBlockHeaders
+     *        Optional metadata for export associated with the key material. This data is signed but transmitted in
+     *        clear text.
+     */
+
+    public void setKeyBlockHeaders(KeyBlockHeaders keyBlockHeaders) {
+        this.keyBlockHeaders = keyBlockHeaders;
+    }
+
+    /**
+     * <p>
+     * Optional metadata for export associated with the key material. This data is signed but transmitted in clear text.
+     * </p>
+     * 
+     * @return Optional metadata for export associated with the key material. This data is signed but transmitted in
+     *         clear text.
+     */
+
+    public KeyBlockHeaders getKeyBlockHeaders() {
+        return this.keyBlockHeaders;
+    }
+
+    /**
+     * <p>
+     * Optional metadata for export associated with the key material. This data is signed but transmitted in clear text.
+     * </p>
+     * 
+     * @param keyBlockHeaders
+     *        Optional metadata for export associated with the key material. This data is signed but transmitted in
+     *        clear text.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportTr31KeyBlock withKeyBlockHeaders(KeyBlockHeaders keyBlockHeaders) {
+        setKeyBlockHeaders(keyBlockHeaders);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -95,7 +144,9 @@ public class ExportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getWrappingKeyIdentifier() != null)
-            sb.append("WrappingKeyIdentifier: ").append(getWrappingKeyIdentifier());
+            sb.append("WrappingKeyIdentifier: ").append(getWrappingKeyIdentifier()).append(",");
+        if (getKeyBlockHeaders() != null)
+            sb.append("KeyBlockHeaders: ").append(getKeyBlockHeaders());
         sb.append("}");
         return sb.toString();
     }
@@ -114,6 +165,10 @@ public class ExportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getWrappingKeyIdentifier() != null && other.getWrappingKeyIdentifier().equals(this.getWrappingKeyIdentifier()) == false)
             return false;
+        if (other.getKeyBlockHeaders() == null ^ this.getKeyBlockHeaders() == null)
+            return false;
+        if (other.getKeyBlockHeaders() != null && other.getKeyBlockHeaders().equals(this.getKeyBlockHeaders()) == false)
+            return false;
         return true;
     }
 
@@ -123,6 +178,7 @@ public class ExportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getWrappingKeyIdentifier() == null) ? 0 : getWrappingKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getKeyBlockHeaders() == null) ? 0 : getKeyBlockHeaders().hashCode());
         return hashCode;
     }
 

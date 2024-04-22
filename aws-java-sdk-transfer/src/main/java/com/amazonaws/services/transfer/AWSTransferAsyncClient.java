@@ -1533,6 +1533,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
     }
 
     @Override
+    public java.util.concurrent.Future<StartDirectoryListingResult> startDirectoryListingAsync(StartDirectoryListingRequest request) {
+
+        return startDirectoryListingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDirectoryListingResult> startDirectoryListingAsync(final StartDirectoryListingRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartDirectoryListingRequest, StartDirectoryListingResult> asyncHandler) {
+        final StartDirectoryListingRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartDirectoryListingResult>() {
+            @Override
+            public StartDirectoryListingResult call() throws Exception {
+                StartDirectoryListingResult result = null;
+
+                try {
+                    result = executeStartDirectoryListing(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartFileTransferResult> startFileTransferAsync(StartFileTransferRequest request) {
 
         return startFileTransferAsync(request, null);

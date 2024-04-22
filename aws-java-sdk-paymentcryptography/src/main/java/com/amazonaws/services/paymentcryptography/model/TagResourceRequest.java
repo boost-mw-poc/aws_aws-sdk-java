@@ -45,7 +45,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </important>
      * <p>
-     * To use this parameter, you must have <a>TagResource</a> permission in an IAM policy.
+     * To use this parameter, you must have <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
+     * permission in an IAM policy.
      * </p>
      * <important>
      * <p>
@@ -110,7 +112,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </important>
      * <p>
-     * To use this parameter, you must have <a>TagResource</a> permission in an IAM policy.
+     * To use this parameter, you must have <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
+     * permission in an IAM policy.
      * </p>
      * <important>
      * <p>
@@ -129,7 +133,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </p>
      *         </important>
      *         <p>
-     *         To use this parameter, you must have <a>TagResource</a> permission in an IAM policy.
+     *         To use this parameter, you must have <a
+     *         href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *         >TagResource</a> permission in an IAM policy.
      *         </p>
      *         <important>
      *         <p>
@@ -156,7 +162,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </important>
      * <p>
-     * To use this parameter, you must have <a>TagResource</a> permission in an IAM policy.
+     * To use this parameter, you must have <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
+     * permission in an IAM policy.
      * </p>
      * <important>
      * <p>
@@ -176,7 +184,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        </important>
      *        <p>
-     *        To use this parameter, you must have <a>TagResource</a> permission in an IAM policy.
+     *        To use this parameter, you must have <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *        >TagResource</a> permission in an IAM policy.
      *        </p>
      *        <important>
      *        <p>
@@ -208,7 +218,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </important>
      * <p>
-     * To use this parameter, you must have <a>TagResource</a> permission in an IAM policy.
+     * To use this parameter, you must have <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
+     * permission in an IAM policy.
      * </p>
      * <important>
      * <p>
@@ -233,7 +245,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        </important>
      *        <p>
-     *        To use this parameter, you must have <a>TagResource</a> permission in an IAM policy.
+     *        To use this parameter, you must have <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *        >TagResource</a> permission in an IAM policy.
      *        </p>
      *        <important>
      *        <p>
@@ -267,7 +281,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </important>
      * <p>
-     * To use this parameter, you must have <a>TagResource</a> permission in an IAM policy.
+     * To use this parameter, you must have <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
+     * permission in an IAM policy.
      * </p>
      * <important>
      * <p>
@@ -287,7 +303,9 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        </important>
      *        <p>
-     *        To use this parameter, you must have <a>TagResource</a> permission in an IAM policy.
+     *        To use this parameter, you must have <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *        >TagResource</a> permission in an IAM policy.
      *        </p>
      *        <important>
      *        <p>

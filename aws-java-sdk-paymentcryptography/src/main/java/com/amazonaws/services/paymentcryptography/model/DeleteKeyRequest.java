@@ -27,56 +27,16 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The waiting period for key deletion. The default value is seven days.
-     * </p>
-     */
-    private Integer deleteKeyInDays;
-    /**
-     * <p>
      * The <code>KeyARN</code> of the key that is scheduled for deletion.
      * </p>
      */
     private String keyIdentifier;
-
     /**
      * <p>
      * The waiting period for key deletion. The default value is seven days.
      * </p>
-     * 
-     * @param deleteKeyInDays
-     *        The waiting period for key deletion. The default value is seven days.
      */
-
-    public void setDeleteKeyInDays(Integer deleteKeyInDays) {
-        this.deleteKeyInDays = deleteKeyInDays;
-    }
-
-    /**
-     * <p>
-     * The waiting period for key deletion. The default value is seven days.
-     * </p>
-     * 
-     * @return The waiting period for key deletion. The default value is seven days.
-     */
-
-    public Integer getDeleteKeyInDays() {
-        return this.deleteKeyInDays;
-    }
-
-    /**
-     * <p>
-     * The waiting period for key deletion. The default value is seven days.
-     * </p>
-     * 
-     * @param deleteKeyInDays
-     *        The waiting period for key deletion. The default value is seven days.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DeleteKeyRequest withDeleteKeyInDays(Integer deleteKeyInDays) {
-        setDeleteKeyInDays(deleteKeyInDays);
-        return this;
-    }
+    private Integer deleteKeyInDays;
 
     /**
      * <p>
@@ -119,6 +79,46 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * The waiting period for key deletion. The default value is seven days.
+     * </p>
+     * 
+     * @param deleteKeyInDays
+     *        The waiting period for key deletion. The default value is seven days.
+     */
+
+    public void setDeleteKeyInDays(Integer deleteKeyInDays) {
+        this.deleteKeyInDays = deleteKeyInDays;
+    }
+
+    /**
+     * <p>
+     * The waiting period for key deletion. The default value is seven days.
+     * </p>
+     * 
+     * @return The waiting period for key deletion. The default value is seven days.
+     */
+
+    public Integer getDeleteKeyInDays() {
+        return this.deleteKeyInDays;
+    }
+
+    /**
+     * <p>
+     * The waiting period for key deletion. The default value is seven days.
+     * </p>
+     * 
+     * @param deleteKeyInDays
+     *        The waiting period for key deletion. The default value is seven days.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteKeyRequest withDeleteKeyInDays(Integer deleteKeyInDays) {
+        setDeleteKeyInDays(deleteKeyInDays);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -130,10 +130,10 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDeleteKeyInDays() != null)
-            sb.append("DeleteKeyInDays: ").append(getDeleteKeyInDays()).append(",");
         if (getKeyIdentifier() != null)
-            sb.append("KeyIdentifier: ").append(getKeyIdentifier());
+            sb.append("KeyIdentifier: ").append(getKeyIdentifier()).append(",");
+        if (getDeleteKeyInDays() != null)
+            sb.append("DeleteKeyInDays: ").append(getDeleteKeyInDays());
         sb.append("}");
         return sb.toString();
     }
@@ -148,13 +148,13 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof DeleteKeyRequest == false)
             return false;
         DeleteKeyRequest other = (DeleteKeyRequest) obj;
-        if (other.getDeleteKeyInDays() == null ^ this.getDeleteKeyInDays() == null)
-            return false;
-        if (other.getDeleteKeyInDays() != null && other.getDeleteKeyInDays().equals(this.getDeleteKeyInDays()) == false)
-            return false;
         if (other.getKeyIdentifier() == null ^ this.getKeyIdentifier() == null)
             return false;
         if (other.getKeyIdentifier() != null && other.getKeyIdentifier().equals(this.getKeyIdentifier()) == false)
+            return false;
+        if (other.getDeleteKeyInDays() == null ^ this.getDeleteKeyInDays() == null)
+            return false;
+        if (other.getDeleteKeyInDays() != null && other.getDeleteKeyInDays().equals(this.getDeleteKeyInDays()) == false)
             return false;
         return true;
     }
@@ -164,8 +164,8 @@ public class DeleteKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDeleteKeyInDays() == null) ? 0 : getDeleteKeyInDays().hashCode());
         hashCode = prime * hashCode + ((getKeyIdentifier() == null) ? 0 : getKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getDeleteKeyInDays() == null) ? 0 : getDeleteKeyInDays().hashCode());
         return hashCode;
     }
 

@@ -43,7 +43,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <li>
  * <p>
  * <a href=
- * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_ListIngestionJob.html#API_agent_ListIngestionJob_ResponseSyntax"
+ * "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_ListIngestionJobs.html#API_agent_ListIngestionJobs_ResponseSyntax"
  * >ListIngestionJob response</a>
  * </p>
  * </li>

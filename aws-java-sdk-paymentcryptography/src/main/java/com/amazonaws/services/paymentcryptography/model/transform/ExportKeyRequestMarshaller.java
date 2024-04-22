@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ExportKeyRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> EXPORTATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExportAttributes").build();
-    private static final MarshallingInfo<String> EXPORTKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExportKeyIdentifier").build();
     private static final MarshallingInfo<StructuredPojo> KEYMATERIAL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyMaterial").build();
+    private static final MarshallingInfo<String> EXPORTKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExportKeyIdentifier").build();
+    private static final MarshallingInfo<StructuredPojo> EXPORTATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExportAttributes").build();
 
     private static final ExportKeyRequestMarshaller instance = new ExportKeyRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class ExportKeyRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(exportKeyRequest.getExportAttributes(), EXPORTATTRIBUTES_BINDING);
-            protocolMarshaller.marshall(exportKeyRequest.getExportKeyIdentifier(), EXPORTKEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(exportKeyRequest.getKeyMaterial(), KEYMATERIAL_BINDING);
+            protocolMarshaller.marshall(exportKeyRequest.getExportKeyIdentifier(), EXPORTKEYIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(exportKeyRequest.getExportAttributes(), EXPORTATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

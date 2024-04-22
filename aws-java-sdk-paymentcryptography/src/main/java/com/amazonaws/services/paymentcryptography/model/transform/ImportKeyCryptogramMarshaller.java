@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ImportKeyCryptogramMarshaller {
 
-    private static final MarshallingInfo<Boolean> EXPORTABLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Exportable").build();
-    private static final MarshallingInfo<String> IMPORTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImportToken").build();
     private static final MarshallingInfo<StructuredPojo> KEYATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyAttributes").build();
+    private static final MarshallingInfo<Boolean> EXPORTABLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Exportable").build();
     private static final MarshallingInfo<String> WRAPPEDKEYCRYPTOGRAM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WrappedKeyCryptogram").build();
+    private static final MarshallingInfo<String> IMPORTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImportToken").build();
     private static final MarshallingInfo<String> WRAPPINGSPEC_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WrappingSpec").build();
 
@@ -54,10 +54,10 @@ public class ImportKeyCryptogramMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(importKeyCryptogram.getExportable(), EXPORTABLE_BINDING);
-            protocolMarshaller.marshall(importKeyCryptogram.getImportToken(), IMPORTTOKEN_BINDING);
             protocolMarshaller.marshall(importKeyCryptogram.getKeyAttributes(), KEYATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(importKeyCryptogram.getExportable(), EXPORTABLE_BINDING);
             protocolMarshaller.marshall(importKeyCryptogram.getWrappedKeyCryptogram(), WRAPPEDKEYCRYPTOGRAM_BINDING);
+            protocolMarshaller.marshall(importKeyCryptogram.getImportToken(), IMPORTTOKEN_BINDING);
             protocolMarshaller.marshall(importKeyCryptogram.getWrappingSpec(), WRAPPINGSPEC_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

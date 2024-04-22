@@ -29,10 +29,10 @@ public class ListKeysRequestMarshaller {
 
     private static final MarshallingInfo<String> KEYSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("KeyState").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
 
     private static final ListKeysRequestMarshaller instance = new ListKeysRequestMarshaller();
 
@@ -51,8 +51,8 @@ public class ListKeysRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(listKeysRequest.getKeyState(), KEYSTATE_BINDING);
-            protocolMarshaller.marshall(listKeysRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listKeysRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listKeysRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

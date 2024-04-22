@@ -29,14 +29,16 @@ public class ExportTr34KeyBlockMarshaller {
 
     private static final MarshallingInfo<String> CERTIFICATEAUTHORITYPUBLICKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CertificateAuthorityPublicKeyIdentifier").build();
+    private static final MarshallingInfo<String> WRAPPINGKEYCERTIFICATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WrappingKeyCertificate").build();
     private static final MarshallingInfo<String> EXPORTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExportToken").build();
     private static final MarshallingInfo<String> KEYBLOCKFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyBlockFormat").build();
     private static final MarshallingInfo<String> RANDOMNONCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RandomNonce").build();
-    private static final MarshallingInfo<String> WRAPPINGKEYCERTIFICATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WrappingKeyCertificate").build();
+    private static final MarshallingInfo<StructuredPojo> KEYBLOCKHEADERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyBlockHeaders").build();
 
     private static final ExportTr34KeyBlockMarshaller instance = new ExportTr34KeyBlockMarshaller();
 
@@ -55,10 +57,11 @@ public class ExportTr34KeyBlockMarshaller {
 
         try {
             protocolMarshaller.marshall(exportTr34KeyBlock.getCertificateAuthorityPublicKeyIdentifier(), CERTIFICATEAUTHORITYPUBLICKEYIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(exportTr34KeyBlock.getWrappingKeyCertificate(), WRAPPINGKEYCERTIFICATE_BINDING);
             protocolMarshaller.marshall(exportTr34KeyBlock.getExportToken(), EXPORTTOKEN_BINDING);
             protocolMarshaller.marshall(exportTr34KeyBlock.getKeyBlockFormat(), KEYBLOCKFORMAT_BINDING);
             protocolMarshaller.marshall(exportTr34KeyBlock.getRandomNonce(), RANDOMNONCE_BINDING);
-            protocolMarshaller.marshall(exportTr34KeyBlock.getWrappingKeyCertificate(), WRAPPINGKEYCERTIFICATE_BINDING);
+            protocolMarshaller.marshall(exportTr34KeyBlock.getKeyBlockHeaders(), KEYBLOCKHEADERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

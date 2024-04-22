@@ -115,7 +115,7 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
     private JupyterLabAppSettings jupyterLabAppSettings;
     /**
      * <p>
-     * The storage settings for a private space.
+     * The storage settings for a space.
      * </p>
      */
     private DefaultSpaceStorageSettings spaceStorageSettings;
@@ -724,11 +724,11 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage settings for a private space.
+     * The storage settings for a space.
      * </p>
      * 
      * @param spaceStorageSettings
-     *        The storage settings for a private space.
+     *        The storage settings for a space.
      */
 
     public void setSpaceStorageSettings(DefaultSpaceStorageSettings spaceStorageSettings) {
@@ -737,10 +737,10 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage settings for a private space.
+     * The storage settings for a space.
      * </p>
      * 
-     * @return The storage settings for a private space.
+     * @return The storage settings for a space.
      */
 
     public DefaultSpaceStorageSettings getSpaceStorageSettings() {
@@ -749,11 +749,11 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage settings for a private space.
+     * The storage settings for a space.
      * </p>
      * 
      * @param spaceStorageSettings
-     *        The storage settings for a private space.
+     *        The storage settings for a space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

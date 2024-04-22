@@ -30,6 +30,24 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The <code>KeyARN</code> of the wrapped key.
+     * </p>
+     */
+    private String wrappingKeyArn;
+    /**
+     * <p>
+     * The key block format of a wrapped key.
+     * </p>
+     */
+    private String wrappedKeyMaterialFormat;
+    /**
+     * <p>
+     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
+     * </p>
+     */
+    private String keyMaterial;
+    /**
+     * <p>
      * The key check value (KCV) is used to check if all parties holding a given key have the same key or to detect that
      * a key has changed.
      * </p>
@@ -48,24 +66,145 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String keyCheckValueAlgorithm;
-    /**
-     * <p>
-     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
-     * </p>
-     */
-    private String keyMaterial;
-    /**
-     * <p>
-     * The key block format of a wrapped key.
-     * </p>
-     */
-    private String wrappedKeyMaterialFormat;
+
     /**
      * <p>
      * The <code>KeyARN</code> of the wrapped key.
      * </p>
+     * 
+     * @param wrappingKeyArn
+     *        The <code>KeyARN</code> of the wrapped key.
      */
-    private String wrappingKeyArn;
+
+    public void setWrappingKeyArn(String wrappingKeyArn) {
+        this.wrappingKeyArn = wrappingKeyArn;
+    }
+
+    /**
+     * <p>
+     * The <code>KeyARN</code> of the wrapped key.
+     * </p>
+     * 
+     * @return The <code>KeyARN</code> of the wrapped key.
+     */
+
+    public String getWrappingKeyArn() {
+        return this.wrappingKeyArn;
+    }
+
+    /**
+     * <p>
+     * The <code>KeyARN</code> of the wrapped key.
+     * </p>
+     * 
+     * @param wrappingKeyArn
+     *        The <code>KeyARN</code> of the wrapped key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WrappedKey withWrappingKeyArn(String wrappingKeyArn) {
+        setWrappingKeyArn(wrappingKeyArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The key block format of a wrapped key.
+     * </p>
+     * 
+     * @param wrappedKeyMaterialFormat
+     *        The key block format of a wrapped key.
+     * @see WrappedKeyMaterialFormat
+     */
+
+    public void setWrappedKeyMaterialFormat(String wrappedKeyMaterialFormat) {
+        this.wrappedKeyMaterialFormat = wrappedKeyMaterialFormat;
+    }
+
+    /**
+     * <p>
+     * The key block format of a wrapped key.
+     * </p>
+     * 
+     * @return The key block format of a wrapped key.
+     * @see WrappedKeyMaterialFormat
+     */
+
+    public String getWrappedKeyMaterialFormat() {
+        return this.wrappedKeyMaterialFormat;
+    }
+
+    /**
+     * <p>
+     * The key block format of a wrapped key.
+     * </p>
+     * 
+     * @param wrappedKeyMaterialFormat
+     *        The key block format of a wrapped key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WrappedKeyMaterialFormat
+     */
+
+    public WrappedKey withWrappedKeyMaterialFormat(String wrappedKeyMaterialFormat) {
+        setWrappedKeyMaterialFormat(wrappedKeyMaterialFormat);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The key block format of a wrapped key.
+     * </p>
+     * 
+     * @param wrappedKeyMaterialFormat
+     *        The key block format of a wrapped key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see WrappedKeyMaterialFormat
+     */
+
+    public WrappedKey withWrappedKeyMaterialFormat(WrappedKeyMaterialFormat wrappedKeyMaterialFormat) {
+        this.wrappedKeyMaterialFormat = wrappedKeyMaterialFormat.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
+     * </p>
+     * 
+     * @param keyMaterial
+     *        Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
+     */
+
+    public void setKeyMaterial(String keyMaterial) {
+        this.keyMaterial = keyMaterial;
+    }
+
+    /**
+     * <p>
+     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
+     * </p>
+     * 
+     * @return Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
+     */
+
+    public String getKeyMaterial() {
+        return this.keyMaterial;
+    }
+
+    /**
+     * <p>
+     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
+     * </p>
+     * 
+     * @param keyMaterial
+     *        Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WrappedKey withKeyMaterial(String keyMaterial) {
+        setKeyMaterial(keyMaterial);
+        return this;
+    }
 
     /**
      * <p>
@@ -225,145 +364,6 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p>
-     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
-     * </p>
-     * 
-     * @param keyMaterial
-     *        Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
-     */
-
-    public void setKeyMaterial(String keyMaterial) {
-        this.keyMaterial = keyMaterial;
-    }
-
-    /**
-     * <p>
-     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
-     * </p>
-     * 
-     * @return Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
-     */
-
-    public String getKeyMaterial() {
-        return this.keyMaterial;
-    }
-
-    /**
-     * <p>
-     * Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
-     * </p>
-     * 
-     * @param keyMaterial
-     *        Parameter information for generating a wrapped key using TR-31 or TR-34 skey exchange method.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public WrappedKey withKeyMaterial(String keyMaterial) {
-        setKeyMaterial(keyMaterial);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The key block format of a wrapped key.
-     * </p>
-     * 
-     * @param wrappedKeyMaterialFormat
-     *        The key block format of a wrapped key.
-     * @see WrappedKeyMaterialFormat
-     */
-
-    public void setWrappedKeyMaterialFormat(String wrappedKeyMaterialFormat) {
-        this.wrappedKeyMaterialFormat = wrappedKeyMaterialFormat;
-    }
-
-    /**
-     * <p>
-     * The key block format of a wrapped key.
-     * </p>
-     * 
-     * @return The key block format of a wrapped key.
-     * @see WrappedKeyMaterialFormat
-     */
-
-    public String getWrappedKeyMaterialFormat() {
-        return this.wrappedKeyMaterialFormat;
-    }
-
-    /**
-     * <p>
-     * The key block format of a wrapped key.
-     * </p>
-     * 
-     * @param wrappedKeyMaterialFormat
-     *        The key block format of a wrapped key.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see WrappedKeyMaterialFormat
-     */
-
-    public WrappedKey withWrappedKeyMaterialFormat(String wrappedKeyMaterialFormat) {
-        setWrappedKeyMaterialFormat(wrappedKeyMaterialFormat);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The key block format of a wrapped key.
-     * </p>
-     * 
-     * @param wrappedKeyMaterialFormat
-     *        The key block format of a wrapped key.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see WrappedKeyMaterialFormat
-     */
-
-    public WrappedKey withWrappedKeyMaterialFormat(WrappedKeyMaterialFormat wrappedKeyMaterialFormat) {
-        this.wrappedKeyMaterialFormat = wrappedKeyMaterialFormat.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * The <code>KeyARN</code> of the wrapped key.
-     * </p>
-     * 
-     * @param wrappingKeyArn
-     *        The <code>KeyARN</code> of the wrapped key.
-     */
-
-    public void setWrappingKeyArn(String wrappingKeyArn) {
-        this.wrappingKeyArn = wrappingKeyArn;
-    }
-
-    /**
-     * <p>
-     * The <code>KeyARN</code> of the wrapped key.
-     * </p>
-     * 
-     * @return The <code>KeyARN</code> of the wrapped key.
-     */
-
-    public String getWrappingKeyArn() {
-        return this.wrappingKeyArn;
-    }
-
-    /**
-     * <p>
-     * The <code>KeyARN</code> of the wrapped key.
-     * </p>
-     * 
-     * @param wrappingKeyArn
-     *        The <code>KeyARN</code> of the wrapped key.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public WrappedKey withWrappingKeyArn(String wrappingKeyArn) {
-        setWrappingKeyArn(wrappingKeyArn);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -375,16 +375,16 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getWrappingKeyArn() != null)
+            sb.append("WrappingKeyArn: ").append(getWrappingKeyArn()).append(",");
+        if (getWrappedKeyMaterialFormat() != null)
+            sb.append("WrappedKeyMaterialFormat: ").append(getWrappedKeyMaterialFormat()).append(",");
+        if (getKeyMaterial() != null)
+            sb.append("KeyMaterial: ").append("***Sensitive Data Redacted***").append(",");
         if (getKeyCheckValue() != null)
             sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
         if (getKeyCheckValueAlgorithm() != null)
-            sb.append("KeyCheckValueAlgorithm: ").append(getKeyCheckValueAlgorithm()).append(",");
-        if (getKeyMaterial() != null)
-            sb.append("KeyMaterial: ").append("***Sensitive Data Redacted***").append(",");
-        if (getWrappedKeyMaterialFormat() != null)
-            sb.append("WrappedKeyMaterialFormat: ").append(getWrappedKeyMaterialFormat()).append(",");
-        if (getWrappingKeyArn() != null)
-            sb.append("WrappingKeyArn: ").append(getWrappingKeyArn());
+            sb.append("KeyCheckValueAlgorithm: ").append(getKeyCheckValueAlgorithm());
         sb.append("}");
         return sb.toString();
     }
@@ -399,6 +399,18 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof WrappedKey == false)
             return false;
         WrappedKey other = (WrappedKey) obj;
+        if (other.getWrappingKeyArn() == null ^ this.getWrappingKeyArn() == null)
+            return false;
+        if (other.getWrappingKeyArn() != null && other.getWrappingKeyArn().equals(this.getWrappingKeyArn()) == false)
+            return false;
+        if (other.getWrappedKeyMaterialFormat() == null ^ this.getWrappedKeyMaterialFormat() == null)
+            return false;
+        if (other.getWrappedKeyMaterialFormat() != null && other.getWrappedKeyMaterialFormat().equals(this.getWrappedKeyMaterialFormat()) == false)
+            return false;
+        if (other.getKeyMaterial() == null ^ this.getKeyMaterial() == null)
+            return false;
+        if (other.getKeyMaterial() != null && other.getKeyMaterial().equals(this.getKeyMaterial()) == false)
+            return false;
         if (other.getKeyCheckValue() == null ^ this.getKeyCheckValue() == null)
             return false;
         if (other.getKeyCheckValue() != null && other.getKeyCheckValue().equals(this.getKeyCheckValue()) == false)
@@ -406,18 +418,6 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
         if (other.getKeyCheckValueAlgorithm() == null ^ this.getKeyCheckValueAlgorithm() == null)
             return false;
         if (other.getKeyCheckValueAlgorithm() != null && other.getKeyCheckValueAlgorithm().equals(this.getKeyCheckValueAlgorithm()) == false)
-            return false;
-        if (other.getKeyMaterial() == null ^ this.getKeyMaterial() == null)
-            return false;
-        if (other.getKeyMaterial() != null && other.getKeyMaterial().equals(this.getKeyMaterial()) == false)
-            return false;
-        if (other.getWrappedKeyMaterialFormat() == null ^ this.getWrappedKeyMaterialFormat() == null)
-            return false;
-        if (other.getWrappedKeyMaterialFormat() != null && other.getWrappedKeyMaterialFormat().equals(this.getWrappedKeyMaterialFormat()) == false)
-            return false;
-        if (other.getWrappingKeyArn() == null ^ this.getWrappingKeyArn() == null)
-            return false;
-        if (other.getWrappingKeyArn() != null && other.getWrappingKeyArn().equals(this.getWrappingKeyArn()) == false)
             return false;
         return true;
     }
@@ -427,11 +427,11 @@ public class WrappedKey implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getWrappingKeyArn() == null) ? 0 : getWrappingKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getWrappedKeyMaterialFormat() == null) ? 0 : getWrappedKeyMaterialFormat().hashCode());
+        hashCode = prime * hashCode + ((getKeyMaterial() == null) ? 0 : getKeyMaterial().hashCode());
         hashCode = prime * hashCode + ((getKeyCheckValue() == null) ? 0 : getKeyCheckValue().hashCode());
         hashCode = prime * hashCode + ((getKeyCheckValueAlgorithm() == null) ? 0 : getKeyCheckValueAlgorithm().hashCode());
-        hashCode = prime * hashCode + ((getKeyMaterial() == null) ? 0 : getKeyMaterial().hashCode());
-        hashCode = prime * hashCode + ((getWrappedKeyMaterialFormat() == null) ? 0 : getWrappedKeyMaterialFormat().hashCode());
-        hashCode = prime * hashCode + ((getWrappingKeyArn() == null) ? 0 : getWrappingKeyArn().hashCode());
         return hashCode;
     }
 

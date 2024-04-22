@@ -30,56 +30,16 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The TR-31 wrapped key block to import.
-     * </p>
-     */
-    private String wrappedKeyBlock;
-    /**
-     * <p>
      * The <code>KeyARN</code> of the key that will decrypt or unwrap a TR-31 key block during import.
      * </p>
      */
     private String wrappingKeyIdentifier;
-
     /**
      * <p>
      * The TR-31 wrapped key block to import.
      * </p>
-     * 
-     * @param wrappedKeyBlock
-     *        The TR-31 wrapped key block to import.
      */
-
-    public void setWrappedKeyBlock(String wrappedKeyBlock) {
-        this.wrappedKeyBlock = wrappedKeyBlock;
-    }
-
-    /**
-     * <p>
-     * The TR-31 wrapped key block to import.
-     * </p>
-     * 
-     * @return The TR-31 wrapped key block to import.
-     */
-
-    public String getWrappedKeyBlock() {
-        return this.wrappedKeyBlock;
-    }
-
-    /**
-     * <p>
-     * The TR-31 wrapped key block to import.
-     * </p>
-     * 
-     * @param wrappedKeyBlock
-     *        The TR-31 wrapped key block to import.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ImportTr31KeyBlock withWrappedKeyBlock(String wrappedKeyBlock) {
-        setWrappedKeyBlock(wrappedKeyBlock);
-        return this;
-    }
+    private String wrappedKeyBlock;
 
     /**
      * <p>
@@ -122,6 +82,46 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The TR-31 wrapped key block to import.
+     * </p>
+     * 
+     * @param wrappedKeyBlock
+     *        The TR-31 wrapped key block to import.
+     */
+
+    public void setWrappedKeyBlock(String wrappedKeyBlock) {
+        this.wrappedKeyBlock = wrappedKeyBlock;
+    }
+
+    /**
+     * <p>
+     * The TR-31 wrapped key block to import.
+     * </p>
+     * 
+     * @return The TR-31 wrapped key block to import.
+     */
+
+    public String getWrappedKeyBlock() {
+        return this.wrappedKeyBlock;
+    }
+
+    /**
+     * <p>
+     * The TR-31 wrapped key block to import.
+     * </p>
+     * 
+     * @param wrappedKeyBlock
+     *        The TR-31 wrapped key block to import.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportTr31KeyBlock withWrappedKeyBlock(String wrappedKeyBlock) {
+        setWrappedKeyBlock(wrappedKeyBlock);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,10 +133,10 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getWrappedKeyBlock() != null)
-            sb.append("WrappedKeyBlock: ").append(getWrappedKeyBlock()).append(",");
         if (getWrappingKeyIdentifier() != null)
-            sb.append("WrappingKeyIdentifier: ").append(getWrappingKeyIdentifier());
+            sb.append("WrappingKeyIdentifier: ").append(getWrappingKeyIdentifier()).append(",");
+        if (getWrappedKeyBlock() != null)
+            sb.append("WrappedKeyBlock: ").append(getWrappedKeyBlock());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +151,13 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
         if (obj instanceof ImportTr31KeyBlock == false)
             return false;
         ImportTr31KeyBlock other = (ImportTr31KeyBlock) obj;
-        if (other.getWrappedKeyBlock() == null ^ this.getWrappedKeyBlock() == null)
-            return false;
-        if (other.getWrappedKeyBlock() != null && other.getWrappedKeyBlock().equals(this.getWrappedKeyBlock()) == false)
-            return false;
         if (other.getWrappingKeyIdentifier() == null ^ this.getWrappingKeyIdentifier() == null)
             return false;
         if (other.getWrappingKeyIdentifier() != null && other.getWrappingKeyIdentifier().equals(this.getWrappingKeyIdentifier()) == false)
+            return false;
+        if (other.getWrappedKeyBlock() == null ^ this.getWrappedKeyBlock() == null)
+            return false;
+        if (other.getWrappedKeyBlock() != null && other.getWrappedKeyBlock().equals(this.getWrappedKeyBlock()) == false)
             return false;
         return true;
     }
@@ -167,8 +167,8 @@ public class ImportTr31KeyBlock implements Serializable, Cloneable, StructuredPo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getWrappedKeyBlock() == null) ? 0 : getWrappedKeyBlock().hashCode());
         hashCode = prime * hashCode + ((getWrappingKeyIdentifier() == null) ? 0 : getWrappingKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getWrappedKeyBlock() == null) ? 0 : getWrappedKeyBlock().hashCode());
         return hashCode;
     }
 

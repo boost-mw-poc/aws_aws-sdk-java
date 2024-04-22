@@ -28,14 +28,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateKeyRequestMarshaller {
 
-    private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Enabled").build();
-    private static final MarshallingInfo<Boolean> EXPORTABLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Exportable").build();
     private static final MarshallingInfo<StructuredPojo> KEYATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyAttributes").build();
     private static final MarshallingInfo<String> KEYCHECKVALUEALGORITHM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCheckValueAlgorithm").build();
+    private static final MarshallingInfo<Boolean> EXPORTABLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Exportable").build();
+    private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Enabled").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -55,10 +55,10 @@ public class CreateKeyRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createKeyRequest.getEnabled(), ENABLED_BINDING);
-            protocolMarshaller.marshall(createKeyRequest.getExportable(), EXPORTABLE_BINDING);
             protocolMarshaller.marshall(createKeyRequest.getKeyAttributes(), KEYATTRIBUTES_BINDING);
             protocolMarshaller.marshall(createKeyRequest.getKeyCheckValueAlgorithm(), KEYCHECKVALUEALGORITHM_BINDING);
+            protocolMarshaller.marshall(createKeyRequest.getExportable(), EXPORTABLE_BINDING);
+            protocolMarshaller.marshall(createKeyRequest.getEnabled(), ENABLED_BINDING);
             protocolMarshaller.marshall(createKeyRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

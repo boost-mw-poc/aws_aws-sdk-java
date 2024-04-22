@@ -88,6 +88,10 @@ public class AgentActionGroupJsonUnmarshaller implements Unmarshaller<AgentActio
                     context.nextToken();
                     agentActionGroup.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("functionSchema", targetDepth)) {
+                    context.nextToken();
+                    agentActionGroup.setFunctionSchema(FunctionSchemaJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("parentActionSignature", targetDepth)) {
                     context.nextToken();
                     agentActionGroup.setParentActionSignature(context.getUnmarshaller(String.class).unmarshall(context));

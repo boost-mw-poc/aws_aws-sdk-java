@@ -27,19 +27,6 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
-     * key is not enabled, then it is created but not activated. The default value is enabled.
-     * </p>
-     */
-    private Boolean enabled;
-    /**
-     * <p>
-     * Specifies whether the key is exportable from the service.
-     * </p>
-     */
-    private Boolean exportable;
-    /**
-     * <p>
      * The role of the key, the algorithm it supports, and the cryptographic operations allowed with the key. This data
      * is immutable after the key is created.
      * </p>
@@ -60,8 +47,22 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String keyCheckValueAlgorithm;
     /**
      * <p>
+     * Specifies whether the key is exportable from the service.
+     * </p>
+     */
+    private Boolean exportable;
+    /**
+     * <p>
+     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
+     * key is not enabled, then it is created but not activated. The default value is enabled.
+     * </p>
+     */
+    private Boolean enabled;
+    /**
+     * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -81,118 +82,6 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </note>
      */
     private java.util.List<Tag> tags;
-
-    /**
-     * <p>
-     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
-     * key is not enabled, then it is created but not activated. The default value is enabled.
-     * </p>
-     * 
-     * @param enabled
-     *        Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If
-     *        the key is not enabled, then it is created but not activated. The default value is enabled.
-     */
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    /**
-     * <p>
-     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
-     * key is not enabled, then it is created but not activated. The default value is enabled.
-     * </p>
-     * 
-     * @return Specifies whether to enable the key. If the key is enabled, it is activated for use within the service.
-     *         If the key is not enabled, then it is created but not activated. The default value is enabled.
-     */
-
-    public Boolean getEnabled() {
-        return this.enabled;
-    }
-
-    /**
-     * <p>
-     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
-     * key is not enabled, then it is created but not activated. The default value is enabled.
-     * </p>
-     * 
-     * @param enabled
-     *        Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If
-     *        the key is not enabled, then it is created but not activated. The default value is enabled.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateKeyRequest withEnabled(Boolean enabled) {
-        setEnabled(enabled);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
-     * key is not enabled, then it is created but not activated. The default value is enabled.
-     * </p>
-     * 
-     * @return Specifies whether to enable the key. If the key is enabled, it is activated for use within the service.
-     *         If the key is not enabled, then it is created but not activated. The default value is enabled.
-     */
-
-    public Boolean isEnabled() {
-        return this.enabled;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable from the service.
-     * </p>
-     * 
-     * @param exportable
-     *        Specifies whether the key is exportable from the service.
-     */
-
-    public void setExportable(Boolean exportable) {
-        this.exportable = exportable;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable from the service.
-     * </p>
-     * 
-     * @return Specifies whether the key is exportable from the service.
-     */
-
-    public Boolean getExportable() {
-        return this.exportable;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable from the service.
-     * </p>
-     * 
-     * @param exportable
-     *        Specifies whether the key is exportable from the service.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateKeyRequest withExportable(Boolean exportable) {
-        setExportable(exportable);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable from the service.
-     * </p>
-     * 
-     * @return Specifies whether the key is exportable from the service.
-     */
-
-    public Boolean isExportable() {
-        return this.exportable;
-    }
 
     /**
      * <p>
@@ -353,8 +242,121 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
+     * Specifies whether the key is exportable from the service.
+     * </p>
+     * 
+     * @param exportable
+     *        Specifies whether the key is exportable from the service.
+     */
+
+    public void setExportable(Boolean exportable) {
+        this.exportable = exportable;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is exportable from the service.
+     * </p>
+     * 
+     * @return Specifies whether the key is exportable from the service.
+     */
+
+    public Boolean getExportable() {
+        return this.exportable;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is exportable from the service.
+     * </p>
+     * 
+     * @param exportable
+     *        Specifies whether the key is exportable from the service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateKeyRequest withExportable(Boolean exportable) {
+        setExportable(exportable);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is exportable from the service.
+     * </p>
+     * 
+     * @return Specifies whether the key is exportable from the service.
+     */
+
+    public Boolean isExportable() {
+        return this.exportable;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
+     * key is not enabled, then it is created but not activated. The default value is enabled.
+     * </p>
+     * 
+     * @param enabled
+     *        Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If
+     *        the key is not enabled, then it is created but not activated. The default value is enabled.
+     */
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
+     * key is not enabled, then it is created but not activated. The default value is enabled.
+     * </p>
+     * 
+     * @return Specifies whether to enable the key. If the key is enabled, it is activated for use within the service.
+     *         If the key is not enabled, then it is created but not activated. The default value is enabled.
+     */
+
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
+     * key is not enabled, then it is created but not activated. The default value is enabled.
+     * </p>
+     * 
+     * @param enabled
+     *        Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If
+     *        the key is not enabled, then it is created but not activated. The default value is enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateKeyRequest withEnabled(Boolean enabled) {
+        setEnabled(enabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable the key. If the key is enabled, it is activated for use within the service. If the
+     * key is not enabled, then it is created but not activated. The default value is enabled.
+     * </p>
+     * 
+     * @return Specifies whether to enable the key. If the key is enabled, it is activated for use within the service.
+     *         If the key is not enabled, then it is created but not activated. The default value is enabled.
+     */
+
+    public Boolean isEnabled() {
+        return this.enabled;
+    }
+
+    /**
+     * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -374,8 +376,9 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </note>
      * 
      * @return Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
-     *         key when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the
-     *         <a>TagResource</a> operation.</p>
+     *         key when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     *         href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *         >TagResource</a> operation.</p>
      *         <p>
      *         Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
      *         tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
@@ -400,7 +403,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -421,8 +425,9 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param tags
      *        Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
-     *        key when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the
-     *        <a>TagResource</a> operation.</p>
+     *        key when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *        >TagResource</a> operation.</p>
      *        <p>
      *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
      *        tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
@@ -452,7 +457,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -478,8 +484,9 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param tags
      *        Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
-     *        key when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the
-     *        <a>TagResource</a> operation.</p>
+     *        key when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *        >TagResource</a> operation.</p>
      *        <p>
      *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
      *        tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
@@ -511,7 +518,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a key
-     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a>TagResource</a>
+     * when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html">TagResource</a>
      * operation.
      * </p>
      * <p>
@@ -532,8 +540,9 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * 
      * @param tags
      *        Assigns one or more tags to the Amazon Web Services Payment Cryptography key. Use this parameter to tag a
-     *        key when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the
-     *        <a>TagResource</a> operation.</p>
+     *        key when it is created. To tag an existing Amazon Web Services Payment Cryptography key, use the <a
+     *        href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_TagResource.html"
+     *        >TagResource</a> operation.</p>
      *        <p>
      *        Each tag consists of a tag key and a tag value. Both the tag key and the tag value are required, but the
      *        tag value can be an empty (null) string. You can't have more than one tag on an Amazon Web Services
@@ -569,14 +578,14 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getEnabled() != null)
-            sb.append("Enabled: ").append(getEnabled()).append(",");
-        if (getExportable() != null)
-            sb.append("Exportable: ").append(getExportable()).append(",");
         if (getKeyAttributes() != null)
             sb.append("KeyAttributes: ").append(getKeyAttributes()).append(",");
         if (getKeyCheckValueAlgorithm() != null)
             sb.append("KeyCheckValueAlgorithm: ").append(getKeyCheckValueAlgorithm()).append(",");
+        if (getExportable() != null)
+            sb.append("Exportable: ").append(getExportable()).append(",");
+        if (getEnabled() != null)
+            sb.append("Enabled: ").append(getEnabled()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -593,14 +602,6 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof CreateKeyRequest == false)
             return false;
         CreateKeyRequest other = (CreateKeyRequest) obj;
-        if (other.getEnabled() == null ^ this.getEnabled() == null)
-            return false;
-        if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
-            return false;
-        if (other.getExportable() == null ^ this.getExportable() == null)
-            return false;
-        if (other.getExportable() != null && other.getExportable().equals(this.getExportable()) == false)
-            return false;
         if (other.getKeyAttributes() == null ^ this.getKeyAttributes() == null)
             return false;
         if (other.getKeyAttributes() != null && other.getKeyAttributes().equals(this.getKeyAttributes()) == false)
@@ -608,6 +609,14 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (other.getKeyCheckValueAlgorithm() == null ^ this.getKeyCheckValueAlgorithm() == null)
             return false;
         if (other.getKeyCheckValueAlgorithm() != null && other.getKeyCheckValueAlgorithm().equals(this.getKeyCheckValueAlgorithm()) == false)
+            return false;
+        if (other.getExportable() == null ^ this.getExportable() == null)
+            return false;
+        if (other.getExportable() != null && other.getExportable().equals(this.getExportable()) == false)
+            return false;
+        if (other.getEnabled() == null ^ this.getEnabled() == null)
+            return false;
+        if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -621,10 +630,10 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
-        hashCode = prime * hashCode + ((getExportable() == null) ? 0 : getExportable().hashCode());
         hashCode = prime * hashCode + ((getKeyAttributes() == null) ? 0 : getKeyAttributes().hashCode());
         hashCode = prime * hashCode + ((getKeyCheckValueAlgorithm() == null) ? 0 : getKeyCheckValueAlgorithm().hashCode());
+        hashCode = prime * hashCode + ((getExportable() == null) ? 0 : getExportable().hashCode());
+        hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

@@ -27,10 +27,10 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The attributes for IPEK generation during export.
+     * The key block format type, for example, TR-34 or TR-31, to use during key material export.
      * </p>
      */
-    private ExportAttributes exportAttributes;
+    private ExportKeyMaterial keyMaterial;
     /**
      * <p>
      * The <code>KeyARN</code> of the key under export from Amazon Web Services Payment Cryptography.
@@ -39,48 +39,48 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String exportKeyIdentifier;
     /**
      * <p>
+     * The attributes for IPEK generation during export.
+     * </p>
+     */
+    private ExportAttributes exportAttributes;
+
+    /**
+     * <p>
      * The key block format type, for example, TR-34 or TR-31, to use during key material export.
      * </p>
-     */
-    private ExportKeyMaterial keyMaterial;
-
-    /**
-     * <p>
-     * The attributes for IPEK generation during export.
-     * </p>
      * 
-     * @param exportAttributes
-     *        The attributes for IPEK generation during export.
+     * @param keyMaterial
+     *        The key block format type, for example, TR-34 or TR-31, to use during key material export.
      */
 
-    public void setExportAttributes(ExportAttributes exportAttributes) {
-        this.exportAttributes = exportAttributes;
+    public void setKeyMaterial(ExportKeyMaterial keyMaterial) {
+        this.keyMaterial = keyMaterial;
     }
 
     /**
      * <p>
-     * The attributes for IPEK generation during export.
+     * The key block format type, for example, TR-34 or TR-31, to use during key material export.
      * </p>
      * 
-     * @return The attributes for IPEK generation during export.
+     * @return The key block format type, for example, TR-34 or TR-31, to use during key material export.
      */
 
-    public ExportAttributes getExportAttributes() {
-        return this.exportAttributes;
+    public ExportKeyMaterial getKeyMaterial() {
+        return this.keyMaterial;
     }
 
     /**
      * <p>
-     * The attributes for IPEK generation during export.
+     * The key block format type, for example, TR-34 or TR-31, to use during key material export.
      * </p>
      * 
-     * @param exportAttributes
-     *        The attributes for IPEK generation during export.
+     * @param keyMaterial
+     *        The key block format type, for example, TR-34 or TR-31, to use during key material export.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ExportKeyRequest withExportAttributes(ExportAttributes exportAttributes) {
-        setExportAttributes(exportAttributes);
+    public ExportKeyRequest withKeyMaterial(ExportKeyMaterial keyMaterial) {
+        setKeyMaterial(keyMaterial);
         return this;
     }
 
@@ -126,41 +126,41 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The key block format type, for example, TR-34 or TR-31, to use during key material export.
+     * The attributes for IPEK generation during export.
      * </p>
      * 
-     * @param keyMaterial
-     *        The key block format type, for example, TR-34 or TR-31, to use during key material export.
+     * @param exportAttributes
+     *        The attributes for IPEK generation during export.
      */
 
-    public void setKeyMaterial(ExportKeyMaterial keyMaterial) {
-        this.keyMaterial = keyMaterial;
+    public void setExportAttributes(ExportAttributes exportAttributes) {
+        this.exportAttributes = exportAttributes;
     }
 
     /**
      * <p>
-     * The key block format type, for example, TR-34 or TR-31, to use during key material export.
+     * The attributes for IPEK generation during export.
      * </p>
      * 
-     * @return The key block format type, for example, TR-34 or TR-31, to use during key material export.
+     * @return The attributes for IPEK generation during export.
      */
 
-    public ExportKeyMaterial getKeyMaterial() {
-        return this.keyMaterial;
+    public ExportAttributes getExportAttributes() {
+        return this.exportAttributes;
     }
 
     /**
      * <p>
-     * The key block format type, for example, TR-34 or TR-31, to use during key material export.
+     * The attributes for IPEK generation during export.
      * </p>
      * 
-     * @param keyMaterial
-     *        The key block format type, for example, TR-34 or TR-31, to use during key material export.
+     * @param exportAttributes
+     *        The attributes for IPEK generation during export.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ExportKeyRequest withKeyMaterial(ExportKeyMaterial keyMaterial) {
-        setKeyMaterial(keyMaterial);
+    public ExportKeyRequest withExportAttributes(ExportAttributes exportAttributes) {
+        setExportAttributes(exportAttributes);
         return this;
     }
 
@@ -176,12 +176,12 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getExportAttributes() != null)
-            sb.append("ExportAttributes: ").append(getExportAttributes()).append(",");
+        if (getKeyMaterial() != null)
+            sb.append("KeyMaterial: ").append(getKeyMaterial()).append(",");
         if (getExportKeyIdentifier() != null)
             sb.append("ExportKeyIdentifier: ").append(getExportKeyIdentifier()).append(",");
-        if (getKeyMaterial() != null)
-            sb.append("KeyMaterial: ").append(getKeyMaterial());
+        if (getExportAttributes() != null)
+            sb.append("ExportAttributes: ").append(getExportAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -196,17 +196,17 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof ExportKeyRequest == false)
             return false;
         ExportKeyRequest other = (ExportKeyRequest) obj;
-        if (other.getExportAttributes() == null ^ this.getExportAttributes() == null)
+        if (other.getKeyMaterial() == null ^ this.getKeyMaterial() == null)
             return false;
-        if (other.getExportAttributes() != null && other.getExportAttributes().equals(this.getExportAttributes()) == false)
+        if (other.getKeyMaterial() != null && other.getKeyMaterial().equals(this.getKeyMaterial()) == false)
             return false;
         if (other.getExportKeyIdentifier() == null ^ this.getExportKeyIdentifier() == null)
             return false;
         if (other.getExportKeyIdentifier() != null && other.getExportKeyIdentifier().equals(this.getExportKeyIdentifier()) == false)
             return false;
-        if (other.getKeyMaterial() == null ^ this.getKeyMaterial() == null)
+        if (other.getExportAttributes() == null ^ this.getExportAttributes() == null)
             return false;
-        if (other.getKeyMaterial() != null && other.getKeyMaterial().equals(this.getKeyMaterial()) == false)
+        if (other.getExportAttributes() != null && other.getExportAttributes().equals(this.getExportAttributes()) == false)
             return false;
         return true;
     }
@@ -216,9 +216,9 @@ public class ExportKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getExportAttributes() == null) ? 0 : getExportAttributes().hashCode());
-        hashCode = prime * hashCode + ((getExportKeyIdentifier() == null) ? 0 : getExportKeyIdentifier().hashCode());
         hashCode = prime * hashCode + ((getKeyMaterial() == null) ? 0 : getKeyMaterial().hashCode());
+        hashCode = prime * hashCode + ((getExportKeyIdentifier() == null) ? 0 : getExportKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getExportAttributes() == null) ? 0 : getExportAttributes().hashCode());
         return hashCode;
     }
 

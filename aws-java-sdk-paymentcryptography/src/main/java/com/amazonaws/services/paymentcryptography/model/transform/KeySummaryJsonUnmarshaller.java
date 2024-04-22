@@ -48,17 +48,13 @@ public class KeySummaryJsonUnmarshaller implements Unmarshaller<KeySummary, Json
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Enabled", targetDepth)) {
-                    context.nextToken();
-                    keySummary.setEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("Exportable", targetDepth)) {
-                    context.nextToken();
-                    keySummary.setExportable(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
                 if (context.testExpression("KeyArn", targetDepth)) {
                     context.nextToken();
                     keySummary.setKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("KeyState", targetDepth)) {
+                    context.nextToken();
+                    keySummary.setKeyState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("KeyAttributes", targetDepth)) {
                     context.nextToken();
@@ -68,9 +64,13 @@ public class KeySummaryJsonUnmarshaller implements Unmarshaller<KeySummary, Json
                     context.nextToken();
                     keySummary.setKeyCheckValue(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("KeyState", targetDepth)) {
+                if (context.testExpression("Exportable", targetDepth)) {
                     context.nextToken();
-                    keySummary.setKeyState(context.getUnmarshaller(String.class).unmarshall(context));
+                    keySummary.setExportable(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("Enabled", targetDepth)) {
+                    context.nextToken();
+                    keySummary.setEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

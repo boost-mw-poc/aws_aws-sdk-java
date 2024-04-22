@@ -104,13 +104,13 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
-     * <note>
+     * <important>
      * <p>
      * Do not include sensitive information in the attributes if the namespace is discoverable by public DNS queries.
      * </p>
-     * </note>
+     * </important>
      * <p>
-     * Supported attribute keys include the following:
+     * The following are the supported attribute keys.
      * </p>
      * <dl>
      * <dt>AWS_ALIAS_DNS_NAME</dt>
@@ -154,6 +154,11 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you specify a value for <code>AWS_ALIAS_DNS_NAME</code>, don't specify values for any of the
      * <code>AWS_INSTANCE</code> attributes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>AWS_ALIAS_DNS_NAME</code> is not supported in the GovCloud (US) Regions.
      * </p>
      * </li>
      * </ul>
@@ -640,13 +645,13 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
-     * <note>
+     * <important>
      * <p>
      * Do not include sensitive information in the attributes if the namespace is discoverable by public DNS queries.
      * </p>
-     * </note>
+     * </important>
      * <p>
-     * Supported attribute keys include the following:
+     * The following are the supported attribute keys.
      * </p>
      * <dl>
      * <dt>AWS_ALIAS_DNS_NAME</dt>
@@ -690,6 +695,11 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you specify a value for <code>AWS_ALIAS_DNS_NAME</code>, don't specify values for any of the
      * <code>AWS_INSTANCE</code> attributes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>AWS_ALIAS_DNS_NAME</code> is not supported in the GovCloud (US) Regions.
      * </p>
      * </li>
      * </ul>
@@ -785,14 +795,14 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         </li>
      *         </ul>
-     *         <note>
+     *         <important>
      *         <p>
      *         Do not include sensitive information in the attributes if the namespace is discoverable by public DNS
      *         queries.
      *         </p>
-     *         </note>
+     *         </important>
      *         <p>
-     *         Supported attribute keys include the following:
+     *         The following are the supported attribute keys.
      *         </p>
      *         <dl>
      *         <dt>AWS_ALIAS_DNS_NAME</dt>
@@ -837,6 +847,11 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         If you specify a value for <code>AWS_ALIAS_DNS_NAME</code>, don't specify values for any of the
      *         <code>AWS_INSTANCE</code> attributes.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The <code>AWS_ALIAS_DNS_NAME</code> is not supported in the GovCloud (US) Regions.
      *         </p>
      *         </li>
      *         </ul>
@@ -941,13 +956,13 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
-     * <note>
+     * <important>
      * <p>
      * Do not include sensitive information in the attributes if the namespace is discoverable by public DNS queries.
      * </p>
-     * </note>
+     * </important>
      * <p>
-     * Supported attribute keys include the following:
+     * The following are the supported attribute keys.
      * </p>
      * <dl>
      * <dt>AWS_ALIAS_DNS_NAME</dt>
@@ -991,6 +1006,11 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you specify a value for <code>AWS_ALIAS_DNS_NAME</code>, don't specify values for any of the
      * <code>AWS_INSTANCE</code> attributes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>AWS_ALIAS_DNS_NAME</code> is not supported in the GovCloud (US) Regions.
      * </p>
      * </li>
      * </ul>
@@ -1087,14 +1107,14 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </li>
      *        </ul>
-     *        <note>
+     *        <important>
      *        <p>
      *        Do not include sensitive information in the attributes if the namespace is discoverable by public DNS
      *        queries.
      *        </p>
-     *        </note>
+     *        </important>
      *        <p>
-     *        Supported attribute keys include the following:
+     *        The following are the supported attribute keys.
      *        </p>
      *        <dl>
      *        <dt>AWS_ALIAS_DNS_NAME</dt>
@@ -1139,6 +1159,11 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        If you specify a value for <code>AWS_ALIAS_DNS_NAME</code>, don't specify values for any of the
      *        <code>AWS_INSTANCE</code> attributes.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>AWS_ALIAS_DNS_NAME</code> is not supported in the GovCloud (US) Regions.
      *        </p>
      *        </li>
      *        </ul>
@@ -1242,13 +1267,13 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
-     * <note>
+     * <important>
      * <p>
      * Do not include sensitive information in the attributes if the namespace is discoverable by public DNS queries.
      * </p>
-     * </note>
+     * </important>
      * <p>
-     * Supported attribute keys include the following:
+     * The following are the supported attribute keys.
      * </p>
      * <dl>
      * <dt>AWS_ALIAS_DNS_NAME</dt>
@@ -1292,6 +1317,11 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * If you specify a value for <code>AWS_ALIAS_DNS_NAME</code>, don't specify values for any of the
      * <code>AWS_INSTANCE</code> attributes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>AWS_ALIAS_DNS_NAME</code> is not supported in the GovCloud (US) Regions.
      * </p>
      * </li>
      * </ul>
@@ -1388,14 +1418,14 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </li>
      *        </ul>
-     *        <note>
+     *        <important>
      *        <p>
      *        Do not include sensitive information in the attributes if the namespace is discoverable by public DNS
      *        queries.
      *        </p>
-     *        </note>
+     *        </important>
      *        <p>
-     *        Supported attribute keys include the following:
+     *        The following are the supported attribute keys.
      *        </p>
      *        <dl>
      *        <dt>AWS_ALIAS_DNS_NAME</dt>
@@ -1440,6 +1470,11 @@ public class RegisterInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        If you specify a value for <code>AWS_ALIAS_DNS_NAME</code>, don't specify values for any of the
      *        <code>AWS_INSTANCE</code> attributes.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>AWS_ALIAS_DNS_NAME</code> is not supported in the GovCloud (US) Regions.
      *        </p>
      *        </li>
      *        </ul>

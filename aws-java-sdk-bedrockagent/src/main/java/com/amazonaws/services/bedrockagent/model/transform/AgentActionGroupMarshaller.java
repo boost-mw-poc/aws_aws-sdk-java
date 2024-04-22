@@ -47,6 +47,8 @@ public class AgentActionGroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<StructuredPojo> FUNCTIONSCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("functionSchema").build();
     private static final MarshallingInfo<String> PARENTACTIONSIGNATURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentActionSignature").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -78,6 +80,7 @@ public class AgentActionGroupMarshaller {
             protocolMarshaller.marshall(agentActionGroup.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(agentActionGroup.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(agentActionGroup.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(agentActionGroup.getFunctionSchema(), FUNCTIONSCHEMA_BINDING);
             protocolMarshaller.marshall(agentActionGroup.getParentActionSignature(), PARENTACTIONSIGNATURE_BINDING);
             protocolMarshaller.marshall(agentActionGroup.getUpdatedAt(), UPDATEDAT_BINDING);
         } catch (Exception e) {

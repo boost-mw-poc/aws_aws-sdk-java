@@ -29,6 +29,8 @@ public class ExportTr31KeyBlockMarshaller {
 
     private static final MarshallingInfo<String> WRAPPINGKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WrappingKeyIdentifier").build();
+    private static final MarshallingInfo<StructuredPojo> KEYBLOCKHEADERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyBlockHeaders").build();
 
     private static final ExportTr31KeyBlockMarshaller instance = new ExportTr31KeyBlockMarshaller();
 
@@ -47,6 +49,7 @@ public class ExportTr31KeyBlockMarshaller {
 
         try {
             protocolMarshaller.marshall(exportTr31KeyBlock.getWrappingKeyIdentifier(), WRAPPINGKEYIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(exportTr31KeyBlock.getKeyBlockHeaders(), KEYBLOCKHEADERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

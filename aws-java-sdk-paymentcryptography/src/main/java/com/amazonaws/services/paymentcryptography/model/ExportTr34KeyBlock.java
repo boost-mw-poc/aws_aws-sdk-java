@@ -36,9 +36,17 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
     private String certificateAuthorityPublicKeyIdentifier;
     /**
      * <p>
+     * The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses this
+     * certificate to wrap the key under export.
+     * </p>
+     */
+    private String wrappingKeyCertificate;
+    /**
+     * <p>
      * The export token to initiate key export from Amazon Web Services Payment Cryptography. It also contains the
-     * signing key certificate that will sign the wrapped key during TR-34 key block generation. Call
-     * <a>GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same export
+     * signing key certificate that will sign the wrapped key during TR-34 key block generation. Call <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetParametersForExport.html"
+     * >GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same export
      * token to export multiple keys from the same service account.
      * </p>
      */
@@ -58,11 +66,10 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
     private String randomNonce;
     /**
      * <p>
-     * The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses this
-     * certificate to wrap the key under export.
+     * Optional metadata for export associated with the key material. This data is signed but transmitted in clear text.
      * </p>
      */
-    private String wrappingKeyCertificate;
+    private KeyBlockHeaders keyBlockHeaders;
 
     /**
      * <p>
@@ -109,16 +116,65 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses this
+     * certificate to wrap the key under export.
+     * </p>
+     * 
+     * @param wrappingKeyCertificate
+     *        The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses
+     *        this certificate to wrap the key under export.
+     */
+
+    public void setWrappingKeyCertificate(String wrappingKeyCertificate) {
+        this.wrappingKeyCertificate = wrappingKeyCertificate;
+    }
+
+    /**
+     * <p>
+     * The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses this
+     * certificate to wrap the key under export.
+     * </p>
+     * 
+     * @return The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses
+     *         this certificate to wrap the key under export.
+     */
+
+    public String getWrappingKeyCertificate() {
+        return this.wrappingKeyCertificate;
+    }
+
+    /**
+     * <p>
+     * The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses this
+     * certificate to wrap the key under export.
+     * </p>
+     * 
+     * @param wrappingKeyCertificate
+     *        The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses
+     *        this certificate to wrap the key under export.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportTr34KeyBlock withWrappingKeyCertificate(String wrappingKeyCertificate) {
+        setWrappingKeyCertificate(wrappingKeyCertificate);
+        return this;
+    }
+
+    /**
+     * <p>
      * The export token to initiate key export from Amazon Web Services Payment Cryptography. It also contains the
-     * signing key certificate that will sign the wrapped key during TR-34 key block generation. Call
-     * <a>GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same export
+     * signing key certificate that will sign the wrapped key during TR-34 key block generation. Call <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetParametersForExport.html"
+     * >GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same export
      * token to export multiple keys from the same service account.
      * </p>
      * 
      * @param exportToken
      *        The export token to initiate key export from Amazon Web Services Payment Cryptography. It also contains
-     *        the signing key certificate that will sign the wrapped key during TR-34 key block generation. Call
-     *        <a>GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same
+     *        the signing key certificate that will sign the wrapped key during TR-34 key block generation. Call <a
+     *        href=
+     *        "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetParametersForExport.html"
+     *        >GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same
      *        export token to export multiple keys from the same service account.
      */
 
@@ -129,14 +185,17 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * The export token to initiate key export from Amazon Web Services Payment Cryptography. It also contains the
-     * signing key certificate that will sign the wrapped key during TR-34 key block generation. Call
-     * <a>GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same export
+     * signing key certificate that will sign the wrapped key during TR-34 key block generation. Call <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetParametersForExport.html"
+     * >GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same export
      * token to export multiple keys from the same service account.
      * </p>
      * 
      * @return The export token to initiate key export from Amazon Web Services Payment Cryptography. It also contains
-     *         the signing key certificate that will sign the wrapped key during TR-34 key block generation. Call
-     *         <a>GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same
+     *         the signing key certificate that will sign the wrapped key during TR-34 key block generation. Call <a
+     *         href
+     *         ="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetParametersForExport.html"
+     *         >GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same
      *         export token to export multiple keys from the same service account.
      */
 
@@ -147,15 +206,18 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * The export token to initiate key export from Amazon Web Services Payment Cryptography. It also contains the
-     * signing key certificate that will sign the wrapped key during TR-34 key block generation. Call
-     * <a>GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same export
+     * signing key certificate that will sign the wrapped key during TR-34 key block generation. Call <a
+     * href="https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetParametersForExport.html"
+     * >GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same export
      * token to export multiple keys from the same service account.
      * </p>
      * 
      * @param exportToken
      *        The export token to initiate key export from Amazon Web Services Payment Cryptography. It also contains
-     *        the signing key certificate that will sign the wrapped key during TR-34 key block generation. Call
-     *        <a>GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same
+     *        the signing key certificate that will sign the wrapped key during TR-34 key block generation. Call <a
+     *        href=
+     *        "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetParametersForExport.html"
+     *        >GetParametersForExport</a> to receive an export token. It expires after 7 days. You can use the same
      *        export token to export multiple keys from the same service account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -272,47 +334,44 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses this
-     * certificate to wrap the key under export.
+     * Optional metadata for export associated with the key material. This data is signed but transmitted in clear text.
      * </p>
      * 
-     * @param wrappingKeyCertificate
-     *        The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses
-     *        this certificate to wrap the key under export.
+     * @param keyBlockHeaders
+     *        Optional metadata for export associated with the key material. This data is signed but transmitted in
+     *        clear text.
      */
 
-    public void setWrappingKeyCertificate(String wrappingKeyCertificate) {
-        this.wrappingKeyCertificate = wrappingKeyCertificate;
+    public void setKeyBlockHeaders(KeyBlockHeaders keyBlockHeaders) {
+        this.keyBlockHeaders = keyBlockHeaders;
     }
 
     /**
      * <p>
-     * The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses this
-     * certificate to wrap the key under export.
+     * Optional metadata for export associated with the key material. This data is signed but transmitted in clear text.
      * </p>
      * 
-     * @return The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses
-     *         this certificate to wrap the key under export.
+     * @return Optional metadata for export associated with the key material. This data is signed but transmitted in
+     *         clear text.
      */
 
-    public String getWrappingKeyCertificate() {
-        return this.wrappingKeyCertificate;
+    public KeyBlockHeaders getKeyBlockHeaders() {
+        return this.keyBlockHeaders;
     }
 
     /**
      * <p>
-     * The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses this
-     * certificate to wrap the key under export.
+     * Optional metadata for export associated with the key material. This data is signed but transmitted in clear text.
      * </p>
      * 
-     * @param wrappingKeyCertificate
-     *        The <code>KeyARN</code> of the wrapping key certificate. Amazon Web Services Payment Cryptography uses
-     *        this certificate to wrap the key under export.
+     * @param keyBlockHeaders
+     *        Optional metadata for export associated with the key material. This data is signed but transmitted in
+     *        clear text.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ExportTr34KeyBlock withWrappingKeyCertificate(String wrappingKeyCertificate) {
-        setWrappingKeyCertificate(wrappingKeyCertificate);
+    public ExportTr34KeyBlock withKeyBlockHeaders(KeyBlockHeaders keyBlockHeaders) {
+        setKeyBlockHeaders(keyBlockHeaders);
         return this;
     }
 
@@ -330,14 +389,16 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
         sb.append("{");
         if (getCertificateAuthorityPublicKeyIdentifier() != null)
             sb.append("CertificateAuthorityPublicKeyIdentifier: ").append(getCertificateAuthorityPublicKeyIdentifier()).append(",");
+        if (getWrappingKeyCertificate() != null)
+            sb.append("WrappingKeyCertificate: ").append("***Sensitive Data Redacted***").append(",");
         if (getExportToken() != null)
             sb.append("ExportToken: ").append(getExportToken()).append(",");
         if (getKeyBlockFormat() != null)
             sb.append("KeyBlockFormat: ").append(getKeyBlockFormat()).append(",");
         if (getRandomNonce() != null)
             sb.append("RandomNonce: ").append(getRandomNonce()).append(",");
-        if (getWrappingKeyCertificate() != null)
-            sb.append("WrappingKeyCertificate: ").append("***Sensitive Data Redacted***");
+        if (getKeyBlockHeaders() != null)
+            sb.append("KeyBlockHeaders: ").append(getKeyBlockHeaders());
         sb.append("}");
         return sb.toString();
     }
@@ -357,6 +418,10 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
         if (other.getCertificateAuthorityPublicKeyIdentifier() != null
                 && other.getCertificateAuthorityPublicKeyIdentifier().equals(this.getCertificateAuthorityPublicKeyIdentifier()) == false)
             return false;
+        if (other.getWrappingKeyCertificate() == null ^ this.getWrappingKeyCertificate() == null)
+            return false;
+        if (other.getWrappingKeyCertificate() != null && other.getWrappingKeyCertificate().equals(this.getWrappingKeyCertificate()) == false)
+            return false;
         if (other.getExportToken() == null ^ this.getExportToken() == null)
             return false;
         if (other.getExportToken() != null && other.getExportToken().equals(this.getExportToken()) == false)
@@ -369,9 +434,9 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getRandomNonce() != null && other.getRandomNonce().equals(this.getRandomNonce()) == false)
             return false;
-        if (other.getWrappingKeyCertificate() == null ^ this.getWrappingKeyCertificate() == null)
+        if (other.getKeyBlockHeaders() == null ^ this.getKeyBlockHeaders() == null)
             return false;
-        if (other.getWrappingKeyCertificate() != null && other.getWrappingKeyCertificate().equals(this.getWrappingKeyCertificate()) == false)
+        if (other.getKeyBlockHeaders() != null && other.getKeyBlockHeaders().equals(this.getKeyBlockHeaders()) == false)
             return false;
         return true;
     }
@@ -382,10 +447,11 @@ public class ExportTr34KeyBlock implements Serializable, Cloneable, StructuredPo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCertificateAuthorityPublicKeyIdentifier() == null) ? 0 : getCertificateAuthorityPublicKeyIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getWrappingKeyCertificate() == null) ? 0 : getWrappingKeyCertificate().hashCode());
         hashCode = prime * hashCode + ((getExportToken() == null) ? 0 : getExportToken().hashCode());
         hashCode = prime * hashCode + ((getKeyBlockFormat() == null) ? 0 : getKeyBlockFormat().hashCode());
         hashCode = prime * hashCode + ((getRandomNonce() == null) ? 0 : getRandomNonce().hashCode());
-        hashCode = prime * hashCode + ((getWrappingKeyCertificate() == null) ? 0 : getWrappingKeyCertificate().hashCode());
+        hashCode = prime * hashCode + ((getKeyBlockHeaders() == null) ? 0 : getKeyBlockHeaders().hashCode());
         return hashCode;
     }
 

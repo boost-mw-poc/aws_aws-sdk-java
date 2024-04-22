@@ -48,41 +48,41 @@ public class KeyModesOfUseJsonUnmarshaller implements Unmarshaller<KeyModesOfUse
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Decrypt", targetDepth)) {
-                    context.nextToken();
-                    keyModesOfUse.setDecrypt(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("DeriveKey", targetDepth)) {
-                    context.nextToken();
-                    keyModesOfUse.setDeriveKey(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
                 if (context.testExpression("Encrypt", targetDepth)) {
                     context.nextToken();
                     keyModesOfUse.setEncrypt(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
-                if (context.testExpression("Generate", targetDepth)) {
+                if (context.testExpression("Decrypt", targetDepth)) {
                     context.nextToken();
-                    keyModesOfUse.setGenerate(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    keyModesOfUse.setDecrypt(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
-                if (context.testExpression("NoRestrictions", targetDepth)) {
+                if (context.testExpression("Wrap", targetDepth)) {
                     context.nextToken();
-                    keyModesOfUse.setNoRestrictions(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("Sign", targetDepth)) {
-                    context.nextToken();
-                    keyModesOfUse.setSign(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    keyModesOfUse.setWrap(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("Unwrap", targetDepth)) {
                     context.nextToken();
                     keyModesOfUse.setUnwrap(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("Generate", targetDepth)) {
+                    context.nextToken();
+                    keyModesOfUse.setGenerate(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("Sign", targetDepth)) {
+                    context.nextToken();
+                    keyModesOfUse.setSign(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("Verify", targetDepth)) {
                     context.nextToken();
                     keyModesOfUse.setVerify(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
-                if (context.testExpression("Wrap", targetDepth)) {
+                if (context.testExpression("DeriveKey", targetDepth)) {
                     context.nextToken();
-                    keyModesOfUse.setWrap(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    keyModesOfUse.setDeriveKey(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("NoRestrictions", targetDepth)) {
+                    context.nextToken();
+                    keyModesOfUse.setNoRestrictions(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

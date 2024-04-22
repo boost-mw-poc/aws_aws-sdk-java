@@ -30,39 +30,6 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time when the key was created.
-     * </p>
-     */
-    private java.util.Date createTimestamp;
-    /**
-     * <p>
-     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
-     * only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for deletion.
-     * </p>
-     */
-    private java.util.Date deletePendingTimestamp;
-    /**
-     * <p>
-     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
-     * only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web Services Payment
-     * Cryptography key is deleted.
-     * </p>
-     */
-    private java.util.Date deleteTimestamp;
-    /**
-     * <p>
-     * Specifies whether the key is enabled.
-     * </p>
-     */
-    private Boolean enabled;
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     */
-    private Boolean exportable;
-    /**
-     * <p>
      * The Amazon Resource Name (ARN) of the key.
      * </p>
      */
@@ -96,6 +63,24 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
     private String keyCheckValueAlgorithm;
     /**
      * <p>
+     * Specifies whether the key is enabled.
+     * </p>
+     */
+    private Boolean enabled;
+    /**
+     * <p>
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
+     * </p>
+     */
+    private Boolean exportable;
+    /**
+     * <p>
+     * The state of key that is being created or deleted.
+     * </p>
+     */
+    private String keyState;
+    /**
+     * <p>
      * The source of the key material. For keys created within Amazon Web Services Payment Cryptography, the value is
      * <code>AWS_PAYMENT_CRYPTOGRAPHY</code>. For keys imported into Amazon Web Services Payment Cryptography, the value
      * is <code>EXTERNAL</code>.
@@ -104,10 +89,10 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
     private String keyOrigin;
     /**
      * <p>
-     * The state of key that is being created or deleted.
+     * The date and time when the key was created.
      * </p>
      */
-    private String keyState;
+    private java.util.Date createTimestamp;
     /**
      * <p>
      * The date and time after which Amazon Web Services Payment Cryptography will start using the key material for
@@ -122,251 +107,21 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date usageStopTimestamp;
-
-    /**
-     * <p>
-     * The date and time when the key was created.
-     * </p>
-     * 
-     * @param createTimestamp
-     *        The date and time when the key was created.
-     */
-
-    public void setCreateTimestamp(java.util.Date createTimestamp) {
-        this.createTimestamp = createTimestamp;
-    }
-
-    /**
-     * <p>
-     * The date and time when the key was created.
-     * </p>
-     * 
-     * @return The date and time when the key was created.
-     */
-
-    public java.util.Date getCreateTimestamp() {
-        return this.createTimestamp;
-    }
-
-    /**
-     * <p>
-     * The date and time when the key was created.
-     * </p>
-     * 
-     * @param createTimestamp
-     *        The date and time when the key was created.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Key withCreateTimestamp(java.util.Date createTimestamp) {
-        setCreateTimestamp(createTimestamp);
-        return this;
-    }
-
     /**
      * <p>
      * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
      * only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for deletion.
      * </p>
-     * 
-     * @param deletePendingTimestamp
-     *        The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
-     *        present only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for
-     *        deletion.
      */
-
-    public void setDeletePendingTimestamp(java.util.Date deletePendingTimestamp) {
-        this.deletePendingTimestamp = deletePendingTimestamp;
-    }
-
-    /**
-     * <p>
-     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
-     * only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for deletion.
-     * </p>
-     * 
-     * @return The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
-     *         present only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for
-     *         deletion.
-     */
-
-    public java.util.Date getDeletePendingTimestamp() {
-        return this.deletePendingTimestamp;
-    }
-
-    /**
-     * <p>
-     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
-     * only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for deletion.
-     * </p>
-     * 
-     * @param deletePendingTimestamp
-     *        The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
-     *        present only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for
-     *        deletion.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Key withDeletePendingTimestamp(java.util.Date deletePendingTimestamp) {
-        setDeletePendingTimestamp(deletePendingTimestamp);
-        return this;
-    }
-
+    private java.util.Date deletePendingTimestamp;
     /**
      * <p>
      * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
      * only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web Services Payment
      * Cryptography key is deleted.
      * </p>
-     * 
-     * @param deleteTimestamp
-     *        The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
-     *        present only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web
-     *        Services Payment Cryptography key is deleted.
      */
-
-    public void setDeleteTimestamp(java.util.Date deleteTimestamp) {
-        this.deleteTimestamp = deleteTimestamp;
-    }
-
-    /**
-     * <p>
-     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
-     * only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web Services Payment
-     * Cryptography key is deleted.
-     * </p>
-     * 
-     * @return The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
-     *         present only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web
-     *         Services Payment Cryptography key is deleted.
-     */
-
-    public java.util.Date getDeleteTimestamp() {
-        return this.deleteTimestamp;
-    }
-
-    /**
-     * <p>
-     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
-     * only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web Services Payment
-     * Cryptography key is deleted.
-     * </p>
-     * 
-     * @param deleteTimestamp
-     *        The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
-     *        present only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web
-     *        Services Payment Cryptography key is deleted.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Key withDeleteTimestamp(java.util.Date deleteTimestamp) {
-        setDeleteTimestamp(deleteTimestamp);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is enabled.
-     * </p>
-     * 
-     * @param enabled
-     *        Specifies whether the key is enabled.
-     */
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is enabled.
-     * </p>
-     * 
-     * @return Specifies whether the key is enabled.
-     */
-
-    public Boolean getEnabled() {
-        return this.enabled;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is enabled.
-     * </p>
-     * 
-     * @param enabled
-     *        Specifies whether the key is enabled.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Key withEnabled(Boolean enabled) {
-        setEnabled(enabled);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is enabled.
-     * </p>
-     * 
-     * @return Specifies whether the key is enabled.
-     */
-
-    public Boolean isEnabled() {
-        return this.enabled;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     * 
-     * @param exportable
-     *        Specifies whether the key is exportable. This data is immutable after the key is created.
-     */
-
-    public void setExportable(Boolean exportable) {
-        this.exportable = exportable;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     * 
-     * @return Specifies whether the key is exportable. This data is immutable after the key is created.
-     */
-
-    public Boolean getExportable() {
-        return this.exportable;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     * 
-     * @param exportable
-     *        Specifies whether the key is exportable. This data is immutable after the key is created.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Key withExportable(Boolean exportable) {
-        setExportable(exportable);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies whether the key is exportable. This data is immutable after the key is created.
-     * </p>
-     * 
-     * @return Specifies whether the key is exportable. This data is immutable after the key is created.
-     */
-
-    public Boolean isExportable() {
-        return this.exportable;
-    }
+    private java.util.Date deleteTimestamp;
 
     /**
      * <p>
@@ -613,6 +368,169 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Specifies whether the key is enabled.
+     * </p>
+     * 
+     * @param enabled
+     *        Specifies whether the key is enabled.
+     */
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is enabled.
+     * </p>
+     * 
+     * @return Specifies whether the key is enabled.
+     */
+
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is enabled.
+     * </p>
+     * 
+     * @param enabled
+     *        Specifies whether the key is enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Key withEnabled(Boolean enabled) {
+        setEnabled(enabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is enabled.
+     * </p>
+     * 
+     * @return Specifies whether the key is enabled.
+     */
+
+    public Boolean isEnabled() {
+        return this.enabled;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
+     * </p>
+     * 
+     * @param exportable
+     *        Specifies whether the key is exportable. This data is immutable after the key is created.
+     */
+
+    public void setExportable(Boolean exportable) {
+        this.exportable = exportable;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
+     * </p>
+     * 
+     * @return Specifies whether the key is exportable. This data is immutable after the key is created.
+     */
+
+    public Boolean getExportable() {
+        return this.exportable;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
+     * </p>
+     * 
+     * @param exportable
+     *        Specifies whether the key is exportable. This data is immutable after the key is created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Key withExportable(Boolean exportable) {
+        setExportable(exportable);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the key is exportable. This data is immutable after the key is created.
+     * </p>
+     * 
+     * @return Specifies whether the key is exportable. This data is immutable after the key is created.
+     */
+
+    public Boolean isExportable() {
+        return this.exportable;
+    }
+
+    /**
+     * <p>
+     * The state of key that is being created or deleted.
+     * </p>
+     * 
+     * @param keyState
+     *        The state of key that is being created or deleted.
+     * @see KeyState
+     */
+
+    public void setKeyState(String keyState) {
+        this.keyState = keyState;
+    }
+
+    /**
+     * <p>
+     * The state of key that is being created or deleted.
+     * </p>
+     * 
+     * @return The state of key that is being created or deleted.
+     * @see KeyState
+     */
+
+    public String getKeyState() {
+        return this.keyState;
+    }
+
+    /**
+     * <p>
+     * The state of key that is being created or deleted.
+     * </p>
+     * 
+     * @param keyState
+     *        The state of key that is being created or deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyState
+     */
+
+    public Key withKeyState(String keyState) {
+        setKeyState(keyState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state of key that is being created or deleted.
+     * </p>
+     * 
+     * @param keyState
+     *        The state of key that is being created or deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyState
+     */
+
+    public Key withKeyState(KeyState keyState) {
+        this.keyState = keyState.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The source of the key material. For keys created within Amazon Web Services Payment Cryptography, the value is
      * <code>AWS_PAYMENT_CRYPTOGRAPHY</code>. For keys imported into Amazon Web Services Payment Cryptography, the value
      * is <code>EXTERNAL</code>.
@@ -688,60 +606,41 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The state of key that is being created or deleted.
+     * The date and time when the key was created.
      * </p>
      * 
-     * @param keyState
-     *        The state of key that is being created or deleted.
-     * @see KeyState
+     * @param createTimestamp
+     *        The date and time when the key was created.
      */
 
-    public void setKeyState(String keyState) {
-        this.keyState = keyState;
+    public void setCreateTimestamp(java.util.Date createTimestamp) {
+        this.createTimestamp = createTimestamp;
     }
 
     /**
      * <p>
-     * The state of key that is being created or deleted.
+     * The date and time when the key was created.
      * </p>
      * 
-     * @return The state of key that is being created or deleted.
-     * @see KeyState
+     * @return The date and time when the key was created.
      */
 
-    public String getKeyState() {
-        return this.keyState;
+    public java.util.Date getCreateTimestamp() {
+        return this.createTimestamp;
     }
 
     /**
      * <p>
-     * The state of key that is being created or deleted.
+     * The date and time when the key was created.
      * </p>
      * 
-     * @param keyState
-     *        The state of key that is being created or deleted.
+     * @param createTimestamp
+     *        The date and time when the key was created.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyState
      */
 
-    public Key withKeyState(String keyState) {
-        setKeyState(keyState);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The state of key that is being created or deleted.
-     * </p>
-     * 
-     * @param keyState
-     *        The state of key that is being created or deleted.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyState
-     */
-
-    public Key withKeyState(KeyState keyState) {
-        this.keyState = keyState.toString();
+    public Key withCreateTimestamp(java.util.Date createTimestamp) {
+        setCreateTimestamp(createTimestamp);
         return this;
     }
 
@@ -838,6 +737,107 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
+     * only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for deletion.
+     * </p>
+     * 
+     * @param deletePendingTimestamp
+     *        The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
+     *        present only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for
+     *        deletion.
+     */
+
+    public void setDeletePendingTimestamp(java.util.Date deletePendingTimestamp) {
+        this.deletePendingTimestamp = deletePendingTimestamp;
+    }
+
+    /**
+     * <p>
+     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
+     * only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for deletion.
+     * </p>
+     * 
+     * @return The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
+     *         present only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for
+     *         deletion.
+     */
+
+    public java.util.Date getDeletePendingTimestamp() {
+        return this.deletePendingTimestamp;
+    }
+
+    /**
+     * <p>
+     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
+     * only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for deletion.
+     * </p>
+     * 
+     * @param deletePendingTimestamp
+     *        The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
+     *        present only when <code>KeyState</code> is <code>DELETE_PENDING</code> and the key is scheduled for
+     *        deletion.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Key withDeletePendingTimestamp(java.util.Date deletePendingTimestamp) {
+        setDeletePendingTimestamp(deletePendingTimestamp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
+     * only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web Services Payment
+     * Cryptography key is deleted.
+     * </p>
+     * 
+     * @param deleteTimestamp
+     *        The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
+     *        present only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web
+     *        Services Payment Cryptography key is deleted.
+     */
+
+    public void setDeleteTimestamp(java.util.Date deleteTimestamp) {
+        this.deleteTimestamp = deleteTimestamp;
+    }
+
+    /**
+     * <p>
+     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
+     * only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web Services Payment
+     * Cryptography key is deleted.
+     * </p>
+     * 
+     * @return The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
+     *         present only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web
+     *         Services Payment Cryptography key is deleted.
+     */
+
+    public java.util.Date getDeleteTimestamp() {
+        return this.deleteTimestamp;
+    }
+
+    /**
+     * <p>
+     * The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is present
+     * only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web Services Payment
+     * Cryptography key is deleted.
+     * </p>
+     * 
+     * @param deleteTimestamp
+     *        The date and time after which Amazon Web Services Payment Cryptography will delete the key. This value is
+     *        present only when when the <code>KeyState</code> is <code>DELETE_COMPLETE</code> and the Amazon Web
+     *        Services Payment Cryptography key is deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Key withDeleteTimestamp(java.util.Date deleteTimestamp) {
+        setDeleteTimestamp(deleteTimestamp);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -849,16 +849,6 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCreateTimestamp() != null)
-            sb.append("CreateTimestamp: ").append(getCreateTimestamp()).append(",");
-        if (getDeletePendingTimestamp() != null)
-            sb.append("DeletePendingTimestamp: ").append(getDeletePendingTimestamp()).append(",");
-        if (getDeleteTimestamp() != null)
-            sb.append("DeleteTimestamp: ").append(getDeleteTimestamp()).append(",");
-        if (getEnabled() != null)
-            sb.append("Enabled: ").append(getEnabled()).append(",");
-        if (getExportable() != null)
-            sb.append("Exportable: ").append(getExportable()).append(",");
         if (getKeyArn() != null)
             sb.append("KeyArn: ").append(getKeyArn()).append(",");
         if (getKeyAttributes() != null)
@@ -867,14 +857,24 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
             sb.append("KeyCheckValue: ").append(getKeyCheckValue()).append(",");
         if (getKeyCheckValueAlgorithm() != null)
             sb.append("KeyCheckValueAlgorithm: ").append(getKeyCheckValueAlgorithm()).append(",");
-        if (getKeyOrigin() != null)
-            sb.append("KeyOrigin: ").append(getKeyOrigin()).append(",");
+        if (getEnabled() != null)
+            sb.append("Enabled: ").append(getEnabled()).append(",");
+        if (getExportable() != null)
+            sb.append("Exportable: ").append(getExportable()).append(",");
         if (getKeyState() != null)
             sb.append("KeyState: ").append(getKeyState()).append(",");
+        if (getKeyOrigin() != null)
+            sb.append("KeyOrigin: ").append(getKeyOrigin()).append(",");
+        if (getCreateTimestamp() != null)
+            sb.append("CreateTimestamp: ").append(getCreateTimestamp()).append(",");
         if (getUsageStartTimestamp() != null)
             sb.append("UsageStartTimestamp: ").append(getUsageStartTimestamp()).append(",");
         if (getUsageStopTimestamp() != null)
-            sb.append("UsageStopTimestamp: ").append(getUsageStopTimestamp());
+            sb.append("UsageStopTimestamp: ").append(getUsageStopTimestamp()).append(",");
+        if (getDeletePendingTimestamp() != null)
+            sb.append("DeletePendingTimestamp: ").append(getDeletePendingTimestamp()).append(",");
+        if (getDeleteTimestamp() != null)
+            sb.append("DeleteTimestamp: ").append(getDeleteTimestamp());
         sb.append("}");
         return sb.toString();
     }
@@ -889,26 +889,6 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Key == false)
             return false;
         Key other = (Key) obj;
-        if (other.getCreateTimestamp() == null ^ this.getCreateTimestamp() == null)
-            return false;
-        if (other.getCreateTimestamp() != null && other.getCreateTimestamp().equals(this.getCreateTimestamp()) == false)
-            return false;
-        if (other.getDeletePendingTimestamp() == null ^ this.getDeletePendingTimestamp() == null)
-            return false;
-        if (other.getDeletePendingTimestamp() != null && other.getDeletePendingTimestamp().equals(this.getDeletePendingTimestamp()) == false)
-            return false;
-        if (other.getDeleteTimestamp() == null ^ this.getDeleteTimestamp() == null)
-            return false;
-        if (other.getDeleteTimestamp() != null && other.getDeleteTimestamp().equals(this.getDeleteTimestamp()) == false)
-            return false;
-        if (other.getEnabled() == null ^ this.getEnabled() == null)
-            return false;
-        if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
-            return false;
-        if (other.getExportable() == null ^ this.getExportable() == null)
-            return false;
-        if (other.getExportable() != null && other.getExportable().equals(this.getExportable()) == false)
-            return false;
         if (other.getKeyArn() == null ^ this.getKeyArn() == null)
             return false;
         if (other.getKeyArn() != null && other.getKeyArn().equals(this.getKeyArn()) == false)
@@ -925,13 +905,25 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getKeyCheckValueAlgorithm() != null && other.getKeyCheckValueAlgorithm().equals(this.getKeyCheckValueAlgorithm()) == false)
             return false;
-        if (other.getKeyOrigin() == null ^ this.getKeyOrigin() == null)
+        if (other.getEnabled() == null ^ this.getEnabled() == null)
             return false;
-        if (other.getKeyOrigin() != null && other.getKeyOrigin().equals(this.getKeyOrigin()) == false)
+        if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
+            return false;
+        if (other.getExportable() == null ^ this.getExportable() == null)
+            return false;
+        if (other.getExportable() != null && other.getExportable().equals(this.getExportable()) == false)
             return false;
         if (other.getKeyState() == null ^ this.getKeyState() == null)
             return false;
         if (other.getKeyState() != null && other.getKeyState().equals(this.getKeyState()) == false)
+            return false;
+        if (other.getKeyOrigin() == null ^ this.getKeyOrigin() == null)
+            return false;
+        if (other.getKeyOrigin() != null && other.getKeyOrigin().equals(this.getKeyOrigin()) == false)
+            return false;
+        if (other.getCreateTimestamp() == null ^ this.getCreateTimestamp() == null)
+            return false;
+        if (other.getCreateTimestamp() != null && other.getCreateTimestamp().equals(this.getCreateTimestamp()) == false)
             return false;
         if (other.getUsageStartTimestamp() == null ^ this.getUsageStartTimestamp() == null)
             return false;
@@ -941,6 +933,14 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getUsageStopTimestamp() != null && other.getUsageStopTimestamp().equals(this.getUsageStopTimestamp()) == false)
             return false;
+        if (other.getDeletePendingTimestamp() == null ^ this.getDeletePendingTimestamp() == null)
+            return false;
+        if (other.getDeletePendingTimestamp() != null && other.getDeletePendingTimestamp().equals(this.getDeletePendingTimestamp()) == false)
+            return false;
+        if (other.getDeleteTimestamp() == null ^ this.getDeleteTimestamp() == null)
+            return false;
+        if (other.getDeleteTimestamp() != null && other.getDeleteTimestamp().equals(this.getDeleteTimestamp()) == false)
+            return false;
         return true;
     }
 
@@ -949,19 +949,19 @@ public class Key implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCreateTimestamp() == null) ? 0 : getCreateTimestamp().hashCode());
-        hashCode = prime * hashCode + ((getDeletePendingTimestamp() == null) ? 0 : getDeletePendingTimestamp().hashCode());
-        hashCode = prime * hashCode + ((getDeleteTimestamp() == null) ? 0 : getDeleteTimestamp().hashCode());
-        hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
-        hashCode = prime * hashCode + ((getExportable() == null) ? 0 : getExportable().hashCode());
         hashCode = prime * hashCode + ((getKeyArn() == null) ? 0 : getKeyArn().hashCode());
         hashCode = prime * hashCode + ((getKeyAttributes() == null) ? 0 : getKeyAttributes().hashCode());
         hashCode = prime * hashCode + ((getKeyCheckValue() == null) ? 0 : getKeyCheckValue().hashCode());
         hashCode = prime * hashCode + ((getKeyCheckValueAlgorithm() == null) ? 0 : getKeyCheckValueAlgorithm().hashCode());
-        hashCode = prime * hashCode + ((getKeyOrigin() == null) ? 0 : getKeyOrigin().hashCode());
+        hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
+        hashCode = prime * hashCode + ((getExportable() == null) ? 0 : getExportable().hashCode());
         hashCode = prime * hashCode + ((getKeyState() == null) ? 0 : getKeyState().hashCode());
+        hashCode = prime * hashCode + ((getKeyOrigin() == null) ? 0 : getKeyOrigin().hashCode());
+        hashCode = prime * hashCode + ((getCreateTimestamp() == null) ? 0 : getCreateTimestamp().hashCode());
         hashCode = prime * hashCode + ((getUsageStartTimestamp() == null) ? 0 : getUsageStartTimestamp().hashCode());
         hashCode = prime * hashCode + ((getUsageStopTimestamp() == null) ? 0 : getUsageStopTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getDeletePendingTimestamp() == null) ? 0 : getDeletePendingTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getDeleteTimestamp() == null) ? 0 : getDeleteTimestamp().hashCode());
         return hashCode;
     }
 

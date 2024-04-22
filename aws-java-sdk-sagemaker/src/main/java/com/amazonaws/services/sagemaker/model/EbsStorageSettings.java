@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A collection of EBS storage settings that applies to private spaces.
+ * A collection of EBS storage settings that apply to both private and shared spaces.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/EbsStorageSettings" target="_top">AWS API
@@ -30,18 +30,18 @@ public class EbsStorageSettings implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The size of an EBS storage volume for a private space.
+     * The size of an EBS storage volume for a space.
      * </p>
      */
     private Integer ebsVolumeSizeInGb;
 
     /**
      * <p>
-     * The size of an EBS storage volume for a private space.
+     * The size of an EBS storage volume for a space.
      * </p>
      * 
      * @param ebsVolumeSizeInGb
-     *        The size of an EBS storage volume for a private space.
+     *        The size of an EBS storage volume for a space.
      */
 
     public void setEbsVolumeSizeInGb(Integer ebsVolumeSizeInGb) {
@@ -50,10 +50,10 @@ public class EbsStorageSettings implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The size of an EBS storage volume for a private space.
+     * The size of an EBS storage volume for a space.
      * </p>
      * 
-     * @return The size of an EBS storage volume for a private space.
+     * @return The size of an EBS storage volume for a space.
      */
 
     public Integer getEbsVolumeSizeInGb() {
@@ -62,11 +62,11 @@ public class EbsStorageSettings implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The size of an EBS storage volume for a private space.
+     * The size of an EBS storage volume for a space.
      * </p>
      * 
      * @param ebsVolumeSizeInGb
-     *        The size of an EBS storage volume for a private space.
+     *        The size of an EBS storage volume for a space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

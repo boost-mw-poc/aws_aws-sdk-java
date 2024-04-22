@@ -48,10 +48,6 @@ public class ExportKeyMaterialJsonUnmarshaller implements Unmarshaller<ExportKey
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("KeyCryptogram", targetDepth)) {
-                    context.nextToken();
-                    exportKeyMaterial.setKeyCryptogram(ExportKeyCryptogramJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("Tr31KeyBlock", targetDepth)) {
                     context.nextToken();
                     exportKeyMaterial.setTr31KeyBlock(ExportTr31KeyBlockJsonUnmarshaller.getInstance().unmarshall(context));
@@ -59,6 +55,10 @@ public class ExportKeyMaterialJsonUnmarshaller implements Unmarshaller<ExportKey
                 if (context.testExpression("Tr34KeyBlock", targetDepth)) {
                     context.nextToken();
                     exportKeyMaterial.setTr34KeyBlock(ExportTr34KeyBlockJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("KeyCryptogram", targetDepth)) {
+                    context.nextToken();
+                    exportKeyMaterial.setKeyCryptogram(ExportKeyCryptogramJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -52,6 +52,10 @@ public class ExportTr31KeyBlockJsonUnmarshaller implements Unmarshaller<ExportTr
                     context.nextToken();
                     exportTr31KeyBlock.setWrappingKeyIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("KeyBlockHeaders", targetDepth)) {
+                    context.nextToken();
+                    exportTr31KeyBlock.setKeyBlockHeaders(KeyBlockHeadersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

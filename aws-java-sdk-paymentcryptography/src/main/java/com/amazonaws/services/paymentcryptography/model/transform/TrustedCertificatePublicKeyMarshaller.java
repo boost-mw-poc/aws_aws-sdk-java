@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class TrustedCertificatePublicKeyMarshaller {
 
-    private static final MarshallingInfo<String> CERTIFICATEAUTHORITYPUBLICKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CertificateAuthorityPublicKeyIdentifier").build();
     private static final MarshallingInfo<StructuredPojo> KEYATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyAttributes").build();
     private static final MarshallingInfo<String> PUBLICKEYCERTIFICATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PublicKeyCertificate").build();
+    private static final MarshallingInfo<String> CERTIFICATEAUTHORITYPUBLICKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CertificateAuthorityPublicKeyIdentifier").build();
 
     private static final TrustedCertificatePublicKeyMarshaller instance = new TrustedCertificatePublicKeyMarshaller();
 
@@ -50,10 +50,10 @@ public class TrustedCertificatePublicKeyMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(trustedCertificatePublicKey.getCertificateAuthorityPublicKeyIdentifier(),
-                    CERTIFICATEAUTHORITYPUBLICKEYIDENTIFIER_BINDING);
             protocolMarshaller.marshall(trustedCertificatePublicKey.getKeyAttributes(), KEYATTRIBUTES_BINDING);
             protocolMarshaller.marshall(trustedCertificatePublicKey.getPublicKeyCertificate(), PUBLICKEYCERTIFICATE_BINDING);
+            protocolMarshaller.marshall(trustedCertificatePublicKey.getCertificateAuthorityPublicKeyIdentifier(),
+                    CERTIFICATEAUTHORITYPUBLICKEYIDENTIFIER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

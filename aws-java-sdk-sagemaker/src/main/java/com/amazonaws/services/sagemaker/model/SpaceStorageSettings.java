@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The storage settings for a private space.
+ * The storage settings for a space.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/SpaceStorageSettings" target="_top">AWS API
@@ -30,18 +30,18 @@ public class SpaceStorageSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A collection of EBS storage settings for a private space.
+     * A collection of EBS storage settings for a space.
      * </p>
      */
     private EbsStorageSettings ebsStorageSettings;
 
     /**
      * <p>
-     * A collection of EBS storage settings for a private space.
+     * A collection of EBS storage settings for a space.
      * </p>
      * 
      * @param ebsStorageSettings
-     *        A collection of EBS storage settings for a private space.
+     *        A collection of EBS storage settings for a space.
      */
 
     public void setEbsStorageSettings(EbsStorageSettings ebsStorageSettings) {
@@ -50,10 +50,10 @@ public class SpaceStorageSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A collection of EBS storage settings for a private space.
+     * A collection of EBS storage settings for a space.
      * </p>
      * 
-     * @return A collection of EBS storage settings for a private space.
+     * @return A collection of EBS storage settings for a space.
      */
 
     public EbsStorageSettings getEbsStorageSettings() {
@@ -62,11 +62,11 @@ public class SpaceStorageSettings implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A collection of EBS storage settings for a private space.
+     * A collection of EBS storage settings for a space.
      * </p>
      * 
      * @param ebsStorageSettings
-     *        A collection of EBS storage settings for a private space.
+     *        A collection of EBS storage settings for a space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

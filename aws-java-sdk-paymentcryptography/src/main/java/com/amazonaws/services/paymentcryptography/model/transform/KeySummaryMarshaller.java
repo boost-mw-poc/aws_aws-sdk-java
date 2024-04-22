@@ -27,18 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class KeySummaryMarshaller {
 
-    private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Enabled").build();
-    private static final MarshallingInfo<Boolean> EXPORTABLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Exportable").build();
     private static final MarshallingInfo<String> KEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("KeyArn").build();
+    private static final MarshallingInfo<String> KEYSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("KeyState").build();
     private static final MarshallingInfo<StructuredPojo> KEYATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyAttributes").build();
     private static final MarshallingInfo<String> KEYCHECKVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyCheckValue").build();
-    private static final MarshallingInfo<String> KEYSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("KeyState").build();
+    private static final MarshallingInfo<Boolean> EXPORTABLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Exportable").build();
+    private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Enabled").build();
 
     private static final KeySummaryMarshaller instance = new KeySummaryMarshaller();
 
@@ -56,12 +56,12 @@ public class KeySummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(keySummary.getEnabled(), ENABLED_BINDING);
-            protocolMarshaller.marshall(keySummary.getExportable(), EXPORTABLE_BINDING);
             protocolMarshaller.marshall(keySummary.getKeyArn(), KEYARN_BINDING);
+            protocolMarshaller.marshall(keySummary.getKeyState(), KEYSTATE_BINDING);
             protocolMarshaller.marshall(keySummary.getKeyAttributes(), KEYATTRIBUTES_BINDING);
             protocolMarshaller.marshall(keySummary.getKeyCheckValue(), KEYCHECKVALUE_BINDING);
-            protocolMarshaller.marshall(keySummary.getKeyState(), KEYSTATE_BINDING);
+            protocolMarshaller.marshall(keySummary.getExportable(), EXPORTABLE_BINDING);
+            protocolMarshaller.marshall(keySummary.getEnabled(), ENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

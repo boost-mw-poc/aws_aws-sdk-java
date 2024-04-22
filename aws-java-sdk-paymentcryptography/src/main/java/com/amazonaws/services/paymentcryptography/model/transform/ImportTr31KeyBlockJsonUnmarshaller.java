@@ -48,13 +48,13 @@ public class ImportTr31KeyBlockJsonUnmarshaller implements Unmarshaller<ImportTr
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("WrappedKeyBlock", targetDepth)) {
-                    context.nextToken();
-                    importTr31KeyBlock.setWrappedKeyBlock(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("WrappingKeyIdentifier", targetDepth)) {
                     context.nextToken();
                     importTr31KeyBlock.setWrappingKeyIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("WrappedKeyBlock", targetDepth)) {
+                    context.nextToken();
+                    importTr31KeyBlock.setWrappedKeyBlock(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

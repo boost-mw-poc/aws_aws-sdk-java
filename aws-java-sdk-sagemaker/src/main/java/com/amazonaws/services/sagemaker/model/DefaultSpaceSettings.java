@@ -45,6 +45,19 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
 
     private KernelGatewayAppSettings kernelGatewayAppSettings;
 
+    private JupyterLabAppSettings jupyterLabAppSettings;
+
+    private DefaultSpaceStorageSettings spaceStorageSettings;
+
+    private CustomPosixUserConfig customPosixUserConfig;
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a domain. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     */
+    private java.util.List<CustomFileSystemConfig> customFileSystemConfigs;
+
     /**
      * <p>
      * The ARN of the execution role for the space.
@@ -208,6 +221,162 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
     }
 
     /**
+     * @param jupyterLabAppSettings
+     */
+
+    public void setJupyterLabAppSettings(JupyterLabAppSettings jupyterLabAppSettings) {
+        this.jupyterLabAppSettings = jupyterLabAppSettings;
+    }
+
+    /**
+     * @return
+     */
+
+    public JupyterLabAppSettings getJupyterLabAppSettings() {
+        return this.jupyterLabAppSettings;
+    }
+
+    /**
+     * @param jupyterLabAppSettings
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DefaultSpaceSettings withJupyterLabAppSettings(JupyterLabAppSettings jupyterLabAppSettings) {
+        setJupyterLabAppSettings(jupyterLabAppSettings);
+        return this;
+    }
+
+    /**
+     * @param spaceStorageSettings
+     */
+
+    public void setSpaceStorageSettings(DefaultSpaceStorageSettings spaceStorageSettings) {
+        this.spaceStorageSettings = spaceStorageSettings;
+    }
+
+    /**
+     * @return
+     */
+
+    public DefaultSpaceStorageSettings getSpaceStorageSettings() {
+        return this.spaceStorageSettings;
+    }
+
+    /**
+     * @param spaceStorageSettings
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DefaultSpaceSettings withSpaceStorageSettings(DefaultSpaceStorageSettings spaceStorageSettings) {
+        setSpaceStorageSettings(spaceStorageSettings);
+        return this;
+    }
+
+    /**
+     * @param customPosixUserConfig
+     */
+
+    public void setCustomPosixUserConfig(CustomPosixUserConfig customPosixUserConfig) {
+        this.customPosixUserConfig = customPosixUserConfig;
+    }
+
+    /**
+     * @return
+     */
+
+    public CustomPosixUserConfig getCustomPosixUserConfig() {
+        return this.customPosixUserConfig;
+    }
+
+    /**
+     * @param customPosixUserConfig
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DefaultSpaceSettings withCustomPosixUserConfig(CustomPosixUserConfig customPosixUserConfig) {
+        setCustomPosixUserConfig(customPosixUserConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a domain. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     * 
+     * @return The settings for assigning a custom file system to a domain. Permitted users can access this file system
+     *         in Amazon SageMaker Studio.
+     */
+
+    public java.util.List<CustomFileSystemConfig> getCustomFileSystemConfigs() {
+        return customFileSystemConfigs;
+    }
+
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a domain. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     * 
+     * @param customFileSystemConfigs
+     *        The settings for assigning a custom file system to a domain. Permitted users can access this file system
+     *        in Amazon SageMaker Studio.
+     */
+
+    public void setCustomFileSystemConfigs(java.util.Collection<CustomFileSystemConfig> customFileSystemConfigs) {
+        if (customFileSystemConfigs == null) {
+            this.customFileSystemConfigs = null;
+            return;
+        }
+
+        this.customFileSystemConfigs = new java.util.ArrayList<CustomFileSystemConfig>(customFileSystemConfigs);
+    }
+
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a domain. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCustomFileSystemConfigs(java.util.Collection)} or
+     * {@link #withCustomFileSystemConfigs(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param customFileSystemConfigs
+     *        The settings for assigning a custom file system to a domain. Permitted users can access this file system
+     *        in Amazon SageMaker Studio.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DefaultSpaceSettings withCustomFileSystemConfigs(CustomFileSystemConfig... customFileSystemConfigs) {
+        if (this.customFileSystemConfigs == null) {
+            setCustomFileSystemConfigs(new java.util.ArrayList<CustomFileSystemConfig>(customFileSystemConfigs.length));
+        }
+        for (CustomFileSystemConfig ele : customFileSystemConfigs) {
+            this.customFileSystemConfigs.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a domain. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     * 
+     * @param customFileSystemConfigs
+     *        The settings for assigning a custom file system to a domain. Permitted users can access this file system
+     *        in Amazon SageMaker Studio.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DefaultSpaceSettings withCustomFileSystemConfigs(java.util.Collection<CustomFileSystemConfig> customFileSystemConfigs) {
+        setCustomFileSystemConfigs(customFileSystemConfigs);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -226,7 +395,15 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
         if (getJupyterServerAppSettings() != null)
             sb.append("JupyterServerAppSettings: ").append(getJupyterServerAppSettings()).append(",");
         if (getKernelGatewayAppSettings() != null)
-            sb.append("KernelGatewayAppSettings: ").append(getKernelGatewayAppSettings());
+            sb.append("KernelGatewayAppSettings: ").append(getKernelGatewayAppSettings()).append(",");
+        if (getJupyterLabAppSettings() != null)
+            sb.append("JupyterLabAppSettings: ").append(getJupyterLabAppSettings()).append(",");
+        if (getSpaceStorageSettings() != null)
+            sb.append("SpaceStorageSettings: ").append(getSpaceStorageSettings()).append(",");
+        if (getCustomPosixUserConfig() != null)
+            sb.append("CustomPosixUserConfig: ").append(getCustomPosixUserConfig()).append(",");
+        if (getCustomFileSystemConfigs() != null)
+            sb.append("CustomFileSystemConfigs: ").append(getCustomFileSystemConfigs());
         sb.append("}");
         return sb.toString();
     }
@@ -257,6 +434,22 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
             return false;
         if (other.getKernelGatewayAppSettings() != null && other.getKernelGatewayAppSettings().equals(this.getKernelGatewayAppSettings()) == false)
             return false;
+        if (other.getJupyterLabAppSettings() == null ^ this.getJupyterLabAppSettings() == null)
+            return false;
+        if (other.getJupyterLabAppSettings() != null && other.getJupyterLabAppSettings().equals(this.getJupyterLabAppSettings()) == false)
+            return false;
+        if (other.getSpaceStorageSettings() == null ^ this.getSpaceStorageSettings() == null)
+            return false;
+        if (other.getSpaceStorageSettings() != null && other.getSpaceStorageSettings().equals(this.getSpaceStorageSettings()) == false)
+            return false;
+        if (other.getCustomPosixUserConfig() == null ^ this.getCustomPosixUserConfig() == null)
+            return false;
+        if (other.getCustomPosixUserConfig() != null && other.getCustomPosixUserConfig().equals(this.getCustomPosixUserConfig()) == false)
+            return false;
+        if (other.getCustomFileSystemConfigs() == null ^ this.getCustomFileSystemConfigs() == null)
+            return false;
+        if (other.getCustomFileSystemConfigs() != null && other.getCustomFileSystemConfigs().equals(this.getCustomFileSystemConfigs()) == false)
+            return false;
         return true;
     }
 
@@ -269,6 +462,10 @@ public class DefaultSpaceSettings implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getSecurityGroups() == null) ? 0 : getSecurityGroups().hashCode());
         hashCode = prime * hashCode + ((getJupyterServerAppSettings() == null) ? 0 : getJupyterServerAppSettings().hashCode());
         hashCode = prime * hashCode + ((getKernelGatewayAppSettings() == null) ? 0 : getKernelGatewayAppSettings().hashCode());
+        hashCode = prime * hashCode + ((getJupyterLabAppSettings() == null) ? 0 : getJupyterLabAppSettings().hashCode());
+        hashCode = prime * hashCode + ((getSpaceStorageSettings() == null) ? 0 : getSpaceStorageSettings().hashCode());
+        hashCode = prime * hashCode + ((getCustomPosixUserConfig() == null) ? 0 : getCustomPosixUserConfig().hashCode());
+        hashCode = prime * hashCode + ((getCustomFileSystemConfigs() == null) ? 0 : getCustomFileSystemConfigs().hashCode());
         return hashCode;
     }
 

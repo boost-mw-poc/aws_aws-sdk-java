@@ -48,10 +48,6 @@ public class TrustedCertificatePublicKeyJsonUnmarshaller implements Unmarshaller
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CertificateAuthorityPublicKeyIdentifier", targetDepth)) {
-                    context.nextToken();
-                    trustedCertificatePublicKey.setCertificateAuthorityPublicKeyIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("KeyAttributes", targetDepth)) {
                     context.nextToken();
                     trustedCertificatePublicKey.setKeyAttributes(KeyAttributesJsonUnmarshaller.getInstance().unmarshall(context));
@@ -59,6 +55,10 @@ public class TrustedCertificatePublicKeyJsonUnmarshaller implements Unmarshaller
                 if (context.testExpression("PublicKeyCertificate", targetDepth)) {
                     context.nextToken();
                     trustedCertificatePublicKey.setPublicKeyCertificate(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CertificateAuthorityPublicKeyIdentifier", targetDepth)) {
+                    context.nextToken();
+                    trustedCertificatePublicKey.setCertificateAuthorityPublicKeyIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

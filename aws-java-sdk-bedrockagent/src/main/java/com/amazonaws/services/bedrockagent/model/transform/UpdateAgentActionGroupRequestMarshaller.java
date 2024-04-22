@@ -43,6 +43,8 @@ public class UpdateAgentActionGroupRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("apiSchema").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<StructuredPojo> FUNCTIONSCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("functionSchema").build();
     private static final MarshallingInfo<String> PARENTACTIONGROUPSIGNATURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentActionGroupSignature").build();
 
@@ -70,6 +72,7 @@ public class UpdateAgentActionGroupRequestMarshaller {
             protocolMarshaller.marshall(updateAgentActionGroupRequest.getAgentVersion(), AGENTVERSION_BINDING);
             protocolMarshaller.marshall(updateAgentActionGroupRequest.getApiSchema(), APISCHEMA_BINDING);
             protocolMarshaller.marshall(updateAgentActionGroupRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(updateAgentActionGroupRequest.getFunctionSchema(), FUNCTIONSCHEMA_BINDING);
             protocolMarshaller.marshall(updateAgentActionGroupRequest.getParentActionGroupSignature(), PARENTACTIONGROUPSIGNATURE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

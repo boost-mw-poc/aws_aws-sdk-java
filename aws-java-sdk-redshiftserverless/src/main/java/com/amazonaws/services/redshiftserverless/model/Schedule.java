@@ -30,35 +30,35 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Format of at expressions is "
-     * <code>at(yyyy-mm-ddThh:mm:ss)</code>". For example, "<code>at(2016-03-04T17:27:00)</code>".
+     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Timestamp is in UTC. Format of
+     * at expression is <code>yyyy-mm-ddThh:mm:ss</code>. For example, <code>2016-03-04T17:27:00</code>.
      * </p>
      */
     private java.util.Date at;
     /**
      * <p>
      * The cron expression to use to schedule a recurring scheduled action. Schedule invocations must be separated by at
-     * least one hour.
+     * least one hour. Times are in UTC.
      * </p>
      * <p>
-     * Format of cron expressions is "<code>cron(Minutes Hours Day-of-month Month Day-of-week Year)</code>
-     * ". For example, "<code>cron(0 10 ? * MON *)</code>
-     * ". For more information, see <a href="https://docs.aws.amazon.com
-     * /AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron Expressions</a> in the <i>Amazon
-     * CloudWatch Events User Guide</i>.
+     * Format of cron expressions is <code>(Minutes Hours Day-of-month Month Day-of-week Year)</code>. For example,
+     * <code>"(0 10 ? * MON *)"</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron
+     * Expressions</a> in the <i>Amazon CloudWatch Events User Guide</i>.
      * </p>
      */
     private String cron;
 
     /**
      * <p>
-     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Format of at expressions is "
-     * <code>at(yyyy-mm-ddThh:mm:ss)</code>". For example, "<code>at(2016-03-04T17:27:00)</code>".
+     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Timestamp is in UTC. Format of
+     * at expression is <code>yyyy-mm-ddThh:mm:ss</code>. For example, <code>2016-03-04T17:27:00</code>.
      * </p>
      * 
      * @param at
-     *        The timestamp of when Amazon Redshift Serverless should run the scheduled action. Format of at expressions
-     *        is "<code>at(yyyy-mm-ddThh:mm:ss)</code>". For example, "<code>at(2016-03-04T17:27:00)</code>".
+     *        The timestamp of when Amazon Redshift Serverless should run the scheduled action. Timestamp is in UTC.
+     *        Format of at expression is <code>yyyy-mm-ddThh:mm:ss</code>. For example, <code>2016-03-04T17:27:00</code>
+     *        .
      */
 
     public void setAt(java.util.Date at) {
@@ -67,13 +67,13 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Format of at expressions is "
-     * <code>at(yyyy-mm-ddThh:mm:ss)</code>". For example, "<code>at(2016-03-04T17:27:00)</code>".
+     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Timestamp is in UTC. Format of
+     * at expression is <code>yyyy-mm-ddThh:mm:ss</code>. For example, <code>2016-03-04T17:27:00</code>.
      * </p>
      * 
-     * @return The timestamp of when Amazon Redshift Serverless should run the scheduled action. Format of at
-     *         expressions is "<code>at(yyyy-mm-ddThh:mm:ss)</code>". For example, "<code>at(2016-03-04T17:27:00)</code>
-     *         ".
+     * @return The timestamp of when Amazon Redshift Serverless should run the scheduled action. Timestamp is in UTC.
+     *         Format of at expression is <code>yyyy-mm-ddThh:mm:ss</code>. For example,
+     *         <code>2016-03-04T17:27:00</code>.
      */
 
     public java.util.Date getAt() {
@@ -82,13 +82,14 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Format of at expressions is "
-     * <code>at(yyyy-mm-ddThh:mm:ss)</code>". For example, "<code>at(2016-03-04T17:27:00)</code>".
+     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Timestamp is in UTC. Format of
+     * at expression is <code>yyyy-mm-ddThh:mm:ss</code>. For example, <code>2016-03-04T17:27:00</code>.
      * </p>
      * 
      * @param at
-     *        The timestamp of when Amazon Redshift Serverless should run the scheduled action. Format of at expressions
-     *        is "<code>at(yyyy-mm-ddThh:mm:ss)</code>". For example, "<code>at(2016-03-04T17:27:00)</code>".
+     *        The timestamp of when Amazon Redshift Serverless should run the scheduled action. Timestamp is in UTC.
+     *        Format of at expression is <code>yyyy-mm-ddThh:mm:ss</code>. For example, <code>2016-03-04T17:27:00</code>
+     *        .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,25 +101,23 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The cron expression to use to schedule a recurring scheduled action. Schedule invocations must be separated by at
-     * least one hour.
+     * least one hour. Times are in UTC.
      * </p>
      * <p>
-     * Format of cron expressions is "<code>cron(Minutes Hours Day-of-month Month Day-of-week Year)</code>
-     * ". For example, "<code>cron(0 10 ? * MON *)</code>
-     * ". For more information, see <a href="https://docs.aws.amazon.com
-     * /AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron Expressions</a> in the <i>Amazon
-     * CloudWatch Events User Guide</i>.
+     * Format of cron expressions is <code>(Minutes Hours Day-of-month Month Day-of-week Year)</code>. For example,
+     * <code>"(0 10 ? * MON *)"</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron
+     * Expressions</a> in the <i>Amazon CloudWatch Events User Guide</i>.
      * </p>
      * 
      * @param cron
      *        The cron expression to use to schedule a recurring scheduled action. Schedule invocations must be
-     *        separated by at least one hour.</p>
+     *        separated by at least one hour. Times are in UTC.</p>
      *        <p>
-     *        Format of cron expressions is "<code>cron(Minutes Hours Day-of-month Month Day-of-week Year)</code>
-     *        ". For example, "<code>cron(0 10 ? * MON *)</code>
-     *        ". For more information, see <a href="https://docs.aws.amazon
-     *        .com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron Expressions</a> in the
-     *        <i>Amazon CloudWatch Events User Guide</i>.
+     *        Format of cron expressions is <code>(Minutes Hours Day-of-month Month Day-of-week Year)</code>. For
+     *        example, <code>"(0 10 ? * MON *)"</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions"
+     *        >Cron Expressions</a> in the <i>Amazon CloudWatch Events User Guide</i>.
      */
 
     public void setCron(String cron) {
@@ -128,24 +127,22 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The cron expression to use to schedule a recurring scheduled action. Schedule invocations must be separated by at
-     * least one hour.
+     * least one hour. Times are in UTC.
      * </p>
      * <p>
-     * Format of cron expressions is "<code>cron(Minutes Hours Day-of-month Month Day-of-week Year)</code>
-     * ". For example, "<code>cron(0 10 ? * MON *)</code>
-     * ". For more information, see <a href="https://docs.aws.amazon.com
-     * /AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron Expressions</a> in the <i>Amazon
-     * CloudWatch Events User Guide</i>.
+     * Format of cron expressions is <code>(Minutes Hours Day-of-month Month Day-of-week Year)</code>. For example,
+     * <code>"(0 10 ? * MON *)"</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron
+     * Expressions</a> in the <i>Amazon CloudWatch Events User Guide</i>.
      * </p>
      * 
      * @return The cron expression to use to schedule a recurring scheduled action. Schedule invocations must be
-     *         separated by at least one hour.</p>
+     *         separated by at least one hour. Times are in UTC.</p>
      *         <p>
-     *         Format of cron expressions is "<code>cron(Minutes Hours Day-of-month Month Day-of-week Year)</code>
-     *         ". For example, "<code>cron(0 10 ? * MON *)</code>
-     *         ". For more information, see <a href="https://docs.aws.amazon
-     *         .com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron Expressions</a> in the
-     *         <i>Amazon CloudWatch Events User Guide</i>.
+     *         Format of cron expressions is <code>(Minutes Hours Day-of-month Month Day-of-week Year)</code>. For
+     *         example, <code>"(0 10 ? * MON *)"</code>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions"
+     *         >Cron Expressions</a> in the <i>Amazon CloudWatch Events User Guide</i>.
      */
 
     public String getCron() {
@@ -155,25 +152,23 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The cron expression to use to schedule a recurring scheduled action. Schedule invocations must be separated by at
-     * least one hour.
+     * least one hour. Times are in UTC.
      * </p>
      * <p>
-     * Format of cron expressions is "<code>cron(Minutes Hours Day-of-month Month Day-of-week Year)</code>
-     * ". For example, "<code>cron(0 10 ? * MON *)</code>
-     * ". For more information, see <a href="https://docs.aws.amazon.com
-     * /AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron Expressions</a> in the <i>Amazon
-     * CloudWatch Events User Guide</i>.
+     * Format of cron expressions is <code>(Minutes Hours Day-of-month Month Day-of-week Year)</code>. For example,
+     * <code>"(0 10 ? * MON *)"</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron
+     * Expressions</a> in the <i>Amazon CloudWatch Events User Guide</i>.
      * </p>
      * 
      * @param cron
      *        The cron expression to use to schedule a recurring scheduled action. Schedule invocations must be
-     *        separated by at least one hour.</p>
+     *        separated by at least one hour. Times are in UTC.</p>
      *        <p>
-     *        Format of cron expressions is "<code>cron(Minutes Hours Day-of-month Month Day-of-week Year)</code>
-     *        ". For example, "<code>cron(0 10 ? * MON *)</code>
-     *        ". For more information, see <a href="https://docs.aws.amazon
-     *        .com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions">Cron Expressions</a> in the
-     *        <i>Amazon CloudWatch Events User Guide</i>.
+     *        Format of cron expressions is <code>(Minutes Hours Day-of-month Month Day-of-week Year)</code>. For
+     *        example, <code>"(0 10 ? * MON *)"</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions"
+     *        >Cron Expressions</a> in the <i>Amazon CloudWatch Events User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

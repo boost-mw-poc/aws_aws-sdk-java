@@ -85,6 +85,13 @@ public class CreateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
     private String description;
     /**
      * <p>
+     * Contains details about the function schema for the action group or the JSON or YAML-formatted payload defining
+     * the schema.
+     * </p>
+     */
+    private FunctionSchema functionSchema;
+    /**
+     * <p>
      * To allow your agent to request the user for additional information when trying to complete a task, set this field
      * to <code>AMAZON.UserInput</code>. You must leave the <code>description</code>, <code>apiSchema</code>, and
      * <code>actionGroupExecutor</code> fields blank for this action group.
@@ -503,6 +510,52 @@ public class CreateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * Contains details about the function schema for the action group or the JSON or YAML-formatted payload defining
+     * the schema.
+     * </p>
+     * 
+     * @param functionSchema
+     *        Contains details about the function schema for the action group or the JSON or YAML-formatted payload
+     *        defining the schema.
+     */
+
+    public void setFunctionSchema(FunctionSchema functionSchema) {
+        this.functionSchema = functionSchema;
+    }
+
+    /**
+     * <p>
+     * Contains details about the function schema for the action group or the JSON or YAML-formatted payload defining
+     * the schema.
+     * </p>
+     * 
+     * @return Contains details about the function schema for the action group or the JSON or YAML-formatted payload
+     *         defining the schema.
+     */
+
+    public FunctionSchema getFunctionSchema() {
+        return this.functionSchema;
+    }
+
+    /**
+     * <p>
+     * Contains details about the function schema for the action group or the JSON or YAML-formatted payload defining
+     * the schema.
+     * </p>
+     * 
+     * @param functionSchema
+     *        Contains details about the function schema for the action group or the JSON or YAML-formatted payload
+     *        defining the schema.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAgentActionGroupRequest withFunctionSchema(FunctionSchema functionSchema) {
+        setFunctionSchema(functionSchema);
+        return this;
+    }
+
+    /**
+     * <p>
      * To allow your agent to request the user for additional information when trying to complete a task, set this field
      * to <code>AMAZON.UserInput</code>. You must leave the <code>description</code>, <code>apiSchema</code>, and
      * <code>actionGroupExecutor</code> fields blank for this action group.
@@ -652,6 +705,8 @@ public class CreateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getFunctionSchema() != null)
+            sb.append("FunctionSchema: ").append(getFunctionSchema()).append(",");
         if (getParentActionGroupSignature() != null)
             sb.append("ParentActionGroupSignature: ").append(getParentActionGroupSignature());
         sb.append("}");
@@ -700,6 +755,10 @@ public class CreateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getFunctionSchema() == null ^ this.getFunctionSchema() == null)
+            return false;
+        if (other.getFunctionSchema() != null && other.getFunctionSchema().equals(this.getFunctionSchema()) == false)
+            return false;
         if (other.getParentActionGroupSignature() == null ^ this.getParentActionGroupSignature() == null)
             return false;
         if (other.getParentActionGroupSignature() != null && other.getParentActionGroupSignature().equals(this.getParentActionGroupSignature()) == false)
@@ -720,6 +779,7 @@ public class CreateAgentActionGroupRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getApiSchema() == null) ? 0 : getApiSchema().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getFunctionSchema() == null) ? 0 : getFunctionSchema().hashCode());
         hashCode = prime * hashCode + ((getParentActionGroupSignature() == null) ? 0 : getParentActionGroupSignature().hashCode());
         return hashCode;
     }

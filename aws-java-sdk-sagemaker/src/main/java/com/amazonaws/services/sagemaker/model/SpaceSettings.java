@@ -51,7 +51,7 @@ public class SpaceSettings implements Serializable, Cloneable, StructuredPojo {
     private String appType;
     /**
      * <p>
-     * The storage settings for a private space.
+     * The storage settings for a space.
      * </p>
      */
     private SpaceStorageSettings spaceStorageSettings;
@@ -256,11 +256,11 @@ public class SpaceSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage settings for a private space.
+     * The storage settings for a space.
      * </p>
      * 
      * @param spaceStorageSettings
-     *        The storage settings for a private space.
+     *        The storage settings for a space.
      */
 
     public void setSpaceStorageSettings(SpaceStorageSettings spaceStorageSettings) {
@@ -269,10 +269,10 @@ public class SpaceSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage settings for a private space.
+     * The storage settings for a space.
      * </p>
      * 
-     * @return The storage settings for a private space.
+     * @return The storage settings for a space.
      */
 
     public SpaceStorageSettings getSpaceStorageSettings() {
@@ -281,11 +281,11 @@ public class SpaceSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage settings for a private space.
+     * The storage settings for a space.
      * </p>
      * 
      * @param spaceStorageSettings
-     *        The storage settings for a private space.
+     *        The storage settings for a space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

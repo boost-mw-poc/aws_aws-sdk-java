@@ -66,6 +66,25 @@ public class DefaultSpaceSettingsJsonUnmarshaller implements Unmarshaller<Defaul
                     context.nextToken();
                     defaultSpaceSettings.setKernelGatewayAppSettings(KernelGatewayAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("JupyterLabAppSettings", targetDepth)) {
+                    context.nextToken();
+                    defaultSpaceSettings.setJupyterLabAppSettings(JupyterLabAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("SpaceStorageSettings", targetDepth)) {
+                    context.nextToken();
+                    defaultSpaceSettings.setSpaceStorageSettings(DefaultSpaceStorageSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CustomPosixUserConfig", targetDepth)) {
+                    context.nextToken();
+                    defaultSpaceSettings.setCustomPosixUserConfig(CustomPosixUserConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CustomFileSystemConfigs", targetDepth)) {
+                    context.nextToken();
+                    defaultSpaceSettings.setCustomFileSystemConfigs(new ListUnmarshaller<CustomFileSystemConfig>(CustomFileSystemConfigJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -25,25 +25,6 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token expires
-     * after 7 days. You can use the same import token to import multiple keys to the same service account.
-     * </p>
-     */
-    private String importToken;
-    /**
-     * <p>
-     * The validity period of the import token.
-     * </p>
-     */
-    private java.util.Date parametersValidUntilTimestamp;
-    /**
-     * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
-     * </p>
-     */
-    private String wrappingKeyAlgorithm;
-    /**
-     * <p>
      * The wrapping key certificate in PEM format (base64 encoded) of the wrapping key for use within the TR-34 key
      * block. The certificate expires in 7 days.
      * </p>
@@ -56,154 +37,25 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
      * </p>
      */
     private String wrappingKeyCertificateChain;
-
+    /**
+     * <p>
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
+     * </p>
+     */
+    private String wrappingKeyAlgorithm;
     /**
      * <p>
      * The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token expires
      * after 7 days. You can use the same import token to import multiple keys to the same service account.
      * </p>
-     * 
-     * @param importToken
-     *        The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token
-     *        expires after 7 days. You can use the same import token to import multiple keys to the same service
-     *        account.
      */
-
-    public void setImportToken(String importToken) {
-        this.importToken = importToken;
-    }
-
-    /**
-     * <p>
-     * The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token expires
-     * after 7 days. You can use the same import token to import multiple keys to the same service account.
-     * </p>
-     * 
-     * @return The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token
-     *         expires after 7 days. You can use the same import token to import multiple keys to the same service
-     *         account.
-     */
-
-    public String getImportToken() {
-        return this.importToken;
-    }
-
-    /**
-     * <p>
-     * The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token expires
-     * after 7 days. You can use the same import token to import multiple keys to the same service account.
-     * </p>
-     * 
-     * @param importToken
-     *        The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token
-     *        expires after 7 days. You can use the same import token to import multiple keys to the same service
-     *        account.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetParametersForImportResult withImportToken(String importToken) {
-        setImportToken(importToken);
-        return this;
-    }
-
+    private String importToken;
     /**
      * <p>
      * The validity period of the import token.
      * </p>
-     * 
-     * @param parametersValidUntilTimestamp
-     *        The validity period of the import token.
      */
-
-    public void setParametersValidUntilTimestamp(java.util.Date parametersValidUntilTimestamp) {
-        this.parametersValidUntilTimestamp = parametersValidUntilTimestamp;
-    }
-
-    /**
-     * <p>
-     * The validity period of the import token.
-     * </p>
-     * 
-     * @return The validity period of the import token.
-     */
-
-    public java.util.Date getParametersValidUntilTimestamp() {
-        return this.parametersValidUntilTimestamp;
-    }
-
-    /**
-     * <p>
-     * The validity period of the import token.
-     * </p>
-     * 
-     * @param parametersValidUntilTimestamp
-     *        The validity period of the import token.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetParametersForImportResult withParametersValidUntilTimestamp(java.util.Date parametersValidUntilTimestamp) {
-        setParametersValidUntilTimestamp(parametersValidUntilTimestamp);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
-     * </p>
-     * 
-     * @param wrappingKeyAlgorithm
-     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
-     * @see KeyAlgorithm
-     */
-
-    public void setWrappingKeyAlgorithm(String wrappingKeyAlgorithm) {
-        this.wrappingKeyAlgorithm = wrappingKeyAlgorithm;
-    }
-
-    /**
-     * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
-     * </p>
-     * 
-     * @return The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
-     * @see KeyAlgorithm
-     */
-
-    public String getWrappingKeyAlgorithm() {
-        return this.wrappingKeyAlgorithm;
-    }
-
-    /**
-     * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
-     * </p>
-     * 
-     * @param wrappingKeyAlgorithm
-     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyAlgorithm
-     */
-
-    public GetParametersForImportResult withWrappingKeyAlgorithm(String wrappingKeyAlgorithm) {
-        setWrappingKeyAlgorithm(wrappingKeyAlgorithm);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
-     * </p>
-     * 
-     * @param wrappingKeyAlgorithm
-     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see KeyAlgorithm
-     */
-
-    public GetParametersForImportResult withWrappingKeyAlgorithm(KeyAlgorithm wrappingKeyAlgorithm) {
-        this.wrappingKeyAlgorithm = wrappingKeyAlgorithm.toString();
-        return this;
-    }
+    private java.util.Date parametersValidUntilTimestamp;
 
     /**
      * <p>
@@ -298,6 +150,154 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
+     * </p>
+     * 
+     * @param wrappingKeyAlgorithm
+     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
+     * @see KeyAlgorithm
+     */
+
+    public void setWrappingKeyAlgorithm(String wrappingKeyAlgorithm) {
+        this.wrappingKeyAlgorithm = wrappingKeyAlgorithm;
+    }
+
+    /**
+     * <p>
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
+     * </p>
+     * 
+     * @return The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
+     * @see KeyAlgorithm
+     */
+
+    public String getWrappingKeyAlgorithm() {
+        return this.wrappingKeyAlgorithm;
+    }
+
+    /**
+     * <p>
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
+     * </p>
+     * 
+     * @param wrappingKeyAlgorithm
+     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyAlgorithm
+     */
+
+    public GetParametersForImportResult withWrappingKeyAlgorithm(String wrappingKeyAlgorithm) {
+        setWrappingKeyAlgorithm(wrappingKeyAlgorithm);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
+     * </p>
+     * 
+     * @param wrappingKeyAlgorithm
+     *        The algorithm of the wrapping key for use within TR-34 WrappedKeyBlock or RSA WrappedKeyCryptogram.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyAlgorithm
+     */
+
+    public GetParametersForImportResult withWrappingKeyAlgorithm(KeyAlgorithm wrappingKeyAlgorithm) {
+        this.wrappingKeyAlgorithm = wrappingKeyAlgorithm.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token expires
+     * after 7 days. You can use the same import token to import multiple keys to the same service account.
+     * </p>
+     * 
+     * @param importToken
+     *        The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token
+     *        expires after 7 days. You can use the same import token to import multiple keys to the same service
+     *        account.
+     */
+
+    public void setImportToken(String importToken) {
+        this.importToken = importToken;
+    }
+
+    /**
+     * <p>
+     * The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token expires
+     * after 7 days. You can use the same import token to import multiple keys to the same service account.
+     * </p>
+     * 
+     * @return The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token
+     *         expires after 7 days. You can use the same import token to import multiple keys to the same service
+     *         account.
+     */
+
+    public String getImportToken() {
+        return this.importToken;
+    }
+
+    /**
+     * <p>
+     * The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token expires
+     * after 7 days. You can use the same import token to import multiple keys to the same service account.
+     * </p>
+     * 
+     * @param importToken
+     *        The import token to initiate key import into Amazon Web Services Payment Cryptography. The import token
+     *        expires after 7 days. You can use the same import token to import multiple keys to the same service
+     *        account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetParametersForImportResult withImportToken(String importToken) {
+        setImportToken(importToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The validity period of the import token.
+     * </p>
+     * 
+     * @param parametersValidUntilTimestamp
+     *        The validity period of the import token.
+     */
+
+    public void setParametersValidUntilTimestamp(java.util.Date parametersValidUntilTimestamp) {
+        this.parametersValidUntilTimestamp = parametersValidUntilTimestamp;
+    }
+
+    /**
+     * <p>
+     * The validity period of the import token.
+     * </p>
+     * 
+     * @return The validity period of the import token.
+     */
+
+    public java.util.Date getParametersValidUntilTimestamp() {
+        return this.parametersValidUntilTimestamp;
+    }
+
+    /**
+     * <p>
+     * The validity period of the import token.
+     * </p>
+     * 
+     * @param parametersValidUntilTimestamp
+     *        The validity period of the import token.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetParametersForImportResult withParametersValidUntilTimestamp(java.util.Date parametersValidUntilTimestamp) {
+        setParametersValidUntilTimestamp(parametersValidUntilTimestamp);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -309,16 +309,16 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getImportToken() != null)
-            sb.append("ImportToken: ").append(getImportToken()).append(",");
-        if (getParametersValidUntilTimestamp() != null)
-            sb.append("ParametersValidUntilTimestamp: ").append(getParametersValidUntilTimestamp()).append(",");
-        if (getWrappingKeyAlgorithm() != null)
-            sb.append("WrappingKeyAlgorithm: ").append(getWrappingKeyAlgorithm()).append(",");
         if (getWrappingKeyCertificate() != null)
             sb.append("WrappingKeyCertificate: ").append("***Sensitive Data Redacted***").append(",");
         if (getWrappingKeyCertificateChain() != null)
-            sb.append("WrappingKeyCertificateChain: ").append("***Sensitive Data Redacted***");
+            sb.append("WrappingKeyCertificateChain: ").append("***Sensitive Data Redacted***").append(",");
+        if (getWrappingKeyAlgorithm() != null)
+            sb.append("WrappingKeyAlgorithm: ").append(getWrappingKeyAlgorithm()).append(",");
+        if (getImportToken() != null)
+            sb.append("ImportToken: ").append(getImportToken()).append(",");
+        if (getParametersValidUntilTimestamp() != null)
+            sb.append("ParametersValidUntilTimestamp: ").append(getParametersValidUntilTimestamp());
         sb.append("}");
         return sb.toString();
     }
@@ -333,6 +333,18 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
         if (obj instanceof GetParametersForImportResult == false)
             return false;
         GetParametersForImportResult other = (GetParametersForImportResult) obj;
+        if (other.getWrappingKeyCertificate() == null ^ this.getWrappingKeyCertificate() == null)
+            return false;
+        if (other.getWrappingKeyCertificate() != null && other.getWrappingKeyCertificate().equals(this.getWrappingKeyCertificate()) == false)
+            return false;
+        if (other.getWrappingKeyCertificateChain() == null ^ this.getWrappingKeyCertificateChain() == null)
+            return false;
+        if (other.getWrappingKeyCertificateChain() != null && other.getWrappingKeyCertificateChain().equals(this.getWrappingKeyCertificateChain()) == false)
+            return false;
+        if (other.getWrappingKeyAlgorithm() == null ^ this.getWrappingKeyAlgorithm() == null)
+            return false;
+        if (other.getWrappingKeyAlgorithm() != null && other.getWrappingKeyAlgorithm().equals(this.getWrappingKeyAlgorithm()) == false)
+            return false;
         if (other.getImportToken() == null ^ this.getImportToken() == null)
             return false;
         if (other.getImportToken() != null && other.getImportToken().equals(this.getImportToken()) == false)
@@ -342,18 +354,6 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
         if (other.getParametersValidUntilTimestamp() != null
                 && other.getParametersValidUntilTimestamp().equals(this.getParametersValidUntilTimestamp()) == false)
             return false;
-        if (other.getWrappingKeyAlgorithm() == null ^ this.getWrappingKeyAlgorithm() == null)
-            return false;
-        if (other.getWrappingKeyAlgorithm() != null && other.getWrappingKeyAlgorithm().equals(this.getWrappingKeyAlgorithm()) == false)
-            return false;
-        if (other.getWrappingKeyCertificate() == null ^ this.getWrappingKeyCertificate() == null)
-            return false;
-        if (other.getWrappingKeyCertificate() != null && other.getWrappingKeyCertificate().equals(this.getWrappingKeyCertificate()) == false)
-            return false;
-        if (other.getWrappingKeyCertificateChain() == null ^ this.getWrappingKeyCertificateChain() == null)
-            return false;
-        if (other.getWrappingKeyCertificateChain() != null && other.getWrappingKeyCertificateChain().equals(this.getWrappingKeyCertificateChain()) == false)
-            return false;
         return true;
     }
 
@@ -362,11 +362,11 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getImportToken() == null) ? 0 : getImportToken().hashCode());
-        hashCode = prime * hashCode + ((getParametersValidUntilTimestamp() == null) ? 0 : getParametersValidUntilTimestamp().hashCode());
-        hashCode = prime * hashCode + ((getWrappingKeyAlgorithm() == null) ? 0 : getWrappingKeyAlgorithm().hashCode());
         hashCode = prime * hashCode + ((getWrappingKeyCertificate() == null) ? 0 : getWrappingKeyCertificate().hashCode());
         hashCode = prime * hashCode + ((getWrappingKeyCertificateChain() == null) ? 0 : getWrappingKeyCertificateChain().hashCode());
+        hashCode = prime * hashCode + ((getWrappingKeyAlgorithm() == null) ? 0 : getWrappingKeyAlgorithm().hashCode());
+        hashCode = prime * hashCode + ((getImportToken() == null) ? 0 : getImportToken().hashCode());
+        hashCode = prime * hashCode + ((getParametersValidUntilTimestamp() == null) ? 0 : getParametersValidUntilTimestamp().hashCode());
         return hashCode;
     }
 

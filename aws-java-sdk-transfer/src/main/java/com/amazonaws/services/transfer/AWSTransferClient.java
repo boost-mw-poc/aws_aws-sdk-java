@@ -3110,6 +3110,118 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
     /**
      * <p>
+     * Retrieves a list of the contents of a directory from a remote SFTP server. You specify the connector ID, the
+     * output path, and the remote directory path. You can also specify the optional <code>MaxItems</code> value to
+     * control the maximum number of items that are listed from the remote directory. This API returns a list of all
+     * files and directories in the remote directory (up to the maximum value), but does not return files or folders in
+     * sub-directories. That is, it only returns a list of files and directories one-level deep.
+     * </p>
+     * <p>
+     * After you receive the listing file, you can provide the files that you want to transfer to the
+     * <code>RetrieveFilePaths</code> parameter of the <code>StartFileTransfer</code> API call.
+     * </p>
+     * <p>
+     * The naming convention for the output file is <code> <i>connector-ID</i>-<i>listing-ID</i>.json</code>. The output
+     * file contains the following information:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>filePath</code>: the complete path of a remote file, relative to the directory of the listing request for
+     * your SFTP connector on the remote server.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>modifiedTimestamp</code>: the last time the file was modified, in UTC time format. This field is optional.
+     * If the remote file attributes don't contain a timestamp, it is omitted from the file listing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>size</code>: the size of the file, in bytes. This field is optional. If the remote file attributes don't
+     * contain a file size, it is omitted from the file listing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>path</code>: the complete path of a remote directory, relative to the directory of the listing request for
+     * your SFTP connector on the remote server.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>truncated</code>: a flag indicating whether the list output contains all of the items contained in the
+     * remote directory or not. If your <code>Truncated</code> output value is true, you can increase the value provided
+     * in the optional <code>max-items</code> input attribute to be able to list more items (up to the maximum allowed
+     * list size of 10,000 items).
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param startDirectoryListingRequest
+     * @return Result of the StartDirectoryListing operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Transfer Family service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @sample AWSTransfer.StartDirectoryListing
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/StartDirectoryListing" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public StartDirectoryListingResult startDirectoryListing(StartDirectoryListingRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartDirectoryListing(request);
+    }
+
+    @SdkInternalApi
+    final StartDirectoryListingResult executeStartDirectoryListing(StartDirectoryListingRequest startDirectoryListingRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startDirectoryListingRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartDirectoryListingRequest> request = null;
+        Response<StartDirectoryListingResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartDirectoryListingRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startDirectoryListingRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartDirectoryListing");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartDirectoryListingResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new StartDirectoryListingResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Begins a file transfer between local Amazon Web Services storage and a remote AS2 or SFTP server.
      * </p>
      * <ul>
@@ -3128,7 +3240,7 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
      * <li>
      * <p>
      * If you are transferring file from a partner's SFTP server to Amazon Web Services storage, you specify one or more
-     * <code>RetreiveFilePaths</code> to identify the files you want to transfer, and a <code>LocalDirectoryPath</code>
+     * <code>RetrieveFilePaths</code> to identify the files you want to transfer, and a <code>LocalDirectoryPath</code>
      * to specify the destination folder.
      * </p>
      * </li>

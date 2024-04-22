@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ActionGroupExecutorMarshaller {
 
+    private static final MarshallingInfo<String> CUSTOMCONTROL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customControl").build();
     private static final MarshallingInfo<String> LAMBDA_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("lambda").build();
 
@@ -46,6 +48,7 @@ public class ActionGroupExecutorMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(actionGroupExecutor.getCustomControl(), CUSTOMCONTROL_BINDING);
             protocolMarshaller.marshall(actionGroupExecutor.getLambda(), LAMBDA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

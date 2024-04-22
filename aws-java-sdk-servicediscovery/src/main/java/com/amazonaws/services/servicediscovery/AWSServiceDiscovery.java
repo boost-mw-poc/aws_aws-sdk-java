@@ -506,7 +506,7 @@ public interface AWSServiceDiscovery {
 
     /**
      * <p>
-     * Lists summary information for all the services that are associated with one or more specified namespaces.
+     * Lists summary information for all the services that are associated with one or more namespaces.
      * </p>
      * 
      * @param listServicesRequest

@@ -51,7 +51,8 @@ public interface AWSBedrockAgentRuntime {
      * @throws ConflictException
      *         There was a conflict performing an operation. Resolve the conflict and retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ValidationException
      *         Input validation failed. Check your request parameters and retry the request.
      * @throws InternalServerException
@@ -84,7 +85,8 @@ public interface AWSBedrockAgentRuntime {
      * @throws ConflictException
      *         There was a conflict performing an operation. Resolve the conflict and retry your request.
      * @throws ResourceNotFoundException
-     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     *         The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and
+     *         try your request again.
      * @throws ValidationException
      *         Input validation failed. Check your request parameters and retry the request.
      * @throws InternalServerException

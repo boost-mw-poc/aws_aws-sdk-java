@@ -46,6 +46,8 @@ public class CreateAgentActionGroupRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<StructuredPojo> FUNCTIONSCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("functionSchema").build();
     private static final MarshallingInfo<String> PARENTACTIONGROUPSIGNATURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentActionGroupSignature").build();
 
@@ -73,6 +75,7 @@ public class CreateAgentActionGroupRequestMarshaller {
             protocolMarshaller.marshall(createAgentActionGroupRequest.getApiSchema(), APISCHEMA_BINDING);
             protocolMarshaller.marshall(createAgentActionGroupRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createAgentActionGroupRequest.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(createAgentActionGroupRequest.getFunctionSchema(), FUNCTIONSCHEMA_BINDING);
             protocolMarshaller.marshall(createAgentActionGroupRequest.getParentActionGroupSignature(), PARENTACTIONGROUPSIGNATURE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -100,6 +100,13 @@ public class AgentActionGroup implements Serializable, Cloneable, StructuredPojo
     private String description;
     /**
      * <p>
+     * Defines functions that each define parameters that the agent needs to invoke from the user. Each function
+     * represents an action in an action group.
+     * </p>
+     */
+    private FunctionSchema functionSchema;
+    /**
+     * <p>
      * If this field is set as <code>AMAZON.UserInput</code>, the agent can request the user for additional information
      * when trying to complete a task. The <code>description</code>, <code>apiSchema</code>, and
      * <code>actionGroupExecutor</code> fields must be blank for this action group.
@@ -604,6 +611,52 @@ public class AgentActionGroup implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
+     * Defines functions that each define parameters that the agent needs to invoke from the user. Each function
+     * represents an action in an action group.
+     * </p>
+     * 
+     * @param functionSchema
+     *        Defines functions that each define parameters that the agent needs to invoke from the user. Each function
+     *        represents an action in an action group.
+     */
+
+    public void setFunctionSchema(FunctionSchema functionSchema) {
+        this.functionSchema = functionSchema;
+    }
+
+    /**
+     * <p>
+     * Defines functions that each define parameters that the agent needs to invoke from the user. Each function
+     * represents an action in an action group.
+     * </p>
+     * 
+     * @return Defines functions that each define parameters that the agent needs to invoke from the user. Each function
+     *         represents an action in an action group.
+     */
+
+    public FunctionSchema getFunctionSchema() {
+        return this.functionSchema;
+    }
+
+    /**
+     * <p>
+     * Defines functions that each define parameters that the agent needs to invoke from the user. Each function
+     * represents an action in an action group.
+     * </p>
+     * 
+     * @param functionSchema
+     *        Defines functions that each define parameters that the agent needs to invoke from the user. Each function
+     *        represents an action in an action group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AgentActionGroup withFunctionSchema(FunctionSchema functionSchema) {
+        setFunctionSchema(functionSchema);
+        return this;
+    }
+
+    /**
+     * <p>
      * If this field is set as <code>AMAZON.UserInput</code>, the agent can request the user for additional information
      * when trying to complete a task. The <code>description</code>, <code>apiSchema</code>, and
      * <code>actionGroupExecutor</code> fields must be blank for this action group.
@@ -797,6 +850,8 @@ public class AgentActionGroup implements Serializable, Cloneable, StructuredPojo
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getFunctionSchema() != null)
+            sb.append("FunctionSchema: ").append(getFunctionSchema()).append(",");
         if (getParentActionSignature() != null)
             sb.append("ParentActionSignature: ").append(getParentActionSignature()).append(",");
         if (getUpdatedAt() != null)
@@ -855,6 +910,10 @@ public class AgentActionGroup implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getFunctionSchema() == null ^ this.getFunctionSchema() == null)
+            return false;
+        if (other.getFunctionSchema() != null && other.getFunctionSchema().equals(this.getFunctionSchema()) == false)
+            return false;
         if (other.getParentActionSignature() == null ^ this.getParentActionSignature() == null)
             return false;
         if (other.getParentActionSignature() != null && other.getParentActionSignature().equals(this.getParentActionSignature()) == false)
@@ -881,6 +940,7 @@ public class AgentActionGroup implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getFunctionSchema() == null) ? 0 : getFunctionSchema().hashCode());
         hashCode = prime * hashCode + ((getParentActionSignature() == null) ? 0 : getParentActionSignature().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         return hashCode;

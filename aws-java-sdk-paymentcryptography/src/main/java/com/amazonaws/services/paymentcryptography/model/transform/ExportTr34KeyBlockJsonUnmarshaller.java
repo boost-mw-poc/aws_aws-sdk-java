@@ -52,6 +52,10 @@ public class ExportTr34KeyBlockJsonUnmarshaller implements Unmarshaller<ExportTr
                     context.nextToken();
                     exportTr34KeyBlock.setCertificateAuthorityPublicKeyIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("WrappingKeyCertificate", targetDepth)) {
+                    context.nextToken();
+                    exportTr34KeyBlock.setWrappingKeyCertificate(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ExportToken", targetDepth)) {
                     context.nextToken();
                     exportTr34KeyBlock.setExportToken(context.getUnmarshaller(String.class).unmarshall(context));
@@ -64,9 +68,9 @@ public class ExportTr34KeyBlockJsonUnmarshaller implements Unmarshaller<ExportTr
                     context.nextToken();
                     exportTr34KeyBlock.setRandomNonce(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("WrappingKeyCertificate", targetDepth)) {
+                if (context.testExpression("KeyBlockHeaders", targetDepth)) {
                     context.nextToken();
-                    exportTr34KeyBlock.setWrappingKeyCertificate(context.getUnmarshaller(String.class).unmarshall(context));
+                    exportTr34KeyBlock.setKeyBlockHeaders(KeyBlockHeadersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

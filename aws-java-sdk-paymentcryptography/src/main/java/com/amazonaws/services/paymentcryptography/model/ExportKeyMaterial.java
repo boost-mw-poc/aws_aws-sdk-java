@@ -31,12 +31,6 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
-     * </p>
-     */
-    private ExportKeyCryptogram keyCryptogram;
-    /**
-     * <p>
      * Parameter information for key material export using symmetric TR-31 key exchange method.
      * </p>
      */
@@ -47,46 +41,12 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private ExportTr34KeyBlock tr34KeyBlock;
-
     /**
      * <p>
      * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
      * </p>
-     * 
-     * @param keyCryptogram
-     *        Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
      */
-
-    public void setKeyCryptogram(ExportKeyCryptogram keyCryptogram) {
-        this.keyCryptogram = keyCryptogram;
-    }
-
-    /**
-     * <p>
-     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
-     * </p>
-     * 
-     * @return Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
-     */
-
-    public ExportKeyCryptogram getKeyCryptogram() {
-        return this.keyCryptogram;
-    }
-
-    /**
-     * <p>
-     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
-     * </p>
-     * 
-     * @param keyCryptogram
-     *        Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ExportKeyMaterial withKeyCryptogram(ExportKeyCryptogram keyCryptogram) {
-        setKeyCryptogram(keyCryptogram);
-        return this;
-    }
+    private ExportKeyCryptogram keyCryptogram;
 
     /**
      * <p>
@@ -169,6 +129,46 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     * </p>
+     * 
+     * @param keyCryptogram
+     *        Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     */
+
+    public void setKeyCryptogram(ExportKeyCryptogram keyCryptogram) {
+        this.keyCryptogram = keyCryptogram;
+    }
+
+    /**
+     * <p>
+     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     * </p>
+     * 
+     * @return Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     */
+
+    public ExportKeyCryptogram getKeyCryptogram() {
+        return this.keyCryptogram;
+    }
+
+    /**
+     * <p>
+     * Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     * </p>
+     * 
+     * @param keyCryptogram
+     *        Parameter information for key material export using asymmetric RSA wrap and unwrap key exchange method
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportKeyMaterial withKeyCryptogram(ExportKeyCryptogram keyCryptogram) {
+        setKeyCryptogram(keyCryptogram);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -180,12 +180,12 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getKeyCryptogram() != null)
-            sb.append("KeyCryptogram: ").append(getKeyCryptogram()).append(",");
         if (getTr31KeyBlock() != null)
             sb.append("Tr31KeyBlock: ").append(getTr31KeyBlock()).append(",");
         if (getTr34KeyBlock() != null)
-            sb.append("Tr34KeyBlock: ").append(getTr34KeyBlock());
+            sb.append("Tr34KeyBlock: ").append(getTr34KeyBlock()).append(",");
+        if (getKeyCryptogram() != null)
+            sb.append("KeyCryptogram: ").append(getKeyCryptogram());
         sb.append("}");
         return sb.toString();
     }
@@ -200,10 +200,6 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
         if (obj instanceof ExportKeyMaterial == false)
             return false;
         ExportKeyMaterial other = (ExportKeyMaterial) obj;
-        if (other.getKeyCryptogram() == null ^ this.getKeyCryptogram() == null)
-            return false;
-        if (other.getKeyCryptogram() != null && other.getKeyCryptogram().equals(this.getKeyCryptogram()) == false)
-            return false;
         if (other.getTr31KeyBlock() == null ^ this.getTr31KeyBlock() == null)
             return false;
         if (other.getTr31KeyBlock() != null && other.getTr31KeyBlock().equals(this.getTr31KeyBlock()) == false)
@@ -211,6 +207,10 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
         if (other.getTr34KeyBlock() == null ^ this.getTr34KeyBlock() == null)
             return false;
         if (other.getTr34KeyBlock() != null && other.getTr34KeyBlock().equals(this.getTr34KeyBlock()) == false)
+            return false;
+        if (other.getKeyCryptogram() == null ^ this.getKeyCryptogram() == null)
+            return false;
+        if (other.getKeyCryptogram() != null && other.getKeyCryptogram().equals(this.getKeyCryptogram()) == false)
             return false;
         return true;
     }
@@ -220,9 +220,9 @@ public class ExportKeyMaterial implements Serializable, Cloneable, StructuredPoj
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getKeyCryptogram() == null) ? 0 : getKeyCryptogram().hashCode());
         hashCode = prime * hashCode + ((getTr31KeyBlock() == null) ? 0 : getTr31KeyBlock().hashCode());
         hashCode = prime * hashCode + ((getTr34KeyBlock() == null) ? 0 : getTr34KeyBlock().hashCode());
+        hashCode = prime * hashCode + ((getKeyCryptogram() == null) ? 0 : getKeyCryptogram().hashCode());
         return hashCode;
     }
 

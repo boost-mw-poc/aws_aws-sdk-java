@@ -600,6 +600,19 @@ public class AbstractAWSTransferAsync extends AbstractAWSTransfer implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<StartDirectoryListingResult> startDirectoryListingAsync(StartDirectoryListingRequest request) {
+
+        return startDirectoryListingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartDirectoryListingResult> startDirectoryListingAsync(StartDirectoryListingRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartDirectoryListingRequest, StartDirectoryListingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartFileTransferResult> startFileTransferAsync(StartFileTransferRequest request) {
 
         return startFileTransferAsync(request, null);

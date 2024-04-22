@@ -25,57 +25,17 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The token for the next set of results, or an empty or null value if there are no more results.
-     * </p>
-     */
-    private String nextToken;
-    /**
-     * <p>
      * The list of tags associated with a <code>ResourceArn</code>. Each tag will list the key-value pair contained
      * within that tag.
      * </p>
      */
     private java.util.List<Tag> tags;
-
     /**
      * <p>
      * The token for the next set of results, or an empty or null value if there are no more results.
      * </p>
-     * 
-     * @param nextToken
-     *        The token for the next set of results, or an empty or null value if there are no more results.
      */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * The token for the next set of results, or an empty or null value if there are no more results.
-     * </p>
-     * 
-     * @return The token for the next set of results, or an empty or null value if there are no more results.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * The token for the next set of results, or an empty or null value if there are no more results.
-     * </p>
-     * 
-     * @param nextToken
-     *        The token for the next set of results, or an empty or null value if there are no more results.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListTagsForResourceResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
+    private String nextToken;
 
     /**
      * <p>
@@ -156,6 +116,46 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The token for the next set of results, or an empty or null value if there are no more results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token for the next set of results, or an empty or null value if there are no more results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * The token for the next set of results, or an empty or null value if there are no more results.
+     * </p>
+     * 
+     * @return The token for the next set of results, or an empty or null value if there are no more results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * The token for the next set of results, or an empty or null value if there are no more results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token for the next set of results, or an empty or null value if there are no more results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListTagsForResourceResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -167,10 +167,10 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -185,13 +185,13 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
         if (obj instanceof ListTagsForResourceResult == false)
             return false;
         ListTagsForResourceResult other = (ListTagsForResourceResult) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -201,8 +201,8 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

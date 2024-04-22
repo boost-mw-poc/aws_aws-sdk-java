@@ -48,6 +48,10 @@ public class ActionGroupExecutorJsonUnmarshaller implements Unmarshaller<ActionG
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("customControl", targetDepth)) {
+                    context.nextToken();
+                    actionGroupExecutor.setCustomControl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("lambda", targetDepth)) {
                     context.nextToken();
                     actionGroupExecutor.setLambda(context.getUnmarshaller(String.class).unmarshall(context));

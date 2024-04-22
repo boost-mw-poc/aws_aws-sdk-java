@@ -48,21 +48,21 @@ public class ImportKeyCryptogramJsonUnmarshaller implements Unmarshaller<ImportK
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("Exportable", targetDepth)) {
-                    context.nextToken();
-                    importKeyCryptogram.setExportable(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("ImportToken", targetDepth)) {
-                    context.nextToken();
-                    importKeyCryptogram.setImportToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("KeyAttributes", targetDepth)) {
                     context.nextToken();
                     importKeyCryptogram.setKeyAttributes(KeyAttributesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Exportable", targetDepth)) {
+                    context.nextToken();
+                    importKeyCryptogram.setExportable(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("WrappedKeyCryptogram", targetDepth)) {
                     context.nextToken();
                     importKeyCryptogram.setWrappedKeyCryptogram(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ImportToken", targetDepth)) {
+                    context.nextToken();
+                    importKeyCryptogram.setImportToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("WrappingSpec", targetDepth)) {
                     context.nextToken();

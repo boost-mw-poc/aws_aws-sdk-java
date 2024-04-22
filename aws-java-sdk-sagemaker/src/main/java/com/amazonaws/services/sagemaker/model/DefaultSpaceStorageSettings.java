@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The default storage settings for a private space.
+ * The default storage settings for a space.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DefaultSpaceStorageSettings"
@@ -30,18 +30,18 @@ public class DefaultSpaceStorageSettings implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The default EBS storage settings for a private space.
+     * The default EBS storage settings for a space.
      * </p>
      */
     private DefaultEbsStorageSettings defaultEbsStorageSettings;
 
     /**
      * <p>
-     * The default EBS storage settings for a private space.
+     * The default EBS storage settings for a space.
      * </p>
      * 
      * @param defaultEbsStorageSettings
-     *        The default EBS storage settings for a private space.
+     *        The default EBS storage settings for a space.
      */
 
     public void setDefaultEbsStorageSettings(DefaultEbsStorageSettings defaultEbsStorageSettings) {
@@ -50,10 +50,10 @@ public class DefaultSpaceStorageSettings implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The default EBS storage settings for a private space.
+     * The default EBS storage settings for a space.
      * </p>
      * 
-     * @return The default EBS storage settings for a private space.
+     * @return The default EBS storage settings for a space.
      */
 
     public DefaultEbsStorageSettings getDefaultEbsStorageSettings() {
@@ -62,11 +62,11 @@ public class DefaultSpaceStorageSettings implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The default EBS storage settings for a private space.
+     * The default EBS storage settings for a space.
      * </p>
      * 
      * @param defaultEbsStorageSettings
-     *        The default EBS storage settings for a private space.
+     *        The default EBS storage settings for a space.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
