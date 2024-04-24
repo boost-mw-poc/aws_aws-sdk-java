@@ -29,6 +29,8 @@ public class TaskScheduleMarshaller {
 
     private static final MarshallingInfo<String> SCHEDULEEXPRESSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScheduleExpression").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Status").build();
 
     private static final TaskScheduleMarshaller instance = new TaskScheduleMarshaller();
 
@@ -47,6 +49,7 @@ public class TaskScheduleMarshaller {
 
         try {
             protocolMarshaller.marshall(taskSchedule.getScheduleExpression(), SCHEDULEEXPRESSION_BINDING);
+            protocolMarshaller.marshall(taskSchedule.getStatus(), STATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

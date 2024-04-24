@@ -33,7 +33,9 @@ public class ListComputeRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String fleetId;
     /**
      * <p>
-     * The name of a location to retrieve compute resources for.
+     * The name of a location to retrieve compute resources for. For an Amazon GameLift Anywhere fleet, use a custom
+     * location. For a multi-location EC2 or container fleet, provide a Amazon Web Services Region or Local Zone code
+     * (for example: <code>us-west-2</code> or <code>us-west-2-lax-1</code>).
      * </p>
      */
     private String location;
@@ -94,11 +96,15 @@ public class ListComputeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of a location to retrieve compute resources for.
+     * The name of a location to retrieve compute resources for. For an Amazon GameLift Anywhere fleet, use a custom
+     * location. For a multi-location EC2 or container fleet, provide a Amazon Web Services Region or Local Zone code
+     * (for example: <code>us-west-2</code> or <code>us-west-2-lax-1</code>).
      * </p>
      * 
      * @param location
-     *        The name of a location to retrieve compute resources for.
+     *        The name of a location to retrieve compute resources for. For an Amazon GameLift Anywhere fleet, use a
+     *        custom location. For a multi-location EC2 or container fleet, provide a Amazon Web Services Region or
+     *        Local Zone code (for example: <code>us-west-2</code> or <code>us-west-2-lax-1</code>).
      */
 
     public void setLocation(String location) {
@@ -107,10 +113,14 @@ public class ListComputeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of a location to retrieve compute resources for.
+     * The name of a location to retrieve compute resources for. For an Amazon GameLift Anywhere fleet, use a custom
+     * location. For a multi-location EC2 or container fleet, provide a Amazon Web Services Region or Local Zone code
+     * (for example: <code>us-west-2</code> or <code>us-west-2-lax-1</code>).
      * </p>
      * 
-     * @return The name of a location to retrieve compute resources for.
+     * @return The name of a location to retrieve compute resources for. For an Amazon GameLift Anywhere fleet, use a
+     *         custom location. For a multi-location EC2 or container fleet, provide a Amazon Web Services Region or
+     *         Local Zone code (for example: <code>us-west-2</code> or <code>us-west-2-lax-1</code>).
      */
 
     public String getLocation() {
@@ -119,11 +129,15 @@ public class ListComputeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of a location to retrieve compute resources for.
+     * The name of a location to retrieve compute resources for. For an Amazon GameLift Anywhere fleet, use a custom
+     * location. For a multi-location EC2 or container fleet, provide a Amazon Web Services Region or Local Zone code
+     * (for example: <code>us-west-2</code> or <code>us-west-2-lax-1</code>).
      * </p>
      * 
      * @param location
-     *        The name of a location to retrieve compute resources for.
+     *        The name of a location to retrieve compute resources for. For an Amazon GameLift Anywhere fleet, use a
+     *        custom location. For a multi-location EC2 or container fleet, provide a Amazon Web Services Region or
+     *        Local Zone code (for example: <code>us-west-2</code> or <code>us-west-2-lax-1</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

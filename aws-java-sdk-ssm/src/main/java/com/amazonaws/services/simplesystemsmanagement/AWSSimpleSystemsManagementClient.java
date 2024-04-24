@@ -404,6 +404,10 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
                             new JsonErrorShapeMetadata().withErrorCode("InvalidAllowedPatternException").withExceptionUnmarshaller(
                                     com.amazonaws.services.simplesystemsmanagement.model.transform.InvalidAllowedPatternExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidInstancePropertyFilterValue").withExceptionUnmarshaller(
+                                    com.amazonaws.services.simplesystemsmanagement.model.transform.InvalidInstancePropertyFilterValueExceptionUnmarshaller
+                                            .getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("OpsItemNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.simplesystemsmanagement.model.transform.OpsItemNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -4161,6 +4165,101 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
             HttpResponseHandler<AmazonWebServiceResponse<DescribeInstancePatchesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeInstancePatchesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * An API operation used by the Systems Manager console to display information about Systems Manager managed nodes.
+     * </p>
+     * 
+     * @param describeInstancePropertiesRequest
+     * @return Result of the DescribeInstanceProperties operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The specified token isn't valid.
+     * @throws InvalidFilterKeyException
+     *         The specified key isn't valid.
+     * @throws InvalidInstanceIdException
+     *         The following problems can cause this exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You don't have permission to access the managed node.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         SSM Agent isn't registered with the SSM endpoint. Try reinstalling SSM Agent.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
+     *         <code>Terminated</code>.
+     *         </p>
+     *         </li>
+     * @throws InvalidActivationIdException
+     *         The activation ID isn't valid. Verify the you entered the correct ActivationId or ActivationCode and try
+     *         again.
+     * @throws InvalidInstancePropertyFilterValueException
+     *         The specified filter value isn't valid.
+     * @throws InternalServerErrorException
+     *         An error occurred on the server side.
+     * @throws InvalidDocumentException
+     *         The specified SSM document doesn't exist.
+     * @sample AWSSimpleSystemsManagement.DescribeInstanceProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInstanceProperties" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeInstancePropertiesResult describeInstanceProperties(DescribeInstancePropertiesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeInstanceProperties(request);
+    }
+
+    @SdkInternalApi
+    final DescribeInstancePropertiesResult executeDescribeInstanceProperties(DescribeInstancePropertiesRequest describeInstancePropertiesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeInstancePropertiesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeInstancePropertiesRequest> request = null;
+        Response<DescribeInstancePropertiesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeInstancePropertiesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeInstancePropertiesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SSM");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeInstanceProperties");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeInstancePropertiesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeInstancePropertiesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -83,6 +83,37 @@ public interface AWSEntityResolutionAsync extends AWSEntityResolution {
 
     /**
      * <p>
+     * Deletes multiple unique IDs in a matching workflow.
+     * </p>
+     * 
+     * @param batchDeleteUniqueIdRequest
+     * @return A Java Future containing the result of the BatchDeleteUniqueId operation returned by the service.
+     * @sample AWSEntityResolutionAsync.BatchDeleteUniqueId
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/BatchDeleteUniqueId"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteUniqueIdResult> batchDeleteUniqueIdAsync(BatchDeleteUniqueIdRequest batchDeleteUniqueIdRequest);
+
+    /**
+     * <p>
+     * Deletes multiple unique IDs in a matching workflow.
+     * </p>
+     * 
+     * @param batchDeleteUniqueIdRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchDeleteUniqueId operation returned by the service.
+     * @sample AWSEntityResolutionAsyncHandler.BatchDeleteUniqueId
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/BatchDeleteUniqueId"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteUniqueIdResult> batchDeleteUniqueIdAsync(BatchDeleteUniqueIdRequest batchDeleteUniqueIdRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchDeleteUniqueIdRequest, BatchDeleteUniqueIdResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an <code>IdMappingWorkflow</code> object which stores the configuration of the data processing job to be
      * run. Each <code>IdMappingWorkflow</code> must have a unique workflow name. To modify an existing workflow, use
      * the <code>UpdateIdMappingWorkflow</code> API.

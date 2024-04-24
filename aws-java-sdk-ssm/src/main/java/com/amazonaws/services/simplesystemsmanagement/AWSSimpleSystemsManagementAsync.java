@@ -2015,6 +2015,39 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
+     * An API operation used by the Systems Manager console to display information about Systems Manager managed nodes.
+     * </p>
+     * 
+     * @param describeInstancePropertiesRequest
+     * @return A Java Future containing the result of the DescribeInstanceProperties operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsync.DescribeInstanceProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInstanceProperties" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInstancePropertiesResult> describeInstancePropertiesAsync(
+            DescribeInstancePropertiesRequest describeInstancePropertiesRequest);
+
+    /**
+     * <p>
+     * An API operation used by the Systems Manager console to display information about Systems Manager managed nodes.
+     * </p>
+     * 
+     * @param describeInstancePropertiesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeInstanceProperties operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsyncHandler.DescribeInstanceProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInstanceProperties" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInstancePropertiesResult> describeInstancePropertiesAsync(
+            DescribeInstancePropertiesRequest describeInstancePropertiesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeInstancePropertiesRequest, DescribeInstancePropertiesResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes a specific delete inventory operation.
      * </p>
      * 

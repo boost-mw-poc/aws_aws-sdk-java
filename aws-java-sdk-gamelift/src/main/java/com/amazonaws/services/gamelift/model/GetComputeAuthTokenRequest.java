@@ -33,7 +33,10 @@ public class GetComputeAuthTokenRequest extends com.amazonaws.AmazonWebServiceRe
     private String fleetId;
     /**
      * <p>
-     * The name of the compute resource you are requesting the authentication token for.
+     * The name of the compute resource you are requesting the authentication token for. For an Anywhere fleet compute,
+     * use the registered compute name. For an EC2 fleet instance, use the instance ID. For a container fleet, use the
+     * compute name (for example, <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or
+     * the compute ARN.
      * </p>
      */
     private String computeName;
@@ -80,11 +83,17 @@ public class GetComputeAuthTokenRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the compute resource you are requesting the authentication token for.
+     * The name of the compute resource you are requesting the authentication token for. For an Anywhere fleet compute,
+     * use the registered compute name. For an EC2 fleet instance, use the instance ID. For a container fleet, use the
+     * compute name (for example, <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or
+     * the compute ARN.
      * </p>
      * 
      * @param computeName
-     *        The name of the compute resource you are requesting the authentication token for.
+     *        The name of the compute resource you are requesting the authentication token for. For an Anywhere fleet
+     *        compute, use the registered compute name. For an EC2 fleet instance, use the instance ID. For a container
+     *        fleet, use the compute name (for example,
+     *        <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      */
 
     public void setComputeName(String computeName) {
@@ -93,10 +102,16 @@ public class GetComputeAuthTokenRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the compute resource you are requesting the authentication token for.
+     * The name of the compute resource you are requesting the authentication token for. For an Anywhere fleet compute,
+     * use the registered compute name. For an EC2 fleet instance, use the instance ID. For a container fleet, use the
+     * compute name (for example, <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or
+     * the compute ARN.
      * </p>
      * 
-     * @return The name of the compute resource you are requesting the authentication token for.
+     * @return The name of the compute resource you are requesting the authentication token for. For an Anywhere fleet
+     *         compute, use the registered compute name. For an EC2 fleet instance, use the instance ID. For a container
+     *         fleet, use the compute name (for example,
+     *         <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      */
 
     public String getComputeName() {
@@ -105,11 +120,17 @@ public class GetComputeAuthTokenRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the compute resource you are requesting the authentication token for.
+     * The name of the compute resource you are requesting the authentication token for. For an Anywhere fleet compute,
+     * use the registered compute name. For an EC2 fleet instance, use the instance ID. For a container fleet, use the
+     * compute name (for example, <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or
+     * the compute ARN.
      * </p>
      * 
      * @param computeName
-     *        The name of the compute resource you are requesting the authentication token for.
+     *        The name of the compute resource you are requesting the authentication token for. For an Anywhere fleet
+     *        compute, use the registered compute name. For an EC2 fleet instance, use the instance ID. For a container
+     *        fleet, use the compute name (for example,
+     *        <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,27 +27,28 @@ public class GetComputeAccessRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique identifier for the fleet that contains the compute resource you want to connect to. You can use either
+     * A unique identifier for the fleet that holds the compute resource that you want to connect to. You can use either
      * the fleet ID or ARN value.
      * </p>
      */
     private String fleetId;
     /**
      * <p>
-     * A unique identifier for the compute resource that you want to connect to. You can use either a registered compute
-     * name or an instance ID.
+     * A unique identifier for the compute resource that you want to connect to. For an EC2 fleet compute, use the
+     * instance ID. For a container fleet, use the compute name (for example,
+     * <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * </p>
      */
     private String computeName;
 
     /**
      * <p>
-     * A unique identifier for the fleet that contains the compute resource you want to connect to. You can use either
+     * A unique identifier for the fleet that holds the compute resource that you want to connect to. You can use either
      * the fleet ID or ARN value.
      * </p>
      * 
      * @param fleetId
-     *        A unique identifier for the fleet that contains the compute resource you want to connect to. You can use
+     *        A unique identifier for the fleet that holds the compute resource that you want to connect to. You can use
      *        either the fleet ID or ARN value.
      */
 
@@ -57,12 +58,12 @@ public class GetComputeAccessRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique identifier for the fleet that contains the compute resource you want to connect to. You can use either
+     * A unique identifier for the fleet that holds the compute resource that you want to connect to. You can use either
      * the fleet ID or ARN value.
      * </p>
      * 
-     * @return A unique identifier for the fleet that contains the compute resource you want to connect to. You can use
-     *         either the fleet ID or ARN value.
+     * @return A unique identifier for the fleet that holds the compute resource that you want to connect to. You can
+     *         use either the fleet ID or ARN value.
      */
 
     public String getFleetId() {
@@ -71,12 +72,12 @@ public class GetComputeAccessRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique identifier for the fleet that contains the compute resource you want to connect to. You can use either
+     * A unique identifier for the fleet that holds the compute resource that you want to connect to. You can use either
      * the fleet ID or ARN value.
      * </p>
      * 
      * @param fleetId
-     *        A unique identifier for the fleet that contains the compute resource you want to connect to. You can use
+     *        A unique identifier for the fleet that holds the compute resource that you want to connect to. You can use
      *        either the fleet ID or ARN value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -88,13 +89,15 @@ public class GetComputeAccessRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique identifier for the compute resource that you want to connect to. You can use either a registered compute
-     * name or an instance ID.
+     * A unique identifier for the compute resource that you want to connect to. For an EC2 fleet compute, use the
+     * instance ID. For a container fleet, use the compute name (for example,
+     * <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * </p>
      * 
      * @param computeName
-     *        A unique identifier for the compute resource that you want to connect to. You can use either a registered
-     *        compute name or an instance ID.
+     *        A unique identifier for the compute resource that you want to connect to. For an EC2 fleet compute, use
+     *        the instance ID. For a container fleet, use the compute name (for example,
+     *        <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      */
 
     public void setComputeName(String computeName) {
@@ -103,12 +106,14 @@ public class GetComputeAccessRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique identifier for the compute resource that you want to connect to. You can use either a registered compute
-     * name or an instance ID.
+     * A unique identifier for the compute resource that you want to connect to. For an EC2 fleet compute, use the
+     * instance ID. For a container fleet, use the compute name (for example,
+     * <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * </p>
      * 
-     * @return A unique identifier for the compute resource that you want to connect to. You can use either a registered
-     *         compute name or an instance ID.
+     * @return A unique identifier for the compute resource that you want to connect to. For an EC2 fleet compute, use
+     *         the instance ID. For a container fleet, use the compute name (for example,
+     *         <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      */
 
     public String getComputeName() {
@@ -117,13 +122,15 @@ public class GetComputeAccessRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique identifier for the compute resource that you want to connect to. You can use either a registered compute
-     * name or an instance ID.
+     * A unique identifier for the compute resource that you want to connect to. For an EC2 fleet compute, use the
+     * instance ID. For a container fleet, use the compute name (for example,
+     * <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * </p>
      * 
      * @param computeName
-     *        A unique identifier for the compute resource that you want to connect to. You can use either a registered
-     *        compute name or an instance ID.
+     *        A unique identifier for the compute resource that you want to connect to. For an EC2 fleet compute, use
+     *        the instance ID. For a container fleet, use the compute name (for example,
+     *        <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

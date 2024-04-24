@@ -118,6 +118,10 @@ public class ModifyNetworkInterfaceAttributeRequestMarshaller implements
             }
         }
 
+        if (modifyNetworkInterfaceAttributeRequest.getAssociatePublicIpAddress() != null) {
+            request.addParameter("AssociatePublicIpAddress", StringUtils.fromBoolean(modifyNetworkInterfaceAttributeRequest.getAssociatePublicIpAddress()));
+        }
+
         return request;
     }
 

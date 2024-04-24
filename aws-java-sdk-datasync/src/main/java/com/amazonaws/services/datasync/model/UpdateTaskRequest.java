@@ -30,7 +30,7 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the task to update.
+     * Specifies the ARN of the task that you want to update.
      * </p>
      */
     private String taskArn;
@@ -38,38 +38,38 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private Options options;
     /**
      * <p>
-     * Specifies a list of filter rules that exclude specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies exclude filters that define the files, objects, and folders in your source location that you don't want
+     * DataSync to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      */
     private java.util.List<FilterRule> excludes;
     /**
      * <p>
-     * Specifies a schedule used to periodically transfer files from a source to a destination location. You can
-     * configure your task to execute hourly, daily, weekly or on specific days of the week. You control when in the day
-     * or hour you want the task to execute. The time you specify is UTC time. For more information, see <a
+     * Specifies a schedule for when you want your task to run. For more information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your task</a>.
      * </p>
      */
     private TaskSchedule schedule;
     /**
      * <p>
-     * The name of the task to update.
+     * Specifies the name of your task.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
+     * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your task.
      * </p>
      */
     private String cloudWatchLogGroupArn;
     /**
      * <p>
-     * Specifies a list of filter rules that include specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies include filters define the files, objects, and folders in your source location that you want DataSync
+     * to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      */
     private java.util.List<FilterRule> includes;
@@ -112,11 +112,11 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the task to update.
+     * Specifies the ARN of the task that you want to update.
      * </p>
      * 
      * @param taskArn
-     *        The Amazon Resource Name (ARN) of the resource name of the task to update.
+     *        Specifies the ARN of the task that you want to update.
      */
 
     public void setTaskArn(String taskArn) {
@@ -125,10 +125,10 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the task to update.
+     * Specifies the ARN of the task that you want to update.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the resource name of the task to update.
+     * @return Specifies the ARN of the task that you want to update.
      */
 
     public String getTaskArn() {
@@ -137,11 +137,11 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the task to update.
+     * Specifies the ARN of the task that you want to update.
      * </p>
      * 
      * @param taskArn
-     *        The Amazon Resource Name (ARN) of the resource name of the task to update.
+     *        Specifies the ARN of the task that you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -178,15 +178,16 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a list of filter rules that exclude specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies exclude filters that define the files, objects, and folders in your source location that you don't want
+     * DataSync to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      * 
-     * @return Specifies a list of filter rules that exclude specific data during your transfer. For more information
-     *         and examples, see <a
-     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data transferred by
-     *         DataSync</a>.
+     * @return Specifies exclude filters that define the files, objects, and folders in your source location that you
+     *         don't want DataSync to transfer. For more information and examples, see <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync
+     *         transfers by using filters</a>.
      */
 
     public java.util.List<FilterRule> getExcludes() {
@@ -195,15 +196,17 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a list of filter rules that exclude specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies exclude filters that define the files, objects, and folders in your source location that you don't want
+     * DataSync to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      * 
      * @param excludes
-     *        Specifies a list of filter rules that exclude specific data during your transfer. For more information and
-     *        examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering
-     *        data transferred by DataSync</a>.
+     *        Specifies exclude filters that define the files, objects, and folders in your source location that you
+     *        don't want DataSync to transfer. For more information and examples, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync
+     *        transfers by using filters</a>.
      */
 
     public void setExcludes(java.util.Collection<FilterRule> excludes) {
@@ -217,9 +220,10 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a list of filter rules that exclude specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies exclude filters that define the files, objects, and folders in your source location that you don't want
+     * DataSync to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -228,9 +232,10 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param excludes
-     *        Specifies a list of filter rules that exclude specific data during your transfer. For more information and
-     *        examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering
-     *        data transferred by DataSync</a>.
+     *        Specifies exclude filters that define the files, objects, and folders in your source location that you
+     *        don't want DataSync to transfer. For more information and examples, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync
+     *        transfers by using filters</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -246,15 +251,17 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a list of filter rules that exclude specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies exclude filters that define the files, objects, and folders in your source location that you don't want
+     * DataSync to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      * 
      * @param excludes
-     *        Specifies a list of filter rules that exclude specific data during your transfer. For more information and
-     *        examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering
-     *        data transferred by DataSync</a>.
+     *        Specifies exclude filters that define the files, objects, and folders in your source location that you
+     *        don't want DataSync to transfer. For more information and examples, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync
+     *        transfers by using filters</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -265,17 +272,13 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a schedule used to periodically transfer files from a source to a destination location. You can
-     * configure your task to execute hourly, daily, weekly or on specific days of the week. You control when in the day
-     * or hour you want the task to execute. The time you specify is UTC time. For more information, see <a
+     * Specifies a schedule for when you want your task to run. For more information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your task</a>.
      * </p>
      * 
      * @param schedule
-     *        Specifies a schedule used to periodically transfer files from a source to a destination location. You can
-     *        configure your task to execute hourly, daily, weekly or on specific days of the week. You control when in
-     *        the day or hour you want the task to execute. The time you specify is UTC time. For more information, see
-     *        <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your
+     *        Specifies a schedule for when you want your task to run. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your
      *        task</a>.
      */
 
@@ -285,16 +288,12 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a schedule used to periodically transfer files from a source to a destination location. You can
-     * configure your task to execute hourly, daily, weekly or on specific days of the week. You control when in the day
-     * or hour you want the task to execute. The time you specify is UTC time. For more information, see <a
+     * Specifies a schedule for when you want your task to run. For more information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your task</a>.
      * </p>
      * 
-     * @return Specifies a schedule used to periodically transfer files from a source to a destination location. You can
-     *         configure your task to execute hourly, daily, weekly or on specific days of the week. You control when in
-     *         the day or hour you want the task to execute. The time you specify is UTC time. For more information, see
-     *         <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your
+     * @return Specifies a schedule for when you want your task to run. For more information, see <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your
      *         task</a>.
      */
 
@@ -304,17 +303,13 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a schedule used to periodically transfer files from a source to a destination location. You can
-     * configure your task to execute hourly, daily, weekly or on specific days of the week. You control when in the day
-     * or hour you want the task to execute. The time you specify is UTC time. For more information, see <a
+     * Specifies a schedule for when you want your task to run. For more information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your task</a>.
      * </p>
      * 
      * @param schedule
-     *        Specifies a schedule used to periodically transfer files from a source to a destination location. You can
-     *        configure your task to execute hourly, daily, weekly or on specific days of the week. You control when in
-     *        the day or hour you want the task to execute. The time you specify is UTC time. For more information, see
-     *        <a href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your
+     *        Specifies a schedule for when you want your task to run. For more information, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html">Scheduling your
      *        task</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -326,11 +321,11 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the task to update.
+     * Specifies the name of your task.
      * </p>
      * 
      * @param name
-     *        The name of the task to update.
+     *        Specifies the name of your task.
      */
 
     public void setName(String name) {
@@ -339,10 +334,10 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the task to update.
+     * Specifies the name of your task.
      * </p>
      * 
-     * @return The name of the task to update.
+     * @return Specifies the name of your task.
      */
 
     public String getName() {
@@ -351,11 +346,11 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The name of the task to update.
+     * Specifies the name of your task.
      * </p>
      * 
      * @param name
-     *        The name of the task to update.
+     *        Specifies the name of your task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -366,11 +361,11 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
+     * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your task.
      * </p>
      * 
      * @param cloudWatchLogGroupArn
-     *        The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
+     *        Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your task.
      */
 
     public void setCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
@@ -379,10 +374,10 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
+     * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your task.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
+     * @return Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your task.
      */
 
     public String getCloudWatchLogGroupArn() {
@@ -391,11 +386,11 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
+     * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your task.
      * </p>
      * 
      * @param cloudWatchLogGroupArn
-     *        The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
+     *        Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -406,15 +401,16 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a list of filter rules that include specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies include filters define the files, objects, and folders in your source location that you want DataSync
+     * to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      * 
-     * @return Specifies a list of filter rules that include specific data during your transfer. For more information
-     *         and examples, see <a
-     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data transferred by
-     *         DataSync</a>.
+     * @return Specifies include filters define the files, objects, and folders in your source location that you want
+     *         DataSync to transfer. For more information and examples, see <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync
+     *         transfers by using filters</a>.
      */
 
     public java.util.List<FilterRule> getIncludes() {
@@ -423,15 +419,17 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a list of filter rules that include specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies include filters define the files, objects, and folders in your source location that you want DataSync
+     * to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      * 
      * @param includes
-     *        Specifies a list of filter rules that include specific data during your transfer. For more information and
-     *        examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering
-     *        data transferred by DataSync</a>.
+     *        Specifies include filters define the files, objects, and folders in your source location that you want
+     *        DataSync to transfer. For more information and examples, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync
+     *        transfers by using filters</a>.
      */
 
     public void setIncludes(java.util.Collection<FilterRule> includes) {
@@ -445,9 +443,10 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a list of filter rules that include specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies include filters define the files, objects, and folders in your source location that you want DataSync
+     * to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -456,9 +455,10 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param includes
-     *        Specifies a list of filter rules that include specific data during your transfer. For more information and
-     *        examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering
-     *        data transferred by DataSync</a>.
+     *        Specifies include filters define the files, objects, and folders in your source location that you want
+     *        DataSync to transfer. For more information and examples, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync
+     *        transfers by using filters</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -474,15 +474,17 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Specifies a list of filter rules that include specific data during your transfer. For more information and
-     * examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering data
-     * transferred by DataSync</a>.
+     * Specifies include filters define the files, objects, and folders in your source location that you want DataSync
+     * to transfer. For more information and examples, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync transfers by
+     * using filters</a>.
      * </p>
      * 
      * @param includes
-     *        Specifies a list of filter rules that include specific data during your transfer. For more information and
-     *        examples, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Filtering
-     *        data transferred by DataSync</a>.
+     *        Specifies include filters define the files, objects, and folders in your source location that you want
+     *        DataSync to transfer. For more information and examples, see <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html">Specifying what DataSync
+     *        transfers by using filters</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

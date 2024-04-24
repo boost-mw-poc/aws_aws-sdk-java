@@ -51,6 +51,12 @@ public class ComputeMarshaller {
             .marshallLocationName("Type").build();
     private static final MarshallingInfo<String> GAMELIFTSERVICESDKENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GameLiftServiceSdkEndpoint").build();
+    private static final MarshallingInfo<String> GAMELIFTAGENTENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GameLiftAgentEndpoint").build();
+    private static final MarshallingInfo<String> INSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceId").build();
+    private static final MarshallingInfo<StructuredPojo> CONTAINERATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContainerAttributes").build();
 
     private static final ComputeMarshaller instance = new ComputeMarshaller();
 
@@ -80,6 +86,9 @@ public class ComputeMarshaller {
             protocolMarshaller.marshall(compute.getOperatingSystem(), OPERATINGSYSTEM_BINDING);
             protocolMarshaller.marshall(compute.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(compute.getGameLiftServiceSdkEndpoint(), GAMELIFTSERVICESDKENDPOINT_BINDING);
+            protocolMarshaller.marshall(compute.getGameLiftAgentEndpoint(), GAMELIFTAGENTENDPOINT_BINDING);
+            protocolMarshaller.marshall(compute.getInstanceId(), INSTANCEID_BINDING);
+            protocolMarshaller.marshall(compute.getContainerAttributes(), CONTAINERATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

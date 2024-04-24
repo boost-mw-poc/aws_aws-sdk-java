@@ -1609,6 +1609,57 @@ public interface AWSSimpleSystemsManagement {
 
     /**
      * <p>
+     * An API operation used by the Systems Manager console to display information about Systems Manager managed nodes.
+     * </p>
+     * 
+     * @param describeInstancePropertiesRequest
+     * @return Result of the DescribeInstanceProperties operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The specified token isn't valid.
+     * @throws InvalidFilterKeyException
+     *         The specified key isn't valid.
+     * @throws InvalidInstanceIdException
+     *         The following problems can cause this exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You don't have permission to access the managed node.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Amazon Web Services Systems Manager Agent (SSM Agent) isn't running. Verify that SSM Agent is running.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         SSM Agent isn't registered with the SSM endpoint. Try reinstalling SSM Agent.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The managed node isn't in a valid state. Valid states are: <code>Running</code>, <code>Pending</code>,
+     *         <code>Stopped</code>, and <code>Stopping</code>. Invalid states are: <code>Shutting-down</code> and
+     *         <code>Terminated</code>.
+     *         </p>
+     *         </li>
+     * @throws InvalidActivationIdException
+     *         The activation ID isn't valid. Verify the you entered the correct ActivationId or ActivationCode and try
+     *         again.
+     * @throws InvalidInstancePropertyFilterValueException
+     *         The specified filter value isn't valid.
+     * @throws InternalServerErrorException
+     *         An error occurred on the server side.
+     * @throws InvalidDocumentException
+     *         The specified SSM document doesn't exist.
+     * @sample AWSSimpleSystemsManagement.DescribeInstanceProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DescribeInstanceProperties" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeInstancePropertiesResult describeInstanceProperties(DescribeInstancePropertiesRequest describeInstancePropertiesRequest);
+
+    /**
+     * <p>
      * Describes a specific delete inventory operation.
      * </p>
      * 

@@ -34,8 +34,13 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
      * <code>"Name": "name:version"</code>.
      * </p>
+     * <note>
      * <p>
-     * For more information about shared parameters, see <a
+     * The results for <code>GetParameters</code> requests are listed in alphabetical order in query responses.
+     * </p>
+     * </note>
+     * <p>
+     * For information about shared parameters, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
      * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
@@ -58,8 +63,13 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
      * <code>"Name": "name:version"</code>.
      * </p>
+     * <note>
      * <p>
-     * For more information about shared parameters, see <a
+     * The results for <code>GetParameters</code> requests are listed in alphabetical order in query responses.
+     * </p>
+     * </note>
+     * <p>
+     * For information about shared parameters, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
      * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
@@ -70,8 +80,13 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
      *         <code>"Name": "name:version"</code>.
      *         </p>
+     *         <note>
      *         <p>
-     *         For more information about shared parameters, see <a href=
+     *         The results for <code>GetParameters</code> requests are listed in alphabetical order in query responses.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         For information about shared parameters, see <a href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
      *         >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
@@ -92,8 +107,13 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
      * <code>"Name": "name:version"</code>.
      * </p>
+     * <note>
      * <p>
-     * For more information about shared parameters, see <a
+     * The results for <code>GetParameters</code> requests are listed in alphabetical order in query responses.
+     * </p>
+     * </note>
+     * <p>
+     * For information about shared parameters, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
      * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
@@ -105,8 +125,13 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
      *        <code>"Name": "name:version"</code>.
      *        </p>
+     *        <note>
      *        <p>
-     *        For more information about shared parameters, see <a href=
+     *        The results for <code>GetParameters</code> requests are listed in alphabetical order in query responses.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For information about shared parameters, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
      *        >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
@@ -129,8 +154,13 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
      * <code>"Name": "name:version"</code>.
      * </p>
+     * <note>
      * <p>
-     * For more information about shared parameters, see <a
+     * The results for <code>GetParameters</code> requests are listed in alphabetical order in query responses.
+     * </p>
+     * </note>
+     * <p>
+     * For information about shared parameters, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
      * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
@@ -147,8 +177,13 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
      *        <code>"Name": "name:version"</code>.
      *        </p>
+     *        <note>
      *        <p>
-     *        For more information about shared parameters, see <a href=
+     *        The results for <code>GetParameters</code> requests are listed in alphabetical order in query responses.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For information about shared parameters, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
      *        >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -173,8 +208,13 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
      * <code>"Name": "name:version"</code>.
      * </p>
+     * <note>
      * <p>
-     * For more information about shared parameters, see <a
+     * The results for <code>GetParameters</code> requests are listed in alphabetical order in query responses.
+     * </p>
+     * </note>
+     * <p>
+     * For information about shared parameters, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
      * >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
@@ -186,8 +226,13 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
      *        <code>"Name": "name:version"</code>.
      *        </p>
+     *        <note>
      *        <p>
-     *        For more information about shared parameters, see <a href=
+     *        The results for <code>GetParameters</code> requests are listed in alphabetical order in query responses.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For information about shared parameters, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-shared-parameters.html"
      *        >Working with shared parameters</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

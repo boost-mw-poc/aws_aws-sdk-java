@@ -33,6 +33,8 @@ public enum GameliftActions implements Action {
     CreateAlias("gamelift:CreateAlias"),
     /** Action for the CreateBuild operation. */
     CreateBuild("gamelift:CreateBuild"),
+    /** Action for the CreateContainerGroupDefinition operation. */
+    CreateContainerGroupDefinition("gamelift:CreateContainerGroupDefinition"),
     /** Action for the CreateFleet operation. */
     CreateFleet("gamelift:CreateFleet"),
     /** Action for the CreateFleetLocations operation. */
@@ -63,6 +65,8 @@ public enum GameliftActions implements Action {
     DeleteAlias("gamelift:DeleteAlias"),
     /** Action for the DeleteBuild operation. */
     DeleteBuild("gamelift:DeleteBuild"),
+    /** Action for the DeleteContainerGroupDefinition operation. */
+    DeleteContainerGroupDefinition("gamelift:DeleteContainerGroupDefinition"),
     /** Action for the DeleteFleet operation. */
     DeleteFleet("gamelift:DeleteFleet"),
     /** Action for the DeleteFleetLocations operation. */
@@ -95,6 +99,8 @@ public enum GameliftActions implements Action {
     DescribeBuild("gamelift:DescribeBuild"),
     /** Action for the DescribeCompute operation. */
     DescribeCompute("gamelift:DescribeCompute"),
+    /** Action for the DescribeContainerGroupDefinition operation. */
+    DescribeContainerGroupDefinition("gamelift:DescribeContainerGroupDefinition"),
     /** Action for the DescribeEC2InstanceLimits operation. */
     DescribeEC2InstanceLimits("gamelift:DescribeEC2InstanceLimits"),
     /** Action for the DescribeFleetAttributes operation. */
@@ -161,6 +167,8 @@ public enum GameliftActions implements Action {
     ListBuilds("gamelift:ListBuilds"),
     /** Action for the ListCompute operation. */
     ListCompute("gamelift:ListCompute"),
+    /** Action for the ListContainerGroupDefinitions operation. */
+    ListContainerGroupDefinitions("gamelift:ListContainerGroupDefinitions"),
     /** Action for the ListFleets operation. */
     ListFleets("gamelift:ListFleets"),
     /** Action for the ListGameServerGroups operation. */

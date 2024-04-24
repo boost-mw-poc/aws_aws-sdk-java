@@ -128,6 +128,10 @@ public class DescribeTaskResultJsonUnmarshaller implements Unmarshaller<Describe
                     context.nextToken();
                     describeTaskResult.setTaskReportConfig(TaskReportConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ScheduleDetails", targetDepth)) {
+                    context.nextToken();
+                    describeTaskResult.setScheduleDetails(TaskScheduleDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

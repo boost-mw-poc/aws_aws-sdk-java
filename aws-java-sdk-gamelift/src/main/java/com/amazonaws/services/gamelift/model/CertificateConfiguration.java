@@ -19,6 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
+ * <b>This data type has been expanded to use with the Amazon GameLift containers feature, which is currently in public
+ * preview.</b>
+ * </p>
+ * <p>
  * Determines whether a TLS/SSL certificate is generated for a fleet. This feature must be enabled when creating the
  * fleet. All instances in a fleet share the same certificate. The certificate can be retrieved by calling the <a
  * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html">Amazon GameLift Server

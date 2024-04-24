@@ -237,6 +237,69 @@ public class AWSEntityResolutionClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Deletes multiple unique IDs in a matching workflow.
+     * </p>
+     * 
+     * @param batchDeleteUniqueIdRequest
+     * @return Result of the BatchDeleteUniqueId operation returned by the service.
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.BatchDeleteUniqueId
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/BatchDeleteUniqueId"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchDeleteUniqueIdResult batchDeleteUniqueId(BatchDeleteUniqueIdRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchDeleteUniqueId(request);
+    }
+
+    @SdkInternalApi
+    final BatchDeleteUniqueIdResult executeBatchDeleteUniqueId(BatchDeleteUniqueIdRequest batchDeleteUniqueIdRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchDeleteUniqueIdRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchDeleteUniqueIdRequest> request = null;
+        Response<BatchDeleteUniqueIdResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchDeleteUniqueIdRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(batchDeleteUniqueIdRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EntityResolution");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchDeleteUniqueId");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchDeleteUniqueIdResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new BatchDeleteUniqueIdResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an <code>IdMappingWorkflow</code> object which stores the configuration of the data processing job to be
      * run. Each <code>IdMappingWorkflow</code> must have a unique workflow name. To modify an existing workflow, use
      * the <code>UpdateIdMappingWorkflow</code> API.

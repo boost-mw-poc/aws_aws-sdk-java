@@ -41,6 +41,13 @@ public class ListFleetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String scriptId;
     /**
      * <p>
+     * The container group definition name to request fleets for. Use this parameter to return only fleets that are
+     * deployed with the specified container group definition.
+     * </p>
+     */
+    private String containerGroupDefinitionName;
+    /**
+     * <p>
      * The maximum number of results to return. Use this parameter with <code>NextToken</code> to get results as a set
      * of sequential pages.
      * </p>
@@ -143,6 +150,52 @@ public class ListFleetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     public ListFleetsRequest withScriptId(String scriptId) {
         setScriptId(scriptId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The container group definition name to request fleets for. Use this parameter to return only fleets that are
+     * deployed with the specified container group definition.
+     * </p>
+     * 
+     * @param containerGroupDefinitionName
+     *        The container group definition name to request fleets for. Use this parameter to return only fleets that
+     *        are deployed with the specified container group definition.
+     */
+
+    public void setContainerGroupDefinitionName(String containerGroupDefinitionName) {
+        this.containerGroupDefinitionName = containerGroupDefinitionName;
+    }
+
+    /**
+     * <p>
+     * The container group definition name to request fleets for. Use this parameter to return only fleets that are
+     * deployed with the specified container group definition.
+     * </p>
+     * 
+     * @return The container group definition name to request fleets for. Use this parameter to return only fleets that
+     *         are deployed with the specified container group definition.
+     */
+
+    public String getContainerGroupDefinitionName() {
+        return this.containerGroupDefinitionName;
+    }
+
+    /**
+     * <p>
+     * The container group definition name to request fleets for. Use this parameter to return only fleets that are
+     * deployed with the specified container group definition.
+     * </p>
+     * 
+     * @param containerGroupDefinitionName
+     *        The container group definition name to request fleets for. Use this parameter to return only fleets that
+     *        are deployed with the specified container group definition.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListFleetsRequest withContainerGroupDefinitionName(String containerGroupDefinitionName) {
+        setContainerGroupDefinitionName(containerGroupDefinitionName);
         return this;
     }
 
@@ -257,6 +310,8 @@ public class ListFleetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
             sb.append("BuildId: ").append(getBuildId()).append(",");
         if (getScriptId() != null)
             sb.append("ScriptId: ").append(getScriptId()).append(",");
+        if (getContainerGroupDefinitionName() != null)
+            sb.append("ContainerGroupDefinitionName: ").append(getContainerGroupDefinitionName()).append(",");
         if (getLimit() != null)
             sb.append("Limit: ").append(getLimit()).append(",");
         if (getNextToken() != null)
@@ -283,6 +338,10 @@ public class ListFleetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getScriptId() != null && other.getScriptId().equals(this.getScriptId()) == false)
             return false;
+        if (other.getContainerGroupDefinitionName() == null ^ this.getContainerGroupDefinitionName() == null)
+            return false;
+        if (other.getContainerGroupDefinitionName() != null && other.getContainerGroupDefinitionName().equals(this.getContainerGroupDefinitionName()) == false)
+            return false;
         if (other.getLimit() == null ^ this.getLimit() == null)
             return false;
         if (other.getLimit() != null && other.getLimit().equals(this.getLimit()) == false)
@@ -301,6 +360,7 @@ public class ListFleetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
         hashCode = prime * hashCode + ((getBuildId() == null) ? 0 : getBuildId().hashCode());
         hashCode = prime * hashCode + ((getScriptId() == null) ? 0 : getScriptId().hashCode());
+        hashCode = prime * hashCode + ((getContainerGroupDefinitionName() == null) ? 0 : getContainerGroupDefinitionName().hashCode());
         hashCode = prime * hashCode + ((getLimit() == null) ? 0 : getLimit().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;

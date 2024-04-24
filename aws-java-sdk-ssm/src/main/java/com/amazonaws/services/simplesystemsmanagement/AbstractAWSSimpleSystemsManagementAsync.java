@@ -633,6 +633,19 @@ public class AbstractAWSSimpleSystemsManagementAsync extends AbstractAWSSimpleSy
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeInstancePropertiesResult> describeInstancePropertiesAsync(DescribeInstancePropertiesRequest request) {
+
+        return describeInstancePropertiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInstancePropertiesResult> describeInstancePropertiesAsync(DescribeInstancePropertiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeInstancePropertiesRequest, DescribeInstancePropertiesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeInventoryDeletionsResult> describeInventoryDeletionsAsync(DescribeInventoryDeletionsRequest request) {
 
         return describeInventoryDeletionsAsync(request, null);

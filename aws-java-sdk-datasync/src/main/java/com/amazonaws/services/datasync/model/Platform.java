@@ -32,16 +32,6 @@ public class Platform implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The version of the DataSync agent.
      * </p>
-     * <important>
-     * <p>
-     * On December 7, 2023, we discontinued version 1 DataSync agents. Check the DataSync console to see if you have
-     * affected agents. If you do, <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/replacing-agent.html">replace</a> those agents or <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/deleting-agent.html">delete</a> them if they aren't
-     * in use. If you need more help, contact <a href="https://aws.amazon.com/contact-us/">Amazon Web Services
-     * Support</a>.
-     * </p>
-     * </important>
      */
     private String version;
 
@@ -49,27 +39,9 @@ public class Platform implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The version of the DataSync agent.
      * </p>
-     * <important>
-     * <p>
-     * On December 7, 2023, we discontinued version 1 DataSync agents. Check the DataSync console to see if you have
-     * affected agents. If you do, <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/replacing-agent.html">replace</a> those agents or <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/deleting-agent.html">delete</a> them if they aren't
-     * in use. If you need more help, contact <a href="https://aws.amazon.com/contact-us/">Amazon Web Services
-     * Support</a>.
-     * </p>
-     * </important>
      * 
      * @param version
-     *        The version of the DataSync agent.</p> <important>
-     *        <p>
-     *        On December 7, 2023, we discontinued version 1 DataSync agents. Check the DataSync console to see if you
-     *        have affected agents. If you do, <a
-     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/replacing-agent.html">replace</a> those agents
-     *        or <a href="https://docs.aws.amazon.com/datasync/latest/userguide/deleting-agent.html">delete</a> them if
-     *        they aren't in use. If you need more help, contact <a href="https://aws.amazon.com/contact-us/">Amazon Web
-     *        Services Support</a>.
-     *        </p>
+     *        The version of the DataSync agent.
      */
 
     public void setVersion(String version) {
@@ -80,26 +52,8 @@ public class Platform implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The version of the DataSync agent.
      * </p>
-     * <important>
-     * <p>
-     * On December 7, 2023, we discontinued version 1 DataSync agents. Check the DataSync console to see if you have
-     * affected agents. If you do, <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/replacing-agent.html">replace</a> those agents or <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/deleting-agent.html">delete</a> them if they aren't
-     * in use. If you need more help, contact <a href="https://aws.amazon.com/contact-us/">Amazon Web Services
-     * Support</a>.
-     * </p>
-     * </important>
      * 
-     * @return The version of the DataSync agent.</p> <important>
-     *         <p>
-     *         On December 7, 2023, we discontinued version 1 DataSync agents. Check the DataSync console to see if you
-     *         have affected agents. If you do, <a
-     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/replacing-agent.html">replace</a> those
-     *         agents or <a href="https://docs.aws.amazon.com/datasync/latest/userguide/deleting-agent.html">delete</a>
-     *         them if they aren't in use. If you need more help, contact <a
-     *         href="https://aws.amazon.com/contact-us/">Amazon Web Services Support</a>.
-     *         </p>
+     * @return The version of the DataSync agent.
      */
 
     public String getVersion() {
@@ -110,27 +64,9 @@ public class Platform implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The version of the DataSync agent.
      * </p>
-     * <important>
-     * <p>
-     * On December 7, 2023, we discontinued version 1 DataSync agents. Check the DataSync console to see if you have
-     * affected agents. If you do, <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/replacing-agent.html">replace</a> those agents or <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/deleting-agent.html">delete</a> them if they aren't
-     * in use. If you need more help, contact <a href="https://aws.amazon.com/contact-us/">Amazon Web Services
-     * Support</a>.
-     * </p>
-     * </important>
      * 
      * @param version
-     *        The version of the DataSync agent.</p> <important>
-     *        <p>
-     *        On December 7, 2023, we discontinued version 1 DataSync agents. Check the DataSync console to see if you
-     *        have affected agents. If you do, <a
-     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/replacing-agent.html">replace</a> those agents
-     *        or <a href="https://docs.aws.amazon.com/datasync/latest/userguide/deleting-agent.html">delete</a> them if
-     *        they aren't in use. If you need more help, contact <a href="https://aws.amazon.com/contact-us/">Amazon Web
-     *        Services Support</a>.
-     *        </p>
+     *        The version of the DataSync agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -207,6 +207,39 @@ public class AmazonEMRContainersAsyncClient extends AmazonEMRContainersClient im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateSecurityConfigurationResult> createSecurityConfigurationAsync(CreateSecurityConfigurationRequest request) {
+
+        return createSecurityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSecurityConfigurationResult> createSecurityConfigurationAsync(final CreateSecurityConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateSecurityConfigurationRequest, CreateSecurityConfigurationResult> asyncHandler) {
+        final CreateSecurityConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateSecurityConfigurationResult>() {
+            @Override
+            public CreateSecurityConfigurationResult call() throws Exception {
+                CreateSecurityConfigurationResult result = null;
+
+                try {
+                    result = executeCreateSecurityConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateVirtualClusterResult> createVirtualClusterAsync(CreateVirtualClusterRequest request) {
 
         return createVirtualClusterAsync(request, null);
@@ -438,6 +471,40 @@ public class AmazonEMRContainersAsyncClient extends AmazonEMRContainersClient im
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeSecurityConfigurationResult> describeSecurityConfigurationAsync(DescribeSecurityConfigurationRequest request) {
+
+        return describeSecurityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSecurityConfigurationResult> describeSecurityConfigurationAsync(
+            final DescribeSecurityConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeSecurityConfigurationRequest, DescribeSecurityConfigurationResult> asyncHandler) {
+        final DescribeSecurityConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeSecurityConfigurationResult>() {
+            @Override
+            public DescribeSecurityConfigurationResult call() throws Exception {
+                DescribeSecurityConfigurationResult result = null;
+
+                try {
+                    result = executeDescribeSecurityConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeVirtualClusterResult> describeVirtualClusterAsync(DescribeVirtualClusterRequest request) {
 
         return describeVirtualClusterAsync(request, null);
@@ -589,6 +656,39 @@ public class AmazonEMRContainersAsyncClient extends AmazonEMRContainersClient im
 
                 try {
                     result = executeListManagedEndpoints(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSecurityConfigurationsResult> listSecurityConfigurationsAsync(ListSecurityConfigurationsRequest request) {
+
+        return listSecurityConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSecurityConfigurationsResult> listSecurityConfigurationsAsync(final ListSecurityConfigurationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSecurityConfigurationsRequest, ListSecurityConfigurationsResult> asyncHandler) {
+        final ListSecurityConfigurationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSecurityConfigurationsResult>() {
+            @Override
+            public ListSecurityConfigurationsResult call() throws Exception {
+                ListSecurityConfigurationsResult result = null;
+
+                try {
+                    result = executeListSecurityConfigurations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

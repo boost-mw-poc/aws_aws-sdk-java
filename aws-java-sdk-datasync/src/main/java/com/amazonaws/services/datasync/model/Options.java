@@ -24,8 +24,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * your task, among other options.
  * </p>
  * <p>
- * Each option has a default value. Unless you need to, you don't have to configure any of these options before starting
- * your task.
+ * Each option has a default value. Unless you need to, you don't have to configure any option before calling <a
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html">StartTaskExecution</a>.
+ * </p>
+ * <p>
+ * You also can override your task options for each task execution. For example, you might want to adjust the
+ * <code>LogLevel</code> for an individual execution.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/Options" target="_top">AWS API
@@ -56,6 +60,11 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * <code>POINT_IN_TIME_CONSISTENT</code> (default) - At the end of the transfer, DataSync scans the entire source
      * and destination to verify that both locations are fully synchronized.
+     * </p>
+     * <p>
+     * If you use a <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">manifest</a>,
+     * DataSync only scans and verifies what's listed in the manifest.
      * </p>
      * <p>
      * You can't use this option when transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage
@@ -463,6 +472,11 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * and destination to verify that both locations are fully synchronized.
      * </p>
      * <p>
+     * If you use a <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">manifest</a>,
+     * DataSync only scans and verifies what's listed in the manifest.
+     * </p>
+     * <p>
      * You can't use this option when transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage
      * classes. For more information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
@@ -497,6 +511,11 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <code>POINT_IN_TIME_CONSISTENT</code> (default) - At the end of the transfer, DataSync scans the entire
      *        source and destination to verify that both locations are fully synchronized.
+     *        </p>
+     *        <p>
+     *        If you use a <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">manifest</a>,
+     *        DataSync only scans and verifies what's listed in the manifest.
      *        </p>
      *        <p>
      *        You can't use this option when transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive
@@ -542,6 +561,11 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * and destination to verify that both locations are fully synchronized.
      * </p>
      * <p>
+     * If you use a <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">manifest</a>,
+     * DataSync only scans and verifies what's listed in the manifest.
+     * </p>
+     * <p>
      * You can't use this option when transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage
      * classes. For more information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
@@ -575,6 +599,11 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         <code>POINT_IN_TIME_CONSISTENT</code> (default) - At the end of the transfer, DataSync scans the entire
      *         source and destination to verify that both locations are fully synchronized.
+     *         </p>
+     *         <p>
+     *         If you use a <a
+     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html"
+     *         >manifest</a>, DataSync only scans and verifies what's listed in the manifest.
      *         </p>
      *         <p>
      *         You can't use this option when transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive
@@ -620,6 +649,11 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * and destination to verify that both locations are fully synchronized.
      * </p>
      * <p>
+     * If you use a <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">manifest</a>,
+     * DataSync only scans and verifies what's listed in the manifest.
+     * </p>
+     * <p>
      * You can't use this option when transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage
      * classes. For more information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
@@ -654,6 +688,11 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <code>POINT_IN_TIME_CONSISTENT</code> (default) - At the end of the transfer, DataSync scans the entire
      *        source and destination to verify that both locations are fully synchronized.
+     *        </p>
+     *        <p>
+     *        If you use a <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">manifest</a>,
+     *        DataSync only scans and verifies what's listed in the manifest.
      *        </p>
      *        <p>
      *        You can't use this option when transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive
@@ -701,6 +740,11 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * and destination to verify that both locations are fully synchronized.
      * </p>
      * <p>
+     * If you use a <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">manifest</a>,
+     * DataSync only scans and verifies what's listed in the manifest.
+     * </p>
+     * <p>
      * You can't use this option when transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage
      * classes. For more information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
@@ -735,6 +779,11 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <code>POINT_IN_TIME_CONSISTENT</code> (default) - At the end of the transfer, DataSync scans the entire
      *        source and destination to verify that both locations are fully synchronized.
+     *        </p>
+     *        <p>
+     *        If you use a <a
+     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html">manifest</a>,
+     *        DataSync only scans and verifies what's listed in the manifest.
      *        </p>
      *        <p>
      *        You can't use this option when transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive

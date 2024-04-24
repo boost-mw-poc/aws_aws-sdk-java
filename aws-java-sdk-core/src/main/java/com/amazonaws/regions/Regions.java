@@ -107,7 +107,7 @@ public enum Regions {
                 return region;
             }
         }
-        throw new IllegalArgumentException("Cannot create enum from " + regionName + " value. "
+        throw new IllegalArgumentException("Cannot create enum from " + regionName + " value! "
                                            + "Use com.amazonaws.regions.RegionUtils.getRegion to access regions that "
                                            + "aren't known to this SDK version.");
     }

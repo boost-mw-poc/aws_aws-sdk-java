@@ -100,6 +100,21 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>amzn</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWSEC2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSConfigRemediation</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSSupport</code>
+     * </p>
+     * </li>
      * </ul>
      * </important>
      */
@@ -590,6 +605,21 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>amzn</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWSEC2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSConfigRemediation</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSSupport</code>
+     * </p>
+     * </li>
      * </ul>
      * </important>
      * 
@@ -613,6 +643,21 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <code>amzn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSEC2</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSConfigRemediation</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSSupport</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -647,6 +692,21 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>amzn</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWSEC2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSConfigRemediation</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSSupport</code>
+     * </p>
+     * </li>
      * </ul>
      * </important>
      * 
@@ -669,6 +729,21 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <li>
      *         <p>
      *         <code>amzn</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWSEC2</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWSConfigRemediation</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWSSupport</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -703,6 +778,21 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>amzn</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWSEC2</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSConfigRemediation</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSSupport</code>
+     * </p>
+     * </li>
      * </ul>
      * </important>
      * 
@@ -726,6 +816,21 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <code>amzn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSEC2</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSConfigRemediation</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSSupport</code>
      *        </p>
      *        </li>
      *        </ul>

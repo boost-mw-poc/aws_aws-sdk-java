@@ -74,6 +74,12 @@ public class VirtualCluster implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The ID of the security configuration.
+     * </p>
+     */
+    private String securityConfigurationId;
 
     /**
      * <p>
@@ -403,6 +409,46 @@ public class VirtualCluster implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ID of the security configuration.
+     * </p>
+     * 
+     * @param securityConfigurationId
+     *        The ID of the security configuration.
+     */
+
+    public void setSecurityConfigurationId(String securityConfigurationId) {
+        this.securityConfigurationId = securityConfigurationId;
+    }
+
+    /**
+     * <p>
+     * The ID of the security configuration.
+     * </p>
+     * 
+     * @return The ID of the security configuration.
+     */
+
+    public String getSecurityConfigurationId() {
+        return this.securityConfigurationId;
+    }
+
+    /**
+     * <p>
+     * The ID of the security configuration.
+     * </p>
+     * 
+     * @param securityConfigurationId
+     *        The ID of the security configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VirtualCluster withSecurityConfigurationId(String securityConfigurationId) {
+        setSecurityConfigurationId(securityConfigurationId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -427,7 +473,9 @@ public class VirtualCluster implements Serializable, Cloneable, StructuredPojo {
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getSecurityConfigurationId() != null)
+            sb.append("SecurityConfigurationId: ").append(getSecurityConfigurationId());
         sb.append("}");
         return sb.toString();
     }
@@ -470,6 +518,10 @@ public class VirtualCluster implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getSecurityConfigurationId() == null ^ this.getSecurityConfigurationId() == null)
+            return false;
+        if (other.getSecurityConfigurationId() != null && other.getSecurityConfigurationId().equals(this.getSecurityConfigurationId()) == false)
+            return false;
         return true;
     }
 
@@ -485,6 +537,7 @@ public class VirtualCluster implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getContainerProvider() == null) ? 0 : getContainerProvider().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getSecurityConfigurationId() == null) ? 0 : getSecurityConfigurationId().hashCode());
         return hashCode;
     }
 

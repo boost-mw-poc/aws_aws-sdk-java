@@ -74,6 +74,11 @@ public class DescribeNetworkInterfaceAttributeResultStaxUnmarshaller implements 
                     describeNetworkInterfaceAttributeResult.setSourceDestCheck(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("associatePublicIpAddress", targetDepth)) {
+                    describeNetworkInterfaceAttributeResult.setAssociatePublicIpAddress(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return describeNetworkInterfaceAttributeResult;

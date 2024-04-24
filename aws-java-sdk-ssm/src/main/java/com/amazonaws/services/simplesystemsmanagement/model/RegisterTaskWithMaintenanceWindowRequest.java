@@ -68,15 +68,16 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM service role for Amazon Web Services Systems Manager to assume when
-     * running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses your account's
-     * service-linked role. If no service-linked role for Systems Manager exists in your account, it is created when you
-     * run <code>RegisterTaskWithMaintenanceWindow</code>.
+     * running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses a
+     * service-linked role in your account. If no appropriate service-linked role for Systems Manager exists in your
+     * account, it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.
      * </p>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/using-service-linked-roles.html#slr-permissions"
-     * >Using service-linked roles for Systems Manager</a> in the in the <i>Amazon Web Services Systems Manager User
-     * Guide</i>:
+     * However, for an improved security posture, we strongly recommend creating a custom policy and custom service role
+     * for running your maintenance window tasks. The policy can be crafted to provide only the permissions needed for
+     * your particular maintenance window tasks. For more information, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html">Setting
+     * up maintenance windows</a> in the in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      */
     private String serviceRoleArn;
@@ -553,27 +554,29 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM service role for Amazon Web Services Systems Manager to assume when
-     * running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses your account's
-     * service-linked role. If no service-linked role for Systems Manager exists in your account, it is created when you
-     * run <code>RegisterTaskWithMaintenanceWindow</code>.
+     * running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses a
+     * service-linked role in your account. If no appropriate service-linked role for Systems Manager exists in your
+     * account, it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.
      * </p>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/using-service-linked-roles.html#slr-permissions"
-     * >Using service-linked roles for Systems Manager</a> in the in the <i>Amazon Web Services Systems Manager User
-     * Guide</i>:
+     * However, for an improved security posture, we strongly recommend creating a custom policy and custom service role
+     * for running your maintenance window tasks. The policy can be crafted to provide only the permissions needed for
+     * your particular maintenance window tasks. For more information, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html">Setting
+     * up maintenance windows</a> in the in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param serviceRoleArn
      *        The Amazon Resource Name (ARN) of the IAM service role for Amazon Web Services Systems Manager to assume
-     *        when running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses
-     *        your account's service-linked role. If no service-linked role for Systems Manager exists in your account,
-     *        it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.</p>
+     *        when running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses a
+     *        service-linked role in your account. If no appropriate service-linked role for Systems Manager exists in
+     *        your account, it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.</p>
      *        <p>
-     *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/using-service-linked-roles.html#slr-permissions"
-     *        >Using service-linked roles for Systems Manager</a> in the in the <i>Amazon Web Services Systems Manager
-     *        User Guide</i>:
+     *        However, for an improved security posture, we strongly recommend creating a custom policy and custom
+     *        service role for running your maintenance window tasks. The policy can be crafted to provide only the
+     *        permissions needed for your particular maintenance window tasks. For more information, see <a
+     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html"
+     *        >Setting up maintenance windows</a> in the in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
 
     public void setServiceRoleArn(String serviceRoleArn) {
@@ -583,26 +586,28 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM service role for Amazon Web Services Systems Manager to assume when
-     * running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses your account's
-     * service-linked role. If no service-linked role for Systems Manager exists in your account, it is created when you
-     * run <code>RegisterTaskWithMaintenanceWindow</code>.
+     * running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses a
+     * service-linked role in your account. If no appropriate service-linked role for Systems Manager exists in your
+     * account, it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.
      * </p>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/using-service-linked-roles.html#slr-permissions"
-     * >Using service-linked roles for Systems Manager</a> in the in the <i>Amazon Web Services Systems Manager User
-     * Guide</i>:
+     * However, for an improved security posture, we strongly recommend creating a custom policy and custom service role
+     * for running your maintenance window tasks. The policy can be crafted to provide only the permissions needed for
+     * your particular maintenance window tasks. For more information, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html">Setting
+     * up maintenance windows</a> in the in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM service role for Amazon Web Services Systems Manager to assume
-     *         when running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses
-     *         your account's service-linked role. If no service-linked role for Systems Manager exists in your account,
-     *         it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.</p>
+     *         when running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses a
+     *         service-linked role in your account. If no appropriate service-linked role for Systems Manager exists in
+     *         your account, it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.</p>
      *         <p>
-     *         For more information, see <a href=
-     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/using-service-linked-roles.html#slr-permissions"
-     *         >Using service-linked roles for Systems Manager</a> in the in the <i>Amazon Web Services Systems Manager
-     *         User Guide</i>:
+     *         However, for an improved security posture, we strongly recommend creating a custom policy and custom
+     *         service role for running your maintenance window tasks. The policy can be crafted to provide only the
+     *         permissions needed for your particular maintenance window tasks. For more information, see <a
+     *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html"
+     *         >Setting up maintenance windows</a> in the in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
 
     public String getServiceRoleArn() {
@@ -612,27 +617,29 @@ public class RegisterTaskWithMaintenanceWindowRequest extends com.amazonaws.Amaz
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM service role for Amazon Web Services Systems Manager to assume when
-     * running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses your account's
-     * service-linked role. If no service-linked role for Systems Manager exists in your account, it is created when you
-     * run <code>RegisterTaskWithMaintenanceWindow</code>.
+     * running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses a
+     * service-linked role in your account. If no appropriate service-linked role for Systems Manager exists in your
+     * account, it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.
      * </p>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/systems-manager/latest/userguide/using-service-linked-roles.html#slr-permissions"
-     * >Using service-linked roles for Systems Manager</a> in the in the <i>Amazon Web Services Systems Manager User
-     * Guide</i>:
+     * However, for an improved security posture, we strongly recommend creating a custom policy and custom service role
+     * for running your maintenance window tasks. The policy can be crafted to provide only the permissions needed for
+     * your particular maintenance window tasks. For more information, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html">Setting
+     * up maintenance windows</a> in the in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param serviceRoleArn
      *        The Amazon Resource Name (ARN) of the IAM service role for Amazon Web Services Systems Manager to assume
-     *        when running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses
-     *        your account's service-linked role. If no service-linked role for Systems Manager exists in your account,
-     *        it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.</p>
+     *        when running a maintenance window task. If you do not specify a service role ARN, Systems Manager uses a
+     *        service-linked role in your account. If no appropriate service-linked role for Systems Manager exists in
+     *        your account, it is created when you run <code>RegisterTaskWithMaintenanceWindow</code>.</p>
      *        <p>
-     *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/using-service-linked-roles.html#slr-permissions"
-     *        >Using service-linked roles for Systems Manager</a> in the in the <i>Amazon Web Services Systems Manager
-     *        User Guide</i>:
+     *        However, for an improved security posture, we strongly recommend creating a custom policy and custom
+     *        service role for running your maintenance window tasks. The policy can be crafted to provide only the
+     *        permissions needed for your particular maintenance window tasks. For more information, see <a
+     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html"
+     *        >Setting up maintenance windows</a> in the in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

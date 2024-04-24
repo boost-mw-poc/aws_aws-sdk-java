@@ -167,6 +167,43 @@ public interface AmazonEMRContainersAsync extends AmazonEMRContainers {
 
     /**
      * <p>
+     * Creates a security configuration. Security configurations in Amazon EMR on EKS are templates for different
+     * security setups. You can use security configurations to configure the Lake Formation integration setup. You can
+     * also create a security configuration to re-use a security setup each time you create a virtual cluster.
+     * </p>
+     * 
+     * @param createSecurityConfigurationRequest
+     * @return A Java Future containing the result of the CreateSecurityConfiguration operation returned by the service.
+     * @sample AmazonEMRContainersAsync.CreateSecurityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/CreateSecurityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSecurityConfigurationResult> createSecurityConfigurationAsync(
+            CreateSecurityConfigurationRequest createSecurityConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates a security configuration. Security configurations in Amazon EMR on EKS are templates for different
+     * security setups. You can use security configurations to configure the Lake Formation integration setup. You can
+     * also create a security configuration to re-use a security setup each time you create a virtual cluster.
+     * </p>
+     * 
+     * @param createSecurityConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateSecurityConfiguration operation returned by the service.
+     * @sample AmazonEMRContainersAsyncHandler.CreateSecurityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/CreateSecurityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSecurityConfigurationResult> createSecurityConfigurationAsync(
+            CreateSecurityConfigurationRequest createSecurityConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateSecurityConfigurationRequest, CreateSecurityConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a virtual cluster. Virtual cluster is a managed entity on Amazon EMR on EKS. You can create, describe,
      * list and delete virtual clusters. They do not consume any additional resource in your system. A single virtual
      * cluster maps to a single Kubernetes namespace. Given this relationship, you can model virtual clusters the same
@@ -410,6 +447,47 @@ public interface AmazonEMRContainersAsync extends AmazonEMRContainers {
 
     /**
      * <p>
+     * Displays detailed information about a specified security configuration. Security configurations in Amazon EMR on
+     * EKS are templates for different security setups. You can use security configurations to configure the Lake
+     * Formation integration setup. You can also create a security configuration to re-use a security setup each time
+     * you create a virtual cluster.
+     * </p>
+     * 
+     * @param describeSecurityConfigurationRequest
+     * @return A Java Future containing the result of the DescribeSecurityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonEMRContainersAsync.DescribeSecurityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/DescribeSecurityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSecurityConfigurationResult> describeSecurityConfigurationAsync(
+            DescribeSecurityConfigurationRequest describeSecurityConfigurationRequest);
+
+    /**
+     * <p>
+     * Displays detailed information about a specified security configuration. Security configurations in Amazon EMR on
+     * EKS are templates for different security setups. You can use security configurations to configure the Lake
+     * Formation integration setup. You can also create a security configuration to re-use a security setup each time
+     * you create a virtual cluster.
+     * </p>
+     * 
+     * @param describeSecurityConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeSecurityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonEMRContainersAsyncHandler.DescribeSecurityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/DescribeSecurityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSecurityConfigurationResult> describeSecurityConfigurationAsync(
+            DescribeSecurityConfigurationRequest describeSecurityConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeSecurityConfigurationRequest, DescribeSecurityConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Displays detailed information about a specified virtual cluster. Virtual cluster is a managed entity on Amazon
      * EMR on EKS. You can create, describe, list and delete virtual clusters. They do not consume any additional
      * resource in your system. A single virtual cluster maps to a single Kubernetes namespace. Given this relationship,
@@ -582,6 +660,45 @@ public interface AmazonEMRContainersAsync extends AmazonEMRContainers {
      */
     java.util.concurrent.Future<ListManagedEndpointsResult> listManagedEndpointsAsync(ListManagedEndpointsRequest listManagedEndpointsRequest,
             com.amazonaws.handlers.AsyncHandler<ListManagedEndpointsRequest, ListManagedEndpointsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists security configurations based on a set of parameters. Security configurations in Amazon EMR on EKS are
+     * templates for different security setups. You can use security configurations to configure the Lake Formation
+     * integration setup. You can also create a security configuration to re-use a security setup each time you create a
+     * virtual cluster.
+     * </p>
+     * 
+     * @param listSecurityConfigurationsRequest
+     * @return A Java Future containing the result of the ListSecurityConfigurations operation returned by the service.
+     * @sample AmazonEMRContainersAsync.ListSecurityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/ListSecurityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSecurityConfigurationsResult> listSecurityConfigurationsAsync(
+            ListSecurityConfigurationsRequest listSecurityConfigurationsRequest);
+
+    /**
+     * <p>
+     * Lists security configurations based on a set of parameters. Security configurations in Amazon EMR on EKS are
+     * templates for different security setups. You can use security configurations to configure the Lake Formation
+     * integration setup. You can also create a security configuration to re-use a security setup each time you create a
+     * virtual cluster.
+     * </p>
+     * 
+     * @param listSecurityConfigurationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSecurityConfigurations operation returned by the service.
+     * @sample AmazonEMRContainersAsyncHandler.ListSecurityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/ListSecurityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSecurityConfigurationsResult> listSecurityConfigurationsAsync(
+            ListSecurityConfigurationsRequest listSecurityConfigurationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSecurityConfigurationsRequest, ListSecurityConfigurationsResult> asyncHandler);
 
     /**
      * <p>

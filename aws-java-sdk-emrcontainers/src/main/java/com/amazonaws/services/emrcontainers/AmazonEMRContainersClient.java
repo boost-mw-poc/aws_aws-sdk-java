@@ -361,6 +361,69 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Creates a security configuration. Security configurations in Amazon EMR on EKS are templates for different
+     * security setups. You can use security configurations to configure the Lake Formation integration setup. You can
+     * also create a security configuration to re-use a security setup each time you create a virtual cluster.
+     * </p>
+     * 
+     * @param createSecurityConfigurationRequest
+     * @return Result of the CreateSecurityConfiguration operation returned by the service.
+     * @throws ValidationException
+     *         There are invalid parameters in the client request.
+     * @throws InternalServerException
+     *         This is an internal server exception.
+     * @sample AmazonEMRContainers.CreateSecurityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/CreateSecurityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateSecurityConfigurationResult createSecurityConfiguration(CreateSecurityConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateSecurityConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final CreateSecurityConfigurationResult executeCreateSecurityConfiguration(CreateSecurityConfigurationRequest createSecurityConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createSecurityConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateSecurityConfigurationRequest> request = null;
+        Response<CreateSecurityConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateSecurityConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createSecurityConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR containers");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateSecurityConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateSecurityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateSecurityConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a virtual cluster. Virtual cluster is a managed entity on Amazon EMR on EKS. You can create, describe,
      * list and delete virtual clusters. They do not consume any additional resource in your system. A single virtual
      * cluster maps to a single Kubernetes namespace. Given this relationship, you can model virtual clusters the same
@@ -800,6 +863,72 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Displays detailed information about a specified security configuration. Security configurations in Amazon EMR on
+     * EKS are templates for different security setups. You can use security configurations to configure the Lake
+     * Formation integration setup. You can also create a security configuration to re-use a security setup each time
+     * you create a virtual cluster.
+     * </p>
+     * 
+     * @param describeSecurityConfigurationRequest
+     * @return Result of the DescribeSecurityConfiguration operation returned by the service.
+     * @throws ValidationException
+     *         There are invalid parameters in the client request.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServerException
+     *         This is an internal server exception.
+     * @sample AmazonEMRContainers.DescribeSecurityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/DescribeSecurityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeSecurityConfigurationResult describeSecurityConfiguration(DescribeSecurityConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeSecurityConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DescribeSecurityConfigurationResult executeDescribeSecurityConfiguration(DescribeSecurityConfigurationRequest describeSecurityConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeSecurityConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeSecurityConfigurationRequest> request = null;
+        Response<DescribeSecurityConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeSecurityConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeSecurityConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR containers");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeSecurityConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeSecurityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeSecurityConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Displays detailed information about a specified virtual cluster. Virtual cluster is a managed entity on Amazon
      * EMR on EKS. You can create, describe, list and delete virtual clusters. They do not consume any additional
      * resource in your system. A single virtual cluster maps to a single Kubernetes namespace. Given this relationship,
@@ -1101,6 +1230,70 @@ public class AmazonEMRContainersClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<ListManagedEndpointsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListManagedEndpointsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists security configurations based on a set of parameters. Security configurations in Amazon EMR on EKS are
+     * templates for different security setups. You can use security configurations to configure the Lake Formation
+     * integration setup. You can also create a security configuration to re-use a security setup each time you create a
+     * virtual cluster.
+     * </p>
+     * 
+     * @param listSecurityConfigurationsRequest
+     * @return Result of the ListSecurityConfigurations operation returned by the service.
+     * @throws ValidationException
+     *         There are invalid parameters in the client request.
+     * @throws InternalServerException
+     *         This is an internal server exception.
+     * @sample AmazonEMRContainers.ListSecurityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/ListSecurityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListSecurityConfigurationsResult listSecurityConfigurations(ListSecurityConfigurationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSecurityConfigurations(request);
+    }
+
+    @SdkInternalApi
+    final ListSecurityConfigurationsResult executeListSecurityConfigurations(ListSecurityConfigurationsRequest listSecurityConfigurationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSecurityConfigurationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSecurityConfigurationsRequest> request = null;
+        Response<ListSecurityConfigurationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSecurityConfigurationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listSecurityConfigurationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR containers");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSecurityConfigurations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSecurityConfigurationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListSecurityConfigurationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

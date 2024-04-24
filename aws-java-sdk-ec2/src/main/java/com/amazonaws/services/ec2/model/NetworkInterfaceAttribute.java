@@ -23,7 +23,8 @@ public enum NetworkInterfaceAttribute {
     Description("description"),
     GroupSet("groupSet"),
     SourceDestCheck("sourceDestCheck"),
-    Attachment("attachment");
+    Attachment("attachment"),
+    AssociatePublicIpAddress("associatePublicIpAddress");
 
     private String value;
 

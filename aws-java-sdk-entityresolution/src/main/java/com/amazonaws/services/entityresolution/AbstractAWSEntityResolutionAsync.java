@@ -41,6 +41,19 @@ public class AbstractAWSEntityResolutionAsync extends AbstractAWSEntityResolutio
     }
 
     @Override
+    public java.util.concurrent.Future<BatchDeleteUniqueIdResult> batchDeleteUniqueIdAsync(BatchDeleteUniqueIdRequest request) {
+
+        return batchDeleteUniqueIdAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteUniqueIdResult> batchDeleteUniqueIdAsync(BatchDeleteUniqueIdRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchDeleteUniqueIdRequest, BatchDeleteUniqueIdResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(CreateIdMappingWorkflowRequest request) {
 
         return createIdMappingWorkflowAsync(request, null);

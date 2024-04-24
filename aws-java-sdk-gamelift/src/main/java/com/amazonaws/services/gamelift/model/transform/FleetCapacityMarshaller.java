@@ -37,6 +37,8 @@ public class FleetCapacityMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceCounts").build();
     private static final MarshallingInfo<String> LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Location").build();
+    private static final MarshallingInfo<StructuredPojo> REPLICACONTAINERGROUPCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplicaContainerGroupCounts").build();
 
     private static final FleetCapacityMarshaller instance = new FleetCapacityMarshaller();
 
@@ -59,6 +61,7 @@ public class FleetCapacityMarshaller {
             protocolMarshaller.marshall(fleetCapacity.getInstanceType(), INSTANCETYPE_BINDING);
             protocolMarshaller.marshall(fleetCapacity.getInstanceCounts(), INSTANCECOUNTS_BINDING);
             protocolMarshaller.marshall(fleetCapacity.getLocation(), LOCATION_BINDING);
+            protocolMarshaller.marshall(fleetCapacity.getReplicaContainerGroupCounts(), REPLICACONTAINERGROUPCOUNTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

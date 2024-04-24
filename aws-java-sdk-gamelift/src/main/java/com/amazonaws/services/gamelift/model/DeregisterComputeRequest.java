@@ -33,7 +33,9 @@ public class DeregisterComputeRequest extends com.amazonaws.AmazonWebServiceRequ
     private String fleetId;
     /**
      * <p>
-     * The name of the compute resource to remove from the specified Anywhere fleet.
+     * The unique identifier of the compute resource to deregister. For an Anywhere fleet compute, use the registered
+     * compute name. For a container fleet, use the compute name (for example,
+     * <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * </p>
      */
     private String computeName;
@@ -80,11 +82,15 @@ public class DeregisterComputeRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name of the compute resource to remove from the specified Anywhere fleet.
+     * The unique identifier of the compute resource to deregister. For an Anywhere fleet compute, use the registered
+     * compute name. For a container fleet, use the compute name (for example,
+     * <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * </p>
      * 
      * @param computeName
-     *        The name of the compute resource to remove from the specified Anywhere fleet.
+     *        The unique identifier of the compute resource to deregister. For an Anywhere fleet compute, use the
+     *        registered compute name. For a container fleet, use the compute name (for example,
+     *        <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      */
 
     public void setComputeName(String computeName) {
@@ -93,10 +99,14 @@ public class DeregisterComputeRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name of the compute resource to remove from the specified Anywhere fleet.
+     * The unique identifier of the compute resource to deregister. For an Anywhere fleet compute, use the registered
+     * compute name. For a container fleet, use the compute name (for example,
+     * <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * </p>
      * 
-     * @return The name of the compute resource to remove from the specified Anywhere fleet.
+     * @return The unique identifier of the compute resource to deregister. For an Anywhere fleet compute, use the
+     *         registered compute name. For a container fleet, use the compute name (for example,
+     *         <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      */
 
     public String getComputeName() {
@@ -105,11 +115,15 @@ public class DeregisterComputeRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name of the compute resource to remove from the specified Anywhere fleet.
+     * The unique identifier of the compute resource to deregister. For an Anywhere fleet compute, use the registered
+     * compute name. For a container fleet, use the compute name (for example,
+     * <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * </p>
      * 
      * @param computeName
-     *        The name of the compute resource to remove from the specified Anywhere fleet.
+     *        The unique identifier of the compute resource to deregister. For an Anywhere fleet compute, use the
+     *        registered compute name. For a container fleet, use the compute name (for example,
+     *        <code>a123b456c789012d3e4567f8a901b23c/1a234b56-7cd8-9e0f-a1b2-c34d567ef8a9</code>) or the compute ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -67,6 +67,19 @@ public class AbstractAmazonEMRContainersAsync extends AbstractAmazonEMRContainer
     }
 
     @Override
+    public java.util.concurrent.Future<CreateSecurityConfigurationResult> createSecurityConfigurationAsync(CreateSecurityConfigurationRequest request) {
+
+        return createSecurityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSecurityConfigurationResult> createSecurityConfigurationAsync(CreateSecurityConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateSecurityConfigurationRequest, CreateSecurityConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateVirtualClusterResult> createVirtualClusterAsync(CreateVirtualClusterRequest request) {
 
         return createVirtualClusterAsync(request, null);
@@ -158,6 +171,19 @@ public class AbstractAmazonEMRContainersAsync extends AbstractAmazonEMRContainer
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeSecurityConfigurationResult> describeSecurityConfigurationAsync(DescribeSecurityConfigurationRequest request) {
+
+        return describeSecurityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSecurityConfigurationResult> describeSecurityConfigurationAsync(DescribeSecurityConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeSecurityConfigurationRequest, DescribeSecurityConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeVirtualClusterResult> describeVirtualClusterAsync(DescribeVirtualClusterRequest request) {
 
         return describeVirtualClusterAsync(request, null);
@@ -220,6 +246,19 @@ public class AbstractAmazonEMRContainersAsync extends AbstractAmazonEMRContainer
     @Override
     public java.util.concurrent.Future<ListManagedEndpointsResult> listManagedEndpointsAsync(ListManagedEndpointsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListManagedEndpointsRequest, ListManagedEndpointsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSecurityConfigurationsResult> listSecurityConfigurationsAsync(ListSecurityConfigurationsRequest request) {
+
+        return listSecurityConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSecurityConfigurationsResult> listSecurityConfigurationsAsync(ListSecurityConfigurationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListSecurityConfigurationsRequest, ListSecurityConfigurationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A set of instructions for launching server processes on each instance in a fleet. Server processes run either an
- * executable in a custom game build or a Realtime Servers script. Server process configurations are part of a fleet's
- * runtime configuration.
+ * A set of instructions for launching server processes on fleet computes. Server processes run either an executable in
+ * a custom game build or a Realtime Servers script. Server process configurations are part of a fleet's runtime
+ * configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/ServerProcess" target="_top">AWS API
@@ -65,7 +65,7 @@ public class ServerProcess implements Serializable, Cloneable, StructuredPojo {
     private String parameters;
     /**
      * <p>
-     * The number of server processes using this configuration that run concurrently on each instance.
+     * The number of server processes using this configuration that run concurrently on each instance or container..
      * </p>
      */
     private Integer concurrentExecutions;
@@ -276,11 +276,12 @@ public class ServerProcess implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of server processes using this configuration that run concurrently on each instance.
+     * The number of server processes using this configuration that run concurrently on each instance or container..
      * </p>
      * 
      * @param concurrentExecutions
-     *        The number of server processes using this configuration that run concurrently on each instance.
+     *        The number of server processes using this configuration that run concurrently on each instance or
+     *        container..
      */
 
     public void setConcurrentExecutions(Integer concurrentExecutions) {
@@ -289,10 +290,11 @@ public class ServerProcess implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of server processes using this configuration that run concurrently on each instance.
+     * The number of server processes using this configuration that run concurrently on each instance or container..
      * </p>
      * 
-     * @return The number of server processes using this configuration that run concurrently on each instance.
+     * @return The number of server processes using this configuration that run concurrently on each instance or
+     *         container..
      */
 
     public Integer getConcurrentExecutions() {
@@ -301,11 +303,12 @@ public class ServerProcess implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of server processes using this configuration that run concurrently on each instance.
+     * The number of server processes using this configuration that run concurrently on each instance or container..
      * </p>
      * 
      * @param concurrentExecutions
-     *        The number of server processes using this configuration that run concurrently on each instance.
+     *        The number of server processes using this configuration that run concurrently on each instance or
+     *        container..
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -40,6 +40,8 @@ public class CreateVirtualClusterRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> SECURITYCONFIGURATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("securityConfigurationId").build();
 
     private static final CreateVirtualClusterRequestMarshaller instance = new CreateVirtualClusterRequestMarshaller();
 
@@ -61,6 +63,7 @@ public class CreateVirtualClusterRequestMarshaller {
             protocolMarshaller.marshall(createVirtualClusterRequest.getContainerProvider(), CONTAINERPROVIDER_BINDING);
             protocolMarshaller.marshall(createVirtualClusterRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(createVirtualClusterRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createVirtualClusterRequest.getSecurityConfigurationId(), SECURITYCONFIGURATIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

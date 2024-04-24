@@ -80,6 +80,19 @@ public class AbstractAmazonGameLiftAsync extends AbstractAmazonGameLift implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateContainerGroupDefinitionResult> createContainerGroupDefinitionAsync(CreateContainerGroupDefinitionRequest request) {
+
+        return createContainerGroupDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateContainerGroupDefinitionResult> createContainerGroupDefinitionAsync(CreateContainerGroupDefinitionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateContainerGroupDefinitionRequest, CreateContainerGroupDefinitionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest request) {
 
         return createFleetAsync(request, null);
@@ -270,6 +283,19 @@ public class AbstractAmazonGameLiftAsync extends AbstractAmazonGameLift implemen
     @Override
     public java.util.concurrent.Future<DeleteBuildResult> deleteBuildAsync(DeleteBuildRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteBuildRequest, DeleteBuildResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteContainerGroupDefinitionResult> deleteContainerGroupDefinitionAsync(DeleteContainerGroupDefinitionRequest request) {
+
+        return deleteContainerGroupDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteContainerGroupDefinitionResult> deleteContainerGroupDefinitionAsync(DeleteContainerGroupDefinitionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteContainerGroupDefinitionRequest, DeleteContainerGroupDefinitionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -478,6 +504,21 @@ public class AbstractAmazonGameLiftAsync extends AbstractAmazonGameLift implemen
     @Override
     public java.util.concurrent.Future<DescribeComputeResult> describeComputeAsync(DescribeComputeRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeComputeRequest, DescribeComputeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeContainerGroupDefinitionResult> describeContainerGroupDefinitionAsync(
+            DescribeContainerGroupDefinitionRequest request) {
+
+        return describeContainerGroupDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeContainerGroupDefinitionResult> describeContainerGroupDefinitionAsync(
+            DescribeContainerGroupDefinitionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeContainerGroupDefinitionRequest, DescribeContainerGroupDefinitionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -915,6 +956,19 @@ public class AbstractAmazonGameLiftAsync extends AbstractAmazonGameLift implemen
     @Override
     public java.util.concurrent.Future<ListComputeResult> listComputeAsync(ListComputeRequest request,
             com.amazonaws.handlers.AsyncHandler<ListComputeRequest, ListComputeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListContainerGroupDefinitionsResult> listContainerGroupDefinitionsAsync(ListContainerGroupDefinitionsRequest request) {
+
+        return listContainerGroupDefinitionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListContainerGroupDefinitionsResult> listContainerGroupDefinitionsAsync(ListContainerGroupDefinitionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListContainerGroupDefinitionsRequest, ListContainerGroupDefinitionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

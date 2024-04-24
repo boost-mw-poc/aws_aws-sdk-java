@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ComputeType {
 
     EC2("EC2"),
-    ANYWHERE("ANYWHERE");
+    ANYWHERE("ANYWHERE"),
+    CONTAINER("CONTAINER");
 
     private String value;
 

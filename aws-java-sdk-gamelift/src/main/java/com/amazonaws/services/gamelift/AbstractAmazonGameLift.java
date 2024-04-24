@@ -58,6 +58,11 @@ public class AbstractAmazonGameLift implements AmazonGameLift {
     }
 
     @Override
+    public CreateContainerGroupDefinitionResult createContainerGroupDefinition(CreateContainerGroupDefinitionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateFleetResult createFleet(CreateFleetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -129,6 +134,11 @@ public class AbstractAmazonGameLift implements AmazonGameLift {
 
     @Override
     public DeleteBuildResult deleteBuild(DeleteBuildRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteContainerGroupDefinitionResult deleteContainerGroupDefinition(DeleteContainerGroupDefinitionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -209,6 +219,11 @@ public class AbstractAmazonGameLift implements AmazonGameLift {
 
     @Override
     public DescribeComputeResult describeCompute(DescribeComputeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeContainerGroupDefinitionResult describeContainerGroupDefinition(DescribeContainerGroupDefinitionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -374,6 +389,11 @@ public class AbstractAmazonGameLift implements AmazonGameLift {
 
     @Override
     public ListComputeResult listCompute(ListComputeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListContainerGroupDefinitionsResult listContainerGroupDefinitions(ListContainerGroupDefinitionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -321,6 +321,12 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String preSignedLogUrl;
+    /**
+     * <p>
+     * The number of times that this event occurred.
+     * </p>
+     */
+    private Long count;
 
     /**
      * <p>
@@ -3161,6 +3167,46 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The number of times that this event occurred.
+     * </p>
+     * 
+     * @param count
+     *        The number of times that this event occurred.
+     */
+
+    public void setCount(Long count) {
+        this.count = count;
+    }
+
+    /**
+     * <p>
+     * The number of times that this event occurred.
+     * </p>
+     * 
+     * @return The number of times that this event occurred.
+     */
+
+    public Long getCount() {
+        return this.count;
+    }
+
+    /**
+     * <p>
+     * The number of times that this event occurred.
+     * </p>
+     * 
+     * @param count
+     *        The number of times that this event occurred.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Event withCount(Long count) {
+        setCount(count);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3183,7 +3229,9 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
         if (getEventTime() != null)
             sb.append("EventTime: ").append(getEventTime()).append(",");
         if (getPreSignedLogUrl() != null)
-            sb.append("PreSignedLogUrl: ").append(getPreSignedLogUrl());
+            sb.append("PreSignedLogUrl: ").append(getPreSignedLogUrl()).append(",");
+        if (getCount() != null)
+            sb.append("Count: ").append(getCount());
         sb.append("}");
         return sb.toString();
     }
@@ -3222,6 +3270,10 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPreSignedLogUrl() != null && other.getPreSignedLogUrl().equals(this.getPreSignedLogUrl()) == false)
             return false;
+        if (other.getCount() == null ^ this.getCount() == null)
+            return false;
+        if (other.getCount() != null && other.getCount().equals(this.getCount()) == false)
+            return false;
         return true;
     }
 
@@ -3236,6 +3288,7 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         hashCode = prime * hashCode + ((getEventTime() == null) ? 0 : getEventTime().hashCode());
         hashCode = prime * hashCode + ((getPreSignedLogUrl() == null) ? 0 : getPreSignedLogUrl().hashCode());
+        hashCode = prime * hashCode + ((getCount() == null) ? 0 : getCount().hashCode());
         return hashCode;
     }
 

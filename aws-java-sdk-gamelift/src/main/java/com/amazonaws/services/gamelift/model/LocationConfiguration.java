@@ -19,6 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
+ * <b>This data type has been expanded to use with the Amazon GameLift containers feature, which is currently in public
+ * preview.</b>
+ * </p>
+ * <p>
  * A remote location where a multi-location fleet can deploy game servers for game hosting.
  * </p>
  * 

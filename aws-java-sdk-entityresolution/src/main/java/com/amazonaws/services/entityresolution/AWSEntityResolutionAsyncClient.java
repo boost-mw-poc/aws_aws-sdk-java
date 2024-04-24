@@ -125,6 +125,39 @@ public class AWSEntityResolutionAsyncClient extends AWSEntityResolutionClient im
     }
 
     @Override
+    public java.util.concurrent.Future<BatchDeleteUniqueIdResult> batchDeleteUniqueIdAsync(BatchDeleteUniqueIdRequest request) {
+
+        return batchDeleteUniqueIdAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteUniqueIdResult> batchDeleteUniqueIdAsync(final BatchDeleteUniqueIdRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchDeleteUniqueIdRequest, BatchDeleteUniqueIdResult> asyncHandler) {
+        final BatchDeleteUniqueIdRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchDeleteUniqueIdResult>() {
+            @Override
+            public BatchDeleteUniqueIdResult call() throws Exception {
+                BatchDeleteUniqueIdResult result = null;
+
+                try {
+                    result = executeBatchDeleteUniqueId(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateIdMappingWorkflowResult> createIdMappingWorkflowAsync(CreateIdMappingWorkflowRequest request) {
 
         return createIdMappingWorkflowAsync(request, null);

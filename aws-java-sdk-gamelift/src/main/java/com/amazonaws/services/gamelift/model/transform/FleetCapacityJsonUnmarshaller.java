@@ -68,6 +68,10 @@ public class FleetCapacityJsonUnmarshaller implements Unmarshaller<FleetCapacity
                     context.nextToken();
                     fleetCapacity.setLocation(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ReplicaContainerGroupCounts", targetDepth)) {
+                    context.nextToken();
+                    fleetCapacity.setReplicaContainerGroupCounts(ReplicaContainerGroupCountsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -20,10 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Current resource utilization statistics in a specified fleet or location. The location value might refer to a fleet's
- * remote location or its home Region.
- * </p>
- * <p>
- * <b>Related actions</b>
+ * remote location or its home region.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/FleetUtilization" target="_top">AWS API

@@ -19,9 +19,30 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An Amazon GameLift compute resource for hosting your game servers. A compute can be an EC2instance in a managed EC2
- * fleet or a registered compute in an Anywhere fleet.
+ * <b>This data type has been expanded to use with the Amazon GameLift containers feature, which is currently in public
+ * preview.</b>
  * </p>
+ * <p>
+ * An Amazon GameLift compute resource for hosting your game servers. Computes in an Amazon GameLift fleet differs
+ * depending on the fleet's compute type property as follows:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * For <code>EC2</code> fleets, a compute is an EC2 instance.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * For <code>ANYWHERE</code> fleets, a compute is a computing resource that you provide and is registered to the fleet.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * For <code>CONTAINER</code> fleets, a compute is a container that's registered to the fleet.
+ * </p>
+ * </li>
+ * </ul>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/Compute" target="_top">AWS API
  *      Documentation</a>
@@ -43,15 +64,15 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
     private String fleetArn;
     /**
      * <p>
-     * A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is an
-     * instance ID.
+     * A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is the same
+     * value as the <code>InstanceId</code> ID.
      * </p>
      */
     private String computeName;
     /**
      * <p>
      * The ARN that is assigned to a compute resource and uniquely identifies it. ARNs are unique across locations.
-     * Instances in managed EC2 fleets are not assigned a ComputeARN.
+     * Instances in managed EC2 fleets are not assigned a Compute ARN.
      * </p>
      */
     private String computeArn;
@@ -106,6 +127,25 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String gameLiftServiceSdkEndpoint;
+    /**
+     * <p>
+     * The endpoint of the Amazon GameLift Agent.
+     * </p>
+     */
+    private String gameLiftAgentEndpoint;
+    /**
+     * <p>
+     * The <code>InstanceID</code> of the <code>Instance</code> hosting the compute for Container and Managed EC2
+     * fleets.
+     * </p>
+     */
+    private String instanceId;
+    /**
+     * <p>
+     * Some attributes of a container.
+     * </p>
+     */
+    private ContainerAttributes containerAttributes;
 
     /**
      * <p>
@@ -189,13 +229,13 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is an
-     * instance ID.
+     * A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is the same
+     * value as the <code>InstanceId</code> ID.
      * </p>
      * 
      * @param computeName
-     *        A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is an
-     *        instance ID.
+     *        A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is
+     *        the same value as the <code>InstanceId</code> ID.
      */
 
     public void setComputeName(String computeName) {
@@ -204,12 +244,12 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is an
-     * instance ID.
+     * A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is the same
+     * value as the <code>InstanceId</code> ID.
      * </p>
      * 
      * @return A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is
-     *         an instance ID.
+     *         the same value as the <code>InstanceId</code> ID.
      */
 
     public String getComputeName() {
@@ -218,13 +258,13 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is an
-     * instance ID.
+     * A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is the same
+     * value as the <code>InstanceId</code> ID.
      * </p>
      * 
      * @param computeName
-     *        A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is an
-     *        instance ID.
+     *        A descriptive label for the compute resource. For instances in a managed EC2 fleet, the compute name is
+     *        the same value as the <code>InstanceId</code> ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,12 +276,12 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ARN that is assigned to a compute resource and uniquely identifies it. ARNs are unique across locations.
-     * Instances in managed EC2 fleets are not assigned a ComputeARN.
+     * Instances in managed EC2 fleets are not assigned a Compute ARN.
      * </p>
      * 
      * @param computeArn
      *        The ARN that is assigned to a compute resource and uniquely identifies it. ARNs are unique across
-     *        locations. Instances in managed EC2 fleets are not assigned a ComputeARN.
+     *        locations. Instances in managed EC2 fleets are not assigned a Compute ARN.
      */
 
     public void setComputeArn(String computeArn) {
@@ -251,11 +291,11 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ARN that is assigned to a compute resource and uniquely identifies it. ARNs are unique across locations.
-     * Instances in managed EC2 fleets are not assigned a ComputeARN.
+     * Instances in managed EC2 fleets are not assigned a Compute ARN.
      * </p>
      * 
      * @return The ARN that is assigned to a compute resource and uniquely identifies it. ARNs are unique across
-     *         locations. Instances in managed EC2 fleets are not assigned a ComputeARN.
+     *         locations. Instances in managed EC2 fleets are not assigned a Compute ARN.
      */
 
     public String getComputeArn() {
@@ -265,12 +305,12 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ARN that is assigned to a compute resource and uniquely identifies it. ARNs are unique across locations.
-     * Instances in managed EC2 fleets are not assigned a ComputeARN.
+     * Instances in managed EC2 fleets are not assigned a Compute ARN.
      * </p>
      * 
      * @param computeArn
      *        The ARN that is assigned to a compute resource and uniquely identifies it. ARNs are unique across
-     *        locations. Instances in managed EC2 fleets are not assigned a ComputeARN.
+     *        locations. Instances in managed EC2 fleets are not assigned a Compute ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -677,6 +717,132 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The endpoint of the Amazon GameLift Agent.
+     * </p>
+     * 
+     * @param gameLiftAgentEndpoint
+     *        The endpoint of the Amazon GameLift Agent.
+     */
+
+    public void setGameLiftAgentEndpoint(String gameLiftAgentEndpoint) {
+        this.gameLiftAgentEndpoint = gameLiftAgentEndpoint;
+    }
+
+    /**
+     * <p>
+     * The endpoint of the Amazon GameLift Agent.
+     * </p>
+     * 
+     * @return The endpoint of the Amazon GameLift Agent.
+     */
+
+    public String getGameLiftAgentEndpoint() {
+        return this.gameLiftAgentEndpoint;
+    }
+
+    /**
+     * <p>
+     * The endpoint of the Amazon GameLift Agent.
+     * </p>
+     * 
+     * @param gameLiftAgentEndpoint
+     *        The endpoint of the Amazon GameLift Agent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Compute withGameLiftAgentEndpoint(String gameLiftAgentEndpoint) {
+        setGameLiftAgentEndpoint(gameLiftAgentEndpoint);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The <code>InstanceID</code> of the <code>Instance</code> hosting the compute for Container and Managed EC2
+     * fleets.
+     * </p>
+     * 
+     * @param instanceId
+     *        The <code>InstanceID</code> of the <code>Instance</code> hosting the compute for Container and Managed EC2
+     *        fleets.
+     */
+
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+    }
+
+    /**
+     * <p>
+     * The <code>InstanceID</code> of the <code>Instance</code> hosting the compute for Container and Managed EC2
+     * fleets.
+     * </p>
+     * 
+     * @return The <code>InstanceID</code> of the <code>Instance</code> hosting the compute for Container and Managed
+     *         EC2 fleets.
+     */
+
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * <p>
+     * The <code>InstanceID</code> of the <code>Instance</code> hosting the compute for Container and Managed EC2
+     * fleets.
+     * </p>
+     * 
+     * @param instanceId
+     *        The <code>InstanceID</code> of the <code>Instance</code> hosting the compute for Container and Managed EC2
+     *        fleets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Compute withInstanceId(String instanceId) {
+        setInstanceId(instanceId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Some attributes of a container.
+     * </p>
+     * 
+     * @param containerAttributes
+     *        Some attributes of a container.
+     */
+
+    public void setContainerAttributes(ContainerAttributes containerAttributes) {
+        this.containerAttributes = containerAttributes;
+    }
+
+    /**
+     * <p>
+     * Some attributes of a container.
+     * </p>
+     * 
+     * @return Some attributes of a container.
+     */
+
+    public ContainerAttributes getContainerAttributes() {
+        return this.containerAttributes;
+    }
+
+    /**
+     * <p>
+     * Some attributes of a container.
+     * </p>
+     * 
+     * @param containerAttributes
+     *        Some attributes of a container.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Compute withContainerAttributes(ContainerAttributes containerAttributes) {
+        setContainerAttributes(containerAttributes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -711,7 +877,13 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getGameLiftServiceSdkEndpoint() != null)
-            sb.append("GameLiftServiceSdkEndpoint: ").append(getGameLiftServiceSdkEndpoint());
+            sb.append("GameLiftServiceSdkEndpoint: ").append(getGameLiftServiceSdkEndpoint()).append(",");
+        if (getGameLiftAgentEndpoint() != null)
+            sb.append("GameLiftAgentEndpoint: ").append(getGameLiftAgentEndpoint()).append(",");
+        if (getInstanceId() != null)
+            sb.append("InstanceId: ").append(getInstanceId()).append(",");
+        if (getContainerAttributes() != null)
+            sb.append("ContainerAttributes: ").append(getContainerAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -774,6 +946,18 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getGameLiftServiceSdkEndpoint() != null && other.getGameLiftServiceSdkEndpoint().equals(this.getGameLiftServiceSdkEndpoint()) == false)
             return false;
+        if (other.getGameLiftAgentEndpoint() == null ^ this.getGameLiftAgentEndpoint() == null)
+            return false;
+        if (other.getGameLiftAgentEndpoint() != null && other.getGameLiftAgentEndpoint().equals(this.getGameLiftAgentEndpoint()) == false)
+            return false;
+        if (other.getInstanceId() == null ^ this.getInstanceId() == null)
+            return false;
+        if (other.getInstanceId() != null && other.getInstanceId().equals(this.getInstanceId()) == false)
+            return false;
+        if (other.getContainerAttributes() == null ^ this.getContainerAttributes() == null)
+            return false;
+        if (other.getContainerAttributes() != null && other.getContainerAttributes().equals(this.getContainerAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -794,6 +978,9 @@ public class Compute implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOperatingSystem() == null) ? 0 : getOperatingSystem().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getGameLiftServiceSdkEndpoint() == null) ? 0 : getGameLiftServiceSdkEndpoint().hashCode());
+        hashCode = prime * hashCode + ((getGameLiftAgentEndpoint() == null) ? 0 : getGameLiftAgentEndpoint().hashCode());
+        hashCode = prime * hashCode + ((getInstanceId() == null) ? 0 : getInstanceId().hashCode());
+        hashCode = prime * hashCode + ((getContainerAttributes() == null) ? 0 : getContainerAttributes().hashCode());
         return hashCode;
     }
 

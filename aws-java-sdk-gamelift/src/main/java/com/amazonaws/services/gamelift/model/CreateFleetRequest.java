@@ -39,17 +39,17 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String description;
     /**
      * <p>
-     * The unique identifier for a custom game server build to be deployed on fleet instances. You can use either the
-     * build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code> status. This fleet
-     * property can't be changed after the fleet is created.
+     * The unique identifier for a custom game server build to be deployed to a fleet with compute type <code>EC2</code>
+     * . You can use either the build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code>
+     * status. This fleet property can't be changed after the fleet is created.
      * </p>
      */
     private String buildId;
     /**
      * <p>
-     * The unique identifier for a Realtime configuration script to be deployed on fleet instances. You can use either
-     * the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to creating the fleet. This fleet
-     * property can't be changed after the fleet is created.
+     * The unique identifier for a Realtime configuration script to be deployed to a fleet with compute type
+     * <code>EC2</code>. You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to
+     * creating the fleet. This fleet property can't be changed after the fleet is created.
      * </p>
      */
     private String scriptId;
@@ -79,18 +79,25 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.List<String> logPaths;
     /**
      * <p>
-     * The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type determines
-     * the computing resources that will be used to host your game servers, including CPU, memory, storage, and
-     * networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
+     * The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
+     * determines the computing resources that will be used to host your game servers, including CPU, memory, storage,
+     * and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
      * Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
      * </p>
      */
     private String eC2InstanceType;
     /**
      * <p>
-     * The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can connect to game
-     * sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * The IP address ranges and port settings that allow inbound traffic to access game server processes and other
+     * processes on this fleet. Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call <a>UpdateFleetPortSettings</a> to set it before players can connect to game
+     * sessions. As a best practice, we recommend opening ports for remote access only when you need them and closing
+     * them when you're finished. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * </p>
+     * <p>
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers that you set for the
+     * fleet's connection port range. During the life of the fleet, update this parameter to control which connection
+     * ports are open to inbound traffic.
      * </p>
      */
     private java.util.List<IpPermission> eC2InboundPermissions;
@@ -117,15 +124,15 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String newGameSessionProtectionPolicy;
     /**
      * <p>
-     * Instructions for how to launch and maintain server processes on instances in the fleet. The runtime configuration
-     * defines one or more server process configurations, each identifying a build executable or Realtime script file
-     * and the number of processes of that type to run concurrently.
+     * Instructions for how to launch and run server processes on the fleet. Set runtime configuration for EC2 fleets
+     * and container fleets. For an Anywhere fleets, set this parameter only if the fleet is running the Amazon GameLift
+     * Agent. The runtime configuration defines one or more server process configurations. Each server process
+     * identifies a game executable or Realtime script file and the number of processes to run concurrently.
      * </p>
      * <note>
      * <p>
-     * The <code>RuntimeConfiguration</code> parameter is required unless the fleet is being configured using the older
-     * parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>, which are still supported for
-     * backward compatibility.
+     * This parameter replaces the parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>,
+     * which are still supported for backward compatibility.
      * </p>
      * </note>
      */
@@ -211,11 +218,11 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * A set of remote locations to deploy additional instances to and manage as part of the fleet. This parameter can
      * only be used when creating fleets in Amazon Web Services Regions that support multiple locations. You can add any
      * Amazon GameLift-supported Amazon Web Services Region as a remote location, in the form of an Amazon Web Services
-     * Region code such as <code>us-west-2</code>. To create a fleet with instances in the home Region only, don't use
-     * this parameter.
+     * Region code, such as <code>us-west-2</code> or Local Zone code. To create a fleet with instances in the home
+     * Region only, don't set this parameter.
      * </p>
      * <p>
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the request.
      * </p>
      */
     private java.util.List<LocationConfiguration> locations;
@@ -230,10 +237,30 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
-     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this property is set to
-     * <code>EC2</code>.
+     * The type of compute resource used to host your game servers.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is the
+     * default setting.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed to
+     * Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     * <code>ContainerGroupsConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     * deployed to compute resources that are provided and managed by you. With this compute type, you can also set the
+     * <code>AnywhereConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String computeType;
     /**
@@ -244,7 +271,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
     private AnywhereConfiguration anywhereConfiguration;
     /**
      * <p>
-     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      * <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed as
      * needed. Use shared credentials for applications that are deployed along with the game server executable, if the
      * game server is integrated with server SDK version 5.x. For more information about using shared credentials, see
@@ -253,6 +280,15 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String instanceRoleCredentialsProvider;
+    /**
+     * <p>
+     * The container groups to deploy to instances in the container fleet and other fleet-level configuration settings.
+     * Use the <a>CreateContainerGroupDefinition</a> action to create container groups. A container fleet must have
+     * exactly one replica container group, and can optionally have one daemon container group. You can't change this
+     * property after you create the fleet.
+     * </p>
+     */
+    private ContainerGroupsConfiguration containerGroupsConfiguration;
 
     /**
      * <p>
@@ -336,15 +372,15 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for a custom game server build to be deployed on fleet instances. You can use either the
-     * build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code> status. This fleet
-     * property can't be changed after the fleet is created.
+     * The unique identifier for a custom game server build to be deployed to a fleet with compute type <code>EC2</code>
+     * . You can use either the build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code>
+     * status. This fleet property can't be changed after the fleet is created.
      * </p>
      * 
      * @param buildId
-     *        The unique identifier for a custom game server build to be deployed on fleet instances. You can use either
-     *        the build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code> status. This
-     *        fleet property can't be changed after the fleet is created.
+     *        The unique identifier for a custom game server build to be deployed to a fleet with compute type
+     *        <code>EC2</code>. You can use either the build ID or ARN. The build must be uploaded to Amazon GameLift
+     *        and in <code>READY</code> status. This fleet property can't be changed after the fleet is created.
      */
 
     public void setBuildId(String buildId) {
@@ -353,14 +389,14 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for a custom game server build to be deployed on fleet instances. You can use either the
-     * build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code> status. This fleet
-     * property can't be changed after the fleet is created.
+     * The unique identifier for a custom game server build to be deployed to a fleet with compute type <code>EC2</code>
+     * . You can use either the build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code>
+     * status. This fleet property can't be changed after the fleet is created.
      * </p>
      * 
-     * @return The unique identifier for a custom game server build to be deployed on fleet instances. You can use
-     *         either the build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code>
-     *         status. This fleet property can't be changed after the fleet is created.
+     * @return The unique identifier for a custom game server build to be deployed to a fleet with compute type
+     *         <code>EC2</code>. You can use either the build ID or ARN. The build must be uploaded to Amazon GameLift
+     *         and in <code>READY</code> status. This fleet property can't be changed after the fleet is created.
      */
 
     public String getBuildId() {
@@ -369,15 +405,15 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for a custom game server build to be deployed on fleet instances. You can use either the
-     * build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code> status. This fleet
-     * property can't be changed after the fleet is created.
+     * The unique identifier for a custom game server build to be deployed to a fleet with compute type <code>EC2</code>
+     * . You can use either the build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code>
+     * status. This fleet property can't be changed after the fleet is created.
      * </p>
      * 
      * @param buildId
-     *        The unique identifier for a custom game server build to be deployed on fleet instances. You can use either
-     *        the build ID or ARN. The build must be uploaded to Amazon GameLift and in <code>READY</code> status. This
-     *        fleet property can't be changed after the fleet is created.
+     *        The unique identifier for a custom game server build to be deployed to a fleet with compute type
+     *        <code>EC2</code>. You can use either the build ID or ARN. The build must be uploaded to Amazon GameLift
+     *        and in <code>READY</code> status. This fleet property can't be changed after the fleet is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -388,15 +424,15 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for a Realtime configuration script to be deployed on fleet instances. You can use either
-     * the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to creating the fleet. This fleet
-     * property can't be changed after the fleet is created.
+     * The unique identifier for a Realtime configuration script to be deployed to a fleet with compute type
+     * <code>EC2</code>. You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to
+     * creating the fleet. This fleet property can't be changed after the fleet is created.
      * </p>
      * 
      * @param scriptId
-     *        The unique identifier for a Realtime configuration script to be deployed on fleet instances. You can use
-     *        either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to creating the fleet. This
-     *        fleet property can't be changed after the fleet is created.
+     *        The unique identifier for a Realtime configuration script to be deployed to a fleet with compute type
+     *        <code>EC2</code>. You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift
+     *        prior to creating the fleet. This fleet property can't be changed after the fleet is created.
      */
 
     public void setScriptId(String scriptId) {
@@ -405,14 +441,14 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for a Realtime configuration script to be deployed on fleet instances. You can use either
-     * the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to creating the fleet. This fleet
-     * property can't be changed after the fleet is created.
+     * The unique identifier for a Realtime configuration script to be deployed to a fleet with compute type
+     * <code>EC2</code>. You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to
+     * creating the fleet. This fleet property can't be changed after the fleet is created.
      * </p>
      * 
-     * @return The unique identifier for a Realtime configuration script to be deployed on fleet instances. You can use
-     *         either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to creating the fleet.
-     *         This fleet property can't be changed after the fleet is created.
+     * @return The unique identifier for a Realtime configuration script to be deployed to a fleet with compute type
+     *         <code>EC2</code>. You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift
+     *         prior to creating the fleet. This fleet property can't be changed after the fleet is created.
      */
 
     public String getScriptId() {
@@ -421,15 +457,15 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for a Realtime configuration script to be deployed on fleet instances. You can use either
-     * the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to creating the fleet. This fleet
-     * property can't be changed after the fleet is created.
+     * The unique identifier for a Realtime configuration script to be deployed to a fleet with compute type
+     * <code>EC2</code>. You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to
+     * creating the fleet. This fleet property can't be changed after the fleet is created.
      * </p>
      * 
      * @param scriptId
-     *        The unique identifier for a Realtime configuration script to be deployed on fleet instances. You can use
-     *        either the script ID or ARN. Scripts must be uploaded to Amazon GameLift prior to creating the fleet. This
-     *        fleet property can't be changed after the fleet is created.
+     *        The unique identifier for a Realtime configuration script to be deployed to a fleet with compute type
+     *        <code>EC2</code>. You can use either the script ID or ARN. Scripts must be uploaded to Amazon GameLift
+     *        prior to creating the fleet. This fleet property can't be changed after the fleet is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -640,14 +676,14 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type determines
-     * the computing resources that will be used to host your game servers, including CPU, memory, storage, and
-     * networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
+     * The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
+     * determines the computing resources that will be used to host your game servers, including CPU, memory, storage,
+     * and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
      * Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
      * </p>
      * 
      * @param eC2InstanceType
-     *        The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type
+     *        The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
      *        determines the computing resources that will be used to host your game servers, including CPU, memory,
      *        storage, and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
      *        Compute Cloud Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
@@ -660,16 +696,16 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type determines
-     * the computing resources that will be used to host your game servers, including CPU, memory, storage, and
-     * networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
+     * The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
+     * determines the computing resources that will be used to host your game servers, including CPU, memory, storage,
+     * and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
      * Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
      * </p>
      * 
-     * @return The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type
-     *         determines the computing resources that will be used to host your game servers, including CPU, memory,
-     *         storage, and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
-     *         Compute Cloud Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
+     * @return The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance
+     *         type determines the computing resources that will be used to host your game servers, including CPU,
+     *         memory, storage, and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon
+     *         Elastic Compute Cloud Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
      * @see EC2InstanceType
      */
 
@@ -679,14 +715,14 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type determines
-     * the computing resources that will be used to host your game servers, including CPU, memory, storage, and
-     * networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
+     * The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
+     * determines the computing resources that will be used to host your game servers, including CPU, memory, storage,
+     * and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
      * Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
      * </p>
      * 
      * @param eC2InstanceType
-     *        The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type
+     *        The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
      *        determines the computing resources that will be used to host your game servers, including CPU, memory,
      *        storage, and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
      *        Compute Cloud Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
@@ -701,14 +737,14 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type determines
-     * the computing resources that will be used to host your game servers, including CPU, memory, storage, and
-     * networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
+     * The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
+     * determines the computing resources that will be used to host your game servers, including CPU, memory, storage,
+     * and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
      * Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
      * </p>
      * 
      * @param eC2InstanceType
-     *        The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type
+     *        The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
      *        determines the computing resources that will be used to host your game servers, including CPU, memory,
      *        storage, and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
      *        Compute Cloud Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
@@ -721,14 +757,14 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type determines
-     * the computing resources that will be used to host your game servers, including CPU, memory, storage, and
-     * networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
+     * The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
+     * determines the computing resources that will be used to host your game servers, including CPU, memory, storage,
+     * and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud
      * Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
      * </p>
      * 
      * @param eC2InstanceType
-     *        The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances. Instance type
+     *        The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets. Instance type
      *        determines the computing resources that will be used to host your game servers, including CPU, memory,
      *        storage, and networking capacity. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
      *        Compute Cloud Instance Types</a> for detailed descriptions of Amazon EC2 instance types.
@@ -743,15 +779,28 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can connect to game
-     * sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * The IP address ranges and port settings that allow inbound traffic to access game server processes and other
+     * processes on this fleet. Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call <a>UpdateFleetPortSettings</a> to set it before players can connect to game
+     * sessions. As a best practice, we recommend opening ports for remote access only when you need them and closing
+     * them when you're finished. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * </p>
+     * <p>
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers that you set for the
+     * fleet's connection port range. During the life of the fleet, update this parameter to control which connection
+     * ports are open to inbound traffic.
      * </p>
      * 
-     * @return The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on
-     *         this fleet. If the fleet is hosting a custom game build, this property must be set before players can
-     *         connect to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP
-     *         ranges.
+     * @return The IP address ranges and port settings that allow inbound traffic to access game server processes and
+     *         other processes on this fleet. Set this parameter for EC2 and container fleets. You can leave this
+     *         parameter empty when creating the fleet, but you must call <a>UpdateFleetPortSettings</a> to set it
+     *         before players can connect to game sessions. As a best practice, we recommend opening ports for remote
+     *         access only when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     *         GameLift automatically sets TCP and UDP ranges.</p>
+     *         <p>
+     *         To manage inbound access for a container fleet, set this parameter to the same port numbers that you set
+     *         for the fleet's connection port range. During the life of the fleet, update this parameter to control
+     *         which connection ports are open to inbound traffic.
      */
 
     public java.util.List<IpPermission> getEC2InboundPermissions() {
@@ -760,15 +809,29 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can connect to game
-     * sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * The IP address ranges and port settings that allow inbound traffic to access game server processes and other
+     * processes on this fleet. Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call <a>UpdateFleetPortSettings</a> to set it before players can connect to game
+     * sessions. As a best practice, we recommend opening ports for remote access only when you need them and closing
+     * them when you're finished. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * </p>
+     * <p>
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers that you set for the
+     * fleet's connection port range. During the life of the fleet, update this parameter to control which connection
+     * ports are open to inbound traffic.
      * </p>
      * 
      * @param eC2InboundPermissions
-     *        The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this
-     *        fleet. If the fleet is hosting a custom game build, this property must be set before players can connect
-     *        to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     *        The IP address ranges and port settings that allow inbound traffic to access game server processes and
+     *        other processes on this fleet. Set this parameter for EC2 and container fleets. You can leave this
+     *        parameter empty when creating the fleet, but you must call <a>UpdateFleetPortSettings</a> to set it before
+     *        players can connect to game sessions. As a best practice, we recommend opening ports for remote access
+     *        only when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     *        GameLift automatically sets TCP and UDP ranges.</p>
+     *        <p>
+     *        To manage inbound access for a container fleet, set this parameter to the same port numbers that you set
+     *        for the fleet's connection port range. During the life of the fleet, update this parameter to control
+     *        which connection ports are open to inbound traffic.
      */
 
     public void setEC2InboundPermissions(java.util.Collection<IpPermission> eC2InboundPermissions) {
@@ -782,9 +845,16 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can connect to game
-     * sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * The IP address ranges and port settings that allow inbound traffic to access game server processes and other
+     * processes on this fleet. Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call <a>UpdateFleetPortSettings</a> to set it before players can connect to game
+     * sessions. As a best practice, we recommend opening ports for remote access only when you need them and closing
+     * them when you're finished. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * </p>
+     * <p>
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers that you set for the
+     * fleet's connection port range. During the life of the fleet, update this parameter to control which connection
+     * ports are open to inbound traffic.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -793,9 +863,16 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param eC2InboundPermissions
-     *        The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this
-     *        fleet. If the fleet is hosting a custom game build, this property must be set before players can connect
-     *        to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     *        The IP address ranges and port settings that allow inbound traffic to access game server processes and
+     *        other processes on this fleet. Set this parameter for EC2 and container fleets. You can leave this
+     *        parameter empty when creating the fleet, but you must call <a>UpdateFleetPortSettings</a> to set it before
+     *        players can connect to game sessions. As a best practice, we recommend opening ports for remote access
+     *        only when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     *        GameLift automatically sets TCP and UDP ranges.</p>
+     *        <p>
+     *        To manage inbound access for a container fleet, set this parameter to the same port numbers that you set
+     *        for the fleet's connection port range. During the life of the fleet, update this parameter to control
+     *        which connection ports are open to inbound traffic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -811,15 +888,29 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can connect to game
-     * sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * The IP address ranges and port settings that allow inbound traffic to access game server processes and other
+     * processes on this fleet. Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call <a>UpdateFleetPortSettings</a> to set it before players can connect to game
+     * sessions. As a best practice, we recommend opening ports for remote access only when you need them and closing
+     * them when you're finished. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     * </p>
+     * <p>
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers that you set for the
+     * fleet's connection port range. During the life of the fleet, update this parameter to control which connection
+     * ports are open to inbound traffic.
      * </p>
      * 
      * @param eC2InboundPermissions
-     *        The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this
-     *        fleet. If the fleet is hosting a custom game build, this property must be set before players can connect
-     *        to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges.
+     *        The IP address ranges and port settings that allow inbound traffic to access game server processes and
+     *        other processes on this fleet. Set this parameter for EC2 and container fleets. You can leave this
+     *        parameter empty when creating the fleet, but you must call <a>UpdateFleetPortSettings</a> to set it before
+     *        players can connect to game sessions. As a best practice, we recommend opening ports for remote access
+     *        only when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     *        GameLift automatically sets TCP and UDP ranges.</p>
+     *        <p>
+     *        To manage inbound access for a container fleet, set this parameter to the same port numbers that you set
+     *        for the fleet's connection port range. During the life of the fleet, update this parameter to control
+     *        which connection ports are open to inbound traffic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1053,26 +1144,27 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Instructions for how to launch and maintain server processes on instances in the fleet. The runtime configuration
-     * defines one or more server process configurations, each identifying a build executable or Realtime script file
-     * and the number of processes of that type to run concurrently.
+     * Instructions for how to launch and run server processes on the fleet. Set runtime configuration for EC2 fleets
+     * and container fleets. For an Anywhere fleets, set this parameter only if the fleet is running the Amazon GameLift
+     * Agent. The runtime configuration defines one or more server process configurations. Each server process
+     * identifies a game executable or Realtime script file and the number of processes to run concurrently.
      * </p>
      * <note>
      * <p>
-     * The <code>RuntimeConfiguration</code> parameter is required unless the fleet is being configured using the older
-     * parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>, which are still supported for
-     * backward compatibility.
+     * This parameter replaces the parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>,
+     * which are still supported for backward compatibility.
      * </p>
      * </note>
      * 
      * @param runtimeConfiguration
-     *        Instructions for how to launch and maintain server processes on instances in the fleet. The runtime
-     *        configuration defines one or more server process configurations, each identifying a build executable or
-     *        Realtime script file and the number of processes of that type to run concurrently. </p> <note>
+     *        Instructions for how to launch and run server processes on the fleet. Set runtime configuration for EC2
+     *        fleets and container fleets. For an Anywhere fleets, set this parameter only if the fleet is running the
+     *        Amazon GameLift Agent. The runtime configuration defines one or more server process configurations. Each
+     *        server process identifies a game executable or Realtime script file and the number of processes to run
+     *        concurrently. </p> <note>
      *        <p>
-     *        The <code>RuntimeConfiguration</code> parameter is required unless the fleet is being configured using the
-     *        older parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>, which are still
-     *        supported for backward compatibility.
+     *        This parameter replaces the parameters <code>ServerLaunchPath</code> and
+     *        <code>ServerLaunchParameters</code>, which are still supported for backward compatibility.
      *        </p>
      */
 
@@ -1082,25 +1174,26 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Instructions for how to launch and maintain server processes on instances in the fleet. The runtime configuration
-     * defines one or more server process configurations, each identifying a build executable or Realtime script file
-     * and the number of processes of that type to run concurrently.
+     * Instructions for how to launch and run server processes on the fleet. Set runtime configuration for EC2 fleets
+     * and container fleets. For an Anywhere fleets, set this parameter only if the fleet is running the Amazon GameLift
+     * Agent. The runtime configuration defines one or more server process configurations. Each server process
+     * identifies a game executable or Realtime script file and the number of processes to run concurrently.
      * </p>
      * <note>
      * <p>
-     * The <code>RuntimeConfiguration</code> parameter is required unless the fleet is being configured using the older
-     * parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>, which are still supported for
-     * backward compatibility.
+     * This parameter replaces the parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>,
+     * which are still supported for backward compatibility.
      * </p>
      * </note>
      * 
-     * @return Instructions for how to launch and maintain server processes on instances in the fleet. The runtime
-     *         configuration defines one or more server process configurations, each identifying a build executable or
-     *         Realtime script file and the number of processes of that type to run concurrently. </p> <note>
+     * @return Instructions for how to launch and run server processes on the fleet. Set runtime configuration for EC2
+     *         fleets and container fleets. For an Anywhere fleets, set this parameter only if the fleet is running the
+     *         Amazon GameLift Agent. The runtime configuration defines one or more server process configurations. Each
+     *         server process identifies a game executable or Realtime script file and the number of processes to run
+     *         concurrently. </p> <note>
      *         <p>
-     *         The <code>RuntimeConfiguration</code> parameter is required unless the fleet is being configured using
-     *         the older parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>, which are
-     *         still supported for backward compatibility.
+     *         This parameter replaces the parameters <code>ServerLaunchPath</code> and
+     *         <code>ServerLaunchParameters</code>, which are still supported for backward compatibility.
      *         </p>
      */
 
@@ -1110,26 +1203,27 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Instructions for how to launch and maintain server processes on instances in the fleet. The runtime configuration
-     * defines one or more server process configurations, each identifying a build executable or Realtime script file
-     * and the number of processes of that type to run concurrently.
+     * Instructions for how to launch and run server processes on the fleet. Set runtime configuration for EC2 fleets
+     * and container fleets. For an Anywhere fleets, set this parameter only if the fleet is running the Amazon GameLift
+     * Agent. The runtime configuration defines one or more server process configurations. Each server process
+     * identifies a game executable or Realtime script file and the number of processes to run concurrently.
      * </p>
      * <note>
      * <p>
-     * The <code>RuntimeConfiguration</code> parameter is required unless the fleet is being configured using the older
-     * parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>, which are still supported for
-     * backward compatibility.
+     * This parameter replaces the parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>,
+     * which are still supported for backward compatibility.
      * </p>
      * </note>
      * 
      * @param runtimeConfiguration
-     *        Instructions for how to launch and maintain server processes on instances in the fleet. The runtime
-     *        configuration defines one or more server process configurations, each identifying a build executable or
-     *        Realtime script file and the number of processes of that type to run concurrently. </p> <note>
+     *        Instructions for how to launch and run server processes on the fleet. Set runtime configuration for EC2
+     *        fleets and container fleets. For an Anywhere fleets, set this parameter only if the fleet is running the
+     *        Amazon GameLift Agent. The runtime configuration defines one or more server process configurations. Each
+     *        server process identifies a game executable or Realtime script file and the number of processes to run
+     *        concurrently. </p> <note>
      *        <p>
-     *        The <code>RuntimeConfiguration</code> parameter is required unless the fleet is being configured using the
-     *        older parameters <code>ServerLaunchPath</code> and <code>ServerLaunchParameters</code>, which are still
-     *        supported for backward compatibility.
+     *        This parameter replaces the parameters <code>ServerLaunchPath</code> and
+     *        <code>ServerLaunchParameters</code>, which are still supported for backward compatibility.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1710,20 +1804,20 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * A set of remote locations to deploy additional instances to and manage as part of the fleet. This parameter can
      * only be used when creating fleets in Amazon Web Services Regions that support multiple locations. You can add any
      * Amazon GameLift-supported Amazon Web Services Region as a remote location, in the form of an Amazon Web Services
-     * Region code such as <code>us-west-2</code>. To create a fleet with instances in the home Region only, don't use
-     * this parameter.
+     * Region code, such as <code>us-west-2</code> or Local Zone code. To create a fleet with instances in the home
+     * Region only, don't set this parameter.
      * </p>
      * <p>
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the request.
      * </p>
      * 
      * @return A set of remote locations to deploy additional instances to and manage as part of the fleet. This
      *         parameter can only be used when creating fleets in Amazon Web Services Regions that support multiple
      *         locations. You can add any Amazon GameLift-supported Amazon Web Services Region as a remote location, in
-     *         the form of an Amazon Web Services Region code such as <code>us-west-2</code>. To create a fleet with
-     *         instances in the home Region only, don't use this parameter. </p>
+     *         the form of an Amazon Web Services Region code, such as <code>us-west-2</code> or Local Zone code. To
+     *         create a fleet with instances in the home Region only, don't set this parameter. </p>
      *         <p>
-     *         To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     *         When using this parameter, Amazon GameLift requires you to include your home location in the request.
      */
 
     public java.util.List<LocationConfiguration> getLocations() {
@@ -1735,21 +1829,21 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * A set of remote locations to deploy additional instances to and manage as part of the fleet. This parameter can
      * only be used when creating fleets in Amazon Web Services Regions that support multiple locations. You can add any
      * Amazon GameLift-supported Amazon Web Services Region as a remote location, in the form of an Amazon Web Services
-     * Region code such as <code>us-west-2</code>. To create a fleet with instances in the home Region only, don't use
-     * this parameter.
+     * Region code, such as <code>us-west-2</code> or Local Zone code. To create a fleet with instances in the home
+     * Region only, don't set this parameter.
      * </p>
      * <p>
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the request.
      * </p>
      * 
      * @param locations
      *        A set of remote locations to deploy additional instances to and manage as part of the fleet. This
      *        parameter can only be used when creating fleets in Amazon Web Services Regions that support multiple
      *        locations. You can add any Amazon GameLift-supported Amazon Web Services Region as a remote location, in
-     *        the form of an Amazon Web Services Region code such as <code>us-west-2</code>. To create a fleet with
-     *        instances in the home Region only, don't use this parameter. </p>
+     *        the form of an Amazon Web Services Region code, such as <code>us-west-2</code> or Local Zone code. To
+     *        create a fleet with instances in the home Region only, don't set this parameter. </p>
      *        <p>
-     *        To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     *        When using this parameter, Amazon GameLift requires you to include your home location in the request.
      */
 
     public void setLocations(java.util.Collection<LocationConfiguration> locations) {
@@ -1766,11 +1860,11 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * A set of remote locations to deploy additional instances to and manage as part of the fleet. This parameter can
      * only be used when creating fleets in Amazon Web Services Regions that support multiple locations. You can add any
      * Amazon GameLift-supported Amazon Web Services Region as a remote location, in the form of an Amazon Web Services
-     * Region code such as <code>us-west-2</code>. To create a fleet with instances in the home Region only, don't use
-     * this parameter.
+     * Region code, such as <code>us-west-2</code> or Local Zone code. To create a fleet with instances in the home
+     * Region only, don't set this parameter.
      * </p>
      * <p>
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1782,10 +1876,10 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        A set of remote locations to deploy additional instances to and manage as part of the fleet. This
      *        parameter can only be used when creating fleets in Amazon Web Services Regions that support multiple
      *        locations. You can add any Amazon GameLift-supported Amazon Web Services Region as a remote location, in
-     *        the form of an Amazon Web Services Region code such as <code>us-west-2</code>. To create a fleet with
-     *        instances in the home Region only, don't use this parameter. </p>
+     *        the form of an Amazon Web Services Region code, such as <code>us-west-2</code> or Local Zone code. To
+     *        create a fleet with instances in the home Region only, don't set this parameter. </p>
      *        <p>
-     *        To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     *        When using this parameter, Amazon GameLift requires you to include your home location in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1804,21 +1898,21 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * A set of remote locations to deploy additional instances to and manage as part of the fleet. This parameter can
      * only be used when creating fleets in Amazon Web Services Regions that support multiple locations. You can add any
      * Amazon GameLift-supported Amazon Web Services Region as a remote location, in the form of an Amazon Web Services
-     * Region code such as <code>us-west-2</code>. To create a fleet with instances in the home Region only, don't use
-     * this parameter.
+     * Region code, such as <code>us-west-2</code> or Local Zone code. To create a fleet with instances in the home
+     * Region only, don't set this parameter.
      * </p>
      * <p>
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the request.
      * </p>
      * 
      * @param locations
      *        A set of remote locations to deploy additional instances to and manage as part of the fleet. This
      *        parameter can only be used when creating fleets in Amazon Web Services Regions that support multiple
      *        locations. You can add any Amazon GameLift-supported Amazon Web Services Region as a remote location, in
-     *        the form of an Amazon Web Services Region code such as <code>us-west-2</code>. To create a fleet with
-     *        instances in the home Region only, don't use this parameter. </p>
+     *        the form of an Amazon Web Services Region code, such as <code>us-west-2</code> or Local Zone code. To
+     *        create a fleet with instances in the home Region only, don't set this parameter. </p>
      *        <p>
-     *        To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     *        When using this parameter, Amazon GameLift requires you to include your home location in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1923,15 +2017,54 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
-     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this property is set to
-     * <code>EC2</code>.
+     * The type of compute resource used to host your game servers.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is the
+     * default setting.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed to
+     * Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     * <code>ContainerGroupsConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     * deployed to compute resources that are provided and managed by you. With this compute type, you can also set the
+     * <code>AnywhereConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param computeType
-     *        The type of compute resource used to host your game servers. You can use your own compute resources with
-     *        Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this
-     *        property is set to <code>EC2</code>.
+     *        The type of compute resource used to host your game servers. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is
+     *        the default setting.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed
+     *        to Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     *        <code>ContainerGroupsConfiguration</code> parameter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     *        deployed to compute resources that are provided and managed by you. With this compute type, you can also
+     *        set the <code>AnywhereConfiguration</code> parameter.
+     *        </p>
+     *        </li>
      * @see ComputeType
      */
 
@@ -1941,14 +2074,53 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
-     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this property is set to
-     * <code>EC2</code>.
+     * The type of compute resource used to host your game servers.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is the
+     * default setting.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed to
+     * Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     * <code>ContainerGroupsConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     * deployed to compute resources that are provided and managed by you. With this compute type, you can also set the
+     * <code>AnywhereConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The type of compute resource used to host your game servers. You can use your own compute resources with
-     *         Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this
-     *         property is set to <code>EC2</code>.
+     * @return The type of compute resource used to host your game servers. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is
+     *         the default setting.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CONTAINER</code> – Container images with your game server build and supporting software are
+     *         deployed to Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     *         <code>ContainerGroupsConfiguration</code> parameter.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software
+     *         are deployed to compute resources that are provided and managed by you. With this compute type, you can
+     *         also set the <code>AnywhereConfiguration</code> parameter.
+     *         </p>
+     *         </li>
      * @see ComputeType
      */
 
@@ -1958,15 +2130,54 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
-     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this property is set to
-     * <code>EC2</code>.
+     * The type of compute resource used to host your game servers.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is the
+     * default setting.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed to
+     * Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     * <code>ContainerGroupsConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     * deployed to compute resources that are provided and managed by you. With this compute type, you can also set the
+     * <code>AnywhereConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param computeType
-     *        The type of compute resource used to host your game servers. You can use your own compute resources with
-     *        Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this
-     *        property is set to <code>EC2</code>.
+     *        The type of compute resource used to host your game servers. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is
+     *        the default setting.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed
+     *        to Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     *        <code>ContainerGroupsConfiguration</code> parameter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     *        deployed to compute resources that are provided and managed by you. With this compute type, you can also
+     *        set the <code>AnywhereConfiguration</code> parameter.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComputeType
      */
@@ -1978,15 +2189,54 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
-     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this property is set to
-     * <code>EC2</code>.
+     * The type of compute resource used to host your game servers.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is the
+     * default setting.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed to
+     * Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     * <code>ContainerGroupsConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     * deployed to compute resources that are provided and managed by you. With this compute type, you can also set the
+     * <code>AnywhereConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param computeType
-     *        The type of compute resource used to host your game servers. You can use your own compute resources with
-     *        Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this
-     *        property is set to <code>EC2</code>.
+     *        The type of compute resource used to host your game servers. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is
+     *        the default setting.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed
+     *        to Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     *        <code>ContainerGroupsConfiguration</code> parameter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     *        deployed to compute resources that are provided and managed by you. With this compute type, you can also
+     *        set the <code>AnywhereConfiguration</code> parameter.
+     *        </p>
+     *        </li>
      * @see ComputeType
      */
 
@@ -1996,15 +2246,54 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The type of compute resource used to host your game servers. You can use your own compute resources with Amazon
-     * GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this property is set to
-     * <code>EC2</code>.
+     * The type of compute resource used to host your game servers.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is the
+     * default setting.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed to
+     * Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     * <code>ContainerGroupsConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     * deployed to compute resources that are provided and managed by you. With this compute type, you can also set the
+     * <code>AnywhereConfiguration</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param computeType
-     *        The type of compute resource used to host your game servers. You can use your own compute resources with
-     *        Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift. By default, this
-     *        property is set to <code>EC2</code>.
+     *        The type of compute resource used to host your game servers. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>EC2</code> – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is
+     *        the default setting.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CONTAINER</code> – Container images with your game server build and supporting software are deployed
+     *        to Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     *        <code>ContainerGroupsConfiguration</code> parameter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ANYWHERE</code> – Game servers or container images with your game server and supporting software are
+     *        deployed to compute resources that are provided and managed by you. With this compute type, you can also
+     *        set the <code>AnywhereConfiguration</code> parameter.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComputeType
      */
@@ -2056,7 +2345,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      * <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed as
      * needed. Use shared credentials for applications that are deployed along with the game server executable, if the
      * game server is integrated with server SDK version 5.x. For more information about using shared credentials, see
@@ -2065,7 +2354,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param instanceRoleCredentialsProvider
-     *        Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     *        Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      *        <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed
      *        as needed. Use shared credentials for applications that are deployed along with the game server
      *        executable, if the game server is integrated with server SDK version 5.x. For more information about using
@@ -2081,7 +2370,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      * <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed as
      * needed. Use shared credentials for applications that are deployed along with the game server executable, if the
      * game server is integrated with server SDK version 5.x. For more information about using shared credentials, see
@@ -2089,7 +2378,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Communicate with other Amazon Web Services resources from your fleets</a>.
      * </p>
      * 
-     * @return Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     * @return Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      *         <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed
      *         as needed. Use shared credentials for applications that are deployed along with the game server
      *         executable, if the game server is integrated with server SDK version 5.x. For more information about
@@ -2105,7 +2394,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      * <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed as
      * needed. Use shared credentials for applications that are deployed along with the game server executable, if the
      * game server is integrated with server SDK version 5.x. For more information about using shared credentials, see
@@ -2114,7 +2403,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param instanceRoleCredentialsProvider
-     *        Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     *        Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      *        <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed
      *        as needed. Use shared credentials for applications that are deployed along with the game server
      *        executable, if the game server is integrated with server SDK version 5.x. For more information about using
@@ -2132,7 +2421,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      * <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed as
      * needed. Use shared credentials for applications that are deployed along with the game server executable, if the
      * game server is integrated with server SDK version 5.x. For more information about using shared credentials, see
@@ -2141,7 +2430,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param instanceRoleCredentialsProvider
-     *        Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     *        Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      *        <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed
      *        as needed. Use shared credentials for applications that are deployed along with the game server
      *        executable, if the game server is integrated with server SDK version 5.x. For more information about using
@@ -2157,7 +2446,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     * Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      * <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed as
      * needed. Use shared credentials for applications that are deployed along with the game server executable, if the
      * game server is integrated with server SDK version 5.x. For more information about using shared credentials, see
@@ -2166,7 +2455,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param instanceRoleCredentialsProvider
-     *        Prompts Amazon GameLift to generate a shared credentials file for the IAM role defined in
+     *        Prompts Amazon GameLift to generate a shared credentials file for the IAM role that's defined in
      *        <code>InstanceRoleArn</code>. The shared credentials file is stored on each fleet instance and refreshed
      *        as needed. Use shared credentials for applications that are deployed along with the game server
      *        executable, if the game server is integrated with server SDK version 5.x. For more information about using
@@ -2179,6 +2468,64 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     public CreateFleetRequest withInstanceRoleCredentialsProvider(InstanceRoleCredentialsProvider instanceRoleCredentialsProvider) {
         this.instanceRoleCredentialsProvider = instanceRoleCredentialsProvider.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The container groups to deploy to instances in the container fleet and other fleet-level configuration settings.
+     * Use the <a>CreateContainerGroupDefinition</a> action to create container groups. A container fleet must have
+     * exactly one replica container group, and can optionally have one daemon container group. You can't change this
+     * property after you create the fleet.
+     * </p>
+     * 
+     * @param containerGroupsConfiguration
+     *        The container groups to deploy to instances in the container fleet and other fleet-level configuration
+     *        settings. Use the <a>CreateContainerGroupDefinition</a> action to create container groups. A container
+     *        fleet must have exactly one replica container group, and can optionally have one daemon container group.
+     *        You can't change this property after you create the fleet.
+     */
+
+    public void setContainerGroupsConfiguration(ContainerGroupsConfiguration containerGroupsConfiguration) {
+        this.containerGroupsConfiguration = containerGroupsConfiguration;
+    }
+
+    /**
+     * <p>
+     * The container groups to deploy to instances in the container fleet and other fleet-level configuration settings.
+     * Use the <a>CreateContainerGroupDefinition</a> action to create container groups. A container fleet must have
+     * exactly one replica container group, and can optionally have one daemon container group. You can't change this
+     * property after you create the fleet.
+     * </p>
+     * 
+     * @return The container groups to deploy to instances in the container fleet and other fleet-level configuration
+     *         settings. Use the <a>CreateContainerGroupDefinition</a> action to create container groups. A container
+     *         fleet must have exactly one replica container group, and can optionally have one daemon container group.
+     *         You can't change this property after you create the fleet.
+     */
+
+    public ContainerGroupsConfiguration getContainerGroupsConfiguration() {
+        return this.containerGroupsConfiguration;
+    }
+
+    /**
+     * <p>
+     * The container groups to deploy to instances in the container fleet and other fleet-level configuration settings.
+     * Use the <a>CreateContainerGroupDefinition</a> action to create container groups. A container fleet must have
+     * exactly one replica container group, and can optionally have one daemon container group. You can't change this
+     * property after you create the fleet.
+     * </p>
+     * 
+     * @param containerGroupsConfiguration
+     *        The container groups to deploy to instances in the container fleet and other fleet-level configuration
+     *        settings. Use the <a>CreateContainerGroupDefinition</a> action to create container groups. A container
+     *        fleet must have exactly one replica container group, and can optionally have one daemon container group.
+     *        You can't change this property after you create the fleet.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFleetRequest withContainerGroupsConfiguration(ContainerGroupsConfiguration containerGroupsConfiguration) {
+        setContainerGroupsConfiguration(containerGroupsConfiguration);
         return this;
     }
 
@@ -2239,7 +2586,9 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getAnywhereConfiguration() != null)
             sb.append("AnywhereConfiguration: ").append(getAnywhereConfiguration()).append(",");
         if (getInstanceRoleCredentialsProvider() != null)
-            sb.append("InstanceRoleCredentialsProvider: ").append(getInstanceRoleCredentialsProvider());
+            sb.append("InstanceRoleCredentialsProvider: ").append(getInstanceRoleCredentialsProvider()).append(",");
+        if (getContainerGroupsConfiguration() != null)
+            sb.append("ContainerGroupsConfiguration: ").append(getContainerGroupsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -2348,6 +2697,10 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (other.getInstanceRoleCredentialsProvider() != null
                 && other.getInstanceRoleCredentialsProvider().equals(this.getInstanceRoleCredentialsProvider()) == false)
             return false;
+        if (other.getContainerGroupsConfiguration() == null ^ this.getContainerGroupsConfiguration() == null)
+            return false;
+        if (other.getContainerGroupsConfiguration() != null && other.getContainerGroupsConfiguration().equals(this.getContainerGroupsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -2379,6 +2732,7 @@ public class CreateFleetRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getComputeType() == null) ? 0 : getComputeType().hashCode());
         hashCode = prime * hashCode + ((getAnywhereConfiguration() == null) ? 0 : getAnywhereConfiguration().hashCode());
         hashCode = prime * hashCode + ((getInstanceRoleCredentialsProvider() == null) ? 0 : getInstanceRoleCredentialsProvider().hashCode());
+        hashCode = prime * hashCode + ((getContainerGroupsConfiguration() == null) ? 0 : getContainerGroupsConfiguration().hashCode());
         return hashCode;
     }
 

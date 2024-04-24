@@ -1807,6 +1807,39 @@ public class AWSSimpleSystemsManagementAsyncClient extends AWSSimpleSystemsManag
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeInstancePropertiesResult> describeInstancePropertiesAsync(DescribeInstancePropertiesRequest request) {
+
+        return describeInstancePropertiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInstancePropertiesResult> describeInstancePropertiesAsync(final DescribeInstancePropertiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeInstancePropertiesRequest, DescribeInstancePropertiesResult> asyncHandler) {
+        final DescribeInstancePropertiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeInstancePropertiesResult>() {
+            @Override
+            public DescribeInstancePropertiesResult call() throws Exception {
+                DescribeInstancePropertiesResult result = null;
+
+                try {
+                    result = executeDescribeInstanceProperties(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeInventoryDeletionsResult> describeInventoryDeletionsAsync(DescribeInventoryDeletionsRequest request) {
 
         return describeInventoryDeletionsAsync(request, null);

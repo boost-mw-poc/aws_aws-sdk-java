@@ -43,6 +43,11 @@ public class AbstractAmazonEMRContainers implements AmazonEMRContainers {
     }
 
     @Override
+    public CreateSecurityConfigurationResult createSecurityConfiguration(CreateSecurityConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateVirtualClusterResult createVirtualCluster(CreateVirtualClusterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -78,6 +83,11 @@ public class AbstractAmazonEMRContainers implements AmazonEMRContainers {
     }
 
     @Override
+    public DescribeSecurityConfigurationResult describeSecurityConfiguration(DescribeSecurityConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeVirtualClusterResult describeVirtualCluster(DescribeVirtualClusterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +109,11 @@ public class AbstractAmazonEMRContainers implements AmazonEMRContainers {
 
     @Override
     public ListManagedEndpointsResult listManagedEndpoints(ListManagedEndpointsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListSecurityConfigurationsResult listSecurityConfigurations(ListSecurityConfigurationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

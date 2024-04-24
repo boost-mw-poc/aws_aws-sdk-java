@@ -264,6 +264,11 @@ public class AbstractAWSSimpleSystemsManagement implements AWSSimpleSystemsManag
     }
 
     @Override
+    public DescribeInstancePropertiesResult describeInstanceProperties(DescribeInstancePropertiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeInventoryDeletionsResult describeInventoryDeletions(DescribeInventoryDeletionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

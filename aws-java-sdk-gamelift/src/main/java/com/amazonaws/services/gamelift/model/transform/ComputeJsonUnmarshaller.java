@@ -96,6 +96,18 @@ public class ComputeJsonUnmarshaller implements Unmarshaller<Compute, JsonUnmars
                     context.nextToken();
                     compute.setGameLiftServiceSdkEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("GameLiftAgentEndpoint", targetDepth)) {
+                    context.nextToken();
+                    compute.setGameLiftAgentEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("InstanceId", targetDepth)) {
+                    context.nextToken();
+                    compute.setInstanceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ContainerAttributes", targetDepth)) {
+                    context.nextToken();
+                    compute.setContainerAttributes(ContainerAttributesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

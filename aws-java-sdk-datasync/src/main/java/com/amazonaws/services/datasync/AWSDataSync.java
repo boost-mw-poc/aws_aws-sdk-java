@@ -430,11 +430,11 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Configures a transfer task, which defines where and how DataSync moves your data.
+     * Configures a <i>task</i>, which defines where and how DataSync transfers your data.
      * </p>
      * <p>
-     * A task includes a source location, destination location, and the options for how and when you want to transfer
-     * your data (such as bandwidth limits, scheduling, among other options).
+     * A task includes a source location, destination location, and transfer options (such as bandwidth limits,
+     * scheduling, and more).
      * </p>
      * <important>
      * <p>
@@ -817,7 +817,7 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Provides information about an DataSync transfer task.
+     * Provides information about a <i>task</i>, which defines where and how DataSync transfers your data.
      * </p>
      * 
      * @param describeTaskRequest
@@ -1303,7 +1303,7 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Updates the configuration of an DataSync transfer task.
+     * Updates the configuration of a <i>task</i>, which defines where and how DataSync transfers your data.
      * </p>
      * 
      * @param updateTaskRequest

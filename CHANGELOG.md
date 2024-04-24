@@ -1,3 +1,28 @@
+# __1.12.708__ __2024-04-24__
+## __AWS DataSync__
+  - ### Features
+    - This change allows users to disable and enable the schedules associated with their tasks.
+
+## __AWS EntityResolution__
+  - ### Features
+    - Support Batch Unique IDs Deletion.
+
+## __Amazon EMR Containers__
+  - ### Features
+    - EMRonEKS Service support for SecurityConfiguration enforcement for Spark Jobs.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Launching capability for customers to enable or disable automatic assignment of public IPv4 addresses to their network interface
+
+## __Amazon GameLift__
+  - ### Features
+    - Amazon GameLift releases container fleets support for public preview. Deploy Linux-based containerized game server software for hosting on Amazon GameLift.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - Add SSM DescribeInstanceProperties API to public AWS SDK.
+
 # __1.12.707__ __2024-04-23__
 ## __AWS Cost Explorer Service__
   - ### Features

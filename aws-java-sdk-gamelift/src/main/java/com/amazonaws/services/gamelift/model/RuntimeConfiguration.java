@@ -19,15 +19,22 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A collection of server process configurations that describe the set of processes to run on each instance in a fleet.
- * Server processes run either an executable in a custom game build or a Realtime Servers script. Amazon GameLift
- * launches the configured processes, manages their life cycle, and replaces them as needed. Each instance checks
- * regularly for an updated runtime configuration.
+ * <b>This data type has been expanded to use with the Amazon GameLift containers feature, which is currently in public
+ * preview.</b>
  * </p>
  * <p>
- * A Amazon GameLift instance is limited to 50 processes running concurrently. To calculate the total number of
- * processes in a runtime configuration, add the values of the <code>ConcurrentExecutions</code> parameter for each
- * server process. Learn more about <a
+ * A set of instructions that define the set of server processes to run on computes in a fleet. Server processes run
+ * either an executable in a custom game build or a Realtime Servers script. Amazon GameLift launches the processes,
+ * manages their life cycle, and replaces them as needed. Computes check regularly for an updated runtime configuration.
+ * </p>
+ * <p>
+ * On a container fleet, the Amazon GameLift Agent uses the runtime configuration to manage the lifecycle of server
+ * processes in a replica container group.
+ * </p>
+ * <p>
+ * An Amazon GameLift instance is limited to 50 processes running concurrently. To calculate the total number of
+ * processes defined in a runtime configuration, add the values of the <code>ConcurrentExecutions</code> parameter for
+ * each server process. Learn more about <a
  * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-multiprocess.html"> Running Multiple
  * Processes on a Fleet</a>.
  * </p>
@@ -40,15 +47,14 @@ public class RuntimeConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A collection of server process configurations that identify what server processes to run on each instance in a
-     * fleet.
+     * A collection of server process configurations that identify what server processes to run on fleet computes.
      * </p>
      */
     private java.util.List<ServerProcess> serverProcesses;
     /**
      * <p>
-     * The number of game sessions in status <code>ACTIVATING</code> to allow on an instance. This setting limits the
-     * instance resources that can be used for new game activations at any one time.
+     * The number of game sessions in status <code>ACTIVATING</code> to allow on an instance or container. This setting
+     * limits the instance resources that can be used for new game activations at any one time.
      * </p>
      */
     private Integer maxConcurrentGameSessionActivations;
@@ -63,12 +69,11 @@ public class RuntimeConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A collection of server process configurations that identify what server processes to run on each instance in a
-     * fleet.
+     * A collection of server process configurations that identify what server processes to run on fleet computes.
      * </p>
      * 
-     * @return A collection of server process configurations that identify what server processes to run on each instance
-     *         in a fleet.
+     * @return A collection of server process configurations that identify what server processes to run on fleet
+     *         computes.
      */
 
     public java.util.List<ServerProcess> getServerProcesses() {
@@ -77,13 +82,12 @@ public class RuntimeConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A collection of server process configurations that identify what server processes to run on each instance in a
-     * fleet.
+     * A collection of server process configurations that identify what server processes to run on fleet computes.
      * </p>
      * 
      * @param serverProcesses
-     *        A collection of server process configurations that identify what server processes to run on each instance
-     *        in a fleet.
+     *        A collection of server process configurations that identify what server processes to run on fleet
+     *        computes.
      */
 
     public void setServerProcesses(java.util.Collection<ServerProcess> serverProcesses) {
@@ -97,8 +101,7 @@ public class RuntimeConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A collection of server process configurations that identify what server processes to run on each instance in a
-     * fleet.
+     * A collection of server process configurations that identify what server processes to run on fleet computes.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -107,8 +110,8 @@ public class RuntimeConfiguration implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param serverProcesses
-     *        A collection of server process configurations that identify what server processes to run on each instance
-     *        in a fleet.
+     *        A collection of server process configurations that identify what server processes to run on fleet
+     *        computes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,13 +127,12 @@ public class RuntimeConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A collection of server process configurations that identify what server processes to run on each instance in a
-     * fleet.
+     * A collection of server process configurations that identify what server processes to run on fleet computes.
      * </p>
      * 
      * @param serverProcesses
-     *        A collection of server process configurations that identify what server processes to run on each instance
-     *        in a fleet.
+     *        A collection of server process configurations that identify what server processes to run on fleet
+     *        computes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,13 +143,13 @@ public class RuntimeConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of game sessions in status <code>ACTIVATING</code> to allow on an instance. This setting limits the
-     * instance resources that can be used for new game activations at any one time.
+     * The number of game sessions in status <code>ACTIVATING</code> to allow on an instance or container. This setting
+     * limits the instance resources that can be used for new game activations at any one time.
      * </p>
      * 
      * @param maxConcurrentGameSessionActivations
-     *        The number of game sessions in status <code>ACTIVATING</code> to allow on an instance. This setting limits
-     *        the instance resources that can be used for new game activations at any one time.
+     *        The number of game sessions in status <code>ACTIVATING</code> to allow on an instance or container. This
+     *        setting limits the instance resources that can be used for new game activations at any one time.
      */
 
     public void setMaxConcurrentGameSessionActivations(Integer maxConcurrentGameSessionActivations) {
@@ -156,12 +158,12 @@ public class RuntimeConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of game sessions in status <code>ACTIVATING</code> to allow on an instance. This setting limits the
-     * instance resources that can be used for new game activations at any one time.
+     * The number of game sessions in status <code>ACTIVATING</code> to allow on an instance or container. This setting
+     * limits the instance resources that can be used for new game activations at any one time.
      * </p>
      * 
-     * @return The number of game sessions in status <code>ACTIVATING</code> to allow on an instance. This setting
-     *         limits the instance resources that can be used for new game activations at any one time.
+     * @return The number of game sessions in status <code>ACTIVATING</code> to allow on an instance or container. This
+     *         setting limits the instance resources that can be used for new game activations at any one time.
      */
 
     public Integer getMaxConcurrentGameSessionActivations() {
@@ -170,13 +172,13 @@ public class RuntimeConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of game sessions in status <code>ACTIVATING</code> to allow on an instance. This setting limits the
-     * instance resources that can be used for new game activations at any one time.
+     * The number of game sessions in status <code>ACTIVATING</code> to allow on an instance or container. This setting
+     * limits the instance resources that can be used for new game activations at any one time.
      * </p>
      * 
      * @param maxConcurrentGameSessionActivations
-     *        The number of game sessions in status <code>ACTIVATING</code> to allow on an instance. This setting limits
-     *        the instance resources that can be used for new game activations at any one time.
+     *        The number of game sessions in status <code>ACTIVATING</code> to allow on an instance or container. This
+     *        setting limits the instance resources that can be used for new game activations at any one time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

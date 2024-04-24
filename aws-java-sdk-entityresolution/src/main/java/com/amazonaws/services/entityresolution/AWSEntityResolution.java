@@ -89,6 +89,27 @@ public interface AWSEntityResolution {
 
     /**
      * <p>
+     * Deletes multiple unique IDs in a matching workflow.
+     * </p>
+     * 
+     * @param batchDeleteUniqueIdRequest
+     * @return Result of the BatchDeleteUniqueId operation returned by the service.
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Entity Resolution service.
+     *         <code>HTTP Status Code: 500</code>
+     * @throws ResourceNotFoundException
+     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by Entity Resolution.
+     *         <code>HTTP Status Code: 400</code>
+     * @sample AWSEntityResolution.BatchDeleteUniqueId
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/BatchDeleteUniqueId"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchDeleteUniqueIdResult batchDeleteUniqueId(BatchDeleteUniqueIdRequest batchDeleteUniqueIdRequest);
+
+    /**
+     * <p>
      * Creates an <code>IdMappingWorkflow</code> object which stores the configuration of the data processing job to be
      * run. Each <code>IdMappingWorkflow</code> must have a unique workflow name. To modify an existing workflow, use
      * the <code>UpdateIdMappingWorkflow</code> API.

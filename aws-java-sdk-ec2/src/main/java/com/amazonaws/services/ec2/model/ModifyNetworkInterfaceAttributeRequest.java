@@ -91,6 +91,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
      * </p>
      */
     private ConnectionTrackingSpecificationRequest connectionTrackingSpecification;
+    /**
+     * <p>
+     * Indicates whether to assign a public IPv4 address to a network interface. This option can be enabled for any
+     * network interface but will only apply to the primary network interface (eth0).
+     * </p>
+     */
+    private Boolean associatePublicIpAddress;
 
     /**
      * <p>
@@ -592,6 +599,66 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Indicates whether to assign a public IPv4 address to a network interface. This option can be enabled for any
+     * network interface but will only apply to the primary network interface (eth0).
+     * </p>
+     * 
+     * @param associatePublicIpAddress
+     *        Indicates whether to assign a public IPv4 address to a network interface. This option can be enabled for
+     *        any network interface but will only apply to the primary network interface (eth0).
+     */
+
+    public void setAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
+        this.associatePublicIpAddress = associatePublicIpAddress;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to assign a public IPv4 address to a network interface. This option can be enabled for any
+     * network interface but will only apply to the primary network interface (eth0).
+     * </p>
+     * 
+     * @return Indicates whether to assign a public IPv4 address to a network interface. This option can be enabled for
+     *         any network interface but will only apply to the primary network interface (eth0).
+     */
+
+    public Boolean getAssociatePublicIpAddress() {
+        return this.associatePublicIpAddress;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to assign a public IPv4 address to a network interface. This option can be enabled for any
+     * network interface but will only apply to the primary network interface (eth0).
+     * </p>
+     * 
+     * @param associatePublicIpAddress
+     *        Indicates whether to assign a public IPv4 address to a network interface. This option can be enabled for
+     *        any network interface but will only apply to the primary network interface (eth0).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyNetworkInterfaceAttributeRequest withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
+        setAssociatePublicIpAddress(associatePublicIpAddress);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to assign a public IPv4 address to a network interface. This option can be enabled for any
+     * network interface but will only apply to the primary network interface (eth0).
+     * </p>
+     * 
+     * @return Indicates whether to assign a public IPv4 address to a network interface. This option can be enabled for
+     *         any network interface but will only apply to the primary network interface (eth0).
+     */
+
+    public Boolean isAssociatePublicIpAddress() {
+        return this.associatePublicIpAddress;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -629,7 +696,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
         if (getEnablePrimaryIpv6() != null)
             sb.append("EnablePrimaryIpv6: ").append(getEnablePrimaryIpv6()).append(",");
         if (getConnectionTrackingSpecification() != null)
-            sb.append("ConnectionTrackingSpecification: ").append(getConnectionTrackingSpecification());
+            sb.append("ConnectionTrackingSpecification: ").append(getConnectionTrackingSpecification()).append(",");
+        if (getAssociatePublicIpAddress() != null)
+            sb.append("AssociatePublicIpAddress: ").append(getAssociatePublicIpAddress());
         sb.append("}");
         return sb.toString();
     }
@@ -677,6 +746,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
         if (other.getConnectionTrackingSpecification() != null
                 && other.getConnectionTrackingSpecification().equals(this.getConnectionTrackingSpecification()) == false)
             return false;
+        if (other.getAssociatePublicIpAddress() == null ^ this.getAssociatePublicIpAddress() == null)
+            return false;
+        if (other.getAssociatePublicIpAddress() != null && other.getAssociatePublicIpAddress().equals(this.getAssociatePublicIpAddress()) == false)
+            return false;
         return true;
     }
 
@@ -693,6 +766,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getEnaSrdSpecification() == null) ? 0 : getEnaSrdSpecification().hashCode());
         hashCode = prime * hashCode + ((getEnablePrimaryIpv6() == null) ? 0 : getEnablePrimaryIpv6().hashCode());
         hashCode = prime * hashCode + ((getConnectionTrackingSpecification() == null) ? 0 : getConnectionTrackingSpecification().hashCode());
+        hashCode = prime * hashCode + ((getAssociatePublicIpAddress() == null) ? 0 : getAssociatePublicIpAddress().hashCode());
         return hashCode;
     }
 

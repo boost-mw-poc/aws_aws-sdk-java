@@ -25,7 +25,7 @@ public class GetComputeAccessResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of the fleet that contains the compute resource to be accessed.
+     * The ID of the fleet that holds the compute resource to be accessed.
      * </p>
      */
     private String fleetId;
@@ -61,14 +61,20 @@ public class GetComputeAccessResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      */
     private Credentials credentials;
+    /**
+     * <p>
+     * (For container fleets only) The instance ID where the compute resource is running.
+     * </p>
+     */
+    private String target;
 
     /**
      * <p>
-     * The ID of the fleet that contains the compute resource to be accessed.
+     * The ID of the fleet that holds the compute resource to be accessed.
      * </p>
      * 
      * @param fleetId
-     *        The ID of the fleet that contains the compute resource to be accessed.
+     *        The ID of the fleet that holds the compute resource to be accessed.
      */
 
     public void setFleetId(String fleetId) {
@@ -77,10 +83,10 @@ public class GetComputeAccessResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of the fleet that contains the compute resource to be accessed.
+     * The ID of the fleet that holds the compute resource to be accessed.
      * </p>
      * 
-     * @return The ID of the fleet that contains the compute resource to be accessed.
+     * @return The ID of the fleet that holds the compute resource to be accessed.
      */
 
     public String getFleetId() {
@@ -89,11 +95,11 @@ public class GetComputeAccessResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of the fleet that contains the compute resource to be accessed.
+     * The ID of the fleet that holds the compute resource to be accessed.
      * </p>
      * 
      * @param fleetId
-     *        The ID of the fleet that contains the compute resource to be accessed.
+     *        The ID of the fleet that holds the compute resource to be accessed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -311,6 +317,46 @@ public class GetComputeAccessResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * (For container fleets only) The instance ID where the compute resource is running.
+     * </p>
+     * 
+     * @param target
+     *        (For container fleets only) The instance ID where the compute resource is running.
+     */
+
+    public void setTarget(String target) {
+        this.target = target;
+    }
+
+    /**
+     * <p>
+     * (For container fleets only) The instance ID where the compute resource is running.
+     * </p>
+     * 
+     * @return (For container fleets only) The instance ID where the compute resource is running.
+     */
+
+    public String getTarget() {
+        return this.target;
+    }
+
+    /**
+     * <p>
+     * (For container fleets only) The instance ID where the compute resource is running.
+     * </p>
+     * 
+     * @param target
+     *        (For container fleets only) The instance ID where the compute resource is running.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetComputeAccessResult withTarget(String target) {
+        setTarget(target);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -331,7 +377,9 @@ public class GetComputeAccessResult extends com.amazonaws.AmazonWebServiceResult
         if (getComputeArn() != null)
             sb.append("ComputeArn: ").append(getComputeArn()).append(",");
         if (getCredentials() != null)
-            sb.append("Credentials: ").append("***Sensitive Data Redacted***");
+            sb.append("Credentials: ").append("***Sensitive Data Redacted***").append(",");
+        if (getTarget() != null)
+            sb.append("Target: ").append(getTarget());
         sb.append("}");
         return sb.toString();
     }
@@ -366,6 +414,10 @@ public class GetComputeAccessResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getCredentials() != null && other.getCredentials().equals(this.getCredentials()) == false)
             return false;
+        if (other.getTarget() == null ^ this.getTarget() == null)
+            return false;
+        if (other.getTarget() != null && other.getTarget().equals(this.getTarget()) == false)
+            return false;
         return true;
     }
 
@@ -379,6 +431,7 @@ public class GetComputeAccessResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getComputeName() == null) ? 0 : getComputeName().hashCode());
         hashCode = prime * hashCode + ((getComputeArn() == null) ? 0 : getComputeArn().hashCode());
         hashCode = prime * hashCode + ((getCredentials() == null) ? 0 : getCredentials().hashCode());
+        hashCode = prime * hashCode + ((getTarget() == null) ? 0 : getTarget().hashCode());
         return hashCode;
     }
 

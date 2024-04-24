@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Amazon GameLift Anywhere configuration options for your Anywhere fleets.
+ * Amazon GameLift configuration options for your Anywhere fleets.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/AnywhereConfiguration" target="_top">AWS API

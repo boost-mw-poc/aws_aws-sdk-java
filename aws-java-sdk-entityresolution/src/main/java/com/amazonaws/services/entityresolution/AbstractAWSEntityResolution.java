@@ -33,6 +33,11 @@ public class AbstractAWSEntityResolution implements AWSEntityResolution {
     }
 
     @Override
+    public BatchDeleteUniqueIdResult batchDeleteUniqueId(BatchDeleteUniqueIdRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateIdMappingWorkflowResult createIdMappingWorkflow(CreateIdMappingWorkflowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

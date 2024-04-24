@@ -19,7 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Properties of a location
+ * Properties of a custom location for use in an Amazon GameLift Anywhere fleet. This data type is returned in response
+ * to a call to <a
+ * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateLocation.html">https://docs.aws
+ * .amazon.com/gamelift/latest/apireference/API_CreateLocation.html</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/LocationModel" target="_top">AWS API
