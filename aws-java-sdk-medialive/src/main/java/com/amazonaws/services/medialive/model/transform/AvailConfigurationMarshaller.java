@@ -29,6 +29,8 @@ public class AvailConfigurationMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> AVAILSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("availSettings").build();
+    private static final MarshallingInfo<String> SCTE35SEGMENTATIONSCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scte35SegmentationScope").build();
 
     private static final AvailConfigurationMarshaller instance = new AvailConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class AvailConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(availConfiguration.getAvailSettings(), AVAILSETTINGS_BINDING);
+            protocolMarshaller.marshall(availConfiguration.getScte35SegmentationScope(), SCTE35SEGMENTATIONSCOPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

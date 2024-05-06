@@ -52,6 +52,10 @@ public class AvailConfigurationJsonUnmarshaller implements Unmarshaller<AvailCon
                     context.nextToken();
                     availConfiguration.setAvailSettings(AvailSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("scte35SegmentationScope", targetDepth)) {
+                    context.nextToken();
+                    availConfiguration.setScte35SegmentationScope(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
