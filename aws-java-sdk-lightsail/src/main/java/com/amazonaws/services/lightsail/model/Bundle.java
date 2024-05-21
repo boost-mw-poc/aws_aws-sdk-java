@@ -48,13 +48,13 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
     private Integer diskSizeInGb;
     /**
      * <p>
-     * The bundle ID (<code>micro_1_0</code>).
+     * The bundle ID (<code>micro_x_x</code>).
      * </p>
      */
     private String bundleId;
     /**
      * <p>
-     * The Amazon EC2 instance type (<code>t2.micro</code>).
+     * The instance type (<code>micro</code>).
      * </p>
      */
     private String instanceType;
@@ -239,11 +239,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle ID (<code>micro_1_0</code>).
+     * The bundle ID (<code>micro_x_x</code>).
      * </p>
      * 
      * @param bundleId
-     *        The bundle ID (<code>micro_1_0</code>).
+     *        The bundle ID (<code>micro_x_x</code>).
      */
 
     public void setBundleId(String bundleId) {
@@ -252,10 +252,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle ID (<code>micro_1_0</code>).
+     * The bundle ID (<code>micro_x_x</code>).
      * </p>
      * 
-     * @return The bundle ID (<code>micro_1_0</code>).
+     * @return The bundle ID (<code>micro_x_x</code>).
      */
 
     public String getBundleId() {
@@ -264,11 +264,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle ID (<code>micro_1_0</code>).
+     * The bundle ID (<code>micro_x_x</code>).
      * </p>
      * 
      * @param bundleId
-     *        The bundle ID (<code>micro_1_0</code>).
+     *        The bundle ID (<code>micro_x_x</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -279,11 +279,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 instance type (<code>t2.micro</code>).
+     * The instance type (<code>micro</code>).
      * </p>
      * 
      * @param instanceType
-     *        The Amazon EC2 instance type (<code>t2.micro</code>).
+     *        The instance type (<code>micro</code>).
      */
 
     public void setInstanceType(String instanceType) {
@@ -292,10 +292,10 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 instance type (<code>t2.micro</code>).
+     * The instance type (<code>micro</code>).
      * </p>
      * 
-     * @return The Amazon EC2 instance type (<code>t2.micro</code>).
+     * @return The instance type (<code>micro</code>).
      */
 
     public String getInstanceType() {
@@ -304,11 +304,11 @@ public class Bundle implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon EC2 instance type (<code>t2.micro</code>).
+     * The instance type (<code>micro</code>).
      * </p>
      * 
      * @param instanceType
-     *        The Amazon EC2 instance type (<code>t2.micro</code>).
+     *        The instance type (<code>micro</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

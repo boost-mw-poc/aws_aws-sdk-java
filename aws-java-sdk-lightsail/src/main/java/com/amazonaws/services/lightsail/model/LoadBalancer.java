@@ -139,7 +139,8 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the load balancer.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      */
     private String ipAddressType;
@@ -1076,13 +1077,15 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the load balancer.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * 
      * @param ipAddressType
      *        The IP address type of the load balancer.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      * @see IpAddressType
      */
 
@@ -1095,12 +1098,14 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the load balancer.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * 
      * @return The IP address type of the load balancer.</p>
      *         <p>
-     *         The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *         The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *         <code>dualstack</code> for IPv4 and IPv6.
      * @see IpAddressType
      */
 
@@ -1113,13 +1118,15 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the load balancer.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * 
      * @param ipAddressType
      *        The IP address type of the load balancer.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */
@@ -1134,13 +1141,15 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the load balancer.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * 
      * @param ipAddressType
      *        The IP address type of the load balancer.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */

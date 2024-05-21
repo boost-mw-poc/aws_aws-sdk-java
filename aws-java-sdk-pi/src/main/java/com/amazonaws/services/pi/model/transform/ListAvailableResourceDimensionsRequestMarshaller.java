@@ -38,6 +38,8 @@ public class ListAvailableResourceDimensionsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<List> AUTHORIZEDACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthorizedActions").build();
 
     private static final ListAvailableResourceDimensionsRequestMarshaller instance = new ListAvailableResourceDimensionsRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class ListAvailableResourceDimensionsRequestMarshaller {
             protocolMarshaller.marshall(listAvailableResourceDimensionsRequest.getMetrics(), METRICS_BINDING);
             protocolMarshaller.marshall(listAvailableResourceDimensionsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listAvailableResourceDimensionsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listAvailableResourceDimensionsRequest.getAuthorizedActions(), AUTHORIZEDACTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

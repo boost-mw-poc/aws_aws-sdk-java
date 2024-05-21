@@ -22,7 +22,8 @@ public enum SMBSecurityStrategy {
 
     ClientSpecified("ClientSpecified"),
     MandatorySigning("MandatorySigning"),
-    MandatoryEncryption("MandatoryEncryption");
+    MandatoryEncryption("MandatoryEncryption"),
+    MandatoryEncryptionNoAes128("MandatoryEncryptionNoAes128");
 
     private String value;
 

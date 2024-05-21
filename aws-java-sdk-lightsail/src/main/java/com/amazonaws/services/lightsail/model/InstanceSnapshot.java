@@ -112,14 +112,14 @@ public class InstanceSnapshot implements Serializable, Cloneable, StructuredPojo
     private String fromInstanceArn;
     /**
      * <p>
-     * The blueprint ID from which you created the snapshot (<code>os_debian_8_3</code>). A blueprint is a virtual
+     * The blueprint ID from which you created the snapshot (<code>amazon_linux_2023</code>). A blueprint is a virtual
      * private server (or <i>instance</i>) image used to create instances quickly.
      * </p>
      */
     private String fromBlueprintId;
     /**
      * <p>
-     * The bundle ID from which you created the snapshot (<code>micro_1_0</code>).
+     * The bundle ID from which you created the snapshot (<code>micro_x_x</code>).
      * </p>
      */
     private String fromBundleId;
@@ -808,12 +808,12 @@ public class InstanceSnapshot implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The blueprint ID from which you created the snapshot (<code>os_debian_8_3</code>). A blueprint is a virtual
+     * The blueprint ID from which you created the snapshot (<code>amazon_linux_2023</code>). A blueprint is a virtual
      * private server (or <i>instance</i>) image used to create instances quickly.
      * </p>
      * 
      * @param fromBlueprintId
-     *        The blueprint ID from which you created the snapshot (<code>os_debian_8_3</code>). A blueprint is a
+     *        The blueprint ID from which you created the snapshot (<code>amazon_linux_2023</code>). A blueprint is a
      *        virtual private server (or <i>instance</i>) image used to create instances quickly.
      */
 
@@ -823,11 +823,11 @@ public class InstanceSnapshot implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The blueprint ID from which you created the snapshot (<code>os_debian_8_3</code>). A blueprint is a virtual
+     * The blueprint ID from which you created the snapshot (<code>amazon_linux_2023</code>). A blueprint is a virtual
      * private server (or <i>instance</i>) image used to create instances quickly.
      * </p>
      * 
-     * @return The blueprint ID from which you created the snapshot (<code>os_debian_8_3</code>). A blueprint is a
+     * @return The blueprint ID from which you created the snapshot (<code>amazon_linux_2023</code>). A blueprint is a
      *         virtual private server (or <i>instance</i>) image used to create instances quickly.
      */
 
@@ -837,12 +837,12 @@ public class InstanceSnapshot implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The blueprint ID from which you created the snapshot (<code>os_debian_8_3</code>). A blueprint is a virtual
+     * The blueprint ID from which you created the snapshot (<code>amazon_linux_2023</code>). A blueprint is a virtual
      * private server (or <i>instance</i>) image used to create instances quickly.
      * </p>
      * 
      * @param fromBlueprintId
-     *        The blueprint ID from which you created the snapshot (<code>os_debian_8_3</code>). A blueprint is a
+     *        The blueprint ID from which you created the snapshot (<code>amazon_linux_2023</code>). A blueprint is a
      *        virtual private server (or <i>instance</i>) image used to create instances quickly.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -854,11 +854,11 @@ public class InstanceSnapshot implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The bundle ID from which you created the snapshot (<code>micro_1_0</code>).
+     * The bundle ID from which you created the snapshot (<code>micro_x_x</code>).
      * </p>
      * 
      * @param fromBundleId
-     *        The bundle ID from which you created the snapshot (<code>micro_1_0</code>).
+     *        The bundle ID from which you created the snapshot (<code>micro_x_x</code>).
      */
 
     public void setFromBundleId(String fromBundleId) {
@@ -867,10 +867,10 @@ public class InstanceSnapshot implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The bundle ID from which you created the snapshot (<code>micro_1_0</code>).
+     * The bundle ID from which you created the snapshot (<code>micro_x_x</code>).
      * </p>
      * 
-     * @return The bundle ID from which you created the snapshot (<code>micro_1_0</code>).
+     * @return The bundle ID from which you created the snapshot (<code>micro_x_x</code>).
      */
 
     public String getFromBundleId() {
@@ -879,11 +879,11 @@ public class InstanceSnapshot implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The bundle ID from which you created the snapshot (<code>micro_1_0</code>).
+     * The bundle ID from which you created the snapshot (<code>micro_x_x</code>).
      * </p>
      * 
      * @param fromBundleId
-     *        The bundle ID from which you created the snapshot (<code>micro_1_0</code>).
+     *        The bundle ID from which you created the snapshot (<code>micro_x_x</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

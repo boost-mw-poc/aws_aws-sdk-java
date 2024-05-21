@@ -28,7 +28,8 @@ public enum JobRunState {
     FAILED("FAILED"),
     TIMEOUT("TIMEOUT"),
     ERROR("ERROR"),
-    WAITING("WAITING");
+    WAITING("WAITING"),
+    EXPIRED("EXPIRED");
 
     private String value;
 

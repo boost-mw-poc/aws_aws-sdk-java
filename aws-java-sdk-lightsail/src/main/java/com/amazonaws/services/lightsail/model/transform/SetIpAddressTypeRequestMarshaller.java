@@ -33,6 +33,8 @@ public class SetIpAddressTypeRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceName").build();
     private static final MarshallingInfo<String> IPADDRESSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ipAddressType").build();
+    private static final MarshallingInfo<Boolean> ACCEPTBUNDLEUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("acceptBundleUpdate").build();
 
     private static final SetIpAddressTypeRequestMarshaller instance = new SetIpAddressTypeRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class SetIpAddressTypeRequestMarshaller {
             protocolMarshaller.marshall(setIpAddressTypeRequest.getResourceType(), RESOURCETYPE_BINDING);
             protocolMarshaller.marshall(setIpAddressTypeRequest.getResourceName(), RESOURCENAME_BINDING);
             protocolMarshaller.marshall(setIpAddressTypeRequest.getIpAddressType(), IPADDRESSTYPE_BINDING);
+            protocolMarshaller.marshall(setIpAddressTypeRequest.getAcceptBundleUpdate(), ACCEPTBUNDLEUPDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

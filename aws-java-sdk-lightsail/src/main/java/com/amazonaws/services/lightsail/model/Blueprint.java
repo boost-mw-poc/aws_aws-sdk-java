@@ -30,7 +30,7 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     * The ID for the virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>).
      * </p>
      */
     private String blueprintId;
@@ -118,11 +118,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     * The ID for the virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>).
      * </p>
      * 
      * @param blueprintId
-     *        The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     *        The ID for the virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>).
      */
 
     public void setBlueprintId(String blueprintId) {
@@ -131,10 +131,10 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     * The ID for the virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>).
      * </p>
      * 
-     * @return The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>
+     * @return The ID for the virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>
      *         ).
      */
 
@@ -144,11 +144,11 @@ public class Blueprint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     * The ID for the virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>).
      * </p>
      * 
      * @param blueprintId
-     *        The ID for the virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     *        The ID for the virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

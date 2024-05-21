@@ -77,6 +77,8 @@ public class JobRunMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DPUSeconds").build();
     private static final MarshallingInfo<String> EXECUTIONCLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionClass").build();
+    private static final MarshallingInfo<String> MAINTENANCEWINDOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaintenanceWindow").build();
 
     private static final JobRunMarshaller instance = new JobRunMarshaller();
 
@@ -118,6 +120,7 @@ public class JobRunMarshaller {
             protocolMarshaller.marshall(jobRun.getGlueVersion(), GLUEVERSION_BINDING);
             protocolMarshaller.marshall(jobRun.getDPUSeconds(), DPUSECONDS_BINDING);
             protocolMarshaller.marshall(jobRun.getExecutionClass(), EXECUTIONCLASS_BINDING);
+            protocolMarshaller.marshall(jobRun.getMaintenanceWindow(), MAINTENANCEWINDOW_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

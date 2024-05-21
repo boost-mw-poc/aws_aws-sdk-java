@@ -299,6 +299,17 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private SourceControlDetails sourceControlDetails;
+    /**
+     * <p>
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically
+     * performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.
+     * </p>
+     * <p>
+     * Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the
+     * maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.
+     * </p>
+     */
+    private String maintenanceWindow;
 
     /**
      * <p>
@@ -2259,6 +2270,79 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically
+     * performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.
+     * </p>
+     * <p>
+     * Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the
+     * maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.
+     * </p>
+     * 
+     * @param maintenanceWindow
+     *        This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue
+     *        periodically performs maintenance activities. During these maintenance windows, Glue will need to restart
+     *        your streaming jobs.</p>
+     *        <p>
+     *        Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up
+     *        the maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to
+     *        1:00PM GMT.
+     */
+
+    public void setMaintenanceWindow(String maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+    }
+
+    /**
+     * <p>
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically
+     * performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.
+     * </p>
+     * <p>
+     * Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the
+     * maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.
+     * </p>
+     * 
+     * @return This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue
+     *         periodically performs maintenance activities. During these maintenance windows, Glue will need to restart
+     *         your streaming jobs.</p>
+     *         <p>
+     *         Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up
+     *         the maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to
+     *         1:00PM GMT.
+     */
+
+    public String getMaintenanceWindow() {
+        return this.maintenanceWindow;
+    }
+
+    /**
+     * <p>
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically
+     * performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.
+     * </p>
+     * <p>
+     * Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the
+     * maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.
+     * </p>
+     * 
+     * @param maintenanceWindow
+     *        This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue
+     *        periodically performs maintenance activities. During these maintenance windows, Glue will need to restart
+     *        your streaming jobs.</p>
+     *        <p>
+     *        Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up
+     *        the maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to
+     *        1:00PM GMT.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withMaintenanceWindow(String maintenanceWindow) {
+        setMaintenanceWindow(maintenanceWindow);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2315,7 +2399,9 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         if (getExecutionClass() != null)
             sb.append("ExecutionClass: ").append(getExecutionClass()).append(",");
         if (getSourceControlDetails() != null)
-            sb.append("SourceControlDetails: ").append(getSourceControlDetails());
+            sb.append("SourceControlDetails: ").append(getSourceControlDetails()).append(",");
+        if (getMaintenanceWindow() != null)
+            sb.append("MaintenanceWindow: ").append(getMaintenanceWindow());
         sb.append("}");
         return sb.toString();
     }
@@ -2422,6 +2508,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSourceControlDetails() != null && other.getSourceControlDetails().equals(this.getSourceControlDetails()) == false)
             return false;
+        if (other.getMaintenanceWindow() == null ^ this.getMaintenanceWindow() == null)
+            return false;
+        if (other.getMaintenanceWindow() != null && other.getMaintenanceWindow().equals(this.getMaintenanceWindow()) == false)
+            return false;
         return true;
     }
 
@@ -2453,6 +2543,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCodeGenConfigurationNodes() == null) ? 0 : getCodeGenConfigurationNodes().hashCode());
         hashCode = prime * hashCode + ((getExecutionClass() == null) ? 0 : getExecutionClass().hashCode());
         hashCode = prime * hashCode + ((getSourceControlDetails() == null) ? 0 : getSourceControlDetails().hashCode());
+        hashCode = prime * hashCode + ((getMaintenanceWindow() == null) ? 0 : getMaintenanceWindow().hashCode());
         return hashCode;
     }
 

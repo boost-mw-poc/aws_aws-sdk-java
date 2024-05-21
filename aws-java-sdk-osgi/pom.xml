@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.727-SNAPSHOT</version>
+    <version>1.12.727</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,12 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-mailmanager</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-route53profiles</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2408,6 +2414,10 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>MailManager</title>
+                                  <packages>com.amazonaws.services.mailmanager*</packages>
+                              </group>
                               <group>
                                   <title>Route 53 Profiles</title>
                                   <packages>com.amazonaws.services.route53profiles*</packages>

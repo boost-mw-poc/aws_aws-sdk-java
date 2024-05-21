@@ -152,7 +152,17 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      * job.
      * </p>
      * <p>
-     * Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
+     * The maximum value for timeout for batch jobs is 7 days or 10080 minutes. The default is 2880 minutes (48 hours)
+     * for batch jobs.
+     * </p>
+     * <p>
+     * Any existing Glue jobs that have a greater timeout value are defaulted to 7 days. For instance you have specified
+     * a timeout of 20 days for a batch job, it will be stopped on the 7th day.
+     * </p>
+     * <p>
+     * Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank, the job
+     * will be restarted after 7 days based if you have not setup a maintenance window. If you have setup maintenance
+     * window, it will be restarted during the maintenance window after 7 days.
      * </p>
      */
     private Integer timeout;
@@ -295,13 +305,13 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     private String glueVersion;
     /**
      * <p>
-     * This field populates only for Auto Scaling job runs, and represents the total time each executor ran during the
-     * lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>,
-     * or 0.25 for <code>G.025X</code> workers). This value may be different than the
-     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number
-     * of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible
-     * that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
-     * <code>MaxCapacity</code>.
+     * This field can be set for either job runs with execution class <code>FLEX</code> or when Auto Scaling is enabled,
+     * and represents the total time each executor ran during the lifecycle of a job run in seconds, multiplied by a DPU
+     * factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value
+     * may be different than the <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto
+     * Scaling jobs, as the number of executors running at a given time may be less than the <code>MaxCapacity</code>.
+     * Therefore, it is possible that the value of <code>DPUSeconds</code> is less than
+     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
      * </p>
      */
     private Double dPUSeconds;
@@ -319,6 +329,17 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String executionClass;
+    /**
+     * <p>
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically
+     * performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.
+     * </p>
+     * <p>
+     * Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the
+     * maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.
+     * </p>
+     */
+    private String maintenanceWindow;
 
     /**
      * <p>
@@ -1163,7 +1184,17 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      * job.
      * </p>
      * <p>
-     * Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
+     * The maximum value for timeout for batch jobs is 7 days or 10080 minutes. The default is 2880 minutes (48 hours)
+     * for batch jobs.
+     * </p>
+     * <p>
+     * Any existing Glue jobs that have a greater timeout value are defaulted to 7 days. For instance you have specified
+     * a timeout of 20 days for a batch job, it will be stopped on the 7th day.
+     * </p>
+     * <p>
+     * Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank, the job
+     * will be restarted after 7 days based if you have not setup a maintenance window. If you have setup maintenance
+     * window, it will be restarted during the maintenance window after 7 days.
      * </p>
      * 
      * @param timeout
@@ -1171,7 +1202,17 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      *        before it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set
      *        in the parent job.</p>
      *        <p>
-     *        Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
+     *        The maximum value for timeout for batch jobs is 7 days or 10080 minutes. The default is 2880 minutes (48
+     *        hours) for batch jobs.
+     *        </p>
+     *        <p>
+     *        Any existing Glue jobs that have a greater timeout value are defaulted to 7 days. For instance you have
+     *        specified a timeout of 20 days for a batch job, it will be stopped on the 7th day.
+     *        </p>
+     *        <p>
+     *        Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank,
+     *        the job will be restarted after 7 days based if you have not setup a maintenance window. If you have setup
+     *        maintenance window, it will be restarted during the maintenance window after 7 days.
      */
 
     public void setTimeout(Integer timeout) {
@@ -1185,14 +1226,34 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      * job.
      * </p>
      * <p>
-     * Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
+     * The maximum value for timeout for batch jobs is 7 days or 10080 minutes. The default is 2880 minutes (48 hours)
+     * for batch jobs.
+     * </p>
+     * <p>
+     * Any existing Glue jobs that have a greater timeout value are defaulted to 7 days. For instance you have specified
+     * a timeout of 20 days for a batch job, it will be stopped on the 7th day.
+     * </p>
+     * <p>
+     * Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank, the job
+     * will be restarted after 7 days based if you have not setup a maintenance window. If you have setup maintenance
+     * window, it will be restarted during the maintenance window after 7 days.
      * </p>
      * 
      * @return The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can consume resources
      *         before it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value
      *         set in the parent job.</p>
      *         <p>
-     *         Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
+     *         The maximum value for timeout for batch jobs is 7 days or 10080 minutes. The default is 2880 minutes (48
+     *         hours) for batch jobs.
+     *         </p>
+     *         <p>
+     *         Any existing Glue jobs that have a greater timeout value are defaulted to 7 days. For instance you have
+     *         specified a timeout of 20 days for a batch job, it will be stopped on the 7th day.
+     *         </p>
+     *         <p>
+     *         Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank,
+     *         the job will be restarted after 7 days based if you have not setup a maintenance window. If you have
+     *         setup maintenance window, it will be restarted during the maintenance window after 7 days.
      */
 
     public Integer getTimeout() {
@@ -1206,7 +1267,17 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      * job.
      * </p>
      * <p>
-     * Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
+     * The maximum value for timeout for batch jobs is 7 days or 10080 minutes. The default is 2880 minutes (48 hours)
+     * for batch jobs.
+     * </p>
+     * <p>
+     * Any existing Glue jobs that have a greater timeout value are defaulted to 7 days. For instance you have specified
+     * a timeout of 20 days for a batch job, it will be stopped on the 7th day.
+     * </p>
+     * <p>
+     * Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank, the job
+     * will be restarted after 7 days based if you have not setup a maintenance window. If you have setup maintenance
+     * window, it will be restarted during the maintenance window after 7 days.
      * </p>
      * 
      * @param timeout
@@ -1214,7 +1285,17 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      *        before it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set
      *        in the parent job.</p>
      *        <p>
-     *        Streaming jobs do not have a timeout. The default for non-streaming jobs is 2,880 minutes (48 hours).
+     *        The maximum value for timeout for batch jobs is 7 days or 10080 minutes. The default is 2880 minutes (48
+     *        hours) for batch jobs.
+     *        </p>
+     *        <p>
+     *        Any existing Glue jobs that have a greater timeout value are defaulted to 7 days. For instance you have
+     *        specified a timeout of 20 days for a batch job, it will be stopped on the 7th day.
+     *        </p>
+     *        <p>
+     *        Streaming jobs must have timeout values less than 7 days or 10080 minutes. When the value is left blank,
+     *        the job will be restarted after 7 days based if you have not setup a maintenance window. If you have setup
+     *        maintenance window, it will be restarted during the maintenance window after 7 days.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2192,23 +2273,23 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This field populates only for Auto Scaling job runs, and represents the total time each executor ran during the
-     * lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>,
-     * or 0.25 for <code>G.025X</code> workers). This value may be different than the
-     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number
-     * of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible
-     * that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
-     * <code>MaxCapacity</code>.
+     * This field can be set for either job runs with execution class <code>FLEX</code> or when Auto Scaling is enabled,
+     * and represents the total time each executor ran during the lifecycle of a job run in seconds, multiplied by a DPU
+     * factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value
+     * may be different than the <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto
+     * Scaling jobs, as the number of executors running at a given time may be less than the <code>MaxCapacity</code>.
+     * Therefore, it is possible that the value of <code>DPUSeconds</code> is less than
+     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
      * </p>
      * 
      * @param dPUSeconds
-     *        This field populates only for Auto Scaling job runs, and represents the total time each executor ran
-     *        during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for
-     *        <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value may be different than the
-     *        <code>executionEngineRuntime</code> <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the
-     *        number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it
-     *        is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
-     *        <code>MaxCapacity</code>.
+     *        This field can be set for either job runs with execution class <code>FLEX</code> or when Auto Scaling is
+     *        enabled, and represents the total time each executor ran during the lifecycle of a job run in seconds,
+     *        multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>, or 0.25 for
+     *        <code>G.025X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
+     *        <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a
+     *        given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
+     *        <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> <code>MaxCapacity</code>.
      */
 
     public void setDPUSeconds(Double dPUSeconds) {
@@ -2217,22 +2298,22 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This field populates only for Auto Scaling job runs, and represents the total time each executor ran during the
-     * lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>,
-     * or 0.25 for <code>G.025X</code> workers). This value may be different than the
-     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number
-     * of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible
-     * that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
-     * <code>MaxCapacity</code>.
+     * This field can be set for either job runs with execution class <code>FLEX</code> or when Auto Scaling is enabled,
+     * and represents the total time each executor ran during the lifecycle of a job run in seconds, multiplied by a DPU
+     * factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value
+     * may be different than the <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto
+     * Scaling jobs, as the number of executors running at a given time may be less than the <code>MaxCapacity</code>.
+     * Therefore, it is possible that the value of <code>DPUSeconds</code> is less than
+     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
      * </p>
      * 
-     * @return This field populates only for Auto Scaling job runs, and represents the total time each executor ran
-     *         during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for
-     *         <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value may be different than the
-     *         <code>executionEngineRuntime</code> <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the
-     *         number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it
-     *         is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
-     *         <code>MaxCapacity</code>.
+     * @return This field can be set for either job runs with execution class <code>FLEX</code> or when Auto Scaling is
+     *         enabled, and represents the total time each executor ran during the lifecycle of a job run in seconds,
+     *         multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>, or 0.25 for
+     *         <code>G.025X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
+     *         <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a
+     *         given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
+     *         <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> <code>MaxCapacity</code>.
      */
 
     public Double getDPUSeconds() {
@@ -2241,23 +2322,23 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * This field populates only for Auto Scaling job runs, and represents the total time each executor ran during the
-     * lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>,
-     * or 0.25 for <code>G.025X</code> workers). This value may be different than the
-     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number
-     * of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible
-     * that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
-     * <code>MaxCapacity</code>.
+     * This field can be set for either job runs with execution class <code>FLEX</code> or when Auto Scaling is enabled,
+     * and represents the total time each executor ran during the lifecycle of a job run in seconds, multiplied by a DPU
+     * factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value
+     * may be different than the <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto
+     * Scaling jobs, as the number of executors running at a given time may be less than the <code>MaxCapacity</code>.
+     * Therefore, it is possible that the value of <code>DPUSeconds</code> is less than
+     * <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.
      * </p>
      * 
      * @param dPUSeconds
-     *        This field populates only for Auto Scaling job runs, and represents the total time each executor ran
-     *        during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for
-     *        <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value may be different than the
-     *        <code>executionEngineRuntime</code> <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the
-     *        number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it
-     *        is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> *
-     *        <code>MaxCapacity</code>.
+     *        This field can be set for either job runs with execution class <code>FLEX</code> or when Auto Scaling is
+     *        enabled, and represents the total time each executor ran during the lifecycle of a job run in seconds,
+     *        multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>, or 0.25 for
+     *        <code>G.025X</code> workers). This value may be different than the <code>executionEngineRuntime</code> *
+     *        <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a
+     *        given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of
+     *        <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> <code>MaxCapacity</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2395,6 +2476,79 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically
+     * performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.
+     * </p>
+     * <p>
+     * Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the
+     * maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.
+     * </p>
+     * 
+     * @param maintenanceWindow
+     *        This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue
+     *        periodically performs maintenance activities. During these maintenance windows, Glue will need to restart
+     *        your streaming jobs.</p>
+     *        <p>
+     *        Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up
+     *        the maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to
+     *        1:00PM GMT.
+     */
+
+    public void setMaintenanceWindow(String maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+    }
+
+    /**
+     * <p>
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically
+     * performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.
+     * </p>
+     * <p>
+     * Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the
+     * maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.
+     * </p>
+     * 
+     * @return This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue
+     *         periodically performs maintenance activities. During these maintenance windows, Glue will need to restart
+     *         your streaming jobs.</p>
+     *         <p>
+     *         Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up
+     *         the maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to
+     *         1:00PM GMT.
+     */
+
+    public String getMaintenanceWindow() {
+        return this.maintenanceWindow;
+    }
+
+    /**
+     * <p>
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically
+     * performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.
+     * </p>
+     * <p>
+     * Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the
+     * maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.
+     * </p>
+     * 
+     * @param maintenanceWindow
+     *        This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue
+     *        periodically performs maintenance activities. During these maintenance windows, Glue will need to restart
+     *        your streaming jobs.</p>
+     *        <p>
+     *        Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up
+     *        the maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to
+     *        1:00PM GMT.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRun withMaintenanceWindow(String maintenanceWindow) {
+        setMaintenanceWindow(maintenanceWindow);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2453,7 +2607,9 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         if (getDPUSeconds() != null)
             sb.append("DPUSeconds: ").append(getDPUSeconds()).append(",");
         if (getExecutionClass() != null)
-            sb.append("ExecutionClass: ").append(getExecutionClass());
+            sb.append("ExecutionClass: ").append(getExecutionClass()).append(",");
+        if (getMaintenanceWindow() != null)
+            sb.append("MaintenanceWindow: ").append(getMaintenanceWindow());
         sb.append("}");
         return sb.toString();
     }
@@ -2564,6 +2720,10 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getExecutionClass() != null && other.getExecutionClass().equals(this.getExecutionClass()) == false)
             return false;
+        if (other.getMaintenanceWindow() == null ^ this.getMaintenanceWindow() == null)
+            return false;
+        if (other.getMaintenanceWindow() != null && other.getMaintenanceWindow().equals(this.getMaintenanceWindow()) == false)
+            return false;
         return true;
     }
 
@@ -2596,6 +2756,7 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getGlueVersion() == null) ? 0 : getGlueVersion().hashCode());
         hashCode = prime * hashCode + ((getDPUSeconds() == null) ? 0 : getDPUSeconds().hashCode());
         hashCode = prime * hashCode + ((getExecutionClass() == null) ? 0 : getExecutionClass().hashCode());
+        hashCode = prime * hashCode + ((getMaintenanceWindow() == null) ? 0 : getMaintenanceWindow().hashCode());
         return hashCode;
     }
 

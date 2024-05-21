@@ -30,7 +30,7 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
+     * The name the user gave the instance (<code>Amazon_Linux_2023-1</code>).
      * </p>
      */
     private String name;
@@ -76,19 +76,19 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The blueprint ID (<code>os_amlinux_2016_03</code>).
+     * The blueprint ID (<code>amazon_linux_2023</code>).
      * </p>
      */
     private String blueprintId;
     /**
      * <p>
-     * The friendly name of the blueprint (<code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux 2023</code>).
      * </p>
      */
     private String blueprintName;
     /**
      * <p>
-     * The bundle for the instance (<code>micro_1_0</code>).
+     * The bundle for the instance (<code>micro_x_x</code>).
      * </p>
      */
     private String bundleId;
@@ -127,7 +127,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      */
     private String ipAddressType;
@@ -170,11 +171,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
+     * The name the user gave the instance (<code>Amazon_Linux_2023-1</code>).
      * </p>
      * 
      * @param name
-     *        The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
+     *        The name the user gave the instance (<code>Amazon_Linux_2023-1</code>).
      */
 
     public void setName(String name) {
@@ -183,10 +184,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
+     * The name the user gave the instance (<code>Amazon_Linux_2023-1</code>).
      * </p>
      * 
-     * @return The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
+     * @return The name the user gave the instance (<code>Amazon_Linux_2023-1</code>).
      */
 
     public String getName() {
@@ -195,11 +196,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
+     * The name the user gave the instance (<code>Amazon_Linux_2023-1</code>).
      * </p>
      * 
      * @param name
-     *        The name the user gave the instance (<code>Amazon_Linux-1GB-Ohio-1</code>).
+     *        The name the user gave the instance (<code>Amazon_Linux_2023-1</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -544,11 +545,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blueprint ID (<code>os_amlinux_2016_03</code>).
+     * The blueprint ID (<code>amazon_linux_2023</code>).
      * </p>
      * 
      * @param blueprintId
-     *        The blueprint ID (<code>os_amlinux_2016_03</code>).
+     *        The blueprint ID (<code>amazon_linux_2023</code>).
      */
 
     public void setBlueprintId(String blueprintId) {
@@ -557,10 +558,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blueprint ID (<code>os_amlinux_2016_03</code>).
+     * The blueprint ID (<code>amazon_linux_2023</code>).
      * </p>
      * 
-     * @return The blueprint ID (<code>os_amlinux_2016_03</code>).
+     * @return The blueprint ID (<code>amazon_linux_2023</code>).
      */
 
     public String getBlueprintId() {
@@ -569,11 +570,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The blueprint ID (<code>os_amlinux_2016_03</code>).
+     * The blueprint ID (<code>amazon_linux_2023</code>).
      * </p>
      * 
      * @param blueprintId
-     *        The blueprint ID (<code>os_amlinux_2016_03</code>).
+     *        The blueprint ID (<code>amazon_linux_2023</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -584,11 +585,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name of the blueprint (<code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux 2023</code>).
      * </p>
      * 
      * @param blueprintName
-     *        The friendly name of the blueprint (<code>Amazon Linux</code>).
+     *        The friendly name of the blueprint (<code>Amazon Linux 2023</code>).
      */
 
     public void setBlueprintName(String blueprintName) {
@@ -597,10 +598,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name of the blueprint (<code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux 2023</code>).
      * </p>
      * 
-     * @return The friendly name of the blueprint (<code>Amazon Linux</code>).
+     * @return The friendly name of the blueprint (<code>Amazon Linux 2023</code>).
      */
 
     public String getBlueprintName() {
@@ -609,11 +610,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The friendly name of the blueprint (<code>Amazon Linux</code>).
+     * The friendly name of the blueprint (<code>Amazon Linux 2023</code>).
      * </p>
      * 
      * @param blueprintName
-     *        The friendly name of the blueprint (<code>Amazon Linux</code>).
+     *        The friendly name of the blueprint (<code>Amazon Linux 2023</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -624,11 +625,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle for the instance (<code>micro_1_0</code>).
+     * The bundle for the instance (<code>micro_x_x</code>).
      * </p>
      * 
      * @param bundleId
-     *        The bundle for the instance (<code>micro_1_0</code>).
+     *        The bundle for the instance (<code>micro_x_x</code>).
      */
 
     public void setBundleId(String bundleId) {
@@ -637,10 +638,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle for the instance (<code>micro_1_0</code>).
+     * The bundle for the instance (<code>micro_x_x</code>).
      * </p>
      * 
-     * @return The bundle for the instance (<code>micro_1_0</code>).
+     * @return The bundle for the instance (<code>micro_x_x</code>).
      */
 
     public String getBundleId() {
@@ -649,11 +650,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The bundle for the instance (<code>micro_1_0</code>).
+     * The bundle for the instance (<code>micro_x_x</code>).
      * </p>
      * 
      * @param bundleId
-     *        The bundle for the instance (<code>micro_1_0</code>).
+     *        The bundle for the instance (<code>micro_x_x</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -939,13 +940,15 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * 
      * @param ipAddressType
      *        The IP address type of the instance.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      * @see IpAddressType
      */
 
@@ -958,12 +961,14 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * 
      * @return The IP address type of the instance.</p>
      *         <p>
-     *         The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *         The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *         <code>dualstack</code> for IPv4 and IPv6.
      * @see IpAddressType
      */
 
@@ -976,13 +981,15 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * 
      * @param ipAddressType
      *        The IP address type of the instance.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */
@@ -997,13 +1004,15 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * 
      * @param ipAddressType
      *        The IP address type of the instance.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      * @see IpAddressType
      */
 
@@ -1016,13 +1025,15 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * The IP address type of the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * 
      * @param ipAddressType
      *        The IP address type of the instance.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */

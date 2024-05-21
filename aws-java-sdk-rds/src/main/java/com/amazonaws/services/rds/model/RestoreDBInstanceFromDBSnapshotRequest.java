@@ -192,15 +192,55 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * License model information for the restored DB instance.
      * </p>
+     * <note>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * License models for RDS for Db2 require additional configuration. The Bring Your Own License (BYOL) model requires
+     * a custom parameter group. The Db2 license through Amazon Web Services Marketplace model requires an Amazon Web
+     * Services Marketplace subscription. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-licensing.html">RDS for Db2 licensing
+     * options</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * </note>
+     * <p>
+     * This setting doesn't apply to Amazon Aurora or RDS Custom DB instances.
      * </p>
      * <p>
-     * Default: Same as source.
+     * Valid Values:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Valid Values: <code>license-included</code> | <code>bring-your-own-license</code> |
-     * <code>general-public-license</code>
+     * RDS for Db2 - <code>bring-your-own-license | marketplace-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MariaDB - <code>general-public-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Microsoft SQL Server - <code>license-included</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MySQL - <code>general-public-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Oracle - <code>bring-your-own-license | license-included</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for PostgreSQL - <code>postgresql-license</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: Same as the source.
      * </p>
      */
     private String licenseModel;
@@ -1953,28 +1993,107 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * License model information for the restored DB instance.
      * </p>
+     * <note>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * License models for RDS for Db2 require additional configuration. The Bring Your Own License (BYOL) model requires
+     * a custom parameter group. The Db2 license through Amazon Web Services Marketplace model requires an Amazon Web
+     * Services Marketplace subscription. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-licensing.html">RDS for Db2 licensing
+     * options</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * </note>
+     * <p>
+     * This setting doesn't apply to Amazon Aurora or RDS Custom DB instances.
      * </p>
      * <p>
-     * Default: Same as source.
+     * Valid Values:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Valid Values: <code>license-included</code> | <code>bring-your-own-license</code> |
-     * <code>general-public-license</code>
+     * RDS for Db2 - <code>bring-your-own-license | marketplace-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MariaDB - <code>general-public-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Microsoft SQL Server - <code>license-included</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MySQL - <code>general-public-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Oracle - <code>bring-your-own-license | license-included</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for PostgreSQL - <code>postgresql-license</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: Same as the source.
      * </p>
      * 
      * @param licenseModel
-     *        License model information for the restored DB instance.</p>
+     *        License model information for the restored DB instance.</p> <note>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        License models for RDS for Db2 require additional configuration. The Bring Your Own License (BYOL) model
+     *        requires a custom parameter group. The Db2 license through Amazon Web Services Marketplace model requires
+     *        an Amazon Web Services Marketplace subscription. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-licensing.html">RDS for Db2 licensing
+     *        options</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        This setting doesn't apply to Amazon Aurora or RDS Custom DB instances.
      *        </p>
      *        <p>
-     *        Default: Same as source.
+     *        Valid Values:
      *        </p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        Valid Values: <code>license-included</code> | <code>bring-your-own-license</code> |
-     *        <code>general-public-license</code>
+     *        RDS for Db2 - <code>bring-your-own-license | marketplace-license</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for MariaDB - <code>general-public-license</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for Microsoft SQL Server - <code>license-included</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for MySQL - <code>general-public-license</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for Oracle - <code>bring-your-own-license | license-included</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for PostgreSQL - <code>postgresql-license</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default: Same as the source.
      */
 
     public void setLicenseModel(String licenseModel) {
@@ -1985,27 +2104,106 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * License model information for the restored DB instance.
      * </p>
+     * <note>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * License models for RDS for Db2 require additional configuration. The Bring Your Own License (BYOL) model requires
+     * a custom parameter group. The Db2 license through Amazon Web Services Marketplace model requires an Amazon Web
+     * Services Marketplace subscription. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-licensing.html">RDS for Db2 licensing
+     * options</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * </note>
+     * <p>
+     * This setting doesn't apply to Amazon Aurora or RDS Custom DB instances.
      * </p>
      * <p>
-     * Default: Same as source.
+     * Valid Values:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Valid Values: <code>license-included</code> | <code>bring-your-own-license</code> |
-     * <code>general-public-license</code>
+     * RDS for Db2 - <code>bring-your-own-license | marketplace-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MariaDB - <code>general-public-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Microsoft SQL Server - <code>license-included</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MySQL - <code>general-public-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Oracle - <code>bring-your-own-license | license-included</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for PostgreSQL - <code>postgresql-license</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: Same as the source.
      * </p>
      * 
-     * @return License model information for the restored DB instance.</p>
+     * @return License model information for the restored DB instance.</p> <note>
      *         <p>
-     *         This setting doesn't apply to RDS Custom.
+     *         License models for RDS for Db2 require additional configuration. The Bring Your Own License (BYOL) model
+     *         requires a custom parameter group. The Db2 license through Amazon Web Services Marketplace model requires
+     *         an Amazon Web Services Marketplace subscription. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-licensing.html">RDS for Db2 licensing
+     *         options</a> in the <i>Amazon RDS User Guide</i>.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         This setting doesn't apply to Amazon Aurora or RDS Custom DB instances.
      *         </p>
      *         <p>
-     *         Default: Same as source.
+     *         Valid Values:
      *         </p>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         Valid Values: <code>license-included</code> | <code>bring-your-own-license</code> |
-     *         <code>general-public-license</code>
+     *         RDS for Db2 - <code>bring-your-own-license | marketplace-license</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         RDS for MariaDB - <code>general-public-license</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         RDS for Microsoft SQL Server - <code>license-included</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         RDS for MySQL - <code>general-public-license</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         RDS for Oracle - <code>bring-your-own-license | license-included</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         RDS for PostgreSQL - <code>postgresql-license</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Default: Same as the source.
      */
 
     public String getLicenseModel() {
@@ -2016,28 +2214,107 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * License model information for the restored DB instance.
      * </p>
+     * <note>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * License models for RDS for Db2 require additional configuration. The Bring Your Own License (BYOL) model requires
+     * a custom parameter group. The Db2 license through Amazon Web Services Marketplace model requires an Amazon Web
+     * Services Marketplace subscription. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-licensing.html">RDS for Db2 licensing
+     * options</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * </note>
+     * <p>
+     * This setting doesn't apply to Amazon Aurora or RDS Custom DB instances.
      * </p>
      * <p>
-     * Default: Same as source.
+     * Valid Values:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * Valid Values: <code>license-included</code> | <code>bring-your-own-license</code> |
-     * <code>general-public-license</code>
+     * RDS for Db2 - <code>bring-your-own-license | marketplace-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MariaDB - <code>general-public-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Microsoft SQL Server - <code>license-included</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for MySQL - <code>general-public-license</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for Oracle - <code>bring-your-own-license | license-included</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * RDS for PostgreSQL - <code>postgresql-license</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: Same as the source.
      * </p>
      * 
      * @param licenseModel
-     *        License model information for the restored DB instance.</p>
+     *        License model information for the restored DB instance.</p> <note>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        License models for RDS for Db2 require additional configuration. The Bring Your Own License (BYOL) model
+     *        requires a custom parameter group. The Db2 license through Amazon Web Services Marketplace model requires
+     *        an Amazon Web Services Marketplace subscription. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-licensing.html">RDS for Db2 licensing
+     *        options</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        This setting doesn't apply to Amazon Aurora or RDS Custom DB instances.
      *        </p>
      *        <p>
-     *        Default: Same as source.
+     *        Valid Values:
      *        </p>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        Valid Values: <code>license-included</code> | <code>bring-your-own-license</code> |
-     *        <code>general-public-license</code>
+     *        RDS for Db2 - <code>bring-your-own-license | marketplace-license</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for MariaDB - <code>general-public-license</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for Microsoft SQL Server - <code>license-included</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for MySQL - <code>general-public-license</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for Oracle - <code>bring-your-own-license | license-included</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        RDS for PostgreSQL - <code>postgresql-license</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default: Same as the source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -55,7 +55,7 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     private String customImageName;
     /**
      * <p>
-     * The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>). Use the
+     * The ID for a virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>). Use the
      * <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
      * </p>
      * <note>
@@ -70,7 +70,7 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (<code>micro_1_0</code>).
+     * pricing plan (<code>medium_x_x</code>).
      * </p>
      */
     private String bundleId;
@@ -116,7 +116,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * The IP address type for the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * <p>
      * The default value is <code>dualstack</code>.
@@ -326,7 +327,7 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>). Use the
+     * The ID for a virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>). Use the
      * <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
      * </p>
      * <note>
@@ -338,7 +339,7 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * 
      * @param blueprintId
-     *        The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     *        The ID for a virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>).
      *        Use the <code>get blueprints</code> operation to return a list of available images (or
      *        <i>blueprints</i>).</p> <note>
      *        <p>
@@ -354,7 +355,7 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>). Use the
+     * The ID for a virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>). Use the
      * <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
      * </p>
      * <note>
@@ -365,7 +366,7 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </note>
      * 
-     * @return The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     * @return The ID for a virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>).
      *         Use the <code>get blueprints</code> operation to return a list of available images (or
      *         <i>blueprints</i>).</p> <note>
      *         <p>
@@ -381,7 +382,7 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>). Use the
+     * The ID for a virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>). Use the
      * <code>get blueprints</code> operation to return a list of available images (or <i>blueprints</i>).
      * </p>
      * <note>
@@ -393,7 +394,7 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * 
      * @param blueprintId
-     *        The ID for a virtual private server image (<code>app_wordpress_4_4</code> or <code>app_lamp_7_0</code>).
+     *        The ID for a virtual private server image (<code>app_wordpress_x_x</code> or <code>app_lamp_x_x</code>).
      *        Use the <code>get blueprints</code> operation to return a list of available images (or
      *        <i>blueprints</i>).</p> <note>
      *        <p>
@@ -412,12 +413,12 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (<code>micro_1_0</code>).
+     * pricing plan (<code>medium_x_x</code>).
      * </p>
      * 
      * @param bundleId
      *        The bundle of specification information for your virtual private server (or <i>instance</i>), including
-     *        the pricing plan (<code>micro_1_0</code>).
+     *        the pricing plan (<code>medium_x_x</code>).
      */
 
     public void setBundleId(String bundleId) {
@@ -427,11 +428,11 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (<code>micro_1_0</code>).
+     * pricing plan (<code>medium_x_x</code>).
      * </p>
      * 
      * @return The bundle of specification information for your virtual private server (or <i>instance</i>), including
-     *         the pricing plan (<code>micro_1_0</code>).
+     *         the pricing plan (<code>medium_x_x</code>).
      */
 
     public String getBundleId() {
@@ -441,12 +442,12 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The bundle of specification information for your virtual private server (or <i>instance</i>), including the
-     * pricing plan (<code>micro_1_0</code>).
+     * pricing plan (<code>medium_x_x</code>).
      * </p>
      * 
      * @param bundleId
      *        The bundle of specification information for your virtual private server (or <i>instance</i>), including
-     *        the pricing plan (<code>micro_1_0</code>).
+     *        the pricing plan (<code>medium_x_x</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -754,7 +755,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * The IP address type for the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * <p>
      * The default value is <code>dualstack</code>.
@@ -763,7 +765,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * @param ipAddressType
      *        The IP address type for the instance.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      *        </p>
      *        <p>
      *        The default value is <code>dualstack</code>.
@@ -779,7 +782,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * The IP address type for the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * <p>
      * The default value is <code>dualstack</code>.
@@ -787,7 +791,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @return The IP address type for the instance.</p>
      *         <p>
-     *         The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *         The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *         <code>dualstack</code> for IPv4 and IPv6.
      *         </p>
      *         <p>
      *         The default value is <code>dualstack</code>.
@@ -803,7 +808,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * The IP address type for the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * <p>
      * The default value is <code>dualstack</code>.
@@ -812,7 +818,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * @param ipAddressType
      *        The IP address type for the instance.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      *        </p>
      *        <p>
      *        The default value is <code>dualstack</code>.
@@ -830,7 +837,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * The IP address type for the instance.
      * </p>
      * <p>
-     * The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     * The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     * <code>dualstack</code> for IPv4 and IPv6.
      * </p>
      * <p>
      * The default value is <code>dualstack</code>.
@@ -839,7 +847,8 @@ public class CreateInstancesRequest extends com.amazonaws.AmazonWebServiceReques
      * @param ipAddressType
      *        The IP address type for the instance.</p>
      *        <p>
-     *        The possible values are <code>ipv4</code> for IPv4 only, and <code>dualstack</code> for IPv4 and IPv6.
+     *        The possible values are <code>ipv4</code> for IPv4 only, <code>ipv6</code> for IPv6 only, and
+     *        <code>dualstack</code> for IPv4 and IPv6.
      *        </p>
      *        <p>
      *        The default value is <code>dualstack</code>.

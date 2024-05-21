@@ -79,6 +79,11 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of hardware or software platform on which the gateway is running.
      * </p>
+     * <note>
+     * <p>
+     * Tape Gateway is no longer available on Snow Family devices.
+     * </p>
+     * </note>
      */
     private String hostEnvironment;
     /**
@@ -412,9 +417,17 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of hardware or software platform on which the gateway is running.
      * </p>
+     * <note>
+     * <p>
+     * Tape Gateway is no longer available on Snow Family devices.
+     * </p>
+     * </note>
      * 
      * @param hostEnvironment
-     *        The type of hardware or software platform on which the gateway is running.
+     *        The type of hardware or software platform on which the gateway is running.</p> <note>
+     *        <p>
+     *        Tape Gateway is no longer available on Snow Family devices.
+     *        </p>
      * @see HostEnvironment
      */
 
@@ -426,8 +439,16 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of hardware or software platform on which the gateway is running.
      * </p>
+     * <note>
+     * <p>
+     * Tape Gateway is no longer available on Snow Family devices.
+     * </p>
+     * </note>
      * 
-     * @return The type of hardware or software platform on which the gateway is running.
+     * @return The type of hardware or software platform on which the gateway is running.</p> <note>
+     *         <p>
+     *         Tape Gateway is no longer available on Snow Family devices.
+     *         </p>
      * @see HostEnvironment
      */
 
@@ -439,9 +460,17 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of hardware or software platform on which the gateway is running.
      * </p>
+     * <note>
+     * <p>
+     * Tape Gateway is no longer available on Snow Family devices.
+     * </p>
+     * </note>
      * 
      * @param hostEnvironment
-     *        The type of hardware or software platform on which the gateway is running.
+     *        The type of hardware or software platform on which the gateway is running.</p> <note>
+     *        <p>
+     *        Tape Gateway is no longer available on Snow Family devices.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HostEnvironment
      */
@@ -455,9 +484,17 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The type of hardware or software platform on which the gateway is running.
      * </p>
+     * <note>
+     * <p>
+     * Tape Gateway is no longer available on Snow Family devices.
+     * </p>
+     * </note>
      * 
      * @param hostEnvironment
-     *        The type of hardware or software platform on which the gateway is running.
+     *        The type of hardware or software platform on which the gateway is running.</p> <note>
+     *        <p>
+     *        Tape Gateway is no longer available on Snow Family devices.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HostEnvironment
      */

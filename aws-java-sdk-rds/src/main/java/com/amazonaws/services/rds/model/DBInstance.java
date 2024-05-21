@@ -228,7 +228,8 @@ public class DBInstance implements Serializable, Cloneable {
     private String replicaMode;
     /**
      * <p>
-     * The license model information for this DB instance. This setting doesn't apply to RDS Custom DB instances.
+     * The license model information for this DB instance. This setting doesn't apply to Amazon Aurora or RDS Custom DB
+     * instances.
      * </p>
      */
     private String licenseModel;
@@ -2224,11 +2225,13 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The license model information for this DB instance. This setting doesn't apply to RDS Custom DB instances.
+     * The license model information for this DB instance. This setting doesn't apply to Amazon Aurora or RDS Custom DB
+     * instances.
      * </p>
      * 
      * @param licenseModel
-     *        The license model information for this DB instance. This setting doesn't apply to RDS Custom DB instances.
+     *        The license model information for this DB instance. This setting doesn't apply to Amazon Aurora or RDS
+     *        Custom DB instances.
      */
 
     public void setLicenseModel(String licenseModel) {
@@ -2237,11 +2240,12 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The license model information for this DB instance. This setting doesn't apply to RDS Custom DB instances.
+     * The license model information for this DB instance. This setting doesn't apply to Amazon Aurora or RDS Custom DB
+     * instances.
      * </p>
      * 
-     * @return The license model information for this DB instance. This setting doesn't apply to RDS Custom DB
-     *         instances.
+     * @return The license model information for this DB instance. This setting doesn't apply to Amazon Aurora or RDS
+     *         Custom DB instances.
      */
 
     public String getLicenseModel() {
@@ -2250,11 +2254,13 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The license model information for this DB instance. This setting doesn't apply to RDS Custom DB instances.
+     * The license model information for this DB instance. This setting doesn't apply to Amazon Aurora or RDS Custom DB
+     * instances.
      * </p>
      * 
      * @param licenseModel
-     *        The license model information for this DB instance. This setting doesn't apply to RDS Custom DB instances.
+     *        The license model information for this DB instance. This setting doesn't apply to Amazon Aurora or RDS
+     *        Custom DB instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
