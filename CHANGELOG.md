@@ -1,3 +1,16 @@
+# __1.12.730__ __2024-05-24__
+## __AWS IoT FleetWise__
+  - ### Features
+    - AWS IoT FleetWise now supports listing vehicles with attributes filter, ListVehicles API is updated to support additional attributes filter.
+
+## __Amazon DynamoDB__
+  - ### Features
+    - Documentation only updates for DynamoDB.
+
+## __Amazon Managed Blockchain__
+  - ### Features
+    - This is a minor documentation update to address the impact of the shut down of the Goerli and Polygon networks.
+
 # __1.12.729__ __2024-05-23__
 ## __AWS OpsWorks__
   - ### Features

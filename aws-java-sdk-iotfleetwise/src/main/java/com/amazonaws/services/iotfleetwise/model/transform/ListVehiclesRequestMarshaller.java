@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.iotfleetwise.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,10 @@ public class ListVehiclesRequestMarshaller {
 
     private static final MarshallingInfo<String> MODELMANIFESTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("modelManifestArn").build();
+    private static final MarshallingInfo<List> ATTRIBUTENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attributeNames").build();
+    private static final MarshallingInfo<List> ATTRIBUTEVALUES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attributeValues").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -51,6 +56,8 @@ public class ListVehiclesRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(listVehiclesRequest.getModelManifestArn(), MODELMANIFESTARN_BINDING);
+            protocolMarshaller.marshall(listVehiclesRequest.getAttributeNames(), ATTRIBUTENAMES_BINDING);
+            protocolMarshaller.marshall(listVehiclesRequest.getAttributeValues(), ATTRIBUTEVALUES_BINDING);
             protocolMarshaller.marshall(listVehiclesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listVehiclesRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {

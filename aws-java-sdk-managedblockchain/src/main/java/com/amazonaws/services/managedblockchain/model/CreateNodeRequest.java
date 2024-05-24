@@ -46,11 +46,6 @@ public class CreateNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <code>n-ethereum-mainnet</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <code>n-ethereum-goerli</code>
-     * </p>
-     * </li>
      * </ul>
      */
     private String networkId;
@@ -155,11 +150,6 @@ public class CreateNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <code>n-ethereum-mainnet</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <code>n-ethereum-goerli</code>
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param networkId
@@ -171,11 +161,6 @@ public class CreateNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>n-ethereum-mainnet</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>n-ethereum-goerli</code>
      *        </p>
      *        </li>
      */
@@ -197,11 +182,6 @@ public class CreateNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <code>n-ethereum-mainnet</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <code>n-ethereum-goerli</code>
-     * </p>
-     * </li>
      * </ul>
      * 
      * @return The unique identifier of the network for the node.</p>
@@ -212,11 +192,6 @@ public class CreateNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         <li>
      *         <p>
      *         <code>n-ethereum-mainnet</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>n-ethereum-goerli</code>
      *         </p>
      *         </li>
      */
@@ -238,11 +213,6 @@ public class CreateNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <code>n-ethereum-mainnet</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <code>n-ethereum-goerli</code>
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param networkId
@@ -254,11 +224,6 @@ public class CreateNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>n-ethereum-mainnet</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>n-ethereum-goerli</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

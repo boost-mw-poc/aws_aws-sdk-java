@@ -39,7 +39,7 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
     private String description;
     /**
      * <p>
-     * (Optional) The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
+     * The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
      * </p>
      */
     private String signalCatalogArn;
@@ -256,11 +256,11 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
+     * The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
      * </p>
      * 
      * @param signalCatalogArn
-     *        (Optional) The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
+     *        The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
      */
 
     public void setSignalCatalogArn(String signalCatalogArn) {
@@ -269,10 +269,10 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
+     * The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
      * </p>
      * 
-     * @return (Optional) The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
+     * @return The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
      */
 
     public String getSignalCatalogArn() {
@@ -281,11 +281,11 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
+     * The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
      * </p>
      * 
      * @param signalCatalogArn
-     *        (Optional) The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
+     *        The Amazon Resource Name (ARN) of the signal catalog to associate with the campaign.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

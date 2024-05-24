@@ -38,11 +38,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * mainnet = <code>1</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * goerli = <code>5</code>
-     * </p>
-     * </li>
      * </ul>
      */
     private String chainId;
@@ -57,11 +52,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * mainnet = <code>1</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * goerli = <code>5</code>
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param chainId
@@ -70,11 +60,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      *        <li>
      *        <p>
      *        mainnet = <code>1</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        goerli = <code>5</code>
      *        </p>
      *        </li>
      */
@@ -93,11 +78,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * mainnet = <code>1</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * goerli = <code>5</code>
-     * </p>
-     * </li>
      * </ul>
      * 
      * @return The Ethereum <code>CHAIN_ID</code> associated with the Ethereum network. Chain IDs are as follows:</p>
@@ -105,11 +85,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      *         <li>
      *         <p>
      *         mainnet = <code>1</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         goerli = <code>5</code>
      *         </p>
      *         </li>
      */
@@ -128,11 +103,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * mainnet = <code>1</code>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * goerli = <code>5</code>
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param chainId
@@ -141,11 +111,6 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      *        <li>
      *        <p>
      *        mainnet = <code>1</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        goerli = <code>5</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

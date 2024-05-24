@@ -732,6 +732,12 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * The total request size exceeds 16 MB.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Any individual items with keys exceeding the key length limits. For a partition key, the limit is 2048 bytes and
+     * for a sort key, the limit is 1024 bytes.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param batchWriteItemRequest
@@ -962,12 +968,9 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
-     * (Legacy)</a> of global tables. We recommend using <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
-     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
+     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
+     * determine which version you are using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
      * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
      * 2019.11.21 (Current), see <a
@@ -1575,9 +1578,7 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> of global tables.
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version).
      * </p>
      * </important> <note>
      * <p>
@@ -2046,12 +2047,9 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
-     * (Legacy)</a> of global tables. We recommend using <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
-     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
+     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
+     * determine which version you are using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
      * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
      * 2019.11.21 (Current), see <a
@@ -2125,12 +2123,9 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
-     * (Legacy)</a> of global tables. We recommend using <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
-     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
+     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
+     * determine which version you are using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
      * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
      * 2019.11.21 (Current), see <a
@@ -2483,9 +2478,7 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> of global tables.
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version).
      * </p>
      * </important> <note>
      * <p>
@@ -2568,9 +2561,7 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> of global tables.
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version).
      * </p>
      * </important>
      * 
@@ -4062,12 +4053,9 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
-     * (Legacy)</a> of global tables. We recommend using <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
-     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
+     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
+     * determine which version you are using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
      * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
      * 2019.11.21 (Current), see <a
@@ -6490,12 +6478,9 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
-     * (Legacy)</a> of global tables. We recommend using <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
-     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
+     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
+     * determine which version you are using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
      * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
      * 2019.11.21 (Current), see <a
@@ -6504,11 +6489,10 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * </important> <note>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version
-     * 2017.11.29</a> of global tables. If you are using global tables <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     * 2019.11.21</a> you can use <a
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version). If
+     * you are using global tables <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GlobalTables.html">Version 2019.11.21</a>
+     * you can use <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_UpdateTable.html">UpdateTable</a>
      * instead.
      * </p>
@@ -6610,12 +6594,9 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
-     * (Legacy)</a> of global tables. We recommend using <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
-     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version), as it
+     * provides greater flexibility, higher efficiency and consumes less write capacity than 2017.11.29 (Legacy). To
+     * determine which version you are using, see <a
      * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
      * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
      * 2019.11.21 (Current), see <a
@@ -6921,9 +6902,7 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> of global tables.
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version).
      * </p>
      * </important>
      * <p>
@@ -7054,9 +7033,7 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <important>
      * <p>
-     * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
-     * (Current)</a> of global tables.
+     * For global tables, this operation only applies to global tables using Version 2019.11.21 (Current version).
      * </p>
      * </important>
      * 
