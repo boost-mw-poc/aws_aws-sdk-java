@@ -521,6 +521,25 @@ public interface AWSBatch {
 
     /**
      * <p>
+     * Provides a list of the first 100 <code>RUNNABLE</code> jobs associated to a single job queue.
+     * </p>
+     * 
+     * @param getJobQueueSnapshotRequest
+     * @return Result of the GetJobQueueSnapshot operation returned by the service.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. One example cause is using an action or resource on
+     *         behalf of a user that doesn't have permissions to use the action or resource. Another cause is specifying
+     *         an identifier that's not valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @sample AWSBatch.GetJobQueueSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/GetJobQueueSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetJobQueueSnapshotResult getJobQueueSnapshot(GetJobQueueSnapshotRequest getJobQueueSnapshotRequest);
+
+    /**
+     * <p>
      * Returns a list of Batch jobs.
      * </p>
      * <p>

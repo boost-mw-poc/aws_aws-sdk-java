@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An issue with your local Amazon EKS cluster on an Amazon Web Services Outpost. You can't use this API with an Amazon
- * EKS cluster on the Amazon Web Services cloud.
+ * An issue with your Amazon EKS cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ClusterIssue" target="_top">AWS API

@@ -43,6 +43,13 @@ public class DescribeAddonConfigurationResult extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private String configurationSchema;
+    /**
+     * <p>
+     * The Kubernetes service account name used by the addon, and any suggested IAM policies. Use this information to
+     * create an IAM Role for the Addon.
+     * </p>
+     */
+    private java.util.List<AddonPodIdentityConfiguration> podIdentityConfiguration;
 
     /**
      * <p>
@@ -180,6 +187,84 @@ public class DescribeAddonConfigurationResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The Kubernetes service account name used by the addon, and any suggested IAM policies. Use this information to
+     * create an IAM Role for the Addon.
+     * </p>
+     * 
+     * @return The Kubernetes service account name used by the addon, and any suggested IAM policies. Use this
+     *         information to create an IAM Role for the Addon.
+     */
+
+    public java.util.List<AddonPodIdentityConfiguration> getPodIdentityConfiguration() {
+        return podIdentityConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Kubernetes service account name used by the addon, and any suggested IAM policies. Use this information to
+     * create an IAM Role for the Addon.
+     * </p>
+     * 
+     * @param podIdentityConfiguration
+     *        The Kubernetes service account name used by the addon, and any suggested IAM policies. Use this
+     *        information to create an IAM Role for the Addon.
+     */
+
+    public void setPodIdentityConfiguration(java.util.Collection<AddonPodIdentityConfiguration> podIdentityConfiguration) {
+        if (podIdentityConfiguration == null) {
+            this.podIdentityConfiguration = null;
+            return;
+        }
+
+        this.podIdentityConfiguration = new java.util.ArrayList<AddonPodIdentityConfiguration>(podIdentityConfiguration);
+    }
+
+    /**
+     * <p>
+     * The Kubernetes service account name used by the addon, and any suggested IAM policies. Use this information to
+     * create an IAM Role for the Addon.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPodIdentityConfiguration(java.util.Collection)} or
+     * {@link #withPodIdentityConfiguration(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param podIdentityConfiguration
+     *        The Kubernetes service account name used by the addon, and any suggested IAM policies. Use this
+     *        information to create an IAM Role for the Addon.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAddonConfigurationResult withPodIdentityConfiguration(AddonPodIdentityConfiguration... podIdentityConfiguration) {
+        if (this.podIdentityConfiguration == null) {
+            setPodIdentityConfiguration(new java.util.ArrayList<AddonPodIdentityConfiguration>(podIdentityConfiguration.length));
+        }
+        for (AddonPodIdentityConfiguration ele : podIdentityConfiguration) {
+            this.podIdentityConfiguration.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Kubernetes service account name used by the addon, and any suggested IAM policies. Use this information to
+     * create an IAM Role for the Addon.
+     * </p>
+     * 
+     * @param podIdentityConfiguration
+     *        The Kubernetes service account name used by the addon, and any suggested IAM policies. Use this
+     *        information to create an IAM Role for the Addon.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAddonConfigurationResult withPodIdentityConfiguration(java.util.Collection<AddonPodIdentityConfiguration> podIdentityConfiguration) {
+        setPodIdentityConfiguration(podIdentityConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -196,7 +281,9 @@ public class DescribeAddonConfigurationResult extends com.amazonaws.AmazonWebSer
         if (getAddonVersion() != null)
             sb.append("AddonVersion: ").append(getAddonVersion()).append(",");
         if (getConfigurationSchema() != null)
-            sb.append("ConfigurationSchema: ").append(getConfigurationSchema());
+            sb.append("ConfigurationSchema: ").append(getConfigurationSchema()).append(",");
+        if (getPodIdentityConfiguration() != null)
+            sb.append("PodIdentityConfiguration: ").append(getPodIdentityConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -223,6 +310,10 @@ public class DescribeAddonConfigurationResult extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getConfigurationSchema() != null && other.getConfigurationSchema().equals(this.getConfigurationSchema()) == false)
             return false;
+        if (other.getPodIdentityConfiguration() == null ^ this.getPodIdentityConfiguration() == null)
+            return false;
+        if (other.getPodIdentityConfiguration() != null && other.getPodIdentityConfiguration().equals(this.getPodIdentityConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -234,6 +325,7 @@ public class DescribeAddonConfigurationResult extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getAddonName() == null) ? 0 : getAddonName().hashCode());
         hashCode = prime * hashCode + ((getAddonVersion() == null) ? 0 : getAddonVersion().hashCode());
         hashCode = prime * hashCode + ((getConfigurationSchema() == null) ? 0 : getConfigurationSchema().hashCode());
+        hashCode = prime * hashCode + ((getPodIdentityConfiguration() == null) ? 0 : getPodIdentityConfiguration().hashCode());
         return hashCode;
     }
 

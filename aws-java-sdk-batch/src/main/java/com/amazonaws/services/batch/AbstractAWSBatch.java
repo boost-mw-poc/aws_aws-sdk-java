@@ -103,6 +103,11 @@ public class AbstractAWSBatch implements AWSBatch {
     }
 
     @Override
+    public GetJobQueueSnapshotResult getJobQueueSnapshot(GetJobQueueSnapshotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListJobsResult listJobs(ListJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

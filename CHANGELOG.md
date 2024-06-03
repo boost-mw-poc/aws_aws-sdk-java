@@ -1,3 +1,20 @@
+# __1.12.735__ __2024-06-03__
+## __AWS Amplify__
+  - ### Features
+    - This doc-only update identifies fields that are specific to Gen 1 and Gen 2 applications.
+
+## __AWS Batch__
+  - ### Features
+    - This release adds support for the AWS Batch GetJobQueueSnapshot API operation.
+
+## __AWS IoT TwinMaker__
+  - ### Features
+    - Support RESET_VALUE UpdateType for PropertyUpdates to reset property value to default or null
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Adds support for EKS add-ons pod identity associations integration
+
 # __1.12.734__ __2024-05-31__
 ## __AWS CodeBuild__
   - ### Features

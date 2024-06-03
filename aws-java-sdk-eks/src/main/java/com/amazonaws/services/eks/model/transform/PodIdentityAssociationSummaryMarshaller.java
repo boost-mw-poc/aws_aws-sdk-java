@@ -37,6 +37,8 @@ public class PodIdentityAssociationSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("associationArn").build();
     private static final MarshallingInfo<String> ASSOCIATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("associationId").build();
+    private static final MarshallingInfo<String> OWNERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ownerArn").build();
 
     private static final PodIdentityAssociationSummaryMarshaller instance = new PodIdentityAssociationSummaryMarshaller();
 
@@ -59,6 +61,7 @@ public class PodIdentityAssociationSummaryMarshaller {
             protocolMarshaller.marshall(podIdentityAssociationSummary.getServiceAccount(), SERVICEACCOUNT_BINDING);
             protocolMarshaller.marshall(podIdentityAssociationSummary.getAssociationArn(), ASSOCIATIONARN_BINDING);
             protocolMarshaller.marshall(podIdentityAssociationSummary.getAssociationId(), ASSOCIATIONID_BINDING);
+            protocolMarshaller.marshall(podIdentityAssociationSummary.getOwnerArn(), OWNERARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

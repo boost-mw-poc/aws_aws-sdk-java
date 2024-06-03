@@ -36,6 +36,8 @@ public class AddonVersionInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("compatibilities").build();
     private static final MarshallingInfo<Boolean> REQUIRESCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("requiresConfiguration").build();
+    private static final MarshallingInfo<Boolean> REQUIRESIAMPERMISSIONS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("requiresIamPermissions").build();
 
     private static final AddonVersionInfoMarshaller instance = new AddonVersionInfoMarshaller();
 
@@ -57,6 +59,7 @@ public class AddonVersionInfoMarshaller {
             protocolMarshaller.marshall(addonVersionInfo.getArchitecture(), ARCHITECTURE_BINDING);
             protocolMarshaller.marshall(addonVersionInfo.getCompatibilities(), COMPATIBILITIES_BINDING);
             protocolMarshaller.marshall(addonVersionInfo.getRequiresConfiguration(), REQUIRESCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(addonVersionInfo.getRequiresIamPermissions(), REQUIRESIAMPERMISSIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

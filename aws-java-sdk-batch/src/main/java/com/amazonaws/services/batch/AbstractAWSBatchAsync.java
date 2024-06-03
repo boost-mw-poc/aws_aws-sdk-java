@@ -196,6 +196,19 @@ public class AbstractAWSBatchAsync extends AbstractAWSBatch implements AWSBatchA
     }
 
     @Override
+    public java.util.concurrent.Future<GetJobQueueSnapshotResult> getJobQueueSnapshotAsync(GetJobQueueSnapshotRequest request) {
+
+        return getJobQueueSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetJobQueueSnapshotResult> getJobQueueSnapshotAsync(GetJobQueueSnapshotRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetJobQueueSnapshotRequest, GetJobQueueSnapshotResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListJobsResult> listJobsAsync(ListJobsRequest request) {
 
         return listJobsAsync(request, null);

@@ -789,6 +789,37 @@ public interface AWSBatchAsync extends AWSBatch {
 
     /**
      * <p>
+     * Provides a list of the first 100 <code>RUNNABLE</code> jobs associated to a single job queue.
+     * </p>
+     * 
+     * @param getJobQueueSnapshotRequest
+     * @return A Java Future containing the result of the GetJobQueueSnapshot operation returned by the service.
+     * @sample AWSBatchAsync.GetJobQueueSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/GetJobQueueSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetJobQueueSnapshotResult> getJobQueueSnapshotAsync(GetJobQueueSnapshotRequest getJobQueueSnapshotRequest);
+
+    /**
+     * <p>
+     * Provides a list of the first 100 <code>RUNNABLE</code> jobs associated to a single job queue.
+     * </p>
+     * 
+     * @param getJobQueueSnapshotRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetJobQueueSnapshot operation returned by the service.
+     * @sample AWSBatchAsyncHandler.GetJobQueueSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/GetJobQueueSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetJobQueueSnapshotResult> getJobQueueSnapshotAsync(GetJobQueueSnapshotRequest getJobQueueSnapshotRequest,
+            com.amazonaws.handlers.AsyncHandler<GetJobQueueSnapshotRequest, GetJobQueueSnapshotResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of Batch jobs.
      * </p>
      * <p>

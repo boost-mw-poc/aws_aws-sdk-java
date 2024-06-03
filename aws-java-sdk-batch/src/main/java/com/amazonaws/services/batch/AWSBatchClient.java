@@ -1272,6 +1272,67 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
 
     /**
      * <p>
+     * Provides a list of the first 100 <code>RUNNABLE</code> jobs associated to a single job queue.
+     * </p>
+     * 
+     * @param getJobQueueSnapshotRequest
+     * @return Result of the GetJobQueueSnapshot operation returned by the service.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. One example cause is using an action or resource on
+     *         behalf of a user that doesn't have permissions to use the action or resource. Another cause is specifying
+     *         an identifier that's not valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @sample AWSBatch.GetJobQueueSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/GetJobQueueSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetJobQueueSnapshotResult getJobQueueSnapshot(GetJobQueueSnapshotRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetJobQueueSnapshot(request);
+    }
+
+    @SdkInternalApi
+    final GetJobQueueSnapshotResult executeGetJobQueueSnapshot(GetJobQueueSnapshotRequest getJobQueueSnapshotRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getJobQueueSnapshotRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetJobQueueSnapshotRequest> request = null;
+        Response<GetJobQueueSnapshotResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetJobQueueSnapshotRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getJobQueueSnapshotRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Batch");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetJobQueueSnapshot");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetJobQueueSnapshotResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetJobQueueSnapshotResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of Batch jobs.
      * </p>
      * <p>

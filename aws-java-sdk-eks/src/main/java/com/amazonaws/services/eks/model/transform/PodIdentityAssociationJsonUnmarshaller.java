@@ -85,6 +85,10 @@ public class PodIdentityAssociationJsonUnmarshaller implements Unmarshaller<PodI
                     context.nextToken();
                     podIdentityAssociation.setModifiedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("ownerArn", targetDepth)) {
+                    context.nextToken();
+                    podIdentityAssociation.setOwnerArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

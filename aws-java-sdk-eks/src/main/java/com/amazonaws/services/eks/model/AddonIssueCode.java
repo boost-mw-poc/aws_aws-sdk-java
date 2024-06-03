@@ -27,7 +27,9 @@ public enum AddonIssueCode {
     ConfigurationConflict("ConfigurationConflict"),
     AdmissionRequestDenied("AdmissionRequestDenied"),
     UnsupportedAddonModification("UnsupportedAddonModification"),
-    K8sResourceNotFound("K8sResourceNotFound");
+    K8sResourceNotFound("K8sResourceNotFound"),
+    AddonSubscriptionNeeded("AddonSubscriptionNeeded"),
+    AddonPermissionFailure("AddonPermissionFailure");
 
     private String value;
 

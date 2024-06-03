@@ -194,6 +194,10 @@ public class Branch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * </p>
+     * <p>
+     * This property is available to Amplify Gen 1 apps only. When you deploy an application with Amplify Gen 2, you
+     * provision the app's backend infrastructure using Typescript code.
+     * </p>
      */
     private String backendEnvironmentArn;
 
@@ -1480,9 +1484,16 @@ public class Branch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * </p>
+     * <p>
+     * This property is available to Amplify Gen 1 apps only. When you deploy an application with Amplify Gen 2, you
+     * provision the app's backend infrastructure using Typescript code.
+     * </p>
      * 
      * @param backendEnvironmentArn
-     *        The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     *        The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app. </p>
+     *        <p>
+     *        This property is available to Amplify Gen 1 apps only. When you deploy an application with Amplify Gen 2,
+     *        you provision the app's backend infrastructure using Typescript code.
      */
 
     public void setBackendEnvironmentArn(String backendEnvironmentArn) {
@@ -1493,8 +1504,15 @@ public class Branch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * </p>
+     * <p>
+     * This property is available to Amplify Gen 1 apps only. When you deploy an application with Amplify Gen 2, you
+     * provision the app's backend infrastructure using Typescript code.
+     * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     * @return The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app. </p>
+     *         <p>
+     *         This property is available to Amplify Gen 1 apps only. When you deploy an application with Amplify Gen 2,
+     *         you provision the app's backend infrastructure using Typescript code.
      */
 
     public String getBackendEnvironmentArn() {
@@ -1505,9 +1523,16 @@ public class Branch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * </p>
+     * <p>
+     * This property is available to Amplify Gen 1 apps only. When you deploy an application with Amplify Gen 2, you
+     * provision the app's backend infrastructure using Typescript code.
+     * </p>
      * 
      * @param backendEnvironmentArn
-     *        The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     *        The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app. </p>
+     *        <p>
+     *        This property is available to Amplify Gen 1 apps only. When you deploy an application with Amplify Gen 2,
+     *        you provision the app's backend infrastructure using Typescript code.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

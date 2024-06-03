@@ -49,8 +49,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * Bottlerocket. The default disk size is 50 GiB for Windows. If you specify <code>launchTemplate</code>, then don't
      * specify <code>diskSize</code>, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      */
     private Integer diskSize;
@@ -61,8 +61,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">SubnetId</a> </code>
      * in your launch template, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      */
     private java.util.List<String> subnets;
@@ -78,8 +78,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>instanceTypes</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types"
      * >Managed node group capacity types</a> and <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      */
     private java.util.List<String> instanceTypes;
@@ -90,8 +90,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * template uses a Windows custom AMI, then add <code>eks:kube-proxy-windows</code> to your Windows nodes
      * <code>rolearn</code> in the <code>aws-auth</code> <code>ConfigMap</code>. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      */
     private String amiType;
@@ -100,8 +100,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * The remote access configuration to use with your node group. For Linux, the protocol is SSH. For Windows, the
      * protocol is RDP. If you specify <code>launchTemplate</code>, then don't specify <code>remoteAccess</code>, or the
      * node group deployment will fail. For more information about using launch templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      */
     private RemoteAccessConfig remoteAccess;
@@ -117,8 +117,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html">IamInstanceProfile</a> </code>
      * in your launch template, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      */
     private String nodeRole;
@@ -151,9 +151,11 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
     private String clientRequestToken;
     /**
      * <p>
-     * An object representing a node group's launch template specification. If specified, then do not specify
-     * <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code> and make sure that the launch
-     * template meets the requirements in <code>launchTemplateSpecification</code>.
+     * An object representing a node group's launch template specification. When using this object, don't directly
+     * specify <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code>. Make sure that the
+     * launch template meets the requirements in <code>launchTemplateSpecification</code>. Also refer to <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      */
     private LaunchTemplateSpecification launchTemplate;
@@ -175,8 +177,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * and this is the only accepted specified value. If you specify <code>launchTemplate</code>, and your launch
      * template uses a custom AMI, then don't specify <code>version</code>, or the node group deployment will fail. For
      * more information about using launch templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      */
     private String version;
@@ -194,8 +196,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * If you specify <code>launchTemplate</code>, and your launch template uses a custom AMI, then don't specify
      * <code>releaseVersion</code>, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      */
     private String releaseVersion;
@@ -326,8 +328,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * Bottlerocket. The default disk size is 50 GiB for Windows. If you specify <code>launchTemplate</code>, then don't
      * specify <code>diskSize</code>, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param diskSize
@@ -335,8 +337,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        Linux and Bottlerocket. The default disk size is 50 GiB for Windows. If you specify
      *        <code>launchTemplate</code>, then don't specify <code>diskSize</code>, or the node group deployment will
      *        fail. For more information about using launch templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public void setDiskSize(Integer diskSize) {
@@ -349,16 +351,16 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * Bottlerocket. The default disk size is 50 GiB for Windows. If you specify <code>launchTemplate</code>, then don't
      * specify <code>diskSize</code>, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @return The root device disk size (in GiB) for your node group instances. The default disk size is 20 GiB for
      *         Linux and Bottlerocket. The default disk size is 50 GiB for Windows. If you specify
      *         <code>launchTemplate</code>, then don't specify <code>diskSize</code>, or the node group deployment will
      *         fail. For more information about using launch templates with Amazon EKS, see <a
-     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *         in the <i>Amazon EKS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *         with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public Integer getDiskSize() {
@@ -371,8 +373,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * Bottlerocket. The default disk size is 50 GiB for Windows. If you specify <code>launchTemplate</code>, then don't
      * specify <code>diskSize</code>, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param diskSize
@@ -380,8 +382,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        Linux and Bottlerocket. The default disk size is 50 GiB for Windows. If you specify
      *        <code>launchTemplate</code>, then don't specify <code>diskSize</code>, or the node group deployment will
      *        fail. For more information about using launch templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -397,8 +399,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">SubnetId</a> </code>
      * in your launch template, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @return The subnets to use for the Auto Scaling group that is created for your node group. If you specify
@@ -406,8 +408,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *         <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">SubnetId</a> </code>
      *         in your launch template, or the node group deployment will fail. For more information about using launch
      *         templates with Amazon EKS, see <a
-     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *         in the <i>Amazon EKS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *         with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public java.util.List<String> getSubnets() {
@@ -421,8 +423,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">SubnetId</a> </code>
      * in your launch template, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param subnets
@@ -431,8 +433,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">SubnetId</a> </code>
      *        in your launch template, or the node group deployment will fail. For more information about using launch
      *        templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public void setSubnets(java.util.Collection<String> subnets) {
@@ -451,8 +453,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">SubnetId</a> </code>
      * in your launch template, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -466,8 +468,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">SubnetId</a> </code>
      *        in your launch template, or the node group deployment will fail. For more information about using launch
      *        templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -488,8 +490,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">SubnetId</a> </code>
      * in your launch template, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param subnets
@@ -498,8 +500,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html">SubnetId</a> </code>
      *        in your launch template, or the node group deployment will fail. For more information about using launch
      *        templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -520,8 +522,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>instanceTypes</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types"
      * >Managed node group capacity types</a> and <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @return Specify the instance types for a node group. If you specify a GPU instance type, make sure to also
@@ -535,8 +537,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *         <code>instanceTypes</code>. For more information, see <a href=
      *         "https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types"
      *         >Managed node group capacity types</a> and <a
-     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *         in the <i>Amazon EKS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *         with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public java.util.List<String> getInstanceTypes() {
@@ -555,8 +557,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>instanceTypes</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types"
      * >Managed node group capacity types</a> and <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param instanceTypes
@@ -571,8 +573,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>instanceTypes</code>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types"
      *        >Managed node group capacity types</a> and <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public void setInstanceTypes(java.util.Collection<String> instanceTypes) {
@@ -596,8 +598,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>instanceTypes</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types"
      * >Managed node group capacity types</a> and <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -617,8 +619,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>instanceTypes</code>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types"
      *        >Managed node group capacity types</a> and <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -644,8 +646,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>instanceTypes</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types"
      * >Managed node group capacity types</a> and <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param instanceTypes
@@ -660,8 +662,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>instanceTypes</code>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types"
      *        >Managed node group capacity types</a> and <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -677,8 +679,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * template uses a Windows custom AMI, then add <code>eks:kube-proxy-windows</code> to your Windows nodes
      * <code>rolearn</code> in the <code>aws-auth</code> <code>ConfigMap</code>. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param amiType
@@ -687,8 +689,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        your launch template uses a Windows custom AMI, then add <code>eks:kube-proxy-windows</code> to your
      *        Windows nodes <code>rolearn</code> in the <code>aws-auth</code> <code>ConfigMap</code>. For more
      *        information about using launch templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @see AMITypes
      */
 
@@ -703,8 +705,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * template uses a Windows custom AMI, then add <code>eks:kube-proxy-windows</code> to your Windows nodes
      * <code>rolearn</code> in the <code>aws-auth</code> <code>ConfigMap</code>. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @return The AMI type for your node group. If you specify <code>launchTemplate</code>, and your launch template
@@ -712,8 +714,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *         your launch template uses a Windows custom AMI, then add <code>eks:kube-proxy-windows</code> to your
      *         Windows nodes <code>rolearn</code> in the <code>aws-auth</code> <code>ConfigMap</code>. For more
      *         information about using launch templates with Amazon EKS, see <a
-     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *         in the <i>Amazon EKS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *         with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @see AMITypes
      */
 
@@ -728,8 +730,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * template uses a Windows custom AMI, then add <code>eks:kube-proxy-windows</code> to your Windows nodes
      * <code>rolearn</code> in the <code>aws-auth</code> <code>ConfigMap</code>. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param amiType
@@ -738,8 +740,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        your launch template uses a Windows custom AMI, then add <code>eks:kube-proxy-windows</code> to your
      *        Windows nodes <code>rolearn</code> in the <code>aws-auth</code> <code>ConfigMap</code>. For more
      *        information about using launch templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AMITypes
      */
@@ -756,8 +758,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * template uses a Windows custom AMI, then add <code>eks:kube-proxy-windows</code> to your Windows nodes
      * <code>rolearn</code> in the <code>aws-auth</code> <code>ConfigMap</code>. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param amiType
@@ -766,8 +768,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        your launch template uses a Windows custom AMI, then add <code>eks:kube-proxy-windows</code> to your
      *        Windows nodes <code>rolearn</code> in the <code>aws-auth</code> <code>ConfigMap</code>. For more
      *        information about using launch templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AMITypes
      */
@@ -782,8 +784,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * The remote access configuration to use with your node group. For Linux, the protocol is SSH. For Windows, the
      * protocol is RDP. If you specify <code>launchTemplate</code>, then don't specify <code>remoteAccess</code>, or the
      * node group deployment will fail. For more information about using launch templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param remoteAccess
@@ -791,8 +793,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        the protocol is RDP. If you specify <code>launchTemplate</code>, then don't specify
      *        <code>remoteAccess</code>, or the node group deployment will fail. For more information about using launch
      *        templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public void setRemoteAccess(RemoteAccessConfig remoteAccess) {
@@ -804,16 +806,16 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * The remote access configuration to use with your node group. For Linux, the protocol is SSH. For Windows, the
      * protocol is RDP. If you specify <code>launchTemplate</code>, then don't specify <code>remoteAccess</code>, or the
      * node group deployment will fail. For more information about using launch templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @return The remote access configuration to use with your node group. For Linux, the protocol is SSH. For Windows,
      *         the protocol is RDP. If you specify <code>launchTemplate</code>, then don't specify
      *         <code>remoteAccess</code>, or the node group deployment will fail. For more information about using
      *         launch templates with Amazon EKS, see <a
-     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *         in the <i>Amazon EKS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *         with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public RemoteAccessConfig getRemoteAccess() {
@@ -825,8 +827,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * The remote access configuration to use with your node group. For Linux, the protocol is SSH. For Windows, the
      * protocol is RDP. If you specify <code>launchTemplate</code>, then don't specify <code>remoteAccess</code>, or the
      * node group deployment will fail. For more information about using launch templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param remoteAccess
@@ -834,8 +836,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        the protocol is RDP. If you specify <code>launchTemplate</code>, then don't specify
      *        <code>remoteAccess</code>, or the node group deployment will fail. For more information about using launch
      *        templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -856,8 +858,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html">IamInstanceProfile</a> </code>
      * in your launch template, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param nodeRole
@@ -872,8 +874,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html">IamInstanceProfile</a> </code>
      *        in your launch template, or the node group deployment will fail. For more information about using launch
      *        templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public void setNodeRole(String nodeRole) {
@@ -892,8 +894,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html">IamInstanceProfile</a> </code>
      * in your launch template, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM role to associate with your node group. The Amazon EKS worker
@@ -907,8 +909,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *         <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html">IamInstanceProfile</a> </code>
      *         in your launch template, or the node group deployment will fail. For more information about using launch
      *         templates with Amazon EKS, see <a
-     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *         in the <i>Amazon EKS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *         with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public String getNodeRole() {
@@ -927,8 +929,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html">IamInstanceProfile</a> </code>
      * in your launch template, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param nodeRole
@@ -943,8 +945,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code> <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html">IamInstanceProfile</a> </code>
      *        in your launch template, or the node group deployment will fail. For more information about using launch
      *        templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1223,15 +1225,19 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An object representing a node group's launch template specification. If specified, then do not specify
-     * <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code> and make sure that the launch
-     * template meets the requirements in <code>launchTemplateSpecification</code>.
+     * An object representing a node group's launch template specification. When using this object, don't directly
+     * specify <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code>. Make sure that the
+     * launch template meets the requirements in <code>launchTemplateSpecification</code>. Also refer to <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param launchTemplate
-     *        An object representing a node group's launch template specification. If specified, then do not specify
-     *        <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code> and make sure that the
-     *        launch template meets the requirements in <code>launchTemplateSpecification</code>.
+     *        An object representing a node group's launch template specification. When using this object, don't
+     *        directly specify <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code>. Make
+     *        sure that the launch template meets the requirements in <code>launchTemplateSpecification</code>. Also
+     *        refer to <a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing
+     *        managed nodes with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public void setLaunchTemplate(LaunchTemplateSpecification launchTemplate) {
@@ -1240,14 +1246,18 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An object representing a node group's launch template specification. If specified, then do not specify
-     * <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code> and make sure that the launch
-     * template meets the requirements in <code>launchTemplateSpecification</code>.
+     * An object representing a node group's launch template specification. When using this object, don't directly
+     * specify <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code>. Make sure that the
+     * launch template meets the requirements in <code>launchTemplateSpecification</code>. Also refer to <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
-     * @return An object representing a node group's launch template specification. If specified, then do not specify
-     *         <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code> and make sure that the
-     *         launch template meets the requirements in <code>launchTemplateSpecification</code>.
+     * @return An object representing a node group's launch template specification. When using this object, don't
+     *         directly specify <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code>. Make
+     *         sure that the launch template meets the requirements in <code>launchTemplateSpecification</code>. Also
+     *         refer to <a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing
+     *         managed nodes with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public LaunchTemplateSpecification getLaunchTemplate() {
@@ -1256,15 +1266,19 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An object representing a node group's launch template specification. If specified, then do not specify
-     * <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code> and make sure that the launch
-     * template meets the requirements in <code>launchTemplateSpecification</code>.
+     * An object representing a node group's launch template specification. When using this object, don't directly
+     * specify <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code>. Make sure that the
+     * launch template meets the requirements in <code>launchTemplateSpecification</code>. Also refer to <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param launchTemplate
-     *        An object representing a node group's launch template specification. If specified, then do not specify
-     *        <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code> and make sure that the
-     *        launch template meets the requirements in <code>launchTemplateSpecification</code>.
+     *        An object representing a node group's launch template specification. When using this object, don't
+     *        directly specify <code>instanceTypes</code>, <code>diskSize</code>, or <code>remoteAccess</code>. Make
+     *        sure that the launch template meets the requirements in <code>launchTemplateSpecification</code>. Also
+     *        refer to <a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing
+     *        managed nodes with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1378,8 +1392,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * and this is the only accepted specified value. If you specify <code>launchTemplate</code>, and your launch
      * template uses a custom AMI, then don't specify <code>version</code>, or the node group deployment will fail. For
      * more information about using launch templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param version
@@ -1387,8 +1401,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        used, and this is the only accepted specified value. If you specify <code>launchTemplate</code>, and your
      *        launch template uses a custom AMI, then don't specify <code>version</code>, or the node group deployment
      *        will fail. For more information about using launch templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public void setVersion(String version) {
@@ -1401,16 +1415,16 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * and this is the only accepted specified value. If you specify <code>launchTemplate</code>, and your launch
      * template uses a custom AMI, then don't specify <code>version</code>, or the node group deployment will fail. For
      * more information about using launch templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @return The Kubernetes version to use for your managed nodes. By default, the Kubernetes version of the cluster
      *         is used, and this is the only accepted specified value. If you specify <code>launchTemplate</code>, and
      *         your launch template uses a custom AMI, then don't specify <code>version</code>, or the node group
      *         deployment will fail. For more information about using launch templates with Amazon EKS, see <a
-     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *         in the <i>Amazon EKS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *         with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public String getVersion() {
@@ -1423,8 +1437,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * and this is the only accepted specified value. If you specify <code>launchTemplate</code>, and your launch
      * template uses a custom AMI, then don't specify <code>version</code>, or the node group deployment will fail. For
      * more information about using launch templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param version
@@ -1432,8 +1446,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        used, and this is the only accepted specified value. If you specify <code>launchTemplate</code>, and your
      *        launch template uses a custom AMI, then don't specify <code>version</code>, or the node group deployment
      *        will fail. For more information about using launch templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1456,8 +1470,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * If you specify <code>launchTemplate</code>, and your launch template uses a custom AMI, then don't specify
      * <code>releaseVersion</code>, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param releaseVersion
@@ -1473,8 +1487,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        If you specify <code>launchTemplate</code>, and your launch template uses a custom AMI, then don't specify
      *        <code>releaseVersion</code>, or the node group deployment will fail. For more information about using
      *        launch templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public void setReleaseVersion(String releaseVersion) {
@@ -1495,8 +1509,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * If you specify <code>launchTemplate</code>, and your launch template uses a custom AMI, then don't specify
      * <code>releaseVersion</code>, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @return The AMI version of the Amazon EKS optimized AMI to use with your node group. By default, the latest
@@ -1511,8 +1525,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *         If you specify <code>launchTemplate</code>, and your launch template uses a custom AMI, then don't
      *         specify <code>releaseVersion</code>, or the node group deployment will fail. For more information about
      *         using launch templates with Amazon EKS, see <a
-     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *         in the <i>Amazon EKS User Guide</i>.
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *         with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      */
 
     public String getReleaseVersion() {
@@ -1533,8 +1547,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      * If you specify <code>launchTemplate</code>, and your launch template uses a custom AMI, then don't specify
      * <code>releaseVersion</code>, or the node group deployment will fail. For more information about using launch
      * templates with Amazon EKS, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
-     * <i>Amazon EKS User Guide</i>.
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param releaseVersion
@@ -1550,8 +1564,8 @@ public class CreateNodegroupRequest extends com.amazonaws.AmazonWebServiceReques
      *        If you specify <code>launchTemplate</code>, and your launch template uses a custom AMI, then don't specify
      *        <code>releaseVersion</code>, or the node group deployment will fail. For more information about using
      *        launch templates with Amazon EKS, see <a
-     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>
-     *        in the <i>Amazon EKS User Guide</i>.
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes
+     *        with launch templates</a> in the <i>Amazon EKS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

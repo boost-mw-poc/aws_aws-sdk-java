@@ -138,13 +138,21 @@ public class CreateBranchRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String pullRequestEnvironmentName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     * The Amazon Resource Name (ARN) for a backend environment that is part of a Gen 1 Amplify app.
+     * </p>
+     * <p>
+     * This field is available to Amplify Gen 1 apps only where the backend is created using Amplify Studio or the
+     * Amplify command line interface (CLI).
      * </p>
      */
     private String backendEnvironmentArn;
     /**
      * <p>
      * The backend for a <code>Branch</code> of an Amplify app. Use for a backend created from an CloudFormation stack.
+     * </p>
+     * <p>
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with Amplify Gen 2, you
+     * provision the app's backend infrastructure using Typescript code.
      * </p>
      */
     private Backend backend;
@@ -1008,11 +1016,18 @@ public class CreateBranchRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     * The Amazon Resource Name (ARN) for a backend environment that is part of a Gen 1 Amplify app.
+     * </p>
+     * <p>
+     * This field is available to Amplify Gen 1 apps only where the backend is created using Amplify Studio or the
+     * Amplify command line interface (CLI).
      * </p>
      * 
      * @param backendEnvironmentArn
-     *        The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     *        The Amazon Resource Name (ARN) for a backend environment that is part of a Gen 1 Amplify app. </p>
+     *        <p>
+     *        This field is available to Amplify Gen 1 apps only where the backend is created using Amplify Studio or
+     *        the Amplify command line interface (CLI).
      */
 
     public void setBackendEnvironmentArn(String backendEnvironmentArn) {
@@ -1021,10 +1036,17 @@ public class CreateBranchRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     * The Amazon Resource Name (ARN) for a backend environment that is part of a Gen 1 Amplify app.
+     * </p>
+     * <p>
+     * This field is available to Amplify Gen 1 apps only where the backend is created using Amplify Studio or the
+     * Amplify command line interface (CLI).
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     * @return The Amazon Resource Name (ARN) for a backend environment that is part of a Gen 1 Amplify app. </p>
+     *         <p>
+     *         This field is available to Amplify Gen 1 apps only where the backend is created using Amplify Studio or
+     *         the Amplify command line interface (CLI).
      */
 
     public String getBackendEnvironmentArn() {
@@ -1033,11 +1055,18 @@ public class CreateBranchRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     * The Amazon Resource Name (ARN) for a backend environment that is part of a Gen 1 Amplify app.
+     * </p>
+     * <p>
+     * This field is available to Amplify Gen 1 apps only where the backend is created using Amplify Studio or the
+     * Amplify command line interface (CLI).
      * </p>
      * 
      * @param backendEnvironmentArn
-     *        The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
+     *        The Amazon Resource Name (ARN) for a backend environment that is part of a Gen 1 Amplify app. </p>
+     *        <p>
+     *        This field is available to Amplify Gen 1 apps only where the backend is created using Amplify Studio or
+     *        the Amplify command line interface (CLI).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1050,10 +1079,17 @@ public class CreateBranchRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The backend for a <code>Branch</code> of an Amplify app. Use for a backend created from an CloudFormation stack.
      * </p>
+     * <p>
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with Amplify Gen 2, you
+     * provision the app's backend infrastructure using Typescript code.
+     * </p>
      * 
      * @param backend
      *        The backend for a <code>Branch</code> of an Amplify app. Use for a backend created from an CloudFormation
-     *        stack.
+     *        stack.</p>
+     *        <p>
+     *        This field is available to Amplify Gen 2 apps only. When you deploy an application with Amplify Gen 2, you
+     *        provision the app's backend infrastructure using Typescript code.
      */
 
     public void setBackend(Backend backend) {
@@ -1064,9 +1100,16 @@ public class CreateBranchRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The backend for a <code>Branch</code> of an Amplify app. Use for a backend created from an CloudFormation stack.
      * </p>
+     * <p>
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with Amplify Gen 2, you
+     * provision the app's backend infrastructure using Typescript code.
+     * </p>
      * 
      * @return The backend for a <code>Branch</code> of an Amplify app. Use for a backend created from an CloudFormation
-     *         stack.
+     *         stack.</p>
+     *         <p>
+     *         This field is available to Amplify Gen 2 apps only. When you deploy an application with Amplify Gen 2,
+     *         you provision the app's backend infrastructure using Typescript code.
      */
 
     public Backend getBackend() {
@@ -1077,10 +1120,17 @@ public class CreateBranchRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The backend for a <code>Branch</code> of an Amplify app. Use for a backend created from an CloudFormation stack.
      * </p>
+     * <p>
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with Amplify Gen 2, you
+     * provision the app's backend infrastructure using Typescript code.
+     * </p>
      * 
      * @param backend
      *        The backend for a <code>Branch</code> of an Amplify app. Use for a backend created from an CloudFormation
-     *        stack.
+     *        stack.</p>
+     *        <p>
+     *        This field is available to Amplify Gen 2 apps only. When you deploy an application with Amplify Gen 2, you
+     *        provision the app's backend infrastructure using Typescript code.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

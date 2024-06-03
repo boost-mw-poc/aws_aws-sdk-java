@@ -149,8 +149,7 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
-     * An object representing the health of your local Amazon EKS cluster on an Amazon Web Services Outpost. This object
-     * isn't available for clusters on the Amazon Web Services cloud.
+     * An object representing the health of your Amazon EKS cluster.
      * </p>
      */
     private ClusterHealth health;
@@ -1042,13 +1041,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An object representing the health of your local Amazon EKS cluster on an Amazon Web Services Outpost. This object
-     * isn't available for clusters on the Amazon Web Services cloud.
+     * An object representing the health of your Amazon EKS cluster.
      * </p>
      * 
      * @param health
-     *        An object representing the health of your local Amazon EKS cluster on an Amazon Web Services Outpost. This
-     *        object isn't available for clusters on the Amazon Web Services cloud.
+     *        An object representing the health of your Amazon EKS cluster.
      */
 
     public void setHealth(ClusterHealth health) {
@@ -1057,12 +1054,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An object representing the health of your local Amazon EKS cluster on an Amazon Web Services Outpost. This object
-     * isn't available for clusters on the Amazon Web Services cloud.
+     * An object representing the health of your Amazon EKS cluster.
      * </p>
      * 
-     * @return An object representing the health of your local Amazon EKS cluster on an Amazon Web Services Outpost.
-     *         This object isn't available for clusters on the Amazon Web Services cloud.
+     * @return An object representing the health of your Amazon EKS cluster.
      */
 
     public ClusterHealth getHealth() {
@@ -1071,13 +1066,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An object representing the health of your local Amazon EKS cluster on an Amazon Web Services Outpost. This object
-     * isn't available for clusters on the Amazon Web Services cloud.
+     * An object representing the health of your Amazon EKS cluster.
      * </p>
      * 
      * @param health
-     *        An object representing the health of your local Amazon EKS cluster on an Amazon Web Services Outpost. This
-     *        object isn't available for clusters on the Amazon Web Services cloud.
+     *        An object representing the health of your Amazon EKS cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

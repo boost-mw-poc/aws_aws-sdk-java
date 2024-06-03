@@ -116,6 +116,17 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String configurationValues;
+    /**
+     * <p>
+     * An array of Pod Identity Assocations to be created. Each EKS Pod Identity association maps a Kubernetes service
+     * account to an IAM Role.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     */
+    private java.util.List<AddonPodIdentityAssociations> podIdentityAssociations;
 
     /**
      * <p>
@@ -802,6 +813,116 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * An array of Pod Identity Assocations to be created. Each EKS Pod Identity association maps a Kubernetes service
+     * account to an IAM Role.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     * 
+     * @return An array of Pod Identity Assocations to be created. Each EKS Pod Identity association maps a Kubernetes
+     *         service account to an IAM Role.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an IAM Role to an Amazon
+     *         EKS add-on using Pod Identity</a> in the EKS User Guide.
+     */
+
+    public java.util.List<AddonPodIdentityAssociations> getPodIdentityAssociations() {
+        return podIdentityAssociations;
+    }
+
+    /**
+     * <p>
+     * An array of Pod Identity Assocations to be created. Each EKS Pod Identity association maps a Kubernetes service
+     * account to an IAM Role.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     * 
+     * @param podIdentityAssociations
+     *        An array of Pod Identity Assocations to be created. Each EKS Pod Identity association maps a Kubernetes
+     *        service account to an IAM Role.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an IAM Role to an Amazon
+     *        EKS add-on using Pod Identity</a> in the EKS User Guide.
+     */
+
+    public void setPodIdentityAssociations(java.util.Collection<AddonPodIdentityAssociations> podIdentityAssociations) {
+        if (podIdentityAssociations == null) {
+            this.podIdentityAssociations = null;
+            return;
+        }
+
+        this.podIdentityAssociations = new java.util.ArrayList<AddonPodIdentityAssociations>(podIdentityAssociations);
+    }
+
+    /**
+     * <p>
+     * An array of Pod Identity Assocations to be created. Each EKS Pod Identity association maps a Kubernetes service
+     * account to an IAM Role.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPodIdentityAssociations(java.util.Collection)} or
+     * {@link #withPodIdentityAssociations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param podIdentityAssociations
+     *        An array of Pod Identity Assocations to be created. Each EKS Pod Identity association maps a Kubernetes
+     *        service account to an IAM Role.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an IAM Role to an Amazon
+     *        EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAddonRequest withPodIdentityAssociations(AddonPodIdentityAssociations... podIdentityAssociations) {
+        if (this.podIdentityAssociations == null) {
+            setPodIdentityAssociations(new java.util.ArrayList<AddonPodIdentityAssociations>(podIdentityAssociations.length));
+        }
+        for (AddonPodIdentityAssociations ele : podIdentityAssociations) {
+            this.podIdentityAssociations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of Pod Identity Assocations to be created. Each EKS Pod Identity association maps a Kubernetes service
+     * account to an IAM Role.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     * 
+     * @param podIdentityAssociations
+     *        An array of Pod Identity Assocations to be created. Each EKS Pod Identity association maps a Kubernetes
+     *        service account to an IAM Role.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an IAM Role to an Amazon
+     *        EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAddonRequest withPodIdentityAssociations(java.util.Collection<AddonPodIdentityAssociations> podIdentityAssociations) {
+        setPodIdentityAssociations(podIdentityAssociations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -828,7 +949,9 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getConfigurationValues() != null)
-            sb.append("ConfigurationValues: ").append(getConfigurationValues());
+            sb.append("ConfigurationValues: ").append(getConfigurationValues()).append(",");
+        if (getPodIdentityAssociations() != null)
+            sb.append("PodIdentityAssociations: ").append(getPodIdentityAssociations());
         sb.append("}");
         return sb.toString();
     }
@@ -875,6 +998,10 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getConfigurationValues() != null && other.getConfigurationValues().equals(this.getConfigurationValues()) == false)
             return false;
+        if (other.getPodIdentityAssociations() == null ^ this.getPodIdentityAssociations() == null)
+            return false;
+        if (other.getPodIdentityAssociations() != null && other.getPodIdentityAssociations().equals(this.getPodIdentityAssociations()) == false)
+            return false;
         return true;
     }
 
@@ -891,6 +1018,7 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getConfigurationValues() == null) ? 0 : getConfigurationValues().hashCode());
+        hashCode = prime * hashCode + ((getPodIdentityAssociations() == null) ? 0 : getPodIdentityAssociations().hashCode());
         return hashCode;
     }
 

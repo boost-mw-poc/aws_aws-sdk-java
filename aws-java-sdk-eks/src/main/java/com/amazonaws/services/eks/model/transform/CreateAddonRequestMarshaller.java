@@ -13,7 +13,7 @@
 package com.amazonaws.services.eks.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -48,6 +48,8 @@ public class CreateAddonRequestMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> CONFIGURATIONVALUES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configurationValues").build();
+    private static final MarshallingInfo<List> PODIDENTITYASSOCIATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("podIdentityAssociations").build();
 
     private static final CreateAddonRequestMarshaller instance = new CreateAddonRequestMarshaller();
 
@@ -73,6 +75,7 @@ public class CreateAddonRequestMarshaller {
             protocolMarshaller.marshall(createAddonRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(createAddonRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createAddonRequest.getConfigurationValues(), CONFIGURATIONVALUES_BINDING);
+            protocolMarshaller.marshall(createAddonRequest.getPodIdentityAssociations(), PODIDENTITYASSOCIATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

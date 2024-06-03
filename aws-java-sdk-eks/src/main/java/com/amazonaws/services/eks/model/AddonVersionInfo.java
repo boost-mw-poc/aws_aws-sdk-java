@@ -52,6 +52,12 @@ public class AddonVersionInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private Boolean requiresConfiguration;
+    /**
+     * <p>
+     * Indicates if the Addon requires IAM Permissions to operate, such as networking permissions.
+     * </p>
+     */
+    private Boolean requiresIamPermissions;
 
     /**
      * <p>
@@ -286,6 +292,58 @@ public class AddonVersionInfo implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Indicates if the Addon requires IAM Permissions to operate, such as networking permissions.
+     * </p>
+     * 
+     * @param requiresIamPermissions
+     *        Indicates if the Addon requires IAM Permissions to operate, such as networking permissions.
+     */
+
+    public void setRequiresIamPermissions(Boolean requiresIamPermissions) {
+        this.requiresIamPermissions = requiresIamPermissions;
+    }
+
+    /**
+     * <p>
+     * Indicates if the Addon requires IAM Permissions to operate, such as networking permissions.
+     * </p>
+     * 
+     * @return Indicates if the Addon requires IAM Permissions to operate, such as networking permissions.
+     */
+
+    public Boolean getRequiresIamPermissions() {
+        return this.requiresIamPermissions;
+    }
+
+    /**
+     * <p>
+     * Indicates if the Addon requires IAM Permissions to operate, such as networking permissions.
+     * </p>
+     * 
+     * @param requiresIamPermissions
+     *        Indicates if the Addon requires IAM Permissions to operate, such as networking permissions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AddonVersionInfo withRequiresIamPermissions(Boolean requiresIamPermissions) {
+        setRequiresIamPermissions(requiresIamPermissions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates if the Addon requires IAM Permissions to operate, such as networking permissions.
+     * </p>
+     * 
+     * @return Indicates if the Addon requires IAM Permissions to operate, such as networking permissions.
+     */
+
+    public Boolean isRequiresIamPermissions() {
+        return this.requiresIamPermissions;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -304,7 +362,9 @@ public class AddonVersionInfo implements Serializable, Cloneable, StructuredPojo
         if (getCompatibilities() != null)
             sb.append("Compatibilities: ").append(getCompatibilities()).append(",");
         if (getRequiresConfiguration() != null)
-            sb.append("RequiresConfiguration: ").append(getRequiresConfiguration());
+            sb.append("RequiresConfiguration: ").append(getRequiresConfiguration()).append(",");
+        if (getRequiresIamPermissions() != null)
+            sb.append("RequiresIamPermissions: ").append(getRequiresIamPermissions());
         sb.append("}");
         return sb.toString();
     }
@@ -335,6 +395,10 @@ public class AddonVersionInfo implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getRequiresConfiguration() != null && other.getRequiresConfiguration().equals(this.getRequiresConfiguration()) == false)
             return false;
+        if (other.getRequiresIamPermissions() == null ^ this.getRequiresIamPermissions() == null)
+            return false;
+        if (other.getRequiresIamPermissions() != null && other.getRequiresIamPermissions().equals(this.getRequiresIamPermissions()) == false)
+            return false;
         return true;
     }
 
@@ -347,6 +411,7 @@ public class AddonVersionInfo implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getArchitecture() == null) ? 0 : getArchitecture().hashCode());
         hashCode = prime * hashCode + ((getCompatibilities() == null) ? 0 : getCompatibilities().hashCode());
         hashCode = prime * hashCode + ((getRequiresConfiguration() == null) ? 0 : getRequiresConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getRequiresIamPermissions() == null) ? 0 : getRequiresIamPermissions().hashCode());
         return hashCode;
     }
 

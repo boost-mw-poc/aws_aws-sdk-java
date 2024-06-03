@@ -22,7 +22,8 @@ public enum PropertyUpdateType {
 
     UPDATE("UPDATE"),
     DELETE("DELETE"),
-    CREATE("CREATE");
+    CREATE("CREATE"),
+    RESET_VALUE("RESET_VALUE");
 
     private String value;
 

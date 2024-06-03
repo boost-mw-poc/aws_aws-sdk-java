@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object representing the health of your local Amazon EKS cluster on an Amazon Web Services Outpost. You can't use
- * this API with an Amazon EKS cluster on the Amazon Web Services cloud.
+ * An object representing the health of your Amazon EKS cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ClusterHealth" target="_top">AWS API
@@ -31,18 +30,17 @@ public class ClusterHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services Outpost.
+     * An object representing the health issues of your Amazon EKS cluster.
      * </p>
      */
     private java.util.List<ClusterIssue> issues;
 
     /**
      * <p>
-     * An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services Outpost.
+     * An object representing the health issues of your Amazon EKS cluster.
      * </p>
      * 
-     * @return An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services
-     *         Outpost.
+     * @return An object representing the health issues of your Amazon EKS cluster.
      */
 
     public java.util.List<ClusterIssue> getIssues() {
@@ -51,12 +49,11 @@ public class ClusterHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services Outpost.
+     * An object representing the health issues of your Amazon EKS cluster.
      * </p>
      * 
      * @param issues
-     *        An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services
-     *        Outpost.
+     *        An object representing the health issues of your Amazon EKS cluster.
      */
 
     public void setIssues(java.util.Collection<ClusterIssue> issues) {
@@ -70,7 +67,7 @@ public class ClusterHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services Outpost.
+     * An object representing the health issues of your Amazon EKS cluster.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,8 +76,7 @@ public class ClusterHealth implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param issues
-     *        An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services
-     *        Outpost.
+     *        An object representing the health issues of your Amazon EKS cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,12 +92,11 @@ public class ClusterHealth implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services Outpost.
+     * An object representing the health issues of your Amazon EKS cluster.
      * </p>
      * 
      * @param issues
-     *        An object representing the health issues of your local Amazon EKS cluster on an Amazon Web Services
-     *        Outpost.
+     *        An object representing the health issues of your Amazon EKS cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

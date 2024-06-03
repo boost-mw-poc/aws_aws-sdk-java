@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the backend environment for an Amplify app.
+ * Describes the backend environment associated with a <code>Branch</code> of a Gen 1 Amplify app. Amplify Gen 1
+ * applications are created using Amplify Studio or the Amplify command line interface (CLI).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplify-2017-07-25/BackendEnvironment" target="_top">AWS API

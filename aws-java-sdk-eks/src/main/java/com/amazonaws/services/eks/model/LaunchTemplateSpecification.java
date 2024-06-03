@@ -32,8 +32,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * launch templates, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html">
  * <code>CreateLaunchTemplate</code> </a> in the Amazon EC2 API Reference. For more information about using launch
  * templates with Amazon EKS, see <a
- * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a> in the
- * <i>Amazon EKS User Guide</i>.
+ * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with launch
+ * templates</a> in the <i>Amazon EKS User Guide</i>.
  * </p>
  * <p>
  * You must specify either the launch template ID or the launch template name in the request, but not both.

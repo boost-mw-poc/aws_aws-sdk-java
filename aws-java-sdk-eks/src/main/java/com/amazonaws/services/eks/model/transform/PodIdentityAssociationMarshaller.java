@@ -47,6 +47,8 @@ public class PodIdentityAssociationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> MODIFIEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("modifiedAt").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> OWNERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ownerArn").build();
 
     private static final PodIdentityAssociationMarshaller instance = new PodIdentityAssociationMarshaller();
 
@@ -73,6 +75,7 @@ public class PodIdentityAssociationMarshaller {
             protocolMarshaller.marshall(podIdentityAssociation.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(podIdentityAssociation.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(podIdentityAssociation.getModifiedAt(), MODIFIEDAT_BINDING);
+            protocolMarshaller.marshall(podIdentityAssociation.getOwnerArn(), OWNERARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

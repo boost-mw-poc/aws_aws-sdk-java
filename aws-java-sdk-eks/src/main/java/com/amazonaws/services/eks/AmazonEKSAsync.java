@@ -315,9 +315,10 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * <p>
      * In most cases, it takes several minutes to create a cluster. After you create an Amazon EKS cluster, you must
      * configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster. For more
-     * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html">Managing Cluster
-     * Authentication</a> and <a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html">Launching
-     * Amazon EKS nodes</a> in the <i>Amazon EKS User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-auth.html">Allowing users to
+     * access your cluster</a> and <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html">Launching Amazon EKS nodes</a> in the
+     * <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param createClusterRequest
@@ -371,9 +372,10 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * <p>
      * In most cases, it takes several minutes to create a cluster. After you create an Amazon EKS cluster, you must
      * configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster. For more
-     * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html">Managing Cluster
-     * Authentication</a> and <a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html">Launching
-     * Amazon EKS nodes</a> in the <i>Amazon EKS User Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-auth.html">Allowing users to
+     * access your cluster</a> and <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html">Launching Amazon EKS nodes</a> in the
+     * <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param createClusterRequest
@@ -527,8 +529,9 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * You can only create a node group for your cluster that is equal to the current Kubernetes version for the
      * cluster. All node groups are created with the latest AMI release version for the respective minor Kubernetes
      * version of the cluster, unless you deploy a custom AMI using a launch template. For more information about using
-     * launch templates, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch
-     * template support</a>.
+     * launch templates, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a>.
      * </p>
      * <p>
      * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are
@@ -559,8 +562,9 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * You can only create a node group for your cluster that is equal to the current Kubernetes version for the
      * cluster. All node groups are created with the latest AMI release version for the respective minor Kubernetes
      * version of the cluster, unless you deploy a custom AMI using a launch template. For more information about using
-     * launch templates, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch
-     * template support</a>.
+     * launch templates, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Customizing managed nodes with
+     * launch templates</a>.
      * </p>
      * <p>
      * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are

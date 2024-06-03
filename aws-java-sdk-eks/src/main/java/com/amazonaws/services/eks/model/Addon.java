@@ -115,6 +115,17 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String configurationValues;
+    /**
+     * <p>
+     * An array of Pod Identity Assocations owned by the Addon. Each EKS Pod Identity association maps a role to a
+     * service account in a namespace in the cluster.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     */
+    private java.util.List<String> podIdentityAssociations;
 
     /**
      * <p>
@@ -736,6 +747,116 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An array of Pod Identity Assocations owned by the Addon. Each EKS Pod Identity association maps a role to a
+     * service account in a namespace in the cluster.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     * 
+     * @return An array of Pod Identity Assocations owned by the Addon. Each EKS Pod Identity association maps a role to
+     *         a service account in a namespace in the cluster.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an IAM Role to an Amazon
+     *         EKS add-on using Pod Identity</a> in the EKS User Guide.
+     */
+
+    public java.util.List<String> getPodIdentityAssociations() {
+        return podIdentityAssociations;
+    }
+
+    /**
+     * <p>
+     * An array of Pod Identity Assocations owned by the Addon. Each EKS Pod Identity association maps a role to a
+     * service account in a namespace in the cluster.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     * 
+     * @param podIdentityAssociations
+     *        An array of Pod Identity Assocations owned by the Addon. Each EKS Pod Identity association maps a role to
+     *        a service account in a namespace in the cluster.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an IAM Role to an Amazon
+     *        EKS add-on using Pod Identity</a> in the EKS User Guide.
+     */
+
+    public void setPodIdentityAssociations(java.util.Collection<String> podIdentityAssociations) {
+        if (podIdentityAssociations == null) {
+            this.podIdentityAssociations = null;
+            return;
+        }
+
+        this.podIdentityAssociations = new java.util.ArrayList<String>(podIdentityAssociations);
+    }
+
+    /**
+     * <p>
+     * An array of Pod Identity Assocations owned by the Addon. Each EKS Pod Identity association maps a role to a
+     * service account in a namespace in the cluster.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPodIdentityAssociations(java.util.Collection)} or
+     * {@link #withPodIdentityAssociations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param podIdentityAssociations
+     *        An array of Pod Identity Assocations owned by the Addon. Each EKS Pod Identity association maps a role to
+     *        a service account in a namespace in the cluster.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an IAM Role to an Amazon
+     *        EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Addon withPodIdentityAssociations(String... podIdentityAssociations) {
+        if (this.podIdentityAssociations == null) {
+            setPodIdentityAssociations(new java.util.ArrayList<String>(podIdentityAssociations.length));
+        }
+        for (String ele : podIdentityAssociations) {
+            this.podIdentityAssociations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of Pod Identity Assocations owned by the Addon. Each EKS Pod Identity association maps a role to a
+     * service account in a namespace in the cluster.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an
+     * IAM Role to an Amazon EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * </p>
+     * 
+     * @param podIdentityAssociations
+     *        An array of Pod Identity Assocations owned by the Addon. Each EKS Pod Identity association maps a role to
+     *        a service account in a namespace in the cluster.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html">Attach an IAM Role to an Amazon
+     *        EKS add-on using Pod Identity</a> in the EKS User Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Addon withPodIdentityAssociations(java.util.Collection<String> podIdentityAssociations) {
+        setPodIdentityAssociations(podIdentityAssociations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -774,7 +895,9 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
         if (getMarketplaceInformation() != null)
             sb.append("MarketplaceInformation: ").append(getMarketplaceInformation()).append(",");
         if (getConfigurationValues() != null)
-            sb.append("ConfigurationValues: ").append(getConfigurationValues());
+            sb.append("ConfigurationValues: ").append(getConfigurationValues()).append(",");
+        if (getPodIdentityAssociations() != null)
+            sb.append("PodIdentityAssociations: ").append(getPodIdentityAssociations());
         sb.append("}");
         return sb.toString();
     }
@@ -845,6 +968,10 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getConfigurationValues() != null && other.getConfigurationValues().equals(this.getConfigurationValues()) == false)
             return false;
+        if (other.getPodIdentityAssociations() == null ^ this.getPodIdentityAssociations() == null)
+            return false;
+        if (other.getPodIdentityAssociations() != null && other.getPodIdentityAssociations().equals(this.getPodIdentityAssociations()) == false)
+            return false;
         return true;
     }
 
@@ -867,6 +994,7 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOwner() == null) ? 0 : getOwner().hashCode());
         hashCode = prime * hashCode + ((getMarketplaceInformation() == null) ? 0 : getMarketplaceInformation().hashCode());
         hashCode = prime * hashCode + ((getConfigurationValues() == null) ? 0 : getConfigurationValues().hashCode());
+        hashCode = prime * hashCode + ((getPodIdentityAssociations() == null) ? 0 : getPodIdentityAssociations().hashCode());
         return hashCode;
     }
 

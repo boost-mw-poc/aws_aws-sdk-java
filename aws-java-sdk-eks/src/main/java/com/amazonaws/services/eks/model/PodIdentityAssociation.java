@@ -131,6 +131,12 @@ public class PodIdentityAssociation implements Serializable, Cloneable, Structur
      * </p>
      */
     private java.util.Date modifiedAt;
+    /**
+     * <p>
+     * If defined, the Pod Identity Association is owned by an Amazon EKS Addon.
+     * </p>
+     */
+    private String ownerArn;
 
     /**
      * <p>
@@ -807,6 +813,46 @@ public class PodIdentityAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * If defined, the Pod Identity Association is owned by an Amazon EKS Addon.
+     * </p>
+     * 
+     * @param ownerArn
+     *        If defined, the Pod Identity Association is owned by an Amazon EKS Addon.
+     */
+
+    public void setOwnerArn(String ownerArn) {
+        this.ownerArn = ownerArn;
+    }
+
+    /**
+     * <p>
+     * If defined, the Pod Identity Association is owned by an Amazon EKS Addon.
+     * </p>
+     * 
+     * @return If defined, the Pod Identity Association is owned by an Amazon EKS Addon.
+     */
+
+    public String getOwnerArn() {
+        return this.ownerArn;
+    }
+
+    /**
+     * <p>
+     * If defined, the Pod Identity Association is owned by an Amazon EKS Addon.
+     * </p>
+     * 
+     * @param ownerArn
+     *        If defined, the Pod Identity Association is owned by an Amazon EKS Addon.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PodIdentityAssociation withOwnerArn(String ownerArn) {
+        setOwnerArn(ownerArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -835,7 +881,9 @@ public class PodIdentityAssociation implements Serializable, Cloneable, Structur
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getModifiedAt() != null)
-            sb.append("ModifiedAt: ").append(getModifiedAt());
+            sb.append("ModifiedAt: ").append(getModifiedAt()).append(",");
+        if (getOwnerArn() != null)
+            sb.append("OwnerArn: ").append(getOwnerArn());
         sb.append("}");
         return sb.toString();
     }
@@ -886,6 +934,10 @@ public class PodIdentityAssociation implements Serializable, Cloneable, Structur
             return false;
         if (other.getModifiedAt() != null && other.getModifiedAt().equals(this.getModifiedAt()) == false)
             return false;
+        if (other.getOwnerArn() == null ^ this.getOwnerArn() == null)
+            return false;
+        if (other.getOwnerArn() != null && other.getOwnerArn().equals(this.getOwnerArn()) == false)
+            return false;
         return true;
     }
 
@@ -903,6 +955,7 @@ public class PodIdentityAssociation implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getModifiedAt() == null) ? 0 : getModifiedAt().hashCode());
+        hashCode = prime * hashCode + ((getOwnerArn() == null) ? 0 : getOwnerArn().hashCode());
         return hashCode;
     }
 

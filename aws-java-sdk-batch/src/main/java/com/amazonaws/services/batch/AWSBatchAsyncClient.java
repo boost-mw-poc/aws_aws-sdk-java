@@ -697,6 +697,39 @@ public class AWSBatchAsyncClient extends AWSBatchClient implements AWSBatchAsync
     }
 
     @Override
+    public java.util.concurrent.Future<GetJobQueueSnapshotResult> getJobQueueSnapshotAsync(GetJobQueueSnapshotRequest request) {
+
+        return getJobQueueSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetJobQueueSnapshotResult> getJobQueueSnapshotAsync(final GetJobQueueSnapshotRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetJobQueueSnapshotRequest, GetJobQueueSnapshotResult> asyncHandler) {
+        final GetJobQueueSnapshotRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetJobQueueSnapshotResult>() {
+            @Override
+            public GetJobQueueSnapshotResult call() throws Exception {
+                GetJobQueueSnapshotResult result = null;
+
+                try {
+                    result = executeGetJobQueueSnapshot(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListJobsResult> listJobsAsync(ListJobsRequest request) {
 
         return listJobsAsync(request, null);

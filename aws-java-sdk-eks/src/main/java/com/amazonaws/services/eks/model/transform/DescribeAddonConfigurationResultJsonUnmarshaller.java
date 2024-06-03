@@ -60,6 +60,13 @@ public class DescribeAddonConfigurationResultJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     describeAddonConfigurationResult.setConfigurationSchema(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("podIdentityConfiguration", targetDepth)) {
+                    context.nextToken();
+                    describeAddonConfigurationResult.setPodIdentityConfiguration(new ListUnmarshaller<AddonPodIdentityConfiguration>(
+                            AddonPodIdentityConfigurationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
