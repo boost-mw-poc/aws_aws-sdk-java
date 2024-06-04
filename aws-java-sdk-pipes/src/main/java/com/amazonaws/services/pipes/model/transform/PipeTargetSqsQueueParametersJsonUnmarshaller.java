@@ -48,13 +48,13 @@ public class PipeTargetSqsQueueParametersJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("MessageDeduplicationId", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetSqsQueueParameters.setMessageDeduplicationId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("MessageGroupId", targetDepth)) {
                     context.nextToken();
                     pipeTargetSqsQueueParameters.setMessageGroupId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("MessageDeduplicationId", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetSqsQueueParameters.setMessageDeduplicationId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

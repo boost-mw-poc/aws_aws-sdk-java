@@ -28,10 +28,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class SelfManagedKafkaAccessConfigurationVpcMarshaller {
 
-    private static final MarshallingInfo<List> SECURITYGROUP_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("SecurityGroup").build();
     private static final MarshallingInfo<List> SUBNETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Subnets").build();
+    private static final MarshallingInfo<List> SECURITYGROUP_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SecurityGroup").build();
 
     private static final SelfManagedKafkaAccessConfigurationVpcMarshaller instance = new SelfManagedKafkaAccessConfigurationVpcMarshaller();
 
@@ -49,8 +49,8 @@ public class SelfManagedKafkaAccessConfigurationVpcMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(selfManagedKafkaAccessConfigurationVpc.getSecurityGroup(), SECURITYGROUP_BINDING);
             protocolMarshaller.marshall(selfManagedKafkaAccessConfigurationVpc.getSubnets(), SUBNETS_BINDING);
+            protocolMarshaller.marshall(selfManagedKafkaAccessConfigurationVpc.getSecurityGroup(), SECURITYGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

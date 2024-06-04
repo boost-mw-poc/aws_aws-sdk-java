@@ -29,30 +29,30 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreatePipeRequestMarshaller {
 
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("Name").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> DESIREDSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredState").build();
-    private static final MarshallingInfo<String> ENRICHMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Enrichment").build();
-    private static final MarshallingInfo<StructuredPojo> ENRICHMENTPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnrichmentParameters").build();
-    private static final MarshallingInfo<StructuredPojo> LOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogConfiguration").build();
-    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("Name").build();
-    private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("RoleArn").build();
     private static final MarshallingInfo<String> SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Source").build();
     private static final MarshallingInfo<StructuredPojo> SOURCEPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceParameters").build();
-    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> ENRICHMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Enrichment").build();
+    private static final MarshallingInfo<StructuredPojo> ENRICHMENTPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnrichmentParameters").build();
     private static final MarshallingInfo<String> TARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Target").build();
     private static final MarshallingInfo<StructuredPojo> TARGETPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetParameters").build();
+    private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RoleArn").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<StructuredPojo> LOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogConfiguration").build();
 
     private static final CreatePipeRequestMarshaller instance = new CreatePipeRequestMarshaller();
 
@@ -70,18 +70,18 @@ public class CreatePipeRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(createPipeRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createPipeRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createPipeRequest.getDesiredState(), DESIREDSTATE_BINDING);
-            protocolMarshaller.marshall(createPipeRequest.getEnrichment(), ENRICHMENT_BINDING);
-            protocolMarshaller.marshall(createPipeRequest.getEnrichmentParameters(), ENRICHMENTPARAMETERS_BINDING);
-            protocolMarshaller.marshall(createPipeRequest.getLogConfiguration(), LOGCONFIGURATION_BINDING);
-            protocolMarshaller.marshall(createPipeRequest.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(createPipeRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(createPipeRequest.getSource(), SOURCE_BINDING);
             protocolMarshaller.marshall(createPipeRequest.getSourceParameters(), SOURCEPARAMETERS_BINDING);
-            protocolMarshaller.marshall(createPipeRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createPipeRequest.getEnrichment(), ENRICHMENT_BINDING);
+            protocolMarshaller.marshall(createPipeRequest.getEnrichmentParameters(), ENRICHMENTPARAMETERS_BINDING);
             protocolMarshaller.marshall(createPipeRequest.getTarget(), TARGET_BINDING);
             protocolMarshaller.marshall(createPipeRequest.getTargetParameters(), TARGETPARAMETERS_BINDING);
+            protocolMarshaller.marshall(createPipeRequest.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(createPipeRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createPipeRequest.getLogConfiguration(), LOGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

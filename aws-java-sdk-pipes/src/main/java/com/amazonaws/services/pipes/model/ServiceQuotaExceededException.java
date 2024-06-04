@@ -25,12 +25,6 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.pipes.
 
     /**
      * <p>
-     * The identifier of the quota that caused the exception.
-     * </p>
-     */
-    private String quotaCode;
-    /**
-     * <p>
      * The ID of the resource that caused the exception.
      * </p>
      */
@@ -47,6 +41,12 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.pipes.
      * </p>
      */
     private String serviceCode;
+    /**
+     * <p>
+     * The identifier of the quota that caused the exception.
+     * </p>
+     */
+    private String quotaCode;
 
     /**
      * Constructs a new ServiceQuotaExceededException with the specified error message.
@@ -56,48 +56,6 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.pipes.
      */
     public ServiceQuotaExceededException(String message) {
         super(message);
-    }
-
-    /**
-     * <p>
-     * The identifier of the quota that caused the exception.
-     * </p>
-     * 
-     * @param quotaCode
-     *        The identifier of the quota that caused the exception.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
-    public void setQuotaCode(String quotaCode) {
-        this.quotaCode = quotaCode;
-    }
-
-    /**
-     * <p>
-     * The identifier of the quota that caused the exception.
-     * </p>
-     * 
-     * @return The identifier of the quota that caused the exception.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
-    public String getQuotaCode() {
-        return this.quotaCode;
-    }
-
-    /**
-     * <p>
-     * The identifier of the quota that caused the exception.
-     * </p>
-     * 
-     * @param quotaCode
-     *        The identifier of the quota that caused the exception.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ServiceQuotaExceededException withQuotaCode(String quotaCode) {
-        setQuotaCode(quotaCode);
-        return this;
     }
 
     /**
@@ -223,6 +181,48 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.pipes.
 
     public ServiceQuotaExceededException withServiceCode(String serviceCode) {
         setServiceCode(serviceCode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The identifier of the quota that caused the exception.
+     * </p>
+     * 
+     * @param quotaCode
+     *        The identifier of the quota that caused the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
+    public void setQuotaCode(String quotaCode) {
+        this.quotaCode = quotaCode;
+    }
+
+    /**
+     * <p>
+     * The identifier of the quota that caused the exception.
+     * </p>
+     * 
+     * @return The identifier of the quota that caused the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("quotaCode")
+    public String getQuotaCode() {
+        return this.quotaCode;
+    }
+
+    /**
+     * <p>
+     * The identifier of the quota that caused the exception.
+     * </p>
+     * 
+     * @param quotaCode
+     *        The identifier of the quota that caused the exception.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ServiceQuotaExceededException withQuotaCode(String quotaCode) {
+        setQuotaCode(quotaCode);
         return this;
     }
 

@@ -48,45 +48,45 @@ public class PipeJsonUnmarshaller implements Unmarshaller<Pipe, JsonUnmarshaller
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Name", targetDepth)) {
+                    context.nextToken();
+                    pipe.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Arn", targetDepth)) {
                     context.nextToken();
                     pipe.setArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("CreationTime", targetDepth)) {
-                    context.nextToken();
-                    pipe.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("CurrentState", targetDepth)) {
-                    context.nextToken();
-                    pipe.setCurrentState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("DesiredState", targetDepth)) {
                     context.nextToken();
                     pipe.setDesiredState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("Enrichment", targetDepth)) {
+                if (context.testExpression("CurrentState", targetDepth)) {
                     context.nextToken();
-                    pipe.setEnrichment(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("LastModifiedTime", targetDepth)) {
-                    context.nextToken();
-                    pipe.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("Name", targetDepth)) {
-                    context.nextToken();
-                    pipe.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Source", targetDepth)) {
-                    context.nextToken();
-                    pipe.setSource(context.getUnmarshaller(String.class).unmarshall(context));
+                    pipe.setCurrentState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("StateReason", targetDepth)) {
                     context.nextToken();
                     pipe.setStateReason(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CreationTime", targetDepth)) {
+                    context.nextToken();
+                    pipe.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("LastModifiedTime", targetDepth)) {
+                    context.nextToken();
+                    pipe.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("Source", targetDepth)) {
+                    context.nextToken();
+                    pipe.setSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Target", targetDepth)) {
                     context.nextToken();
                     pipe.setTarget(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Enrichment", targetDepth)) {
+                    context.nextToken();
+                    pipe.setEnrichment(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

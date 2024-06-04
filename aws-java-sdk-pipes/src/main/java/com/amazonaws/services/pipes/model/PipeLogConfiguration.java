@@ -30,16 +30,28 @@ public class PipeLogConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * The Amazon S3 logging configuration settings for the pipe.
+     * </p>
+     */
+    private S3LogDestination s3LogDestination;
+    /**
+     * <p>
+     * The Amazon Data Firehose logging configuration settings for the pipe.
+     * </p>
+     */
+    private FirehoseLogDestination firehoseLogDestination;
+    /**
+     * <p>
      * The Amazon CloudWatch Logs logging configuration settings for the pipe.
      * </p>
      */
     private CloudwatchLogsLogDestination cloudwatchLogsLogDestination;
     /**
      * <p>
-     * The Amazon Kinesis Data Firehose logging configuration settings for the pipe.
+     * The level of logging detail to include. This applies to all log destinations for the pipe.
      * </p>
      */
-    private FirehoseLogDestination firehoseLogDestination;
+    private String level;
     /**
      * <p>
      * Whether the execution data (specifically, the <code>payload</code>, <code>awsRequest</code>, and
@@ -55,18 +67,86 @@ public class PipeLogConfiguration implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.List<String> includeExecutionData;
-    /**
-     * <p>
-     * The level of logging detail to include. This applies to all log destinations for the pipe.
-     * </p>
-     */
-    private String level;
+
     /**
      * <p>
      * The Amazon S3 logging configuration settings for the pipe.
      * </p>
+     * 
+     * @param s3LogDestination
+     *        The Amazon S3 logging configuration settings for the pipe.
      */
-    private S3LogDestination s3LogDestination;
+
+    public void setS3LogDestination(S3LogDestination s3LogDestination) {
+        this.s3LogDestination = s3LogDestination;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @return The Amazon S3 logging configuration settings for the pipe.
+     */
+
+    public S3LogDestination getS3LogDestination() {
+        return this.s3LogDestination;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @param s3LogDestination
+     *        The Amazon S3 logging configuration settings for the pipe.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeLogConfiguration withS3LogDestination(S3LogDestination s3LogDestination) {
+        setS3LogDestination(s3LogDestination);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Data Firehose logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @param firehoseLogDestination
+     *        The Amazon Data Firehose logging configuration settings for the pipe.
+     */
+
+    public void setFirehoseLogDestination(FirehoseLogDestination firehoseLogDestination) {
+        this.firehoseLogDestination = firehoseLogDestination;
+    }
+
+    /**
+     * <p>
+     * The Amazon Data Firehose logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @return The Amazon Data Firehose logging configuration settings for the pipe.
+     */
+
+    public FirehoseLogDestination getFirehoseLogDestination() {
+        return this.firehoseLogDestination;
+    }
+
+    /**
+     * <p>
+     * The Amazon Data Firehose logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @param firehoseLogDestination
+     *        The Amazon Data Firehose logging configuration settings for the pipe.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeLogConfiguration withFirehoseLogDestination(FirehoseLogDestination firehoseLogDestination) {
+        setFirehoseLogDestination(firehoseLogDestination);
+        return this;
+    }
 
     /**
      * <p>
@@ -110,41 +190,60 @@ public class PipeLogConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Kinesis Data Firehose logging configuration settings for the pipe.
+     * The level of logging detail to include. This applies to all log destinations for the pipe.
      * </p>
      * 
-     * @param firehoseLogDestination
-     *        The Amazon Kinesis Data Firehose logging configuration settings for the pipe.
+     * @param level
+     *        The level of logging detail to include. This applies to all log destinations for the pipe.
+     * @see LogLevel
      */
 
-    public void setFirehoseLogDestination(FirehoseLogDestination firehoseLogDestination) {
-        this.firehoseLogDestination = firehoseLogDestination;
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     /**
      * <p>
-     * The Amazon Kinesis Data Firehose logging configuration settings for the pipe.
+     * The level of logging detail to include. This applies to all log destinations for the pipe.
      * </p>
      * 
-     * @return The Amazon Kinesis Data Firehose logging configuration settings for the pipe.
+     * @return The level of logging detail to include. This applies to all log destinations for the pipe.
+     * @see LogLevel
      */
 
-    public FirehoseLogDestination getFirehoseLogDestination() {
-        return this.firehoseLogDestination;
+    public String getLevel() {
+        return this.level;
     }
 
     /**
      * <p>
-     * The Amazon Kinesis Data Firehose logging configuration settings for the pipe.
+     * The level of logging detail to include. This applies to all log destinations for the pipe.
      * </p>
      * 
-     * @param firehoseLogDestination
-     *        The Amazon Kinesis Data Firehose logging configuration settings for the pipe.
+     * @param level
+     *        The level of logging detail to include. This applies to all log destinations for the pipe.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LogLevel
      */
 
-    public PipeLogConfiguration withFirehoseLogDestination(FirehoseLogDestination firehoseLogDestination) {
-        setFirehoseLogDestination(firehoseLogDestination);
+    public PipeLogConfiguration withLevel(String level) {
+        setLevel(level);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The level of logging detail to include. This applies to all log destinations for the pipe.
+     * </p>
+     * 
+     * @param level
+     *        The level of logging detail to include. This applies to all log destinations for the pipe.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LogLevel
+     */
+
+    public PipeLogConfiguration withLevel(LogLevel level) {
+        this.level = level.toString();
         return this;
     }
 
@@ -332,105 +431,6 @@ public class PipeLogConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p>
-     * The level of logging detail to include. This applies to all log destinations for the pipe.
-     * </p>
-     * 
-     * @param level
-     *        The level of logging detail to include. This applies to all log destinations for the pipe.
-     * @see LogLevel
-     */
-
-    public void setLevel(String level) {
-        this.level = level;
-    }
-
-    /**
-     * <p>
-     * The level of logging detail to include. This applies to all log destinations for the pipe.
-     * </p>
-     * 
-     * @return The level of logging detail to include. This applies to all log destinations for the pipe.
-     * @see LogLevel
-     */
-
-    public String getLevel() {
-        return this.level;
-    }
-
-    /**
-     * <p>
-     * The level of logging detail to include. This applies to all log destinations for the pipe.
-     * </p>
-     * 
-     * @param level
-     *        The level of logging detail to include. This applies to all log destinations for the pipe.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see LogLevel
-     */
-
-    public PipeLogConfiguration withLevel(String level) {
-        setLevel(level);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The level of logging detail to include. This applies to all log destinations for the pipe.
-     * </p>
-     * 
-     * @param level
-     *        The level of logging detail to include. This applies to all log destinations for the pipe.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see LogLevel
-     */
-
-    public PipeLogConfiguration withLevel(LogLevel level) {
-        this.level = level.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Amazon S3 logging configuration settings for the pipe.
-     * </p>
-     * 
-     * @param s3LogDestination
-     *        The Amazon S3 logging configuration settings for the pipe.
-     */
-
-    public void setS3LogDestination(S3LogDestination s3LogDestination) {
-        this.s3LogDestination = s3LogDestination;
-    }
-
-    /**
-     * <p>
-     * The Amazon S3 logging configuration settings for the pipe.
-     * </p>
-     * 
-     * @return The Amazon S3 logging configuration settings for the pipe.
-     */
-
-    public S3LogDestination getS3LogDestination() {
-        return this.s3LogDestination;
-    }
-
-    /**
-     * <p>
-     * The Amazon S3 logging configuration settings for the pipe.
-     * </p>
-     * 
-     * @param s3LogDestination
-     *        The Amazon S3 logging configuration settings for the pipe.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeLogConfiguration withS3LogDestination(S3LogDestination s3LogDestination) {
-        setS3LogDestination(s3LogDestination);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -442,16 +442,16 @@ public class PipeLogConfiguration implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCloudwatchLogsLogDestination() != null)
-            sb.append("CloudwatchLogsLogDestination: ").append(getCloudwatchLogsLogDestination()).append(",");
+        if (getS3LogDestination() != null)
+            sb.append("S3LogDestination: ").append(getS3LogDestination()).append(",");
         if (getFirehoseLogDestination() != null)
             sb.append("FirehoseLogDestination: ").append(getFirehoseLogDestination()).append(",");
-        if (getIncludeExecutionData() != null)
-            sb.append("IncludeExecutionData: ").append(getIncludeExecutionData()).append(",");
+        if (getCloudwatchLogsLogDestination() != null)
+            sb.append("CloudwatchLogsLogDestination: ").append(getCloudwatchLogsLogDestination()).append(",");
         if (getLevel() != null)
             sb.append("Level: ").append(getLevel()).append(",");
-        if (getS3LogDestination() != null)
-            sb.append("S3LogDestination: ").append(getS3LogDestination());
+        if (getIncludeExecutionData() != null)
+            sb.append("IncludeExecutionData: ").append(getIncludeExecutionData());
         sb.append("}");
         return sb.toString();
     }
@@ -466,25 +466,25 @@ public class PipeLogConfiguration implements Serializable, Cloneable, Structured
         if (obj instanceof PipeLogConfiguration == false)
             return false;
         PipeLogConfiguration other = (PipeLogConfiguration) obj;
-        if (other.getCloudwatchLogsLogDestination() == null ^ this.getCloudwatchLogsLogDestination() == null)
+        if (other.getS3LogDestination() == null ^ this.getS3LogDestination() == null)
             return false;
-        if (other.getCloudwatchLogsLogDestination() != null && other.getCloudwatchLogsLogDestination().equals(this.getCloudwatchLogsLogDestination()) == false)
+        if (other.getS3LogDestination() != null && other.getS3LogDestination().equals(this.getS3LogDestination()) == false)
             return false;
         if (other.getFirehoseLogDestination() == null ^ this.getFirehoseLogDestination() == null)
             return false;
         if (other.getFirehoseLogDestination() != null && other.getFirehoseLogDestination().equals(this.getFirehoseLogDestination()) == false)
             return false;
-        if (other.getIncludeExecutionData() == null ^ this.getIncludeExecutionData() == null)
+        if (other.getCloudwatchLogsLogDestination() == null ^ this.getCloudwatchLogsLogDestination() == null)
             return false;
-        if (other.getIncludeExecutionData() != null && other.getIncludeExecutionData().equals(this.getIncludeExecutionData()) == false)
+        if (other.getCloudwatchLogsLogDestination() != null && other.getCloudwatchLogsLogDestination().equals(this.getCloudwatchLogsLogDestination()) == false)
             return false;
         if (other.getLevel() == null ^ this.getLevel() == null)
             return false;
         if (other.getLevel() != null && other.getLevel().equals(this.getLevel()) == false)
             return false;
-        if (other.getS3LogDestination() == null ^ this.getS3LogDestination() == null)
+        if (other.getIncludeExecutionData() == null ^ this.getIncludeExecutionData() == null)
             return false;
-        if (other.getS3LogDestination() != null && other.getS3LogDestination().equals(this.getS3LogDestination()) == false)
+        if (other.getIncludeExecutionData() != null && other.getIncludeExecutionData().equals(this.getIncludeExecutionData()) == false)
             return false;
         return true;
     }
@@ -494,11 +494,11 @@ public class PipeLogConfiguration implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCloudwatchLogsLogDestination() == null) ? 0 : getCloudwatchLogsLogDestination().hashCode());
-        hashCode = prime * hashCode + ((getFirehoseLogDestination() == null) ? 0 : getFirehoseLogDestination().hashCode());
-        hashCode = prime * hashCode + ((getIncludeExecutionData() == null) ? 0 : getIncludeExecutionData().hashCode());
-        hashCode = prime * hashCode + ((getLevel() == null) ? 0 : getLevel().hashCode());
         hashCode = prime * hashCode + ((getS3LogDestination() == null) ? 0 : getS3LogDestination().hashCode());
+        hashCode = prime * hashCode + ((getFirehoseLogDestination() == null) ? 0 : getFirehoseLogDestination().hashCode());
+        hashCode = prime * hashCode + ((getCloudwatchLogsLogDestination() == null) ? 0 : getCloudwatchLogsLogDestination().hashCode());
+        hashCode = prime * hashCode + ((getLevel() == null) ? 0 : getLevel().hashCode());
+        hashCode = prime * hashCode + ((getIncludeExecutionData() == null) ? 0 : getIncludeExecutionData().hashCode());
         return hashCode;
     }
 

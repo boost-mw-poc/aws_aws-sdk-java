@@ -76,6 +76,18 @@ public class ClusterNodeDetailsJsonUnmarshaller implements Unmarshaller<ClusterN
                     context.nextToken();
                     clusterNodeDetails.setThreadsPerCore(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("PrivatePrimaryIp", targetDepth)) {
+                    context.nextToken();
+                    clusterNodeDetails.setPrivatePrimaryIp(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PrivateDnsHostname", targetDepth)) {
+                    context.nextToken();
+                    clusterNodeDetails.setPrivateDnsHostname(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Placement", targetDepth)) {
+                    context.nextToken();
+                    clusterNodeDetails.setPlacement(ClusterInstancePlacementJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

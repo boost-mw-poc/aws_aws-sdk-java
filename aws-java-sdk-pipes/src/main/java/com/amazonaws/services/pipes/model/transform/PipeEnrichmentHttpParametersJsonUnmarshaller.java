@@ -48,16 +48,16 @@ public class PipeEnrichmentHttpParametersJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("HeaderParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeEnrichmentHttpParameters.setHeaderParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
-                            .getUnmarshaller(String.class)).unmarshall(context));
-                }
                 if (context.testExpression("PathParameterValues", targetDepth)) {
                     context.nextToken();
                     pipeEnrichmentHttpParameters.setPathParameterValues(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("HeaderParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeEnrichmentHttpParameters.setHeaderParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
                 }
                 if (context.testExpression("QueryStringParameters", targetDepth)) {
                     context.nextToken();

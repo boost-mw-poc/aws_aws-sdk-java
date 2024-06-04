@@ -48,14 +48,6 @@ public class PipeSourceParametersJsonUnmarshaller implements Unmarshaller<PipeSo
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("ActiveMQBrokerParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeSourceParameters.setActiveMQBrokerParameters(PipeSourceActiveMQBrokerParametersJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("DynamoDBStreamParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeSourceParameters.setDynamoDBStreamParameters(PipeSourceDynamoDBStreamParametersJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("FilterCriteria", targetDepth)) {
                     context.nextToken();
                     pipeSourceParameters.setFilterCriteria(FilterCriteriaJsonUnmarshaller.getInstance().unmarshall(context));
@@ -64,22 +56,30 @@ public class PipeSourceParametersJsonUnmarshaller implements Unmarshaller<PipeSo
                     context.nextToken();
                     pipeSourceParameters.setKinesisStreamParameters(PipeSourceKinesisStreamParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("ManagedStreamingKafkaParameters", targetDepth)) {
+                if (context.testExpression("DynamoDBStreamParameters", targetDepth)) {
                     context.nextToken();
-                    pipeSourceParameters.setManagedStreamingKafkaParameters(PipeSourceManagedStreamingKafkaParametersJsonUnmarshaller.getInstance().unmarshall(
-                            context));
+                    pipeSourceParameters.setDynamoDBStreamParameters(PipeSourceDynamoDBStreamParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("SqsQueueParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeSourceParameters.setSqsQueueParameters(PipeSourceSqsQueueParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ActiveMQBrokerParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeSourceParameters.setActiveMQBrokerParameters(PipeSourceActiveMQBrokerParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("RabbitMQBrokerParameters", targetDepth)) {
                     context.nextToken();
                     pipeSourceParameters.setRabbitMQBrokerParameters(PipeSourceRabbitMQBrokerParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ManagedStreamingKafkaParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeSourceParameters.setManagedStreamingKafkaParameters(PipeSourceManagedStreamingKafkaParametersJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
                 if (context.testExpression("SelfManagedKafkaParameters", targetDepth)) {
                     context.nextToken();
                     pipeSourceParameters.setSelfManagedKafkaParameters(PipeSourceSelfManagedKafkaParametersJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("SqsQueueParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeSourceParameters.setSqsQueueParameters(PipeSourceSqsQueueParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

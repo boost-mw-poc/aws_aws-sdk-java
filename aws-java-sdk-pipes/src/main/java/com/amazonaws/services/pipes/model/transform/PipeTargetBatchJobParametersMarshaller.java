@@ -29,20 +29,20 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeTargetBatchJobParametersMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> ARRAYPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ArrayProperties").build();
-    private static final MarshallingInfo<StructuredPojo> CONTAINEROVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContainerOverrides").build();
-    private static final MarshallingInfo<List> DEPENDSON_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("DependsOn").build();
     private static final MarshallingInfo<String> JOBDEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JobDefinition").build();
     private static final MarshallingInfo<String> JOBNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("JobName").build();
-    private static final MarshallingInfo<Map> PARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Parameters").build();
+    private static final MarshallingInfo<StructuredPojo> ARRAYPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ArrayProperties").build();
     private static final MarshallingInfo<StructuredPojo> RETRYSTRATEGY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RetryStrategy").build();
+    private static final MarshallingInfo<StructuredPojo> CONTAINEROVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContainerOverrides").build();
+    private static final MarshallingInfo<List> DEPENDSON_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("DependsOn").build();
+    private static final MarshallingInfo<Map> PARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Parameters").build();
 
     private static final PipeTargetBatchJobParametersMarshaller instance = new PipeTargetBatchJobParametersMarshaller();
 
@@ -60,13 +60,13 @@ public class PipeTargetBatchJobParametersMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pipeTargetBatchJobParameters.getArrayProperties(), ARRAYPROPERTIES_BINDING);
-            protocolMarshaller.marshall(pipeTargetBatchJobParameters.getContainerOverrides(), CONTAINEROVERRIDES_BINDING);
-            protocolMarshaller.marshall(pipeTargetBatchJobParameters.getDependsOn(), DEPENDSON_BINDING);
             protocolMarshaller.marshall(pipeTargetBatchJobParameters.getJobDefinition(), JOBDEFINITION_BINDING);
             protocolMarshaller.marshall(pipeTargetBatchJobParameters.getJobName(), JOBNAME_BINDING);
-            protocolMarshaller.marshall(pipeTargetBatchJobParameters.getParameters(), PARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetBatchJobParameters.getArrayProperties(), ARRAYPROPERTIES_BINDING);
             protocolMarshaller.marshall(pipeTargetBatchJobParameters.getRetryStrategy(), RETRYSTRATEGY_BINDING);
+            protocolMarshaller.marshall(pipeTargetBatchJobParameters.getContainerOverrides(), CONTAINEROVERRIDES_BINDING);
+            protocolMarshaller.marshall(pipeTargetBatchJobParameters.getDependsOn(), DEPENDSON_BINDING);
+            protocolMarshaller.marshall(pipeTargetBatchJobParameters.getParameters(), PARAMETERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

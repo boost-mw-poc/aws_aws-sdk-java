@@ -56,6 +56,10 @@ public class UpdatePipeSourceKinesisStreamParametersJsonUnmarshaller implements 
                     context.nextToken();
                     updatePipeSourceKinesisStreamParameters.setDeadLetterConfig(DeadLetterConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OnPartialBatchItemFailure", targetDepth)) {
+                    context.nextToken();
+                    updatePipeSourceKinesisStreamParameters.setOnPartialBatchItemFailure(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
                     context.nextToken();
                     updatePipeSourceKinesisStreamParameters.setMaximumBatchingWindowInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
@@ -67,10 +71,6 @@ public class UpdatePipeSourceKinesisStreamParametersJsonUnmarshaller implements 
                 if (context.testExpression("MaximumRetryAttempts", targetDepth)) {
                     context.nextToken();
                     updatePipeSourceKinesisStreamParameters.setMaximumRetryAttempts(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("OnPartialBatchItemFailure", targetDepth)) {
-                    context.nextToken();
-                    updatePipeSourceKinesisStreamParameters.setOnPartialBatchItemFailure(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("ParallelizationFactor", targetDepth)) {
                     context.nextToken();

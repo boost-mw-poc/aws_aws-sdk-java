@@ -52,13 +52,9 @@ public class DescribePipeResultJsonUnmarshaller implements Unmarshaller<Describe
                     context.nextToken();
                     describePipeResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("CreationTime", targetDepth)) {
+                if (context.testExpression("Name", targetDepth)) {
                     context.nextToken();
-                    describePipeResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("CurrentState", targetDepth)) {
-                    context.nextToken();
-                    describePipeResult.setCurrentState(context.getUnmarshaller(String.class).unmarshall(context));
+                    describePipeResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Description", targetDepth)) {
                     context.nextToken();
@@ -68,29 +64,13 @@ public class DescribePipeResultJsonUnmarshaller implements Unmarshaller<Describe
                     context.nextToken();
                     describePipeResult.setDesiredState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("Enrichment", targetDepth)) {
+                if (context.testExpression("CurrentState", targetDepth)) {
                     context.nextToken();
-                    describePipeResult.setEnrichment(context.getUnmarshaller(String.class).unmarshall(context));
+                    describePipeResult.setCurrentState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("EnrichmentParameters", targetDepth)) {
+                if (context.testExpression("StateReason", targetDepth)) {
                     context.nextToken();
-                    describePipeResult.setEnrichmentParameters(PipeEnrichmentParametersJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("LastModifiedTime", targetDepth)) {
-                    context.nextToken();
-                    describePipeResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("LogConfiguration", targetDepth)) {
-                    context.nextToken();
-                    describePipeResult.setLogConfiguration(PipeLogConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("Name", targetDepth)) {
-                    context.nextToken();
-                    describePipeResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("RoleArn", targetDepth)) {
-                    context.nextToken();
-                    describePipeResult.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    describePipeResult.setStateReason(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Source", targetDepth)) {
                     context.nextToken();
@@ -100,15 +80,13 @@ public class DescribePipeResultJsonUnmarshaller implements Unmarshaller<Describe
                     context.nextToken();
                     describePipeResult.setSourceParameters(PipeSourceParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("StateReason", targetDepth)) {
+                if (context.testExpression("Enrichment", targetDepth)) {
                     context.nextToken();
-                    describePipeResult.setStateReason(context.getUnmarshaller(String.class).unmarshall(context));
+                    describePipeResult.setEnrichment(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("Tags", targetDepth)) {
+                if (context.testExpression("EnrichmentParameters", targetDepth)) {
                     context.nextToken();
-                    describePipeResult
-                            .setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
-                                    .unmarshall(context));
+                    describePipeResult.setEnrichmentParameters(PipeEnrichmentParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("Target", targetDepth)) {
                     context.nextToken();
@@ -117,6 +95,28 @@ public class DescribePipeResultJsonUnmarshaller implements Unmarshaller<Describe
                 if (context.testExpression("TargetParameters", targetDepth)) {
                     context.nextToken();
                     describePipeResult.setTargetParameters(PipeTargetParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("RoleArn", targetDepth)) {
+                    context.nextToken();
+                    describePipeResult.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Tags", targetDepth)) {
+                    context.nextToken();
+                    describePipeResult
+                            .setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
+                                    .unmarshall(context));
+                }
+                if (context.testExpression("CreationTime", targetDepth)) {
+                    context.nextToken();
+                    describePipeResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("LastModifiedTime", targetDepth)) {
+                    context.nextToken();
+                    describePipeResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("LogConfiguration", targetDepth)) {
+                    context.nextToken();
+                    describePipeResult.setLogConfiguration(PipeLogConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

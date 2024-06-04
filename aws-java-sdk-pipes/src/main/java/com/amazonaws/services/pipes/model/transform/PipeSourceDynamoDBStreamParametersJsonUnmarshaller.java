@@ -56,6 +56,10 @@ public class PipeSourceDynamoDBStreamParametersJsonUnmarshaller implements Unmar
                     context.nextToken();
                     pipeSourceDynamoDBStreamParameters.setDeadLetterConfig(DeadLetterConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OnPartialBatchItemFailure", targetDepth)) {
+                    context.nextToken();
+                    pipeSourceDynamoDBStreamParameters.setOnPartialBatchItemFailure(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
                     context.nextToken();
                     pipeSourceDynamoDBStreamParameters.setMaximumBatchingWindowInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
@@ -67,10 +71,6 @@ public class PipeSourceDynamoDBStreamParametersJsonUnmarshaller implements Unmar
                 if (context.testExpression("MaximumRetryAttempts", targetDepth)) {
                     context.nextToken();
                     pipeSourceDynamoDBStreamParameters.setMaximumRetryAttempts(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("OnPartialBatchItemFailure", targetDepth)) {
-                    context.nextToken();
-                    pipeSourceDynamoDBStreamParameters.setOnPartialBatchItemFailure(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("ParallelizationFactor", targetDepth)) {
                     context.nextToken();

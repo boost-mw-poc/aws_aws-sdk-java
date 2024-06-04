@@ -30,12 +30,34 @@ public class PipeTargetBatchJobParameters implements Serializable, Cloneable, St
 
     /**
      * <p>
+     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
+     * the Amazon Resource Name (ARN) for the job definition. If name is specified without a revision then the latest
+     * active revision is used.
+     * </p>
+     */
+    private String jobDefinition;
+    /**
+     * <p>
+     * The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can contain
+     * uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
+     * </p>
+     */
+    private String jobName;
+    /**
+     * <p>
      * The array properties for the submitted job, such as the size of the array. The array size can be between 2 and
      * 10,000. If you specify array properties for a job, it becomes an array job. This parameter is used only if the
      * target is an Batch job.
      * </p>
      */
     private BatchArrayProperties arrayProperties;
+    /**
+     * <p>
+     * The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
+     * strategy defined in the job definition.
+     * </p>
+     */
+    private BatchRetryStrategy retryStrategy;
     /**
      * <p>
      * The overrides that are sent to a container.
@@ -54,34 +76,110 @@ public class PipeTargetBatchJobParameters implements Serializable, Cloneable, St
     private java.util.List<BatchJobDependency> dependsOn;
     /**
      * <p>
-     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
-     * the Amazon Resource Name (ARN) for the job definition. If name is specified without a revision then the latest
-     * active revision is used.
-     * </p>
-     */
-    private String jobDefinition;
-    /**
-     * <p>
-     * The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can contain
-     * uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
-     * </p>
-     */
-    private String jobName;
-    /**
-     * <p>
      * Additional parameters passed to the job that replace parameter substitution placeholders that are set in the job
      * definition. Parameters are specified as a key and value pair mapping. Parameters included here override any
      * corresponding parameter defaults from the job definition.
      * </p>
      */
     private java.util.Map<String, String> parameters;
+
     /**
      * <p>
-     * The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
-     * strategy defined in the job definition.
+     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
+     * the Amazon Resource Name (ARN) for the job definition. If name is specified without a revision then the latest
+     * active revision is used.
      * </p>
+     * 
+     * @param jobDefinition
+     *        The job definition used by this job. This value can be one of <code>name</code>,
+     *        <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If name is specified
+     *        without a revision then the latest active revision is used.
      */
-    private BatchRetryStrategy retryStrategy;
+
+    public void setJobDefinition(String jobDefinition) {
+        this.jobDefinition = jobDefinition;
+    }
+
+    /**
+     * <p>
+     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
+     * the Amazon Resource Name (ARN) for the job definition. If name is specified without a revision then the latest
+     * active revision is used.
+     * </p>
+     * 
+     * @return The job definition used by this job. This value can be one of <code>name</code>,
+     *         <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If name is
+     *         specified without a revision then the latest active revision is used.
+     */
+
+    public String getJobDefinition() {
+        return this.jobDefinition;
+    }
+
+    /**
+     * <p>
+     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
+     * the Amazon Resource Name (ARN) for the job definition. If name is specified without a revision then the latest
+     * active revision is used.
+     * </p>
+     * 
+     * @param jobDefinition
+     *        The job definition used by this job. This value can be one of <code>name</code>,
+     *        <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If name is specified
+     *        without a revision then the latest active revision is used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetBatchJobParameters withJobDefinition(String jobDefinition) {
+        setJobDefinition(jobDefinition);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can contain
+     * uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
+     * </p>
+     * 
+     * @param jobName
+     *        The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can
+     *        contain uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
+     */
+
+    public void setJobName(String jobName) {
+        this.jobName = jobName;
+    }
+
+    /**
+     * <p>
+     * The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can contain
+     * uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
+     * </p>
+     * 
+     * @return The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can
+     *         contain uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
+     */
+
+    public String getJobName() {
+        return this.jobName;
+    }
+
+    /**
+     * <p>
+     * The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can contain
+     * uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
+     * </p>
+     * 
+     * @param jobName
+     *        The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can
+     *        contain uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetBatchJobParameters withJobName(String jobName) {
+        setJobName(jobName);
+        return this;
+    }
 
     /**
      * <p>
@@ -132,6 +230,52 @@ public class PipeTargetBatchJobParameters implements Serializable, Cloneable, St
 
     public PipeTargetBatchJobParameters withArrayProperties(BatchArrayProperties arrayProperties) {
         setArrayProperties(arrayProperties);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
+     * strategy defined in the job definition.
+     * </p>
+     * 
+     * @param retryStrategy
+     *        The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
+     *        strategy defined in the job definition.
+     */
+
+    public void setRetryStrategy(BatchRetryStrategy retryStrategy) {
+        this.retryStrategy = retryStrategy;
+    }
+
+    /**
+     * <p>
+     * The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
+     * strategy defined in the job definition.
+     * </p>
+     * 
+     * @return The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the
+     *         retry strategy defined in the job definition.
+     */
+
+    public BatchRetryStrategy getRetryStrategy() {
+        return this.retryStrategy;
+    }
+
+    /**
+     * <p>
+     * The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
+     * strategy defined in the job definition.
+     * </p>
+     * 
+     * @param retryStrategy
+     *        The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
+     *        strategy defined in the job definition.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetBatchJobParameters withRetryStrategy(BatchRetryStrategy retryStrategy) {
+        setRetryStrategy(retryStrategy);
         return this;
     }
 
@@ -279,104 +423,6 @@ public class PipeTargetBatchJobParameters implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
-     * the Amazon Resource Name (ARN) for the job definition. If name is specified without a revision then the latest
-     * active revision is used.
-     * </p>
-     * 
-     * @param jobDefinition
-     *        The job definition used by this job. This value can be one of <code>name</code>,
-     *        <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If name is specified
-     *        without a revision then the latest active revision is used.
-     */
-
-    public void setJobDefinition(String jobDefinition) {
-        this.jobDefinition = jobDefinition;
-    }
-
-    /**
-     * <p>
-     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
-     * the Amazon Resource Name (ARN) for the job definition. If name is specified without a revision then the latest
-     * active revision is used.
-     * </p>
-     * 
-     * @return The job definition used by this job. This value can be one of <code>name</code>,
-     *         <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If name is
-     *         specified without a revision then the latest active revision is used.
-     */
-
-    public String getJobDefinition() {
-        return this.jobDefinition;
-    }
-
-    /**
-     * <p>
-     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
-     * the Amazon Resource Name (ARN) for the job definition. If name is specified without a revision then the latest
-     * active revision is used.
-     * </p>
-     * 
-     * @param jobDefinition
-     *        The job definition used by this job. This value can be one of <code>name</code>,
-     *        <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If name is specified
-     *        without a revision then the latest active revision is used.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetBatchJobParameters withJobDefinition(String jobDefinition) {
-        setJobDefinition(jobDefinition);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can contain
-     * uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
-     * </p>
-     * 
-     * @param jobName
-     *        The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can
-     *        contain uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
-     */
-
-    public void setJobName(String jobName) {
-        this.jobName = jobName;
-    }
-
-    /**
-     * <p>
-     * The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can contain
-     * uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
-     * </p>
-     * 
-     * @return The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can
-     *         contain uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
-     */
-
-    public String getJobName() {
-        return this.jobName;
-    }
-
-    /**
-     * <p>
-     * The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can contain
-     * uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
-     * </p>
-     * 
-     * @param jobName
-     *        The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can
-     *        contain uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetBatchJobParameters withJobName(String jobName) {
-        setJobName(jobName);
-        return this;
-    }
-
-    /**
-     * <p>
      * Additional parameters passed to the job that replace parameter substitution placeholders that are set in the job
      * definition. Parameters are specified as a key and value pair mapping. Parameters included here override any
      * corresponding parameter defaults from the job definition.
@@ -456,52 +502,6 @@ public class PipeTargetBatchJobParameters implements Serializable, Cloneable, St
     }
 
     /**
-     * <p>
-     * The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
-     * strategy defined in the job definition.
-     * </p>
-     * 
-     * @param retryStrategy
-     *        The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
-     *        strategy defined in the job definition.
-     */
-
-    public void setRetryStrategy(BatchRetryStrategy retryStrategy) {
-        this.retryStrategy = retryStrategy;
-    }
-
-    /**
-     * <p>
-     * The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
-     * strategy defined in the job definition.
-     * </p>
-     * 
-     * @return The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the
-     *         retry strategy defined in the job definition.
-     */
-
-    public BatchRetryStrategy getRetryStrategy() {
-        return this.retryStrategy;
-    }
-
-    /**
-     * <p>
-     * The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
-     * strategy defined in the job definition.
-     * </p>
-     * 
-     * @param retryStrategy
-     *        The retry strategy to use for failed jobs. When a retry strategy is specified here, it overrides the retry
-     *        strategy defined in the job definition.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetBatchJobParameters withRetryStrategy(BatchRetryStrategy retryStrategy) {
-        setRetryStrategy(retryStrategy);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -513,20 +513,20 @@ public class PipeTargetBatchJobParameters implements Serializable, Cloneable, St
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getArrayProperties() != null)
-            sb.append("ArrayProperties: ").append(getArrayProperties()).append(",");
-        if (getContainerOverrides() != null)
-            sb.append("ContainerOverrides: ").append(getContainerOverrides()).append(",");
-        if (getDependsOn() != null)
-            sb.append("DependsOn: ").append(getDependsOn()).append(",");
         if (getJobDefinition() != null)
             sb.append("JobDefinition: ").append(getJobDefinition()).append(",");
         if (getJobName() != null)
             sb.append("JobName: ").append(getJobName()).append(",");
-        if (getParameters() != null)
-            sb.append("Parameters: ").append(getParameters()).append(",");
+        if (getArrayProperties() != null)
+            sb.append("ArrayProperties: ").append(getArrayProperties()).append(",");
         if (getRetryStrategy() != null)
-            sb.append("RetryStrategy: ").append(getRetryStrategy());
+            sb.append("RetryStrategy: ").append(getRetryStrategy()).append(",");
+        if (getContainerOverrides() != null)
+            sb.append("ContainerOverrides: ").append(getContainerOverrides()).append(",");
+        if (getDependsOn() != null)
+            sb.append("DependsOn: ").append(getDependsOn()).append(",");
+        if (getParameters() != null)
+            sb.append("Parameters: ").append(getParameters());
         sb.append("}");
         return sb.toString();
     }
@@ -541,9 +541,21 @@ public class PipeTargetBatchJobParameters implements Serializable, Cloneable, St
         if (obj instanceof PipeTargetBatchJobParameters == false)
             return false;
         PipeTargetBatchJobParameters other = (PipeTargetBatchJobParameters) obj;
+        if (other.getJobDefinition() == null ^ this.getJobDefinition() == null)
+            return false;
+        if (other.getJobDefinition() != null && other.getJobDefinition().equals(this.getJobDefinition()) == false)
+            return false;
+        if (other.getJobName() == null ^ this.getJobName() == null)
+            return false;
+        if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
+            return false;
         if (other.getArrayProperties() == null ^ this.getArrayProperties() == null)
             return false;
         if (other.getArrayProperties() != null && other.getArrayProperties().equals(this.getArrayProperties()) == false)
+            return false;
+        if (other.getRetryStrategy() == null ^ this.getRetryStrategy() == null)
+            return false;
+        if (other.getRetryStrategy() != null && other.getRetryStrategy().equals(this.getRetryStrategy()) == false)
             return false;
         if (other.getContainerOverrides() == null ^ this.getContainerOverrides() == null)
             return false;
@@ -553,21 +565,9 @@ public class PipeTargetBatchJobParameters implements Serializable, Cloneable, St
             return false;
         if (other.getDependsOn() != null && other.getDependsOn().equals(this.getDependsOn()) == false)
             return false;
-        if (other.getJobDefinition() == null ^ this.getJobDefinition() == null)
-            return false;
-        if (other.getJobDefinition() != null && other.getJobDefinition().equals(this.getJobDefinition()) == false)
-            return false;
-        if (other.getJobName() == null ^ this.getJobName() == null)
-            return false;
-        if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
-            return false;
         if (other.getParameters() == null ^ this.getParameters() == null)
             return false;
         if (other.getParameters() != null && other.getParameters().equals(this.getParameters()) == false)
-            return false;
-        if (other.getRetryStrategy() == null ^ this.getRetryStrategy() == null)
-            return false;
-        if (other.getRetryStrategy() != null && other.getRetryStrategy().equals(this.getRetryStrategy()) == false)
             return false;
         return true;
     }
@@ -577,13 +577,13 @@ public class PipeTargetBatchJobParameters implements Serializable, Cloneable, St
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getArrayProperties() == null) ? 0 : getArrayProperties().hashCode());
-        hashCode = prime * hashCode + ((getContainerOverrides() == null) ? 0 : getContainerOverrides().hashCode());
-        hashCode = prime * hashCode + ((getDependsOn() == null) ? 0 : getDependsOn().hashCode());
         hashCode = prime * hashCode + ((getJobDefinition() == null) ? 0 : getJobDefinition().hashCode());
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
-        hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
+        hashCode = prime * hashCode + ((getArrayProperties() == null) ? 0 : getArrayProperties().hashCode());
         hashCode = prime * hashCode + ((getRetryStrategy() == null) ? 0 : getRetryStrategy().hashCode());
+        hashCode = prime * hashCode + ((getContainerOverrides() == null) ? 0 : getContainerOverrides().hashCode());
+        hashCode = prime * hashCode + ((getDependsOn() == null) ? 0 : getDependsOn().hashCode());
+        hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
         return hashCode;
     }
 

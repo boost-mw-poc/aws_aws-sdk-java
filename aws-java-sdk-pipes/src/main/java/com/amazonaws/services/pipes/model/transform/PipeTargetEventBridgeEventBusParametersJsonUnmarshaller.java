@@ -48,23 +48,23 @@ public class PipeTargetEventBridgeEventBusParametersJsonUnmarshaller implements 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("EndpointId", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetEventBridgeEventBusParameters.setEndpointId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("DetailType", targetDepth)) {
                     context.nextToken();
                     pipeTargetEventBridgeEventBusParameters.setDetailType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("EndpointId", targetDepth)) {
+                if (context.testExpression("Source", targetDepth)) {
                     context.nextToken();
-                    pipeTargetEventBridgeEventBusParameters.setEndpointId(context.getUnmarshaller(String.class).unmarshall(context));
+                    pipeTargetEventBridgeEventBusParameters.setSource(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Resources", targetDepth)) {
                     context.nextToken();
                     pipeTargetEventBridgeEventBusParameters.setResources(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("Source", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetEventBridgeEventBusParameters.setSource(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Time", targetDepth)) {
                     context.nextToken();

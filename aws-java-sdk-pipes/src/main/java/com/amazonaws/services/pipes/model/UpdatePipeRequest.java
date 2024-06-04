@@ -27,6 +27,12 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
+     * The name of the pipe.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
      * A description of the pipe.
      * </p>
      */
@@ -39,6 +45,12 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String desiredState;
     /**
      * <p>
+     * The parameters required to set up a source for your pipe.
+     * </p>
+     */
+    private UpdatePipeSourceParameters sourceParameters;
+    /**
+     * <p>
      * The ARN of the enrichment resource.
      * </p>
      */
@@ -49,30 +61,6 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private PipeEnrichmentParameters enrichmentParameters;
-    /**
-     * <p>
-     * The logging configuration settings for the pipe.
-     * </p>
-     */
-    private PipeLogConfigurationParameters logConfiguration;
-    /**
-     * <p>
-     * The name of the pipe.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
-     * The ARN of the role that allows the pipe to send data to the target.
-     * </p>
-     */
-    private String roleArn;
-    /**
-     * <p>
-     * The parameters required to set up a source for your pipe.
-     * </p>
-     */
-    private UpdatePipeSourceParameters sourceParameters;
     /**
      * <p>
      * The ARN of the target resource.
@@ -90,6 +78,58 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private PipeTargetParameters targetParameters;
+    /**
+     * <p>
+     * The ARN of the role that allows the pipe to send data to the target.
+     * </p>
+     */
+    private String roleArn;
+    /**
+     * <p>
+     * The logging configuration settings for the pipe.
+     * </p>
+     */
+    private PipeLogConfigurationParameters logConfiguration;
+
+    /**
+     * <p>
+     * The name of the pipe.
+     * </p>
+     * 
+     * @param name
+     *        The name of the pipe.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the pipe.
+     * </p>
+     * 
+     * @return The name of the pipe.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the pipe.
+     * </p>
+     * 
+     * @param name
+     *        The name of the pipe.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipeRequest withName(String name) {
+        setName(name);
+        return this;
+    }
 
     /**
      * <p>
@@ -192,6 +232,46 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
+     * The parameters required to set up a source for your pipe.
+     * </p>
+     * 
+     * @param sourceParameters
+     *        The parameters required to set up a source for your pipe.
+     */
+
+    public void setSourceParameters(UpdatePipeSourceParameters sourceParameters) {
+        this.sourceParameters = sourceParameters;
+    }
+
+    /**
+     * <p>
+     * The parameters required to set up a source for your pipe.
+     * </p>
+     * 
+     * @return The parameters required to set up a source for your pipe.
+     */
+
+    public UpdatePipeSourceParameters getSourceParameters() {
+        return this.sourceParameters;
+    }
+
+    /**
+     * <p>
+     * The parameters required to set up a source for your pipe.
+     * </p>
+     * 
+     * @param sourceParameters
+     *        The parameters required to set up a source for your pipe.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipeRequest withSourceParameters(UpdatePipeSourceParameters sourceParameters) {
+        setSourceParameters(sourceParameters);
+        return this;
+    }
+
+    /**
+     * <p>
      * The ARN of the enrichment resource.
      * </p>
      * 
@@ -267,166 +347,6 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     public UpdatePipeRequest withEnrichmentParameters(PipeEnrichmentParameters enrichmentParameters) {
         setEnrichmentParameters(enrichmentParameters);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The logging configuration settings for the pipe.
-     * </p>
-     * 
-     * @param logConfiguration
-     *        The logging configuration settings for the pipe.
-     */
-
-    public void setLogConfiguration(PipeLogConfigurationParameters logConfiguration) {
-        this.logConfiguration = logConfiguration;
-    }
-
-    /**
-     * <p>
-     * The logging configuration settings for the pipe.
-     * </p>
-     * 
-     * @return The logging configuration settings for the pipe.
-     */
-
-    public PipeLogConfigurationParameters getLogConfiguration() {
-        return this.logConfiguration;
-    }
-
-    /**
-     * <p>
-     * The logging configuration settings for the pipe.
-     * </p>
-     * 
-     * @param logConfiguration
-     *        The logging configuration settings for the pipe.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePipeRequest withLogConfiguration(PipeLogConfigurationParameters logConfiguration) {
-        setLogConfiguration(logConfiguration);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the pipe.
-     * </p>
-     * 
-     * @param name
-     *        The name of the pipe.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * The name of the pipe.
-     * </p>
-     * 
-     * @return The name of the pipe.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The name of the pipe.
-     * </p>
-     * 
-     * @param name
-     *        The name of the pipe.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePipeRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The ARN of the role that allows the pipe to send data to the target.
-     * </p>
-     * 
-     * @param roleArn
-     *        The ARN of the role that allows the pipe to send data to the target.
-     */
-
-    public void setRoleArn(String roleArn) {
-        this.roleArn = roleArn;
-    }
-
-    /**
-     * <p>
-     * The ARN of the role that allows the pipe to send data to the target.
-     * </p>
-     * 
-     * @return The ARN of the role that allows the pipe to send data to the target.
-     */
-
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
-    /**
-     * <p>
-     * The ARN of the role that allows the pipe to send data to the target.
-     * </p>
-     * 
-     * @param roleArn
-     *        The ARN of the role that allows the pipe to send data to the target.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePipeRequest withRoleArn(String roleArn) {
-        setRoleArn(roleArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The parameters required to set up a source for your pipe.
-     * </p>
-     * 
-     * @param sourceParameters
-     *        The parameters required to set up a source for your pipe.
-     */
-
-    public void setSourceParameters(UpdatePipeSourceParameters sourceParameters) {
-        this.sourceParameters = sourceParameters;
-    }
-
-    /**
-     * <p>
-     * The parameters required to set up a source for your pipe.
-     * </p>
-     * 
-     * @return The parameters required to set up a source for your pipe.
-     */
-
-    public UpdatePipeSourceParameters getSourceParameters() {
-        return this.sourceParameters;
-    }
-
-    /**
-     * <p>
-     * The parameters required to set up a source for your pipe.
-     * </p>
-     * 
-     * @param sourceParameters
-     *        The parameters required to set up a source for your pipe.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePipeRequest withSourceParameters(UpdatePipeSourceParameters sourceParameters) {
-        setSourceParameters(sourceParameters);
         return this;
     }
 
@@ -538,6 +458,86 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * The ARN of the role that allows the pipe to send data to the target.
+     * </p>
+     * 
+     * @param roleArn
+     *        The ARN of the role that allows the pipe to send data to the target.
+     */
+
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the role that allows the pipe to send data to the target.
+     * </p>
+     * 
+     * @return The ARN of the role that allows the pipe to send data to the target.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the role that allows the pipe to send data to the target.
+     * </p>
+     * 
+     * @param roleArn
+     *        The ARN of the role that allows the pipe to send data to the target.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipeRequest withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The logging configuration settings for the pipe.
+     */
+
+    public void setLogConfiguration(PipeLogConfigurationParameters logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @return The logging configuration settings for the pipe.
+     */
+
+    public PipeLogConfigurationParameters getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The logging configuration settings for the pipe.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The logging configuration settings for the pipe.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipeRequest withLogConfiguration(PipeLogConfigurationParameters logConfiguration) {
+        setLogConfiguration(logConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -549,26 +549,26 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getDesiredState() != null)
             sb.append("DesiredState: ").append(getDesiredState()).append(",");
+        if (getSourceParameters() != null)
+            sb.append("SourceParameters: ").append(getSourceParameters()).append(",");
         if (getEnrichment() != null)
             sb.append("Enrichment: ").append(getEnrichment()).append(",");
         if (getEnrichmentParameters() != null)
             sb.append("EnrichmentParameters: ").append(getEnrichmentParameters()).append(",");
-        if (getLogConfiguration() != null)
-            sb.append("LogConfiguration: ").append(getLogConfiguration()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn()).append(",");
-        if (getSourceParameters() != null)
-            sb.append("SourceParameters: ").append(getSourceParameters()).append(",");
         if (getTarget() != null)
             sb.append("Target: ").append(getTarget()).append(",");
         if (getTargetParameters() != null)
-            sb.append("TargetParameters: ").append(getTargetParameters());
+            sb.append("TargetParameters: ").append(getTargetParameters()).append(",");
+        if (getRoleArn() != null)
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -583,6 +583,10 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (obj instanceof UpdatePipeRequest == false)
             return false;
         UpdatePipeRequest other = (UpdatePipeRequest) obj;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
@@ -590,6 +594,10 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (other.getDesiredState() == null ^ this.getDesiredState() == null)
             return false;
         if (other.getDesiredState() != null && other.getDesiredState().equals(this.getDesiredState()) == false)
+            return false;
+        if (other.getSourceParameters() == null ^ this.getSourceParameters() == null)
+            return false;
+        if (other.getSourceParameters() != null && other.getSourceParameters().equals(this.getSourceParameters()) == false)
             return false;
         if (other.getEnrichment() == null ^ this.getEnrichment() == null)
             return false;
@@ -599,22 +607,6 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getEnrichmentParameters() != null && other.getEnrichmentParameters().equals(this.getEnrichmentParameters()) == false)
             return false;
-        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
-            return false;
-        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
-            return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
-            return false;
-        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
-            return false;
-        if (other.getSourceParameters() == null ^ this.getSourceParameters() == null)
-            return false;
-        if (other.getSourceParameters() != null && other.getSourceParameters().equals(this.getSourceParameters()) == false)
-            return false;
         if (other.getTarget() == null ^ this.getTarget() == null)
             return false;
         if (other.getTarget() != null && other.getTarget().equals(this.getTarget()) == false)
@@ -622,6 +614,14 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (other.getTargetParameters() == null ^ this.getTargetParameters() == null)
             return false;
         if (other.getTargetParameters() != null && other.getTargetParameters().equals(this.getTargetParameters()) == false)
+            return false;
+        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
+            return false;
+        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
+            return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
             return false;
         return true;
     }
@@ -631,16 +631,16 @@ public class UpdatePipeRequest extends com.amazonaws.AmazonWebServiceRequest imp
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getDesiredState() == null) ? 0 : getDesiredState().hashCode());
+        hashCode = prime * hashCode + ((getSourceParameters() == null) ? 0 : getSourceParameters().hashCode());
         hashCode = prime * hashCode + ((getEnrichment() == null) ? 0 : getEnrichment().hashCode());
         hashCode = prime * hashCode + ((getEnrichmentParameters() == null) ? 0 : getEnrichmentParameters().hashCode());
-        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
-        hashCode = prime * hashCode + ((getSourceParameters() == null) ? 0 : getSourceParameters().hashCode());
         hashCode = prime * hashCode + ((getTarget() == null) ? 0 : getTarget().hashCode());
         hashCode = prime * hashCode + ((getTargetParameters() == null) ? 0 : getTargetParameters().hashCode());
+        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         return hashCode;
     }
 

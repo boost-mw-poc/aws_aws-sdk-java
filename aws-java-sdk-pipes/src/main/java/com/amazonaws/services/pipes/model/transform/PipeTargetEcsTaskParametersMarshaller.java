@@ -28,36 +28,36 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeTargetEcsTaskParametersMarshaller {
 
+    private static final MarshallingInfo<String> TASKDEFINITIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TaskDefinitionArn").build();
+    private static final MarshallingInfo<Integer> TASKCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TaskCount").build();
+    private static final MarshallingInfo<String> LAUNCHTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LaunchType").build();
+    private static final MarshallingInfo<StructuredPojo> NETWORKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkConfiguration").build();
+    private static final MarshallingInfo<String> PLATFORMVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PlatformVersion").build();
+    private static final MarshallingInfo<String> GROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Group").build();
     private static final MarshallingInfo<List> CAPACITYPROVIDERSTRATEGY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CapacityProviderStrategy").build();
     private static final MarshallingInfo<Boolean> ENABLEECSMANAGEDTAGS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnableECSManagedTags").build();
     private static final MarshallingInfo<Boolean> ENABLEEXECUTECOMMAND_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnableExecuteCommand").build();
-    private static final MarshallingInfo<String> GROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Group").build();
-    private static final MarshallingInfo<String> LAUNCHTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LaunchType").build();
-    private static final MarshallingInfo<StructuredPojo> NETWORKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkConfiguration").build();
-    private static final MarshallingInfo<StructuredPojo> OVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Overrides").build();
     private static final MarshallingInfo<List> PLACEMENTCONSTRAINTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PlacementConstraints").build();
     private static final MarshallingInfo<List> PLACEMENTSTRATEGY_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PlacementStrategy").build();
-    private static final MarshallingInfo<String> PLATFORMVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PlatformVersion").build();
     private static final MarshallingInfo<String> PROPAGATETAGS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PropagateTags").build();
     private static final MarshallingInfo<String> REFERENCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReferenceId").build();
+    private static final MarshallingInfo<StructuredPojo> OVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Overrides").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
-    private static final MarshallingInfo<Integer> TASKCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TaskCount").build();
-    private static final MarshallingInfo<String> TASKDEFINITIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TaskDefinitionArn").build();
 
     private static final PipeTargetEcsTaskParametersMarshaller instance = new PipeTargetEcsTaskParametersMarshaller();
 
@@ -75,21 +75,21 @@ public class PipeTargetEcsTaskParametersMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getTaskDefinitionArn(), TASKDEFINITIONARN_BINDING);
+            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getTaskCount(), TASKCOUNT_BINDING);
+            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getLaunchType(), LAUNCHTYPE_BINDING);
+            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getNetworkConfiguration(), NETWORKCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getPlatformVersion(), PLATFORMVERSION_BINDING);
+            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getGroup(), GROUP_BINDING);
             protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getCapacityProviderStrategy(), CAPACITYPROVIDERSTRATEGY_BINDING);
             protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getEnableECSManagedTags(), ENABLEECSMANAGEDTAGS_BINDING);
             protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getEnableExecuteCommand(), ENABLEEXECUTECOMMAND_BINDING);
-            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getGroup(), GROUP_BINDING);
-            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getLaunchType(), LAUNCHTYPE_BINDING);
-            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getNetworkConfiguration(), NETWORKCONFIGURATION_BINDING);
-            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getOverrides(), OVERRIDES_BINDING);
             protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getPlacementConstraints(), PLACEMENTCONSTRAINTS_BINDING);
             protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getPlacementStrategy(), PLACEMENTSTRATEGY_BINDING);
-            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getPlatformVersion(), PLATFORMVERSION_BINDING);
             protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getPropagateTags(), PROPAGATETAGS_BINDING);
             protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getReferenceId(), REFERENCEID_BINDING);
+            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getOverrides(), OVERRIDES_BINDING);
             protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getTags(), TAGS_BINDING);
-            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getTaskCount(), TASKCOUNT_BINDING);
-            protocolMarshaller.marshall(pipeTargetEcsTaskParameters.getTaskDefinitionArn(), TASKDEFINITIONARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

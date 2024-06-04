@@ -28,12 +28,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AwsVpcConfigurationMarshaller {
 
-    private static final MarshallingInfo<String> ASSIGNPUBLICIP_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AssignPublicIp").build();
-    private static final MarshallingInfo<List> SECURITYGROUPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityGroups").build();
     private static final MarshallingInfo<List> SUBNETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Subnets").build();
+    private static final MarshallingInfo<List> SECURITYGROUPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityGroups").build();
+    private static final MarshallingInfo<String> ASSIGNPUBLICIP_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AssignPublicIp").build();
 
     private static final AwsVpcConfigurationMarshaller instance = new AwsVpcConfigurationMarshaller();
 
@@ -51,9 +51,9 @@ public class AwsVpcConfigurationMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(awsVpcConfiguration.getAssignPublicIp(), ASSIGNPUBLICIP_BINDING);
-            protocolMarshaller.marshall(awsVpcConfiguration.getSecurityGroups(), SECURITYGROUPS_BINDING);
             protocolMarshaller.marshall(awsVpcConfiguration.getSubnets(), SUBNETS_BINDING);
+            protocolMarshaller.marshall(awsVpcConfiguration.getSecurityGroups(), SECURITYGROUPS_BINDING);
+            protocolMarshaller.marshall(awsVpcConfiguration.getAssignPublicIp(), ASSIGNPUBLICIP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

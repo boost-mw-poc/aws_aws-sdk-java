@@ -30,17 +30,23 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
 
     /**
      * <p>
+     * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * </p>
+     */
+    private String endpointId;
+    /**
+     * <p>
      * A free-form string, with a maximum of 128 characters, used to decide what fields to expect in the event detail.
      * </p>
      */
     private String detailType;
     /**
      * <p>
-     * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * The source of the event.
      * </p>
      */
-    private String endpointId;
+    private String source;
     /**
      * <p>
      * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
@@ -50,18 +56,58 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
     private java.util.List<String> resources;
     /**
      * <p>
-     * The source of the event.
-     * </p>
-     */
-    private String source;
-    /**
-     * <p>
      * The time stamp of the event, per <a href="https://www.rfc-editor.org/rfc/rfc3339.txt">RFC3339</a>. If no time
      * stamp is provided, the time stamp of the <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">PutEvents</a> call is used.
      * </p>
      */
     private String time;
+
+    /**
+     * <p>
+     * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * </p>
+     * 
+     * @param endpointId
+     *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
+     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     */
+
+    public void setEndpointId(String endpointId) {
+        this.endpointId = endpointId;
+    }
+
+    /**
+     * <p>
+     * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * </p>
+     * 
+     * @return The URL subdomain of the endpoint. For example, if the URL for Endpoint is
+     *         https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     */
+
+    public String getEndpointId() {
+        return this.endpointId;
+    }
+
+    /**
+     * <p>
+     * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
+     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * </p>
+     * 
+     * @param endpointId
+     *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
+     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetEventBridgeEventBusParameters withEndpointId(String endpointId) {
+        setEndpointId(endpointId);
+        return this;
+    }
 
     /**
      * <p>
@@ -108,47 +154,41 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
 
     /**
      * <p>
-     * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * The source of the event.
      * </p>
      * 
-     * @param endpointId
-     *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * @param source
+     *        The source of the event.
      */
 
-    public void setEndpointId(String endpointId) {
-        this.endpointId = endpointId;
+    public void setSource(String source) {
+        this.source = source;
     }
 
     /**
      * <p>
-     * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * The source of the event.
      * </p>
      * 
-     * @return The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *         https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * @return The source of the event.
      */
 
-    public String getEndpointId() {
-        return this.endpointId;
+    public String getSource() {
+        return this.source;
     }
 
     /**
      * <p>
-     * The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     * https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * The source of the event.
      * </p>
      * 
-     * @param endpointId
-     *        The URL subdomain of the endpoint. For example, if the URL for Endpoint is
-     *        https://abcde.veo.endpoints.event.amazonaws.com, then the EndpointId is <code>abcde.veo</code>.
+     * @param source
+     *        The source of the event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public PipeTargetEventBridgeEventBusParameters withEndpointId(String endpointId) {
-        setEndpointId(endpointId);
+    public PipeTargetEventBridgeEventBusParameters withSource(String source) {
+        setSource(source);
         return this;
     }
 
@@ -232,46 +272,6 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
 
     /**
      * <p>
-     * The source of the event.
-     * </p>
-     * 
-     * @param source
-     *        The source of the event.
-     */
-
-    public void setSource(String source) {
-        this.source = source;
-    }
-
-    /**
-     * <p>
-     * The source of the event.
-     * </p>
-     * 
-     * @return The source of the event.
-     */
-
-    public String getSource() {
-        return this.source;
-    }
-
-    /**
-     * <p>
-     * The source of the event.
-     * </p>
-     * 
-     * @param source
-     *        The source of the event.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetEventBridgeEventBusParameters withSource(String source) {
-        setSource(source);
-        return this;
-    }
-
-    /**
-     * <p>
      * The time stamp of the event, per <a href="https://www.rfc-editor.org/rfc/rfc3339.txt">RFC3339</a>. If no time
      * stamp is provided, the time stamp of the <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">PutEvents</a> call is used.
@@ -337,14 +337,14 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDetailType() != null)
-            sb.append("DetailType: ").append("***Sensitive Data Redacted***").append(",");
         if (getEndpointId() != null)
             sb.append("EndpointId: ").append("***Sensitive Data Redacted***").append(",");
-        if (getResources() != null)
-            sb.append("Resources: ").append(getResources()).append(",");
+        if (getDetailType() != null)
+            sb.append("DetailType: ").append("***Sensitive Data Redacted***").append(",");
         if (getSource() != null)
             sb.append("Source: ").append("***Sensitive Data Redacted***").append(",");
+        if (getResources() != null)
+            sb.append("Resources: ").append(getResources()).append(",");
         if (getTime() != null)
             sb.append("Time: ").append(getTime());
         sb.append("}");
@@ -361,21 +361,21 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
         if (obj instanceof PipeTargetEventBridgeEventBusParameters == false)
             return false;
         PipeTargetEventBridgeEventBusParameters other = (PipeTargetEventBridgeEventBusParameters) obj;
-        if (other.getDetailType() == null ^ this.getDetailType() == null)
-            return false;
-        if (other.getDetailType() != null && other.getDetailType().equals(this.getDetailType()) == false)
-            return false;
         if (other.getEndpointId() == null ^ this.getEndpointId() == null)
             return false;
         if (other.getEndpointId() != null && other.getEndpointId().equals(this.getEndpointId()) == false)
             return false;
-        if (other.getResources() == null ^ this.getResources() == null)
+        if (other.getDetailType() == null ^ this.getDetailType() == null)
             return false;
-        if (other.getResources() != null && other.getResources().equals(this.getResources()) == false)
+        if (other.getDetailType() != null && other.getDetailType().equals(this.getDetailType()) == false)
             return false;
         if (other.getSource() == null ^ this.getSource() == null)
             return false;
         if (other.getSource() != null && other.getSource().equals(this.getSource()) == false)
+            return false;
+        if (other.getResources() == null ^ this.getResources() == null)
+            return false;
+        if (other.getResources() != null && other.getResources().equals(this.getResources()) == false)
             return false;
         if (other.getTime() == null ^ this.getTime() == null)
             return false;
@@ -389,10 +389,10 @@ public class PipeTargetEventBridgeEventBusParameters implements Serializable, Cl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDetailType() == null) ? 0 : getDetailType().hashCode());
         hashCode = prime * hashCode + ((getEndpointId() == null) ? 0 : getEndpointId().hashCode());
-        hashCode = prime * hashCode + ((getResources() == null) ? 0 : getResources().hashCode());
+        hashCode = prime * hashCode + ((getDetailType() == null) ? 0 : getDetailType().hashCode());
         hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
+        hashCode = prime * hashCode + ((getResources() == null) ? 0 : getResources().hashCode());
         hashCode = prime * hashCode + ((getTime() == null) ? 0 : getTime().hashCode());
         return hashCode;
     }

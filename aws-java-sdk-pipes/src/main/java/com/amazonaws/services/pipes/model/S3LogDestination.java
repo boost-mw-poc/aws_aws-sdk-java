@@ -36,6 +36,17 @@ public class S3LogDestination implements Serializable, Cloneable, StructuredPojo
     private String bucketName;
     /**
      * <p>
+     * The prefix text with which to begin Amazon S3 log object names.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     * prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     */
+    private String prefix;
+    /**
+     * <p>
      * The Amazon Web Services account that owns the Amazon S3 bucket to which EventBridge delivers the log records for
      * the pipe.
      * </p>
@@ -64,17 +75,6 @@ public class S3LogDestination implements Serializable, Cloneable, StructuredPojo
      * </ul>
      */
     private String outputFormat;
-    /**
-     * <p>
-     * The prefix text with which to begin Amazon S3 log object names.
-     * </p>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
-     * prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
-     * </p>
-     */
-    private String prefix;
 
     /**
      * <p>
@@ -113,6 +113,73 @@ public class S3LogDestination implements Serializable, Cloneable, StructuredPojo
 
     public S3LogDestination withBucketName(String bucketName) {
         setBucketName(bucketName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The prefix text with which to begin Amazon S3 log object names.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     * prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     * 
+     * @param prefix
+     *        The prefix text with which to begin Amazon S3 log object names.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     *        prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     */
+
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
+    }
+
+    /**
+     * <p>
+     * The prefix text with which to begin Amazon S3 log object names.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     * prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     * 
+     * @return The prefix text with which to begin Amazon S3 log object names.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     *         prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     */
+
+    public String getPrefix() {
+        return this.prefix;
+    }
+
+    /**
+     * <p>
+     * The prefix text with which to begin Amazon S3 log object names.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     * prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * </p>
+     * 
+     * @param prefix
+     *        The prefix text with which to begin Amazon S3 log object names.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
+     *        prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3LogDestination withPrefix(String prefix) {
+        setPrefix(prefix);
         return this;
     }
 
@@ -354,73 +421,6 @@ public class S3LogDestination implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * <p>
-     * The prefix text with which to begin Amazon S3 log object names.
-     * </p>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
-     * prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
-     * </p>
-     * 
-     * @param prefix
-     *        The prefix text with which to begin Amazon S3 log object names.</p>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
-     *        prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
-     */
-
-    public void setPrefix(String prefix) {
-        this.prefix = prefix;
-    }
-
-    /**
-     * <p>
-     * The prefix text with which to begin Amazon S3 log object names.
-     * </p>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
-     * prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
-     * </p>
-     * 
-     * @return The prefix text with which to begin Amazon S3 log object names.</p>
-     *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
-     *         prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
-     */
-
-    public String getPrefix() {
-        return this.prefix;
-    }
-
-    /**
-     * <p>
-     * The prefix text with which to begin Amazon S3 log object names.
-     * </p>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
-     * prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
-     * </p>
-     * 
-     * @param prefix
-     *        The prefix text with which to begin Amazon S3 log object names.</p>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html">Organizing objects using
-     *        prefixes</a> in the <i>Amazon Simple Storage Service User Guide</i>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public S3LogDestination withPrefix(String prefix) {
-        setPrefix(prefix);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -434,12 +434,12 @@ public class S3LogDestination implements Serializable, Cloneable, StructuredPojo
         sb.append("{");
         if (getBucketName() != null)
             sb.append("BucketName: ").append(getBucketName()).append(",");
+        if (getPrefix() != null)
+            sb.append("Prefix: ").append(getPrefix()).append(",");
         if (getBucketOwner() != null)
             sb.append("BucketOwner: ").append(getBucketOwner()).append(",");
         if (getOutputFormat() != null)
-            sb.append("OutputFormat: ").append(getOutputFormat()).append(",");
-        if (getPrefix() != null)
-            sb.append("Prefix: ").append(getPrefix());
+            sb.append("OutputFormat: ").append(getOutputFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -458,6 +458,10 @@ public class S3LogDestination implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getBucketName() != null && other.getBucketName().equals(this.getBucketName()) == false)
             return false;
+        if (other.getPrefix() == null ^ this.getPrefix() == null)
+            return false;
+        if (other.getPrefix() != null && other.getPrefix().equals(this.getPrefix()) == false)
+            return false;
         if (other.getBucketOwner() == null ^ this.getBucketOwner() == null)
             return false;
         if (other.getBucketOwner() != null && other.getBucketOwner().equals(this.getBucketOwner()) == false)
@@ -465,10 +469,6 @@ public class S3LogDestination implements Serializable, Cloneable, StructuredPojo
         if (other.getOutputFormat() == null ^ this.getOutputFormat() == null)
             return false;
         if (other.getOutputFormat() != null && other.getOutputFormat().equals(this.getOutputFormat()) == false)
-            return false;
-        if (other.getPrefix() == null ^ this.getPrefix() == null)
-            return false;
-        if (other.getPrefix() != null && other.getPrefix().equals(this.getPrefix()) == false)
             return false;
         return true;
     }
@@ -479,9 +479,9 @@ public class S3LogDestination implements Serializable, Cloneable, StructuredPojo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getBucketName() == null) ? 0 : getBucketName().hashCode());
+        hashCode = prime * hashCode + ((getPrefix() == null) ? 0 : getPrefix().hashCode());
         hashCode = prime * hashCode + ((getBucketOwner() == null) ? 0 : getBucketOwner().hashCode());
         hashCode = prime * hashCode + ((getOutputFormat() == null) ? 0 : getOutputFormat().hashCode());
-        hashCode = prime * hashCode + ((getPrefix() == null) ? 0 : getPrefix().hashCode());
         return hashCode;
     }
 

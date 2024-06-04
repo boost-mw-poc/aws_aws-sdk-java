@@ -30,6 +30,12 @@ public class PipeTargetSqsQueueParameters implements Serializable, Cloneable, St
 
     /**
      * <p>
+     * The FIFO message group ID to use as the target.
+     * </p>
+     */
+    private String messageGroupId;
+    /**
+     * <p>
      * This parameter applies only to FIFO (first-in-first-out) queues.
      * </p>
      * <p>
@@ -37,12 +43,46 @@ public class PipeTargetSqsQueueParameters implements Serializable, Cloneable, St
      * </p>
      */
     private String messageDeduplicationId;
+
     /**
      * <p>
      * The FIFO message group ID to use as the target.
      * </p>
+     * 
+     * @param messageGroupId
+     *        The FIFO message group ID to use as the target.
      */
-    private String messageGroupId;
+
+    public void setMessageGroupId(String messageGroupId) {
+        this.messageGroupId = messageGroupId;
+    }
+
+    /**
+     * <p>
+     * The FIFO message group ID to use as the target.
+     * </p>
+     * 
+     * @return The FIFO message group ID to use as the target.
+     */
+
+    public String getMessageGroupId() {
+        return this.messageGroupId;
+    }
+
+    /**
+     * <p>
+     * The FIFO message group ID to use as the target.
+     * </p>
+     * 
+     * @param messageGroupId
+     *        The FIFO message group ID to use as the target.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetSqsQueueParameters withMessageGroupId(String messageGroupId) {
+        setMessageGroupId(messageGroupId);
+        return this;
+    }
 
     /**
      * <p>
@@ -100,46 +140,6 @@ public class PipeTargetSqsQueueParameters implements Serializable, Cloneable, St
     }
 
     /**
-     * <p>
-     * The FIFO message group ID to use as the target.
-     * </p>
-     * 
-     * @param messageGroupId
-     *        The FIFO message group ID to use as the target.
-     */
-
-    public void setMessageGroupId(String messageGroupId) {
-        this.messageGroupId = messageGroupId;
-    }
-
-    /**
-     * <p>
-     * The FIFO message group ID to use as the target.
-     * </p>
-     * 
-     * @return The FIFO message group ID to use as the target.
-     */
-
-    public String getMessageGroupId() {
-        return this.messageGroupId;
-    }
-
-    /**
-     * <p>
-     * The FIFO message group ID to use as the target.
-     * </p>
-     * 
-     * @param messageGroupId
-     *        The FIFO message group ID to use as the target.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetSqsQueueParameters withMessageGroupId(String messageGroupId) {
-        setMessageGroupId(messageGroupId);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -151,10 +151,10 @@ public class PipeTargetSqsQueueParameters implements Serializable, Cloneable, St
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMessageDeduplicationId() != null)
-            sb.append("MessageDeduplicationId: ").append("***Sensitive Data Redacted***").append(",");
         if (getMessageGroupId() != null)
-            sb.append("MessageGroupId: ").append("***Sensitive Data Redacted***");
+            sb.append("MessageGroupId: ").append("***Sensitive Data Redacted***").append(",");
+        if (getMessageDeduplicationId() != null)
+            sb.append("MessageDeduplicationId: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -169,13 +169,13 @@ public class PipeTargetSqsQueueParameters implements Serializable, Cloneable, St
         if (obj instanceof PipeTargetSqsQueueParameters == false)
             return false;
         PipeTargetSqsQueueParameters other = (PipeTargetSqsQueueParameters) obj;
-        if (other.getMessageDeduplicationId() == null ^ this.getMessageDeduplicationId() == null)
-            return false;
-        if (other.getMessageDeduplicationId() != null && other.getMessageDeduplicationId().equals(this.getMessageDeduplicationId()) == false)
-            return false;
         if (other.getMessageGroupId() == null ^ this.getMessageGroupId() == null)
             return false;
         if (other.getMessageGroupId() != null && other.getMessageGroupId().equals(this.getMessageGroupId()) == false)
+            return false;
+        if (other.getMessageDeduplicationId() == null ^ this.getMessageDeduplicationId() == null)
+            return false;
+        if (other.getMessageDeduplicationId() != null && other.getMessageDeduplicationId().equals(this.getMessageDeduplicationId()) == false)
             return false;
         return true;
     }
@@ -185,8 +185,8 @@ public class PipeTargetSqsQueueParameters implements Serializable, Cloneable, St
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMessageDeduplicationId() == null) ? 0 : getMessageDeduplicationId().hashCode());
         hashCode = prime * hashCode + ((getMessageGroupId() == null) ? 0 : getMessageGroupId().hashCode());
+        hashCode = prime * hashCode + ((getMessageDeduplicationId() == null) ? 0 : getMessageDeduplicationId().hashCode());
         return hashCode;
     }
 

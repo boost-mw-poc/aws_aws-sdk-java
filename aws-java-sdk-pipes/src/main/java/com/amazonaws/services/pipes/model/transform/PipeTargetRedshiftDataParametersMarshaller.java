@@ -28,18 +28,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeTargetRedshiftDataParametersMarshaller {
 
+    private static final MarshallingInfo<String> SECRETMANAGERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretManagerArn").build();
     private static final MarshallingInfo<String> DATABASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Database").build();
     private static final MarshallingInfo<String> DBUSER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DbUser").build();
-    private static final MarshallingInfo<String> SECRETMANAGERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretManagerArn").build();
-    private static final MarshallingInfo<List> SQLS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Sqls").build();
     private static final MarshallingInfo<String> STATEMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StatementName").build();
     private static final MarshallingInfo<Boolean> WITHEVENT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WithEvent").build();
+    private static final MarshallingInfo<List> SQLS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Sqls").build();
 
     private static final PipeTargetRedshiftDataParametersMarshaller instance = new PipeTargetRedshiftDataParametersMarshaller();
 
@@ -57,12 +57,12 @@ public class PipeTargetRedshiftDataParametersMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(pipeTargetRedshiftDataParameters.getSecretManagerArn(), SECRETMANAGERARN_BINDING);
             protocolMarshaller.marshall(pipeTargetRedshiftDataParameters.getDatabase(), DATABASE_BINDING);
             protocolMarshaller.marshall(pipeTargetRedshiftDataParameters.getDbUser(), DBUSER_BINDING);
-            protocolMarshaller.marshall(pipeTargetRedshiftDataParameters.getSecretManagerArn(), SECRETMANAGERARN_BINDING);
-            protocolMarshaller.marshall(pipeTargetRedshiftDataParameters.getSqls(), SQLS_BINDING);
             protocolMarshaller.marshall(pipeTargetRedshiftDataParameters.getStatementName(), STATEMENTNAME_BINDING);
             protocolMarshaller.marshall(pipeTargetRedshiftDataParameters.getWithEvent(), WITHEVENT_BINDING);
+            protocolMarshaller.marshall(pipeTargetRedshiftDataParameters.getSqls(), SQLS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

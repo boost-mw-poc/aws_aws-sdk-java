@@ -48,17 +48,9 @@ public class PipeSourceRabbitMQBrokerParametersJsonUnmarshaller implements Unmar
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("BatchSize", targetDepth)) {
-                    context.nextToken();
-                    pipeSourceRabbitMQBrokerParameters.setBatchSize(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (context.testExpression("Credentials", targetDepth)) {
                     context.nextToken();
                     pipeSourceRabbitMQBrokerParameters.setCredentials(MQBrokerAccessCredentialsJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
-                    context.nextToken();
-                    pipeSourceRabbitMQBrokerParameters.setMaximumBatchingWindowInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("QueueName", targetDepth)) {
                     context.nextToken();
@@ -67,6 +59,14 @@ public class PipeSourceRabbitMQBrokerParametersJsonUnmarshaller implements Unmar
                 if (context.testExpression("VirtualHost", targetDepth)) {
                     context.nextToken();
                     pipeSourceRabbitMQBrokerParameters.setVirtualHost(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("BatchSize", targetDepth)) {
+                    context.nextToken();
+                    pipeSourceRabbitMQBrokerParameters.setBatchSize(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
+                    context.nextToken();
+                    pipeSourceRabbitMQBrokerParameters.setMaximumBatchingWindowInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

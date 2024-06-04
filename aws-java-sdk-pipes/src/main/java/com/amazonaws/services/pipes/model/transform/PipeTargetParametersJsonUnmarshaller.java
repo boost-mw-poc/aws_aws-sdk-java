@@ -48,38 +48,38 @@ public class PipeTargetParametersJsonUnmarshaller implements Unmarshaller<PipeTa
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("BatchJobParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetParameters.setBatchJobParameters(PipeTargetBatchJobParametersJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("CloudWatchLogsParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetParameters.setCloudWatchLogsParameters(PipeTargetCloudWatchLogsParametersJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("EcsTaskParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetParameters.setEcsTaskParameters(PipeTargetEcsTaskParametersJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("EventBridgeEventBusParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetParameters.setEventBridgeEventBusParameters(PipeTargetEventBridgeEventBusParametersJsonUnmarshaller.getInstance().unmarshall(
-                            context));
-                }
-                if (context.testExpression("HttpParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetParameters.setHttpParameters(PipeTargetHttpParametersJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("InputTemplate", targetDepth)) {
                     context.nextToken();
                     pipeTargetParameters.setInputTemplate(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LambdaFunctionParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetParameters.setLambdaFunctionParameters(PipeTargetLambdaFunctionParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("StepFunctionStateMachineParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetParameters.setStepFunctionStateMachineParameters(PipeTargetStateMachineParametersJsonUnmarshaller.getInstance().unmarshall(
+                            context));
                 }
                 if (context.testExpression("KinesisStreamParameters", targetDepth)) {
                     context.nextToken();
                     pipeTargetParameters.setKinesisStreamParameters(PipeTargetKinesisStreamParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("LambdaFunctionParameters", targetDepth)) {
+                if (context.testExpression("EcsTaskParameters", targetDepth)) {
                     context.nextToken();
-                    pipeTargetParameters.setLambdaFunctionParameters(PipeTargetLambdaFunctionParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                    pipeTargetParameters.setEcsTaskParameters(PipeTargetEcsTaskParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("BatchJobParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetParameters.setBatchJobParameters(PipeTargetBatchJobParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("SqsQueueParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetParameters.setSqsQueueParameters(PipeTargetSqsQueueParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("HttpParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetParameters.setHttpParameters(PipeTargetHttpParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("RedshiftDataParameters", targetDepth)) {
                     context.nextToken();
@@ -90,14 +90,18 @@ public class PipeTargetParametersJsonUnmarshaller implements Unmarshaller<PipeTa
                     pipeTargetParameters
                             .setSageMakerPipelineParameters(PipeTargetSageMakerPipelineParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("SqsQueueParameters", targetDepth)) {
+                if (context.testExpression("EventBridgeEventBusParameters", targetDepth)) {
                     context.nextToken();
-                    pipeTargetParameters.setSqsQueueParameters(PipeTargetSqsQueueParametersJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("StepFunctionStateMachineParameters", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetParameters.setStepFunctionStateMachineParameters(PipeTargetStateMachineParametersJsonUnmarshaller.getInstance().unmarshall(
+                    pipeTargetParameters.setEventBridgeEventBusParameters(PipeTargetEventBridgeEventBusParametersJsonUnmarshaller.getInstance().unmarshall(
                             context));
+                }
+                if (context.testExpression("CloudWatchLogsParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetParameters.setCloudWatchLogsParameters(PipeTargetCloudWatchLogsParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("TimestreamParameters", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetParameters.setTimestreamParameters(PipeTargetTimestreamParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

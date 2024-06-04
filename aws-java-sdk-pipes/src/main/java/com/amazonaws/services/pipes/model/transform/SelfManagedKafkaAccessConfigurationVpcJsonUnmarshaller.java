@@ -48,15 +48,15 @@ public class SelfManagedKafkaAccessConfigurationVpcJsonUnmarshaller implements U
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("SecurityGroup", targetDepth)) {
-                    context.nextToken();
-                    selfManagedKafkaAccessConfigurationVpc.setSecurityGroup(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("Subnets", targetDepth)) {
                     context.nextToken();
                     selfManagedKafkaAccessConfigurationVpc.setSubnets(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("SecurityGroup", targetDepth)) {
+                    context.nextToken();
+                    selfManagedKafkaAccessConfigurationVpc.setSecurityGroup(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }

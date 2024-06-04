@@ -53,17 +53,17 @@ public class SelfManagedKafkaAccessConfigurationCredentialsJsonUnmarshaller impl
                     context.nextToken();
                     selfManagedKafkaAccessConfigurationCredentials.setBasicAuth(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("ClientCertificateTlsAuth", targetDepth)) {
+                if (context.testExpression("SaslScram512Auth", targetDepth)) {
                     context.nextToken();
-                    selfManagedKafkaAccessConfigurationCredentials.setClientCertificateTlsAuth(context.getUnmarshaller(String.class).unmarshall(context));
+                    selfManagedKafkaAccessConfigurationCredentials.setSaslScram512Auth(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("SaslScram256Auth", targetDepth)) {
                     context.nextToken();
                     selfManagedKafkaAccessConfigurationCredentials.setSaslScram256Auth(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("SaslScram512Auth", targetDepth)) {
+                if (context.testExpression("ClientCertificateTlsAuth", targetDepth)) {
                     context.nextToken();
-                    selfManagedKafkaAccessConfigurationCredentials.setSaslScram512Auth(context.getUnmarshaller(String.class).unmarshall(context));
+                    selfManagedKafkaAccessConfigurationCredentials.setClientCertificateTlsAuth(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

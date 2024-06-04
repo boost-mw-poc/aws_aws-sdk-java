@@ -48,9 +48,21 @@ public class PipeTargetBatchJobParametersJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("JobDefinition", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetBatchJobParameters.setJobDefinition(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("JobName", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetBatchJobParameters.setJobName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ArrayProperties", targetDepth)) {
                     context.nextToken();
                     pipeTargetBatchJobParameters.setArrayProperties(BatchArrayPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("RetryStrategy", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetBatchJobParameters.setRetryStrategy(BatchRetryStrategyJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("ContainerOverrides", targetDepth)) {
                     context.nextToken();
@@ -62,22 +74,10 @@ public class PipeTargetBatchJobParametersJsonUnmarshaller implements Unmarshalle
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("JobDefinition", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetBatchJobParameters.setJobDefinition(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("JobName", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetBatchJobParameters.setJobName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("Parameters", targetDepth)) {
                     context.nextToken();
                     pipeTargetBatchJobParameters.setParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
-                }
-                if (context.testExpression("RetryStrategy", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetBatchJobParameters.setRetryStrategy(BatchRetryStrategyJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

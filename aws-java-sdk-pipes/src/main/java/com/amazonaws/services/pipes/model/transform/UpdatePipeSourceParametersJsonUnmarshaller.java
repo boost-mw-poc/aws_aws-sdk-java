@@ -48,16 +48,6 @@ public class UpdatePipeSourceParametersJsonUnmarshaller implements Unmarshaller<
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("ActiveMQBrokerParameters", targetDepth)) {
-                    context.nextToken();
-                    updatePipeSourceParameters.setActiveMQBrokerParameters(UpdatePipeSourceActiveMQBrokerParametersJsonUnmarshaller.getInstance().unmarshall(
-                            context));
-                }
-                if (context.testExpression("DynamoDBStreamParameters", targetDepth)) {
-                    context.nextToken();
-                    updatePipeSourceParameters.setDynamoDBStreamParameters(UpdatePipeSourceDynamoDBStreamParametersJsonUnmarshaller.getInstance().unmarshall(
-                            context));
-                }
                 if (context.testExpression("FilterCriteria", targetDepth)) {
                     context.nextToken();
                     updatePipeSourceParameters.setFilterCriteria(FilterCriteriaJsonUnmarshaller.getInstance().unmarshall(context));
@@ -67,24 +57,34 @@ public class UpdatePipeSourceParametersJsonUnmarshaller implements Unmarshaller<
                     updatePipeSourceParameters.setKinesisStreamParameters(UpdatePipeSourceKinesisStreamParametersJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
-                if (context.testExpression("ManagedStreamingKafkaParameters", targetDepth)) {
+                if (context.testExpression("DynamoDBStreamParameters", targetDepth)) {
                     context.nextToken();
-                    updatePipeSourceParameters.setManagedStreamingKafkaParameters(UpdatePipeSourceManagedStreamingKafkaParametersJsonUnmarshaller.getInstance()
-                            .unmarshall(context));
+                    updatePipeSourceParameters.setDynamoDBStreamParameters(UpdatePipeSourceDynamoDBStreamParametersJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
+                if (context.testExpression("SqsQueueParameters", targetDepth)) {
+                    context.nextToken();
+                    updatePipeSourceParameters.setSqsQueueParameters(UpdatePipeSourceSqsQueueParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ActiveMQBrokerParameters", targetDepth)) {
+                    context.nextToken();
+                    updatePipeSourceParameters.setActiveMQBrokerParameters(UpdatePipeSourceActiveMQBrokerParametersJsonUnmarshaller.getInstance().unmarshall(
+                            context));
                 }
                 if (context.testExpression("RabbitMQBrokerParameters", targetDepth)) {
                     context.nextToken();
                     updatePipeSourceParameters.setRabbitMQBrokerParameters(UpdatePipeSourceRabbitMQBrokerParametersJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("ManagedStreamingKafkaParameters", targetDepth)) {
+                    context.nextToken();
+                    updatePipeSourceParameters.setManagedStreamingKafkaParameters(UpdatePipeSourceManagedStreamingKafkaParametersJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
                 if (context.testExpression("SelfManagedKafkaParameters", targetDepth)) {
                     context.nextToken();
                     updatePipeSourceParameters.setSelfManagedKafkaParameters(UpdatePipeSourceSelfManagedKafkaParametersJsonUnmarshaller.getInstance()
                             .unmarshall(context));
-                }
-                if (context.testExpression("SqsQueueParameters", targetDepth)) {
-                    context.nextToken();
-                    updatePipeSourceParameters.setSqsQueueParameters(UpdatePipeSourceSqsQueueParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

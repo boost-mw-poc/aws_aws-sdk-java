@@ -48,13 +48,13 @@ public class MSKAccessCredentialsJsonUnmarshaller implements Unmarshaller<MSKAcc
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("ClientCertificateTlsAuth", targetDepth)) {
-                    context.nextToken();
-                    mSKAccessCredentials.setClientCertificateTlsAuth(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("SaslScram512Auth", targetDepth)) {
                     context.nextToken();
                     mSKAccessCredentials.setSaslScram512Auth(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ClientCertificateTlsAuth", targetDepth)) {
+                    context.nextToken();
+                    mSKAccessCredentials.setClientCertificateTlsAuth(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

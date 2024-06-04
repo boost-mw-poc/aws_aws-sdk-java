@@ -25,6 +25,12 @@ public class ListPipesResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
+     * The pipes returned by the call.
+     * </p>
+     */
+    private java.util.List<Pipe> pipes;
+    /**
+     * <p>
      * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
      * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
      * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
@@ -32,70 +38,6 @@ public class ListPipesResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      */
     private String nextToken;
-    /**
-     * <p>
-     * The pipes returned by the call.
-     * </p>
-     */
-    private java.util.List<Pipe> pipes;
-
-    /**
-     * <p>
-     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
-     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
-     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
-     * token will return an HTTP 400 InvalidToken error.
-     * </p>
-     * 
-     * @param nextToken
-     *        If <code>nextToken</code> is returned, there are more results available. The value of
-     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
-     *        token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
-     *        24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
-     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
-     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
-     * token will return an HTTP 400 InvalidToken error.
-     * </p>
-     * 
-     * @return If <code>nextToken</code> is returned, there are more results available. The value of
-     *         <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
-     *         token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
-     *         24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
-     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
-     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
-     * token will return an HTTP 400 InvalidToken error.
-     * </p>
-     * 
-     * @param nextToken
-     *        If <code>nextToken</code> is returned, there are more results available. The value of
-     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
-     *        token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
-     *        24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListPipesResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
 
     /**
      * <p>
@@ -168,6 +110,64 @@ public class ListPipesResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
+     * <p>
+     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
+     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
+     * token will return an HTTP 400 InvalidToken error.
+     * </p>
+     * 
+     * @param nextToken
+     *        If <code>nextToken</code> is returned, there are more results available. The value of
+     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
+     *        token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
+     *        24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
+     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
+     * token will return an HTTP 400 InvalidToken error.
+     * </p>
+     * 
+     * @return If <code>nextToken</code> is returned, there are more results available. The value of
+     *         <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
+     *         token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
+     *         24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
+     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
+     * token will return an HTTP 400 InvalidToken error.
+     * </p>
+     * 
+     * @param nextToken
+     *        If <code>nextToken</code> is returned, there are more results available. The value of
+     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
+     *        token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
+     *        24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPipesResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -179,10 +179,10 @@ public class ListPipesResult extends com.amazonaws.AmazonWebServiceResult<com.am
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append("***Sensitive Data Redacted***").append(",");
         if (getPipes() != null)
-            sb.append("Pipes: ").append(getPipes());
+            sb.append("Pipes: ").append(getPipes()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -197,13 +197,13 @@ public class ListPipesResult extends com.amazonaws.AmazonWebServiceResult<com.am
         if (obj instanceof ListPipesResult == false)
             return false;
         ListPipesResult other = (ListPipesResult) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getPipes() == null ^ this.getPipes() == null)
             return false;
         if (other.getPipes() != null && other.getPipes().equals(this.getPipes()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -213,8 +213,8 @@ public class ListPipesResult extends com.amazonaws.AmazonWebServiceResult<com.am
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getPipes() == null) ? 0 : getPipes().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

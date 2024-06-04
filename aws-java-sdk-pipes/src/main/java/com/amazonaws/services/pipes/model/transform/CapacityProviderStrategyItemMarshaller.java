@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CapacityProviderStrategyItemMarshaller {
 
-    private static final MarshallingInfo<Integer> BASE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("base").build();
     private static final MarshallingInfo<String> CAPACITYPROVIDER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("capacityProvider").build();
     private static final MarshallingInfo<Integer> WEIGHT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("weight").build();
+    private static final MarshallingInfo<Integer> BASE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("base").build();
 
     private static final CapacityProviderStrategyItemMarshaller instance = new CapacityProviderStrategyItemMarshaller();
 
@@ -50,9 +50,9 @@ public class CapacityProviderStrategyItemMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(capacityProviderStrategyItem.getBase(), BASE_BINDING);
             protocolMarshaller.marshall(capacityProviderStrategyItem.getCapacityProvider(), CAPACITYPROVIDER_BINDING);
             protocolMarshaller.marshall(capacityProviderStrategyItem.getWeight(), WEIGHT_BINDING);
+            protocolMarshaller.marshall(capacityProviderStrategyItem.getBase(), BASE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -2968,7 +2968,7 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * Retrieves information of an instance (also called a <i>node</i> interchangeably) of a SageMaker HyperPod cluster.
+     * Retrieves information of a node (also called a <i>instance</i> interchangeably) of a SageMaker HyperPod cluster.
      * </p>
      * 
      * @param describeClusterNodeRequest

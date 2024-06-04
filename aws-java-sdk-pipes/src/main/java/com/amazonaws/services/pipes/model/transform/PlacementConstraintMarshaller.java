@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PlacementConstraintMarshaller {
 
-    private static final MarshallingInfo<String> EXPRESSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("expression").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<String> EXPRESSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("expression").build();
 
     private static final PlacementConstraintMarshaller instance = new PlacementConstraintMarshaller();
 
@@ -48,8 +48,8 @@ public class PlacementConstraintMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(placementConstraint.getExpression(), EXPRESSION_BINDING);
             protocolMarshaller.marshall(placementConstraint.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(placementConstraint.getExpression(), EXPRESSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

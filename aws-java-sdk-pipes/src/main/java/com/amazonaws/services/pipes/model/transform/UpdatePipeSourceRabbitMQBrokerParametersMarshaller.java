@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdatePipeSourceRabbitMQBrokerParametersMarshaller {
 
-    private static final MarshallingInfo<Integer> BATCHSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BatchSize").build();
     private static final MarshallingInfo<StructuredPojo> CREDENTIALS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Credentials").build();
+    private static final MarshallingInfo<Integer> BATCHSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BatchSize").build();
     private static final MarshallingInfo<Integer> MAXIMUMBATCHINGWINDOWINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaximumBatchingWindowInSeconds").build();
 
@@ -50,8 +50,8 @@ public class UpdatePipeSourceRabbitMQBrokerParametersMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updatePipeSourceRabbitMQBrokerParameters.getBatchSize(), BATCHSIZE_BINDING);
             protocolMarshaller.marshall(updatePipeSourceRabbitMQBrokerParameters.getCredentials(), CREDENTIALS_BINDING);
+            protocolMarshaller.marshall(updatePipeSourceRabbitMQBrokerParameters.getBatchSize(), BATCHSIZE_BINDING);
             protocolMarshaller.marshall(updatePipeSourceRabbitMQBrokerParameters.getMaximumBatchingWindowInSeconds(), MAXIMUMBATCHINGWINDOWINSECONDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

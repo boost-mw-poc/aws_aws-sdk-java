@@ -29,12 +29,12 @@ public class SelfManagedKafkaAccessConfigurationCredentialsMarshaller {
 
     private static final MarshallingInfo<String> BASICAUTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("BasicAuth").build();
-    private static final MarshallingInfo<String> CLIENTCERTIFICATETLSAUTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientCertificateTlsAuth").build();
-    private static final MarshallingInfo<String> SASLSCRAM256AUTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SaslScram256Auth").build();
     private static final MarshallingInfo<String> SASLSCRAM512AUTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SaslScram512Auth").build();
+    private static final MarshallingInfo<String> SASLSCRAM256AUTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SaslScram256Auth").build();
+    private static final MarshallingInfo<String> CLIENTCERTIFICATETLSAUTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientCertificateTlsAuth").build();
 
     private static final SelfManagedKafkaAccessConfigurationCredentialsMarshaller instance = new SelfManagedKafkaAccessConfigurationCredentialsMarshaller();
 
@@ -53,9 +53,9 @@ public class SelfManagedKafkaAccessConfigurationCredentialsMarshaller {
 
         try {
             protocolMarshaller.marshall(selfManagedKafkaAccessConfigurationCredentials.getBasicAuth(), BASICAUTH_BINDING);
-            protocolMarshaller.marshall(selfManagedKafkaAccessConfigurationCredentials.getClientCertificateTlsAuth(), CLIENTCERTIFICATETLSAUTH_BINDING);
-            protocolMarshaller.marshall(selfManagedKafkaAccessConfigurationCredentials.getSaslScram256Auth(), SASLSCRAM256AUTH_BINDING);
             protocolMarshaller.marshall(selfManagedKafkaAccessConfigurationCredentials.getSaslScram512Auth(), SASLSCRAM512AUTH_BINDING);
+            protocolMarshaller.marshall(selfManagedKafkaAccessConfigurationCredentials.getSaslScram256Auth(), SASLSCRAM256AUTH_BINDING);
+            protocolMarshaller.marshall(selfManagedKafkaAccessConfigurationCredentials.getClientCertificateTlsAuth(), CLIENTCERTIFICATETLSAUTH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

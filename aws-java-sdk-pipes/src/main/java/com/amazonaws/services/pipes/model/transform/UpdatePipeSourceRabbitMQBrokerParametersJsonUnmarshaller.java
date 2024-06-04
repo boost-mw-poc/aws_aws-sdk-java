@@ -49,13 +49,13 @@ public class UpdatePipeSourceRabbitMQBrokerParametersJsonUnmarshaller implements
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("BatchSize", targetDepth)) {
-                    context.nextToken();
-                    updatePipeSourceRabbitMQBrokerParameters.setBatchSize(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (context.testExpression("Credentials", targetDepth)) {
                     context.nextToken();
                     updatePipeSourceRabbitMQBrokerParameters.setCredentials(MQBrokerAccessCredentialsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("BatchSize", targetDepth)) {
+                    context.nextToken();
+                    updatePipeSourceRabbitMQBrokerParameters.setBatchSize(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
                     context.nextToken();

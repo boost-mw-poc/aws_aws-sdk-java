@@ -48,13 +48,13 @@ public class PlacementStrategyJsonUnmarshaller implements Unmarshaller<Placement
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("field", targetDepth)) {
-                    context.nextToken();
-                    placementStrategy.setField(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
                     placementStrategy.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("field", targetDepth)) {
+                    context.nextToken();
+                    placementStrategy.setField(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

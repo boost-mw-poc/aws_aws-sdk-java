@@ -48,6 +48,10 @@ public class PipeTargetRedshiftDataParametersJsonUnmarshaller implements Unmarsh
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("SecretManagerArn", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetRedshiftDataParameters.setSecretManagerArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Database", targetDepth)) {
                     context.nextToken();
                     pipeTargetRedshiftDataParameters.setDatabase(context.getUnmarshaller(String.class).unmarshall(context));
@@ -56,16 +60,6 @@ public class PipeTargetRedshiftDataParametersJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     pipeTargetRedshiftDataParameters.setDbUser(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("SecretManagerArn", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetRedshiftDataParameters.setSecretManagerArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Sqls", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetRedshiftDataParameters.setSqls(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("StatementName", targetDepth)) {
                     context.nextToken();
                     pipeTargetRedshiftDataParameters.setStatementName(context.getUnmarshaller(String.class).unmarshall(context));
@@ -73,6 +67,12 @@ public class PipeTargetRedshiftDataParametersJsonUnmarshaller implements Unmarsh
                 if (context.testExpression("WithEvent", targetDepth)) {
                     context.nextToken();
                     pipeTargetRedshiftDataParameters.setWithEvent(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("Sqls", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetRedshiftDataParameters.setSqls(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

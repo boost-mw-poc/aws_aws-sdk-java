@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon Kinesis Data Firehose logging configuration settings for the pipe.
+ * The Amazon Data Firehose logging configuration settings for the pipe.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pipes-2015-10-07/FirehoseLogDestination" target="_top">AWS API
@@ -30,21 +30,21 @@ public class FirehoseLogDestination implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the
-     * pipe log records.
+     * The Amazon Resource Name (ARN) of the Firehose delivery stream to which EventBridge delivers the pipe log
+     * records.
      * </p>
      */
     private String deliveryStreamArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the
-     * pipe log records.
+     * The Amazon Resource Name (ARN) of the Firehose delivery stream to which EventBridge delivers the pipe log
+     * records.
      * </p>
      * 
      * @param deliveryStreamArn
-     *        The Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers
-     *        the pipe log records.
+     *        The Amazon Resource Name (ARN) of the Firehose delivery stream to which EventBridge delivers the pipe log
+     *        records.
      */
 
     public void setDeliveryStreamArn(String deliveryStreamArn) {
@@ -53,12 +53,12 @@ public class FirehoseLogDestination implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the
-     * pipe log records.
+     * The Amazon Resource Name (ARN) of the Firehose delivery stream to which EventBridge delivers the pipe log
+     * records.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers
-     *         the pipe log records.
+     * @return The Amazon Resource Name (ARN) of the Firehose delivery stream to which EventBridge delivers the pipe log
+     *         records.
      */
 
     public String getDeliveryStreamArn() {
@@ -67,13 +67,13 @@ public class FirehoseLogDestination implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers the
-     * pipe log records.
+     * The Amazon Resource Name (ARN) of the Firehose delivery stream to which EventBridge delivers the pipe log
+     * records.
      * </p>
      * 
      * @param deliveryStreamArn
-     *        The Amazon Resource Name (ARN) of the Kinesis Data Firehose delivery stream to which EventBridge delivers
-     *        the pipe log records.
+     *        The Amazon Resource Name (ARN) of the Firehose delivery stream to which EventBridge delivers the pipe log
+     *        records.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

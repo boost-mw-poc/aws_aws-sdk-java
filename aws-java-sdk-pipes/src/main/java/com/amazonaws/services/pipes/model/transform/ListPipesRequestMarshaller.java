@@ -27,20 +27,20 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListPipesRequestMarshaller {
 
-    private static final MarshallingInfo<String> CURRENTSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("CurrentState").build();
-    private static final MarshallingInfo<String> DESIREDSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("DesiredState").build();
-    private static final MarshallingInfo<Integer> LIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("Limit").build();
     private static final MarshallingInfo<String> NAMEPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("NamePrefix").build();
-    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<String> DESIREDSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("DesiredState").build();
+    private static final MarshallingInfo<String> CURRENTSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("CurrentState").build();
     private static final MarshallingInfo<String> SOURCEPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("SourcePrefix").build();
     private static final MarshallingInfo<String> TARGETPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("TargetPrefix").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<Integer> LIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("Limit").build();
 
     private static final ListPipesRequestMarshaller instance = new ListPipesRequestMarshaller();
 
@@ -58,13 +58,13 @@ public class ListPipesRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listPipesRequest.getCurrentState(), CURRENTSTATE_BINDING);
-            protocolMarshaller.marshall(listPipesRequest.getDesiredState(), DESIREDSTATE_BINDING);
-            protocolMarshaller.marshall(listPipesRequest.getLimit(), LIMIT_BINDING);
             protocolMarshaller.marshall(listPipesRequest.getNamePrefix(), NAMEPREFIX_BINDING);
-            protocolMarshaller.marshall(listPipesRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listPipesRequest.getDesiredState(), DESIREDSTATE_BINDING);
+            protocolMarshaller.marshall(listPipesRequest.getCurrentState(), CURRENTSTATE_BINDING);
             protocolMarshaller.marshall(listPipesRequest.getSourcePrefix(), SOURCEPREFIX_BINDING);
             protocolMarshaller.marshall(listPipesRequest.getTargetPrefix(), TARGETPREFIX_BINDING);
+            protocolMarshaller.marshall(listPipesRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listPipesRequest.getLimit(), LIMIT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

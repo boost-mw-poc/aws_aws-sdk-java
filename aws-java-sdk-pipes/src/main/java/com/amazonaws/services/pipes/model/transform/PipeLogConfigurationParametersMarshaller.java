@@ -28,16 +28,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeLogConfigurationParametersMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> CLOUDWATCHLOGSLOGDESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudwatchLogsLogDestination").build();
-    private static final MarshallingInfo<StructuredPojo> FIREHOSELOGDESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FirehoseLogDestination").build();
-    private static final MarshallingInfo<List> INCLUDEEXECUTIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncludeExecutionData").build();
-    private static final MarshallingInfo<String> LEVEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Level").build();
     private static final MarshallingInfo<StructuredPojo> S3LOGDESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3LogDestination").build();
+    private static final MarshallingInfo<StructuredPojo> FIREHOSELOGDESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FirehoseLogDestination").build();
+    private static final MarshallingInfo<StructuredPojo> CLOUDWATCHLOGSLOGDESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudwatchLogsLogDestination").build();
+    private static final MarshallingInfo<String> LEVEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Level").build();
+    private static final MarshallingInfo<List> INCLUDEEXECUTIONDATA_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncludeExecutionData").build();
 
     private static final PipeLogConfigurationParametersMarshaller instance = new PipeLogConfigurationParametersMarshaller();
 
@@ -55,11 +55,11 @@ public class PipeLogConfigurationParametersMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pipeLogConfigurationParameters.getCloudwatchLogsLogDestination(), CLOUDWATCHLOGSLOGDESTINATION_BINDING);
-            protocolMarshaller.marshall(pipeLogConfigurationParameters.getFirehoseLogDestination(), FIREHOSELOGDESTINATION_BINDING);
-            protocolMarshaller.marshall(pipeLogConfigurationParameters.getIncludeExecutionData(), INCLUDEEXECUTIONDATA_BINDING);
-            protocolMarshaller.marshall(pipeLogConfigurationParameters.getLevel(), LEVEL_BINDING);
             protocolMarshaller.marshall(pipeLogConfigurationParameters.getS3LogDestination(), S3LOGDESTINATION_BINDING);
+            protocolMarshaller.marshall(pipeLogConfigurationParameters.getFirehoseLogDestination(), FIREHOSELOGDESTINATION_BINDING);
+            protocolMarshaller.marshall(pipeLogConfigurationParameters.getCloudwatchLogsLogDestination(), CLOUDWATCHLOGSLOGDESTINATION_BINDING);
+            protocolMarshaller.marshall(pipeLogConfigurationParameters.getLevel(), LEVEL_BINDING);
+            protocolMarshaller.marshall(pipeLogConfigurationParameters.getIncludeExecutionData(), INCLUDEEXECUTIONDATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

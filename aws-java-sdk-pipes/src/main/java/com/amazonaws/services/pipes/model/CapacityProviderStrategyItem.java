@@ -32,14 +32,6 @@ public class CapacityProviderStrategyItem implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one
-     * capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default
-     * value of 0 is used.
-     * </p>
-     */
-    private Integer base;
-    /**
-     * <p>
      * The short name of the capacity provider.
      * </p>
      */
@@ -52,58 +44,14 @@ public class CapacityProviderStrategyItem implements Serializable, Cloneable, St
      * </p>
      */
     private Integer weight;
-
     /**
      * <p>
      * The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one
      * capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default
      * value of 0 is used.
      * </p>
-     * 
-     * @param base
-     *        The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only
-     *        one capacity provider in a capacity provider strategy can have a base defined. If no value is specified,
-     *        the default value of 0 is used.
      */
-
-    public void setBase(Integer base) {
-        this.base = base;
-    }
-
-    /**
-     * <p>
-     * The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one
-     * capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default
-     * value of 0 is used.
-     * </p>
-     * 
-     * @return The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only
-     *         one capacity provider in a capacity provider strategy can have a base defined. If no value is specified,
-     *         the default value of 0 is used.
-     */
-
-    public Integer getBase() {
-        return this.base;
-    }
-
-    /**
-     * <p>
-     * The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one
-     * capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default
-     * value of 0 is used.
-     * </p>
-     * 
-     * @param base
-     *        The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only
-     *        one capacity provider in a capacity provider strategy can have a base defined. If no value is specified,
-     *        the default value of 0 is used.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CapacityProviderStrategyItem withBase(Integer base) {
-        setBase(base);
-        return this;
-    }
+    private Integer base;
 
     /**
      * <p>
@@ -198,6 +146,58 @@ public class CapacityProviderStrategyItem implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one
+     * capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default
+     * value of 0 is used.
+     * </p>
+     * 
+     * @param base
+     *        The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only
+     *        one capacity provider in a capacity provider strategy can have a base defined. If no value is specified,
+     *        the default value of 0 is used.
+     */
+
+    public void setBase(Integer base) {
+        this.base = base;
+    }
+
+    /**
+     * <p>
+     * The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one
+     * capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default
+     * value of 0 is used.
+     * </p>
+     * 
+     * @return The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only
+     *         one capacity provider in a capacity provider strategy can have a base defined. If no value is specified,
+     *         the default value of 0 is used.
+     */
+
+    public Integer getBase() {
+        return this.base;
+    }
+
+    /**
+     * <p>
+     * The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only one
+     * capacity provider in a capacity provider strategy can have a base defined. If no value is specified, the default
+     * value of 0 is used.
+     * </p>
+     * 
+     * @param base
+     *        The base value designates how many tasks, at a minimum, to run on the specified capacity provider. Only
+     *        one capacity provider in a capacity provider strategy can have a base defined. If no value is specified,
+     *        the default value of 0 is used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CapacityProviderStrategyItem withBase(Integer base) {
+        setBase(base);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -209,12 +209,12 @@ public class CapacityProviderStrategyItem implements Serializable, Cloneable, St
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getBase() != null)
-            sb.append("Base: ").append(getBase()).append(",");
         if (getCapacityProvider() != null)
             sb.append("CapacityProvider: ").append("***Sensitive Data Redacted***").append(",");
         if (getWeight() != null)
-            sb.append("Weight: ").append(getWeight());
+            sb.append("Weight: ").append(getWeight()).append(",");
+        if (getBase() != null)
+            sb.append("Base: ").append(getBase());
         sb.append("}");
         return sb.toString();
     }
@@ -229,10 +229,6 @@ public class CapacityProviderStrategyItem implements Serializable, Cloneable, St
         if (obj instanceof CapacityProviderStrategyItem == false)
             return false;
         CapacityProviderStrategyItem other = (CapacityProviderStrategyItem) obj;
-        if (other.getBase() == null ^ this.getBase() == null)
-            return false;
-        if (other.getBase() != null && other.getBase().equals(this.getBase()) == false)
-            return false;
         if (other.getCapacityProvider() == null ^ this.getCapacityProvider() == null)
             return false;
         if (other.getCapacityProvider() != null && other.getCapacityProvider().equals(this.getCapacityProvider()) == false)
@@ -240,6 +236,10 @@ public class CapacityProviderStrategyItem implements Serializable, Cloneable, St
         if (other.getWeight() == null ^ this.getWeight() == null)
             return false;
         if (other.getWeight() != null && other.getWeight().equals(this.getWeight()) == false)
+            return false;
+        if (other.getBase() == null ^ this.getBase() == null)
+            return false;
+        if (other.getBase() != null && other.getBase().equals(this.getBase()) == false)
             return false;
         return true;
     }
@@ -249,9 +249,9 @@ public class CapacityProviderStrategyItem implements Serializable, Cloneable, St
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getBase() == null) ? 0 : getBase().hashCode());
         hashCode = prime * hashCode + ((getCapacityProvider() == null) ? 0 : getCapacityProvider().hashCode());
         hashCode = prime * hashCode + ((getWeight() == null) ? 0 : getWeight().hashCode());
+        hashCode = prime * hashCode + ((getBase() == null) ? 0 : getBase().hashCode());
         return hashCode;
     }
 

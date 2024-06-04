@@ -30,18 +30,6 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The parameters for using an Active MQ broker as a source.
-     * </p>
-     */
-    private UpdatePipeSourceActiveMQBrokerParameters activeMQBrokerParameters;
-    /**
-     * <p>
-     * The parameters for using a DynamoDB stream as a source.
-     * </p>
-     */
-    private UpdatePipeSourceDynamoDBStreamParameters dynamoDBStreamParameters;
-    /**
-     * <p>
      * The collection of event patterns used to filter events.
      * </p>
      * <p>
@@ -63,10 +51,22 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
     private UpdatePipeSourceKinesisStreamParameters kinesisStreamParameters;
     /**
      * <p>
-     * The parameters for using an MSK stream as a source.
+     * The parameters for using a DynamoDB stream as a source.
      * </p>
      */
-    private UpdatePipeSourceManagedStreamingKafkaParameters managedStreamingKafkaParameters;
+    private UpdatePipeSourceDynamoDBStreamParameters dynamoDBStreamParameters;
+    /**
+     * <p>
+     * The parameters for using a Amazon SQS stream as a source.
+     * </p>
+     */
+    private UpdatePipeSourceSqsQueueParameters sqsQueueParameters;
+    /**
+     * <p>
+     * The parameters for using an Active MQ broker as a source.
+     * </p>
+     */
+    private UpdatePipeSourceActiveMQBrokerParameters activeMQBrokerParameters;
     /**
      * <p>
      * The parameters for using a Rabbit MQ broker as a source.
@@ -75,96 +75,24 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
     private UpdatePipeSourceRabbitMQBrokerParameters rabbitMQBrokerParameters;
     /**
      * <p>
+     * The parameters for using an MSK stream as a source.
+     * </p>
+     */
+    private UpdatePipeSourceManagedStreamingKafkaParameters managedStreamingKafkaParameters;
+    /**
+     * <p>
      * The parameters for using a self-managed Apache Kafka stream as a source.
+     * </p>
+     * <p>
+     * A <i>self managed</i> cluster refers to any Apache Kafka cluster not hosted by Amazon Web Services. This includes
+     * both clusters you manage yourself, as well as those hosted by a third-party provider, such as <a
+     * href="https://www.confluent.io/">Confluent Cloud</a>, <a href="https://www.cloudkarafka.com/">CloudKarafka</a>,
+     * or <a href="https://redpanda.com/">Redpanda</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html">Apache Kafka streams as a
+     * source</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      */
     private UpdatePipeSourceSelfManagedKafkaParameters selfManagedKafkaParameters;
-    /**
-     * <p>
-     * The parameters for using a Amazon SQS stream as a source.
-     * </p>
-     */
-    private UpdatePipeSourceSqsQueueParameters sqsQueueParameters;
-
-    /**
-     * <p>
-     * The parameters for using an Active MQ broker as a source.
-     * </p>
-     * 
-     * @param activeMQBrokerParameters
-     *        The parameters for using an Active MQ broker as a source.
-     */
-
-    public void setActiveMQBrokerParameters(UpdatePipeSourceActiveMQBrokerParameters activeMQBrokerParameters) {
-        this.activeMQBrokerParameters = activeMQBrokerParameters;
-    }
-
-    /**
-     * <p>
-     * The parameters for using an Active MQ broker as a source.
-     * </p>
-     * 
-     * @return The parameters for using an Active MQ broker as a source.
-     */
-
-    public UpdatePipeSourceActiveMQBrokerParameters getActiveMQBrokerParameters() {
-        return this.activeMQBrokerParameters;
-    }
-
-    /**
-     * <p>
-     * The parameters for using an Active MQ broker as a source.
-     * </p>
-     * 
-     * @param activeMQBrokerParameters
-     *        The parameters for using an Active MQ broker as a source.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePipeSourceParameters withActiveMQBrokerParameters(UpdatePipeSourceActiveMQBrokerParameters activeMQBrokerParameters) {
-        setActiveMQBrokerParameters(activeMQBrokerParameters);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The parameters for using a DynamoDB stream as a source.
-     * </p>
-     * 
-     * @param dynamoDBStreamParameters
-     *        The parameters for using a DynamoDB stream as a source.
-     */
-
-    public void setDynamoDBStreamParameters(UpdatePipeSourceDynamoDBStreamParameters dynamoDBStreamParameters) {
-        this.dynamoDBStreamParameters = dynamoDBStreamParameters;
-    }
-
-    /**
-     * <p>
-     * The parameters for using a DynamoDB stream as a source.
-     * </p>
-     * 
-     * @return The parameters for using a DynamoDB stream as a source.
-     */
-
-    public UpdatePipeSourceDynamoDBStreamParameters getDynamoDBStreamParameters() {
-        return this.dynamoDBStreamParameters;
-    }
-
-    /**
-     * <p>
-     * The parameters for using a DynamoDB stream as a source.
-     * </p>
-     * 
-     * @param dynamoDBStreamParameters
-     *        The parameters for using a DynamoDB stream as a source.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePipeSourceParameters withDynamoDBStreamParameters(UpdatePipeSourceDynamoDBStreamParameters dynamoDBStreamParameters) {
-        setDynamoDBStreamParameters(dynamoDBStreamParameters);
-        return this;
-    }
 
     /**
      * <p>
@@ -299,41 +227,121 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The parameters for using an MSK stream as a source.
+     * The parameters for using a DynamoDB stream as a source.
      * </p>
      * 
-     * @param managedStreamingKafkaParameters
-     *        The parameters for using an MSK stream as a source.
+     * @param dynamoDBStreamParameters
+     *        The parameters for using a DynamoDB stream as a source.
      */
 
-    public void setManagedStreamingKafkaParameters(UpdatePipeSourceManagedStreamingKafkaParameters managedStreamingKafkaParameters) {
-        this.managedStreamingKafkaParameters = managedStreamingKafkaParameters;
+    public void setDynamoDBStreamParameters(UpdatePipeSourceDynamoDBStreamParameters dynamoDBStreamParameters) {
+        this.dynamoDBStreamParameters = dynamoDBStreamParameters;
     }
 
     /**
      * <p>
-     * The parameters for using an MSK stream as a source.
+     * The parameters for using a DynamoDB stream as a source.
      * </p>
      * 
-     * @return The parameters for using an MSK stream as a source.
+     * @return The parameters for using a DynamoDB stream as a source.
      */
 
-    public UpdatePipeSourceManagedStreamingKafkaParameters getManagedStreamingKafkaParameters() {
-        return this.managedStreamingKafkaParameters;
+    public UpdatePipeSourceDynamoDBStreamParameters getDynamoDBStreamParameters() {
+        return this.dynamoDBStreamParameters;
     }
 
     /**
      * <p>
-     * The parameters for using an MSK stream as a source.
+     * The parameters for using a DynamoDB stream as a source.
      * </p>
      * 
-     * @param managedStreamingKafkaParameters
-     *        The parameters for using an MSK stream as a source.
+     * @param dynamoDBStreamParameters
+     *        The parameters for using a DynamoDB stream as a source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public UpdatePipeSourceParameters withManagedStreamingKafkaParameters(UpdatePipeSourceManagedStreamingKafkaParameters managedStreamingKafkaParameters) {
-        setManagedStreamingKafkaParameters(managedStreamingKafkaParameters);
+    public UpdatePipeSourceParameters withDynamoDBStreamParameters(UpdatePipeSourceDynamoDBStreamParameters dynamoDBStreamParameters) {
+        setDynamoDBStreamParameters(dynamoDBStreamParameters);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The parameters for using a Amazon SQS stream as a source.
+     * </p>
+     * 
+     * @param sqsQueueParameters
+     *        The parameters for using a Amazon SQS stream as a source.
+     */
+
+    public void setSqsQueueParameters(UpdatePipeSourceSqsQueueParameters sqsQueueParameters) {
+        this.sqsQueueParameters = sqsQueueParameters;
+    }
+
+    /**
+     * <p>
+     * The parameters for using a Amazon SQS stream as a source.
+     * </p>
+     * 
+     * @return The parameters for using a Amazon SQS stream as a source.
+     */
+
+    public UpdatePipeSourceSqsQueueParameters getSqsQueueParameters() {
+        return this.sqsQueueParameters;
+    }
+
+    /**
+     * <p>
+     * The parameters for using a Amazon SQS stream as a source.
+     * </p>
+     * 
+     * @param sqsQueueParameters
+     *        The parameters for using a Amazon SQS stream as a source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipeSourceParameters withSqsQueueParameters(UpdatePipeSourceSqsQueueParameters sqsQueueParameters) {
+        setSqsQueueParameters(sqsQueueParameters);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The parameters for using an Active MQ broker as a source.
+     * </p>
+     * 
+     * @param activeMQBrokerParameters
+     *        The parameters for using an Active MQ broker as a source.
+     */
+
+    public void setActiveMQBrokerParameters(UpdatePipeSourceActiveMQBrokerParameters activeMQBrokerParameters) {
+        this.activeMQBrokerParameters = activeMQBrokerParameters;
+    }
+
+    /**
+     * <p>
+     * The parameters for using an Active MQ broker as a source.
+     * </p>
+     * 
+     * @return The parameters for using an Active MQ broker as a source.
+     */
+
+    public UpdatePipeSourceActiveMQBrokerParameters getActiveMQBrokerParameters() {
+        return this.activeMQBrokerParameters;
+    }
+
+    /**
+     * <p>
+     * The parameters for using an Active MQ broker as a source.
+     * </p>
+     * 
+     * @param activeMQBrokerParameters
+     *        The parameters for using an Active MQ broker as a source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipeSourceParameters withActiveMQBrokerParameters(UpdatePipeSourceActiveMQBrokerParameters activeMQBrokerParameters) {
+        setActiveMQBrokerParameters(activeMQBrokerParameters);
         return this;
     }
 
@@ -379,11 +387,67 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
 
     /**
      * <p>
+     * The parameters for using an MSK stream as a source.
+     * </p>
+     * 
+     * @param managedStreamingKafkaParameters
+     *        The parameters for using an MSK stream as a source.
+     */
+
+    public void setManagedStreamingKafkaParameters(UpdatePipeSourceManagedStreamingKafkaParameters managedStreamingKafkaParameters) {
+        this.managedStreamingKafkaParameters = managedStreamingKafkaParameters;
+    }
+
+    /**
+     * <p>
+     * The parameters for using an MSK stream as a source.
+     * </p>
+     * 
+     * @return The parameters for using an MSK stream as a source.
+     */
+
+    public UpdatePipeSourceManagedStreamingKafkaParameters getManagedStreamingKafkaParameters() {
+        return this.managedStreamingKafkaParameters;
+    }
+
+    /**
+     * <p>
+     * The parameters for using an MSK stream as a source.
+     * </p>
+     * 
+     * @param managedStreamingKafkaParameters
+     *        The parameters for using an MSK stream as a source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipeSourceParameters withManagedStreamingKafkaParameters(UpdatePipeSourceManagedStreamingKafkaParameters managedStreamingKafkaParameters) {
+        setManagedStreamingKafkaParameters(managedStreamingKafkaParameters);
+        return this;
+    }
+
+    /**
+     * <p>
      * The parameters for using a self-managed Apache Kafka stream as a source.
+     * </p>
+     * <p>
+     * A <i>self managed</i> cluster refers to any Apache Kafka cluster not hosted by Amazon Web Services. This includes
+     * both clusters you manage yourself, as well as those hosted by a third-party provider, such as <a
+     * href="https://www.confluent.io/">Confluent Cloud</a>, <a href="https://www.cloudkarafka.com/">CloudKarafka</a>,
+     * or <a href="https://redpanda.com/">Redpanda</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html">Apache Kafka streams as a
+     * source</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      * 
      * @param selfManagedKafkaParameters
-     *        The parameters for using a self-managed Apache Kafka stream as a source.
+     *        The parameters for using a self-managed Apache Kafka stream as a source.</p>
+     *        <p>
+     *        A <i>self managed</i> cluster refers to any Apache Kafka cluster not hosted by Amazon Web Services. This
+     *        includes both clusters you manage yourself, as well as those hosted by a third-party provider, such as <a
+     *        href="https://www.confluent.io/">Confluent Cloud</a>, <a
+     *        href="https://www.cloudkarafka.com/">CloudKarafka</a>, or <a href="https://redpanda.com/">Redpanda</a>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html">Apache Kafka streams
+     *        as a source</a> in the <i>Amazon EventBridge User Guide</i>.
      */
 
     public void setSelfManagedKafkaParameters(UpdatePipeSourceSelfManagedKafkaParameters selfManagedKafkaParameters) {
@@ -394,8 +458,24 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
      * <p>
      * The parameters for using a self-managed Apache Kafka stream as a source.
      * </p>
+     * <p>
+     * A <i>self managed</i> cluster refers to any Apache Kafka cluster not hosted by Amazon Web Services. This includes
+     * both clusters you manage yourself, as well as those hosted by a third-party provider, such as <a
+     * href="https://www.confluent.io/">Confluent Cloud</a>, <a href="https://www.cloudkarafka.com/">CloudKarafka</a>,
+     * or <a href="https://redpanda.com/">Redpanda</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html">Apache Kafka streams as a
+     * source</a> in the <i>Amazon EventBridge User Guide</i>.
+     * </p>
      * 
-     * @return The parameters for using a self-managed Apache Kafka stream as a source.
+     * @return The parameters for using a self-managed Apache Kafka stream as a source.</p>
+     *         <p>
+     *         A <i>self managed</i> cluster refers to any Apache Kafka cluster not hosted by Amazon Web Services. This
+     *         includes both clusters you manage yourself, as well as those hosted by a third-party provider, such as <a
+     *         href="https://www.confluent.io/">Confluent Cloud</a>, <a
+     *         href="https://www.cloudkarafka.com/">CloudKarafka</a>, or <a href="https://redpanda.com/">Redpanda</a>.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html">Apache Kafka streams
+     *         as a source</a> in the <i>Amazon EventBridge User Guide</i>.
      */
 
     public UpdatePipeSourceSelfManagedKafkaParameters getSelfManagedKafkaParameters() {
@@ -406,54 +486,30 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
      * <p>
      * The parameters for using a self-managed Apache Kafka stream as a source.
      * </p>
+     * <p>
+     * A <i>self managed</i> cluster refers to any Apache Kafka cluster not hosted by Amazon Web Services. This includes
+     * both clusters you manage yourself, as well as those hosted by a third-party provider, such as <a
+     * href="https://www.confluent.io/">Confluent Cloud</a>, <a href="https://www.cloudkarafka.com/">CloudKarafka</a>,
+     * or <a href="https://redpanda.com/">Redpanda</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html">Apache Kafka streams as a
+     * source</a> in the <i>Amazon EventBridge User Guide</i>.
+     * </p>
      * 
      * @param selfManagedKafkaParameters
-     *        The parameters for using a self-managed Apache Kafka stream as a source.
+     *        The parameters for using a self-managed Apache Kafka stream as a source.</p>
+     *        <p>
+     *        A <i>self managed</i> cluster refers to any Apache Kafka cluster not hosted by Amazon Web Services. This
+     *        includes both clusters you manage yourself, as well as those hosted by a third-party provider, such as <a
+     *        href="https://www.confluent.io/">Confluent Cloud</a>, <a
+     *        href="https://www.cloudkarafka.com/">CloudKarafka</a>, or <a href="https://redpanda.com/">Redpanda</a>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html">Apache Kafka streams
+     *        as a source</a> in the <i>Amazon EventBridge User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdatePipeSourceParameters withSelfManagedKafkaParameters(UpdatePipeSourceSelfManagedKafkaParameters selfManagedKafkaParameters) {
         setSelfManagedKafkaParameters(selfManagedKafkaParameters);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The parameters for using a Amazon SQS stream as a source.
-     * </p>
-     * 
-     * @param sqsQueueParameters
-     *        The parameters for using a Amazon SQS stream as a source.
-     */
-
-    public void setSqsQueueParameters(UpdatePipeSourceSqsQueueParameters sqsQueueParameters) {
-        this.sqsQueueParameters = sqsQueueParameters;
-    }
-
-    /**
-     * <p>
-     * The parameters for using a Amazon SQS stream as a source.
-     * </p>
-     * 
-     * @return The parameters for using a Amazon SQS stream as a source.
-     */
-
-    public UpdatePipeSourceSqsQueueParameters getSqsQueueParameters() {
-        return this.sqsQueueParameters;
-    }
-
-    /**
-     * <p>
-     * The parameters for using a Amazon SQS stream as a source.
-     * </p>
-     * 
-     * @param sqsQueueParameters
-     *        The parameters for using a Amazon SQS stream as a source.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePipeSourceParameters withSqsQueueParameters(UpdatePipeSourceSqsQueueParameters sqsQueueParameters) {
-        setSqsQueueParameters(sqsQueueParameters);
         return this;
     }
 
@@ -469,22 +525,22 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getActiveMQBrokerParameters() != null)
-            sb.append("ActiveMQBrokerParameters: ").append(getActiveMQBrokerParameters()).append(",");
-        if (getDynamoDBStreamParameters() != null)
-            sb.append("DynamoDBStreamParameters: ").append(getDynamoDBStreamParameters()).append(",");
         if (getFilterCriteria() != null)
             sb.append("FilterCriteria: ").append(getFilterCriteria()).append(",");
         if (getKinesisStreamParameters() != null)
             sb.append("KinesisStreamParameters: ").append(getKinesisStreamParameters()).append(",");
-        if (getManagedStreamingKafkaParameters() != null)
-            sb.append("ManagedStreamingKafkaParameters: ").append(getManagedStreamingKafkaParameters()).append(",");
+        if (getDynamoDBStreamParameters() != null)
+            sb.append("DynamoDBStreamParameters: ").append(getDynamoDBStreamParameters()).append(",");
+        if (getSqsQueueParameters() != null)
+            sb.append("SqsQueueParameters: ").append(getSqsQueueParameters()).append(",");
+        if (getActiveMQBrokerParameters() != null)
+            sb.append("ActiveMQBrokerParameters: ").append(getActiveMQBrokerParameters()).append(",");
         if (getRabbitMQBrokerParameters() != null)
             sb.append("RabbitMQBrokerParameters: ").append(getRabbitMQBrokerParameters()).append(",");
+        if (getManagedStreamingKafkaParameters() != null)
+            sb.append("ManagedStreamingKafkaParameters: ").append(getManagedStreamingKafkaParameters()).append(",");
         if (getSelfManagedKafkaParameters() != null)
-            sb.append("SelfManagedKafkaParameters: ").append(getSelfManagedKafkaParameters()).append(",");
-        if (getSqsQueueParameters() != null)
-            sb.append("SqsQueueParameters: ").append(getSqsQueueParameters());
+            sb.append("SelfManagedKafkaParameters: ").append(getSelfManagedKafkaParameters());
         sb.append("}");
         return sb.toString();
     }
@@ -499,14 +555,6 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
         if (obj instanceof UpdatePipeSourceParameters == false)
             return false;
         UpdatePipeSourceParameters other = (UpdatePipeSourceParameters) obj;
-        if (other.getActiveMQBrokerParameters() == null ^ this.getActiveMQBrokerParameters() == null)
-            return false;
-        if (other.getActiveMQBrokerParameters() != null && other.getActiveMQBrokerParameters().equals(this.getActiveMQBrokerParameters()) == false)
-            return false;
-        if (other.getDynamoDBStreamParameters() == null ^ this.getDynamoDBStreamParameters() == null)
-            return false;
-        if (other.getDynamoDBStreamParameters() != null && other.getDynamoDBStreamParameters().equals(this.getDynamoDBStreamParameters()) == false)
-            return false;
         if (other.getFilterCriteria() == null ^ this.getFilterCriteria() == null)
             return false;
         if (other.getFilterCriteria() != null && other.getFilterCriteria().equals(this.getFilterCriteria()) == false)
@@ -515,22 +563,30 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
             return false;
         if (other.getKinesisStreamParameters() != null && other.getKinesisStreamParameters().equals(this.getKinesisStreamParameters()) == false)
             return false;
-        if (other.getManagedStreamingKafkaParameters() == null ^ this.getManagedStreamingKafkaParameters() == null)
+        if (other.getDynamoDBStreamParameters() == null ^ this.getDynamoDBStreamParameters() == null)
             return false;
-        if (other.getManagedStreamingKafkaParameters() != null
-                && other.getManagedStreamingKafkaParameters().equals(this.getManagedStreamingKafkaParameters()) == false)
+        if (other.getDynamoDBStreamParameters() != null && other.getDynamoDBStreamParameters().equals(this.getDynamoDBStreamParameters()) == false)
+            return false;
+        if (other.getSqsQueueParameters() == null ^ this.getSqsQueueParameters() == null)
+            return false;
+        if (other.getSqsQueueParameters() != null && other.getSqsQueueParameters().equals(this.getSqsQueueParameters()) == false)
+            return false;
+        if (other.getActiveMQBrokerParameters() == null ^ this.getActiveMQBrokerParameters() == null)
+            return false;
+        if (other.getActiveMQBrokerParameters() != null && other.getActiveMQBrokerParameters().equals(this.getActiveMQBrokerParameters()) == false)
             return false;
         if (other.getRabbitMQBrokerParameters() == null ^ this.getRabbitMQBrokerParameters() == null)
             return false;
         if (other.getRabbitMQBrokerParameters() != null && other.getRabbitMQBrokerParameters().equals(this.getRabbitMQBrokerParameters()) == false)
             return false;
+        if (other.getManagedStreamingKafkaParameters() == null ^ this.getManagedStreamingKafkaParameters() == null)
+            return false;
+        if (other.getManagedStreamingKafkaParameters() != null
+                && other.getManagedStreamingKafkaParameters().equals(this.getManagedStreamingKafkaParameters()) == false)
+            return false;
         if (other.getSelfManagedKafkaParameters() == null ^ this.getSelfManagedKafkaParameters() == null)
             return false;
         if (other.getSelfManagedKafkaParameters() != null && other.getSelfManagedKafkaParameters().equals(this.getSelfManagedKafkaParameters()) == false)
-            return false;
-        if (other.getSqsQueueParameters() == null ^ this.getSqsQueueParameters() == null)
-            return false;
-        if (other.getSqsQueueParameters() != null && other.getSqsQueueParameters().equals(this.getSqsQueueParameters()) == false)
             return false;
         return true;
     }
@@ -540,14 +596,14 @@ public class UpdatePipeSourceParameters implements Serializable, Cloneable, Stru
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getActiveMQBrokerParameters() == null) ? 0 : getActiveMQBrokerParameters().hashCode());
-        hashCode = prime * hashCode + ((getDynamoDBStreamParameters() == null) ? 0 : getDynamoDBStreamParameters().hashCode());
         hashCode = prime * hashCode + ((getFilterCriteria() == null) ? 0 : getFilterCriteria().hashCode());
         hashCode = prime * hashCode + ((getKinesisStreamParameters() == null) ? 0 : getKinesisStreamParameters().hashCode());
-        hashCode = prime * hashCode + ((getManagedStreamingKafkaParameters() == null) ? 0 : getManagedStreamingKafkaParameters().hashCode());
-        hashCode = prime * hashCode + ((getRabbitMQBrokerParameters() == null) ? 0 : getRabbitMQBrokerParameters().hashCode());
-        hashCode = prime * hashCode + ((getSelfManagedKafkaParameters() == null) ? 0 : getSelfManagedKafkaParameters().hashCode());
+        hashCode = prime * hashCode + ((getDynamoDBStreamParameters() == null) ? 0 : getDynamoDBStreamParameters().hashCode());
         hashCode = prime * hashCode + ((getSqsQueueParameters() == null) ? 0 : getSqsQueueParameters().hashCode());
+        hashCode = prime * hashCode + ((getActiveMQBrokerParameters() == null) ? 0 : getActiveMQBrokerParameters().hashCode());
+        hashCode = prime * hashCode + ((getRabbitMQBrokerParameters() == null) ? 0 : getRabbitMQBrokerParameters().hashCode());
+        hashCode = prime * hashCode + ((getManagedStreamingKafkaParameters() == null) ? 0 : getManagedStreamingKafkaParameters().hashCode());
+        hashCode = prime * hashCode + ((getSelfManagedKafkaParameters() == null) ? 0 : getSelfManagedKafkaParameters().hashCode());
         return hashCode;
     }
 

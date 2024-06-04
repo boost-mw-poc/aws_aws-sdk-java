@@ -70,6 +70,24 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private Integer threadsPerCore;
+    /**
+     * <p>
+     * The private primary IP address of the SageMaker HyperPod cluster node.
+     * </p>
+     */
+    private String privatePrimaryIp;
+    /**
+     * <p>
+     * The private DNS hostname of the SageMaker HyperPod cluster node.
+     * </p>
+     */
+    private String privateDnsHostname;
+    /**
+     * <p>
+     * The placement details of the SageMaker HyperPod cluster node.
+     * </p>
+     */
+    private ClusterInstancePlacement placement;
 
     /**
      * <p>
@@ -371,6 +389,126 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The private primary IP address of the SageMaker HyperPod cluster node.
+     * </p>
+     * 
+     * @param privatePrimaryIp
+     *        The private primary IP address of the SageMaker HyperPod cluster node.
+     */
+
+    public void setPrivatePrimaryIp(String privatePrimaryIp) {
+        this.privatePrimaryIp = privatePrimaryIp;
+    }
+
+    /**
+     * <p>
+     * The private primary IP address of the SageMaker HyperPod cluster node.
+     * </p>
+     * 
+     * @return The private primary IP address of the SageMaker HyperPod cluster node.
+     */
+
+    public String getPrivatePrimaryIp() {
+        return this.privatePrimaryIp;
+    }
+
+    /**
+     * <p>
+     * The private primary IP address of the SageMaker HyperPod cluster node.
+     * </p>
+     * 
+     * @param privatePrimaryIp
+     *        The private primary IP address of the SageMaker HyperPod cluster node.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterNodeDetails withPrivatePrimaryIp(String privatePrimaryIp) {
+        setPrivatePrimaryIp(privatePrimaryIp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The private DNS hostname of the SageMaker HyperPod cluster node.
+     * </p>
+     * 
+     * @param privateDnsHostname
+     *        The private DNS hostname of the SageMaker HyperPod cluster node.
+     */
+
+    public void setPrivateDnsHostname(String privateDnsHostname) {
+        this.privateDnsHostname = privateDnsHostname;
+    }
+
+    /**
+     * <p>
+     * The private DNS hostname of the SageMaker HyperPod cluster node.
+     * </p>
+     * 
+     * @return The private DNS hostname of the SageMaker HyperPod cluster node.
+     */
+
+    public String getPrivateDnsHostname() {
+        return this.privateDnsHostname;
+    }
+
+    /**
+     * <p>
+     * The private DNS hostname of the SageMaker HyperPod cluster node.
+     * </p>
+     * 
+     * @param privateDnsHostname
+     *        The private DNS hostname of the SageMaker HyperPod cluster node.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterNodeDetails withPrivateDnsHostname(String privateDnsHostname) {
+        setPrivateDnsHostname(privateDnsHostname);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The placement details of the SageMaker HyperPod cluster node.
+     * </p>
+     * 
+     * @param placement
+     *        The placement details of the SageMaker HyperPod cluster node.
+     */
+
+    public void setPlacement(ClusterInstancePlacement placement) {
+        this.placement = placement;
+    }
+
+    /**
+     * <p>
+     * The placement details of the SageMaker HyperPod cluster node.
+     * </p>
+     * 
+     * @return The placement details of the SageMaker HyperPod cluster node.
+     */
+
+    public ClusterInstancePlacement getPlacement() {
+        return this.placement;
+    }
+
+    /**
+     * <p>
+     * The placement details of the SageMaker HyperPod cluster node.
+     * </p>
+     * 
+     * @param placement
+     *        The placement details of the SageMaker HyperPod cluster node.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterNodeDetails withPlacement(ClusterInstancePlacement placement) {
+        setPlacement(placement);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -395,7 +533,13 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
         if (getLifeCycleConfig() != null)
             sb.append("LifeCycleConfig: ").append(getLifeCycleConfig()).append(",");
         if (getThreadsPerCore() != null)
-            sb.append("ThreadsPerCore: ").append(getThreadsPerCore());
+            sb.append("ThreadsPerCore: ").append(getThreadsPerCore()).append(",");
+        if (getPrivatePrimaryIp() != null)
+            sb.append("PrivatePrimaryIp: ").append(getPrivatePrimaryIp()).append(",");
+        if (getPrivateDnsHostname() != null)
+            sb.append("PrivateDnsHostname: ").append(getPrivateDnsHostname()).append(",");
+        if (getPlacement() != null)
+            sb.append("Placement: ").append(getPlacement());
         sb.append("}");
         return sb.toString();
     }
@@ -438,6 +582,18 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getThreadsPerCore() != null && other.getThreadsPerCore().equals(this.getThreadsPerCore()) == false)
             return false;
+        if (other.getPrivatePrimaryIp() == null ^ this.getPrivatePrimaryIp() == null)
+            return false;
+        if (other.getPrivatePrimaryIp() != null && other.getPrivatePrimaryIp().equals(this.getPrivatePrimaryIp()) == false)
+            return false;
+        if (other.getPrivateDnsHostname() == null ^ this.getPrivateDnsHostname() == null)
+            return false;
+        if (other.getPrivateDnsHostname() != null && other.getPrivateDnsHostname().equals(this.getPrivateDnsHostname()) == false)
+            return false;
+        if (other.getPlacement() == null ^ this.getPlacement() == null)
+            return false;
+        if (other.getPlacement() != null && other.getPlacement().equals(this.getPlacement()) == false)
+            return false;
         return true;
     }
 
@@ -453,6 +609,9 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getLaunchTime() == null) ? 0 : getLaunchTime().hashCode());
         hashCode = prime * hashCode + ((getLifeCycleConfig() == null) ? 0 : getLifeCycleConfig().hashCode());
         hashCode = prime * hashCode + ((getThreadsPerCore() == null) ? 0 : getThreadsPerCore().hashCode());
+        hashCode = prime * hashCode + ((getPrivatePrimaryIp() == null) ? 0 : getPrivatePrimaryIp().hashCode());
+        hashCode = prime * hashCode + ((getPrivateDnsHostname() == null) ? 0 : getPrivateDnsHostname().hashCode());
+        hashCode = prime * hashCode + ((getPlacement() == null) ? 0 : getPlacement().hashCode());
         return hashCode;
     }
 

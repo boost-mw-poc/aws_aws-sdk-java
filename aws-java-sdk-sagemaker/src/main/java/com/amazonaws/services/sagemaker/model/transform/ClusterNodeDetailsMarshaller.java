@@ -41,6 +41,12 @@ public class ClusterNodeDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LifeCycleConfig").build();
     private static final MarshallingInfo<Integer> THREADSPERCORE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThreadsPerCore").build();
+    private static final MarshallingInfo<String> PRIVATEPRIMARYIP_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrivatePrimaryIp").build();
+    private static final MarshallingInfo<String> PRIVATEDNSHOSTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrivateDnsHostname").build();
+    private static final MarshallingInfo<StructuredPojo> PLACEMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Placement").build();
 
     private static final ClusterNodeDetailsMarshaller instance = new ClusterNodeDetailsMarshaller();
 
@@ -65,6 +71,9 @@ public class ClusterNodeDetailsMarshaller {
             protocolMarshaller.marshall(clusterNodeDetails.getLaunchTime(), LAUNCHTIME_BINDING);
             protocolMarshaller.marshall(clusterNodeDetails.getLifeCycleConfig(), LIFECYCLECONFIG_BINDING);
             protocolMarshaller.marshall(clusterNodeDetails.getThreadsPerCore(), THREADSPERCORE_BINDING);
+            protocolMarshaller.marshall(clusterNodeDetails.getPrivatePrimaryIp(), PRIVATEPRIMARYIP_BINDING);
+            protocolMarshaller.marshall(clusterNodeDetails.getPrivateDnsHostname(), PRIVATEDNSHOSTNAME_BINDING);
+            protocolMarshaller.marshall(clusterNodeDetails.getPlacement(), PLACEMENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

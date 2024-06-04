@@ -53,14 +53,14 @@ public class UpdatePipeSourceSelfManagedKafkaParametersJsonUnmarshaller implemen
                     context.nextToken();
                     updatePipeSourceSelfManagedKafkaParameters.setBatchSize(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
+                    context.nextToken();
+                    updatePipeSourceSelfManagedKafkaParameters.setMaximumBatchingWindowInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("Credentials", targetDepth)) {
                     context.nextToken();
                     updatePipeSourceSelfManagedKafkaParameters.setCredentials(SelfManagedKafkaAccessConfigurationCredentialsJsonUnmarshaller.getInstance()
                             .unmarshall(context));
-                }
-                if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
-                    context.nextToken();
-                    updatePipeSourceSelfManagedKafkaParameters.setMaximumBatchingWindowInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
                 if (context.testExpression("ServerRootCaCertificate", targetDepth)) {
                     context.nextToken();

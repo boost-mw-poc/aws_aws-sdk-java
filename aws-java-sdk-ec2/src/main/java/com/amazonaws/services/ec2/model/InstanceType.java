@@ -815,7 +815,16 @@ public enum InstanceType {
     G624xlarge("g6.24xlarge"),
     G648xlarge("g6.48xlarge"),
     Gr64xlarge("gr6.4xlarge"),
-    Gr68xlarge("gr6.8xlarge");
+    Gr68xlarge("gr6.8xlarge"),
+    C7iFlexLarge("c7i-flex.large"),
+    C7iFlexXlarge("c7i-flex.xlarge"),
+    C7iFlex2xlarge("c7i-flex.2xlarge"),
+    C7iFlex4xlarge("c7i-flex.4xlarge"),
+    C7iFlex8xlarge("c7i-flex.8xlarge"),
+    U7i12tb224xlarge("u7i-12tb.224xlarge"),
+    U7in16tb224xlarge("u7in-16tb.224xlarge"),
+    U7in24tb224xlarge("u7in-24tb.224xlarge"),
+    U7in32tb224xlarge("u7in-32tb.224xlarge");
 
     private String value;
 

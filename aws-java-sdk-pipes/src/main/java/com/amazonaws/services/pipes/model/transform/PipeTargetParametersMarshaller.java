@@ -27,30 +27,32 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeTargetParametersMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> BATCHJOBPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BatchJobParameters").build();
-    private static final MarshallingInfo<StructuredPojo> CLOUDWATCHLOGSPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchLogsParameters").build();
-    private static final MarshallingInfo<StructuredPojo> ECSTASKPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EcsTaskParameters").build();
-    private static final MarshallingInfo<StructuredPojo> EVENTBRIDGEEVENTBUSPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EventBridgeEventBusParameters").build();
-    private static final MarshallingInfo<StructuredPojo> HTTPPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HttpParameters").build();
     private static final MarshallingInfo<String> INPUTTEMPLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InputTemplate").build();
-    private static final MarshallingInfo<StructuredPojo> KINESISSTREAMPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KinesisStreamParameters").build();
     private static final MarshallingInfo<StructuredPojo> LAMBDAFUNCTIONPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LambdaFunctionParameters").build();
+    private static final MarshallingInfo<StructuredPojo> STEPFUNCTIONSTATEMACHINEPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StepFunctionStateMachineParameters").build();
+    private static final MarshallingInfo<StructuredPojo> KINESISSTREAMPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KinesisStreamParameters").build();
+    private static final MarshallingInfo<StructuredPojo> ECSTASKPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EcsTaskParameters").build();
+    private static final MarshallingInfo<StructuredPojo> BATCHJOBPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BatchJobParameters").build();
+    private static final MarshallingInfo<StructuredPojo> SQSQUEUEPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SqsQueueParameters").build();
+    private static final MarshallingInfo<StructuredPojo> HTTPPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HttpParameters").build();
     private static final MarshallingInfo<StructuredPojo> REDSHIFTDATAPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RedshiftDataParameters").build();
     private static final MarshallingInfo<StructuredPojo> SAGEMAKERPIPELINEPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SageMakerPipelineParameters").build();
-    private static final MarshallingInfo<StructuredPojo> SQSQUEUEPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SqsQueueParameters").build();
-    private static final MarshallingInfo<StructuredPojo> STEPFUNCTIONSTATEMACHINEPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StepFunctionStateMachineParameters").build();
+    private static final MarshallingInfo<StructuredPojo> EVENTBRIDGEEVENTBUSPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EventBridgeEventBusParameters").build();
+    private static final MarshallingInfo<StructuredPojo> CLOUDWATCHLOGSPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchLogsParameters").build();
+    private static final MarshallingInfo<StructuredPojo> TIMESTREAMPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TimestreamParameters").build();
 
     private static final PipeTargetParametersMarshaller instance = new PipeTargetParametersMarshaller();
 
@@ -68,18 +70,19 @@ public class PipeTargetParametersMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pipeTargetParameters.getBatchJobParameters(), BATCHJOBPARAMETERS_BINDING);
-            protocolMarshaller.marshall(pipeTargetParameters.getCloudWatchLogsParameters(), CLOUDWATCHLOGSPARAMETERS_BINDING);
-            protocolMarshaller.marshall(pipeTargetParameters.getEcsTaskParameters(), ECSTASKPARAMETERS_BINDING);
-            protocolMarshaller.marshall(pipeTargetParameters.getEventBridgeEventBusParameters(), EVENTBRIDGEEVENTBUSPARAMETERS_BINDING);
-            protocolMarshaller.marshall(pipeTargetParameters.getHttpParameters(), HTTPPARAMETERS_BINDING);
             protocolMarshaller.marshall(pipeTargetParameters.getInputTemplate(), INPUTTEMPLATE_BINDING);
-            protocolMarshaller.marshall(pipeTargetParameters.getKinesisStreamParameters(), KINESISSTREAMPARAMETERS_BINDING);
             protocolMarshaller.marshall(pipeTargetParameters.getLambdaFunctionParameters(), LAMBDAFUNCTIONPARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetParameters.getStepFunctionStateMachineParameters(), STEPFUNCTIONSTATEMACHINEPARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetParameters.getKinesisStreamParameters(), KINESISSTREAMPARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetParameters.getEcsTaskParameters(), ECSTASKPARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetParameters.getBatchJobParameters(), BATCHJOBPARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetParameters.getSqsQueueParameters(), SQSQUEUEPARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetParameters.getHttpParameters(), HTTPPARAMETERS_BINDING);
             protocolMarshaller.marshall(pipeTargetParameters.getRedshiftDataParameters(), REDSHIFTDATAPARAMETERS_BINDING);
             protocolMarshaller.marshall(pipeTargetParameters.getSageMakerPipelineParameters(), SAGEMAKERPIPELINEPARAMETERS_BINDING);
-            protocolMarshaller.marshall(pipeTargetParameters.getSqsQueueParameters(), SQSQUEUEPARAMETERS_BINDING);
-            protocolMarshaller.marshall(pipeTargetParameters.getStepFunctionStateMachineParameters(), STEPFUNCTIONSTATEMACHINEPARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetParameters.getEventBridgeEventBusParameters(), EVENTBRIDGEEVENTBUSPARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetParameters.getCloudWatchLogsParameters(), CLOUDWATCHLOGSPARAMETERS_BINDING);
+            protocolMarshaller.marshall(pipeTargetParameters.getTimestreamParameters(), TIMESTREAMPARAMETERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -29,12 +29,12 @@ public class S3LogDestinationMarshaller {
 
     private static final MarshallingInfo<String> BUCKETNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BucketName").build();
+    private static final MarshallingInfo<String> PREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Prefix").build();
     private static final MarshallingInfo<String> BUCKETOWNER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BucketOwner").build();
     private static final MarshallingInfo<String> OUTPUTFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutputFormat").build();
-    private static final MarshallingInfo<String> PREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Prefix").build();
 
     private static final S3LogDestinationMarshaller instance = new S3LogDestinationMarshaller();
 
@@ -53,9 +53,9 @@ public class S3LogDestinationMarshaller {
 
         try {
             protocolMarshaller.marshall(s3LogDestination.getBucketName(), BUCKETNAME_BINDING);
+            protocolMarshaller.marshall(s3LogDestination.getPrefix(), PREFIX_BINDING);
             protocolMarshaller.marshall(s3LogDestination.getBucketOwner(), BUCKETOWNER_BINDING);
             protocolMarshaller.marshall(s3LogDestination.getOutputFormat(), OUTPUTFORMAT_BINDING);
-            protocolMarshaller.marshall(s3LogDestination.getPrefix(), PREFIX_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

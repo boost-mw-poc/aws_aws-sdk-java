@@ -25,6 +25,12 @@ public class ThrottlingException extends com.amazonaws.services.pipes.model.Amaz
 
     /**
      * <p>
+     * The identifier of the service that caused the exception.
+     * </p>
+     */
+    private String serviceCode;
+    /**
+     * <p>
      * The identifier of the quota that caused the exception.
      * </p>
      */
@@ -35,12 +41,6 @@ public class ThrottlingException extends com.amazonaws.services.pipes.model.Amaz
      * </p>
      */
     private Integer retryAfterSeconds;
-    /**
-     * <p>
-     * The identifier of the service that caused the exception.
-     * </p>
-     */
-    private String serviceCode;
 
     /**
      * Constructs a new ThrottlingException with the specified error message.
@@ -50,6 +50,48 @@ public class ThrottlingException extends com.amazonaws.services.pipes.model.Amaz
      */
     public ThrottlingException(String message) {
         super(message);
+    }
+
+    /**
+     * <p>
+     * The identifier of the service that caused the exception.
+     * </p>
+     * 
+     * @param serviceCode
+     *        The identifier of the service that caused the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+    /**
+     * <p>
+     * The identifier of the service that caused the exception.
+     * </p>
+     * 
+     * @return The identifier of the service that caused the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    /**
+     * <p>
+     * The identifier of the service that caused the exception.
+     * </p>
+     * 
+     * @param serviceCode
+     *        The identifier of the service that caused the exception.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ThrottlingException withServiceCode(String serviceCode) {
+        setServiceCode(serviceCode);
+        return this;
     }
 
     /**
@@ -133,48 +175,6 @@ public class ThrottlingException extends com.amazonaws.services.pipes.model.Amaz
 
     public ThrottlingException withRetryAfterSeconds(Integer retryAfterSeconds) {
         setRetryAfterSeconds(retryAfterSeconds);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The identifier of the service that caused the exception.
-     * </p>
-     * 
-     * @param serviceCode
-     *        The identifier of the service that caused the exception.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-    }
-
-    /**
-     * <p>
-     * The identifier of the service that caused the exception.
-     * </p>
-     * 
-     * @return The identifier of the service that caused the exception.
-     */
-
-    @com.fasterxml.jackson.annotation.JsonProperty("serviceCode")
-    public String getServiceCode() {
-        return this.serviceCode;
-    }
-
-    /**
-     * <p>
-     * The identifier of the service that caused the exception.
-     * </p>
-     * 
-     * @param serviceCode
-     *        The identifier of the service that caused the exception.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ThrottlingException withServiceCode(String serviceCode) {
-        setServiceCode(serviceCode);
         return this;
     }
 

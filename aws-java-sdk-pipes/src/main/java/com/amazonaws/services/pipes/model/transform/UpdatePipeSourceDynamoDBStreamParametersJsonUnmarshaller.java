@@ -57,6 +57,10 @@ public class UpdatePipeSourceDynamoDBStreamParametersJsonUnmarshaller implements
                     context.nextToken();
                     updatePipeSourceDynamoDBStreamParameters.setDeadLetterConfig(DeadLetterConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OnPartialBatchItemFailure", targetDepth)) {
+                    context.nextToken();
+                    updatePipeSourceDynamoDBStreamParameters.setOnPartialBatchItemFailure(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
                     context.nextToken();
                     updatePipeSourceDynamoDBStreamParameters.setMaximumBatchingWindowInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
@@ -68,10 +72,6 @@ public class UpdatePipeSourceDynamoDBStreamParametersJsonUnmarshaller implements
                 if (context.testExpression("MaximumRetryAttempts", targetDepth)) {
                     context.nextToken();
                     updatePipeSourceDynamoDBStreamParameters.setMaximumRetryAttempts(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("OnPartialBatchItemFailure", targetDepth)) {
-                    context.nextToken();
-                    updatePipeSourceDynamoDBStreamParameters.setOnPartialBatchItemFailure(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("ParallelizationFactor", targetDepth)) {
                     context.nextToken();

@@ -29,10 +29,10 @@ public class UpdatePipeSourceSelfManagedKafkaParametersMarshaller {
 
     private static final MarshallingInfo<Integer> BATCHSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BatchSize").build();
-    private static final MarshallingInfo<StructuredPojo> CREDENTIALS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Credentials").build();
     private static final MarshallingInfo<Integer> MAXIMUMBATCHINGWINDOWINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaximumBatchingWindowInSeconds").build();
+    private static final MarshallingInfo<StructuredPojo> CREDENTIALS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Credentials").build();
     private static final MarshallingInfo<String> SERVERROOTCACERTIFICATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServerRootCaCertificate").build();
     private static final MarshallingInfo<StructuredPojo> VPC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -55,8 +55,8 @@ public class UpdatePipeSourceSelfManagedKafkaParametersMarshaller {
 
         try {
             protocolMarshaller.marshall(updatePipeSourceSelfManagedKafkaParameters.getBatchSize(), BATCHSIZE_BINDING);
-            protocolMarshaller.marshall(updatePipeSourceSelfManagedKafkaParameters.getCredentials(), CREDENTIALS_BINDING);
             protocolMarshaller.marshall(updatePipeSourceSelfManagedKafkaParameters.getMaximumBatchingWindowInSeconds(), MAXIMUMBATCHINGWINDOWINSECONDS_BINDING);
+            protocolMarshaller.marshall(updatePipeSourceSelfManagedKafkaParameters.getCredentials(), CREDENTIALS_BINDING);
             protocolMarshaller.marshall(updatePipeSourceSelfManagedKafkaParameters.getServerRootCaCertificate(), SERVERROOTCACERTIFICATE_BINDING);
             protocolMarshaller.marshall(updatePipeSourceSelfManagedKafkaParameters.getVpc(), VPC_BINDING);
         } catch (Exception e) {

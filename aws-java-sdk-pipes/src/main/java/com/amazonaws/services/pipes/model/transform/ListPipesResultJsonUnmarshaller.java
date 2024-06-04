@@ -48,15 +48,15 @@ public class ListPipesResultJsonUnmarshaller implements Unmarshaller<ListPipesRe
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("NextToken", targetDepth)) {
-                    context.nextToken();
-                    listPipesResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("Pipes", targetDepth)) {
                     context.nextToken();
                     listPipesResult.setPipes(new ListUnmarshaller<Pipe>(PipeJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("NextToken", targetDepth)) {
+                    context.nextToken();
+                    listPipesResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

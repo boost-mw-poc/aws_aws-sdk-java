@@ -33,53 +33,13 @@ public class MSKAccessCredentials implements Serializable, Cloneable, Structured
      * The ARN of the Secrets Manager secret.
      * </p>
      */
-    private String clientCertificateTlsAuth;
-    /**
-     * <p>
-     * The ARN of the Secrets Manager secret.
-     * </p>
-     */
     private String saslScram512Auth;
-
     /**
      * <p>
      * The ARN of the Secrets Manager secret.
      * </p>
-     * 
-     * @param clientCertificateTlsAuth
-     *        The ARN of the Secrets Manager secret.
      */
-
-    public void setClientCertificateTlsAuth(String clientCertificateTlsAuth) {
-        this.clientCertificateTlsAuth = clientCertificateTlsAuth;
-    }
-
-    /**
-     * <p>
-     * The ARN of the Secrets Manager secret.
-     * </p>
-     * 
-     * @return The ARN of the Secrets Manager secret.
-     */
-
-    public String getClientCertificateTlsAuth() {
-        return this.clientCertificateTlsAuth;
-    }
-
-    /**
-     * <p>
-     * The ARN of the Secrets Manager secret.
-     * </p>
-     * 
-     * @param clientCertificateTlsAuth
-     *        The ARN of the Secrets Manager secret.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public MSKAccessCredentials withClientCertificateTlsAuth(String clientCertificateTlsAuth) {
-        setClientCertificateTlsAuth(clientCertificateTlsAuth);
-        return this;
-    }
+    private String clientCertificateTlsAuth;
 
     /**
      * <p>
@@ -122,6 +82,46 @@ public class MSKAccessCredentials implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The ARN of the Secrets Manager secret.
+     * </p>
+     * 
+     * @param clientCertificateTlsAuth
+     *        The ARN of the Secrets Manager secret.
+     */
+
+    public void setClientCertificateTlsAuth(String clientCertificateTlsAuth) {
+        this.clientCertificateTlsAuth = clientCertificateTlsAuth;
+    }
+
+    /**
+     * <p>
+     * The ARN of the Secrets Manager secret.
+     * </p>
+     * 
+     * @return The ARN of the Secrets Manager secret.
+     */
+
+    public String getClientCertificateTlsAuth() {
+        return this.clientCertificateTlsAuth;
+    }
+
+    /**
+     * <p>
+     * The ARN of the Secrets Manager secret.
+     * </p>
+     * 
+     * @param clientCertificateTlsAuth
+     *        The ARN of the Secrets Manager secret.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MSKAccessCredentials withClientCertificateTlsAuth(String clientCertificateTlsAuth) {
+        setClientCertificateTlsAuth(clientCertificateTlsAuth);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,10 +133,10 @@ public class MSKAccessCredentials implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getClientCertificateTlsAuth() != null)
-            sb.append("ClientCertificateTlsAuth: ").append(getClientCertificateTlsAuth()).append(",");
         if (getSaslScram512Auth() != null)
-            sb.append("SaslScram512Auth: ").append(getSaslScram512Auth());
+            sb.append("SaslScram512Auth: ").append(getSaslScram512Auth()).append(",");
+        if (getClientCertificateTlsAuth() != null)
+            sb.append("ClientCertificateTlsAuth: ").append(getClientCertificateTlsAuth());
         sb.append("}");
         return sb.toString();
     }
@@ -151,13 +151,13 @@ public class MSKAccessCredentials implements Serializable, Cloneable, Structured
         if (obj instanceof MSKAccessCredentials == false)
             return false;
         MSKAccessCredentials other = (MSKAccessCredentials) obj;
-        if (other.getClientCertificateTlsAuth() == null ^ this.getClientCertificateTlsAuth() == null)
-            return false;
-        if (other.getClientCertificateTlsAuth() != null && other.getClientCertificateTlsAuth().equals(this.getClientCertificateTlsAuth()) == false)
-            return false;
         if (other.getSaslScram512Auth() == null ^ this.getSaslScram512Auth() == null)
             return false;
         if (other.getSaslScram512Auth() != null && other.getSaslScram512Auth().equals(this.getSaslScram512Auth()) == false)
+            return false;
+        if (other.getClientCertificateTlsAuth() == null ^ this.getClientCertificateTlsAuth() == null)
+            return false;
+        if (other.getClientCertificateTlsAuth() != null && other.getClientCertificateTlsAuth().equals(this.getClientCertificateTlsAuth()) == false)
             return false;
         return true;
     }
@@ -167,8 +167,8 @@ public class MSKAccessCredentials implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getClientCertificateTlsAuth() == null) ? 0 : getClientCertificateTlsAuth().hashCode());
         hashCode = prime * hashCode + ((getSaslScram512Auth() == null) ? 0 : getSaslScram512Auth().hashCode());
+        hashCode = prime * hashCode + ((getClientCertificateTlsAuth() == null) ? 0 : getClientCertificateTlsAuth().hashCode());
         return hashCode;
     }
 

@@ -28,14 +28,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeTargetEventBridgeEventBusParametersMarshaller {
 
-    private static final MarshallingInfo<String> DETAILTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DetailType").build();
     private static final MarshallingInfo<String> ENDPOINTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointId").build();
-    private static final MarshallingInfo<List> RESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Resources").build();
+    private static final MarshallingInfo<String> DETAILTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DetailType").build();
     private static final MarshallingInfo<String> SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Source").build();
+    private static final MarshallingInfo<List> RESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Resources").build();
     private static final MarshallingInfo<String> TIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Time").build();
 
@@ -55,10 +55,10 @@ public class PipeTargetEventBridgeEventBusParametersMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pipeTargetEventBridgeEventBusParameters.getDetailType(), DETAILTYPE_BINDING);
             protocolMarshaller.marshall(pipeTargetEventBridgeEventBusParameters.getEndpointId(), ENDPOINTID_BINDING);
-            protocolMarshaller.marshall(pipeTargetEventBridgeEventBusParameters.getResources(), RESOURCES_BINDING);
+            protocolMarshaller.marshall(pipeTargetEventBridgeEventBusParameters.getDetailType(), DETAILTYPE_BINDING);
             protocolMarshaller.marshall(pipeTargetEventBridgeEventBusParameters.getSource(), SOURCE_BINDING);
+            protocolMarshaller.marshall(pipeTargetEventBridgeEventBusParameters.getResources(), RESOURCES_BINDING);
             protocolMarshaller.marshall(pipeTargetEventBridgeEventBusParameters.getTime(), TIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

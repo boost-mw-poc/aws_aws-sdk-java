@@ -27,26 +27,26 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeMarshaller {
 
-    private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Arn").build();
-    private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
-    private static final MarshallingInfo<String> CURRENTSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CurrentState").build();
-    private static final MarshallingInfo<String> DESIREDSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredState").build();
-    private static final MarshallingInfo<String> ENRICHMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Enrichment").build();
-    private static final MarshallingInfo<java.util.Date> LASTMODIFIEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Name").build();
-    private static final MarshallingInfo<String> SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("Source").build();
+    private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Arn").build();
+    private static final MarshallingInfo<String> DESIREDSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredState").build();
+    private static final MarshallingInfo<String> CURRENTSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CurrentState").build();
     private static final MarshallingInfo<String> STATEREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StateReason").build();
+    private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> LASTMODIFIEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Source").build();
     private static final MarshallingInfo<String> TARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Target").build();
+    private static final MarshallingInfo<String> ENRICHMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Enrichment").build();
 
     private static final PipeMarshaller instance = new PipeMarshaller();
 
@@ -64,16 +64,16 @@ public class PipeMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pipe.getArn(), ARN_BINDING);
-            protocolMarshaller.marshall(pipe.getCreationTime(), CREATIONTIME_BINDING);
-            protocolMarshaller.marshall(pipe.getCurrentState(), CURRENTSTATE_BINDING);
-            protocolMarshaller.marshall(pipe.getDesiredState(), DESIREDSTATE_BINDING);
-            protocolMarshaller.marshall(pipe.getEnrichment(), ENRICHMENT_BINDING);
-            protocolMarshaller.marshall(pipe.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
             protocolMarshaller.marshall(pipe.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(pipe.getSource(), SOURCE_BINDING);
+            protocolMarshaller.marshall(pipe.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(pipe.getDesiredState(), DESIREDSTATE_BINDING);
+            protocolMarshaller.marshall(pipe.getCurrentState(), CURRENTSTATE_BINDING);
             protocolMarshaller.marshall(pipe.getStateReason(), STATEREASON_BINDING);
+            protocolMarshaller.marshall(pipe.getCreationTime(), CREATIONTIME_BINDING);
+            protocolMarshaller.marshall(pipe.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
+            protocolMarshaller.marshall(pipe.getSource(), SOURCE_BINDING);
             protocolMarshaller.marshall(pipe.getTarget(), TARGET_BINDING);
+            protocolMarshaller.marshall(pipe.getEnrichment(), ENRICHMENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

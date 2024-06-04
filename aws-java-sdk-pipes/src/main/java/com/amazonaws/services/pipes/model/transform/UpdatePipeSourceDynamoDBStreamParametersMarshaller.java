@@ -31,14 +31,14 @@ public class UpdatePipeSourceDynamoDBStreamParametersMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BatchSize").build();
     private static final MarshallingInfo<StructuredPojo> DEADLETTERCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeadLetterConfig").build();
+    private static final MarshallingInfo<String> ONPARTIALBATCHITEMFAILURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OnPartialBatchItemFailure").build();
     private static final MarshallingInfo<Integer> MAXIMUMBATCHINGWINDOWINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaximumBatchingWindowInSeconds").build();
     private static final MarshallingInfo<Integer> MAXIMUMRECORDAGEINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaximumRecordAgeInSeconds").build();
     private static final MarshallingInfo<Integer> MAXIMUMRETRYATTEMPTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaximumRetryAttempts").build();
-    private static final MarshallingInfo<String> ONPARTIALBATCHITEMFAILURE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OnPartialBatchItemFailure").build();
     private static final MarshallingInfo<Integer> PARALLELIZATIONFACTOR_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParallelizationFactor").build();
 
@@ -60,10 +60,10 @@ public class UpdatePipeSourceDynamoDBStreamParametersMarshaller {
         try {
             protocolMarshaller.marshall(updatePipeSourceDynamoDBStreamParameters.getBatchSize(), BATCHSIZE_BINDING);
             protocolMarshaller.marshall(updatePipeSourceDynamoDBStreamParameters.getDeadLetterConfig(), DEADLETTERCONFIG_BINDING);
+            protocolMarshaller.marshall(updatePipeSourceDynamoDBStreamParameters.getOnPartialBatchItemFailure(), ONPARTIALBATCHITEMFAILURE_BINDING);
             protocolMarshaller.marshall(updatePipeSourceDynamoDBStreamParameters.getMaximumBatchingWindowInSeconds(), MAXIMUMBATCHINGWINDOWINSECONDS_BINDING);
             protocolMarshaller.marshall(updatePipeSourceDynamoDBStreamParameters.getMaximumRecordAgeInSeconds(), MAXIMUMRECORDAGEINSECONDS_BINDING);
             protocolMarshaller.marshall(updatePipeSourceDynamoDBStreamParameters.getMaximumRetryAttempts(), MAXIMUMRETRYATTEMPTS_BINDING);
-            protocolMarshaller.marshall(updatePipeSourceDynamoDBStreamParameters.getOnPartialBatchItemFailure(), ONPARTIALBATCHITEMFAILURE_BINDING);
             protocolMarshaller.marshall(updatePipeSourceDynamoDBStreamParameters.getParallelizationFactor(), PARALLELIZATIONFACTOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

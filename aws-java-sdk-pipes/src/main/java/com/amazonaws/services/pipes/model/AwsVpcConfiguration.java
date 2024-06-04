@@ -31,12 +31,11 @@ public class AwsVpcConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
-     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
-     * <code>FARGATE</code>.
+     * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as
+     * many as 16 subnets.
      * </p>
      */
-    private String assignPublicIp;
+    private java.util.List<String> subnets;
     /**
      * <p>
      * Specifies the security groups associated with the task. These security groups must all be in the same VPC. You
@@ -47,84 +46,88 @@ public class AwsVpcConfiguration implements Serializable, Cloneable, StructuredP
     private java.util.List<String> securityGroups;
     /**
      * <p>
+     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
+     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
+     * <code>FARGATE</code>.
+     * </p>
+     */
+    private String assignPublicIp;
+
+    /**
+     * <p>
      * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as
      * many as 16 subnets.
      * </p>
-     */
-    private java.util.List<String> subnets;
-
-    /**
-     * <p>
-     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
-     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
-     * <code>FARGATE</code>.
-     * </p>
      * 
-     * @param assignPublicIp
-     *        Specifies whether the task's elastic network interface receives a public IP address. You can specify
-     *        <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
-     *        <code>FARGATE</code>.
-     * @see AssignPublicIp
+     * @return Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can
+     *         specify as many as 16 subnets.
      */
 
-    public void setAssignPublicIp(String assignPublicIp) {
-        this.assignPublicIp = assignPublicIp;
+    public java.util.List<String> getSubnets() {
+        return subnets;
     }
 
     /**
      * <p>
-     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
-     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
-     * <code>FARGATE</code>.
+     * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as
+     * many as 16 subnets.
      * </p>
      * 
-     * @return Specifies whether the task's elastic network interface receives a public IP address. You can specify
-     *         <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
-     *         <code>FARGATE</code>.
-     * @see AssignPublicIp
+     * @param subnets
+     *        Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify
+     *        as many as 16 subnets.
      */
 
-    public String getAssignPublicIp() {
-        return this.assignPublicIp;
+    public void setSubnets(java.util.Collection<String> subnets) {
+        if (subnets == null) {
+            this.subnets = null;
+            return;
+        }
+
+        this.subnets = new java.util.ArrayList<String>(subnets);
     }
 
     /**
      * <p>
-     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
-     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
-     * <code>FARGATE</code>.
+     * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as
+     * many as 16 subnets.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSubnets(java.util.Collection)} or {@link #withSubnets(java.util.Collection)} if you want to override
+     * the existing values.
      * </p>
      * 
-     * @param assignPublicIp
-     *        Specifies whether the task's elastic network interface receives a public IP address. You can specify
-     *        <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
-     *        <code>FARGATE</code>.
+     * @param subnets
+     *        Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify
+     *        as many as 16 subnets.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see AssignPublicIp
      */
 
-    public AwsVpcConfiguration withAssignPublicIp(String assignPublicIp) {
-        setAssignPublicIp(assignPublicIp);
+    public AwsVpcConfiguration withSubnets(String... subnets) {
+        if (this.subnets == null) {
+            setSubnets(new java.util.ArrayList<String>(subnets.length));
+        }
+        for (String ele : subnets) {
+            this.subnets.add(ele);
+        }
         return this;
     }
 
     /**
      * <p>
-     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
-     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
-     * <code>FARGATE</code>.
+     * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as
+     * many as 16 subnets.
      * </p>
      * 
-     * @param assignPublicIp
-     *        Specifies whether the task's elastic network interface receives a public IP address. You can specify
-     *        <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
-     *        <code>FARGATE</code>.
+     * @param subnets
+     *        Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify
+     *        as many as 16 subnets.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see AssignPublicIp
      */
 
-    public AwsVpcConfiguration withAssignPublicIp(AssignPublicIp assignPublicIp) {
-        this.assignPublicIp = assignPublicIp.toString();
+    public AwsVpcConfiguration withSubnets(java.util.Collection<String> subnets) {
+        setSubnets(subnets);
         return this;
     }
 
@@ -216,79 +219,76 @@ public class AwsVpcConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as
-     * many as 16 subnets.
+     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
+     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
+     * <code>FARGATE</code>.
      * </p>
      * 
-     * @return Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can
-     *         specify as many as 16 subnets.
+     * @param assignPublicIp
+     *        Specifies whether the task's elastic network interface receives a public IP address. You can specify
+     *        <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
+     *        <code>FARGATE</code>.
+     * @see AssignPublicIp
      */
 
-    public java.util.List<String> getSubnets() {
-        return subnets;
+    public void setAssignPublicIp(String assignPublicIp) {
+        this.assignPublicIp = assignPublicIp;
     }
 
     /**
      * <p>
-     * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as
-     * many as 16 subnets.
+     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
+     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
+     * <code>FARGATE</code>.
      * </p>
      * 
-     * @param subnets
-     *        Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify
-     *        as many as 16 subnets.
+     * @return Specifies whether the task's elastic network interface receives a public IP address. You can specify
+     *         <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
+     *         <code>FARGATE</code>.
+     * @see AssignPublicIp
      */
 
-    public void setSubnets(java.util.Collection<String> subnets) {
-        if (subnets == null) {
-            this.subnets = null;
-            return;
-        }
-
-        this.subnets = new java.util.ArrayList<String>(subnets);
+    public String getAssignPublicIp() {
+        return this.assignPublicIp;
     }
 
     /**
      * <p>
-     * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as
-     * many as 16 subnets.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setSubnets(java.util.Collection)} or {@link #withSubnets(java.util.Collection)} if you want to override
-     * the existing values.
+     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
+     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
+     * <code>FARGATE</code>.
      * </p>
      * 
-     * @param subnets
-     *        Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify
-     *        as many as 16 subnets.
+     * @param assignPublicIp
+     *        Specifies whether the task's elastic network interface receives a public IP address. You can specify
+     *        <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
+     *        <code>FARGATE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AssignPublicIp
      */
 
-    public AwsVpcConfiguration withSubnets(String... subnets) {
-        if (this.subnets == null) {
-            setSubnets(new java.util.ArrayList<String>(subnets.length));
-        }
-        for (String ele : subnets) {
-            this.subnets.add(ele);
-        }
+    public AwsVpcConfiguration withAssignPublicIp(String assignPublicIp) {
+        setAssignPublicIp(assignPublicIp);
         return this;
     }
 
     /**
      * <p>
-     * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as
-     * many as 16 subnets.
+     * Specifies whether the task's elastic network interface receives a public IP address. You can specify
+     * <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
+     * <code>FARGATE</code>.
      * </p>
      * 
-     * @param subnets
-     *        Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify
-     *        as many as 16 subnets.
+     * @param assignPublicIp
+     *        Specifies whether the task's elastic network interface receives a public IP address. You can specify
+     *        <code>ENABLED</code> only when <code>LaunchType</code> in <code>EcsParameters</code> is set to
+     *        <code>FARGATE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AssignPublicIp
      */
 
-    public AwsVpcConfiguration withSubnets(java.util.Collection<String> subnets) {
-        setSubnets(subnets);
+    public AwsVpcConfiguration withAssignPublicIp(AssignPublicIp assignPublicIp) {
+        this.assignPublicIp = assignPublicIp.toString();
         return this;
     }
 
@@ -304,12 +304,12 @@ public class AwsVpcConfiguration implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAssignPublicIp() != null)
-            sb.append("AssignPublicIp: ").append(getAssignPublicIp()).append(",");
+        if (getSubnets() != null)
+            sb.append("Subnets: ").append("***Sensitive Data Redacted***").append(",");
         if (getSecurityGroups() != null)
             sb.append("SecurityGroups: ").append("***Sensitive Data Redacted***").append(",");
-        if (getSubnets() != null)
-            sb.append("Subnets: ").append("***Sensitive Data Redacted***");
+        if (getAssignPublicIp() != null)
+            sb.append("AssignPublicIp: ").append(getAssignPublicIp());
         sb.append("}");
         return sb.toString();
     }
@@ -324,17 +324,17 @@ public class AwsVpcConfiguration implements Serializable, Cloneable, StructuredP
         if (obj instanceof AwsVpcConfiguration == false)
             return false;
         AwsVpcConfiguration other = (AwsVpcConfiguration) obj;
-        if (other.getAssignPublicIp() == null ^ this.getAssignPublicIp() == null)
+        if (other.getSubnets() == null ^ this.getSubnets() == null)
             return false;
-        if (other.getAssignPublicIp() != null && other.getAssignPublicIp().equals(this.getAssignPublicIp()) == false)
+        if (other.getSubnets() != null && other.getSubnets().equals(this.getSubnets()) == false)
             return false;
         if (other.getSecurityGroups() == null ^ this.getSecurityGroups() == null)
             return false;
         if (other.getSecurityGroups() != null && other.getSecurityGroups().equals(this.getSecurityGroups()) == false)
             return false;
-        if (other.getSubnets() == null ^ this.getSubnets() == null)
+        if (other.getAssignPublicIp() == null ^ this.getAssignPublicIp() == null)
             return false;
-        if (other.getSubnets() != null && other.getSubnets().equals(this.getSubnets()) == false)
+        if (other.getAssignPublicIp() != null && other.getAssignPublicIp().equals(this.getAssignPublicIp()) == false)
             return false;
         return true;
     }
@@ -344,9 +344,9 @@ public class AwsVpcConfiguration implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAssignPublicIp() == null) ? 0 : getAssignPublicIp().hashCode());
-        hashCode = prime * hashCode + ((getSecurityGroups() == null) ? 0 : getSecurityGroups().hashCode());
         hashCode = prime * hashCode + ((getSubnets() == null) ? 0 : getSubnets().hashCode());
+        hashCode = prime * hashCode + ((getSecurityGroups() == null) ? 0 : getSecurityGroups().hashCode());
+        hashCode = prime * hashCode + ((getAssignPublicIp() == null) ? 0 : getAssignPublicIp().hashCode());
         return hashCode;
     }
 

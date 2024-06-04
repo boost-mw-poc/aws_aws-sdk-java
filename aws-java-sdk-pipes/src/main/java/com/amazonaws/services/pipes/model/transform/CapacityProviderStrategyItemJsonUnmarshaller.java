@@ -48,10 +48,6 @@ public class CapacityProviderStrategyItemJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("base", targetDepth)) {
-                    context.nextToken();
-                    capacityProviderStrategyItem.setBase(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (context.testExpression("capacityProvider", targetDepth)) {
                     context.nextToken();
                     capacityProviderStrategyItem.setCapacityProvider(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,6 +55,10 @@ public class CapacityProviderStrategyItemJsonUnmarshaller implements Unmarshalle
                 if (context.testExpression("weight", targetDepth)) {
                     context.nextToken();
                     capacityProviderStrategyItem.setWeight(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("base", targetDepth)) {
+                    context.nextToken();
+                    capacityProviderStrategyItem.setBase(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

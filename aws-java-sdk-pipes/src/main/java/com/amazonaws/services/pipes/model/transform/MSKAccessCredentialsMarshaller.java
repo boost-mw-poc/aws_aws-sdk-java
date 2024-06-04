@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class MSKAccessCredentialsMarshaller {
 
-    private static final MarshallingInfo<String> CLIENTCERTIFICATETLSAUTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientCertificateTlsAuth").build();
     private static final MarshallingInfo<String> SASLSCRAM512AUTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SaslScram512Auth").build();
+    private static final MarshallingInfo<String> CLIENTCERTIFICATETLSAUTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientCertificateTlsAuth").build();
 
     private static final MSKAccessCredentialsMarshaller instance = new MSKAccessCredentialsMarshaller();
 
@@ -48,8 +48,8 @@ public class MSKAccessCredentialsMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(mSKAccessCredentials.getClientCertificateTlsAuth(), CLIENTCERTIFICATETLSAUTH_BINDING);
             protocolMarshaller.marshall(mSKAccessCredentials.getSaslScram512Auth(), SASLSCRAM512AUTH_BINDING);
+            protocolMarshaller.marshall(mSKAccessCredentials.getClientCertificateTlsAuth(), CLIENTCERTIFICATETLSAUTH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

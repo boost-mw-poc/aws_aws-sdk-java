@@ -29,10 +29,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeTargetHttpParametersMarshaller {
 
-    private static final MarshallingInfo<Map> HEADERPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HeaderParameters").build();
     private static final MarshallingInfo<List> PATHPARAMETERVALUES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PathParameterValues").build();
+    private static final MarshallingInfo<Map> HEADERPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HeaderParameters").build();
     private static final MarshallingInfo<Map> QUERYSTRINGPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QueryStringParameters").build();
 
@@ -52,8 +52,8 @@ public class PipeTargetHttpParametersMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pipeTargetHttpParameters.getHeaderParameters(), HEADERPARAMETERS_BINDING);
             protocolMarshaller.marshall(pipeTargetHttpParameters.getPathParameterValues(), PATHPARAMETERVALUES_BINDING);
+            protocolMarshaller.marshall(pipeTargetHttpParameters.getHeaderParameters(), HEADERPARAMETERS_BINDING);
             protocolMarshaller.marshall(pipeTargetHttpParameters.getQueryStringParameters(), QUERYSTRINGPARAMETERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -42,6 +42,13 @@ public class PipeSourceDynamoDBStreamParameters implements Serializable, Cloneab
     private DeadLetterConfig deadLetterConfig;
     /**
      * <p>
+     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
+     * retry each half until all the records are processed or there is one failed message left in the batch.
+     * </p>
+     */
+    private String onPartialBatchItemFailure;
+    /**
+     * <p>
      * The maximum length of a time to wait for events.
      * </p>
      */
@@ -61,13 +68,6 @@ public class PipeSourceDynamoDBStreamParameters implements Serializable, Cloneab
      * </p>
      */
     private Integer maximumRetryAttempts;
-    /**
-     * <p>
-     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
-     * retry each half until all the records are processed or there is one failed message left in the batch.
-     * </p>
-     */
-    private String onPartialBatchItemFailure;
     /**
      * <p>
      * (Streams only) The number of batches to process concurrently from each shard. The default value is 1.
@@ -158,6 +158,74 @@ public class PipeSourceDynamoDBStreamParameters implements Serializable, Cloneab
 
     public PipeSourceDynamoDBStreamParameters withDeadLetterConfig(DeadLetterConfig deadLetterConfig) {
         setDeadLetterConfig(deadLetterConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
+     * retry each half until all the records are processed or there is one failed message left in the batch.
+     * </p>
+     * 
+     * @param onPartialBatchItemFailure
+     *        (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch
+     *        and retry each half until all the records are processed or there is one failed message left in the batch.
+     * @see OnPartialBatchItemFailureStreams
+     */
+
+    public void setOnPartialBatchItemFailure(String onPartialBatchItemFailure) {
+        this.onPartialBatchItemFailure = onPartialBatchItemFailure;
+    }
+
+    /**
+     * <p>
+     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
+     * retry each half until all the records are processed or there is one failed message left in the batch.
+     * </p>
+     * 
+     * @return (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each
+     *         batch and retry each half until all the records are processed or there is one failed message left in the
+     *         batch.
+     * @see OnPartialBatchItemFailureStreams
+     */
+
+    public String getOnPartialBatchItemFailure() {
+        return this.onPartialBatchItemFailure;
+    }
+
+    /**
+     * <p>
+     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
+     * retry each half until all the records are processed or there is one failed message left in the batch.
+     * </p>
+     * 
+     * @param onPartialBatchItemFailure
+     *        (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch
+     *        and retry each half until all the records are processed or there is one failed message left in the batch.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OnPartialBatchItemFailureStreams
+     */
+
+    public PipeSourceDynamoDBStreamParameters withOnPartialBatchItemFailure(String onPartialBatchItemFailure) {
+        setOnPartialBatchItemFailure(onPartialBatchItemFailure);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
+     * retry each half until all the records are processed or there is one failed message left in the batch.
+     * </p>
+     * 
+     * @param onPartialBatchItemFailure
+     *        (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch
+     *        and retry each half until all the records are processed or there is one failed message left in the batch.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OnPartialBatchItemFailureStreams
+     */
+
+    public PipeSourceDynamoDBStreamParameters withOnPartialBatchItemFailure(OnPartialBatchItemFailureStreams onPartialBatchItemFailure) {
+        this.onPartialBatchItemFailure = onPartialBatchItemFailure.toString();
         return this;
     }
 
@@ -301,74 +369,6 @@ public class PipeSourceDynamoDBStreamParameters implements Serializable, Cloneab
 
     /**
      * <p>
-     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
-     * retry each half until all the records are processed or there is one failed message left in the batch.
-     * </p>
-     * 
-     * @param onPartialBatchItemFailure
-     *        (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch
-     *        and retry each half until all the records are processed or there is one failed message left in the batch.
-     * @see OnPartialBatchItemFailureStreams
-     */
-
-    public void setOnPartialBatchItemFailure(String onPartialBatchItemFailure) {
-        this.onPartialBatchItemFailure = onPartialBatchItemFailure;
-    }
-
-    /**
-     * <p>
-     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
-     * retry each half until all the records are processed or there is one failed message left in the batch.
-     * </p>
-     * 
-     * @return (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each
-     *         batch and retry each half until all the records are processed or there is one failed message left in the
-     *         batch.
-     * @see OnPartialBatchItemFailureStreams
-     */
-
-    public String getOnPartialBatchItemFailure() {
-        return this.onPartialBatchItemFailure;
-    }
-
-    /**
-     * <p>
-     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
-     * retry each half until all the records are processed or there is one failed message left in the batch.
-     * </p>
-     * 
-     * @param onPartialBatchItemFailure
-     *        (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch
-     *        and retry each half until all the records are processed or there is one failed message left in the batch.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see OnPartialBatchItemFailureStreams
-     */
-
-    public PipeSourceDynamoDBStreamParameters withOnPartialBatchItemFailure(String onPartialBatchItemFailure) {
-        setOnPartialBatchItemFailure(onPartialBatchItemFailure);
-        return this;
-    }
-
-    /**
-     * <p>
-     * (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch and
-     * retry each half until all the records are processed or there is one failed message left in the batch.
-     * </p>
-     * 
-     * @param onPartialBatchItemFailure
-     *        (Streams only) Define how to handle item process failures. <code>AUTOMATIC_BISECT</code> halves each batch
-     *        and retry each half until all the records are processed or there is one failed message left in the batch.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see OnPartialBatchItemFailureStreams
-     */
-
-    public PipeSourceDynamoDBStreamParameters withOnPartialBatchItemFailure(OnPartialBatchItemFailureStreams onPartialBatchItemFailure) {
-        this.onPartialBatchItemFailure = onPartialBatchItemFailure.toString();
-        return this;
-    }
-
-    /**
-     * <p>
      * (Streams only) The number of batches to process concurrently from each shard. The default value is 1.
      * </p>
      * 
@@ -482,14 +482,14 @@ public class PipeSourceDynamoDBStreamParameters implements Serializable, Cloneab
             sb.append("BatchSize: ").append(getBatchSize()).append(",");
         if (getDeadLetterConfig() != null)
             sb.append("DeadLetterConfig: ").append(getDeadLetterConfig()).append(",");
+        if (getOnPartialBatchItemFailure() != null)
+            sb.append("OnPartialBatchItemFailure: ").append(getOnPartialBatchItemFailure()).append(",");
         if (getMaximumBatchingWindowInSeconds() != null)
             sb.append("MaximumBatchingWindowInSeconds: ").append(getMaximumBatchingWindowInSeconds()).append(",");
         if (getMaximumRecordAgeInSeconds() != null)
             sb.append("MaximumRecordAgeInSeconds: ").append(getMaximumRecordAgeInSeconds()).append(",");
         if (getMaximumRetryAttempts() != null)
             sb.append("MaximumRetryAttempts: ").append(getMaximumRetryAttempts()).append(",");
-        if (getOnPartialBatchItemFailure() != null)
-            sb.append("OnPartialBatchItemFailure: ").append(getOnPartialBatchItemFailure()).append(",");
         if (getParallelizationFactor() != null)
             sb.append("ParallelizationFactor: ").append(getParallelizationFactor()).append(",");
         if (getStartingPosition() != null)
@@ -516,6 +516,10 @@ public class PipeSourceDynamoDBStreamParameters implements Serializable, Cloneab
             return false;
         if (other.getDeadLetterConfig() != null && other.getDeadLetterConfig().equals(this.getDeadLetterConfig()) == false)
             return false;
+        if (other.getOnPartialBatchItemFailure() == null ^ this.getOnPartialBatchItemFailure() == null)
+            return false;
+        if (other.getOnPartialBatchItemFailure() != null && other.getOnPartialBatchItemFailure().equals(this.getOnPartialBatchItemFailure()) == false)
+            return false;
         if (other.getMaximumBatchingWindowInSeconds() == null ^ this.getMaximumBatchingWindowInSeconds() == null)
             return false;
         if (other.getMaximumBatchingWindowInSeconds() != null
@@ -528,10 +532,6 @@ public class PipeSourceDynamoDBStreamParameters implements Serializable, Cloneab
         if (other.getMaximumRetryAttempts() == null ^ this.getMaximumRetryAttempts() == null)
             return false;
         if (other.getMaximumRetryAttempts() != null && other.getMaximumRetryAttempts().equals(this.getMaximumRetryAttempts()) == false)
-            return false;
-        if (other.getOnPartialBatchItemFailure() == null ^ this.getOnPartialBatchItemFailure() == null)
-            return false;
-        if (other.getOnPartialBatchItemFailure() != null && other.getOnPartialBatchItemFailure().equals(this.getOnPartialBatchItemFailure()) == false)
             return false;
         if (other.getParallelizationFactor() == null ^ this.getParallelizationFactor() == null)
             return false;
@@ -551,10 +551,10 @@ public class PipeSourceDynamoDBStreamParameters implements Serializable, Cloneab
 
         hashCode = prime * hashCode + ((getBatchSize() == null) ? 0 : getBatchSize().hashCode());
         hashCode = prime * hashCode + ((getDeadLetterConfig() == null) ? 0 : getDeadLetterConfig().hashCode());
+        hashCode = prime * hashCode + ((getOnPartialBatchItemFailure() == null) ? 0 : getOnPartialBatchItemFailure().hashCode());
         hashCode = prime * hashCode + ((getMaximumBatchingWindowInSeconds() == null) ? 0 : getMaximumBatchingWindowInSeconds().hashCode());
         hashCode = prime * hashCode + ((getMaximumRecordAgeInSeconds() == null) ? 0 : getMaximumRecordAgeInSeconds().hashCode());
         hashCode = prime * hashCode + ((getMaximumRetryAttempts() == null) ? 0 : getMaximumRetryAttempts().hashCode());
-        hashCode = prime * hashCode + ((getOnPartialBatchItemFailure() == null) ? 0 : getOnPartialBatchItemFailure().hashCode());
         hashCode = prime * hashCode + ((getParallelizationFactor() == null) ? 0 : getParallelizationFactor().hashCode());
         hashCode = prime * hashCode + ((getStartingPosition() == null) ? 0 : getStartingPosition().hashCode());
         return hashCode;

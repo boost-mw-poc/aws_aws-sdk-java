@@ -52,6 +52,10 @@ public class S3LogDestinationJsonUnmarshaller implements Unmarshaller<S3LogDesti
                     context.nextToken();
                     s3LogDestination.setBucketName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Prefix", targetDepth)) {
+                    context.nextToken();
+                    s3LogDestination.setPrefix(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("BucketOwner", targetDepth)) {
                     context.nextToken();
                     s3LogDestination.setBucketOwner(context.getUnmarshaller(String.class).unmarshall(context));
@@ -59,10 +63,6 @@ public class S3LogDestinationJsonUnmarshaller implements Unmarshaller<S3LogDesti
                 if (context.testExpression("OutputFormat", targetDepth)) {
                     context.nextToken();
                     s3LogDestination.setOutputFormat(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("Prefix", targetDepth)) {
-                    context.nextToken();
-                    s3LogDestination.setPrefix(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

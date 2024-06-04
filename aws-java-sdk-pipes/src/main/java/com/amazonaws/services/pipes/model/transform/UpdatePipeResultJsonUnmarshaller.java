@@ -52,25 +52,25 @@ public class UpdatePipeResultJsonUnmarshaller implements Unmarshaller<UpdatePipe
                     context.nextToken();
                     updatePipeResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("CreationTime", targetDepth)) {
+                if (context.testExpression("Name", targetDepth)) {
                     context.nextToken();
-                    updatePipeResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("CurrentState", targetDepth)) {
-                    context.nextToken();
-                    updatePipeResult.setCurrentState(context.getUnmarshaller(String.class).unmarshall(context));
+                    updatePipeResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("DesiredState", targetDepth)) {
                     context.nextToken();
                     updatePipeResult.setDesiredState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CurrentState", targetDepth)) {
+                    context.nextToken();
+                    updatePipeResult.setCurrentState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CreationTime", targetDepth)) {
+                    context.nextToken();
+                    updatePipeResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
                 if (context.testExpression("LastModifiedTime", targetDepth)) {
                     context.nextToken();
                     updatePipeResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("Name", targetDepth)) {
-                    context.nextToken();
-                    updatePipeResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

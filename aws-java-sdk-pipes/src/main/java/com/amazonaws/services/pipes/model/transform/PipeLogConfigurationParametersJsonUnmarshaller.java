@@ -48,29 +48,29 @@ public class PipeLogConfigurationParametersJsonUnmarshaller implements Unmarshal
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("CloudwatchLogsLogDestination", targetDepth)) {
+                if (context.testExpression("S3LogDestination", targetDepth)) {
                     context.nextToken();
-                    pipeLogConfigurationParameters.setCloudwatchLogsLogDestination(CloudwatchLogsLogDestinationParametersJsonUnmarshaller.getInstance()
-                            .unmarshall(context));
+                    pipeLogConfigurationParameters.setS3LogDestination(S3LogDestinationParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("FirehoseLogDestination", targetDepth)) {
                     context.nextToken();
                     pipeLogConfigurationParameters
                             .setFirehoseLogDestination(FirehoseLogDestinationParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("IncludeExecutionData", targetDepth)) {
+                if (context.testExpression("CloudwatchLogsLogDestination", targetDepth)) {
                     context.nextToken();
-                    pipeLogConfigurationParameters.setIncludeExecutionData(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
+                    pipeLogConfigurationParameters.setCloudwatchLogsLogDestination(CloudwatchLogsLogDestinationParametersJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
                 }
                 if (context.testExpression("Level", targetDepth)) {
                     context.nextToken();
                     pipeLogConfigurationParameters.setLevel(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("S3LogDestination", targetDepth)) {
+                if (context.testExpression("IncludeExecutionData", targetDepth)) {
                     context.nextToken();
-                    pipeLogConfigurationParameters.setS3LogDestination(S3LogDestinationParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                    pipeLogConfigurationParameters.setIncludeExecutionData(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

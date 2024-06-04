@@ -21,6 +21,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The parameters for using a self-managed Apache Kafka stream as a source.
  * </p>
+ * <p>
+ * A <i>self managed</i> cluster refers to any Apache Kafka cluster not hosted by Amazon Web Services. This includes
+ * both clusters you manage yourself, as well as those hosted by a third-party provider, such as <a
+ * href="https://www.confluent.io/">Confluent Cloud</a>, <a href="https://www.cloudkarafka.com/">CloudKarafka</a>, or <a
+ * href="https://redpanda.com/">Redpanda</a>. For more information, see <a
+ * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html">Apache Kafka streams as a
+ * source</a> in the <i>Amazon EventBridge User Guide</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pipes-2015-10-07/PipeSourceSelfManagedKafkaParameters"
  *      target="_top">AWS API Documentation</a>
@@ -28,6 +36,18 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PipeSourceSelfManagedKafkaParameters implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The name of the topic that the pipe will read from.
+     * </p>
+     */
+    private String topicName;
+    /**
+     * <p>
+     * (Streams only) The position in a stream from which to start reading.
+     * </p>
+     */
+    private String startingPosition;
     /**
      * <p>
      * An array of server URLs.
@@ -42,6 +62,12 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
     private Integer batchSize;
     /**
      * <p>
+     * The maximum length of a time to wait for events.
+     * </p>
+     */
+    private Integer maximumBatchingWindowInSeconds;
+    /**
+     * <p>
      * The name of the destination queue to consume.
      * </p>
      */
@@ -54,28 +80,10 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
     private SelfManagedKafkaAccessConfigurationCredentials credentials;
     /**
      * <p>
-     * The maximum length of a time to wait for events.
-     * </p>
-     */
-    private Integer maximumBatchingWindowInSeconds;
-    /**
-     * <p>
      * The ARN of the Secrets Manager secret used for certification.
      * </p>
      */
     private String serverRootCaCertificate;
-    /**
-     * <p>
-     * (Streams only) The position in a stream from which to start reading.
-     * </p>
-     */
-    private String startingPosition;
-    /**
-     * <p>
-     * The name of the topic that the pipe will read from.
-     * </p>
-     */
-    private String topicName;
     /**
      * <p>
      * This structure specifies the VPC subnets and security groups for the stream, and whether a public IP address is
@@ -83,6 +91,105 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
      * </p>
      */
     private SelfManagedKafkaAccessConfigurationVpc vpc;
+
+    /**
+     * <p>
+     * The name of the topic that the pipe will read from.
+     * </p>
+     * 
+     * @param topicName
+     *        The name of the topic that the pipe will read from.
+     */
+
+    public void setTopicName(String topicName) {
+        this.topicName = topicName;
+    }
+
+    /**
+     * <p>
+     * The name of the topic that the pipe will read from.
+     * </p>
+     * 
+     * @return The name of the topic that the pipe will read from.
+     */
+
+    public String getTopicName() {
+        return this.topicName;
+    }
+
+    /**
+     * <p>
+     * The name of the topic that the pipe will read from.
+     * </p>
+     * 
+     * @param topicName
+     *        The name of the topic that the pipe will read from.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeSourceSelfManagedKafkaParameters withTopicName(String topicName) {
+        setTopicName(topicName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Streams only) The position in a stream from which to start reading.
+     * </p>
+     * 
+     * @param startingPosition
+     *        (Streams only) The position in a stream from which to start reading.
+     * @see SelfManagedKafkaStartPosition
+     */
+
+    public void setStartingPosition(String startingPosition) {
+        this.startingPosition = startingPosition;
+    }
+
+    /**
+     * <p>
+     * (Streams only) The position in a stream from which to start reading.
+     * </p>
+     * 
+     * @return (Streams only) The position in a stream from which to start reading.
+     * @see SelfManagedKafkaStartPosition
+     */
+
+    public String getStartingPosition() {
+        return this.startingPosition;
+    }
+
+    /**
+     * <p>
+     * (Streams only) The position in a stream from which to start reading.
+     * </p>
+     * 
+     * @param startingPosition
+     *        (Streams only) The position in a stream from which to start reading.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SelfManagedKafkaStartPosition
+     */
+
+    public PipeSourceSelfManagedKafkaParameters withStartingPosition(String startingPosition) {
+        setStartingPosition(startingPosition);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Streams only) The position in a stream from which to start reading.
+     * </p>
+     * 
+     * @param startingPosition
+     *        (Streams only) The position in a stream from which to start reading.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SelfManagedKafkaStartPosition
+     */
+
+    public PipeSourceSelfManagedKafkaParameters withStartingPosition(SelfManagedKafkaStartPosition startingPosition) {
+        this.startingPosition = startingPosition.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -196,6 +303,46 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
 
     /**
      * <p>
+     * The maximum length of a time to wait for events.
+     * </p>
+     * 
+     * @param maximumBatchingWindowInSeconds
+     *        The maximum length of a time to wait for events.
+     */
+
+    public void setMaximumBatchingWindowInSeconds(Integer maximumBatchingWindowInSeconds) {
+        this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
+    }
+
+    /**
+     * <p>
+     * The maximum length of a time to wait for events.
+     * </p>
+     * 
+     * @return The maximum length of a time to wait for events.
+     */
+
+    public Integer getMaximumBatchingWindowInSeconds() {
+        return this.maximumBatchingWindowInSeconds;
+    }
+
+    /**
+     * <p>
+     * The maximum length of a time to wait for events.
+     * </p>
+     * 
+     * @param maximumBatchingWindowInSeconds
+     *        The maximum length of a time to wait for events.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeSourceSelfManagedKafkaParameters withMaximumBatchingWindowInSeconds(Integer maximumBatchingWindowInSeconds) {
+        setMaximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds);
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of the destination queue to consume.
      * </p>
      * 
@@ -276,46 +423,6 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
 
     /**
      * <p>
-     * The maximum length of a time to wait for events.
-     * </p>
-     * 
-     * @param maximumBatchingWindowInSeconds
-     *        The maximum length of a time to wait for events.
-     */
-
-    public void setMaximumBatchingWindowInSeconds(Integer maximumBatchingWindowInSeconds) {
-        this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
-    }
-
-    /**
-     * <p>
-     * The maximum length of a time to wait for events.
-     * </p>
-     * 
-     * @return The maximum length of a time to wait for events.
-     */
-
-    public Integer getMaximumBatchingWindowInSeconds() {
-        return this.maximumBatchingWindowInSeconds;
-    }
-
-    /**
-     * <p>
-     * The maximum length of a time to wait for events.
-     * </p>
-     * 
-     * @param maximumBatchingWindowInSeconds
-     *        The maximum length of a time to wait for events.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeSourceSelfManagedKafkaParameters withMaximumBatchingWindowInSeconds(Integer maximumBatchingWindowInSeconds) {
-        setMaximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds);
-        return this;
-    }
-
-    /**
-     * <p>
      * The ARN of the Secrets Manager secret used for certification.
      * </p>
      * 
@@ -351,105 +458,6 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
 
     public PipeSourceSelfManagedKafkaParameters withServerRootCaCertificate(String serverRootCaCertificate) {
         setServerRootCaCertificate(serverRootCaCertificate);
-        return this;
-    }
-
-    /**
-     * <p>
-     * (Streams only) The position in a stream from which to start reading.
-     * </p>
-     * 
-     * @param startingPosition
-     *        (Streams only) The position in a stream from which to start reading.
-     * @see SelfManagedKafkaStartPosition
-     */
-
-    public void setStartingPosition(String startingPosition) {
-        this.startingPosition = startingPosition;
-    }
-
-    /**
-     * <p>
-     * (Streams only) The position in a stream from which to start reading.
-     * </p>
-     * 
-     * @return (Streams only) The position in a stream from which to start reading.
-     * @see SelfManagedKafkaStartPosition
-     */
-
-    public String getStartingPosition() {
-        return this.startingPosition;
-    }
-
-    /**
-     * <p>
-     * (Streams only) The position in a stream from which to start reading.
-     * </p>
-     * 
-     * @param startingPosition
-     *        (Streams only) The position in a stream from which to start reading.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see SelfManagedKafkaStartPosition
-     */
-
-    public PipeSourceSelfManagedKafkaParameters withStartingPosition(String startingPosition) {
-        setStartingPosition(startingPosition);
-        return this;
-    }
-
-    /**
-     * <p>
-     * (Streams only) The position in a stream from which to start reading.
-     * </p>
-     * 
-     * @param startingPosition
-     *        (Streams only) The position in a stream from which to start reading.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see SelfManagedKafkaStartPosition
-     */
-
-    public PipeSourceSelfManagedKafkaParameters withStartingPosition(SelfManagedKafkaStartPosition startingPosition) {
-        this.startingPosition = startingPosition.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the topic that the pipe will read from.
-     * </p>
-     * 
-     * @param topicName
-     *        The name of the topic that the pipe will read from.
-     */
-
-    public void setTopicName(String topicName) {
-        this.topicName = topicName;
-    }
-
-    /**
-     * <p>
-     * The name of the topic that the pipe will read from.
-     * </p>
-     * 
-     * @return The name of the topic that the pipe will read from.
-     */
-
-    public String getTopicName() {
-        return this.topicName;
-    }
-
-    /**
-     * <p>
-     * The name of the topic that the pipe will read from.
-     * </p>
-     * 
-     * @param topicName
-     *        The name of the topic that the pipe will read from.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeSourceSelfManagedKafkaParameters withTopicName(String topicName) {
-        setTopicName(topicName);
         return this;
     }
 
@@ -511,22 +519,22 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getTopicName() != null)
+            sb.append("TopicName: ").append("***Sensitive Data Redacted***").append(",");
+        if (getStartingPosition() != null)
+            sb.append("StartingPosition: ").append(getStartingPosition()).append(",");
         if (getAdditionalBootstrapServers() != null)
             sb.append("AdditionalBootstrapServers: ").append("***Sensitive Data Redacted***").append(",");
         if (getBatchSize() != null)
             sb.append("BatchSize: ").append(getBatchSize()).append(",");
+        if (getMaximumBatchingWindowInSeconds() != null)
+            sb.append("MaximumBatchingWindowInSeconds: ").append(getMaximumBatchingWindowInSeconds()).append(",");
         if (getConsumerGroupID() != null)
             sb.append("ConsumerGroupID: ").append("***Sensitive Data Redacted***").append(",");
         if (getCredentials() != null)
             sb.append("Credentials: ").append(getCredentials()).append(",");
-        if (getMaximumBatchingWindowInSeconds() != null)
-            sb.append("MaximumBatchingWindowInSeconds: ").append(getMaximumBatchingWindowInSeconds()).append(",");
         if (getServerRootCaCertificate() != null)
             sb.append("ServerRootCaCertificate: ").append(getServerRootCaCertificate()).append(",");
-        if (getStartingPosition() != null)
-            sb.append("StartingPosition: ").append(getStartingPosition()).append(",");
-        if (getTopicName() != null)
-            sb.append("TopicName: ").append("***Sensitive Data Redacted***").append(",");
         if (getVpc() != null)
             sb.append("Vpc: ").append(getVpc());
         sb.append("}");
@@ -543,6 +551,14 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
         if (obj instanceof PipeSourceSelfManagedKafkaParameters == false)
             return false;
         PipeSourceSelfManagedKafkaParameters other = (PipeSourceSelfManagedKafkaParameters) obj;
+        if (other.getTopicName() == null ^ this.getTopicName() == null)
+            return false;
+        if (other.getTopicName() != null && other.getTopicName().equals(this.getTopicName()) == false)
+            return false;
+        if (other.getStartingPosition() == null ^ this.getStartingPosition() == null)
+            return false;
+        if (other.getStartingPosition() != null && other.getStartingPosition().equals(this.getStartingPosition()) == false)
+            return false;
         if (other.getAdditionalBootstrapServers() == null ^ this.getAdditionalBootstrapServers() == null)
             return false;
         if (other.getAdditionalBootstrapServers() != null && other.getAdditionalBootstrapServers().equals(this.getAdditionalBootstrapServers()) == false)
@@ -550,6 +566,11 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
         if (other.getBatchSize() == null ^ this.getBatchSize() == null)
             return false;
         if (other.getBatchSize() != null && other.getBatchSize().equals(this.getBatchSize()) == false)
+            return false;
+        if (other.getMaximumBatchingWindowInSeconds() == null ^ this.getMaximumBatchingWindowInSeconds() == null)
+            return false;
+        if (other.getMaximumBatchingWindowInSeconds() != null
+                && other.getMaximumBatchingWindowInSeconds().equals(this.getMaximumBatchingWindowInSeconds()) == false)
             return false;
         if (other.getConsumerGroupID() == null ^ this.getConsumerGroupID() == null)
             return false;
@@ -559,22 +580,9 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
             return false;
         if (other.getCredentials() != null && other.getCredentials().equals(this.getCredentials()) == false)
             return false;
-        if (other.getMaximumBatchingWindowInSeconds() == null ^ this.getMaximumBatchingWindowInSeconds() == null)
-            return false;
-        if (other.getMaximumBatchingWindowInSeconds() != null
-                && other.getMaximumBatchingWindowInSeconds().equals(this.getMaximumBatchingWindowInSeconds()) == false)
-            return false;
         if (other.getServerRootCaCertificate() == null ^ this.getServerRootCaCertificate() == null)
             return false;
         if (other.getServerRootCaCertificate() != null && other.getServerRootCaCertificate().equals(this.getServerRootCaCertificate()) == false)
-            return false;
-        if (other.getStartingPosition() == null ^ this.getStartingPosition() == null)
-            return false;
-        if (other.getStartingPosition() != null && other.getStartingPosition().equals(this.getStartingPosition()) == false)
-            return false;
-        if (other.getTopicName() == null ^ this.getTopicName() == null)
-            return false;
-        if (other.getTopicName() != null && other.getTopicName().equals(this.getTopicName()) == false)
             return false;
         if (other.getVpc() == null ^ this.getVpc() == null)
             return false;
@@ -588,14 +596,14 @@ public class PipeSourceSelfManagedKafkaParameters implements Serializable, Clone
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getTopicName() == null) ? 0 : getTopicName().hashCode());
+        hashCode = prime * hashCode + ((getStartingPosition() == null) ? 0 : getStartingPosition().hashCode());
         hashCode = prime * hashCode + ((getAdditionalBootstrapServers() == null) ? 0 : getAdditionalBootstrapServers().hashCode());
         hashCode = prime * hashCode + ((getBatchSize() == null) ? 0 : getBatchSize().hashCode());
+        hashCode = prime * hashCode + ((getMaximumBatchingWindowInSeconds() == null) ? 0 : getMaximumBatchingWindowInSeconds().hashCode());
         hashCode = prime * hashCode + ((getConsumerGroupID() == null) ? 0 : getConsumerGroupID().hashCode());
         hashCode = prime * hashCode + ((getCredentials() == null) ? 0 : getCredentials().hashCode());
-        hashCode = prime * hashCode + ((getMaximumBatchingWindowInSeconds() == null) ? 0 : getMaximumBatchingWindowInSeconds().hashCode());
         hashCode = prime * hashCode + ((getServerRootCaCertificate() == null) ? 0 : getServerRootCaCertificate().hashCode());
-        hashCode = prime * hashCode + ((getStartingPosition() == null) ? 0 : getStartingPosition().hashCode());
-        hashCode = prime * hashCode + ((getTopicName() == null) ? 0 : getTopicName().hashCode());
         hashCode = prime * hashCode + ((getVpc() == null) ? 0 : getVpc().hashCode());
         return hashCode;
     }

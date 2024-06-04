@@ -25,18 +25,18 @@ public class DescribeClusterNodeResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The details of the instance.
+     * The details of the SageMaker HyperPod cluster node.
      * </p>
      */
     private ClusterNodeDetails nodeDetails;
 
     /**
      * <p>
-     * The details of the instance.
+     * The details of the SageMaker HyperPod cluster node.
      * </p>
      * 
      * @param nodeDetails
-     *        The details of the instance.
+     *        The details of the SageMaker HyperPod cluster node.
      */
 
     public void setNodeDetails(ClusterNodeDetails nodeDetails) {
@@ -45,10 +45,10 @@ public class DescribeClusterNodeResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The details of the instance.
+     * The details of the SageMaker HyperPod cluster node.
      * </p>
      * 
-     * @return The details of the instance.
+     * @return The details of the SageMaker HyperPod cluster node.
      */
 
     public ClusterNodeDetails getNodeDetails() {
@@ -57,11 +57,11 @@ public class DescribeClusterNodeResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The details of the instance.
+     * The details of the SageMaker HyperPod cluster node.
      * </p>
      * 
      * @param nodeDetails
-     *        The details of the instance.
+     *        The details of the SageMaker HyperPod cluster node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeSourceActiveMQBrokerParametersMarshaller {
 
-    private static final MarshallingInfo<Integer> BATCHSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BatchSize").build();
     private static final MarshallingInfo<StructuredPojo> CREDENTIALS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Credentials").build();
-    private static final MarshallingInfo<Integer> MAXIMUMBATCHINGWINDOWINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaximumBatchingWindowInSeconds").build();
     private static final MarshallingInfo<String> QUEUENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("QueueName").build();
+    private static final MarshallingInfo<Integer> BATCHSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BatchSize").build();
+    private static final MarshallingInfo<Integer> MAXIMUMBATCHINGWINDOWINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaximumBatchingWindowInSeconds").build();
 
     private static final PipeSourceActiveMQBrokerParametersMarshaller instance = new PipeSourceActiveMQBrokerParametersMarshaller();
 
@@ -52,10 +52,10 @@ public class PipeSourceActiveMQBrokerParametersMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pipeSourceActiveMQBrokerParameters.getBatchSize(), BATCHSIZE_BINDING);
             protocolMarshaller.marshall(pipeSourceActiveMQBrokerParameters.getCredentials(), CREDENTIALS_BINDING);
-            protocolMarshaller.marshall(pipeSourceActiveMQBrokerParameters.getMaximumBatchingWindowInSeconds(), MAXIMUMBATCHINGWINDOWINSECONDS_BINDING);
             protocolMarshaller.marshall(pipeSourceActiveMQBrokerParameters.getQueueName(), QUEUENAME_BINDING);
+            protocolMarshaller.marshall(pipeSourceActiveMQBrokerParameters.getBatchSize(), BATCHSIZE_BINDING);
+            protocolMarshaller.marshall(pipeSourceActiveMQBrokerParameters.getMaximumBatchingWindowInSeconds(), MAXIMUMBATCHINGWINDOWINSECONDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

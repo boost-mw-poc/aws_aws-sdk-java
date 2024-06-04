@@ -31,19 +31,97 @@ public class SelfManagedKafkaAccessConfigurationVpc implements Serializable, Clo
 
     /**
      * <p>
+     * Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can specify as
+     * many as 16 subnets.
+     * </p>
+     */
+    private java.util.List<String> subnets;
+    /**
+     * <p>
      * Specifies the security groups associated with the stream. These security groups must all be in the same VPC. You
      * can specify as many as five security groups. If you do not specify a security group, the default security group
      * for the VPC is used.
      * </p>
      */
     private java.util.List<String> securityGroup;
+
     /**
      * <p>
      * Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can specify as
      * many as 16 subnets.
      * </p>
+     * 
+     * @return Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can
+     *         specify as many as 16 subnets.
      */
-    private java.util.List<String> subnets;
+
+    public java.util.List<String> getSubnets() {
+        return subnets;
+    }
+
+    /**
+     * <p>
+     * Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can specify as
+     * many as 16 subnets.
+     * </p>
+     * 
+     * @param subnets
+     *        Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can
+     *        specify as many as 16 subnets.
+     */
+
+    public void setSubnets(java.util.Collection<String> subnets) {
+        if (subnets == null) {
+            this.subnets = null;
+            return;
+        }
+
+        this.subnets = new java.util.ArrayList<String>(subnets);
+    }
+
+    /**
+     * <p>
+     * Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can specify as
+     * many as 16 subnets.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSubnets(java.util.Collection)} or {@link #withSubnets(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param subnets
+     *        Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can
+     *        specify as many as 16 subnets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SelfManagedKafkaAccessConfigurationVpc withSubnets(String... subnets) {
+        if (this.subnets == null) {
+            setSubnets(new java.util.ArrayList<String>(subnets.length));
+        }
+        for (String ele : subnets) {
+            this.subnets.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can specify as
+     * many as 16 subnets.
+     * </p>
+     * 
+     * @param subnets
+     *        Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can
+     *        specify as many as 16 subnets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SelfManagedKafkaAccessConfigurationVpc withSubnets(java.util.Collection<String> subnets) {
+        setSubnets(subnets);
+        return this;
+    }
 
     /**
      * <p>
@@ -132,84 +210,6 @@ public class SelfManagedKafkaAccessConfigurationVpc implements Serializable, Clo
     }
 
     /**
-     * <p>
-     * Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can specify as
-     * many as 16 subnets.
-     * </p>
-     * 
-     * @return Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can
-     *         specify as many as 16 subnets.
-     */
-
-    public java.util.List<String> getSubnets() {
-        return subnets;
-    }
-
-    /**
-     * <p>
-     * Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can specify as
-     * many as 16 subnets.
-     * </p>
-     * 
-     * @param subnets
-     *        Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can
-     *        specify as many as 16 subnets.
-     */
-
-    public void setSubnets(java.util.Collection<String> subnets) {
-        if (subnets == null) {
-            this.subnets = null;
-            return;
-        }
-
-        this.subnets = new java.util.ArrayList<String>(subnets);
-    }
-
-    /**
-     * <p>
-     * Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can specify as
-     * many as 16 subnets.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setSubnets(java.util.Collection)} or {@link #withSubnets(java.util.Collection)} if you want to override
-     * the existing values.
-     * </p>
-     * 
-     * @param subnets
-     *        Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can
-     *        specify as many as 16 subnets.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SelfManagedKafkaAccessConfigurationVpc withSubnets(String... subnets) {
-        if (this.subnets == null) {
-            setSubnets(new java.util.ArrayList<String>(subnets.length));
-        }
-        for (String ele : subnets) {
-            this.subnets.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can specify as
-     * many as 16 subnets.
-     * </p>
-     * 
-     * @param subnets
-     *        Specifies the subnets associated with the stream. These subnets must all be in the same VPC. You can
-     *        specify as many as 16 subnets.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public SelfManagedKafkaAccessConfigurationVpc withSubnets(java.util.Collection<String> subnets) {
-        setSubnets(subnets);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -221,10 +221,10 @@ public class SelfManagedKafkaAccessConfigurationVpc implements Serializable, Clo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getSecurityGroup() != null)
-            sb.append("SecurityGroup: ").append("***Sensitive Data Redacted***").append(",");
         if (getSubnets() != null)
-            sb.append("Subnets: ").append("***Sensitive Data Redacted***");
+            sb.append("Subnets: ").append("***Sensitive Data Redacted***").append(",");
+        if (getSecurityGroup() != null)
+            sb.append("SecurityGroup: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -239,13 +239,13 @@ public class SelfManagedKafkaAccessConfigurationVpc implements Serializable, Clo
         if (obj instanceof SelfManagedKafkaAccessConfigurationVpc == false)
             return false;
         SelfManagedKafkaAccessConfigurationVpc other = (SelfManagedKafkaAccessConfigurationVpc) obj;
-        if (other.getSecurityGroup() == null ^ this.getSecurityGroup() == null)
-            return false;
-        if (other.getSecurityGroup() != null && other.getSecurityGroup().equals(this.getSecurityGroup()) == false)
-            return false;
         if (other.getSubnets() == null ^ this.getSubnets() == null)
             return false;
         if (other.getSubnets() != null && other.getSubnets().equals(this.getSubnets()) == false)
+            return false;
+        if (other.getSecurityGroup() == null ^ this.getSecurityGroup() == null)
+            return false;
+        if (other.getSecurityGroup() != null && other.getSecurityGroup().equals(this.getSecurityGroup()) == false)
             return false;
         return true;
     }
@@ -255,8 +255,8 @@ public class SelfManagedKafkaAccessConfigurationVpc implements Serializable, Clo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getSecurityGroup() == null) ? 0 : getSecurityGroup().hashCode());
         hashCode = prime * hashCode + ((getSubnets() == null) ? 0 : getSubnets().hashCode());
+        hashCode = prime * hashCode + ((getSecurityGroup() == null) ? 0 : getSecurityGroup().hashCode());
         return hashCode;
     }
 

@@ -48,6 +48,30 @@ public class PipeTargetEcsTaskParametersJsonUnmarshaller implements Unmarshaller
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("TaskDefinitionArn", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetEcsTaskParameters.setTaskDefinitionArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("TaskCount", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetEcsTaskParameters.setTaskCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("LaunchType", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetEcsTaskParameters.setLaunchType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("NetworkConfiguration", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetEcsTaskParameters.setNetworkConfiguration(NetworkConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("PlatformVersion", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetEcsTaskParameters.setPlatformVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Group", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetEcsTaskParameters.setGroup(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CapacityProviderStrategy", targetDepth)) {
                     context.nextToken();
                     pipeTargetEcsTaskParameters.setCapacityProviderStrategy(new ListUnmarshaller<CapacityProviderStrategyItem>(
@@ -63,22 +87,6 @@ public class PipeTargetEcsTaskParametersJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     pipeTargetEcsTaskParameters.setEnableExecuteCommand(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
-                if (context.testExpression("Group", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetEcsTaskParameters.setGroup(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("LaunchType", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetEcsTaskParameters.setLaunchType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("NetworkConfiguration", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetEcsTaskParameters.setNetworkConfiguration(NetworkConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("Overrides", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetEcsTaskParameters.setOverrides(EcsTaskOverrideJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("PlacementConstraints", targetDepth)) {
                     context.nextToken();
                     pipeTargetEcsTaskParameters.setPlacementConstraints(new ListUnmarshaller<PlacementConstraint>(PlacementConstraintJsonUnmarshaller
@@ -92,10 +100,6 @@ public class PipeTargetEcsTaskParametersJsonUnmarshaller implements Unmarshaller
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("PlatformVersion", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetEcsTaskParameters.setPlatformVersion(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("PropagateTags", targetDepth)) {
                     context.nextToken();
                     pipeTargetEcsTaskParameters.setPropagateTags(context.getUnmarshaller(String.class).unmarshall(context));
@@ -104,19 +108,15 @@ public class PipeTargetEcsTaskParametersJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     pipeTargetEcsTaskParameters.setReferenceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Overrides", targetDepth)) {
+                    context.nextToken();
+                    pipeTargetEcsTaskParameters.setOverrides(EcsTaskOverrideJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     pipeTargetEcsTaskParameters.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("TaskCount", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetEcsTaskParameters.setTaskCount(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("TaskDefinitionArn", targetDepth)) {
-                    context.nextToken();
-                    pipeTargetEcsTaskParameters.setTaskDefinitionArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -39,7 +39,7 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
      * The ARN of the Secrets Manager secret.
      * </p>
      */
-    private String clientCertificateTlsAuth;
+    private String saslScram512Auth;
     /**
      * <p>
      * The ARN of the Secrets Manager secret.
@@ -51,7 +51,7 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
      * The ARN of the Secrets Manager secret.
      * </p>
      */
-    private String saslScram512Auth;
+    private String clientCertificateTlsAuth;
 
     /**
      * <p>
@@ -98,12 +98,12 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
      * The ARN of the Secrets Manager secret.
      * </p>
      * 
-     * @param clientCertificateTlsAuth
+     * @param saslScram512Auth
      *        The ARN of the Secrets Manager secret.
      */
 
-    public void setClientCertificateTlsAuth(String clientCertificateTlsAuth) {
-        this.clientCertificateTlsAuth = clientCertificateTlsAuth;
+    public void setSaslScram512Auth(String saslScram512Auth) {
+        this.saslScram512Auth = saslScram512Auth;
     }
 
     /**
@@ -114,8 +114,8 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
      * @return The ARN of the Secrets Manager secret.
      */
 
-    public String getClientCertificateTlsAuth() {
-        return this.clientCertificateTlsAuth;
+    public String getSaslScram512Auth() {
+        return this.saslScram512Auth;
     }
 
     /**
@@ -123,13 +123,13 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
      * The ARN of the Secrets Manager secret.
      * </p>
      * 
-     * @param clientCertificateTlsAuth
+     * @param saslScram512Auth
      *        The ARN of the Secrets Manager secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public SelfManagedKafkaAccessConfigurationCredentials withClientCertificateTlsAuth(String clientCertificateTlsAuth) {
-        setClientCertificateTlsAuth(clientCertificateTlsAuth);
+    public SelfManagedKafkaAccessConfigurationCredentials withSaslScram512Auth(String saslScram512Auth) {
+        setSaslScram512Auth(saslScram512Auth);
         return this;
     }
 
@@ -178,12 +178,12 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
      * The ARN of the Secrets Manager secret.
      * </p>
      * 
-     * @param saslScram512Auth
+     * @param clientCertificateTlsAuth
      *        The ARN of the Secrets Manager secret.
      */
 
-    public void setSaslScram512Auth(String saslScram512Auth) {
-        this.saslScram512Auth = saslScram512Auth;
+    public void setClientCertificateTlsAuth(String clientCertificateTlsAuth) {
+        this.clientCertificateTlsAuth = clientCertificateTlsAuth;
     }
 
     /**
@@ -194,8 +194,8 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
      * @return The ARN of the Secrets Manager secret.
      */
 
-    public String getSaslScram512Auth() {
-        return this.saslScram512Auth;
+    public String getClientCertificateTlsAuth() {
+        return this.clientCertificateTlsAuth;
     }
 
     /**
@@ -203,13 +203,13 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
      * The ARN of the Secrets Manager secret.
      * </p>
      * 
-     * @param saslScram512Auth
+     * @param clientCertificateTlsAuth
      *        The ARN of the Secrets Manager secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public SelfManagedKafkaAccessConfigurationCredentials withSaslScram512Auth(String saslScram512Auth) {
-        setSaslScram512Auth(saslScram512Auth);
+    public SelfManagedKafkaAccessConfigurationCredentials withClientCertificateTlsAuth(String clientCertificateTlsAuth) {
+        setClientCertificateTlsAuth(clientCertificateTlsAuth);
         return this;
     }
 
@@ -227,12 +227,12 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
         sb.append("{");
         if (getBasicAuth() != null)
             sb.append("BasicAuth: ").append(getBasicAuth()).append(",");
-        if (getClientCertificateTlsAuth() != null)
-            sb.append("ClientCertificateTlsAuth: ").append(getClientCertificateTlsAuth()).append(",");
+        if (getSaslScram512Auth() != null)
+            sb.append("SaslScram512Auth: ").append(getSaslScram512Auth()).append(",");
         if (getSaslScram256Auth() != null)
             sb.append("SaslScram256Auth: ").append(getSaslScram256Auth()).append(",");
-        if (getSaslScram512Auth() != null)
-            sb.append("SaslScram512Auth: ").append(getSaslScram512Auth());
+        if (getClientCertificateTlsAuth() != null)
+            sb.append("ClientCertificateTlsAuth: ").append(getClientCertificateTlsAuth());
         sb.append("}");
         return sb.toString();
     }
@@ -251,17 +251,17 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
             return false;
         if (other.getBasicAuth() != null && other.getBasicAuth().equals(this.getBasicAuth()) == false)
             return false;
-        if (other.getClientCertificateTlsAuth() == null ^ this.getClientCertificateTlsAuth() == null)
+        if (other.getSaslScram512Auth() == null ^ this.getSaslScram512Auth() == null)
             return false;
-        if (other.getClientCertificateTlsAuth() != null && other.getClientCertificateTlsAuth().equals(this.getClientCertificateTlsAuth()) == false)
+        if (other.getSaslScram512Auth() != null && other.getSaslScram512Auth().equals(this.getSaslScram512Auth()) == false)
             return false;
         if (other.getSaslScram256Auth() == null ^ this.getSaslScram256Auth() == null)
             return false;
         if (other.getSaslScram256Auth() != null && other.getSaslScram256Auth().equals(this.getSaslScram256Auth()) == false)
             return false;
-        if (other.getSaslScram512Auth() == null ^ this.getSaslScram512Auth() == null)
+        if (other.getClientCertificateTlsAuth() == null ^ this.getClientCertificateTlsAuth() == null)
             return false;
-        if (other.getSaslScram512Auth() != null && other.getSaslScram512Auth().equals(this.getSaslScram512Auth()) == false)
+        if (other.getClientCertificateTlsAuth() != null && other.getClientCertificateTlsAuth().equals(this.getClientCertificateTlsAuth()) == false)
             return false;
         return true;
     }
@@ -272,9 +272,9 @@ public class SelfManagedKafkaAccessConfigurationCredentials implements Serializa
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getBasicAuth() == null) ? 0 : getBasicAuth().hashCode());
-        hashCode = prime * hashCode + ((getClientCertificateTlsAuth() == null) ? 0 : getClientCertificateTlsAuth().hashCode());
-        hashCode = prime * hashCode + ((getSaslScram256Auth() == null) ? 0 : getSaslScram256Auth().hashCode());
         hashCode = prime * hashCode + ((getSaslScram512Auth() == null) ? 0 : getSaslScram512Auth().hashCode());
+        hashCode = prime * hashCode + ((getSaslScram256Auth() == null) ? 0 : getSaslScram256Auth().hashCode());
+        hashCode = prime * hashCode + ((getClientCertificateTlsAuth() == null) ? 0 : getClientCertificateTlsAuth().hashCode());
         return hashCode;
     }
 

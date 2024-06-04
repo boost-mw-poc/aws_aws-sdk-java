@@ -30,13 +30,6 @@ public class PipeTargetHttpParameters implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
-     * ApiDestination.
-     * </p>
-     */
-    private java.util.Map<String, String> headerParameters;
-    /**
-     * <p>
      * The path parameter values to be used to populate API Gateway REST API or EventBridge ApiDestination path
      * wildcards ("*").
      * </p>
@@ -44,85 +37,18 @@ public class PipeTargetHttpParameters implements Serializable, Cloneable, Struct
     private java.util.List<String> pathParameterValues;
     /**
      * <p>
+     * The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
+     * ApiDestination.
+     * </p>
+     */
+    private java.util.Map<String, String> headerParameters;
+    /**
+     * <p>
      * The query string keys/values that need to be sent as part of request invoking the API Gateway REST API or
      * EventBridge ApiDestination.
      * </p>
      */
     private java.util.Map<String, String> queryStringParameters;
-
-    /**
-     * <p>
-     * The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
-     * ApiDestination.
-     * </p>
-     * 
-     * @return The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
-     *         ApiDestination.
-     */
-
-    public java.util.Map<String, String> getHeaderParameters() {
-        return headerParameters;
-    }
-
-    /**
-     * <p>
-     * The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
-     * ApiDestination.
-     * </p>
-     * 
-     * @param headerParameters
-     *        The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
-     *        ApiDestination.
-     */
-
-    public void setHeaderParameters(java.util.Map<String, String> headerParameters) {
-        this.headerParameters = headerParameters;
-    }
-
-    /**
-     * <p>
-     * The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
-     * ApiDestination.
-     * </p>
-     * 
-     * @param headerParameters
-     *        The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
-     *        ApiDestination.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetHttpParameters withHeaderParameters(java.util.Map<String, String> headerParameters) {
-        setHeaderParameters(headerParameters);
-        return this;
-    }
-
-    /**
-     * Add a single HeaderParameters entry
-     *
-     * @see PipeTargetHttpParameters#withHeaderParameters
-     * @returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetHttpParameters addHeaderParametersEntry(String key, String value) {
-        if (null == this.headerParameters) {
-            this.headerParameters = new java.util.HashMap<String, String>();
-        }
-        if (this.headerParameters.containsKey(key))
-            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
-        this.headerParameters.put(key, value);
-        return this;
-    }
-
-    /**
-     * Removes all the entries added into HeaderParameters.
-     *
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetHttpParameters clearHeaderParametersEntries() {
-        this.headerParameters = null;
-        return this;
-    }
 
     /**
      * <p>
@@ -199,6 +125,80 @@ public class PipeTargetHttpParameters implements Serializable, Cloneable, Struct
 
     public PipeTargetHttpParameters withPathParameterValues(java.util.Collection<String> pathParameterValues) {
         setPathParameterValues(pathParameterValues);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
+     * ApiDestination.
+     * </p>
+     * 
+     * @return The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
+     *         ApiDestination.
+     */
+
+    public java.util.Map<String, String> getHeaderParameters() {
+        return headerParameters;
+    }
+
+    /**
+     * <p>
+     * The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
+     * ApiDestination.
+     * </p>
+     * 
+     * @param headerParameters
+     *        The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
+     *        ApiDestination.
+     */
+
+    public void setHeaderParameters(java.util.Map<String, String> headerParameters) {
+        this.headerParameters = headerParameters;
+    }
+
+    /**
+     * <p>
+     * The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
+     * ApiDestination.
+     * </p>
+     * 
+     * @param headerParameters
+     *        The headers that need to be sent as part of request invoking the API Gateway REST API or EventBridge
+     *        ApiDestination.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetHttpParameters withHeaderParameters(java.util.Map<String, String> headerParameters) {
+        setHeaderParameters(headerParameters);
+        return this;
+    }
+
+    /**
+     * Add a single HeaderParameters entry
+     *
+     * @see PipeTargetHttpParameters#withHeaderParameters
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetHttpParameters addHeaderParametersEntry(String key, String value) {
+        if (null == this.headerParameters) {
+            this.headerParameters = new java.util.HashMap<String, String>();
+        }
+        if (this.headerParameters.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.headerParameters.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into HeaderParameters.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetHttpParameters clearHeaderParametersEntries() {
+        this.headerParameters = null;
         return this;
     }
 
@@ -288,10 +288,10 @@ public class PipeTargetHttpParameters implements Serializable, Cloneable, Struct
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getHeaderParameters() != null)
-            sb.append("HeaderParameters: ").append("***Sensitive Data Redacted***").append(",");
         if (getPathParameterValues() != null)
             sb.append("PathParameterValues: ").append("***Sensitive Data Redacted***").append(",");
+        if (getHeaderParameters() != null)
+            sb.append("HeaderParameters: ").append("***Sensitive Data Redacted***").append(",");
         if (getQueryStringParameters() != null)
             sb.append("QueryStringParameters: ").append("***Sensitive Data Redacted***");
         sb.append("}");
@@ -308,13 +308,13 @@ public class PipeTargetHttpParameters implements Serializable, Cloneable, Struct
         if (obj instanceof PipeTargetHttpParameters == false)
             return false;
         PipeTargetHttpParameters other = (PipeTargetHttpParameters) obj;
-        if (other.getHeaderParameters() == null ^ this.getHeaderParameters() == null)
-            return false;
-        if (other.getHeaderParameters() != null && other.getHeaderParameters().equals(this.getHeaderParameters()) == false)
-            return false;
         if (other.getPathParameterValues() == null ^ this.getPathParameterValues() == null)
             return false;
         if (other.getPathParameterValues() != null && other.getPathParameterValues().equals(this.getPathParameterValues()) == false)
+            return false;
+        if (other.getHeaderParameters() == null ^ this.getHeaderParameters() == null)
+            return false;
+        if (other.getHeaderParameters() != null && other.getHeaderParameters().equals(this.getHeaderParameters()) == false)
             return false;
         if (other.getQueryStringParameters() == null ^ this.getQueryStringParameters() == null)
             return false;
@@ -328,8 +328,8 @@ public class PipeTargetHttpParameters implements Serializable, Cloneable, Struct
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getHeaderParameters() == null) ? 0 : getHeaderParameters().hashCode());
         hashCode = prime * hashCode + ((getPathParameterValues() == null) ? 0 : getPathParameterValues().hashCode());
+        hashCode = prime * hashCode + ((getHeaderParameters() == null) ? 0 : getHeaderParameters().hashCode());
         hashCode = prime * hashCode + ((getQueryStringParameters() == null) ? 0 : getQueryStringParameters().hashCode());
         return hashCode;
     }

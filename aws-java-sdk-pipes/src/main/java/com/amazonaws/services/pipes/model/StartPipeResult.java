@@ -31,16 +31,10 @@ public class StartPipeResult extends com.amazonaws.AmazonWebServiceResult<com.am
     private String arn;
     /**
      * <p>
-     * The time the pipe was created.
+     * The name of the pipe.
      * </p>
      */
-    private java.util.Date creationTime;
-    /**
-     * <p>
-     * The state the pipe is in.
-     * </p>
-     */
-    private String currentState;
+    private String name;
     /**
      * <p>
      * The state the pipe should be in.
@@ -49,17 +43,23 @@ public class StartPipeResult extends com.amazonaws.AmazonWebServiceResult<com.am
     private String desiredState;
     /**
      * <p>
+     * The state the pipe is in.
+     * </p>
+     */
+    private String currentState;
+    /**
+     * <p>
+     * The time the pipe was created.
+     * </p>
+     */
+    private java.util.Date creationTime;
+    /**
+     * <p>
      * When the pipe was last updated, in <a href="https://www.w3.org/TR/NOTE-datetime">ISO-8601 format</a>
      * (YYYY-MM-DDThh:mm:ss.sTZD).
      * </p>
      */
     private java.util.Date lastModifiedTime;
-    /**
-     * <p>
-     * The name of the pipe.
-     * </p>
-     */
-    private String name;
 
     /**
      * <p>
@@ -103,100 +103,41 @@ public class StartPipeResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The time the pipe was created.
+     * The name of the pipe.
      * </p>
      * 
-     * @param creationTime
-     *        The time the pipe was created.
+     * @param name
+     *        The name of the pipe.
      */
 
-    public void setCreationTime(java.util.Date creationTime) {
-        this.creationTime = creationTime;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * <p>
-     * The time the pipe was created.
+     * The name of the pipe.
      * </p>
      * 
-     * @return The time the pipe was created.
+     * @return The name of the pipe.
      */
 
-    public java.util.Date getCreationTime() {
-        return this.creationTime;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * <p>
-     * The time the pipe was created.
+     * The name of the pipe.
      * </p>
      * 
-     * @param creationTime
-     *        The time the pipe was created.
+     * @param name
+     *        The name of the pipe.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public StartPipeResult withCreationTime(java.util.Date creationTime) {
-        setCreationTime(creationTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The state the pipe is in.
-     * </p>
-     * 
-     * @param currentState
-     *        The state the pipe is in.
-     * @see PipeState
-     */
-
-    public void setCurrentState(String currentState) {
-        this.currentState = currentState;
-    }
-
-    /**
-     * <p>
-     * The state the pipe is in.
-     * </p>
-     * 
-     * @return The state the pipe is in.
-     * @see PipeState
-     */
-
-    public String getCurrentState() {
-        return this.currentState;
-    }
-
-    /**
-     * <p>
-     * The state the pipe is in.
-     * </p>
-     * 
-     * @param currentState
-     *        The state the pipe is in.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PipeState
-     */
-
-    public StartPipeResult withCurrentState(String currentState) {
-        setCurrentState(currentState);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The state the pipe is in.
-     * </p>
-     * 
-     * @param currentState
-     *        The state the pipe is in.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PipeState
-     */
-
-    public StartPipeResult withCurrentState(PipeState currentState) {
-        this.currentState = currentState.toString();
+    public StartPipeResult withName(String name) {
+        setName(name);
         return this;
     }
 
@@ -261,6 +202,105 @@ public class StartPipeResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
+     * The state the pipe is in.
+     * </p>
+     * 
+     * @param currentState
+     *        The state the pipe is in.
+     * @see PipeState
+     */
+
+    public void setCurrentState(String currentState) {
+        this.currentState = currentState;
+    }
+
+    /**
+     * <p>
+     * The state the pipe is in.
+     * </p>
+     * 
+     * @return The state the pipe is in.
+     * @see PipeState
+     */
+
+    public String getCurrentState() {
+        return this.currentState;
+    }
+
+    /**
+     * <p>
+     * The state the pipe is in.
+     * </p>
+     * 
+     * @param currentState
+     *        The state the pipe is in.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PipeState
+     */
+
+    public StartPipeResult withCurrentState(String currentState) {
+        setCurrentState(currentState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state the pipe is in.
+     * </p>
+     * 
+     * @param currentState
+     *        The state the pipe is in.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PipeState
+     */
+
+    public StartPipeResult withCurrentState(PipeState currentState) {
+        this.currentState = currentState.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time the pipe was created.
+     * </p>
+     * 
+     * @param creationTime
+     *        The time the pipe was created.
+     */
+
+    public void setCreationTime(java.util.Date creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    /**
+     * <p>
+     * The time the pipe was created.
+     * </p>
+     * 
+     * @return The time the pipe was created.
+     */
+
+    public java.util.Date getCreationTime() {
+        return this.creationTime;
+    }
+
+    /**
+     * <p>
+     * The time the pipe was created.
+     * </p>
+     * 
+     * @param creationTime
+     *        The time the pipe was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartPipeResult withCreationTime(java.util.Date creationTime) {
+        setCreationTime(creationTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * When the pipe was last updated, in <a href="https://www.w3.org/TR/NOTE-datetime">ISO-8601 format</a>
      * (YYYY-MM-DDThh:mm:ss.sTZD).
      * </p>
@@ -306,46 +346,6 @@ public class StartPipeResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
-     * <p>
-     * The name of the pipe.
-     * </p>
-     * 
-     * @param name
-     *        The name of the pipe.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * The name of the pipe.
-     * </p>
-     * 
-     * @return The name of the pipe.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The name of the pipe.
-     * </p>
-     * 
-     * @param name
-     *        The name of the pipe.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StartPipeResult withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -359,16 +359,16 @@ public class StartPipeResult extends com.amazonaws.AmazonWebServiceResult<com.am
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getCreationTime() != null)
-            sb.append("CreationTime: ").append(getCreationTime()).append(",");
-        if (getCurrentState() != null)
-            sb.append("CurrentState: ").append(getCurrentState()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getDesiredState() != null)
             sb.append("DesiredState: ").append(getDesiredState()).append(",");
+        if (getCurrentState() != null)
+            sb.append("CurrentState: ").append(getCurrentState()).append(",");
+        if (getCreationTime() != null)
+            sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getLastModifiedTime() != null)
-            sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("LastModifiedTime: ").append(getLastModifiedTime());
         sb.append("}");
         return sb.toString();
     }
@@ -387,25 +387,25 @@ public class StartPipeResult extends com.amazonaws.AmazonWebServiceResult<com.am
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getCreationTime() == null ^ this.getCreationTime() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
-            return false;
-        if (other.getCurrentState() == null ^ this.getCurrentState() == null)
-            return false;
-        if (other.getCurrentState() != null && other.getCurrentState().equals(this.getCurrentState()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getDesiredState() == null ^ this.getDesiredState() == null)
             return false;
         if (other.getDesiredState() != null && other.getDesiredState().equals(this.getDesiredState()) == false)
             return false;
+        if (other.getCurrentState() == null ^ this.getCurrentState() == null)
+            return false;
+        if (other.getCurrentState() != null && other.getCurrentState().equals(this.getCurrentState()) == false)
+            return false;
+        if (other.getCreationTime() == null ^ this.getCreationTime() == null)
+            return false;
+        if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
+            return false;
         if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
             return false;
         if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
-            return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         return true;
     }
@@ -416,11 +416,11 @@ public class StartPipeResult extends com.amazonaws.AmazonWebServiceResult<com.am
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
-        hashCode = prime * hashCode + ((getCurrentState() == null) ? 0 : getCurrentState().hashCode());
-        hashCode = prime * hashCode + ((getDesiredState() == null) ? 0 : getDesiredState().hashCode());
-        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getDesiredState() == null) ? 0 : getDesiredState().hashCode());
+        hashCode = prime * hashCode + ((getCurrentState() == null) ? 0 : getCurrentState().hashCode());
+        hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
+        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         return hashCode;
     }
 

@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeEnrichmentParametersMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> HTTPPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HttpParameters").build();
     private static final MarshallingInfo<String> INPUTTEMPLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InputTemplate").build();
+    private static final MarshallingInfo<StructuredPojo> HTTPPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HttpParameters").build();
 
     private static final PipeEnrichmentParametersMarshaller instance = new PipeEnrichmentParametersMarshaller();
 
@@ -48,8 +48,8 @@ public class PipeEnrichmentParametersMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pipeEnrichmentParameters.getHttpParameters(), HTTPPARAMETERS_BINDING);
             protocolMarshaller.marshall(pipeEnrichmentParameters.getInputTemplate(), INPUTTEMPLATE_BINDING);
+            protocolMarshaller.marshall(pipeEnrichmentParameters.getHttpParameters(), HTTPPARAMETERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

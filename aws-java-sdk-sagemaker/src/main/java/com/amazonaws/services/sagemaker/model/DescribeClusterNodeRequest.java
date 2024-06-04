@@ -27,25 +27,24 @@ public class DescribeClusterNodeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the instance is.
+     * The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the node is.
      * </p>
      */
     private String clusterName;
     /**
      * <p>
-     * The ID of the instance.
+     * The ID of the SageMaker HyperPod cluster node.
      * </p>
      */
     private String nodeId;
 
     /**
      * <p>
-     * The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the instance is.
+     * The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the node is.
      * </p>
      * 
      * @param clusterName
-     *        The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the instance
-     *        is.
+     *        The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the node is.
      */
 
     public void setClusterName(String clusterName) {
@@ -54,11 +53,10 @@ public class DescribeClusterNodeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the instance is.
+     * The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the node is.
      * </p>
      * 
-     * @return The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the instance
-     *         is.
+     * @return The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the node is.
      */
 
     public String getClusterName() {
@@ -67,12 +65,11 @@ public class DescribeClusterNodeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the instance is.
+     * The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the node is.
      * </p>
      * 
      * @param clusterName
-     *        The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the instance
-     *        is.
+     *        The string name or the Amazon Resource Name (ARN) of the SageMaker HyperPod cluster in which the node is.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +80,11 @@ public class DescribeClusterNodeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the instance.
+     * The ID of the SageMaker HyperPod cluster node.
      * </p>
      * 
      * @param nodeId
-     *        The ID of the instance.
+     *        The ID of the SageMaker HyperPod cluster node.
      */
 
     public void setNodeId(String nodeId) {
@@ -96,10 +93,10 @@ public class DescribeClusterNodeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the instance.
+     * The ID of the SageMaker HyperPod cluster node.
      * </p>
      * 
-     * @return The ID of the instance.
+     * @return The ID of the SageMaker HyperPod cluster node.
      */
 
     public String getNodeId() {
@@ -108,11 +105,11 @@ public class DescribeClusterNodeRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the instance.
+     * The ID of the SageMaker HyperPod cluster node.
      * </p>
      * 
      * @param nodeId
-     *        The ID of the instance.
+     *        The ID of the SageMaker HyperPod cluster node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -21,6 +21,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The parameters for using a self-managed Apache Kafka stream as a source.
  * </p>
+ * <p>
+ * A <i>self managed</i> cluster refers to any Apache Kafka cluster not hosted by Amazon Web Services. This includes
+ * both clusters you manage yourself, as well as those hosted by a third-party provider, such as <a
+ * href="https://www.confluent.io/">Confluent Cloud</a>, <a href="https://www.cloudkarafka.com/">CloudKarafka</a>, or <a
+ * href="https://redpanda.com/">Redpanda</a>. For more information, see <a
+ * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html">Apache Kafka streams as a
+ * source</a> in the <i>Amazon EventBridge User Guide</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pipes-2015-10-07/UpdatePipeSourceSelfManagedKafkaParameters"
  *      target="_top">AWS API Documentation</a>
@@ -36,16 +44,16 @@ public class UpdatePipeSourceSelfManagedKafkaParameters implements Serializable,
     private Integer batchSize;
     /**
      * <p>
-     * The credentials needed to access the resource.
-     * </p>
-     */
-    private SelfManagedKafkaAccessConfigurationCredentials credentials;
-    /**
-     * <p>
      * The maximum length of a time to wait for events.
      * </p>
      */
     private Integer maximumBatchingWindowInSeconds;
+    /**
+     * <p>
+     * The credentials needed to access the resource.
+     * </p>
+     */
+    private SelfManagedKafkaAccessConfigurationCredentials credentials;
     /**
      * <p>
      * The ARN of the Secrets Manager secret used for certification.
@@ -102,46 +110,6 @@ public class UpdatePipeSourceSelfManagedKafkaParameters implements Serializable,
 
     /**
      * <p>
-     * The credentials needed to access the resource.
-     * </p>
-     * 
-     * @param credentials
-     *        The credentials needed to access the resource.
-     */
-
-    public void setCredentials(SelfManagedKafkaAccessConfigurationCredentials credentials) {
-        this.credentials = credentials;
-    }
-
-    /**
-     * <p>
-     * The credentials needed to access the resource.
-     * </p>
-     * 
-     * @return The credentials needed to access the resource.
-     */
-
-    public SelfManagedKafkaAccessConfigurationCredentials getCredentials() {
-        return this.credentials;
-    }
-
-    /**
-     * <p>
-     * The credentials needed to access the resource.
-     * </p>
-     * 
-     * @param credentials
-     *        The credentials needed to access the resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePipeSourceSelfManagedKafkaParameters withCredentials(SelfManagedKafkaAccessConfigurationCredentials credentials) {
-        setCredentials(credentials);
-        return this;
-    }
-
-    /**
-     * <p>
      * The maximum length of a time to wait for events.
      * </p>
      * 
@@ -177,6 +145,46 @@ public class UpdatePipeSourceSelfManagedKafkaParameters implements Serializable,
 
     public UpdatePipeSourceSelfManagedKafkaParameters withMaximumBatchingWindowInSeconds(Integer maximumBatchingWindowInSeconds) {
         setMaximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The credentials needed to access the resource.
+     * </p>
+     * 
+     * @param credentials
+     *        The credentials needed to access the resource.
+     */
+
+    public void setCredentials(SelfManagedKafkaAccessConfigurationCredentials credentials) {
+        this.credentials = credentials;
+    }
+
+    /**
+     * <p>
+     * The credentials needed to access the resource.
+     * </p>
+     * 
+     * @return The credentials needed to access the resource.
+     */
+
+    public SelfManagedKafkaAccessConfigurationCredentials getCredentials() {
+        return this.credentials;
+    }
+
+    /**
+     * <p>
+     * The credentials needed to access the resource.
+     * </p>
+     * 
+     * @param credentials
+     *        The credentials needed to access the resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipeSourceSelfManagedKafkaParameters withCredentials(SelfManagedKafkaAccessConfigurationCredentials credentials) {
+        setCredentials(credentials);
         return this;
     }
 
@@ -280,10 +288,10 @@ public class UpdatePipeSourceSelfManagedKafkaParameters implements Serializable,
         sb.append("{");
         if (getBatchSize() != null)
             sb.append("BatchSize: ").append(getBatchSize()).append(",");
-        if (getCredentials() != null)
-            sb.append("Credentials: ").append(getCredentials()).append(",");
         if (getMaximumBatchingWindowInSeconds() != null)
             sb.append("MaximumBatchingWindowInSeconds: ").append(getMaximumBatchingWindowInSeconds()).append(",");
+        if (getCredentials() != null)
+            sb.append("Credentials: ").append(getCredentials()).append(",");
         if (getServerRootCaCertificate() != null)
             sb.append("ServerRootCaCertificate: ").append(getServerRootCaCertificate()).append(",");
         if (getVpc() != null)
@@ -306,14 +314,14 @@ public class UpdatePipeSourceSelfManagedKafkaParameters implements Serializable,
             return false;
         if (other.getBatchSize() != null && other.getBatchSize().equals(this.getBatchSize()) == false)
             return false;
-        if (other.getCredentials() == null ^ this.getCredentials() == null)
-            return false;
-        if (other.getCredentials() != null && other.getCredentials().equals(this.getCredentials()) == false)
-            return false;
         if (other.getMaximumBatchingWindowInSeconds() == null ^ this.getMaximumBatchingWindowInSeconds() == null)
             return false;
         if (other.getMaximumBatchingWindowInSeconds() != null
                 && other.getMaximumBatchingWindowInSeconds().equals(this.getMaximumBatchingWindowInSeconds()) == false)
+            return false;
+        if (other.getCredentials() == null ^ this.getCredentials() == null)
+            return false;
+        if (other.getCredentials() != null && other.getCredentials().equals(this.getCredentials()) == false)
             return false;
         if (other.getServerRootCaCertificate() == null ^ this.getServerRootCaCertificate() == null)
             return false;
@@ -332,8 +340,8 @@ public class UpdatePipeSourceSelfManagedKafkaParameters implements Serializable,
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getBatchSize() == null) ? 0 : getBatchSize().hashCode());
-        hashCode = prime * hashCode + ((getCredentials() == null) ? 0 : getCredentials().hashCode());
         hashCode = prime * hashCode + ((getMaximumBatchingWindowInSeconds() == null) ? 0 : getMaximumBatchingWindowInSeconds().hashCode());
+        hashCode = prime * hashCode + ((getCredentials() == null) ? 0 : getCredentials().hashCode());
         hashCode = prime * hashCode + ((getServerRootCaCertificate() == null) ? 0 : getServerRootCaCertificate().hashCode());
         hashCode = prime * hashCode + ((getVpc() == null) ? 0 : getVpc().hashCode());
         return hashCode;

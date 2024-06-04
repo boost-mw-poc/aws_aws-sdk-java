@@ -31,6 +31,13 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
 
     /**
      * <p>
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
+     * Manager.
+     * </p>
+     */
+    private String secretManagerArn;
+    /**
+     * <p>
      * The name of the database. Required when authenticating using temporary credentials.
      * </p>
      */
@@ -43,19 +50,6 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
     private String dbUser;
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
-     * Manager.
-     * </p>
-     */
-    private String secretManagerArn;
-    /**
-     * <p>
-     * The SQL statement text to run.
-     * </p>
-     */
-    private java.util.List<String> sqls;
-    /**
-     * <p>
      * The name of the SQL statement. You can name the SQL statement when you create it to identify the query.
      * </p>
      */
@@ -66,6 +60,58 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
      * </p>
      */
     private Boolean withEvent;
+    /**
+     * <p>
+     * The SQL statement text to run.
+     * </p>
+     */
+    private java.util.List<String> sqls;
+
+    /**
+     * <p>
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
+     * Manager.
+     * </p>
+     * 
+     * @param secretManagerArn
+     *        The name or ARN of the secret that enables access to the database. Required when authenticating using
+     *        Secrets Manager.
+     */
+
+    public void setSecretManagerArn(String secretManagerArn) {
+        this.secretManagerArn = secretManagerArn;
+    }
+
+    /**
+     * <p>
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
+     * Manager.
+     * </p>
+     * 
+     * @return The name or ARN of the secret that enables access to the database. Required when authenticating using
+     *         Secrets Manager.
+     */
+
+    public String getSecretManagerArn() {
+        return this.secretManagerArn;
+    }
+
+    /**
+     * <p>
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
+     * Manager.
+     * </p>
+     * 
+     * @param secretManagerArn
+     *        The name or ARN of the secret that enables access to the database. Required when authenticating using
+     *        Secrets Manager.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetRedshiftDataParameters withSecretManagerArn(String secretManagerArn) {
+        setSecretManagerArn(secretManagerArn);
+        return this;
+    }
 
     /**
      * <p>
@@ -144,122 +190,6 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
 
     public PipeTargetRedshiftDataParameters withDbUser(String dbUser) {
         setDbUser(dbUser);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
-     * Manager.
-     * </p>
-     * 
-     * @param secretManagerArn
-     *        The name or ARN of the secret that enables access to the database. Required when authenticating using
-     *        Secrets Manager.
-     */
-
-    public void setSecretManagerArn(String secretManagerArn) {
-        this.secretManagerArn = secretManagerArn;
-    }
-
-    /**
-     * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
-     * Manager.
-     * </p>
-     * 
-     * @return The name or ARN of the secret that enables access to the database. Required when authenticating using
-     *         Secrets Manager.
-     */
-
-    public String getSecretManagerArn() {
-        return this.secretManagerArn;
-    }
-
-    /**
-     * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using Secrets
-     * Manager.
-     * </p>
-     * 
-     * @param secretManagerArn
-     *        The name or ARN of the secret that enables access to the database. Required when authenticating using
-     *        Secrets Manager.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetRedshiftDataParameters withSecretManagerArn(String secretManagerArn) {
-        setSecretManagerArn(secretManagerArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The SQL statement text to run.
-     * </p>
-     * 
-     * @return The SQL statement text to run.
-     */
-
-    public java.util.List<String> getSqls() {
-        return sqls;
-    }
-
-    /**
-     * <p>
-     * The SQL statement text to run.
-     * </p>
-     * 
-     * @param sqls
-     *        The SQL statement text to run.
-     */
-
-    public void setSqls(java.util.Collection<String> sqls) {
-        if (sqls == null) {
-            this.sqls = null;
-            return;
-        }
-
-        this.sqls = new java.util.ArrayList<String>(sqls);
-    }
-
-    /**
-     * <p>
-     * The SQL statement text to run.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setSqls(java.util.Collection)} or {@link #withSqls(java.util.Collection)} if you want to override the
-     * existing values.
-     * </p>
-     * 
-     * @param sqls
-     *        The SQL statement text to run.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetRedshiftDataParameters withSqls(String... sqls) {
-        if (this.sqls == null) {
-            setSqls(new java.util.ArrayList<String>(sqls.length));
-        }
-        for (String ele : sqls) {
-            this.sqls.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * The SQL statement text to run.
-     * </p>
-     * 
-     * @param sqls
-     *        The SQL statement text to run.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PipeTargetRedshiftDataParameters withSqls(java.util.Collection<String> sqls) {
-        setSqls(sqls);
         return this;
     }
 
@@ -356,6 +286,76 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The SQL statement text to run.
+     * </p>
+     * 
+     * @return The SQL statement text to run.
+     */
+
+    public java.util.List<String> getSqls() {
+        return sqls;
+    }
+
+    /**
+     * <p>
+     * The SQL statement text to run.
+     * </p>
+     * 
+     * @param sqls
+     *        The SQL statement text to run.
+     */
+
+    public void setSqls(java.util.Collection<String> sqls) {
+        if (sqls == null) {
+            this.sqls = null;
+            return;
+        }
+
+        this.sqls = new java.util.ArrayList<String>(sqls);
+    }
+
+    /**
+     * <p>
+     * The SQL statement text to run.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSqls(java.util.Collection)} or {@link #withSqls(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param sqls
+     *        The SQL statement text to run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetRedshiftDataParameters withSqls(String... sqls) {
+        if (this.sqls == null) {
+            setSqls(new java.util.ArrayList<String>(sqls.length));
+        }
+        for (String ele : sqls) {
+            this.sqls.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The SQL statement text to run.
+     * </p>
+     * 
+     * @param sqls
+     *        The SQL statement text to run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipeTargetRedshiftDataParameters withSqls(java.util.Collection<String> sqls) {
+        setSqls(sqls);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -367,18 +367,18 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getSecretManagerArn() != null)
+            sb.append("SecretManagerArn: ").append(getSecretManagerArn()).append(",");
         if (getDatabase() != null)
             sb.append("Database: ").append("***Sensitive Data Redacted***").append(",");
         if (getDbUser() != null)
             sb.append("DbUser: ").append("***Sensitive Data Redacted***").append(",");
-        if (getSecretManagerArn() != null)
-            sb.append("SecretManagerArn: ").append(getSecretManagerArn()).append(",");
-        if (getSqls() != null)
-            sb.append("Sqls: ").append("***Sensitive Data Redacted***").append(",");
         if (getStatementName() != null)
             sb.append("StatementName: ").append("***Sensitive Data Redacted***").append(",");
         if (getWithEvent() != null)
-            sb.append("WithEvent: ").append(getWithEvent());
+            sb.append("WithEvent: ").append(getWithEvent()).append(",");
+        if (getSqls() != null)
+            sb.append("Sqls: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -393,6 +393,10 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
         if (obj instanceof PipeTargetRedshiftDataParameters == false)
             return false;
         PipeTargetRedshiftDataParameters other = (PipeTargetRedshiftDataParameters) obj;
+        if (other.getSecretManagerArn() == null ^ this.getSecretManagerArn() == null)
+            return false;
+        if (other.getSecretManagerArn() != null && other.getSecretManagerArn().equals(this.getSecretManagerArn()) == false)
+            return false;
         if (other.getDatabase() == null ^ this.getDatabase() == null)
             return false;
         if (other.getDatabase() != null && other.getDatabase().equals(this.getDatabase()) == false)
@@ -400,14 +404,6 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
         if (other.getDbUser() == null ^ this.getDbUser() == null)
             return false;
         if (other.getDbUser() != null && other.getDbUser().equals(this.getDbUser()) == false)
-            return false;
-        if (other.getSecretManagerArn() == null ^ this.getSecretManagerArn() == null)
-            return false;
-        if (other.getSecretManagerArn() != null && other.getSecretManagerArn().equals(this.getSecretManagerArn()) == false)
-            return false;
-        if (other.getSqls() == null ^ this.getSqls() == null)
-            return false;
-        if (other.getSqls() != null && other.getSqls().equals(this.getSqls()) == false)
             return false;
         if (other.getStatementName() == null ^ this.getStatementName() == null)
             return false;
@@ -417,6 +413,10 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
             return false;
         if (other.getWithEvent() != null && other.getWithEvent().equals(this.getWithEvent()) == false)
             return false;
+        if (other.getSqls() == null ^ this.getSqls() == null)
+            return false;
+        if (other.getSqls() != null && other.getSqls().equals(this.getSqls()) == false)
+            return false;
         return true;
     }
 
@@ -425,12 +425,12 @@ public class PipeTargetRedshiftDataParameters implements Serializable, Cloneable
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getSecretManagerArn() == null) ? 0 : getSecretManagerArn().hashCode());
         hashCode = prime * hashCode + ((getDatabase() == null) ? 0 : getDatabase().hashCode());
         hashCode = prime * hashCode + ((getDbUser() == null) ? 0 : getDbUser().hashCode());
-        hashCode = prime * hashCode + ((getSecretManagerArn() == null) ? 0 : getSecretManagerArn().hashCode());
-        hashCode = prime * hashCode + ((getSqls() == null) ? 0 : getSqls().hashCode());
         hashCode = prime * hashCode + ((getStatementName() == null) ? 0 : getStatementName().hashCode());
         hashCode = prime * hashCode + ((getWithEvent() == null) ? 0 : getWithEvent().hashCode());
+        hashCode = prime * hashCode + ((getSqls() == null) ? 0 : getSqls().hashCode());
         return hashCode;
     }
 

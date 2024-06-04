@@ -32,15 +32,6 @@ public class PlacementStrategy implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId
-     * (or host, which has the same effect), or any platform or custom attribute that is applied to a container
-     * instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
-     * memory. For the random placement strategy, this field is not used.
-     * </p>
-     */
-    private String field;
-    /**
-     * <p>
      * The type of placement strategy. The random placement strategy randomly places tasks on available candidates. The
      * spread placement strategy spreads placement across available candidates evenly based on the field parameter. The
      * binpack strategy places tasks on available candidates that have the least available amount of the resource that
@@ -49,7 +40,6 @@ public class PlacementStrategy implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String type;
-
     /**
      * <p>
      * The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId
@@ -57,56 +47,8 @@ public class PlacementStrategy implements Serializable, Cloneable, StructuredPoj
      * instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
      * memory. For the random placement strategy, this field is not used.
      * </p>
-     * 
-     * @param field
-     *        The field to apply the placement strategy against. For the spread placement strategy, valid values are
-     *        instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a
-     *        container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid
-     *        values are cpu and memory. For the random placement strategy, this field is not used.
      */
-
-    public void setField(String field) {
-        this.field = field;
-    }
-
-    /**
-     * <p>
-     * The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId
-     * (or host, which has the same effect), or any platform or custom attribute that is applied to a container
-     * instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
-     * memory. For the random placement strategy, this field is not used.
-     * </p>
-     * 
-     * @return The field to apply the placement strategy against. For the spread placement strategy, valid values are
-     *         instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a
-     *         container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid
-     *         values are cpu and memory. For the random placement strategy, this field is not used.
-     */
-
-    public String getField() {
-        return this.field;
-    }
-
-    /**
-     * <p>
-     * The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId
-     * (or host, which has the same effect), or any platform or custom attribute that is applied to a container
-     * instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
-     * memory. For the random placement strategy, this field is not used.
-     * </p>
-     * 
-     * @param field
-     *        The field to apply the placement strategy against. For the spread placement strategy, valid values are
-     *        instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a
-     *        container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid
-     *        values are cpu and memory. For the random placement strategy, this field is not used.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PlacementStrategy withField(String field) {
-        setField(field);
-        return this;
-    }
+    private String field;
 
     /**
      * <p>
@@ -204,6 +146,64 @@ public class PlacementStrategy implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId
+     * (or host, which has the same effect), or any platform or custom attribute that is applied to a container
+     * instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
+     * memory. For the random placement strategy, this field is not used.
+     * </p>
+     * 
+     * @param field
+     *        The field to apply the placement strategy against. For the spread placement strategy, valid values are
+     *        instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a
+     *        container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid
+     *        values are cpu and memory. For the random placement strategy, this field is not used.
+     */
+
+    public void setField(String field) {
+        this.field = field;
+    }
+
+    /**
+     * <p>
+     * The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId
+     * (or host, which has the same effect), or any platform or custom attribute that is applied to a container
+     * instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
+     * memory. For the random placement strategy, this field is not used.
+     * </p>
+     * 
+     * @return The field to apply the placement strategy against. For the spread placement strategy, valid values are
+     *         instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a
+     *         container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid
+     *         values are cpu and memory. For the random placement strategy, this field is not used.
+     */
+
+    public String getField() {
+        return this.field;
+    }
+
+    /**
+     * <p>
+     * The field to apply the placement strategy against. For the spread placement strategy, valid values are instanceId
+     * (or host, which has the same effect), or any platform or custom attribute that is applied to a container
+     * instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid values are cpu and
+     * memory. For the random placement strategy, this field is not used.
+     * </p>
+     * 
+     * @param field
+     *        The field to apply the placement strategy against. For the spread placement strategy, valid values are
+     *        instanceId (or host, which has the same effect), or any platform or custom attribute that is applied to a
+     *        container instance, such as attribute:ecs.availability-zone. For the binpack placement strategy, valid
+     *        values are cpu and memory. For the random placement strategy, this field is not used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PlacementStrategy withField(String field) {
+        setField(field);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -215,10 +215,10 @@ public class PlacementStrategy implements Serializable, Cloneable, StructuredPoj
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getField() != null)
-            sb.append("Field: ").append("***Sensitive Data Redacted***").append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getField() != null)
+            sb.append("Field: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -233,13 +233,13 @@ public class PlacementStrategy implements Serializable, Cloneable, StructuredPoj
         if (obj instanceof PlacementStrategy == false)
             return false;
         PlacementStrategy other = (PlacementStrategy) obj;
-        if (other.getField() == null ^ this.getField() == null)
-            return false;
-        if (other.getField() != null && other.getField().equals(this.getField()) == false)
-            return false;
         if (other.getType() == null ^ this.getType() == null)
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
+        if (other.getField() == null ^ this.getField() == null)
+            return false;
+        if (other.getField() != null && other.getField().equals(this.getField()) == false)
             return false;
         return true;
     }
@@ -249,8 +249,8 @@ public class PlacementStrategy implements Serializable, Cloneable, StructuredPoj
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getField() == null) ? 0 : getField().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getField() == null) ? 0 : getField().hashCode());
         return hashCode;
     }
 

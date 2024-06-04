@@ -48,6 +48,14 @@ public class PipeSourceSelfManagedKafkaParametersJsonUnmarshaller implements Unm
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("TopicName", targetDepth)) {
+                    context.nextToken();
+                    pipeSourceSelfManagedKafkaParameters.setTopicName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("StartingPosition", targetDepth)) {
+                    context.nextToken();
+                    pipeSourceSelfManagedKafkaParameters.setStartingPosition(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("AdditionalBootstrapServers", targetDepth)) {
                     context.nextToken();
                     pipeSourceSelfManagedKafkaParameters.setAdditionalBootstrapServers(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
@@ -58,6 +66,10 @@ public class PipeSourceSelfManagedKafkaParametersJsonUnmarshaller implements Unm
                     context.nextToken();
                     pipeSourceSelfManagedKafkaParameters.setBatchSize(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
+                    context.nextToken();
+                    pipeSourceSelfManagedKafkaParameters.setMaximumBatchingWindowInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("ConsumerGroupID", targetDepth)) {
                     context.nextToken();
                     pipeSourceSelfManagedKafkaParameters.setConsumerGroupID(context.getUnmarshaller(String.class).unmarshall(context));
@@ -67,21 +79,9 @@ public class PipeSourceSelfManagedKafkaParametersJsonUnmarshaller implements Unm
                     pipeSourceSelfManagedKafkaParameters.setCredentials(SelfManagedKafkaAccessConfigurationCredentialsJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
-                if (context.testExpression("MaximumBatchingWindowInSeconds", targetDepth)) {
-                    context.nextToken();
-                    pipeSourceSelfManagedKafkaParameters.setMaximumBatchingWindowInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (context.testExpression("ServerRootCaCertificate", targetDepth)) {
                     context.nextToken();
                     pipeSourceSelfManagedKafkaParameters.setServerRootCaCertificate(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("StartingPosition", targetDepth)) {
-                    context.nextToken();
-                    pipeSourceSelfManagedKafkaParameters.setStartingPosition(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("TopicName", targetDepth)) {
-                    context.nextToken();
-                    pipeSourceSelfManagedKafkaParameters.setTopicName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("Vpc", targetDepth)) {
                     context.nextToken();

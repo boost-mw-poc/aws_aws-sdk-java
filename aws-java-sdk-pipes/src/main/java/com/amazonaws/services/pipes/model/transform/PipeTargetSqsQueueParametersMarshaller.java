@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PipeTargetSqsQueueParametersMarshaller {
 
-    private static final MarshallingInfo<String> MESSAGEDEDUPLICATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageDeduplicationId").build();
     private static final MarshallingInfo<String> MESSAGEGROUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageGroupId").build();
+    private static final MarshallingInfo<String> MESSAGEDEDUPLICATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageDeduplicationId").build();
 
     private static final PipeTargetSqsQueueParametersMarshaller instance = new PipeTargetSqsQueueParametersMarshaller();
 
@@ -48,8 +48,8 @@ public class PipeTargetSqsQueueParametersMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(pipeTargetSqsQueueParameters.getMessageDeduplicationId(), MESSAGEDEDUPLICATIONID_BINDING);
             protocolMarshaller.marshall(pipeTargetSqsQueueParameters.getMessageGroupId(), MESSAGEGROUPID_BINDING);
+            protocolMarshaller.marshall(pipeTargetSqsQueueParameters.getMessageDeduplicationId(), MESSAGEDEDUPLICATIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

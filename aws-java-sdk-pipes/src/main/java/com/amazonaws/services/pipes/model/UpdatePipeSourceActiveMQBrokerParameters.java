@@ -30,62 +30,22 @@ public class UpdatePipeSourceActiveMQBrokerParameters implements Serializable, C
 
     /**
      * <p>
-     * The maximum number of records to include in each batch.
-     * </p>
-     */
-    private Integer batchSize;
-    /**
-     * <p>
      * The credentials needed to access the resource.
      * </p>
      */
     private MQBrokerAccessCredentials credentials;
     /**
      * <p>
+     * The maximum number of records to include in each batch.
+     * </p>
+     */
+    private Integer batchSize;
+    /**
+     * <p>
      * The maximum length of a time to wait for events.
      * </p>
      */
     private Integer maximumBatchingWindowInSeconds;
-
-    /**
-     * <p>
-     * The maximum number of records to include in each batch.
-     * </p>
-     * 
-     * @param batchSize
-     *        The maximum number of records to include in each batch.
-     */
-
-    public void setBatchSize(Integer batchSize) {
-        this.batchSize = batchSize;
-    }
-
-    /**
-     * <p>
-     * The maximum number of records to include in each batch.
-     * </p>
-     * 
-     * @return The maximum number of records to include in each batch.
-     */
-
-    public Integer getBatchSize() {
-        return this.batchSize;
-    }
-
-    /**
-     * <p>
-     * The maximum number of records to include in each batch.
-     * </p>
-     * 
-     * @param batchSize
-     *        The maximum number of records to include in each batch.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdatePipeSourceActiveMQBrokerParameters withBatchSize(Integer batchSize) {
-        setBatchSize(batchSize);
-        return this;
-    }
 
     /**
      * <p>
@@ -124,6 +84,46 @@ public class UpdatePipeSourceActiveMQBrokerParameters implements Serializable, C
 
     public UpdatePipeSourceActiveMQBrokerParameters withCredentials(MQBrokerAccessCredentials credentials) {
         setCredentials(credentials);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum number of records to include in each batch.
+     * </p>
+     * 
+     * @param batchSize
+     *        The maximum number of records to include in each batch.
+     */
+
+    public void setBatchSize(Integer batchSize) {
+        this.batchSize = batchSize;
+    }
+
+    /**
+     * <p>
+     * The maximum number of records to include in each batch.
+     * </p>
+     * 
+     * @return The maximum number of records to include in each batch.
+     */
+
+    public Integer getBatchSize() {
+        return this.batchSize;
+    }
+
+    /**
+     * <p>
+     * The maximum number of records to include in each batch.
+     * </p>
+     * 
+     * @param batchSize
+     *        The maximum number of records to include in each batch.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipeSourceActiveMQBrokerParameters withBatchSize(Integer batchSize) {
+        setBatchSize(batchSize);
         return this;
     }
 
@@ -179,10 +179,10 @@ public class UpdatePipeSourceActiveMQBrokerParameters implements Serializable, C
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getBatchSize() != null)
-            sb.append("BatchSize: ").append(getBatchSize()).append(",");
         if (getCredentials() != null)
             sb.append("Credentials: ").append(getCredentials()).append(",");
+        if (getBatchSize() != null)
+            sb.append("BatchSize: ").append(getBatchSize()).append(",");
         if (getMaximumBatchingWindowInSeconds() != null)
             sb.append("MaximumBatchingWindowInSeconds: ").append(getMaximumBatchingWindowInSeconds());
         sb.append("}");
@@ -199,13 +199,13 @@ public class UpdatePipeSourceActiveMQBrokerParameters implements Serializable, C
         if (obj instanceof UpdatePipeSourceActiveMQBrokerParameters == false)
             return false;
         UpdatePipeSourceActiveMQBrokerParameters other = (UpdatePipeSourceActiveMQBrokerParameters) obj;
-        if (other.getBatchSize() == null ^ this.getBatchSize() == null)
-            return false;
-        if (other.getBatchSize() != null && other.getBatchSize().equals(this.getBatchSize()) == false)
-            return false;
         if (other.getCredentials() == null ^ this.getCredentials() == null)
             return false;
         if (other.getCredentials() != null && other.getCredentials().equals(this.getCredentials()) == false)
+            return false;
+        if (other.getBatchSize() == null ^ this.getBatchSize() == null)
+            return false;
+        if (other.getBatchSize() != null && other.getBatchSize().equals(this.getBatchSize()) == false)
             return false;
         if (other.getMaximumBatchingWindowInSeconds() == null ^ this.getMaximumBatchingWindowInSeconds() == null)
             return false;
@@ -220,8 +220,8 @@ public class UpdatePipeSourceActiveMQBrokerParameters implements Serializable, C
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getBatchSize() == null) ? 0 : getBatchSize().hashCode());
         hashCode = prime * hashCode + ((getCredentials() == null) ? 0 : getCredentials().hashCode());
+        hashCode = prime * hashCode + ((getBatchSize() == null) ? 0 : getBatchSize().hashCode());
         hashCode = prime * hashCode + ((getMaximumBatchingWindowInSeconds() == null) ? 0 : getMaximumBatchingWindowInSeconds().hashCode());
         return hashCode;
     }

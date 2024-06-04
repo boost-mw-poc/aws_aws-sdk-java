@@ -27,10 +27,11 @@ public class ListPipesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The state the pipe is in.
+     * A value that will return a subset of the pipes associated with this account. For example,
+     * <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
      * </p>
      */
-    private String currentState;
+    private String namePrefix;
     /**
      * <p>
      * The state the pipe should be in.
@@ -39,26 +40,10 @@ public class ListPipesRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String desiredState;
     /**
      * <p>
-     * The maximum number of pipes to include in the response.
+     * The state the pipe is in.
      * </p>
      */
-    private Integer limit;
-    /**
-     * <p>
-     * A value that will return a subset of the pipes associated with this account. For example,
-     * <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
-     * </p>
-     */
-    private String namePrefix;
-    /**
-     * <p>
-     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
-     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
-     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
-     * token will return an HTTP 400 InvalidToken error.
-     * </p>
-     */
-    private String nextToken;
+    private String currentState;
     /**
      * <p>
      * The prefix matching the pipe source.
@@ -71,63 +56,65 @@ public class ListPipesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      */
     private String targetPrefix;
+    /**
+     * <p>
+     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
+     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
+     * token will return an HTTP 400 InvalidToken error.
+     * </p>
+     */
+    private String nextToken;
+    /**
+     * <p>
+     * The maximum number of pipes to include in the response.
+     * </p>
+     */
+    private Integer limit;
 
     /**
      * <p>
-     * The state the pipe is in.
+     * A value that will return a subset of the pipes associated with this account. For example,
+     * <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
      * </p>
      * 
-     * @param currentState
-     *        The state the pipe is in.
-     * @see PipeState
+     * @param namePrefix
+     *        A value that will return a subset of the pipes associated with this account. For example,
+     *        <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
      */
 
-    public void setCurrentState(String currentState) {
-        this.currentState = currentState;
+    public void setNamePrefix(String namePrefix) {
+        this.namePrefix = namePrefix;
     }
 
     /**
      * <p>
-     * The state the pipe is in.
+     * A value that will return a subset of the pipes associated with this account. For example,
+     * <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
      * </p>
      * 
-     * @return The state the pipe is in.
-     * @see PipeState
+     * @return A value that will return a subset of the pipes associated with this account. For example,
+     *         <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
      */
 
-    public String getCurrentState() {
-        return this.currentState;
+    public String getNamePrefix() {
+        return this.namePrefix;
     }
 
     /**
      * <p>
-     * The state the pipe is in.
+     * A value that will return a subset of the pipes associated with this account. For example,
+     * <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
      * </p>
      * 
-     * @param currentState
-     *        The state the pipe is in.
+     * @param namePrefix
+     *        A value that will return a subset of the pipes associated with this account. For example,
+     *        <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PipeState
      */
 
-    public ListPipesRequest withCurrentState(String currentState) {
-        setCurrentState(currentState);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The state the pipe is in.
-     * </p>
-     * 
-     * @param currentState
-     *        The state the pipe is in.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see PipeState
-     */
-
-    public ListPipesRequest withCurrentState(PipeState currentState) {
-        this.currentState = currentState.toString();
+    public ListPipesRequest withNamePrefix(String namePrefix) {
+        setNamePrefix(namePrefix);
         return this;
     }
 
@@ -192,145 +179,60 @@ public class ListPipesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The maximum number of pipes to include in the response.
+     * The state the pipe is in.
      * </p>
      * 
-     * @param limit
-     *        The maximum number of pipes to include in the response.
+     * @param currentState
+     *        The state the pipe is in.
+     * @see PipeState
      */
 
-    public void setLimit(Integer limit) {
-        this.limit = limit;
+    public void setCurrentState(String currentState) {
+        this.currentState = currentState;
     }
 
     /**
      * <p>
-     * The maximum number of pipes to include in the response.
+     * The state the pipe is in.
      * </p>
      * 
-     * @return The maximum number of pipes to include in the response.
+     * @return The state the pipe is in.
+     * @see PipeState
      */
 
-    public Integer getLimit() {
-        return this.limit;
+    public String getCurrentState() {
+        return this.currentState;
     }
 
     /**
      * <p>
-     * The maximum number of pipes to include in the response.
+     * The state the pipe is in.
      * </p>
      * 
-     * @param limit
-     *        The maximum number of pipes to include in the response.
+     * @param currentState
+     *        The state the pipe is in.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PipeState
      */
 
-    public ListPipesRequest withLimit(Integer limit) {
-        setLimit(limit);
+    public ListPipesRequest withCurrentState(String currentState) {
+        setCurrentState(currentState);
         return this;
     }
 
     /**
      * <p>
-     * A value that will return a subset of the pipes associated with this account. For example,
-     * <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
+     * The state the pipe is in.
      * </p>
      * 
-     * @param namePrefix
-     *        A value that will return a subset of the pipes associated with this account. For example,
-     *        <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
-     */
-
-    public void setNamePrefix(String namePrefix) {
-        this.namePrefix = namePrefix;
-    }
-
-    /**
-     * <p>
-     * A value that will return a subset of the pipes associated with this account. For example,
-     * <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
-     * </p>
-     * 
-     * @return A value that will return a subset of the pipes associated with this account. For example,
-     *         <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
-     */
-
-    public String getNamePrefix() {
-        return this.namePrefix;
-    }
-
-    /**
-     * <p>
-     * A value that will return a subset of the pipes associated with this account. For example,
-     * <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
-     * </p>
-     * 
-     * @param namePrefix
-     *        A value that will return a subset of the pipes associated with this account. For example,
-     *        <code>"NamePrefix": "ABC"</code> will return all endpoints with "ABC" in the name.
+     * @param currentState
+     *        The state the pipe is in.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PipeState
      */
 
-    public ListPipesRequest withNamePrefix(String namePrefix) {
-        setNamePrefix(namePrefix);
-        return this;
-    }
-
-    /**
-     * <p>
-     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
-     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
-     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
-     * token will return an HTTP 400 InvalidToken error.
-     * </p>
-     * 
-     * @param nextToken
-     *        If <code>nextToken</code> is returned, there are more results available. The value of
-     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
-     *        token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
-     *        24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
-     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
-     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
-     * token will return an HTTP 400 InvalidToken error.
-     * </p>
-     * 
-     * @return If <code>nextToken</code> is returned, there are more results available. The value of
-     *         <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
-     *         token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
-     *         24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
-     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
-     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
-     * token will return an HTTP 400 InvalidToken error.
-     * </p>
-     * 
-     * @param nextToken
-     *        If <code>nextToken</code> is returned, there are more results available. The value of
-     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
-     *        token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
-     *        24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListPipesRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
+    public ListPipesRequest withCurrentState(PipeState currentState) {
+        this.currentState = currentState.toString();
         return this;
     }
 
@@ -415,6 +317,104 @@ public class ListPipesRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
+     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
+     * token will return an HTTP 400 InvalidToken error.
+     * </p>
+     * 
+     * @param nextToken
+     *        If <code>nextToken</code> is returned, there are more results available. The value of
+     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
+     *        token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
+     *        24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
+     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
+     * token will return an HTTP 400 InvalidToken error.
+     * </p>
+     * 
+     * @return If <code>nextToken</code> is returned, there are more results available. The value of
+     *         <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
+     *         token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
+     *         24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * If <code>nextToken</code> is returned, there are more results available. The value of <code>nextToken</code> is a
+     * unique pagination token for each page. Make the call again using the returned token to retrieve the next page.
+     * Keep all other arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination
+     * token will return an HTTP 400 InvalidToken error.
+     * </p>
+     * 
+     * @param nextToken
+     *        If <code>nextToken</code> is returned, there are more results available. The value of
+     *        <code>nextToken</code> is a unique pagination token for each page. Make the call again using the returned
+     *        token to retrieve the next page. Keep all other arguments unchanged. Each pagination token expires after
+     *        24 hours. Using an expired pagination token will return an HTTP 400 InvalidToken error.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPipesRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum number of pipes to include in the response.
+     * </p>
+     * 
+     * @param limit
+     *        The maximum number of pipes to include in the response.
+     */
+
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
+
+    /**
+     * <p>
+     * The maximum number of pipes to include in the response.
+     * </p>
+     * 
+     * @return The maximum number of pipes to include in the response.
+     */
+
+    public Integer getLimit() {
+        return this.limit;
+    }
+
+    /**
+     * <p>
+     * The maximum number of pipes to include in the response.
+     * </p>
+     * 
+     * @param limit
+     *        The maximum number of pipes to include in the response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPipesRequest withLimit(Integer limit) {
+        setLimit(limit);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -426,20 +426,20 @@ public class ListPipesRequest extends com.amazonaws.AmazonWebServiceRequest impl
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCurrentState() != null)
-            sb.append("CurrentState: ").append(getCurrentState()).append(",");
-        if (getDesiredState() != null)
-            sb.append("DesiredState: ").append(getDesiredState()).append(",");
-        if (getLimit() != null)
-            sb.append("Limit: ").append(getLimit()).append(",");
         if (getNamePrefix() != null)
             sb.append("NamePrefix: ").append(getNamePrefix()).append(",");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append("***Sensitive Data Redacted***").append(",");
+        if (getDesiredState() != null)
+            sb.append("DesiredState: ").append(getDesiredState()).append(",");
+        if (getCurrentState() != null)
+            sb.append("CurrentState: ").append(getCurrentState()).append(",");
         if (getSourcePrefix() != null)
             sb.append("SourcePrefix: ").append(getSourcePrefix()).append(",");
         if (getTargetPrefix() != null)
-            sb.append("TargetPrefix: ").append(getTargetPrefix());
+            sb.append("TargetPrefix: ").append(getTargetPrefix()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append("***Sensitive Data Redacted***").append(",");
+        if (getLimit() != null)
+            sb.append("Limit: ").append(getLimit());
         sb.append("}");
         return sb.toString();
     }
@@ -454,25 +454,17 @@ public class ListPipesRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (obj instanceof ListPipesRequest == false)
             return false;
         ListPipesRequest other = (ListPipesRequest) obj;
-        if (other.getCurrentState() == null ^ this.getCurrentState() == null)
+        if (other.getNamePrefix() == null ^ this.getNamePrefix() == null)
             return false;
-        if (other.getCurrentState() != null && other.getCurrentState().equals(this.getCurrentState()) == false)
+        if (other.getNamePrefix() != null && other.getNamePrefix().equals(this.getNamePrefix()) == false)
             return false;
         if (other.getDesiredState() == null ^ this.getDesiredState() == null)
             return false;
         if (other.getDesiredState() != null && other.getDesiredState().equals(this.getDesiredState()) == false)
             return false;
-        if (other.getLimit() == null ^ this.getLimit() == null)
+        if (other.getCurrentState() == null ^ this.getCurrentState() == null)
             return false;
-        if (other.getLimit() != null && other.getLimit().equals(this.getLimit()) == false)
-            return false;
-        if (other.getNamePrefix() == null ^ this.getNamePrefix() == null)
-            return false;
-        if (other.getNamePrefix() != null && other.getNamePrefix().equals(this.getNamePrefix()) == false)
-            return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+        if (other.getCurrentState() != null && other.getCurrentState().equals(this.getCurrentState()) == false)
             return false;
         if (other.getSourcePrefix() == null ^ this.getSourcePrefix() == null)
             return false;
@@ -482,6 +474,14 @@ public class ListPipesRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getTargetPrefix() != null && other.getTargetPrefix().equals(this.getTargetPrefix()) == false)
             return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getLimit() == null ^ this.getLimit() == null)
+            return false;
+        if (other.getLimit() != null && other.getLimit().equals(this.getLimit()) == false)
+            return false;
         return true;
     }
 
@@ -490,13 +490,13 @@ public class ListPipesRequest extends com.amazonaws.AmazonWebServiceRequest impl
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCurrentState() == null) ? 0 : getCurrentState().hashCode());
-        hashCode = prime * hashCode + ((getDesiredState() == null) ? 0 : getDesiredState().hashCode());
-        hashCode = prime * hashCode + ((getLimit() == null) ? 0 : getLimit().hashCode());
         hashCode = prime * hashCode + ((getNamePrefix() == null) ? 0 : getNamePrefix().hashCode());
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getDesiredState() == null) ? 0 : getDesiredState().hashCode());
+        hashCode = prime * hashCode + ((getCurrentState() == null) ? 0 : getCurrentState().hashCode());
         hashCode = prime * hashCode + ((getSourcePrefix() == null) ? 0 : getSourcePrefix().hashCode());
         hashCode = prime * hashCode + ((getTargetPrefix() == null) ? 0 : getTargetPrefix().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getLimit() == null) ? 0 : getLimit().hashCode());
         return hashCode;
     }
 
