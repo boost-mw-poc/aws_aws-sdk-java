@@ -153,6 +153,10 @@ public class TaskSetJsonUnmarshaller implements Unmarshaller<TaskSet, JsonUnmars
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("fargateEphemeralStorage", targetDepth)) {
+                    context.nextToken();
+                    taskSet.setFargateEphemeralStorage(DeploymentEphemeralStorageJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

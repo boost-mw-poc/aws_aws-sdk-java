@@ -133,6 +133,10 @@ public class DeploymentJsonUnmarshaller implements Unmarshaller<Deployment, Json
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("fargateEphemeralStorage", targetDepth)) {
+                    context.nextToken();
+                    deployment.setFargateEphemeralStorage(DeploymentEphemeralStorageJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

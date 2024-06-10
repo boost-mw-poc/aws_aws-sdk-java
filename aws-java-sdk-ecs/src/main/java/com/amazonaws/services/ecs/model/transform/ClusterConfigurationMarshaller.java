@@ -29,6 +29,8 @@ public class ClusterConfigurationMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> EXECUTECOMMANDCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("executeCommandConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> MANAGEDSTORAGECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("managedStorageConfiguration").build();
 
     private static final ClusterConfigurationMarshaller instance = new ClusterConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class ClusterConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(clusterConfiguration.getExecuteCommandConfiguration(), EXECUTECOMMANDCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(clusterConfiguration.getManagedStorageConfiguration(), MANAGEDSTORAGECONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

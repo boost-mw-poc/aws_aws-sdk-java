@@ -38,6 +38,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * to be used in a capacity provider strategy.
  * </p>
  * <p>
+ * With <code>FARGATE_SPOT</code>, you can run interruption tolerant tasks at a rate that's discounted compared to the
+ * <code>FARGATE</code> price. <code>FARGATE_SPOT</code> runs tasks on spare compute capacity. When Amazon Web Services
+ * needs the capacity back, your tasks are interrupted with a two-minute warning. <code>FARGATE_SPOT</code> only
+ * supports Linux tasks with the X86_64 architecture on platform version 1.3.0 or later.
+ * </p>
+ * <p>
  * A capacity provider strategy may contain a maximum of 6 capacity providers.
  * </p>
  * 

@@ -441,6 +441,12 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private EphemeralStorage ephemeralStorage;
+    /**
+     * <p>
+     * The Fargate ephemeral storage settings for the task.
+     * </p>
+     */
+    private TaskEphemeralStorage fargateEphemeralStorage;
 
     /**
      * <p>
@@ -3449,6 +3455,46 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Fargate ephemeral storage settings for the task.
+     * </p>
+     * 
+     * @param fargateEphemeralStorage
+     *        The Fargate ephemeral storage settings for the task.
+     */
+
+    public void setFargateEphemeralStorage(TaskEphemeralStorage fargateEphemeralStorage) {
+        this.fargateEphemeralStorage = fargateEphemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The Fargate ephemeral storage settings for the task.
+     * </p>
+     * 
+     * @return The Fargate ephemeral storage settings for the task.
+     */
+
+    public TaskEphemeralStorage getFargateEphemeralStorage() {
+        return this.fargateEphemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The Fargate ephemeral storage settings for the task.
+     * </p>
+     * 
+     * @param fargateEphemeralStorage
+     *        The Fargate ephemeral storage settings for the task.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Task withFargateEphemeralStorage(TaskEphemeralStorage fargateEphemeralStorage) {
+        setFargateEphemeralStorage(fargateEphemeralStorage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3531,7 +3577,9 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
         if (getVersion() != null)
             sb.append("Version: ").append(getVersion()).append(",");
         if (getEphemeralStorage() != null)
-            sb.append("EphemeralStorage: ").append(getEphemeralStorage());
+            sb.append("EphemeralStorage: ").append(getEphemeralStorage()).append(",");
+        if (getFargateEphemeralStorage() != null)
+            sb.append("FargateEphemeralStorage: ").append(getFargateEphemeralStorage());
         sb.append("}");
         return sb.toString();
     }
@@ -3690,6 +3738,10 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEphemeralStorage() != null && other.getEphemeralStorage().equals(this.getEphemeralStorage()) == false)
             return false;
+        if (other.getFargateEphemeralStorage() == null ^ this.getFargateEphemeralStorage() == null)
+            return false;
+        if (other.getFargateEphemeralStorage() != null && other.getFargateEphemeralStorage().equals(this.getFargateEphemeralStorage()) == false)
+            return false;
         return true;
     }
 
@@ -3734,6 +3786,7 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTaskDefinitionArn() == null) ? 0 : getTaskDefinitionArn().hashCode());
         hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
         hashCode = prime * hashCode + ((getEphemeralStorage() == null) ? 0 : getEphemeralStorage().hashCode());
+        hashCode = prime * hashCode + ((getFargateEphemeralStorage() == null) ? 0 : getFargateEphemeralStorage().hashCode());
         return hashCode;
     }
 

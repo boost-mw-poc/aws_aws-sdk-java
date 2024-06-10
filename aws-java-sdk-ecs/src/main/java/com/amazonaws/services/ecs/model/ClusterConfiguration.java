@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The execute command configuration for the cluster.
+ * The execute command and managed storage configuration for the cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ClusterConfiguration" target="_top">AWS API
@@ -34,6 +34,12 @@ public class ClusterConfiguration implements Serializable, Cloneable, Structured
      * </p>
      */
     private ExecuteCommandConfiguration executeCommandConfiguration;
+    /**
+     * <p>
+     * The details of the managed storage configuration.
+     * </p>
+     */
+    private ManagedStorageConfiguration managedStorageConfiguration;
 
     /**
      * <p>
@@ -76,6 +82,46 @@ public class ClusterConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The details of the managed storage configuration.
+     * </p>
+     * 
+     * @param managedStorageConfiguration
+     *        The details of the managed storage configuration.
+     */
+
+    public void setManagedStorageConfiguration(ManagedStorageConfiguration managedStorageConfiguration) {
+        this.managedStorageConfiguration = managedStorageConfiguration;
+    }
+
+    /**
+     * <p>
+     * The details of the managed storage configuration.
+     * </p>
+     * 
+     * @return The details of the managed storage configuration.
+     */
+
+    public ManagedStorageConfiguration getManagedStorageConfiguration() {
+        return this.managedStorageConfiguration;
+    }
+
+    /**
+     * <p>
+     * The details of the managed storage configuration.
+     * </p>
+     * 
+     * @param managedStorageConfiguration
+     *        The details of the managed storage configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterConfiguration withManagedStorageConfiguration(ManagedStorageConfiguration managedStorageConfiguration) {
+        setManagedStorageConfiguration(managedStorageConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +134,9 @@ public class ClusterConfiguration implements Serializable, Cloneable, Structured
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getExecuteCommandConfiguration() != null)
-            sb.append("ExecuteCommandConfiguration: ").append(getExecuteCommandConfiguration());
+            sb.append("ExecuteCommandConfiguration: ").append(getExecuteCommandConfiguration()).append(",");
+        if (getManagedStorageConfiguration() != null)
+            sb.append("ManagedStorageConfiguration: ").append(getManagedStorageConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +155,10 @@ public class ClusterConfiguration implements Serializable, Cloneable, Structured
             return false;
         if (other.getExecuteCommandConfiguration() != null && other.getExecuteCommandConfiguration().equals(this.getExecuteCommandConfiguration()) == false)
             return false;
+        if (other.getManagedStorageConfiguration() == null ^ this.getManagedStorageConfiguration() == null)
+            return false;
+        if (other.getManagedStorageConfiguration() != null && other.getManagedStorageConfiguration().equals(this.getManagedStorageConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +168,7 @@ public class ClusterConfiguration implements Serializable, Cloneable, Structured
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getExecuteCommandConfiguration() == null) ? 0 : getExecuteCommandConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getManagedStorageConfiguration() == null) ? 0 : getManagedStorageConfiguration().hashCode());
         return hashCode;
     }
 

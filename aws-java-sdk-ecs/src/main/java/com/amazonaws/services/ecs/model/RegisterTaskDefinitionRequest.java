@@ -445,10 +445,6 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * The operating system that your tasks definitions run on. A platform family is specified only for tasks using the
      * Fargate launch type.
      * </p>
-     * <p>
-     * When you specify a task definition in a service, this value must match the <code>runtimePlatform</code> value of
-     * the service.
-     * </p>
      */
     private RuntimePlatform runtimePlatform;
 
@@ -3859,17 +3855,10 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * The operating system that your tasks definitions run on. A platform family is specified only for tasks using the
      * Fargate launch type.
      * </p>
-     * <p>
-     * When you specify a task definition in a service, this value must match the <code>runtimePlatform</code> value of
-     * the service.
-     * </p>
      * 
      * @param runtimePlatform
      *        The operating system that your tasks definitions run on. A platform family is specified only for tasks
-     *        using the Fargate launch type. </p>
-     *        <p>
-     *        When you specify a task definition in a service, this value must match the <code>runtimePlatform</code>
-     *        value of the service.
+     *        using the Fargate launch type.
      */
 
     public void setRuntimePlatform(RuntimePlatform runtimePlatform) {
@@ -3881,16 +3870,9 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * The operating system that your tasks definitions run on. A platform family is specified only for tasks using the
      * Fargate launch type.
      * </p>
-     * <p>
-     * When you specify a task definition in a service, this value must match the <code>runtimePlatform</code> value of
-     * the service.
-     * </p>
      * 
      * @return The operating system that your tasks definitions run on. A platform family is specified only for tasks
-     *         using the Fargate launch type. </p>
-     *         <p>
-     *         When you specify a task definition in a service, this value must match the <code>runtimePlatform</code>
-     *         value of the service.
+     *         using the Fargate launch type.
      */
 
     public RuntimePlatform getRuntimePlatform() {
@@ -3902,17 +3884,10 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * The operating system that your tasks definitions run on. A platform family is specified only for tasks using the
      * Fargate launch type.
      * </p>
-     * <p>
-     * When you specify a task definition in a service, this value must match the <code>runtimePlatform</code> value of
-     * the service.
-     * </p>
      * 
      * @param runtimePlatform
      *        The operating system that your tasks definitions run on. A platform family is specified only for tasks
-     *        using the Fargate launch type. </p>
-     *        <p>
-     *        When you specify a task definition in a service, this value must match the <code>runtimePlatform</code>
-     *        value of the service.
+     *        using the Fargate launch type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

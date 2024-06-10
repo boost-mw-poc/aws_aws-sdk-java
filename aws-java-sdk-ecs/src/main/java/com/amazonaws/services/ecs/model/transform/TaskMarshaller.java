@@ -100,6 +100,8 @@ public class TaskMarshaller {
             .marshallLocationName("version").build();
     private static final MarshallingInfo<StructuredPojo> EPHEMERALSTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ephemeralStorage").build();
+    private static final MarshallingInfo<StructuredPojo> FARGATEEPHEMERALSTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fargateEphemeralStorage").build();
 
     private static final TaskMarshaller instance = new TaskMarshaller();
 
@@ -153,6 +155,7 @@ public class TaskMarshaller {
             protocolMarshaller.marshall(task.getTaskDefinitionArn(), TASKDEFINITIONARN_BINDING);
             protocolMarshaller.marshall(task.getVersion(), VERSION_BINDING);
             protocolMarshaller.marshall(task.getEphemeralStorage(), EPHEMERALSTORAGE_BINDING);
+            protocolMarshaller.marshall(task.getFargateEphemeralStorage(), FARGATEEPHEMERALSTORAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

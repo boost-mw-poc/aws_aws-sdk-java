@@ -66,6 +66,8 @@ public class DeploymentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceConnectResources").build();
     private static final MarshallingInfo<List> VOLUMECONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeConfigurations").build();
+    private static final MarshallingInfo<StructuredPojo> FARGATEEPHEMERALSTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fargateEphemeralStorage").build();
 
     private static final DeploymentMarshaller instance = new DeploymentMarshaller();
 
@@ -102,6 +104,7 @@ public class DeploymentMarshaller {
             protocolMarshaller.marshall(deployment.getServiceConnectConfiguration(), SERVICECONNECTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(deployment.getServiceConnectResources(), SERVICECONNECTRESOURCES_BINDING);
             protocolMarshaller.marshall(deployment.getVolumeConfigurations(), VOLUMECONFIGURATIONS_BINDING);
+            protocolMarshaller.marshall(deployment.getFargateEphemeralStorage(), FARGATEEPHEMERALSTORAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

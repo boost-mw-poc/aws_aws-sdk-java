@@ -1,3 +1,16 @@
+# __1.12.740__ __2024-06-10__
+## __Amazon CloudWatch Application Signals__
+  - ### Features
+    - This is the initial SDK release for Amazon CloudWatch Application Signals. Amazon CloudWatch Application Signals provides curated application performance monitoring for developers to monitor and troubleshoot application health using pre-built dashboards and Service Level Objectives.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - This release introduces a new cluster configuration to support the customer-managed keys for ECS managed storage encryption.
+
+## __EC2 Image Builder__
+  - ### Features
+    - This release updates the regex pattern for Image Builder ARNs.
+
 # __1.12.739__ __2024-06-07__
 ## __AWS Audit Manager__
   - ### Features

@@ -212,6 +212,12 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ServiceVolumeConfiguration> volumeConfigurations;
+    /**
+     * <p>
+     * The Fargate ephemeral storage settings for the deployment.
+     * </p>
+     */
+    private DeploymentEphemeralStorage fargateEphemeralStorage;
 
     /**
      * <p>
@@ -1544,6 +1550,46 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Fargate ephemeral storage settings for the deployment.
+     * </p>
+     * 
+     * @param fargateEphemeralStorage
+     *        The Fargate ephemeral storage settings for the deployment.
+     */
+
+    public void setFargateEphemeralStorage(DeploymentEphemeralStorage fargateEphemeralStorage) {
+        this.fargateEphemeralStorage = fargateEphemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The Fargate ephemeral storage settings for the deployment.
+     * </p>
+     * 
+     * @return The Fargate ephemeral storage settings for the deployment.
+     */
+
+    public DeploymentEphemeralStorage getFargateEphemeralStorage() {
+        return this.fargateEphemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The Fargate ephemeral storage settings for the deployment.
+     * </p>
+     * 
+     * @param fargateEphemeralStorage
+     *        The Fargate ephemeral storage settings for the deployment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Deployment withFargateEphemeralStorage(DeploymentEphemeralStorage fargateEphemeralStorage) {
+        setFargateEphemeralStorage(fargateEphemeralStorage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1592,7 +1638,9 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
         if (getServiceConnectResources() != null)
             sb.append("ServiceConnectResources: ").append(getServiceConnectResources()).append(",");
         if (getVolumeConfigurations() != null)
-            sb.append("VolumeConfigurations: ").append(getVolumeConfigurations());
+            sb.append("VolumeConfigurations: ").append(getVolumeConfigurations()).append(",");
+        if (getFargateEphemeralStorage() != null)
+            sb.append("FargateEphemeralStorage: ").append(getFargateEphemeralStorage());
         sb.append("}");
         return sb.toString();
     }
@@ -1683,6 +1731,10 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getVolumeConfigurations() != null && other.getVolumeConfigurations().equals(this.getVolumeConfigurations()) == false)
             return false;
+        if (other.getFargateEphemeralStorage() == null ^ this.getFargateEphemeralStorage() == null)
+            return false;
+        if (other.getFargateEphemeralStorage() != null && other.getFargateEphemeralStorage().equals(this.getFargateEphemeralStorage()) == false)
+            return false;
         return true;
     }
 
@@ -1710,6 +1762,7 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getServiceConnectConfiguration() == null) ? 0 : getServiceConnectConfiguration().hashCode());
         hashCode = prime * hashCode + ((getServiceConnectResources() == null) ? 0 : getServiceConnectResources().hashCode());
         hashCode = prime * hashCode + ((getVolumeConfigurations() == null) ? 0 : getVolumeConfigurations().hashCode());
+        hashCode = prime * hashCode + ((getFargateEphemeralStorage() == null) ? 0 : getFargateEphemeralStorage().hashCode());
         return hashCode;
     }
 

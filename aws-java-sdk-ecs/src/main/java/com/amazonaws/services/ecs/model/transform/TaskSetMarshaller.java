@@ -76,6 +76,8 @@ public class TaskSetMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stabilityStatusAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> FARGATEEPHEMERALSTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fargateEphemeralStorage").build();
 
     private static final TaskSetMarshaller instance = new TaskSetMarshaller();
 
@@ -117,6 +119,7 @@ public class TaskSetMarshaller {
             protocolMarshaller.marshall(taskSet.getStabilityStatus(), STABILITYSTATUS_BINDING);
             protocolMarshaller.marshall(taskSet.getStabilityStatusAt(), STABILITYSTATUSAT_BINDING);
             protocolMarshaller.marshall(taskSet.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(taskSet.getFargateEphemeralStorage(), FARGATEEPHEMERALSTORAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

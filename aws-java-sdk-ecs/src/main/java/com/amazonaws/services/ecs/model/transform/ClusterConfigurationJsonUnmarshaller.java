@@ -52,6 +52,10 @@ public class ClusterConfigurationJsonUnmarshaller implements Unmarshaller<Cluste
                     context.nextToken();
                     clusterConfiguration.setExecuteCommandConfiguration(ExecuteCommandConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("managedStorageConfiguration", targetDepth)) {
+                    context.nextToken();
+                    clusterConfiguration.setManagedStorageConfiguration(ManagedStorageConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
