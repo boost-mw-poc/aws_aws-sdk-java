@@ -78,6 +78,10 @@ public class GetChannelResultJsonUnmarshaller implements Unmarshaller<GetChannel
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("InputType", targetDepth)) {
+                    context.nextToken();
+                    getChannelResult.setInputType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ETag", targetDepth)) {
                     context.nextToken();
                     getChannelResult.setETag(context.getUnmarshaller(String.class).unmarshall(context));

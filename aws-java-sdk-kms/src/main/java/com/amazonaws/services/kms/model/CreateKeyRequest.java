@@ -109,18 +109,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code> or
+     * <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
-     * <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * </ul>
@@ -210,7 +216,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric RSA key pairs
+     * Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -232,7 +238,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric NIST-recommended elliptic curve key pairs
+     * Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
@@ -254,7 +260,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Other asymmetric elliptic curve key pairs
+     * Other asymmetric elliptic curve key pairs (signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -266,12 +272,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * SM2 key pairs (China Regions only)
+     * SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SM2</code>
+     * <code>SM2</code> (China Regions only)
      * </p>
      * </li>
      * </ul>
@@ -835,18 +841,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code> or
+     * <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
-     * <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * </ul>
@@ -874,19 +886,25 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or
+     *        For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or
      *        <code>SIGN_VERIFY</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *        For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code>
+     *        or <code>KEY_AGREEMENT</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
-     *        or <code>SIGN_VERIFY</code>.
+     *        For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     *        <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      *        </p>
      *        </li>
      * @see KeyUsageType
@@ -920,18 +938,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code> or
+     * <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
-     * <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * </ul>
@@ -958,19 +982,25 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         <li>
      *         <p>
-     *         For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or
+     *         For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or
      *         <code>SIGN_VERIFY</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *         For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code>
+     *         or <code>KEY_AGREEMENT</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
-     *         or <code>SIGN_VERIFY</code>.
+     *         For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     *         <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      *         </p>
      *         </li>
      * @see KeyUsageType
@@ -1004,18 +1034,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code> or
+     * <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
-     * <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * </ul>
@@ -1043,19 +1079,25 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or
+     *        For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or
      *        <code>SIGN_VERIFY</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *        For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code>
+     *        or <code>KEY_AGREEMENT</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
-     *        or <code>SIGN_VERIFY</code>.
+     *        For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     *        <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1091,18 +1133,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code> or
+     * <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
-     * <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * </ul>
@@ -1130,19 +1178,25 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or
+     *        For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or
      *        <code>SIGN_VERIFY</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *        For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code>
+     *        or <code>KEY_AGREEMENT</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
-     *        or <code>SIGN_VERIFY</code>.
+     *        For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     *        <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      *        </p>
      *        </li>
      * @see KeyUsageType
@@ -1176,18 +1230,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code> or
+     * <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
-     * <code>SIGN_VERIFY</code>.
+     * For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      * </p>
      * </li>
      * </ul>
@@ -1215,19 +1275,25 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with RSA key material, specify <code>ENCRYPT_DECRYPT</code> or
+     *        For asymmetric KMS keys with RSA key pairs, specify <code>ENCRYPT_DECRYPT</code> or
      *        <code>SIGN_VERIFY</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *        For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify <code>SIGN_VERIFY</code>
+     *        or <code>KEY_AGREEMENT</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
-     *        or <code>SIGN_VERIFY</code>.
+     *        For asymmetric KMS keys with <code>ECC_SECG_P256K1</code> key pairs specify <code>SIGN_VERIFY</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For asymmetric KMS keys with SM2 key pairs (China Regions only), specify <code>ENCRYPT_DECRYPT</code>,
+     *        <code>SIGN_VERIFY</code>, or <code>KEY_AGREEMENT</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1429,7 +1495,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric RSA key pairs
+     * Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -1451,7 +1517,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric NIST-recommended elliptic curve key pairs
+     * Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
@@ -1473,7 +1539,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Other asymmetric elliptic curve key pairs
+     * Other asymmetric elliptic curve key pairs (signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -1485,12 +1551,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * SM2 key pairs (China Regions only)
+     * SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SM2</code>
+     * <code>SM2</code> (China Regions only)
      * </p>
      * </li>
      * </ul>
@@ -1568,7 +1634,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Asymmetric RSA key pairs
+     *        Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      *        </p>
      *        <ul>
      *        <li>
@@ -1590,7 +1656,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Asymmetric NIST-recommended elliptic curve key pairs
+     *        Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared
+     *        secrets)
      *        </p>
      *        <ul>
      *        <li>
@@ -1612,7 +1679,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Other asymmetric elliptic curve key pairs
+     *        Other asymmetric elliptic curve key pairs (signing and verification)
      *        </p>
      *        <ul>
      *        <li>
@@ -1624,12 +1691,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        SM2 key pairs (China Regions only)
+     *        SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SM2</code>
+     *        <code>SM2</code> (China Regions only)
      *        </p>
      *        </li>
      *        </ul>
@@ -1713,7 +1780,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric RSA key pairs
+     * Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -1735,7 +1802,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric NIST-recommended elliptic curve key pairs
+     * Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
@@ -1757,7 +1824,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Other asymmetric elliptic curve key pairs
+     * Other asymmetric elliptic curve key pairs (signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -1769,12 +1836,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * SM2 key pairs (China Regions only)
+     * SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SM2</code>
+     * <code>SM2</code> (China Regions only)
      * </p>
      * </li>
      * </ul>
@@ -1851,7 +1918,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         <li>
      *         <p>
-     *         Asymmetric RSA key pairs
+     *         Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      *         </p>
      *         <ul>
      *         <li>
@@ -1873,7 +1940,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         <li>
      *         <p>
-     *         Asymmetric NIST-recommended elliptic curve key pairs
+     *         Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared
+     *         secrets)
      *         </p>
      *         <ul>
      *         <li>
@@ -1895,7 +1963,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         <li>
      *         <p>
-     *         Other asymmetric elliptic curve key pairs
+     *         Other asymmetric elliptic curve key pairs (signing and verification)
      *         </p>
      *         <ul>
      *         <li>
@@ -1907,12 +1975,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         <li>
      *         <p>
-     *         SM2 key pairs (China Regions only)
+     *         SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>SM2</code>
+     *         <code>SM2</code> (China Regions only)
      *         </p>
      *         </li>
      *         </ul>
@@ -1996,7 +2064,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric RSA key pairs
+     * Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -2018,7 +2086,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric NIST-recommended elliptic curve key pairs
+     * Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
@@ -2040,7 +2108,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Other asymmetric elliptic curve key pairs
+     * Other asymmetric elliptic curve key pairs (signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -2052,12 +2120,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * SM2 key pairs (China Regions only)
+     * SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SM2</code>
+     * <code>SM2</code> (China Regions only)
      * </p>
      * </li>
      * </ul>
@@ -2135,7 +2203,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Asymmetric RSA key pairs
+     *        Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      *        </p>
      *        <ul>
      *        <li>
@@ -2157,7 +2225,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Asymmetric NIST-recommended elliptic curve key pairs
+     *        Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared
+     *        secrets)
      *        </p>
      *        <ul>
      *        <li>
@@ -2179,7 +2248,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Other asymmetric elliptic curve key pairs
+     *        Other asymmetric elliptic curve key pairs (signing and verification)
      *        </p>
      *        <ul>
      *        <li>
@@ -2191,12 +2260,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        SM2 key pairs (China Regions only)
+     *        SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SM2</code>
+     *        <code>SM2</code> (China Regions only)
      *        </p>
      *        </li>
      *        </ul>
@@ -2282,7 +2351,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric RSA key pairs
+     * Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -2304,7 +2373,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric NIST-recommended elliptic curve key pairs
+     * Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
@@ -2326,7 +2395,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Other asymmetric elliptic curve key pairs
+     * Other asymmetric elliptic curve key pairs (signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -2338,12 +2407,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * SM2 key pairs (China Regions only)
+     * SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SM2</code>
+     * <code>SM2</code> (China Regions only)
      * </p>
      * </li>
      * </ul>
@@ -2421,7 +2490,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Asymmetric RSA key pairs
+     *        Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      *        </p>
      *        <ul>
      *        <li>
@@ -2443,7 +2512,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Asymmetric NIST-recommended elliptic curve key pairs
+     *        Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared
+     *        secrets)
      *        </p>
      *        <ul>
      *        <li>
@@ -2465,7 +2535,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Other asymmetric elliptic curve key pairs
+     *        Other asymmetric elliptic curve key pairs (signing and verification)
      *        </p>
      *        <ul>
      *        <li>
@@ -2477,12 +2547,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        SM2 key pairs (China Regions only)
+     *        SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SM2</code>
+     *        <code>SM2</code> (China Regions only)
      *        </p>
      *        </li>
      *        </ul>
@@ -2566,7 +2636,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric RSA key pairs
+     * Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -2588,7 +2658,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Asymmetric NIST-recommended elliptic curve key pairs
+     * Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
@@ -2610,7 +2680,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * Other asymmetric elliptic curve key pairs
+     * Other asymmetric elliptic curve key pairs (signing and verification)
      * </p>
      * <ul>
      * <li>
@@ -2622,12 +2692,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * SM2 key pairs (China Regions only)
+     * SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>SM2</code>
+     * <code>SM2</code> (China Regions only)
      * </p>
      * </li>
      * </ul>
@@ -2705,7 +2775,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Asymmetric RSA key pairs
+     *        Asymmetric RSA key pairs (encryption and decryption -or- signing and verification)
      *        </p>
      *        <ul>
      *        <li>
@@ -2727,7 +2797,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Asymmetric NIST-recommended elliptic curve key pairs
+     *        Asymmetric NIST-recommended elliptic curve key pairs (signing and verification -or- deriving shared
+     *        secrets)
      *        </p>
      *        <ul>
      *        <li>
@@ -2749,7 +2820,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        Other asymmetric elliptic curve key pairs
+     *        Other asymmetric elliptic curve key pairs (signing and verification)
      *        </p>
      *        <ul>
      *        <li>
@@ -2761,12 +2832,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        SM2 key pairs (China Regions only)
+     *        SM2 key pairs (encryption and decryption -or- signing and verification -or- deriving shared secrets)
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SM2</code>
+     *        <code>SM2</code> (China Regions only)
      *        </p>
      *        </li>
      *        </ul>

@@ -22,6 +22,8 @@ public enum MetricName {
 
     DeviceRSSI("DeviceRSSI"),
     DeviceSNR("DeviceSNR"),
+    DeviceRoamingRSSI("DeviceRoamingRSSI"),
+    DeviceRoamingSNR("DeviceRoamingSNR"),
     DeviceUplinkCount("DeviceUplinkCount"),
     DeviceDownlinkCount("DeviceDownlinkCount"),
     DeviceUplinkLostCount("DeviceUplinkLostCount"),

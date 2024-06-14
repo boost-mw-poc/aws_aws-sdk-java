@@ -39,6 +39,8 @@ public class ChannelListConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModifiedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
+    private static final MarshallingInfo<String> INPUTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("InputType").build();
 
     private static final ChannelListConfigurationMarshaller instance = new ChannelListConfigurationMarshaller();
 
@@ -62,6 +64,7 @@ public class ChannelListConfigurationMarshaller {
             protocolMarshaller.marshall(channelListConfiguration.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(channelListConfiguration.getModifiedAt(), MODIFIEDAT_BINDING);
             protocolMarshaller.marshall(channelListConfiguration.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(channelListConfiguration.getInputType(), INPUTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

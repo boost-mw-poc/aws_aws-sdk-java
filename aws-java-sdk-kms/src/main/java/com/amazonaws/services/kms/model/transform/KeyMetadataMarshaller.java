@@ -66,6 +66,8 @@ public class KeyMetadataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionAlgorithms").build();
     private static final MarshallingInfo<List> SIGNINGALGORITHMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SigningAlgorithms").build();
+    private static final MarshallingInfo<List> KEYAGREEMENTALGORITHMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyAgreementAlgorithms").build();
     private static final MarshallingInfo<Boolean> MULTIREGION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MultiRegion").build();
     private static final MarshallingInfo<StructuredPojo> MULTIREGIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -112,6 +114,7 @@ public class KeyMetadataMarshaller {
             protocolMarshaller.marshall(keyMetadata.getKeySpec(), KEYSPEC_BINDING);
             protocolMarshaller.marshall(keyMetadata.getEncryptionAlgorithms(), ENCRYPTIONALGORITHMS_BINDING);
             protocolMarshaller.marshall(keyMetadata.getSigningAlgorithms(), SIGNINGALGORITHMS_BINDING);
+            protocolMarshaller.marshall(keyMetadata.getKeyAgreementAlgorithms(), KEYAGREEMENTALGORITHMS_BINDING);
             protocolMarshaller.marshall(keyMetadata.getMultiRegion(), MULTIREGION_BINDING);
             protocolMarshaller.marshall(keyMetadata.getMultiRegionConfiguration(), MULTIREGIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(keyMetadata.getPendingDeletionWindowInDays(), PENDINGDELETIONWINDOWINDAYS_BINDING);

@@ -1107,9 +1107,13 @@ public interface AWSKMS {
      * <p>
      * Asymmetric KMS keys contain an RSA key pair, Elliptic Curve (ECC) key pair, or an SM2 key pair (China Regions
      * only). The private key in an asymmetric KMS key never leaves KMS unencrypted. However, you can use the
-     * <a>GetPublicKey</a> operation to download the public key so it can be used outside of KMS. KMS keys with RSA or
-     * SM2 key pairs can be used to encrypt or decrypt data or sign and verify messages (but not both). KMS keys with
-     * ECC key pairs can be used only to sign and verify messages. For information about asymmetric KMS keys, see <a
+     * <a>GetPublicKey</a> operation to download the public key so it can be used outside of KMS. Each KMS key can have
+     * only one key usage. KMS keys with RSA key pairs can be used to encrypt and decrypt data or sign and verify
+     * messages (but not both). KMS keys with NIST-recommended ECC key pairs can be used to sign and verify messages or
+     * derive shared secrets (but not both). KMS keys with <code>ECC_SECG_P256K1</code> can be used only to sign and
+     * verify messages. KMS keys with SM2 key pairs (China Regions only) can be used to either encrypt and decrypt data,
+     * sign and verify messages, or derive shared secrets (you must choose one key usage type). For information about
+     * asymmetric KMS keys, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
      * the <i>Key Management Service Developer Guide</i>.
      * </p>
@@ -1579,8 +1583,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -1971,6 +1976,199 @@ public interface AWSKMS {
      *      API Documentation</a>
      */
     DeleteImportedKeyMaterialResult deleteImportedKeyMaterial(DeleteImportedKeyMaterialRequest deleteImportedKeyMaterialRequest);
+
+    /**
+     * <p>
+     * Derives a shared secret using a key agreement algorithm.
+     * </p>
+     * <note>
+     * <p>
+     * You must use an asymmetric NIST-recommended elliptic curve (ECC) or SM2 (China Regions only) KMS key pair with a
+     * <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code> to call DeriveSharedSecret.
+     * </p>
+     * </note>
+     * <p>
+     * DeriveSharedSecret uses the <a
+     * href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Ar3.pdf#page=60">Elliptic Curve
+     * Cryptography Cofactor Diffie-Hellman Primitive</a> (ECDH) to establish a key agreement between two peers by
+     * deriving a shared secret from their elliptic curve public-private key pairs. You can use the raw shared secret
+     * that DeriveSharedSecret returns to derive a symmetric key that can encrypt and decrypt data that is sent between
+     * the two peers, or that can generate and verify HMACs. KMS recommends that you follow <a
+     * href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Cr2.pdf">NIST recommendations for key
+     * derivation</a> when using the raw shared secret to derive a symmetric key.
+     * </p>
+     * <p>
+     * The following workflow demonstrates how to establish key agreement over an insecure communication channel using
+     * DeriveSharedSecret.
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * <b>Alice</b> calls <a>CreateKey</a> to create an asymmetric KMS key pair with a <code>KeyUsage</code> value of
+     * <code>KEY_AGREEMENT</code>.
+     * </p>
+     * <p>
+     * The asymmetric KMS key must use a NIST-recommended elliptic curve (ECC) or SM2 (China Regions only) key spec.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Bob</b> creates an elliptic curve key pair.
+     * </p>
+     * <p>
+     * Bob can call <a>CreateKey</a> to create an asymmetric KMS key pair or generate a key pair outside of KMS. Bob's
+     * key pair must use the same NIST-recommended elliptic curve (ECC) or SM2 (China Regions ony) curve as Alice.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Alice and Bob <b>exchange their public keys</b> through an insecure communication channel (like the internet).
+     * </p>
+     * <p>
+     * Use <a>GetPublicKey</a> to download the public key of your asymmetric KMS key pair.
+     * </p>
+     * <note>
+     * <p>
+     * KMS strongly recommends verifying that the public key you receive came from the expected party before using it to
+     * derive a shared secret.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * <b>Alice</b> calls DeriveSharedSecret.
+     * </p>
+     * <p>
+     * KMS uses the private key from the KMS key pair generated in <b>Step 1</b>, Bob's public key, and the Elliptic
+     * Curve Cryptography Cofactor Diffie-Hellman Primitive to derive the shared secret. The private key in your KMS key
+     * pair never leaves KMS unencrypted. DeriveSharedSecret returns the raw shared secret.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Bob</b> uses the Elliptic Curve Cryptography Cofactor Diffie-Hellman Primitive to calculate the same raw
+     * secret using his private key and Alice's public key.
+     * </p>
+     * </li>
+     * </ol>
+     * <p>
+     * To derive a shared secret you must provide a key agreement algorithm, the private key of the caller's asymmetric
+     * NIST-recommended elliptic curve or SM2 (China Regions only) KMS key pair, and the public key from your peer's
+     * NIST-recommended elliptic curve or SM2 (China Regions only) key pair. The public key can be from another
+     * asymmetric KMS key pair or from a key pair generated outside of KMS, but both key pairs must be on the same
+     * elliptic curve.
+     * </p>
+     * <p>
+     * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
+     * account, specify the key ARN or alias ARN in the value of the <code>KeyId</code> parameter.
+     * </p>
+     * <p>
+     * <b>Required permissions</b>: <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html"
+     * >kms:DeriveSharedSecret</a> (key policy)
+     * </p>
+     * <p>
+     * <b>Related operations:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a>CreateKey</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a>GetPublicKey</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a>DescribeKey</a>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>Eventual consistency</b>: The KMS API follows an eventual consistency model. For more information, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-eventual-consistency.html">KMS eventual
+     * consistency</a>.
+     * </p>
+     * 
+     * @param deriveSharedSecretRequest
+     * @return Result of the DeriveSharedSecret operation returned by the service.
+     * @throws NotFoundException
+     *         The request was rejected because the specified entity or resource could not be found.
+     * @throws DisabledException
+     *         The request was rejected because the specified KMS key is not enabled.
+     * @throws KeyUnavailableException
+     *         The request was rejected because the specified KMS key was not available. You can retry the request.
+     * @throws DependencyTimeoutException
+     *         The system timed out while trying to fulfill the request. You can retry the request.
+     * @throws InvalidGrantTokenException
+     *         The request was rejected because the specified grant token is not valid.
+     * @throws InvalidKeyUsageException
+     *         The request was rejected for one of the following reasons: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The encryption algorithm or signing algorithm specified for the operation is incompatible with the type
+     *         of key material in the KMS key <code>(KeySpec</code>).
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
+     *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
+     *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
+     *         </p>
+     *         <p>
+     *         To find the encryption or signing algorithms supported for a particular KMS key, use the
+     *         <a>DescribeKey</a> operation.
+     * @throws KMSInternalException
+     *         The request was rejected because an internal exception occurred. The request can be retried.
+     * @throws KMSInvalidStateException
+     *         The request was rejected because the state of the specified resource is not valid for this request.
+     *         </p>
+     *         <p>
+     *         This exceptions means one of the following:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The key state of the KMS key is not compatible with the operation.
+     *         </p>
+     *         <p>
+     *         To find the key state, use the <a>DescribeKey</a> operation. For more information about which key states
+     *         are compatible with each KMS operation, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *         the <i> <i>Key Management Service Developer Guide</i> </i>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For cryptographic operations on KMS keys in custom key stores, this exception represents a general
+     *         failure with many possible causes. To identify the cause, see the error message that accompanies the
+     *         exception.
+     *         </p>
+     *         </li>
+     * @throws DryRunOperationException
+     *         The request was rejected because the DryRun parameter was specified.
+     * @sample AWSKMS.DeriveSharedSecret
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DeriveSharedSecret" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeriveSharedSecretResult deriveSharedSecret(DeriveSharedSecretRequest deriveSharedSecretRequest);
 
     /**
      * <p>
@@ -2932,8 +3130,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -3151,8 +3350,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -3335,8 +3535,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -3497,8 +3698,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -3676,8 +3878,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -3791,8 +3994,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -4186,7 +4390,7 @@ public interface AWSKMS {
      * <ul>
      * <li>
      * <p>
-     * The public key (or "wrapping key") of an asymmetric key pair that KMS generates.
+     * The public key (or "wrapping key") of an RSA key pair that KMS generates.
      * </p>
      * <p>
      * You will use this public key to encrypt ("wrap") your key material while it's in transit to KMS.
@@ -4340,7 +4544,7 @@ public interface AWSKMS {
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-KeyUsage"
-     * >KeyUsage</a>: Whether the key is used for encryption or signing.
+     * >KeyUsage</a>: Whether the key is used for encryption, signing, or deriving a shared secret.
      * </p>
      * </li>
      * <li>
@@ -4426,8 +4630,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -5517,8 +5722,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -6318,8 +6524,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -7336,8 +7543,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the
@@ -7450,8 +7658,9 @@ public interface AWSKMS {
      *         For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be
      *         <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be
      *         <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the
-     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a
-     *         KMS key, use the <a>DescribeKey</a> operation.
+     *         <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. For deriving key agreement secrets, the
+     *         <code>KeyUsage</code> must be <code>KEY_AGREEMENT</code>. To find the <code>KeyUsage</code> of a KMS key,
+     *         use the <a>DescribeKey</a> operation.
      *         </p>
      *         <p>
      *         To find the encryption or signing algorithms supported for a particular KMS key, use the

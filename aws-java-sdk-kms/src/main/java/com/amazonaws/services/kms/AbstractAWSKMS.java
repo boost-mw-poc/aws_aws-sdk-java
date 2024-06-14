@@ -93,6 +93,11 @@ public class AbstractAWSKMS implements AWSKMS {
     }
 
     @Override
+    public DeriveSharedSecretResult deriveSharedSecret(DeriveSharedSecretRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeCustomKeyStoresResult describeCustomKeyStores(DescribeCustomKeyStoresRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

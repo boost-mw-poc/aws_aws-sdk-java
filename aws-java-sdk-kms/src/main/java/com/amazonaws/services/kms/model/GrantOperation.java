@@ -35,7 +35,8 @@ public enum GrantOperation {
     GenerateDataKeyPair("GenerateDataKeyPair"),
     GenerateDataKeyPairWithoutPlaintext("GenerateDataKeyPairWithoutPlaintext"),
     GenerateMac("GenerateMac"),
-    VerifyMac("VerifyMac");
+    VerifyMac("VerifyMac"),
+    DeriveSharedSecret("DeriveSharedSecret");
 
     private String value;
 

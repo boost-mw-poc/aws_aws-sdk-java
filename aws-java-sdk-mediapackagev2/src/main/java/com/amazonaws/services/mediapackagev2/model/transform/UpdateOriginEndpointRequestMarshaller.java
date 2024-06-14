@@ -48,6 +48,8 @@ public class UpdateOriginEndpointRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LowLatencyHlsManifests").build();
     private static final MarshallingInfo<List> DASHMANIFESTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DashManifests").build();
+    private static final MarshallingInfo<StructuredPojo> FORCEENDPOINTERRORCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ForceEndpointErrorConfiguration").build();
     private static final MarshallingInfo<String> ETAG_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.HEADER)
             .marshallLocationName("x-amzn-update-if-match").build();
 
@@ -77,6 +79,7 @@ public class UpdateOriginEndpointRequestMarshaller {
             protocolMarshaller.marshall(updateOriginEndpointRequest.getHlsManifests(), HLSMANIFESTS_BINDING);
             protocolMarshaller.marshall(updateOriginEndpointRequest.getLowLatencyHlsManifests(), LOWLATENCYHLSMANIFESTS_BINDING);
             protocolMarshaller.marshall(updateOriginEndpointRequest.getDashManifests(), DASHMANIFESTS_BINDING);
+            protocolMarshaller.marshall(updateOriginEndpointRequest.getForceEndpointErrorConfiguration(), FORCEENDPOINTERRORCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateOriginEndpointRequest.getETag(), ETAG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

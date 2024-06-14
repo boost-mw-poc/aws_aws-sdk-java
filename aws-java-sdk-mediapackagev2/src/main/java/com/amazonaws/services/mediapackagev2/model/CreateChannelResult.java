@@ -65,6 +65,29 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
     private java.util.List<IngestEndpoint> ingestEndpoints;
     /**
      * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String inputType;
+    /**
+     * <p>
      * The current Entity Tag (ETag) associated with this resource. The entity tag can be used to safely make concurrent
      * updates to the resource.
      * </p>
@@ -383,6 +406,197 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param inputType
+     *        The input type will be an immutable field which will be used to define whether the channel will allow CMAF
+     *        ingest or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.</p>
+     *        <p>
+     *        The allowed values are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     *        manifests).
+     *        </p>
+     *        </li>
+     * @see InputType
+     */
+
+    public void setInputType(String inputType) {
+        this.inputType = inputType;
+    }
+
+    /**
+     * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The input type will be an immutable field which will be used to define whether the channel will allow
+     *         CMAF ingest or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.</p>
+     *         <p>
+     *         The allowed values are:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     *         manifests).
+     *         </p>
+     *         </li>
+     * @see InputType
+     */
+
+    public String getInputType() {
+        return this.inputType;
+    }
+
+    /**
+     * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param inputType
+     *        The input type will be an immutable field which will be used to define whether the channel will allow CMAF
+     *        ingest or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.</p>
+     *        <p>
+     *        The allowed values are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     *        manifests).
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InputType
+     */
+
+    public CreateChannelResult withInputType(String inputType) {
+        setInputType(inputType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param inputType
+     *        The input type will be an immutable field which will be used to define whether the channel will allow CMAF
+     *        ingest or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.</p>
+     *        <p>
+     *        The allowed values are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     *        manifests).
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InputType
+     */
+
+    public CreateChannelResult withInputType(InputType inputType) {
+        this.inputType = inputType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The current Entity Tag (ETag) associated with this resource. The entity tag can be used to safely make concurrent
      * updates to the resource.
      * </p>
@@ -521,6 +735,8 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
             sb.append("Description: ").append(getDescription()).append(",");
         if (getIngestEndpoints() != null)
             sb.append("IngestEndpoints: ").append(getIngestEndpoints()).append(",");
+        if (getInputType() != null)
+            sb.append("InputType: ").append(getInputType()).append(",");
         if (getETag() != null)
             sb.append("ETag: ").append(getETag()).append(",");
         if (getTags() != null)
@@ -567,6 +783,10 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getIngestEndpoints() != null && other.getIngestEndpoints().equals(this.getIngestEndpoints()) == false)
             return false;
+        if (other.getInputType() == null ^ this.getInputType() == null)
+            return false;
+        if (other.getInputType() != null && other.getInputType().equals(this.getInputType()) == false)
+            return false;
         if (other.getETag() == null ^ this.getETag() == null)
             return false;
         if (other.getETag() != null && other.getETag().equals(this.getETag()) == false)
@@ -590,6 +810,7 @@ public class CreateChannelResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getModifiedAt() == null) ? 0 : getModifiedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getIngestEndpoints() == null) ? 0 : getIngestEndpoints().hashCode());
+        hashCode = prime * hashCode + ((getInputType() == null) ? 0 : getInputType().hashCode());
         hashCode = prime * hashCode + ((getETag() == null) ? 0 : getETag().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

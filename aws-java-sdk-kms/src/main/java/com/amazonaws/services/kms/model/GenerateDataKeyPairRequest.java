@@ -123,10 +123,11 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
      * </p>
      * <p>
-     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
-     * parameter, use the <a
+     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To call
+     * DeriveSharedSecret for an Amazon Web Services Nitro Enclaves, use the <a
      * href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web Services
-     * Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     * Nitro Enclaves SDK</a> to generate the attestation document and then use the Recipient parameter from any Amazon
+     * Web Services SDK to provide the attestation document for the enclave.
      * </p>
      * <p>
      * When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts the
@@ -816,10 +817,11 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
      * </p>
      * <p>
-     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
-     * parameter, use the <a
+     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To call
+     * DeriveSharedSecret for an Amazon Web Services Nitro Enclaves, use the <a
      * href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web Services
-     * Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     * Nitro Enclaves SDK</a> to generate the attestation document and then use the Recipient parameter from any Amazon
+     * Web Services SDK to provide the attestation document for the enclave.
      * </p>
      * <p>
      * When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts the
@@ -842,10 +844,11 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      *        with the enclave's public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
      *        </p>
      *        <p>
-     *        This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
-     *        parameter, use the <a
+     *        This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To call
+     *        DeriveSharedSecret for an Amazon Web Services Nitro Enclaves, use the <a
      *        href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web
-     *        Services Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     *        Services Nitro Enclaves SDK</a> to generate the attestation document and then use the Recipient parameter
+     *        from any Amazon Web Services SDK to provide the attestation document for the enclave.
      *        </p>
      *        <p>
      *        When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts
@@ -873,10 +876,11 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
      * </p>
      * <p>
-     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
-     * parameter, use the <a
+     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To call
+     * DeriveSharedSecret for an Amazon Web Services Nitro Enclaves, use the <a
      * href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web Services
-     * Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     * Nitro Enclaves SDK</a> to generate the attestation document and then use the Recipient parameter from any Amazon
+     * Web Services SDK to provide the attestation document for the enclave.
      * </p>
      * <p>
      * When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts the
@@ -898,10 +902,11 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      *         with the enclave's public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
      *         </p>
      *         <p>
-     *         This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include
-     *         this parameter, use the <a
+     *         This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To call
+     *         DeriveSharedSecret for an Amazon Web Services Nitro Enclaves, use the <a
      *         href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web
-     *         Services Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     *         Services Nitro Enclaves SDK</a> to generate the attestation document and then use the Recipient parameter
+     *         from any Amazon Web Services SDK to provide the attestation document for the enclave.
      *         </p>
      *         <p>
      *         When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts
@@ -930,10 +935,11 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      * public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
      * </p>
      * <p>
-     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
-     * parameter, use the <a
+     * This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To call
+     * DeriveSharedSecret for an Amazon Web Services Nitro Enclaves, use the <a
      * href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web Services
-     * Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     * Nitro Enclaves SDK</a> to generate the attestation document and then use the Recipient parameter from any Amazon
+     * Web Services SDK to provide the attestation document for the enclave.
      * </p>
      * <p>
      * When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts the
@@ -956,10 +962,11 @@ public class GenerateDataKeyPairRequest extends com.amazonaws.AmazonWebServiceRe
      *        with the enclave's public key. The only valid encryption algorithm is <code>RSAES_OAEP_SHA_256</code>.
      *        </p>
      *        <p>
-     *        This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To include this
-     *        parameter, use the <a
+     *        This parameter only supports attestation documents for Amazon Web Services Nitro Enclaves. To call
+     *        DeriveSharedSecret for an Amazon Web Services Nitro Enclaves, use the <a
      *        href="https://docs.aws.amazon.com/enclaves/latest/user/developing-applications.html#sdk">Amazon Web
-     *        Services Nitro Enclaves SDK</a> or any Amazon Web Services SDK.
+     *        Services Nitro Enclaves SDK</a> to generate the attestation document and then use the Recipient parameter
+     *        from any Amazon Web Services SDK to provide the attestation document for the enclave.
      *        </p>
      *        <p>
      *        When you use this parameter, instead of returning a plaintext copy of the private data key, KMS encrypts

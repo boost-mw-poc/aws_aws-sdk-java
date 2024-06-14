@@ -72,6 +72,10 @@ public class ChannelListConfigurationJsonUnmarshaller implements Unmarshaller<Ch
                     context.nextToken();
                     channelListConfiguration.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("InputType", targetDepth)) {
+                    context.nextToken();
+                    channelListConfiguration.setInputType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

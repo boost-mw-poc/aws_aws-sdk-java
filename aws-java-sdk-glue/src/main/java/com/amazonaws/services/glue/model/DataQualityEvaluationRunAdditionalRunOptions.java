@@ -40,6 +40,12 @@ public class DataQualityEvaluationRunAdditionalRunOptions implements Serializabl
      * </p>
      */
     private String resultsS3Prefix;
+    /**
+     * <p>
+     * Set the evaluation method for composite rules in the ruleset to ROW/COLUMN
+     * </p>
+     */
+    private String compositeRuleEvaluationMethod;
 
     /**
      * <p>
@@ -134,6 +140,65 @@ public class DataQualityEvaluationRunAdditionalRunOptions implements Serializabl
     }
 
     /**
+     * <p>
+     * Set the evaluation method for composite rules in the ruleset to ROW/COLUMN
+     * </p>
+     * 
+     * @param compositeRuleEvaluationMethod
+     *        Set the evaluation method for composite rules in the ruleset to ROW/COLUMN
+     * @see DQCompositeRuleEvaluationMethod
+     */
+
+    public void setCompositeRuleEvaluationMethod(String compositeRuleEvaluationMethod) {
+        this.compositeRuleEvaluationMethod = compositeRuleEvaluationMethod;
+    }
+
+    /**
+     * <p>
+     * Set the evaluation method for composite rules in the ruleset to ROW/COLUMN
+     * </p>
+     * 
+     * @return Set the evaluation method for composite rules in the ruleset to ROW/COLUMN
+     * @see DQCompositeRuleEvaluationMethod
+     */
+
+    public String getCompositeRuleEvaluationMethod() {
+        return this.compositeRuleEvaluationMethod;
+    }
+
+    /**
+     * <p>
+     * Set the evaluation method for composite rules in the ruleset to ROW/COLUMN
+     * </p>
+     * 
+     * @param compositeRuleEvaluationMethod
+     *        Set the evaluation method for composite rules in the ruleset to ROW/COLUMN
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DQCompositeRuleEvaluationMethod
+     */
+
+    public DataQualityEvaluationRunAdditionalRunOptions withCompositeRuleEvaluationMethod(String compositeRuleEvaluationMethod) {
+        setCompositeRuleEvaluationMethod(compositeRuleEvaluationMethod);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Set the evaluation method for composite rules in the ruleset to ROW/COLUMN
+     * </p>
+     * 
+     * @param compositeRuleEvaluationMethod
+     *        Set the evaluation method for composite rules in the ruleset to ROW/COLUMN
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DQCompositeRuleEvaluationMethod
+     */
+
+    public DataQualityEvaluationRunAdditionalRunOptions withCompositeRuleEvaluationMethod(DQCompositeRuleEvaluationMethod compositeRuleEvaluationMethod) {
+        this.compositeRuleEvaluationMethod = compositeRuleEvaluationMethod.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -148,7 +213,9 @@ public class DataQualityEvaluationRunAdditionalRunOptions implements Serializabl
         if (getCloudWatchMetricsEnabled() != null)
             sb.append("CloudWatchMetricsEnabled: ").append(getCloudWatchMetricsEnabled()).append(",");
         if (getResultsS3Prefix() != null)
-            sb.append("ResultsS3Prefix: ").append(getResultsS3Prefix());
+            sb.append("ResultsS3Prefix: ").append(getResultsS3Prefix()).append(",");
+        if (getCompositeRuleEvaluationMethod() != null)
+            sb.append("CompositeRuleEvaluationMethod: ").append(getCompositeRuleEvaluationMethod());
         sb.append("}");
         return sb.toString();
     }
@@ -171,6 +238,11 @@ public class DataQualityEvaluationRunAdditionalRunOptions implements Serializabl
             return false;
         if (other.getResultsS3Prefix() != null && other.getResultsS3Prefix().equals(this.getResultsS3Prefix()) == false)
             return false;
+        if (other.getCompositeRuleEvaluationMethod() == null ^ this.getCompositeRuleEvaluationMethod() == null)
+            return false;
+        if (other.getCompositeRuleEvaluationMethod() != null
+                && other.getCompositeRuleEvaluationMethod().equals(this.getCompositeRuleEvaluationMethod()) == false)
+            return false;
         return true;
     }
 
@@ -181,6 +253,7 @@ public class DataQualityEvaluationRunAdditionalRunOptions implements Serializabl
 
         hashCode = prime * hashCode + ((getCloudWatchMetricsEnabled() == null) ? 0 : getCloudWatchMetricsEnabled().hashCode());
         hashCode = prime * hashCode + ((getResultsS3Prefix() == null) ? 0 : getResultsS3Prefix().hashCode());
+        hashCode = prime * hashCode + ((getCompositeRuleEvaluationMethod() == null) ? 0 : getCompositeRuleEvaluationMethod().hashCode());
         return hashCode;
     }
 

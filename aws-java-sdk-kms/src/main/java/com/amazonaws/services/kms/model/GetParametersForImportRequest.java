@@ -59,25 +59,19 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
     private String keyId;
     /**
      * <p>
-     * The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to protect
-     * your key material during import. For more information, see <a
+     * The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect your key
+     * material during import. For more information, see <a
      * href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm">Select a
      * wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then encrypt
      * your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key material
-     * directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key material directly
-     * with the SM2 public key from KMS.
+     * directly with the RSA public key from KMS.
      * </p>
      * <p>
      * The wrapping algorithms that you can use depend on the type of key material that you are importing. To import an
-     * RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you must use the
-     * SM2PKE wrapping algorithm to import an RSA private key.
-     * </p>
-     * <p>
-     * The SM2PKE wrapping algorithm is available only in China Regions. The <code>RSA_AES_KEY_WRAP_SHA_256</code> and
-     * <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not supported in China Regions.
+     * RSA private key, you must use an RSA_AES wrapping algorithm.
      * </p>
      * <ul>
      * <li>
@@ -114,28 +108,20 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * algorithm.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
-     * </p>
-     * </li>
      * </ul>
      */
     private String wrappingAlgorithm;
     /**
      * <p>
-     * The type of public key to return in the response. You will use this wrapping key with the specified wrapping
+     * The type of RSA public key to return in the response. You will use this wrapping key with the specified wrapping
      * algorithm to protect your key material during import.
      * </p>
      * <p>
-     * Use the longest wrapping key that is practical.
+     * Use the longest RSA wrapping key that is practical.
      * </p>
      * <p>
      * You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an RSA_AES
      * wrapping algorithm or choose a longer RSA public key.
-     * </p>
-     * <p>
-     * The SM2 wrapping key spec is available only in China Regions.
      * </p>
      */
     private String wrappingKeySpec;
@@ -335,25 +321,19 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to protect
-     * your key material during import. For more information, see <a
+     * The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect your key
+     * material during import. For more information, see <a
      * href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm">Select a
      * wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then encrypt
      * your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key material
-     * directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key material directly
-     * with the SM2 public key from KMS.
+     * directly with the RSA public key from KMS.
      * </p>
      * <p>
      * The wrapping algorithms that you can use depend on the type of key material that you are importing. To import an
-     * RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you must use the
-     * SM2PKE wrapping algorithm to import an RSA private key.
-     * </p>
-     * <p>
-     * The SM2PKE wrapping algorithm is available only in China Regions. The <code>RSA_AES_KEY_WRAP_SHA_256</code> and
-     * <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not supported in China Regions.
+     * RSA private key, you must use an RSA_AES wrapping algorithm.
      * </p>
      * <ul>
      * <li>
@@ -390,33 +370,21 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * algorithm.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param wrappingAlgorithm
-     *        The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to
-     *        protect your key material during import. For more information, see <a
+     *        The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect
+     *        your key material during import. For more information, see <a
      *        href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm"
      *        >Select a wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.</p>
      *        <p>
      *        For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then
      *        encrypt your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key
-     *        material directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key
-     *        material directly with the SM2 public key from KMS.
+     *        material directly with the RSA public key from KMS.
      *        </p>
      *        <p>
      *        The wrapping algorithms that you can use depend on the type of key material that you are importing. To
-     *        import an RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you
-     *        must use the SM2PKE wrapping algorithm to import an RSA private key.
-     *        </p>
-     *        <p>
-     *        The SM2PKE wrapping algorithm is available only in China Regions. The
-     *        <code>RSA_AES_KEY_WRAP_SHA_256</code> and <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not
-     *        supported in China Regions.
+     *        import an RSA private key, you must use an RSA_AES wrapping algorithm.
      *        </p>
      *        <ul>
      *        <li>
@@ -454,11 +422,6 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      *        wrapping algorithm.
      *        </p>
      *        </li>
-     *        <li>
-     *        <p>
-     *        <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
-     *        </p>
-     *        </li>
      * @see AlgorithmSpec
      */
 
@@ -468,25 +431,19 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to protect
-     * your key material during import. For more information, see <a
+     * The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect your key
+     * material during import. For more information, see <a
      * href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm">Select a
      * wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then encrypt
      * your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key material
-     * directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key material directly
-     * with the SM2 public key from KMS.
+     * directly with the RSA public key from KMS.
      * </p>
      * <p>
      * The wrapping algorithms that you can use depend on the type of key material that you are importing. To import an
-     * RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you must use the
-     * SM2PKE wrapping algorithm to import an RSA private key.
-     * </p>
-     * <p>
-     * The SM2PKE wrapping algorithm is available only in China Regions. The <code>RSA_AES_KEY_WRAP_SHA_256</code> and
-     * <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not supported in China Regions.
+     * RSA private key, you must use an RSA_AES wrapping algorithm.
      * </p>
      * <ul>
      * <li>
@@ -523,32 +480,20 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * algorithm.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
-     * </p>
-     * </li>
      * </ul>
      * 
-     * @return The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to
-     *         protect your key material during import. For more information, see <a
+     * @return The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect
+     *         your key material during import. For more information, see <a
      *         href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm"
      *         >Select a wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.</p>
      *         <p>
      *         For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then
      *         encrypt your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your
-     *         key material directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your
-     *         key material directly with the SM2 public key from KMS.
+     *         key material directly with the RSA public key from KMS.
      *         </p>
      *         <p>
      *         The wrapping algorithms that you can use depend on the type of key material that you are importing. To
-     *         import an RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you
-     *         must use the SM2PKE wrapping algorithm to import an RSA private key.
-     *         </p>
-     *         <p>
-     *         The SM2PKE wrapping algorithm is available only in China Regions. The
-     *         <code>RSA_AES_KEY_WRAP_SHA_256</code> and <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not
-     *         supported in China Regions.
+     *         import an RSA private key, you must use an RSA_AES wrapping algorithm.
      *         </p>
      *         <ul>
      *         <li>
@@ -586,11 +531,6 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      *         wrapping algorithm.
      *         </p>
      *         </li>
-     *         <li>
-     *         <p>
-     *         <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
-     *         </p>
-     *         </li>
      * @see AlgorithmSpec
      */
 
@@ -600,25 +540,19 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to protect
-     * your key material during import. For more information, see <a
+     * The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect your key
+     * material during import. For more information, see <a
      * href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm">Select a
      * wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then encrypt
      * your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key material
-     * directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key material directly
-     * with the SM2 public key from KMS.
+     * directly with the RSA public key from KMS.
      * </p>
      * <p>
      * The wrapping algorithms that you can use depend on the type of key material that you are importing. To import an
-     * RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you must use the
-     * SM2PKE wrapping algorithm to import an RSA private key.
-     * </p>
-     * <p>
-     * The SM2PKE wrapping algorithm is available only in China Regions. The <code>RSA_AES_KEY_WRAP_SHA_256</code> and
-     * <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not supported in China Regions.
+     * RSA private key, you must use an RSA_AES wrapping algorithm.
      * </p>
      * <ul>
      * <li>
@@ -655,33 +589,21 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * algorithm.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param wrappingAlgorithm
-     *        The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to
-     *        protect your key material during import. For more information, see <a
+     *        The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect
+     *        your key material during import. For more information, see <a
      *        href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm"
      *        >Select a wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.</p>
      *        <p>
      *        For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then
      *        encrypt your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key
-     *        material directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key
-     *        material directly with the SM2 public key from KMS.
+     *        material directly with the RSA public key from KMS.
      *        </p>
      *        <p>
      *        The wrapping algorithms that you can use depend on the type of key material that you are importing. To
-     *        import an RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you
-     *        must use the SM2PKE wrapping algorithm to import an RSA private key.
-     *        </p>
-     *        <p>
-     *        The SM2PKE wrapping algorithm is available only in China Regions. The
-     *        <code>RSA_AES_KEY_WRAP_SHA_256</code> and <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not
-     *        supported in China Regions.
+     *        import an RSA private key, you must use an RSA_AES wrapping algorithm.
      *        </p>
      *        <ul>
      *        <li>
@@ -717,11 +639,6 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        <b>RSAES_PKCS1_V1_5</b> (Deprecated) — As of October 10, 2023, KMS does not support the RSAES_PKCS1_V1_5
      *        wrapping algorithm.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -735,25 +652,19 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to protect
-     * your key material during import. For more information, see <a
+     * The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect your key
+     * material during import. For more information, see <a
      * href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm">Select a
      * wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then encrypt
      * your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key material
-     * directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key material directly
-     * with the SM2 public key from KMS.
+     * directly with the RSA public key from KMS.
      * </p>
      * <p>
      * The wrapping algorithms that you can use depend on the type of key material that you are importing. To import an
-     * RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you must use the
-     * SM2PKE wrapping algorithm to import an RSA private key.
-     * </p>
-     * <p>
-     * The SM2PKE wrapping algorithm is available only in China Regions. The <code>RSA_AES_KEY_WRAP_SHA_256</code> and
-     * <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not supported in China Regions.
+     * RSA private key, you must use an RSA_AES wrapping algorithm.
      * </p>
      * <ul>
      * <li>
@@ -790,33 +701,21 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * algorithm.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param wrappingAlgorithm
-     *        The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to
-     *        protect your key material during import. For more information, see <a
+     *        The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect
+     *        your key material during import. For more information, see <a
      *        href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm"
      *        >Select a wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.</p>
      *        <p>
      *        For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then
      *        encrypt your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key
-     *        material directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key
-     *        material directly with the SM2 public key from KMS.
+     *        material directly with the RSA public key from KMS.
      *        </p>
      *        <p>
      *        The wrapping algorithms that you can use depend on the type of key material that you are importing. To
-     *        import an RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you
-     *        must use the SM2PKE wrapping algorithm to import an RSA private key.
-     *        </p>
-     *        <p>
-     *        The SM2PKE wrapping algorithm is available only in China Regions. The
-     *        <code>RSA_AES_KEY_WRAP_SHA_256</code> and <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not
-     *        supported in China Regions.
+     *        import an RSA private key, you must use an RSA_AES wrapping algorithm.
      *        </p>
      *        <ul>
      *        <li>
@@ -852,11 +751,6 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        <b>RSAES_PKCS1_V1_5</b> (Deprecated) — As of October 10, 2023, KMS does not support the RSAES_PKCS1_V1_5
      *        wrapping algorithm.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
      *        </p>
      *        </li>
      * @see AlgorithmSpec
@@ -868,25 +762,19 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to protect
-     * your key material during import. For more information, see <a
+     * The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect your key
+     * material during import. For more information, see <a
      * href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm">Select a
      * wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then encrypt
      * your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key material
-     * directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key material directly
-     * with the SM2 public key from KMS.
+     * directly with the RSA public key from KMS.
      * </p>
      * <p>
      * The wrapping algorithms that you can use depend on the type of key material that you are importing. To import an
-     * RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you must use the
-     * SM2PKE wrapping algorithm to import an RSA private key.
-     * </p>
-     * <p>
-     * The SM2PKE wrapping algorithm is available only in China Regions. The <code>RSA_AES_KEY_WRAP_SHA_256</code> and
-     * <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not supported in China Regions.
+     * RSA private key, you must use an RSA_AES wrapping algorithm.
      * </p>
      * <ul>
      * <li>
@@ -923,33 +811,21 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * algorithm.
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
-     * </p>
-     * </li>
      * </ul>
      * 
      * @param wrappingAlgorithm
-     *        The algorithm you will use with the asymmetric public key (<code>PublicKey</code>) in the response to
-     *        protect your key material during import. For more information, see <a
+     *        The algorithm you will use with the RSA public key (<code>PublicKey</code>) in the response to protect
+     *        your key material during import. For more information, see <a
      *        href="kms/latest/developerguide/importing-keys-get-public-key-and-token.html#select-wrapping-algorithm"
      *        >Select a wrapping algorithm</a> in the <i>Key Management Service Developer Guide</i>.</p>
      *        <p>
      *        For RSA_AES wrapping algorithms, you encrypt your key material with an AES key that you generate, then
      *        encrypt your AES key with the RSA public key from KMS. For RSAES wrapping algorithms, you encrypt your key
-     *        material directly with the RSA public key from KMS. For SM2PKE wrapping algorithms, you encrypt your key
-     *        material directly with the SM2 public key from KMS.
+     *        material directly with the RSA public key from KMS.
      *        </p>
      *        <p>
      *        The wrapping algorithms that you can use depend on the type of key material that you are importing. To
-     *        import an RSA private key, you must use an RSA_AES wrapping algorithm, except in China Regions, where you
-     *        must use the SM2PKE wrapping algorithm to import an RSA private key.
-     *        </p>
-     *        <p>
-     *        The SM2PKE wrapping algorithm is available only in China Regions. The
-     *        <code>RSA_AES_KEY_WRAP_SHA_256</code> and <code>RSA_AES_KEY_WRAP_SHA_1</code> wrapping algorithms are not
-     *        supported in China Regions.
+     *        import an RSA private key, you must use an RSA_AES wrapping algorithm.
      *        </p>
      *        <ul>
      *        <li>
@@ -985,11 +861,6 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        <b>RSAES_PKCS1_V1_5</b> (Deprecated) — As of October 10, 2023, KMS does not support the RSAES_PKCS1_V1_5
      *        wrapping algorithm.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <b>SM2PKE</b> (China Regions only) — supported for wrapping RSA, ECC, and SM2 key material.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1003,32 +874,26 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of public key to return in the response. You will use this wrapping key with the specified wrapping
+     * The type of RSA public key to return in the response. You will use this wrapping key with the specified wrapping
      * algorithm to protect your key material during import.
      * </p>
      * <p>
-     * Use the longest wrapping key that is practical.
+     * Use the longest RSA wrapping key that is practical.
      * </p>
      * <p>
      * You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an RSA_AES
      * wrapping algorithm or choose a longer RSA public key.
      * </p>
-     * <p>
-     * The SM2 wrapping key spec is available only in China Regions.
-     * </p>
      * 
      * @param wrappingKeySpec
-     *        The type of public key to return in the response. You will use this wrapping key with the specified
+     *        The type of RSA public key to return in the response. You will use this wrapping key with the specified
      *        wrapping algorithm to protect your key material during import. </p>
      *        <p>
-     *        Use the longest wrapping key that is practical.
+     *        Use the longest RSA wrapping key that is practical.
      *        </p>
      *        <p>
      *        You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an
      *        RSA_AES wrapping algorithm or choose a longer RSA public key.
-     *        </p>
-     *        <p>
-     *        The SM2 wrapping key spec is available only in China Regions.
      * @see WrappingKeySpec
      */
 
@@ -1038,31 +903,25 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of public key to return in the response. You will use this wrapping key with the specified wrapping
+     * The type of RSA public key to return in the response. You will use this wrapping key with the specified wrapping
      * algorithm to protect your key material during import.
      * </p>
      * <p>
-     * Use the longest wrapping key that is practical.
+     * Use the longest RSA wrapping key that is practical.
      * </p>
      * <p>
      * You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an RSA_AES
      * wrapping algorithm or choose a longer RSA public key.
      * </p>
-     * <p>
-     * The SM2 wrapping key spec is available only in China Regions.
-     * </p>
      * 
-     * @return The type of public key to return in the response. You will use this wrapping key with the specified
+     * @return The type of RSA public key to return in the response. You will use this wrapping key with the specified
      *         wrapping algorithm to protect your key material during import. </p>
      *         <p>
-     *         Use the longest wrapping key that is practical.
+     *         Use the longest RSA wrapping key that is practical.
      *         </p>
      *         <p>
      *         You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an
      *         RSA_AES wrapping algorithm or choose a longer RSA public key.
-     *         </p>
-     *         <p>
-     *         The SM2 wrapping key spec is available only in China Regions.
      * @see WrappingKeySpec
      */
 
@@ -1072,32 +931,26 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of public key to return in the response. You will use this wrapping key with the specified wrapping
+     * The type of RSA public key to return in the response. You will use this wrapping key with the specified wrapping
      * algorithm to protect your key material during import.
      * </p>
      * <p>
-     * Use the longest wrapping key that is practical.
+     * Use the longest RSA wrapping key that is practical.
      * </p>
      * <p>
      * You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an RSA_AES
      * wrapping algorithm or choose a longer RSA public key.
      * </p>
-     * <p>
-     * The SM2 wrapping key spec is available only in China Regions.
-     * </p>
      * 
      * @param wrappingKeySpec
-     *        The type of public key to return in the response. You will use this wrapping key with the specified
+     *        The type of RSA public key to return in the response. You will use this wrapping key with the specified
      *        wrapping algorithm to protect your key material during import. </p>
      *        <p>
-     *        Use the longest wrapping key that is practical.
+     *        Use the longest RSA wrapping key that is practical.
      *        </p>
      *        <p>
      *        You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an
      *        RSA_AES wrapping algorithm or choose a longer RSA public key.
-     *        </p>
-     *        <p>
-     *        The SM2 wrapping key spec is available only in China Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WrappingKeySpec
      */
@@ -1109,32 +962,26 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of public key to return in the response. You will use this wrapping key with the specified wrapping
+     * The type of RSA public key to return in the response. You will use this wrapping key with the specified wrapping
      * algorithm to protect your key material during import.
      * </p>
      * <p>
-     * Use the longest wrapping key that is practical.
+     * Use the longest RSA wrapping key that is practical.
      * </p>
      * <p>
      * You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an RSA_AES
      * wrapping algorithm or choose a longer RSA public key.
      * </p>
-     * <p>
-     * The SM2 wrapping key spec is available only in China Regions.
-     * </p>
      * 
      * @param wrappingKeySpec
-     *        The type of public key to return in the response. You will use this wrapping key with the specified
+     *        The type of RSA public key to return in the response. You will use this wrapping key with the specified
      *        wrapping algorithm to protect your key material during import. </p>
      *        <p>
-     *        Use the longest wrapping key that is practical.
+     *        Use the longest RSA wrapping key that is practical.
      *        </p>
      *        <p>
      *        You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an
      *        RSA_AES wrapping algorithm or choose a longer RSA public key.
-     *        </p>
-     *        <p>
-     *        The SM2 wrapping key spec is available only in China Regions.
      * @see WrappingKeySpec
      */
 
@@ -1144,32 +991,26 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The type of public key to return in the response. You will use this wrapping key with the specified wrapping
+     * The type of RSA public key to return in the response. You will use this wrapping key with the specified wrapping
      * algorithm to protect your key material during import.
      * </p>
      * <p>
-     * Use the longest wrapping key that is practical.
+     * Use the longest RSA wrapping key that is practical.
      * </p>
      * <p>
      * You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an RSA_AES
      * wrapping algorithm or choose a longer RSA public key.
      * </p>
-     * <p>
-     * The SM2 wrapping key spec is available only in China Regions.
-     * </p>
      * 
      * @param wrappingKeySpec
-     *        The type of public key to return in the response. You will use this wrapping key with the specified
+     *        The type of RSA public key to return in the response. You will use this wrapping key with the specified
      *        wrapping algorithm to protect your key material during import. </p>
      *        <p>
-     *        Use the longest wrapping key that is practical.
+     *        Use the longest RSA wrapping key that is practical.
      *        </p>
      *        <p>
      *        You cannot use an RSA_2048 public key to directly wrap an ECC_NIST_P521 private key. Instead, use an
      *        RSA_AES wrapping algorithm or choose a longer RSA public key.
-     *        </p>
-     *        <p>
-     *        The SM2 wrapping key spec is available only in China Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WrappingKeySpec
      */

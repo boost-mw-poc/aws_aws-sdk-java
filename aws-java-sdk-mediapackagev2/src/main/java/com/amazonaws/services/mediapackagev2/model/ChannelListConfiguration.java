@@ -66,6 +66,29 @@ public class ChannelListConfiguration implements Serializable, Cloneable, Struct
      * </p>
      */
     private String description;
+    /**
+     * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String inputType;
 
     /**
      * <p>
@@ -320,6 +343,197 @@ public class ChannelListConfiguration implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param inputType
+     *        The input type will be an immutable field which will be used to define whether the channel will allow CMAF
+     *        ingest or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.</p>
+     *        <p>
+     *        The allowed values are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     *        manifests).
+     *        </p>
+     *        </li>
+     * @see InputType
+     */
+
+    public void setInputType(String inputType) {
+        this.inputType = inputType;
+    }
+
+    /**
+     * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The input type will be an immutable field which will be used to define whether the channel will allow
+     *         CMAF ingest or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.</p>
+     *         <p>
+     *         The allowed values are:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     *         manifests).
+     *         </p>
+     *         </li>
+     * @see InputType
+     */
+
+    public String getInputType() {
+        return this.inputType;
+    }
+
+    /**
+     * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param inputType
+     *        The input type will be an immutable field which will be used to define whether the channel will allow CMAF
+     *        ingest or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.</p>
+     *        <p>
+     *        The allowed values are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     *        manifests).
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InputType
+     */
+
+    public ChannelListConfiguration withInputType(String inputType) {
+        setInputType(inputType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The input type will be an immutable field which will be used to define whether the channel will allow CMAF ingest
+     * or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.
+     * </p>
+     * <p>
+     * The allowed values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     * manifests).
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param inputType
+     *        The input type will be an immutable field which will be used to define whether the channel will allow CMAF
+     *        ingest or HLS ingest. If unprovided, it will default to HLS to preserve current behavior.</p>
+     *        <p>
+     *        The allowed values are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>HLS</code> - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CMAF</code> - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional DASH
+     *        manifests).
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InputType
+     */
+
+    public ChannelListConfiguration withInputType(InputType inputType) {
+        this.inputType = inputType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -342,7 +556,9 @@ public class ChannelListConfiguration implements Serializable, Cloneable, Struct
         if (getModifiedAt() != null)
             sb.append("ModifiedAt: ").append(getModifiedAt()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription());
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getInputType() != null)
+            sb.append("InputType: ").append(getInputType());
         sb.append("}");
         return sb.toString();
     }
@@ -381,6 +597,10 @@ public class ChannelListConfiguration implements Serializable, Cloneable, Struct
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getInputType() == null ^ this.getInputType() == null)
+            return false;
+        if (other.getInputType() != null && other.getInputType().equals(this.getInputType()) == false)
+            return false;
         return true;
     }
 
@@ -395,6 +615,7 @@ public class ChannelListConfiguration implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getModifiedAt() == null) ? 0 : getModifiedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getInputType() == null) ? 0 : getInputType().hashCode());
         return hashCode;
     }
 

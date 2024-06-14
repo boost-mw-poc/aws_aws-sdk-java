@@ -101,6 +101,11 @@ public class OriginEndpointListConfigurationJsonUnmarshaller implements Unmarsha
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ForceEndpointErrorConfiguration", targetDepth)) {
+                    context.nextToken();
+                    originEndpointListConfiguration.setForceEndpointErrorConfiguration(ForceEndpointErrorConfigurationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

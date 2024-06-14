@@ -1238,9 +1238,13 @@ public interface AWSKMSAsync extends AWSKMS {
      * <p>
      * Asymmetric KMS keys contain an RSA key pair, Elliptic Curve (ECC) key pair, or an SM2 key pair (China Regions
      * only). The private key in an asymmetric KMS key never leaves KMS unencrypted. However, you can use the
-     * <a>GetPublicKey</a> operation to download the public key so it can be used outside of KMS. KMS keys with RSA or
-     * SM2 key pairs can be used to encrypt or decrypt data or sign and verify messages (but not both). KMS keys with
-     * ECC key pairs can be used only to sign and verify messages. For information about asymmetric KMS keys, see <a
+     * <a>GetPublicKey</a> operation to download the public key so it can be used outside of KMS. Each KMS key can have
+     * only one key usage. KMS keys with RSA key pairs can be used to encrypt and decrypt data or sign and verify
+     * messages (but not both). KMS keys with NIST-recommended ECC key pairs can be used to sign and verify messages or
+     * derive shared secrets (but not both). KMS keys with <code>ECC_SECG_P256K1</code> can be used only to sign and
+     * verify messages. KMS keys with SM2 key pairs (China Regions only) can be used to either encrypt and decrypt data,
+     * sign and verify messages, or derive shared secrets (you must choose one key usage type). For information about
+     * asymmetric KMS keys, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
      * the <i>Key Management Service Developer Guide</i>.
      * </p>
@@ -1473,9 +1477,13 @@ public interface AWSKMSAsync extends AWSKMS {
      * <p>
      * Asymmetric KMS keys contain an RSA key pair, Elliptic Curve (ECC) key pair, or an SM2 key pair (China Regions
      * only). The private key in an asymmetric KMS key never leaves KMS unencrypted. However, you can use the
-     * <a>GetPublicKey</a> operation to download the public key so it can be used outside of KMS. KMS keys with RSA or
-     * SM2 key pairs can be used to encrypt or decrypt data or sign and verify messages (but not both). KMS keys with
-     * ECC key pairs can be used only to sign and verify messages. For information about asymmetric KMS keys, see <a
+     * <a>GetPublicKey</a> operation to download the public key so it can be used outside of KMS. Each KMS key can have
+     * only one key usage. KMS keys with RSA key pairs can be used to encrypt and decrypt data or sign and verify
+     * messages (but not both). KMS keys with NIST-recommended ECC key pairs can be used to sign and verify messages or
+     * derive shared secrets (but not both). KMS keys with <code>ECC_SECG_P256K1</code> can be used only to sign and
+     * verify messages. KMS keys with SM2 key pairs (China Regions only) can be used to either encrypt and decrypt data,
+     * sign and verify messages, or derive shared secrets (you must choose one key usage type). For information about
+     * asymmetric KMS keys, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
      * the <i>Key Management Service Developer Guide</i>.
      * </p>
@@ -2412,6 +2420,267 @@ public interface AWSKMSAsync extends AWSKMS {
     java.util.concurrent.Future<DeleteImportedKeyMaterialResult> deleteImportedKeyMaterialAsync(
             DeleteImportedKeyMaterialRequest deleteImportedKeyMaterialRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteImportedKeyMaterialRequest, DeleteImportedKeyMaterialResult> asyncHandler);
+
+    /**
+     * <p>
+     * Derives a shared secret using a key agreement algorithm.
+     * </p>
+     * <note>
+     * <p>
+     * You must use an asymmetric NIST-recommended elliptic curve (ECC) or SM2 (China Regions only) KMS key pair with a
+     * <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code> to call DeriveSharedSecret.
+     * </p>
+     * </note>
+     * <p>
+     * DeriveSharedSecret uses the <a
+     * href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Ar3.pdf#page=60">Elliptic Curve
+     * Cryptography Cofactor Diffie-Hellman Primitive</a> (ECDH) to establish a key agreement between two peers by
+     * deriving a shared secret from their elliptic curve public-private key pairs. You can use the raw shared secret
+     * that DeriveSharedSecret returns to derive a symmetric key that can encrypt and decrypt data that is sent between
+     * the two peers, or that can generate and verify HMACs. KMS recommends that you follow <a
+     * href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Cr2.pdf">NIST recommendations for key
+     * derivation</a> when using the raw shared secret to derive a symmetric key.
+     * </p>
+     * <p>
+     * The following workflow demonstrates how to establish key agreement over an insecure communication channel using
+     * DeriveSharedSecret.
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * <b>Alice</b> calls <a>CreateKey</a> to create an asymmetric KMS key pair with a <code>KeyUsage</code> value of
+     * <code>KEY_AGREEMENT</code>.
+     * </p>
+     * <p>
+     * The asymmetric KMS key must use a NIST-recommended elliptic curve (ECC) or SM2 (China Regions only) key spec.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Bob</b> creates an elliptic curve key pair.
+     * </p>
+     * <p>
+     * Bob can call <a>CreateKey</a> to create an asymmetric KMS key pair or generate a key pair outside of KMS. Bob's
+     * key pair must use the same NIST-recommended elliptic curve (ECC) or SM2 (China Regions ony) curve as Alice.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Alice and Bob <b>exchange their public keys</b> through an insecure communication channel (like the internet).
+     * </p>
+     * <p>
+     * Use <a>GetPublicKey</a> to download the public key of your asymmetric KMS key pair.
+     * </p>
+     * <note>
+     * <p>
+     * KMS strongly recommends verifying that the public key you receive came from the expected party before using it to
+     * derive a shared secret.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * <b>Alice</b> calls DeriveSharedSecret.
+     * </p>
+     * <p>
+     * KMS uses the private key from the KMS key pair generated in <b>Step 1</b>, Bob's public key, and the Elliptic
+     * Curve Cryptography Cofactor Diffie-Hellman Primitive to derive the shared secret. The private key in your KMS key
+     * pair never leaves KMS unencrypted. DeriveSharedSecret returns the raw shared secret.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Bob</b> uses the Elliptic Curve Cryptography Cofactor Diffie-Hellman Primitive to calculate the same raw
+     * secret using his private key and Alice's public key.
+     * </p>
+     * </li>
+     * </ol>
+     * <p>
+     * To derive a shared secret you must provide a key agreement algorithm, the private key of the caller's asymmetric
+     * NIST-recommended elliptic curve or SM2 (China Regions only) KMS key pair, and the public key from your peer's
+     * NIST-recommended elliptic curve or SM2 (China Regions only) key pair. The public key can be from another
+     * asymmetric KMS key pair or from a key pair generated outside of KMS, but both key pairs must be on the same
+     * elliptic curve.
+     * </p>
+     * <p>
+     * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
+     * account, specify the key ARN or alias ARN in the value of the <code>KeyId</code> parameter.
+     * </p>
+     * <p>
+     * <b>Required permissions</b>: <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html"
+     * >kms:DeriveSharedSecret</a> (key policy)
+     * </p>
+     * <p>
+     * <b>Related operations:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a>CreateKey</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a>GetPublicKey</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a>DescribeKey</a>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>Eventual consistency</b>: The KMS API follows an eventual consistency model. For more information, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-eventual-consistency.html">KMS eventual
+     * consistency</a>.
+     * </p>
+     * 
+     * @param deriveSharedSecretRequest
+     * @return A Java Future containing the result of the DeriveSharedSecret operation returned by the service.
+     * @sample AWSKMSAsync.DeriveSharedSecret
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DeriveSharedSecret" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeriveSharedSecretResult> deriveSharedSecretAsync(DeriveSharedSecretRequest deriveSharedSecretRequest);
+
+    /**
+     * <p>
+     * Derives a shared secret using a key agreement algorithm.
+     * </p>
+     * <note>
+     * <p>
+     * You must use an asymmetric NIST-recommended elliptic curve (ECC) or SM2 (China Regions only) KMS key pair with a
+     * <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code> to call DeriveSharedSecret.
+     * </p>
+     * </note>
+     * <p>
+     * DeriveSharedSecret uses the <a
+     * href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Ar3.pdf#page=60">Elliptic Curve
+     * Cryptography Cofactor Diffie-Hellman Primitive</a> (ECDH) to establish a key agreement between two peers by
+     * deriving a shared secret from their elliptic curve public-private key pairs. You can use the raw shared secret
+     * that DeriveSharedSecret returns to derive a symmetric key that can encrypt and decrypt data that is sent between
+     * the two peers, or that can generate and verify HMACs. KMS recommends that you follow <a
+     * href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Cr2.pdf">NIST recommendations for key
+     * derivation</a> when using the raw shared secret to derive a symmetric key.
+     * </p>
+     * <p>
+     * The following workflow demonstrates how to establish key agreement over an insecure communication channel using
+     * DeriveSharedSecret.
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * <b>Alice</b> calls <a>CreateKey</a> to create an asymmetric KMS key pair with a <code>KeyUsage</code> value of
+     * <code>KEY_AGREEMENT</code>.
+     * </p>
+     * <p>
+     * The asymmetric KMS key must use a NIST-recommended elliptic curve (ECC) or SM2 (China Regions only) key spec.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Bob</b> creates an elliptic curve key pair.
+     * </p>
+     * <p>
+     * Bob can call <a>CreateKey</a> to create an asymmetric KMS key pair or generate a key pair outside of KMS. Bob's
+     * key pair must use the same NIST-recommended elliptic curve (ECC) or SM2 (China Regions ony) curve as Alice.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Alice and Bob <b>exchange their public keys</b> through an insecure communication channel (like the internet).
+     * </p>
+     * <p>
+     * Use <a>GetPublicKey</a> to download the public key of your asymmetric KMS key pair.
+     * </p>
+     * <note>
+     * <p>
+     * KMS strongly recommends verifying that the public key you receive came from the expected party before using it to
+     * derive a shared secret.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * <b>Alice</b> calls DeriveSharedSecret.
+     * </p>
+     * <p>
+     * KMS uses the private key from the KMS key pair generated in <b>Step 1</b>, Bob's public key, and the Elliptic
+     * Curve Cryptography Cofactor Diffie-Hellman Primitive to derive the shared secret. The private key in your KMS key
+     * pair never leaves KMS unencrypted. DeriveSharedSecret returns the raw shared secret.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>Bob</b> uses the Elliptic Curve Cryptography Cofactor Diffie-Hellman Primitive to calculate the same raw
+     * secret using his private key and Alice's public key.
+     * </p>
+     * </li>
+     * </ol>
+     * <p>
+     * To derive a shared secret you must provide a key agreement algorithm, the private key of the caller's asymmetric
+     * NIST-recommended elliptic curve or SM2 (China Regions only) KMS key pair, and the public key from your peer's
+     * NIST-recommended elliptic curve or SM2 (China Regions only) key pair. The public key can be from another
+     * asymmetric KMS key pair or from a key pair generated outside of KMS, but both key pairs must be on the same
+     * elliptic curve.
+     * </p>
+     * <p>
+     * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
+     * account, specify the key ARN or alias ARN in the value of the <code>KeyId</code> parameter.
+     * </p>
+     * <p>
+     * <b>Required permissions</b>: <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html"
+     * >kms:DeriveSharedSecret</a> (key policy)
+     * </p>
+     * <p>
+     * <b>Related operations:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a>CreateKey</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a>GetPublicKey</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a>DescribeKey</a>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>Eventual consistency</b>: The KMS API follows an eventual consistency model. For more information, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-eventual-consistency.html">KMS eventual
+     * consistency</a>.
+     * </p>
+     * 
+     * @param deriveSharedSecretRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeriveSharedSecret operation returned by the service.
+     * @sample AWSKMSAsyncHandler.DeriveSharedSecret
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/DeriveSharedSecret" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeriveSharedSecretResult> deriveSharedSecretAsync(DeriveSharedSecretRequest deriveSharedSecretRequest,
+            com.amazonaws.handlers.AsyncHandler<DeriveSharedSecretRequest, DeriveSharedSecretResult> asyncHandler);
 
     /**
      * <p>
@@ -5470,7 +5739,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * <ul>
      * <li>
      * <p>
-     * The public key (or "wrapping key") of an asymmetric key pair that KMS generates.
+     * The public key (or "wrapping key") of an RSA key pair that KMS generates.
      * </p>
      * <p>
      * You will use this public key to encrypt ("wrap") your key material while it's in transit to KMS.
@@ -5586,7 +5855,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * <ul>
      * <li>
      * <p>
-     * The public key (or "wrapping key") of an asymmetric key pair that KMS generates.
+     * The public key (or "wrapping key") of an RSA key pair that KMS generates.
      * </p>
      * <p>
      * You will use this public key to encrypt ("wrap") your key material while it's in transit to KMS.
@@ -5710,7 +5979,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-KeyUsage"
-     * >KeyUsage</a>: Whether the key is used for encryption or signing.
+     * >KeyUsage</a>: Whether the key is used for encryption, signing, or deriving a shared secret.
      * </p>
      * </li>
      * <li>
@@ -5801,7 +6070,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-KeyUsage"
-     * >KeyUsage</a>: Whether the key is used for encryption or signing.
+     * >KeyUsage</a>: Whether the key is used for encryption, signing, or deriving a shared secret.
      * </p>
      * </li>
      * <li>

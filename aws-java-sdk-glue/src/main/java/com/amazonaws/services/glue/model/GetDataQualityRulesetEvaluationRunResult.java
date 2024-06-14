@@ -99,7 +99,7 @@ public class GetDataQualityRulesetEvaluationRunResult extends com.amazonaws.Amaz
     private Integer executionTime;
     /**
      * <p>
-     * A list of ruleset names for the run.
+     * A list of ruleset names for the run. Currently, this parameter takes only one Ruleset name.
      * </p>
      */
     private java.util.List<String> rulesetNames;
@@ -623,10 +623,10 @@ public class GetDataQualityRulesetEvaluationRunResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A list of ruleset names for the run.
+     * A list of ruleset names for the run. Currently, this parameter takes only one Ruleset name.
      * </p>
      * 
-     * @return A list of ruleset names for the run.
+     * @return A list of ruleset names for the run. Currently, this parameter takes only one Ruleset name.
      */
 
     public java.util.List<String> getRulesetNames() {
@@ -635,11 +635,11 @@ public class GetDataQualityRulesetEvaluationRunResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A list of ruleset names for the run.
+     * A list of ruleset names for the run. Currently, this parameter takes only one Ruleset name.
      * </p>
      * 
      * @param rulesetNames
-     *        A list of ruleset names for the run.
+     *        A list of ruleset names for the run. Currently, this parameter takes only one Ruleset name.
      */
 
     public void setRulesetNames(java.util.Collection<String> rulesetNames) {
@@ -653,7 +653,7 @@ public class GetDataQualityRulesetEvaluationRunResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A list of ruleset names for the run.
+     * A list of ruleset names for the run. Currently, this parameter takes only one Ruleset name.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -662,7 +662,7 @@ public class GetDataQualityRulesetEvaluationRunResult extends com.amazonaws.Amaz
      * </p>
      * 
      * @param rulesetNames
-     *        A list of ruleset names for the run.
+     *        A list of ruleset names for the run. Currently, this parameter takes only one Ruleset name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -678,11 +678,11 @@ public class GetDataQualityRulesetEvaluationRunResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A list of ruleset names for the run.
+     * A list of ruleset names for the run. Currently, this parameter takes only one Ruleset name.
      * </p>
      * 
      * @param rulesetNames
-     *        A list of ruleset names for the run.
+     *        A list of ruleset names for the run. Currently, this parameter takes only one Ruleset name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

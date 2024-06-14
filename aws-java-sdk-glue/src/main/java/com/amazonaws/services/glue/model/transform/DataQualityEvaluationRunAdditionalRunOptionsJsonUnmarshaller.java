@@ -57,6 +57,10 @@ public class DataQualityEvaluationRunAdditionalRunOptionsJsonUnmarshaller implem
                     context.nextToken();
                     dataQualityEvaluationRunAdditionalRunOptions.setResultsS3Prefix(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CompositeRuleEvaluationMethod", targetDepth)) {
+                    context.nextToken();
+                    dataQualityEvaluationRunAdditionalRunOptions.setCompositeRuleEvaluationMethod(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

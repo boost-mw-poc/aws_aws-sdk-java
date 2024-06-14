@@ -179,6 +179,19 @@ public class AbstractAWSKMSAsync extends AbstractAWSKMS implements AWSKMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<DeriveSharedSecretResult> deriveSharedSecretAsync(DeriveSharedSecretRequest request) {
+
+        return deriveSharedSecretAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeriveSharedSecretResult> deriveSharedSecretAsync(DeriveSharedSecretRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeriveSharedSecretRequest, DeriveSharedSecretResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeCustomKeyStoresResult> describeCustomKeyStoresAsync(DescribeCustomKeyStoresRequest request) {
 
         return describeCustomKeyStoresAsync(request, null);

@@ -128,6 +128,12 @@ public class KeyMetadataJsonUnmarshaller implements Unmarshaller<KeyMetadata, Js
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("KeyAgreementAlgorithms", targetDepth)) {
+                    context.nextToken();
+                    keyMetadata.setKeyAgreementAlgorithms(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("MultiRegion", targetDepth)) {
                     context.nextToken();
                     keyMetadata.setMultiRegion(context.getUnmarshaller(Boolean.class).unmarshall(context));

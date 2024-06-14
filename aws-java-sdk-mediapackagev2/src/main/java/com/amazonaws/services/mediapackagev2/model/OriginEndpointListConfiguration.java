@@ -98,6 +98,12 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
      * </p>
      */
     private java.util.List<ListDashManifestConfiguration> dashManifests;
+    /**
+     * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     */
+    private ForceEndpointErrorConfiguration forceEndpointErrorConfiguration;
 
     /**
      * <p>
@@ -678,6 +684,46 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     * 
+     * @param forceEndpointErrorConfiguration
+     *        The failover settings for the endpoint.
+     */
+
+    public void setForceEndpointErrorConfiguration(ForceEndpointErrorConfiguration forceEndpointErrorConfiguration) {
+        this.forceEndpointErrorConfiguration = forceEndpointErrorConfiguration;
+    }
+
+    /**
+     * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     * 
+     * @return The failover settings for the endpoint.
+     */
+
+    public ForceEndpointErrorConfiguration getForceEndpointErrorConfiguration() {
+        return this.forceEndpointErrorConfiguration;
+    }
+
+    /**
+     * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     * 
+     * @param forceEndpointErrorConfiguration
+     *        The failover settings for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OriginEndpointListConfiguration withForceEndpointErrorConfiguration(ForceEndpointErrorConfiguration forceEndpointErrorConfiguration) {
+        setForceEndpointErrorConfiguration(forceEndpointErrorConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -710,7 +756,9 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
         if (getLowLatencyHlsManifests() != null)
             sb.append("LowLatencyHlsManifests: ").append(getLowLatencyHlsManifests()).append(",");
         if (getDashManifests() != null)
-            sb.append("DashManifests: ").append(getDashManifests());
+            sb.append("DashManifests: ").append(getDashManifests()).append(",");
+        if (getForceEndpointErrorConfiguration() != null)
+            sb.append("ForceEndpointErrorConfiguration: ").append(getForceEndpointErrorConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -769,6 +817,11 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
             return false;
         if (other.getDashManifests() != null && other.getDashManifests().equals(this.getDashManifests()) == false)
             return false;
+        if (other.getForceEndpointErrorConfiguration() == null ^ this.getForceEndpointErrorConfiguration() == null)
+            return false;
+        if (other.getForceEndpointErrorConfiguration() != null
+                && other.getForceEndpointErrorConfiguration().equals(this.getForceEndpointErrorConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -788,6 +841,7 @@ public class OriginEndpointListConfiguration implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getHlsManifests() == null) ? 0 : getHlsManifests().hashCode());
         hashCode = prime * hashCode + ((getLowLatencyHlsManifests() == null) ? 0 : getLowLatencyHlsManifests().hashCode());
         hashCode = prime * hashCode + ((getDashManifests() == null) ? 0 : getDashManifests().hashCode());
+        hashCode = prime * hashCode + ((getForceEndpointErrorConfiguration() == null) ? 0 : getForceEndpointErrorConfiguration().hashCode());
         return hashCode;
     }
 

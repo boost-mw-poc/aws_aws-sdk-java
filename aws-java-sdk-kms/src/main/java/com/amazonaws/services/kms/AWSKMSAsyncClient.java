@@ -721,6 +721,39 @@ public class AWSKMSAsyncClient extends AWSKMSClient implements AWSKMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<DeriveSharedSecretResult> deriveSharedSecretAsync(DeriveSharedSecretRequest request) {
+
+        return deriveSharedSecretAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeriveSharedSecretResult> deriveSharedSecretAsync(final DeriveSharedSecretRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeriveSharedSecretRequest, DeriveSharedSecretResult> asyncHandler) {
+        final DeriveSharedSecretRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeriveSharedSecretResult>() {
+            @Override
+            public DeriveSharedSecretResult call() throws Exception {
+                DeriveSharedSecretResult result = null;
+
+                try {
+                    result = executeDeriveSharedSecret(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeCustomKeyStoresResult> describeCustomKeyStoresAsync(DescribeCustomKeyStoresRequest request) {
 
         return describeCustomKeyStoresAsync(request, null);

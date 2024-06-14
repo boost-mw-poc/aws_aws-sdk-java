@@ -54,6 +54,8 @@ public class CreateOriginEndpointRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LowLatencyHlsManifests").build();
     private static final MarshallingInfo<List> DASHMANIFESTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DashManifests").build();
+    private static final MarshallingInfo<StructuredPojo> FORCEENDPOINTERRORCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ForceEndpointErrorConfiguration").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -84,6 +86,7 @@ public class CreateOriginEndpointRequestMarshaller {
             protocolMarshaller.marshall(createOriginEndpointRequest.getHlsManifests(), HLSMANIFESTS_BINDING);
             protocolMarshaller.marshall(createOriginEndpointRequest.getLowLatencyHlsManifests(), LOWLATENCYHLSMANIFESTS_BINDING);
             protocolMarshaller.marshall(createOriginEndpointRequest.getDashManifests(), DASHMANIFESTS_BINDING);
+            protocolMarshaller.marshall(createOriginEndpointRequest.getForceEndpointErrorConfiguration(), FORCEENDPOINTERRORCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createOriginEndpointRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

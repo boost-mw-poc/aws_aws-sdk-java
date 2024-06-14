@@ -31,6 +31,8 @@ public class DataQualityEvaluationRunAdditionalRunOptionsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchMetricsEnabled").build();
     private static final MarshallingInfo<String> RESULTSS3PREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResultsS3Prefix").build();
+    private static final MarshallingInfo<String> COMPOSITERULEEVALUATIONMETHOD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CompositeRuleEvaluationMethod").build();
 
     private static final DataQualityEvaluationRunAdditionalRunOptionsMarshaller instance = new DataQualityEvaluationRunAdditionalRunOptionsMarshaller();
 
@@ -50,6 +52,7 @@ public class DataQualityEvaluationRunAdditionalRunOptionsMarshaller {
         try {
             protocolMarshaller.marshall(dataQualityEvaluationRunAdditionalRunOptions.getCloudWatchMetricsEnabled(), CLOUDWATCHMETRICSENABLED_BINDING);
             protocolMarshaller.marshall(dataQualityEvaluationRunAdditionalRunOptions.getResultsS3Prefix(), RESULTSS3PREFIX_BINDING);
+            protocolMarshaller.marshall(dataQualityEvaluationRunAdditionalRunOptions.getCompositeRuleEvaluationMethod(), COMPOSITERULEEVALUATIONMETHOD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -101,6 +101,12 @@ public class UpdateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
     private java.util.List<GetLowLatencyHlsManifestConfiguration> lowLatencyHlsManifests;
     /**
      * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     */
+    private ForceEndpointErrorConfiguration forceEndpointErrorConfiguration;
+    /**
+     * <p>
      * The current Entity Tag (ETag) associated with this resource. The entity tag can be used to safely make concurrent
      * updates to the resource.
      * </p>
@@ -704,6 +710,46 @@ public class UpdateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     * 
+     * @param forceEndpointErrorConfiguration
+     *        The failover settings for the endpoint.
+     */
+
+    public void setForceEndpointErrorConfiguration(ForceEndpointErrorConfiguration forceEndpointErrorConfiguration) {
+        this.forceEndpointErrorConfiguration = forceEndpointErrorConfiguration;
+    }
+
+    /**
+     * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     * 
+     * @return The failover settings for the endpoint.
+     */
+
+    public ForceEndpointErrorConfiguration getForceEndpointErrorConfiguration() {
+        return this.forceEndpointErrorConfiguration;
+    }
+
+    /**
+     * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     * 
+     * @param forceEndpointErrorConfiguration
+     *        The failover settings for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateOriginEndpointResult withForceEndpointErrorConfiguration(ForceEndpointErrorConfiguration forceEndpointErrorConfiguration) {
+        setForceEndpointErrorConfiguration(forceEndpointErrorConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
      * The current Entity Tag (ETag) associated with this resource. The entity tag can be used to safely make concurrent
      * updates to the resource.
      * </p>
@@ -922,6 +968,8 @@ public class UpdateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
             sb.append("HlsManifests: ").append(getHlsManifests()).append(",");
         if (getLowLatencyHlsManifests() != null)
             sb.append("LowLatencyHlsManifests: ").append(getLowLatencyHlsManifests()).append(",");
+        if (getForceEndpointErrorConfiguration() != null)
+            sb.append("ForceEndpointErrorConfiguration: ").append(getForceEndpointErrorConfiguration()).append(",");
         if (getETag() != null)
             sb.append("ETag: ").append(getETag()).append(",");
         if (getTags() != null)
@@ -990,6 +1038,11 @@ public class UpdateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getLowLatencyHlsManifests() != null && other.getLowLatencyHlsManifests().equals(this.getLowLatencyHlsManifests()) == false)
             return false;
+        if (other.getForceEndpointErrorConfiguration() == null ^ this.getForceEndpointErrorConfiguration() == null)
+            return false;
+        if (other.getForceEndpointErrorConfiguration() != null
+                && other.getForceEndpointErrorConfiguration().equals(this.getForceEndpointErrorConfiguration()) == false)
+            return false;
         if (other.getETag() == null ^ this.getETag() == null)
             return false;
         if (other.getETag() != null && other.getETag().equals(this.getETag()) == false)
@@ -1022,6 +1075,7 @@ public class UpdateOriginEndpointResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getStartoverWindowSeconds() == null) ? 0 : getStartoverWindowSeconds().hashCode());
         hashCode = prime * hashCode + ((getHlsManifests() == null) ? 0 : getHlsManifests().hashCode());
         hashCode = prime * hashCode + ((getLowLatencyHlsManifests() == null) ? 0 : getLowLatencyHlsManifests().hashCode());
+        hashCode = prime * hashCode + ((getForceEndpointErrorConfiguration() == null) ? 0 : getForceEndpointErrorConfiguration().hashCode());
         hashCode = prime * hashCode + ((getETag() == null) ? 0 : getETag().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getDashManifests() == null) ? 0 : getDashManifests().hashCode());

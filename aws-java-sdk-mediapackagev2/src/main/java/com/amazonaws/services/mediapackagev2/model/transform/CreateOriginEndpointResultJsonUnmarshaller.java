@@ -109,6 +109,11 @@ public class CreateOriginEndpointResultJsonUnmarshaller implements Unmarshaller<
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ForceEndpointErrorConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createOriginEndpointResult.setForceEndpointErrorConfiguration(ForceEndpointErrorConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
                 if (context.testExpression("ETag", targetDepth)) {
                     context.nextToken();
                     createOriginEndpointResult.setETag(context.getUnmarshaller(String.class).unmarshall(context));

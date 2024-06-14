@@ -78,6 +78,10 @@ public class UpdateChannelResultJsonUnmarshaller implements Unmarshaller<UpdateC
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("InputType", targetDepth)) {
+                    context.nextToken();
+                    updateChannelResult.setInputType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ETag", targetDepth)) {
                     context.nextToken();
                     updateChannelResult.setETag(context.getUnmarshaller(String.class).unmarshall(context));

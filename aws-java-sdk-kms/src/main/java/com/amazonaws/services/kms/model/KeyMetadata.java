@@ -192,6 +192,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     private com.amazonaws.internal.SdkInternalList<String> signingAlgorithms;
     /**
      * <p>
+     * The key agreement algorithm used to derive a shared secret.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> keyAgreementAlgorithms;
+    /**
+     * <p>
      * Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This
      * value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for regional KMS
      * keys.
@@ -1752,6 +1758,108 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The key agreement algorithm used to derive a shared secret.
+     * </p>
+     * 
+     * @return The key agreement algorithm used to derive a shared secret.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public java.util.List<String> getKeyAgreementAlgorithms() {
+        if (keyAgreementAlgorithms == null) {
+            keyAgreementAlgorithms = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return keyAgreementAlgorithms;
+    }
+
+    /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret.
+     * </p>
+     * 
+     * @param keyAgreementAlgorithms
+     *        The key agreement algorithm used to derive a shared secret.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public void setKeyAgreementAlgorithms(java.util.Collection<String> keyAgreementAlgorithms) {
+        if (keyAgreementAlgorithms == null) {
+            this.keyAgreementAlgorithms = null;
+            return;
+        }
+
+        this.keyAgreementAlgorithms = new com.amazonaws.internal.SdkInternalList<String>(keyAgreementAlgorithms);
+    }
+
+    /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setKeyAgreementAlgorithms(java.util.Collection)} or
+     * {@link #withKeyAgreementAlgorithms(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param keyAgreementAlgorithms
+     *        The key agreement algorithm used to derive a shared secret.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public KeyMetadata withKeyAgreementAlgorithms(String... keyAgreementAlgorithms) {
+        if (this.keyAgreementAlgorithms == null) {
+            setKeyAgreementAlgorithms(new com.amazonaws.internal.SdkInternalList<String>(keyAgreementAlgorithms.length));
+        }
+        for (String ele : keyAgreementAlgorithms) {
+            this.keyAgreementAlgorithms.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret.
+     * </p>
+     * 
+     * @param keyAgreementAlgorithms
+     *        The key agreement algorithm used to derive a shared secret.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public KeyMetadata withKeyAgreementAlgorithms(java.util.Collection<String> keyAgreementAlgorithms) {
+        setKeyAgreementAlgorithms(keyAgreementAlgorithms);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret.
+     * </p>
+     * 
+     * @param keyAgreementAlgorithms
+     *        The key agreement algorithm used to derive a shared secret.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public KeyMetadata withKeyAgreementAlgorithms(KeyAgreementAlgorithmSpec... keyAgreementAlgorithms) {
+        com.amazonaws.internal.SdkInternalList<String> keyAgreementAlgorithmsCopy = new com.amazonaws.internal.SdkInternalList<String>(
+                keyAgreementAlgorithms.length);
+        for (KeyAgreementAlgorithmSpec value : keyAgreementAlgorithms) {
+            keyAgreementAlgorithmsCopy.add(value.toString());
+        }
+        if (getKeyAgreementAlgorithms() == null) {
+            setKeyAgreementAlgorithms(keyAgreementAlgorithmsCopy);
+        } else {
+            getKeyAgreementAlgorithms().addAll(keyAgreementAlgorithmsCopy);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
      * Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This
      * value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for regional KMS
      * keys.
@@ -2386,6 +2494,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
             sb.append("EncryptionAlgorithms: ").append(getEncryptionAlgorithms()).append(",");
         if (getSigningAlgorithms() != null)
             sb.append("SigningAlgorithms: ").append(getSigningAlgorithms()).append(",");
+        if (getKeyAgreementAlgorithms() != null)
+            sb.append("KeyAgreementAlgorithms: ").append(getKeyAgreementAlgorithms()).append(",");
         if (getMultiRegion() != null)
             sb.append("MultiRegion: ").append(getMultiRegion()).append(",");
         if (getMultiRegionConfiguration() != null)
@@ -2486,6 +2596,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSigningAlgorithms() != null && other.getSigningAlgorithms().equals(this.getSigningAlgorithms()) == false)
             return false;
+        if (other.getKeyAgreementAlgorithms() == null ^ this.getKeyAgreementAlgorithms() == null)
+            return false;
+        if (other.getKeyAgreementAlgorithms() != null && other.getKeyAgreementAlgorithms().equals(this.getKeyAgreementAlgorithms()) == false)
+            return false;
         if (other.getMultiRegion() == null ^ this.getMultiRegion() == null)
             return false;
         if (other.getMultiRegion() != null && other.getMultiRegion().equals(this.getMultiRegion()) == false)
@@ -2533,6 +2647,7 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getKeySpec() == null) ? 0 : getKeySpec().hashCode());
         hashCode = prime * hashCode + ((getEncryptionAlgorithms() == null) ? 0 : getEncryptionAlgorithms().hashCode());
         hashCode = prime * hashCode + ((getSigningAlgorithms() == null) ? 0 : getSigningAlgorithms().hashCode());
+        hashCode = prime * hashCode + ((getKeyAgreementAlgorithms() == null) ? 0 : getKeyAgreementAlgorithms().hashCode());
         hashCode = prime * hashCode + ((getMultiRegion() == null) ? 0 : getMultiRegion().hashCode());
         hashCode = prime * hashCode + ((getMultiRegionConfiguration() == null) ? 0 : getMultiRegionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPendingDeletionWindowInDays() == null) ? 0 : getPendingDeletionWindowInDays().hashCode());

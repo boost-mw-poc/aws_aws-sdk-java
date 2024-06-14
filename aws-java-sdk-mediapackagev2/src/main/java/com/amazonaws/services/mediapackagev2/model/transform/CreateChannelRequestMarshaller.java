@@ -38,6 +38,8 @@ public class CreateChannelRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.HEADER).marshallLocationName("x-amzn-client-token")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<String> INPUTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("InputType").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -62,6 +64,7 @@ public class CreateChannelRequestMarshaller {
             protocolMarshaller.marshall(createChannelRequest.getChannelGroupName(), CHANNELGROUPNAME_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getChannelName(), CHANNELNAME_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getInputType(), INPUTTYPE_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {

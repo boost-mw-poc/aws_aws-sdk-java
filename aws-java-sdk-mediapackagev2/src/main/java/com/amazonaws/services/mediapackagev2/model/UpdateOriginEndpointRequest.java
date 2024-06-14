@@ -93,6 +93,12 @@ public class UpdateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
     private java.util.List<CreateDashManifestConfiguration> dashManifests;
     /**
      * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     */
+    private ForceEndpointErrorConfiguration forceEndpointErrorConfiguration;
+    /**
+     * <p>
      * The expected current Entity Tag (ETag) for the resource. If the specified ETag does not match the resource's
      * current entity tag, the update request will be rejected.
      * </p>
@@ -651,6 +657,46 @@ public class UpdateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     * 
+     * @param forceEndpointErrorConfiguration
+     *        The failover settings for the endpoint.
+     */
+
+    public void setForceEndpointErrorConfiguration(ForceEndpointErrorConfiguration forceEndpointErrorConfiguration) {
+        this.forceEndpointErrorConfiguration = forceEndpointErrorConfiguration;
+    }
+
+    /**
+     * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     * 
+     * @return The failover settings for the endpoint.
+     */
+
+    public ForceEndpointErrorConfiguration getForceEndpointErrorConfiguration() {
+        return this.forceEndpointErrorConfiguration;
+    }
+
+    /**
+     * <p>
+     * The failover settings for the endpoint.
+     * </p>
+     * 
+     * @param forceEndpointErrorConfiguration
+     *        The failover settings for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateOriginEndpointRequest withForceEndpointErrorConfiguration(ForceEndpointErrorConfiguration forceEndpointErrorConfiguration) {
+        setForceEndpointErrorConfiguration(forceEndpointErrorConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
      * The expected current Entity Tag (ETag) for the resource. If the specified ETag does not match the resource's
      * current entity tag, the update request will be rejected.
      * </p>
@@ -727,6 +773,8 @@ public class UpdateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
             sb.append("LowLatencyHlsManifests: ").append(getLowLatencyHlsManifests()).append(",");
         if (getDashManifests() != null)
             sb.append("DashManifests: ").append(getDashManifests()).append(",");
+        if (getForceEndpointErrorConfiguration() != null)
+            sb.append("ForceEndpointErrorConfiguration: ").append(getForceEndpointErrorConfiguration()).append(",");
         if (getETag() != null)
             sb.append("ETag: ").append(getETag());
         sb.append("}");
@@ -783,6 +831,11 @@ public class UpdateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getDashManifests() != null && other.getDashManifests().equals(this.getDashManifests()) == false)
             return false;
+        if (other.getForceEndpointErrorConfiguration() == null ^ this.getForceEndpointErrorConfiguration() == null)
+            return false;
+        if (other.getForceEndpointErrorConfiguration() != null
+                && other.getForceEndpointErrorConfiguration().equals(this.getForceEndpointErrorConfiguration()) == false)
+            return false;
         if (other.getETag() == null ^ this.getETag() == null)
             return false;
         if (other.getETag() != null && other.getETag().equals(this.getETag()) == false)
@@ -805,6 +858,7 @@ public class UpdateOriginEndpointRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getHlsManifests() == null) ? 0 : getHlsManifests().hashCode());
         hashCode = prime * hashCode + ((getLowLatencyHlsManifests() == null) ? 0 : getLowLatencyHlsManifests().hashCode());
         hashCode = prime * hashCode + ((getDashManifests() == null) ? 0 : getDashManifests().hashCode());
+        hashCode = prime * hashCode + ((getForceEndpointErrorConfiguration() == null) ? 0 : getForceEndpointErrorConfiguration().hashCode());
         hashCode = prime * hashCode + ((getETag() == null) ? 0 : getETag().hashCode());
         return hashCode;
     }

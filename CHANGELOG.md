@@ -1,3 +1,24 @@
+# __1.12.743__ __2024-06-13__
+## __AWS CloudHSM V2__
+  - ### Features
+    - Added support for hsm type hsm2m.medium. Added supported for creating a cluster in FIPS or NON_FIPS mode.
+
+## __AWS Elemental MediaPackage v2__
+  - ### Features
+    - This release adds support for CMAF ingest (DASH-IF live media ingest protocol interface 1)
+
+## __AWS Glue__
+  - ### Features
+    - This release adds support for configuration of evaluation method for composite rules in Glue Data Quality rulesets.
+
+## __AWS IoT Wireless__
+  - ### Features
+    - Add RoamingDeviceSNR and RoamingDeviceRSSI to Customer Metrics.
+
+## __AWS Key Management Service__
+  - ### Features
+    - This feature allows customers to use their keys stored in KMS to derive a shared secret which can then be used to establish a secured channel for communication, provide proof of possession, or establish trust with other parties.
+
 # __1.12.742__ __2024-06-12__
 ## __AWS Mainframe Modernization Application Testing__
   - ### Features

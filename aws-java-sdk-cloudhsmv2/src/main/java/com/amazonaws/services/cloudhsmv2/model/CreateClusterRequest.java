@@ -33,7 +33,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private BackupRetentionPolicy backupRetentionPolicy;
     /**
      * <p>
-     * The type of HSM to use in the cluster. Currently the only allowed value is <code>hsm1.medium</code>.
+     * The type of HSM to use in the cluster. The allowed values are <code>hsm1.medium</code> and
+     * <code>hsm2m.medium</code>.
      * </p>
      */
     private String hsmType;
@@ -69,6 +70,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private java.util.List<Tag> tagList;
+    /**
+     * <p>
+     * The mode to use in the cluster. The allowed values are <code>FIPS</code> and <code>NON_FIPS</code>.
+     * </p>
+     */
+    private String mode;
 
     /**
      * <p>
@@ -112,11 +119,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of HSM to use in the cluster. Currently the only allowed value is <code>hsm1.medium</code>.
+     * The type of HSM to use in the cluster. The allowed values are <code>hsm1.medium</code> and
+     * <code>hsm2m.medium</code>.
      * </p>
      * 
      * @param hsmType
-     *        The type of HSM to use in the cluster. Currently the only allowed value is <code>hsm1.medium</code>.
+     *        The type of HSM to use in the cluster. The allowed values are <code>hsm1.medium</code> and
+     *        <code>hsm2m.medium</code>.
      */
 
     public void setHsmType(String hsmType) {
@@ -125,10 +134,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of HSM to use in the cluster. Currently the only allowed value is <code>hsm1.medium</code>.
+     * The type of HSM to use in the cluster. The allowed values are <code>hsm1.medium</code> and
+     * <code>hsm2m.medium</code>.
      * </p>
      * 
-     * @return The type of HSM to use in the cluster. Currently the only allowed value is <code>hsm1.medium</code>.
+     * @return The type of HSM to use in the cluster. The allowed values are <code>hsm1.medium</code> and
+     *         <code>hsm2m.medium</code>.
      */
 
     public String getHsmType() {
@@ -137,11 +148,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of HSM to use in the cluster. Currently the only allowed value is <code>hsm1.medium</code>.
+     * The type of HSM to use in the cluster. The allowed values are <code>hsm1.medium</code> and
+     * <code>hsm2m.medium</code>.
      * </p>
      * 
      * @param hsmType
-     *        The type of HSM to use in the cluster. Currently the only allowed value is <code>hsm1.medium</code>.
+     *        The type of HSM to use in the cluster. The allowed values are <code>hsm1.medium</code> and
+     *        <code>hsm2m.medium</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -437,6 +450,65 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The mode to use in the cluster. The allowed values are <code>FIPS</code> and <code>NON_FIPS</code>.
+     * </p>
+     * 
+     * @param mode
+     *        The mode to use in the cluster. The allowed values are <code>FIPS</code> and <code>NON_FIPS</code>.
+     * @see ClusterMode
+     */
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
+     * <p>
+     * The mode to use in the cluster. The allowed values are <code>FIPS</code> and <code>NON_FIPS</code>.
+     * </p>
+     * 
+     * @return The mode to use in the cluster. The allowed values are <code>FIPS</code> and <code>NON_FIPS</code>.
+     * @see ClusterMode
+     */
+
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
+     * <p>
+     * The mode to use in the cluster. The allowed values are <code>FIPS</code> and <code>NON_FIPS</code>.
+     * </p>
+     * 
+     * @param mode
+     *        The mode to use in the cluster. The allowed values are <code>FIPS</code> and <code>NON_FIPS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ClusterMode
+     */
+
+    public CreateClusterRequest withMode(String mode) {
+        setMode(mode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The mode to use in the cluster. The allowed values are <code>FIPS</code> and <code>NON_FIPS</code>.
+     * </p>
+     * 
+     * @param mode
+     *        The mode to use in the cluster. The allowed values are <code>FIPS</code> and <code>NON_FIPS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ClusterMode
+     */
+
+    public CreateClusterRequest withMode(ClusterMode mode) {
+        this.mode = mode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -457,7 +529,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getSubnetIds() != null)
             sb.append("SubnetIds: ").append(getSubnetIds()).append(",");
         if (getTagList() != null)
-            sb.append("TagList: ").append(getTagList());
+            sb.append("TagList: ").append(getTagList()).append(",");
+        if (getMode() != null)
+            sb.append("Mode: ").append(getMode());
         sb.append("}");
         return sb.toString();
     }
@@ -492,6 +566,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getTagList() != null && other.getTagList().equals(this.getTagList()) == false)
             return false;
+        if (other.getMode() == null ^ this.getMode() == null)
+            return false;
+        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
+            return false;
         return true;
     }
 
@@ -505,6 +583,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getSourceBackupId() == null) ? 0 : getSourceBackupId().hashCode());
         hashCode = prime * hashCode + ((getSubnetIds() == null) ? 0 : getSubnetIds().hashCode());
         hashCode = prime * hashCode + ((getTagList() == null) ? 0 : getTagList().hashCode());
+        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         return hashCode;
     }
 

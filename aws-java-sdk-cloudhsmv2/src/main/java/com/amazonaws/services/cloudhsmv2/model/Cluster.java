@@ -119,6 +119,12 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<Tag> tagList;
+    /**
+     * <p>
+     * The mode of the cluster.
+     * </p>
+     */
+    private String mode;
 
     /**
      * <p>
@@ -853,6 +859,65 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The mode of the cluster.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the cluster.
+     * @see ClusterMode
+     */
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the cluster.
+     * </p>
+     * 
+     * @return The mode of the cluster.
+     * @see ClusterMode
+     */
+
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the cluster.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ClusterMode
+     */
+
+    public Cluster withMode(String mode) {
+        setMode(mode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The mode of the cluster.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ClusterMode
+     */
+
+    public Cluster withMode(ClusterMode mode) {
+        this.mode = mode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -893,7 +958,9 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
         if (getCertificates() != null)
             sb.append("Certificates: ").append(getCertificates()).append(",");
         if (getTagList() != null)
-            sb.append("TagList: ").append(getTagList());
+            sb.append("TagList: ").append(getTagList()).append(",");
+        if (getMode() != null)
+            sb.append("Mode: ").append(getMode());
         sb.append("}");
         return sb.toString();
     }
@@ -968,6 +1035,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTagList() != null && other.getTagList().equals(this.getTagList()) == false)
             return false;
+        if (other.getMode() == null ^ this.getMode() == null)
+            return false;
+        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
+            return false;
         return true;
     }
 
@@ -991,6 +1062,7 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
         hashCode = prime * hashCode + ((getCertificates() == null) ? 0 : getCertificates().hashCode());
         hashCode = prime * hashCode + ((getTagList() == null) ? 0 : getTagList().hashCode());
+        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         return hashCode;
     }
 

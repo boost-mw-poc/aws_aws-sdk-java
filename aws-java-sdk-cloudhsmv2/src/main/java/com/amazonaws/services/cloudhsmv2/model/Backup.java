@@ -100,6 +100,18 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<Tag> tagList;
+    /**
+     * <p>
+     * The HSM type of the cluster that was backed up.
+     * </p>
+     */
+    private String hsmType;
+    /**
+     * <p>
+     * The mode of the cluster that was backed up.
+     * </p>
+     */
+    private String mode;
 
     /**
      * <p>
@@ -619,6 +631,105 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The HSM type of the cluster that was backed up.
+     * </p>
+     * 
+     * @param hsmType
+     *        The HSM type of the cluster that was backed up.
+     */
+
+    public void setHsmType(String hsmType) {
+        this.hsmType = hsmType;
+    }
+
+    /**
+     * <p>
+     * The HSM type of the cluster that was backed up.
+     * </p>
+     * 
+     * @return The HSM type of the cluster that was backed up.
+     */
+
+    public String getHsmType() {
+        return this.hsmType;
+    }
+
+    /**
+     * <p>
+     * The HSM type of the cluster that was backed up.
+     * </p>
+     * 
+     * @param hsmType
+     *        The HSM type of the cluster that was backed up.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Backup withHsmType(String hsmType) {
+        setHsmType(hsmType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The mode of the cluster that was backed up.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the cluster that was backed up.
+     * @see ClusterMode
+     */
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the cluster that was backed up.
+     * </p>
+     * 
+     * @return The mode of the cluster that was backed up.
+     * @see ClusterMode
+     */
+
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
+     * <p>
+     * The mode of the cluster that was backed up.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the cluster that was backed up.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ClusterMode
+     */
+
+    public Backup withMode(String mode) {
+        setMode(mode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The mode of the cluster that was backed up.
+     * </p>
+     * 
+     * @param mode
+     *        The mode of the cluster that was backed up.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ClusterMode
+     */
+
+    public Backup withMode(ClusterMode mode) {
+        this.mode = mode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -651,7 +762,11 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
         if (getDeleteTimestamp() != null)
             sb.append("DeleteTimestamp: ").append(getDeleteTimestamp()).append(",");
         if (getTagList() != null)
-            sb.append("TagList: ").append(getTagList());
+            sb.append("TagList: ").append(getTagList()).append(",");
+        if (getHsmType() != null)
+            sb.append("HsmType: ").append(getHsmType()).append(",");
+        if (getMode() != null)
+            sb.append("Mode: ").append(getMode());
         sb.append("}");
         return sb.toString();
     }
@@ -710,6 +825,14 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTagList() != null && other.getTagList().equals(this.getTagList()) == false)
             return false;
+        if (other.getHsmType() == null ^ this.getHsmType() == null)
+            return false;
+        if (other.getHsmType() != null && other.getHsmType().equals(this.getHsmType()) == false)
+            return false;
+        if (other.getMode() == null ^ this.getMode() == null)
+            return false;
+        if (other.getMode() != null && other.getMode().equals(this.getMode()) == false)
+            return false;
         return true;
     }
 
@@ -729,6 +852,8 @@ public class Backup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSourceCluster() == null) ? 0 : getSourceCluster().hashCode());
         hashCode = prime * hashCode + ((getDeleteTimestamp() == null) ? 0 : getDeleteTimestamp().hashCode());
         hashCode = prime * hashCode + ((getTagList() == null) ? 0 : getTagList().hashCode());
+        hashCode = prime * hashCode + ((getHsmType() == null) ? 0 : getHsmType().hashCode());
+        hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         return hashCode;
     }
 

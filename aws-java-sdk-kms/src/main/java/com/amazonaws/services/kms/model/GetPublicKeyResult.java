@@ -62,11 +62,12 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
     private String keySpec;
     /**
      * <p>
-     * The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * The permitted use of the public key. Valid values for asymmetric key pairs are <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, and <code>KEY_AGREEMENT</code>.
      * </p>
      * <p>
-     * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * KMS, the ciphertext cannot be decrypted.
+     * This information is critical. For example, if a public key with <code>SIGN_VERIFY</code> key usage encrypts data
+     * outside of KMS, the ciphertext cannot be decrypted.
      * </p>
      */
     private String keyUsage;
@@ -94,6 +95,13 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> signingAlgorithms;
+    /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key has a
+     * <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> keyAgreementAlgorithms;
 
     /**
      * <p>
@@ -399,19 +407,20 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * The permitted use of the public key. Valid values for asymmetric key pairs are <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, and <code>KEY_AGREEMENT</code>.
      * </p>
      * <p>
-     * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * KMS, the ciphertext cannot be decrypted.
+     * This information is critical. For example, if a public key with <code>SIGN_VERIFY</code> key usage encrypts data
+     * outside of KMS, the ciphertext cannot be decrypted.
      * </p>
      * 
      * @param keyUsage
-     *        The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or
-     *        <code>SIGN_VERIFY</code>. </p>
+     *        The permitted use of the public key. Valid values for asymmetric key pairs are
+     *        <code>ENCRYPT_DECRYPT</code>, <code>SIGN_VERIFY</code>, and <code>KEY_AGREEMENT</code>. </p>
      *        <p>
-     *        This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data
-     *        outside of KMS, the ciphertext cannot be decrypted.
+     *        This information is critical. For example, if a public key with <code>SIGN_VERIFY</code> key usage
+     *        encrypts data outside of KMS, the ciphertext cannot be decrypted.
      * @see KeyUsageType
      */
 
@@ -421,18 +430,19 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * The permitted use of the public key. Valid values for asymmetric key pairs are <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, and <code>KEY_AGREEMENT</code>.
      * </p>
      * <p>
-     * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * KMS, the ciphertext cannot be decrypted.
+     * This information is critical. For example, if a public key with <code>SIGN_VERIFY</code> key usage encrypts data
+     * outside of KMS, the ciphertext cannot be decrypted.
      * </p>
      * 
-     * @return The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or
-     *         <code>SIGN_VERIFY</code>. </p>
+     * @return The permitted use of the public key. Valid values for asymmetric key pairs are
+     *         <code>ENCRYPT_DECRYPT</code>, <code>SIGN_VERIFY</code>, and <code>KEY_AGREEMENT</code>. </p>
      *         <p>
-     *         This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data
-     *         outside of KMS, the ciphertext cannot be decrypted.
+     *         This information is critical. For example, if a public key with <code>SIGN_VERIFY</code> key usage
+     *         encrypts data outside of KMS, the ciphertext cannot be decrypted.
      * @see KeyUsageType
      */
 
@@ -442,19 +452,20 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * The permitted use of the public key. Valid values for asymmetric key pairs are <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, and <code>KEY_AGREEMENT</code>.
      * </p>
      * <p>
-     * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * KMS, the ciphertext cannot be decrypted.
+     * This information is critical. For example, if a public key with <code>SIGN_VERIFY</code> key usage encrypts data
+     * outside of KMS, the ciphertext cannot be decrypted.
      * </p>
      * 
      * @param keyUsage
-     *        The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or
-     *        <code>SIGN_VERIFY</code>. </p>
+     *        The permitted use of the public key. Valid values for asymmetric key pairs are
+     *        <code>ENCRYPT_DECRYPT</code>, <code>SIGN_VERIFY</code>, and <code>KEY_AGREEMENT</code>. </p>
      *        <p>
-     *        This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data
-     *        outside of KMS, the ciphertext cannot be decrypted.
+     *        This information is critical. For example, if a public key with <code>SIGN_VERIFY</code> key usage
+     *        encrypts data outside of KMS, the ciphertext cannot be decrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyUsageType
      */
@@ -466,19 +477,20 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
+     * The permitted use of the public key. Valid values for asymmetric key pairs are <code>ENCRYPT_DECRYPT</code>,
+     * <code>SIGN_VERIFY</code>, and <code>KEY_AGREEMENT</code>.
      * </p>
      * <p>
-     * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * KMS, the ciphertext cannot be decrypted.
+     * This information is critical. For example, if a public key with <code>SIGN_VERIFY</code> key usage encrypts data
+     * outside of KMS, the ciphertext cannot be decrypted.
      * </p>
      * 
      * @param keyUsage
-     *        The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or
-     *        <code>SIGN_VERIFY</code>. </p>
+     *        The permitted use of the public key. Valid values for asymmetric key pairs are
+     *        <code>ENCRYPT_DECRYPT</code>, <code>SIGN_VERIFY</code>, and <code>KEY_AGREEMENT</code>. </p>
      *        <p>
-     *        This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data
-     *        outside of KMS, the ciphertext cannot be decrypted.
+     *        This information is critical. For example, if a public key with <code>SIGN_VERIFY</code> key usage
+     *        encrypts data outside of KMS, the ciphertext cannot be decrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyUsageType
      */
@@ -802,6 +814,118 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key has a
+     * <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * </p>
+     * 
+     * @return The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key
+     *         has a <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public java.util.List<String> getKeyAgreementAlgorithms() {
+        if (keyAgreementAlgorithms == null) {
+            keyAgreementAlgorithms = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return keyAgreementAlgorithms;
+    }
+
+    /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key has a
+     * <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * </p>
+     * 
+     * @param keyAgreementAlgorithms
+     *        The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key
+     *        has a <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public void setKeyAgreementAlgorithms(java.util.Collection<String> keyAgreementAlgorithms) {
+        if (keyAgreementAlgorithms == null) {
+            this.keyAgreementAlgorithms = null;
+            return;
+        }
+
+        this.keyAgreementAlgorithms = new com.amazonaws.internal.SdkInternalList<String>(keyAgreementAlgorithms);
+    }
+
+    /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key has a
+     * <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setKeyAgreementAlgorithms(java.util.Collection)} or
+     * {@link #withKeyAgreementAlgorithms(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param keyAgreementAlgorithms
+     *        The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key
+     *        has a <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public GetPublicKeyResult withKeyAgreementAlgorithms(String... keyAgreementAlgorithms) {
+        if (this.keyAgreementAlgorithms == null) {
+            setKeyAgreementAlgorithms(new com.amazonaws.internal.SdkInternalList<String>(keyAgreementAlgorithms.length));
+        }
+        for (String ele : keyAgreementAlgorithms) {
+            this.keyAgreementAlgorithms.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key has a
+     * <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * </p>
+     * 
+     * @param keyAgreementAlgorithms
+     *        The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key
+     *        has a <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public GetPublicKeyResult withKeyAgreementAlgorithms(java.util.Collection<String> keyAgreementAlgorithms) {
+        setKeyAgreementAlgorithms(keyAgreementAlgorithms);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key has a
+     * <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * </p>
+     * 
+     * @param keyAgreementAlgorithms
+     *        The key agreement algorithm used to derive a shared secret. This field is present only when the KMS key
+     *        has a <code>KeyUsage</code> value of <code>KEY_AGREEMENT</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyAgreementAlgorithmSpec
+     */
+
+    public GetPublicKeyResult withKeyAgreementAlgorithms(KeyAgreementAlgorithmSpec... keyAgreementAlgorithms) {
+        com.amazonaws.internal.SdkInternalList<String> keyAgreementAlgorithmsCopy = new com.amazonaws.internal.SdkInternalList<String>(
+                keyAgreementAlgorithms.length);
+        for (KeyAgreementAlgorithmSpec value : keyAgreementAlgorithms) {
+            keyAgreementAlgorithmsCopy.add(value.toString());
+        }
+        if (getKeyAgreementAlgorithms() == null) {
+            setKeyAgreementAlgorithms(keyAgreementAlgorithmsCopy);
+        } else {
+            getKeyAgreementAlgorithms().addAll(keyAgreementAlgorithmsCopy);
+        }
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -826,7 +950,9 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
         if (getEncryptionAlgorithms() != null)
             sb.append("EncryptionAlgorithms: ").append(getEncryptionAlgorithms()).append(",");
         if (getSigningAlgorithms() != null)
-            sb.append("SigningAlgorithms: ").append(getSigningAlgorithms());
+            sb.append("SigningAlgorithms: ").append(getSigningAlgorithms()).append(",");
+        if (getKeyAgreementAlgorithms() != null)
+            sb.append("KeyAgreementAlgorithms: ").append(getKeyAgreementAlgorithms());
         sb.append("}");
         return sb.toString();
     }
@@ -869,6 +995,10 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getSigningAlgorithms() != null && other.getSigningAlgorithms().equals(this.getSigningAlgorithms()) == false)
             return false;
+        if (other.getKeyAgreementAlgorithms() == null ^ this.getKeyAgreementAlgorithms() == null)
+            return false;
+        if (other.getKeyAgreementAlgorithms() != null && other.getKeyAgreementAlgorithms().equals(this.getKeyAgreementAlgorithms()) == false)
+            return false;
         return true;
     }
 
@@ -884,6 +1014,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getKeyUsage() == null) ? 0 : getKeyUsage().hashCode());
         hashCode = prime * hashCode + ((getEncryptionAlgorithms() == null) ? 0 : getEncryptionAlgorithms().hashCode());
         hashCode = prime * hashCode + ((getSigningAlgorithms() == null) ? 0 : getSigningAlgorithms().hashCode());
+        hashCode = prime * hashCode + ((getKeyAgreementAlgorithms() == null) ? 0 : getKeyAgreementAlgorithms().hashCode());
         return hashCode;
     }
 

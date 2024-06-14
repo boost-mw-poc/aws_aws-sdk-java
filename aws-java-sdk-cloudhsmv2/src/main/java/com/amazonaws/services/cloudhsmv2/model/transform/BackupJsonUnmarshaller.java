@@ -94,6 +94,14 @@ public class BackupJsonUnmarshaller implements Unmarshaller<Backup, JsonUnmarsha
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("HsmType", targetDepth)) {
+                    context.nextToken();
+                    backup.setHsmType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Mode", targetDepth)) {
+                    context.nextToken();
+                    backup.setMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
