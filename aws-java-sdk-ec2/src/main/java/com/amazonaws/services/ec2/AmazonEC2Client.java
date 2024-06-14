@@ -296,7 +296,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Accepts an Elastic IP address transfer. For more information, see <a href=
      * "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#using-instance-addressing-eips-transfer-accept"
-     * >Accept a transferred Elastic IP address</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * >Accept a transferred Elastic IP address</a> in the <i>Amazon VPC User Guide</i>.
      * </p>
      * 
      * @param acceptAddressTransferRequest
@@ -799,7 +799,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * created from a public IPv4 address range that you have brought to Amazon Web Services for use with your Amazon
      * Web Services resources using bring your own IP addresses (BYOIP). For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">Bring Your Own IP Addresses (BYOIP)</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you release an Elastic IP address, you might be able to recover it. You cannot recover an Elastic IP address
@@ -809,7 +809,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * You can allocate a carrier IP address which is a public IP address from a telecommunication carrier, to a network
@@ -1061,9 +1061,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Assigns one or more IPv6 addresses to the specified network interface. You can specify one or more specific IPv6
      * addresses, or you can specify the number of IPv6 addresses to be automatically assigned from within the subnet's
      * IPv6 CIDR block range. You can assign as many IPv6 addresses to a network interface as you can assign private
-     * IPv4 addresses, and the limit varies per instance type. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI">IP Addresses Per
-     * Network Interface Per Instance Type</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * IPv4 addresses, and the limit varies per instance type.
      * </p>
      * <p>
      * You must specify either the IPv6 addresses or the IPv6 address count in the request.
@@ -1071,8 +1069,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * You can optionally use Prefix Delegation on the network interface. You must specify either the IPV6 Prefix
      * Delegation prefixes, or the IPv6 Prefix Delegation count. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
-     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to network
+     * interfaces</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param assignIpv6AddressesRequest
@@ -1133,11 +1131,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * You can specify one or more specific secondary IP addresses, or you can specify the number of secondary IP
      * addresses to be automatically assigned within the subnet's CIDR block range. The number of secondary IP addresses
-     * that you can assign to an instance varies by instance type. For information about instance types, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>. For more information about Elastic IP addresses, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * that you can assign to an instance varies by instance type. For more information about Elastic IP addresses, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP
+     * Addresses</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * When you move a secondary private IP address to another network interface, any Elastic IP address that is
@@ -1154,8 +1150,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * You can optionally use Prefix Delegation on the network interface. You must specify either the IPv4 Prefix
      * Delegation prefixes, or the IPv4 Prefix Delegation count. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
-     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to network
+     * interfaces</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param assignPrivateIpAddressesRequest
@@ -1212,7 +1208,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Assigns one or more private IPv4 addresses to a private NAT gateway. For more information, see <a
+     * Assigns private IPv4 addresses to a private NAT gateway. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-working-with">Work with
      * NAT gateways</a> in the <i>Amazon VPC User Guide</i>.
      * </p>
@@ -1424,7 +1420,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP
-     * options sets</a> in the <i>Amazon VPC User Guide</i>.
+     * option sets</a> in the <i>Amazon VPC User Guide</i>.
      * </p>
      * 
      * @param associateDhcpOptionsRequest
@@ -2174,11 +2170,10 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Associates a branch network interface with a trunk network interface.
      * </p>
      * <p>
-     * Before you create the association, run the <a
+     * Before you create the association, use <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html"
-     * >create-network-interface</a> command and set <code>--interface-type</code> to <code>trunk</code>. You must also
-     * create a network interface for each branch network interface that you want to associate with the trunk network
-     * interface.
+     * >CreateNetworkInterface</a> command and set the interface type to <code>trunk</code>. You must also create a
+     * network interface for each branch network interface that you want to associate with the trunk network interface.
      * </p>
      * 
      * @param associateTrunkInterfaceRequest
@@ -3432,7 +3427,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved Instance
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Sell in the Reserved Instance
      * Marketplace</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
@@ -3830,9 +3825,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * When copying snapshots to a Region, copies of encrypted EBS snapshots remain encrypted. Copies of unencrypted
      * snapshots remain unencrypted, unless you enable encryption for the snapshot copy operation. By default, encrypted
-     * snapshot copies use the default Key Management Service (KMS) KMS key; however, you can specify a different KMS
-     * key. To copy an encrypted snapshot that has been shared from another account, you must have permissions for the
-     * KMS key used to encrypt the snapshot.
+     * snapshot copies use the default KMS key; however, you can specify a different KMS key. To copy an encrypted
+     * snapshot that has been shared from another account, you must have permissions for the KMS key used to encrypt the
+     * snapshot.
      * </p>
      * <p>
      * Snapshots copied to an Outpost are encrypted by default using the default encryption key for the Region, or a
@@ -3982,7 +3977,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Creates a Capacity Reservation Fleet. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/work-with-cr-fleets.html#create-crfleet">Create a
-     * Capacity Reservation Fleet</a> in the Amazon EC2 User Guide.
+     * Capacity Reservation Fleet</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param createCapacityReservationFleetRequest
@@ -4523,7 +4518,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * The following are the individual DHCP options you can specify. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP options sets</a> in the
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP option sets</a> in the
      * <i>Amazon VPC User Guide</i>.
      * </p>
      * <ul>
@@ -4564,7 +4559,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * <code>netbios-node-type</code> - The NetBIOS node type (1, 2, 4, or 8). We recommend that you specify 2.
      * Broadcast and multicast are not supported. For more information about NetBIOS node types, see <a
-     * href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.
+     * href="https://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.
      * </p>
      * </li>
      * <li>
@@ -4761,7 +4756,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Flow log data for a monitored network interface is recorded as flow log records, which are log events consisting
      * of fields that describe the traffic flow. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html#flow-log-records">Flow log records</a> in
-     * the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * the <i>Amazon VPC User Guide</i>.
      * </p>
      * <p>
      * When publishing to CloudWatch Logs, flow log records are published to a log group, and each network interface has
@@ -4770,7 +4765,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html">VPC Flow
-     * Logs</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * Logs</a> in the <i>Amazon VPC User Guide</i>.
      * </p>
      * 
      * @param createFlowLogsRequest
@@ -5560,14 +5555,13 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <a>RunInstances</a>, you can specify a launch template instead of providing the launch parameters in the request.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html">Launch an instance from a
-     * launch template</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * launch template</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * To clone an existing launch template as the basis for a new launch template, use the Amazon EC2 console. The API,
      * SDKs, and CLI do not support cloning a template. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template-from-existing-launch-template"
-     * >Create a launch template from an existing launch template</a> in the <i>Amazon Elastic Compute Cloud User
-     * Guide</i>.
+     * >Create a launch template from an existing launch template</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param createLaunchTemplateRequest
@@ -5638,8 +5632,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#manage-launch-template-versions"
-     * >Modify a launch template (manage launch template versions)</a> in the <i>Amazon Elastic Compute Cloud User
-     * Guide</i>.
+     * >Modify a launch template (manage launch template versions)</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param createLaunchTemplateVersionRequest
@@ -6340,14 +6333,12 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Creates a network interface in the specified subnet.
      * </p>
      * <p>
-     * The number of IP addresses you can assign to a network interface varies by instance type. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI">IP Addresses
-     * Per ENI Per Instance Type</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * The number of IP addresses you can assign to a network interface varies by instance type.
      * </p>
      * <p>
      * For more information about network interfaces, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic network interfaces</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param createNetworkInterfaceRequest
@@ -6599,7 +6590,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/replace-root.html">Replace
-     * a root volume</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * a root volume</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param createReplaceRootVolumeTaskRequest
@@ -6679,7 +6670,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved Instance
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Sell in the Reserved Instance
      * Marketplace</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
@@ -7064,12 +7055,12 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * You can tag your snapshots during creation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html">Amazon
-     * Elastic Block Store</a> and <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon
-     * EBS encryption</a> in the <i>Amazon EBS User Guide</i>.
+     * EBS</a> and <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS
+     * encryption</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param createSnapshotRequest
@@ -7196,7 +7187,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Creates a data feed for Spot Instances, enabling you to view Spot Instance usage logs. You can create one data
      * feed per Amazon Web Services account. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-data-feeds.html">Spot Instance data feed</a> in
-     * the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param createSpotDatafeedSubscriptionRequest
@@ -7403,9 +7394,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Creates a subnet CIDR reservation. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/subnet-cidr-reservation.html">Subnet CIDR reservations</a>
-     * in the <i>Amazon Virtual Private Cloud User Guide</i> and <a
+     * in the <i>Amazon VPC User Guide</i> and <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html">Assign prefixes to network
-     * interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * interfaces</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param createSubnetCidrReservationRequest
@@ -7941,7 +7932,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-connect.html#tgw-connect-peer">Connect peers</a> in the
-     * <i>Transit Gateways Guide</i>.
+     * <i>Amazon Web Services Transit Gateways Guide</i>.
      * </p>
      * 
      * @param createTransitGatewayConnectPeerRequest
@@ -8721,7 +8712,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * You can tag your volumes during creation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * For more information, see <a
@@ -8917,8 +8908,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Creates a connection notification for a specified VPC endpoint or VPC endpoint service. A connection notification
      * notifies you of specific endpoint events. You must create an SNS topic to receive notifications. For more
-     * information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">Create a Topic</a> in the
-     * <i>Amazon Simple Notification Service Developer Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">Creating an Amazon SNS
+     * topic</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
      * <p>
      * You can create a connection notification for interface endpoints only.
@@ -9069,8 +9060,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <note>
      * <p>
      * Limitations and rules apply to a VPC peering connection. For more information, see the <a
-     * href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-basics.html#vpc-peering-limitations"
-     * >limitations</a> section in the <i>VPC Peering Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-basics.html#vpc-peering-limitations">VPC peering
+     * limitations</a> in the <i>VPC Peering Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -10564,7 +10555,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-launch-template-versions.html#delete-launch-template-version"
-     * >Delete a launch template version</a> in the <i>EC2 User Guide</i>.
+     * >Delete a launch template version</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param deleteLaunchTemplateVersionsRequest
@@ -14305,7 +14296,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Describes an Elastic IP address transfer. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
-     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * addresses</a> in the <i>Amazon VPC User Guide</i>.
      * </p>
      * <p>
      * When you transfer an Elastic IP address, there is a two-step handshake between the source and transfer Amazon Web
@@ -14567,7 +14558,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * For more information about Availability Zones, Local Zones, and Wavelength Zones, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">Regions and
-     * zones</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * zones</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -15059,9 +15050,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * </note>
      * <p>
-     * Describes one or more of your linked EC2-Classic instances. This request only returns information about
-     * EC2-Classic instances linked to a VPC through ClassicLink. You cannot use this request to return information
-     * about other instances.
+     * Describes your linked EC2-Classic instances. This request only returns information about EC2-Classic instances
+     * linked to a VPC through ClassicLink. You cannot use this request to return information about other instances.
      * </p>
      * 
      * @param describeClassicLinkInstancesRequest
@@ -15594,11 +15584,13 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes one or more of your DHCP options sets.
+     * Describes your DHCP option sets. The default is to describe all your DHCP option sets. Alternatively, you can
+     * specify specific DHCP option set IDs or filter the results to include only the DHCP option sets that match
+     * specific criteria.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html">DHCP
-     * options sets</a> in the <i>Amazon VPC User Guide</i>.
+     * option sets</a> in the <i>Amazon VPC User Guide</i>.
      * </p>
      * 
      * @param describeDhcpOptionsRequest
@@ -15659,7 +15651,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes one or more of your egress-only internet gateways.
+     * Describes your egress-only internet gateways. The default is to describe all your egress-only internet gateways.
+     * Alternatively, you can specify specific egress-only internet gateway IDs or filter the results to include only
+     * the egress-only internet gateways that match specific criteria.
      * </p>
      * 
      * @param describeEgressOnlyInternetGatewaysRequest
@@ -15719,13 +15713,11 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <note>
      * <p>
      * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics acceleration,
-     * we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * we recommend that you use Amazon EC2 G4, G5, or G6 instances.
      * </p>
      * </note>
      * <p>
-     * Describes the Elastic Graphics accelerator associated with your instances. For more information about Elastic
-     * Graphics, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html">Amazon
-     * Elastic Graphics</a>.
+     * Describes the Elastic Graphics accelerator associated with your instances.
      * </p>
      * 
      * @param describeElasticGpusRequest
@@ -17796,7 +17788,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes one or more of your internet gateways.
+     * Describes your internet gateways. The default is to describe all your internet gateways. Alternatively, you can
+     * specify specific internet gateway IDs or filter the results to include only the internet gateways that match
+     * specific criteria.
      * </p>
      * 
      * @param describeInternetGatewaysRequest
@@ -19030,7 +19024,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes one or more of your NAT gateways.
+     * Describes your NAT gateways. The default is to describe all your NAT gateways. Alternatively, you can specify
+     * specific NAT gateway IDs or filter the results to include only the NAT gateways that match specific criteria.
      * </p>
      * 
      * @param describeNatGatewaysRequest
@@ -19086,7 +19081,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes one or more of your network ACLs.
+     * Describes your network ACLs. The default is to describe all your network ACLs. Alternatively, you can specify
+     * specific network ACL IDs or filter the results to include only the network ACLs that match specific criteria.
      * </p>
      * <p>
      * For more information, see <a
@@ -19833,13 +19829,12 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For a list of the Regions supported by Amazon EC2, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/ec2-service.html"> Amazon Elastic Compute Cloud endpoints and
-     * quotas</a>.
+     * href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-endpoints.html">Amazon EC2 service endpoints</a>.
      * </p>
      * <p>
      * For information about enabling and disabling Regions for your account, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html">Managing Amazon Web Services Regions</a>
-     * in the <i>Amazon Web Services General Reference</i>.
+     * href="https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-regions.html">Specify which Amazon Web
+     * Services Regions your account can use</a> in the <i>Amazon Web Services Account Management Reference Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -19908,7 +19903,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Describes a root volume replacement task. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/replace-root.html">Replace a root volume</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param describeReplaceRootVolumeTasksRequest
@@ -20057,7 +20052,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved Instance
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Sell in the Reserved Instance
      * Marketplace</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <note>
@@ -20132,9 +20127,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * about the specific modification is returned.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html">Modifying Reserved Instances</a> in
-     * the <i>Amazon EC2 User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html">Modify
+     * Reserved Instances</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -20214,7 +20208,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved Instance
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Sell in the Reserved Instance
      * Marketplace</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <note>
@@ -20285,7 +20279,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes one or more of your route tables.
+     * Describes your route tables. The default is to describe all your route tables. Alternatively, you can specify
+     * specific route table IDs or filter the results to include only the route tables that match specific criteria.
      * </p>
      * <p>
      * Each subnet in your VPC must be associated with a route table. If a subnet is not explicitly associated with any
@@ -20901,7 +20896,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Describes the data feed for Spot Instances. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-data-feeds.html">Spot Instance data feed</a> in
-     * the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param describeSpotDatafeedSubscriptionRequest
@@ -21234,7 +21229,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Describes the Spot price history. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances-history.html">Spot Instance
-     * pricing history</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * pricing history</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * When you specify a start and end time, the operation returns the prices of the instance types within that time
@@ -21434,7 +21429,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes one or more of your subnets.
+     * Describes your subnets. The default is to describe all your subnets. Alternatively, you can specify specific
+     * subnet IDs or filter the results to include only the subnets that match specific criteria.
      * </p>
      * <p>
      * For more information, see <a
@@ -22980,11 +22976,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * more than once, the output includes only the most recent modification request.
      * </p>
      * <p>
-     * You can also use CloudWatch Events to check the status of a modification to an EBS volume. For information about
-     * CloudWatch Events, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon
-     * CloudWatch Events User Guide</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-modifications.html">Monitor the progress
-     * of volume modifications</a> in the <i>Amazon EBS User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-modifications.html"> Monitor the
+     * progress of volume modifications</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @param describeVolumesModificationsRequest
@@ -23526,7 +23520,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes your VPC endpoints.
+     * Describes your VPC endpoints. The default is to describe all your VPC endpoints. Alternatively, you can specify
+     * specific VPC endpoint IDs or filter the results to include only the VPC endpoints that match specific criteria.
      * </p>
      * 
      * @param describeVpcEndpointsRequest
@@ -23587,7 +23582,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes one or more of your VPC peering connections.
+     * Describes your VPC peering connections. The default is to describe all your VPC peering connections.
+     * Alternatively, you can specify specific VPC peering connection IDs or filter the results to include only the VPC
+     * peering connections that match specific criteria.
      * </p>
      * 
      * @param describeVpcPeeringConnectionsRequest
@@ -23648,7 +23645,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Describes one or more of your VPCs.
+     * Describes your VPCs. The default is to describe all your VPCs. Alternatively, you can specify specific VPC IDs or
+     * filter the results to include only the VPCs that match specific criteria.
      * </p>
      * 
      * @param describeVpcsRequest
@@ -24214,7 +24212,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Disables Elastic IP address transfer. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
-     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * addresses</a> in the <i>Amazon VPC User Guide</i>.
      * </p>
      * 
      * @param disableAddressTransferRequest
@@ -26144,7 +26142,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Enables Elastic IP address transfer. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
-     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * addresses</a> in the <i>Amazon VPC User Guide</i>.
      * </p>
      * 
      * @param enableAddressTransferRequest
@@ -27470,8 +27468,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * The routes are saved to the specified bucket in a JSON file. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-route-tables.html#tgw-export-route-tables">Export Route
-     * Tables to Amazon S3</a> in <i>Transit Gateways</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-route-tables.html#tgw-export-route-tables">Export route
+     * tables to Amazon S3</a> in the <i>Amazon Web Services Transit Gateways Guide</i>.
      * </p>
      * 
      * @param exportTransitGatewayRoutesRequest
@@ -28906,9 +28904,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AllocateIpamPoolCidr.html"
      * >AllocateIpamPoolCidr</a> or <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReleaseIpamPoolAllocation.html"
-     * >ReleaseIpamPoolAllocation</a>, note that all EC2 API actions follow an <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/query-api-troubleshooting.html#eventual-consistency"
-     * >eventual consistency</a> model.
+     * >ReleaseIpamPoolAllocation</a>, note that all EC2 API actions follow an <a
+     * href="https://docs.aws.amazon.com/ec2/latest/devguide/eventual-consistency.html">eventual consistency</a> model.
      * </p>
      * </note>
      * 
@@ -29379,9 +29376,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * The Windows password is generated at boot by the <code>EC2Config</code> service or <code>EC2Launch</code> scripts
      * (Windows Server 2016 and later). This usually only happens the first time an instance is launched. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/UsingConfig_WinAMI.html">EC2Config</a> and <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2launch.html">EC2Launch</a> in the <i>Amazon EC2
-     * User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingConfig_WinAMI.html">EC2Config</a> and <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2launch.html">EC2Launch</a> in the <i>Amazon EC2 User
+     * Guide</i>.
      * </p>
      * <p>
      * For the <code>EC2Config</code> service, the password is not generated for rebundled AMIs unless
@@ -29699,7 +29696,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html">Spot placement score</a> in
-     * the Amazon EC2 User Guide.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param getSpotPlacementScoresRequest
@@ -31179,11 +31176,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Changes the opt-in status of the Local Zone and Wavelength Zone group for your account.
-     * </p>
-     * <p>
-     * Use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html">
-     * DescribeAvailabilityZones</a> to view the value for <code>GroupName</code>.
+     * Changes the opt-in status of the specified zone group for your account.
      * </p>
      * 
      * @param modifyAvailabilityZoneGroupRequest
@@ -33178,9 +33171,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * and instance type.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html">Modifying Reserved Instances</a> in
-     * the <i>Amazon EC2 User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html">Modify
+     * Reserved Instances</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param modifyReservedInstancesRequest
@@ -34359,12 +34351,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * system</a>.
      * </p>
      * <p>
-     * You can use CloudWatch Events to check the status of a modification to an EBS volume. For information about
-     * CloudWatch Events, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon
-     * CloudWatch Events User Guide</a>. You can also track the status of a modification using
-     * <a>DescribeVolumesModifications</a>. For information about tracking status changes using either method, see <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/monitoring-volume-modifications.html">Monitor the progress
-     * of volume modifications</a>.
+     * of volume modifications</a> in the <i>Amazon EBS User Guide</i>.
      * </p>
      * <p>
      * With previous-generation instance types, resizing an EBS volume might require detaching and reattaching the
@@ -35474,7 +35463,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * that the address range is registered to you and that you created an RPKI ROA to authorize Amazon ASNs 16509 and
      * 14618 to advertise the address range. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">Bring your own IP addresses (BYOIP)</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Provisioning an address range is an asynchronous operation, so the call returns immediately, but the address
@@ -35848,8 +35837,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts-on-demand-reserved-instances.html">Reserved
-     * Instances</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved
-     * Instance Marketplace</a> in the <i>Amazon EC2 User Guide</i>.
+     * Instances</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Sell in
+     * the Reserved Instance Marketplace</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param purchaseReservedInstancesOfferingRequest
@@ -36233,10 +36222,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     /**
      * <p>
      * Registers members (network interfaces) with the transit gateway multicast group. A member is a network interface
-     * associated with a supported EC2 instance that receives multicast traffic. For information about supported
-     * instances, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-limits.html#multicast-limits">Multicast
-     * Consideration</a> in <i>Amazon VPC Transit Gateways</i>.
+     * associated with a supported EC2 instance that receives multicast traffic. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-multicast-overview.html">Multicast on transit gateways</a>
+     * in the <i>Amazon Web Services Transit Gateways Guide</i>.
      * </p>
      * <p>
      * After you add the members, use <a
@@ -36304,10 +36292,10 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Registers sources (network interfaces) with the specified transit gateway multicast group.
      * </p>
      * <p>
-     * A multicast source is a network interface attached to a supported instance that sends multicast traffic. For
+     * A multicast source is a network interface attached to a supported instance that sends multicast traffic. For more
      * information about supported instances, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-limits.html#multicast-limits">Multicast
-     * Considerations</a> in <i>Amazon VPC Transit Gateways</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-multicast-overview.html">Multicast on transit gateways</a>
+     * in the <i>Amazon Web Services Transit Gateways Guide</i>.
      * </p>
      * <p>
      * After you add the source, use <a
@@ -36816,9 +36804,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <note>
      * <p>
-     * All EC2 API actions follow an <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/query-api-troubleshooting.html#eventual-consistency"
-     * >eventual consistency</a> model.
+     * All EC2 API actions follow an <a
+     * href="https://docs.aws.amazon.com/ec2/latest/devguide/eventual-consistency.html">eventual consistency</a> model.
      * </p>
      * </note>
      * 
@@ -37455,15 +37442,15 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Creates a Spot Instance request.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Spot
-     * Instance requests</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html">Work
+     * with Spot Instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <important>
      * <p>
      * We strongly discourage using the RequestSpotInstances API because it is a legacy API with no planned investment.
      * For options for requesting Spot Instances, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-best-practices.html#which-spot-request-method-to-use"
-     * >Which is the best Spot request method to use?</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * >Which is the best Spot request method to use?</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </important>
      * 
@@ -37764,7 +37751,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * The <code>sourceDestCheck</code> attribute controls whether source/destination checking is enabled. The default
      * value is <code>true</code>, which means checking is enabled. This value must be <code>false</code> for a NAT
      * instance to perform NAT. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html">NAT Instances</a> in the
+     * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html">NAT instances</a> in the
      * <i>Amazon VPC User Guide</i>.
      * </p>
      * 
@@ -38482,8 +38469,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </li>
      * <li>
      * <p>
-     * If you don't specify a security group ID, we use the default security group. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html">Security groups</a>.
+     * If you don't specify a security group ID, we use the default security group for the VPC. For more information,
+     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html">Security
+     * groups</a>.
      * </p>
      * </li>
      * <li>
@@ -38500,6 +38488,11 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * To ensure faster instance launches, break up large requests into smaller batches. For example, create five
      * separate launch requests for 100 instances each instead of one launch request for 500 instances.
+     * </p>
+     * <p>
+     * <code>RunInstances</code> is subject to both request rate limiting and resource rate limiting. For more
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-throttling.html">Request
+     * throttling</a>.
      * </p>
      * <p>
      * An instance is ready for you to use when it's in the <code>running</code> state. You can check the state of your
@@ -38582,9 +38575,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * You must launch a Scheduled Instance during its scheduled time period. You can't stop or reboot a Scheduled
      * Instance, but you can terminate it as needed. If you terminate a Scheduled Instance before the current scheduled
-     * time period ends, you can launch it again after a few minutes. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-scheduled-instances.html">Scheduled Instances</a>
-     * in the <i>Amazon EC2 User Guide</i>.
+     * time period ends, you can launch it again after a few minutes.
      * </p>
      * 
      * @param runScheduledInstancesRequest
@@ -38827,9 +38818,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * For more information about configuring your operating system to generate a crash dump when a kernel panic or stop
      * error occurs, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/diagnostic-interrupt.html">Send a
-     * diagnostic interrupt (for advanced users)</a> (Linux instances) or <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/diagnostic-interrupt.html">Send a diagnostic
-     * interrupt (for advanced users)</a> (Windows instances).
+     * diagnostic interrupt (for advanced users)</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param sendDiagnosticInterruptRequest
@@ -38909,7 +38898,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stop and
-     * start your instance</a> in the <i>Amazon EC2 User Guide</i>.
+     * start Amazon EC2 instances</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param startInstancesRequest
@@ -39148,8 +39137,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     /**
      * <p>
      * Stops an Amazon EBS-backed instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stop and start your instance</a> in
-     * the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stop and start Amazon EC2
+     * instances</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * You can use the Stop action to hibernate an instance if the instance is <a
@@ -39157,8 +39146,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * and it meets the <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      * prerequisites</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * We don't charge usage for a stopped instance, or data transfer fees; however, your root partition Amazon EBS

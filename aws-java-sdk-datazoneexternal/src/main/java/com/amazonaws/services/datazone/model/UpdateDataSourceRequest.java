@@ -81,6 +81,13 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private RecommendationConfiguration recommendation;
     /**
      * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     */
+    private Boolean retainPermissionsOnRevokeFailure;
+    /**
+     * <p>
      * The schedule to be updated as part of the <code>UpdateDataSource</code> action.
      * </p>
      */
@@ -509,6 +516,66 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @param retainPermissionsOnRevokeFailure
+     *        Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *        a data source.
+     */
+
+    public void setRetainPermissionsOnRevokeFailure(Boolean retainPermissionsOnRevokeFailure) {
+        this.retainPermissionsOnRevokeFailure = retainPermissionsOnRevokeFailure;
+    }
+
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @return Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *         a data source.
+     */
+
+    public Boolean getRetainPermissionsOnRevokeFailure() {
+        return this.retainPermissionsOnRevokeFailure;
+    }
+
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @param retainPermissionsOnRevokeFailure
+     *        Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *        a data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDataSourceRequest withRetainPermissionsOnRevokeFailure(Boolean retainPermissionsOnRevokeFailure) {
+        setRetainPermissionsOnRevokeFailure(retainPermissionsOnRevokeFailure);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @return Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *         a data source.
+     */
+
+    public Boolean isRetainPermissionsOnRevokeFailure() {
+        return this.retainPermissionsOnRevokeFailure;
+    }
+
+    /**
+     * <p>
      * The schedule to be updated as part of the <code>UpdateDataSource</code> action.
      * </p>
      * 
@@ -577,6 +644,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("PublishOnImport: ").append(getPublishOnImport()).append(",");
         if (getRecommendation() != null)
             sb.append("Recommendation: ").append(getRecommendation()).append(",");
+        if (getRetainPermissionsOnRevokeFailure() != null)
+            sb.append("RetainPermissionsOnRevokeFailure: ").append(getRetainPermissionsOnRevokeFailure()).append(",");
         if (getSchedule() != null)
             sb.append("Schedule: ").append("***Sensitive Data Redacted***");
         sb.append("}");
@@ -629,6 +698,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getRecommendation() != null && other.getRecommendation().equals(this.getRecommendation()) == false)
             return false;
+        if (other.getRetainPermissionsOnRevokeFailure() == null ^ this.getRetainPermissionsOnRevokeFailure() == null)
+            return false;
+        if (other.getRetainPermissionsOnRevokeFailure() != null
+                && other.getRetainPermissionsOnRevokeFailure().equals(this.getRetainPermissionsOnRevokeFailure()) == false)
+            return false;
         if (other.getSchedule() == null ^ this.getSchedule() == null)
             return false;
         if (other.getSchedule() != null && other.getSchedule().equals(this.getSchedule()) == false)
@@ -650,6 +724,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getPublishOnImport() == null) ? 0 : getPublishOnImport().hashCode());
         hashCode = prime * hashCode + ((getRecommendation() == null) ? 0 : getRecommendation().hashCode());
+        hashCode = prime * hashCode + ((getRetainPermissionsOnRevokeFailure() == null) ? 0 : getRetainPermissionsOnRevokeFailure().hashCode());
         hashCode = prime * hashCode + ((getSchedule() == null) ? 0 : getSchedule().hashCode());
         return hashCode;
     }

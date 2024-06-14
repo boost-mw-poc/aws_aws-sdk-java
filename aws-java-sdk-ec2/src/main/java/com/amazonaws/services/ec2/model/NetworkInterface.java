@@ -49,7 +49,7 @@ public class NetworkInterface implements Serializable, Cloneable {
      * A security group connection tracking configuration that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private ConnectionTrackingConfiguration connectionTrackingConfiguration;
@@ -320,14 +320,14 @@ public class NetworkInterface implements Serializable, Cloneable {
      * A security group connection tracking configuration that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param connectionTrackingConfiguration
      *        A security group connection tracking configuration that enables you to set the timeout for connection
      *        tracking on an Elastic network interface. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     *        >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        >Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setConnectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
@@ -339,13 +339,13 @@ public class NetworkInterface implements Serializable, Cloneable {
      * A security group connection tracking configuration that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return A security group connection tracking configuration that enables you to set the timeout for connection
      *         tracking on an Elastic network interface. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     *         >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         >Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public ConnectionTrackingConfiguration getConnectionTrackingConfiguration() {
@@ -357,14 +357,14 @@ public class NetworkInterface implements Serializable, Cloneable {
      * A security group connection tracking configuration that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param connectionTrackingConfiguration
      *        A security group connection tracking configuration that enables you to set the timeout for connection
      *        tracking on an Elastic network interface. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     *        >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        >Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

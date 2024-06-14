@@ -103,9 +103,7 @@ public class DescribeVolumeStatusRequest extends AmazonWebServiceRequest impleme
     /**
      * <p>
      * The maximum number of items to return for this request. To get the next page of items, make another request with
-     * the token returned in the output. This value can be between 5 and 1,000; if the value is larger than 1,000, only
-     * 1,000 results are returned. If this parameter is not used, then all items are returned. You cannot specify this
-     * parameter and the volume IDs parameter in the same request. For more information, see <a
+     * the token returned in the output. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      */
@@ -743,18 +741,13 @@ public class DescribeVolumeStatusRequest extends AmazonWebServiceRequest impleme
     /**
      * <p>
      * The maximum number of items to return for this request. To get the next page of items, make another request with
-     * the token returned in the output. This value can be between 5 and 1,000; if the value is larger than 1,000, only
-     * 1,000 results are returned. If this parameter is not used, then all items are returned. You cannot specify this
-     * parameter and the volume IDs parameter in the same request. For more information, see <a
+     * the token returned in the output. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of items to return for this request. To get the next page of items, make another
-     *        request with the token returned in the output. This value can be between 5 and 1,000; if the value is
-     *        larger than 1,000, only 1,000 results are returned. If this parameter is not used, then all items are
-     *        returned. You cannot specify this parameter and the volume IDs parameter in the same request. For more
-     *        information, see <a
+     *        request with the token returned in the output. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
      *        >Pagination</a>.
      */
@@ -766,17 +759,12 @@ public class DescribeVolumeStatusRequest extends AmazonWebServiceRequest impleme
     /**
      * <p>
      * The maximum number of items to return for this request. To get the next page of items, make another request with
-     * the token returned in the output. This value can be between 5 and 1,000; if the value is larger than 1,000, only
-     * 1,000 results are returned. If this parameter is not used, then all items are returned. You cannot specify this
-     * parameter and the volume IDs parameter in the same request. For more information, see <a
+     * the token returned in the output. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
      * @return The maximum number of items to return for this request. To get the next page of items, make another
-     *         request with the token returned in the output. This value can be between 5 and 1,000; if the value is
-     *         larger than 1,000, only 1,000 results are returned. If this parameter is not used, then all items are
-     *         returned. You cannot specify this parameter and the volume IDs parameter in the same request. For more
-     *         information, see <a
+     *         request with the token returned in the output. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
      *         >Pagination</a>.
      */
@@ -788,18 +776,13 @@ public class DescribeVolumeStatusRequest extends AmazonWebServiceRequest impleme
     /**
      * <p>
      * The maximum number of items to return for this request. To get the next page of items, make another request with
-     * the token returned in the output. This value can be between 5 and 1,000; if the value is larger than 1,000, only
-     * 1,000 results are returned. If this parameter is not used, then all items are returned. You cannot specify this
-     * parameter and the volume IDs parameter in the same request. For more information, see <a
+     * the token returned in the output. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
      * @param maxResults
      *        The maximum number of items to return for this request. To get the next page of items, make another
-     *        request with the token returned in the output. This value can be between 5 and 1,000; if the value is
-     *        larger than 1,000, only 1,000 results are returned. If this parameter is not used, then all items are
-     *        returned. You cannot specify this parameter and the volume IDs parameter in the same request. For more
-     *        information, see <a
+     *        request with the token returned in the output. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
      *        >Pagination</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

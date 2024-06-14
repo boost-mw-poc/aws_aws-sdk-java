@@ -49,8 +49,8 @@ public class Snapshot implements Serializable, Cloneable {
     private Boolean encrypted;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
-     * encryption key for the parent volume.
+     * The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the parent
+     * volume.
      * </p>
      */
     private String kmsKeyId;
@@ -87,8 +87,8 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the
-     * proper Key Management Service (KMS) permissions are not obtained) this field displays error state details to help
-     * you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
+     * proper KMS permissions are not obtained) this field displays error state details to help you diagnose why the
+     * error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      * </p>
      */
     private String stateMessage;
@@ -306,13 +306,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
-     * encryption key for the parent volume.
+     * The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the parent
+     * volume.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the
-     *        volume encryption key for the parent volume.
+     *        The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the
+     *        parent volume.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -321,12 +321,12 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
-     * encryption key for the parent volume.
+     * The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the parent
+     * volume.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the
-     *         volume encryption key for the parent volume.
+     * @return The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the
+     *         parent volume.
      */
 
     public String getKmsKeyId() {
@@ -335,13 +335,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
-     * encryption key for the parent volume.
+     * The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the parent
+     * volume.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the
-     *        volume encryption key for the parent volume.
+     *        The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the
+     *        parent volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -586,15 +586,14 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the
-     * proper Key Management Service (KMS) permissions are not obtained) this field displays error state details to help
-     * you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
+     * proper KMS permissions are not obtained) this field displays error state details to help you diagnose why the
+     * error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      * </p>
      * 
      * @param stateMessage
      *        Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example,
-     *        if the proper Key Management Service (KMS) permissions are not obtained) this field displays error state
-     *        details to help you diagnose why the error occurred. This parameter is only returned by
-     *        <a>DescribeSnapshots</a>.
+     *        if the proper KMS permissions are not obtained) this field displays error state details to help you
+     *        diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      */
 
     public void setStateMessage(String stateMessage) {
@@ -604,14 +603,13 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the
-     * proper Key Management Service (KMS) permissions are not obtained) this field displays error state details to help
-     * you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
+     * proper KMS permissions are not obtained) this field displays error state details to help you diagnose why the
+     * error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      * </p>
      * 
      * @return Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for
-     *         example, if the proper Key Management Service (KMS) permissions are not obtained) this field displays
-     *         error state details to help you diagnose why the error occurred. This parameter is only returned by
-     *         <a>DescribeSnapshots</a>.
+     *         example, if the proper KMS permissions are not obtained) this field displays error state details to help
+     *         you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      */
 
     public String getStateMessage() {
@@ -621,15 +619,14 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the
-     * proper Key Management Service (KMS) permissions are not obtained) this field displays error state details to help
-     * you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
+     * proper KMS permissions are not obtained) this field displays error state details to help you diagnose why the
+     * error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      * </p>
      * 
      * @param stateMessage
      *        Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example,
-     *        if the proper Key Management Service (KMS) permissions are not obtained) this field displays error state
-     *        details to help you diagnose why the error occurred. This parameter is only returned by
-     *        <a>DescribeSnapshots</a>.
+     *        if the proper KMS permissions are not obtained) this field displays error state details to help you
+     *        diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

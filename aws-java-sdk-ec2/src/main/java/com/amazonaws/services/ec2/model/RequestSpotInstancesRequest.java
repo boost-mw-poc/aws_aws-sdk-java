@@ -60,8 +60,9 @@ public class RequestSpotInstancesRequest extends AmazonWebServiceRequest impleme
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How
-     * to Ensure Idempotency</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring idempotency in
+     * Amazon EC2 API requests</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String clientToken;
@@ -370,15 +371,16 @@ public class RequestSpotInstancesRequest extends AmazonWebServiceRequest impleme
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How
-     * to Ensure Idempotency</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring idempotency in
+     * Amazon EC2 API requests</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How to Ensure
-     *        Idempotency</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency in Amazon EC2 API requests</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setClientToken(String clientToken) {
@@ -388,14 +390,15 @@ public class RequestSpotInstancesRequest extends AmazonWebServiceRequest impleme
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How
-     * to Ensure Idempotency</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring idempotency in
+     * Amazon EC2 API requests</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How to Ensure
-     *         Idempotency</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
+     *         idempotency in Amazon EC2 API requests</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public String getClientToken() {
@@ -405,15 +408,16 @@ public class RequestSpotInstancesRequest extends AmazonWebServiceRequest impleme
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How
-     * to Ensure Idempotency</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring idempotency in
+     * Amazon EC2 API requests</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How to Ensure
-     *        Idempotency</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
+     *        idempotency in Amazon EC2 API requests</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

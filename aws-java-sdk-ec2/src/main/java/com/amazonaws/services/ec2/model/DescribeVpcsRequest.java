@@ -121,9 +121,6 @@ public class DescribeVpcsRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IDs of the VPCs.
      * </p>
-     * <p>
-     * Default: Describes all your VPCs.
-     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> vpcIds;
     /**
@@ -903,13 +900,8 @@ public class DescribeVpcsRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IDs of the VPCs.
      * </p>
-     * <p>
-     * Default: Describes all your VPCs.
-     * </p>
      * 
-     * @return The IDs of the VPCs.</p>
-     *         <p>
-     *         Default: Describes all your VPCs.
+     * @return The IDs of the VPCs.
      */
 
     public java.util.List<String> getVpcIds() {
@@ -923,14 +915,9 @@ public class DescribeVpcsRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IDs of the VPCs.
      * </p>
-     * <p>
-     * Default: Describes all your VPCs.
-     * </p>
      * 
      * @param vpcIds
-     *        The IDs of the VPCs.</p>
-     *        <p>
-     *        Default: Describes all your VPCs.
+     *        The IDs of the VPCs.
      */
 
     public void setVpcIds(java.util.Collection<String> vpcIds) {
@@ -947,18 +934,13 @@ public class DescribeVpcsRequest extends AmazonWebServiceRequest implements Seri
      * The IDs of the VPCs.
      * </p>
      * <p>
-     * Default: Describes all your VPCs.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVpcIds(java.util.Collection)} or {@link #withVpcIds(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param vpcIds
-     *        The IDs of the VPCs.</p>
-     *        <p>
-     *        Default: Describes all your VPCs.
+     *        The IDs of the VPCs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -976,14 +958,9 @@ public class DescribeVpcsRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IDs of the VPCs.
      * </p>
-     * <p>
-     * Default: Describes all your VPCs.
-     * </p>
      * 
      * @param vpcIds
-     *        The IDs of the VPCs.</p>
-     *        <p>
-     *        Default: Describes all your VPCs.
+     *        The IDs of the VPCs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

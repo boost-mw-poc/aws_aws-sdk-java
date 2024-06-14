@@ -65,8 +65,7 @@ public class CreateManagedPrefixListRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * </p>
      * <p>
      * Constraints: Up to 255 UTF-8 characters in length.
@@ -373,8 +372,7 @@ public class CreateManagedPrefixListRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * </p>
      * <p>
      * Constraints: Up to 255 UTF-8 characters in length.
@@ -383,8 +381,8 @@ public class CreateManagedPrefixListRequest extends AmazonWebServiceRequest impl
      * @param clientToken
      *        Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.</p>
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     *        idempotency</a>.</p>
      *        <p>
      *        Constraints: Up to 255 UTF-8 characters in length.
      */
@@ -396,8 +394,7 @@ public class CreateManagedPrefixListRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * </p>
      * <p>
      * Constraints: Up to 255 UTF-8 characters in length.
@@ -405,8 +402,8 @@ public class CreateManagedPrefixListRequest extends AmazonWebServiceRequest impl
      * 
      * @return Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *         Idempotency</a>.</p>
+     *         href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     *         idempotency</a>.</p>
      *         <p>
      *         Constraints: Up to 255 UTF-8 characters in length.
      */
@@ -418,8 +415,7 @@ public class CreateManagedPrefixListRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * </p>
      * <p>
      * Constraints: Up to 255 UTF-8 characters in length.
@@ -428,8 +424,8 @@ public class CreateManagedPrefixListRequest extends AmazonWebServiceRequest impl
      * @param clientToken
      *        Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.</p>
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     *        idempotency</a>.</p>
      *        <p>
      *        Constraints: Up to 255 UTF-8 characters in length.
      * @return Returns a reference to this object so that method calls can be chained together.

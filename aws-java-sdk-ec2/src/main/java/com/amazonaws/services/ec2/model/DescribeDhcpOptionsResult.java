@@ -25,7 +25,7 @@ public class DescribeDhcpOptionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more DHCP options sets.
+     * Information about the DHCP options sets.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<DhcpOptions> dhcpOptions;
@@ -39,10 +39,10 @@ public class DescribeDhcpOptionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more DHCP options sets.
+     * Information about the DHCP options sets.
      * </p>
      * 
-     * @return Information about one or more DHCP options sets.
+     * @return Information about the DHCP options sets.
      */
 
     public java.util.List<DhcpOptions> getDhcpOptions() {
@@ -54,11 +54,11 @@ public class DescribeDhcpOptionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more DHCP options sets.
+     * Information about the DHCP options sets.
      * </p>
      * 
      * @param dhcpOptions
-     *        Information about one or more DHCP options sets.
+     *        Information about the DHCP options sets.
      */
 
     public void setDhcpOptions(java.util.Collection<DhcpOptions> dhcpOptions) {
@@ -72,7 +72,7 @@ public class DescribeDhcpOptionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more DHCP options sets.
+     * Information about the DHCP options sets.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DescribeDhcpOptionsResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param dhcpOptions
-     *        Information about one or more DHCP options sets.
+     *        Information about the DHCP options sets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DescribeDhcpOptionsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more DHCP options sets.
+     * Information about the DHCP options sets.
      * </p>
      * 
      * @param dhcpOptions
-     *        Information about one or more DHCP options sets.
+     *        Information about the DHCP options sets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

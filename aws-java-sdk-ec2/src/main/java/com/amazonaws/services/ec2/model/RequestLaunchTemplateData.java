@@ -39,7 +39,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided kernels</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </important>
      */
@@ -115,15 +115,15 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String imageId;
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
@@ -164,7 +164,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided kernels</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </important>
      */
@@ -193,13 +193,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The user data to make available to the instance. You must provide base64-encoded text. User data is limited to 16
      * KB. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run
-     * commands on your Linux instance at launch</a> (Linux) or <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html">Work with instance
-     * user data</a> (Windows) in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * commands on your Amazon EC2 instance at launch</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you are creating the launch template for use with Batch, the user data must be provided in the <a
-     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME multi-part
+     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive">MIME multi-part
      * archive format</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in launch
      * templates</a> in the <i>Batch User Guide</i>.
@@ -279,8 +277,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private LaunchTemplateCpuOptionsRequest cpuOptions;
@@ -303,8 +301,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance meets the
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      * prerequisites</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private LaunchTemplateHibernationOptionsRequest hibernationOptions;
@@ -312,14 +310,14 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata and user
-     * data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * data</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private LaunchTemplateInstanceMetadataOptionsRequest metadataOptions;
     /**
      * <p>
      * Indicates whether the instance is enabled for Amazon Web Services Nitro Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What is Amazon Web Services Nitro
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What is Amazon Web Services Nitro
      * Enclaves?</a> in the <i>Amazon Web Services Nitro Enclaves User Guide</i>.
      * </p>
      * <p>
@@ -398,8 +396,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether to enable the instance for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Boolean disableApiStop;
@@ -412,7 +410,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided kernels</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </important>
      * 
@@ -421,7 +419,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        <p>
      *        We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided
-     *        kernels</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        kernels</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>
      */
 
@@ -437,7 +435,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided kernels</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </important>
      * 
@@ -445,7 +443,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *         <p>
      *         We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided
-     *         kernels</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         kernels</a> in the <i>Amazon EC2 User Guide</i>.
      *         </p>
      */
 
@@ -461,7 +459,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided kernels</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </important>
      * 
@@ -470,7 +468,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        <p>
      *        We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided
-     *        kernels</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        kernels</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -787,7 +785,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param imageId
@@ -832,8 +830,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setImageId(String imageId) {
@@ -884,7 +881,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The ID of the AMI. Alternatively, you can specify a Systems Manager parameter, which will resolve to an
@@ -928,8 +925,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *         Guide</i>.
+     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public String getImageId() {
@@ -980,7 +976,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param imageId
@@ -1025,8 +1021,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1038,8 +1033,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
@@ -1047,8 +1042,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * @see InstanceType
@@ -1061,16 +1056,16 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * </p>
      * 
      * @return The instance type. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *         <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance
+     *         types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *         <p>
      *         If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * @see InstanceType
@@ -1083,8 +1078,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
@@ -1092,8 +1087,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1108,8 +1103,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
@@ -1117,8 +1112,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1306,7 +1301,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided kernels</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </important>
      * 
@@ -1315,7 +1310,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        <p>
      *        We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided
-     *        kernels</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        kernels</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>
      */
 
@@ -1331,7 +1326,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided kernels</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </important>
      * 
@@ -1339,7 +1334,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *         <p>
      *         We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided
-     *         kernels</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         kernels</a> in the <i>Amazon EC2 User Guide</i>.
      *         </p>
      */
 
@@ -1355,7 +1350,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided kernels</a> in
-     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </important>
      * 
@@ -1364,7 +1359,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        <p>
      *        We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html">User provided
-     *        kernels</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        kernels</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1549,13 +1544,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The user data to make available to the instance. You must provide base64-encoded text. User data is limited to 16
      * KB. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run
-     * commands on your Linux instance at launch</a> (Linux) or <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html">Work with instance
-     * user data</a> (Windows) in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * commands on your Amazon EC2 instance at launch</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you are creating the launch template for use with Batch, the user data must be provided in the <a
-     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME multi-part
+     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive">MIME multi-part
      * archive format</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in launch
      * templates</a> in the <i>Batch User Guide</i>.
@@ -1564,13 +1557,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * @param userData
      *        The user data to make available to the instance. You must provide base64-encoded text. User data is
      *        limited to 16 KB. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
-     *        instance at launch</a> (Linux) or <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html">Work with
-     *        instance user data</a> (Windows) in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     *        instance at launch</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        If you are creating the launch template for use with Batch, the user data must be provided in the <a
-     *        href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME
+     *        href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive">MIME
      *        multi-part archive format</a>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in
      *        launch templates</a> in the <i>Batch User Guide</i>.
@@ -1584,13 +1575,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The user data to make available to the instance. You must provide base64-encoded text. User data is limited to 16
      * KB. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run
-     * commands on your Linux instance at launch</a> (Linux) or <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html">Work with instance
-     * user data</a> (Windows) in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * commands on your Amazon EC2 instance at launch</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you are creating the launch template for use with Batch, the user data must be provided in the <a
-     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME multi-part
+     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive">MIME multi-part
      * archive format</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in launch
      * templates</a> in the <i>Batch User Guide</i>.
@@ -1598,13 +1587,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * 
      * @return The user data to make available to the instance. You must provide base64-encoded text. User data is
      *         limited to 16 KB. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
-     *         instance at launch</a> (Linux) or <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html">Work with
-     *         instance user data</a> (Windows) in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     *         instance at launch</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *         <p>
      *         If you are creating the launch template for use with Batch, the user data must be provided in the <a
-     *         href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME
+     *         href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive">MIME
      *         multi-part archive format</a>. For more information, see <a
      *         href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in
      *         launch templates</a> in the <i>Batch User Guide</i>.
@@ -1618,13 +1605,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The user data to make available to the instance. You must provide base64-encoded text. User data is limited to 16
      * KB. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run
-     * commands on your Linux instance at launch</a> (Linux) or <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html">Work with instance
-     * user data</a> (Windows) in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * commands on your Amazon EC2 instance at launch</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you are creating the launch template for use with Batch, the user data must be provided in the <a
-     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME multi-part
+     * href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive">MIME multi-part
      * archive format</a>. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in launch
      * templates</a> in the <i>Batch User Guide</i>.
@@ -1633,13 +1618,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * @param userData
      *        The user data to make available to the instance. You must provide base64-encoded text. User data is
      *        limited to 16 KB. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
-     *        instance at launch</a> (Linux) or <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html">Work with
-     *        instance user data</a> (Windows) in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     *        instance at launch</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        If you are creating the launch template for use with Batch, the user data must be provided in the <a
-     *        href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive"> MIME
+     *        href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive">MIME
      *        multi-part archive format</a>. For more information, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html">Amazon EC2 user data in
      *        launch templates</a> in the <i>Batch User Guide</i>.
@@ -2313,14 +2296,14 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param cpuOptions
      *        The CPU options for the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU
-     *        Options</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU
+     *        options</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setCpuOptions(LaunchTemplateCpuOptionsRequest cpuOptions) {
@@ -2330,13 +2313,13 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The CPU options for the instance. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU
-     *         Options</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU
+     *         options</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public LaunchTemplateCpuOptionsRequest getCpuOptions() {
@@ -2346,14 +2329,14 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param cpuOptions
      *        The CPU options for the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU
-     *        Options</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU
+     *        options</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2492,8 +2475,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance meets the
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      * prerequisites</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param hibernationOptions
@@ -2501,8 +2484,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        meets the <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      *        prerequisites</a>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2
+     *        instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setHibernationOptions(LaunchTemplateHibernationOptionsRequest hibernationOptions) {
@@ -2514,16 +2497,16 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance meets the
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      * prerequisites</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance
      *         meets the <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      *         prerequisites</a>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in
-     *         the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2
+     *         instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public LaunchTemplateHibernationOptionsRequest getHibernationOptions() {
@@ -2535,8 +2518,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance meets the
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      * prerequisites</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param hibernationOptions
@@ -2544,8 +2527,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        meets the <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      *        prerequisites</a>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2
+     *        instance</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2558,13 +2541,13 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata and user
-     * data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * data</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param metadataOptions
      *        The metadata options for the instance. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata
-     *        and user data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        and user data</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setMetadataOptions(LaunchTemplateInstanceMetadataOptionsRequest metadataOptions) {
@@ -2575,12 +2558,12 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata and user
-     * data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * data</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The metadata options for the instance. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata
-     *         and user data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         and user data</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public LaunchTemplateInstanceMetadataOptionsRequest getMetadataOptions() {
@@ -2591,13 +2574,13 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata and user
-     * data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * data</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param metadataOptions
      *        The metadata options for the instance. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata
-     *        and user data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        and user data</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2609,7 +2592,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether the instance is enabled for Amazon Web Services Nitro Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What is Amazon Web Services Nitro
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What is Amazon Web Services Nitro
      * Enclaves?</a> in the <i>Amazon Web Services Nitro Enclaves User Guide</i>.
      * </p>
      * <p>
@@ -2618,7 +2601,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * 
      * @param enclaveOptions
      *        Indicates whether the instance is enabled for Amazon Web Services Nitro Enclaves. For more information,
-     *        see <a href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What is Amazon Web
+     *        see <a href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What is Amazon Web
      *        Services Nitro Enclaves?</a> in the <i>Amazon Web Services Nitro Enclaves User Guide</i>.</p>
      *        <p>
      *        You can't enable Amazon Web Services Nitro Enclaves and hibernation on the same instance.
@@ -2631,7 +2614,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether the instance is enabled for Amazon Web Services Nitro Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What is Amazon Web Services Nitro
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What is Amazon Web Services Nitro
      * Enclaves?</a> in the <i>Amazon Web Services Nitro Enclaves User Guide</i>.
      * </p>
      * <p>
@@ -2639,7 +2622,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      * 
      * @return Indicates whether the instance is enabled for Amazon Web Services Nitro Enclaves. For more information,
-     *         see <a href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What is Amazon Web
+     *         see <a href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What is Amazon Web
      *         Services Nitro Enclaves?</a> in the <i>Amazon Web Services Nitro Enclaves User Guide</i>.</p>
      *         <p>
      *         You can't enable Amazon Web Services Nitro Enclaves and hibernation on the same instance.
@@ -2652,7 +2635,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether the instance is enabled for Amazon Web Services Nitro Enclaves. For more information, see <a
-     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What is Amazon Web Services Nitro
+     * href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What is Amazon Web Services Nitro
      * Enclaves?</a> in the <i>Amazon Web Services Nitro Enclaves User Guide</i>.
      * </p>
      * <p>
@@ -2661,7 +2644,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * 
      * @param enclaveOptions
      *        Indicates whether the instance is enabled for Amazon Web Services Nitro Enclaves. For more information,
-     *        see <a href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html"> What is Amazon Web
+     *        see <a href="https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html">What is Amazon Web
      *        Services Nitro Enclaves?</a> in the <i>Amazon Web Services Nitro Enclaves User Guide</i>.</p>
      *        <p>
      *        You can't enable Amazon Web Services Nitro Enclaves and hibernation on the same instance.
@@ -3102,14 +3085,14 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether to enable the instance for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param disableApiStop
      *        Indicates whether to enable the instance for stop protection. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection
+     *        for your instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setDisableApiStop(Boolean disableApiStop) {
@@ -3119,13 +3102,13 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether to enable the instance for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Indicates whether to enable the instance for stop protection. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop
+     *         protection for your instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Boolean getDisableApiStop() {
@@ -3135,14 +3118,14 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether to enable the instance for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param disableApiStop
      *        Indicates whether to enable the instance for stop protection. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection
+     *        for your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3154,13 +3137,13 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether to enable the instance for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Indicates whether to enable the instance for stop protection. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop
+     *         protection for your instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Boolean isDisableApiStop() {

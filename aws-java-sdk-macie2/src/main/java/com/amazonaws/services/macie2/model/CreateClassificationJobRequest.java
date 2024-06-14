@@ -76,7 +76,7 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * <li>
      * <p>
      * SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the
-     * scheduleFrequency property to define the recurrence pattern for the job.
+     * scheduleFrequency property to specify the recurrence pattern for the job.
      * </p>
      * </li>
      * </ul>
@@ -138,9 +138,9 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -522,7 +522,7 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * <li>
      * <p>
      * SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the
-     * scheduleFrequency property to define the recurrence pattern for the job.
+     * scheduleFrequency property to specify the recurrence pattern for the job.
      * </p>
      * </li>
      * </ul>
@@ -539,7 +539,7 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      *        <li>
      *        <p>
      *        SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the
-     *        scheduleFrequency property to define the recurrence pattern for the job.
+     *        scheduleFrequency property to specify the recurrence pattern for the job.
      *        </p>
      *        </li>
      * @see JobType
@@ -563,7 +563,7 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * <li>
      * <p>
      * SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the
-     * scheduleFrequency property to define the recurrence pattern for the job.
+     * scheduleFrequency property to specify the recurrence pattern for the job.
      * </p>
      * </li>
      * </ul>
@@ -579,7 +579,7 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      *         <li>
      *         <p>
      *         SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the
-     *         scheduleFrequency property to define the recurrence pattern for the job.
+     *         scheduleFrequency property to specify the recurrence pattern for the job.
      *         </p>
      *         </li>
      * @see JobType
@@ -603,7 +603,7 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * <li>
      * <p>
      * SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the
-     * scheduleFrequency property to define the recurrence pattern for the job.
+     * scheduleFrequency property to specify the recurrence pattern for the job.
      * </p>
      * </li>
      * </ul>
@@ -620,7 +620,7 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      *        <li>
      *        <p>
      *        SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the
-     *        scheduleFrequency property to define the recurrence pattern for the job.
+     *        scheduleFrequency property to specify the recurrence pattern for the job.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -646,7 +646,7 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * <li>
      * <p>
      * SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the
-     * scheduleFrequency property to define the recurrence pattern for the job.
+     * scheduleFrequency property to specify the recurrence pattern for the job.
      * </p>
      * </li>
      * </ul>
@@ -663,7 +663,7 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      *        <li>
      *        <p>
      *        SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the
-     *        scheduleFrequency property to define the recurrence pattern for the job.
+     *        scheduleFrequency property to specify the recurrence pattern for the job.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -826,9 +826,9 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -879,10 +879,9 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      *        in the recommended set when the run starts.
      *        </p>
      *        <p>
-     *        For information about individual managed data identifiers or to determine which ones are in the
-     *        recommended set, see <a
-     *        href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     *        identifiers</a> and <a
+     *        To learn about individual managed data identifiers or determine which ones are in the recommended set, see
+     *        <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     *        identifiers</a> or <a
      *        href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended
      *        managed data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * @see ManagedDataIdentifierSelector
@@ -937,9 +936,9 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -989,10 +988,9 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      *         are in the recommended set when the run starts.
      *         </p>
      *         <p>
-     *         For information about individual managed data identifiers or to determine which ones are in the
-     *         recommended set, see <a
-     *         href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     *         identifiers</a> and <a
+     *         To learn about individual managed data identifiers or determine which ones are in the recommended set,
+     *         see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed
+     *         data identifiers</a> or <a
      *         href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended
      *         managed data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * @see ManagedDataIdentifierSelector
@@ -1047,9 +1045,9 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -1100,10 +1098,9 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      *        in the recommended set when the run starts.
      *        </p>
      *        <p>
-     *        For information about individual managed data identifiers or to determine which ones are in the
-     *        recommended set, see <a
-     *        href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     *        identifiers</a> and <a
+     *        To learn about individual managed data identifiers or determine which ones are in the recommended set, see
+     *        <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     *        identifiers</a> or <a
      *        href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended
      *        managed data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1160,9 +1157,9 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      * when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -1213,10 +1210,9 @@ public class CreateClassificationJobRequest extends com.amazonaws.AmazonWebServi
      *        in the recommended set when the run starts.
      *        </p>
      *        <p>
-     *        For information about individual managed data identifiers or to determine which ones are in the
-     *        recommended set, see <a
-     *        href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     *        identifiers</a> and <a
+     *        To learn about individual managed data identifiers or determine which ones are in the recommended set, see
+     *        <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     *        identifiers</a> or <a
      *        href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended
      *        managed data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

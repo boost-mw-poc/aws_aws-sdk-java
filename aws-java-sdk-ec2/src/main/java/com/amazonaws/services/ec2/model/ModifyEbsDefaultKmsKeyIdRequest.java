@@ -28,9 +28,8 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
-     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
-     * must be <code>true</code>.
+     * The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your KMS key
+     * for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.
      * </p>
      * <p>
      * You can specify the KMS key using any of the following:
@@ -69,9 +68,8 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
-     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
-     * must be <code>true</code>.
+     * The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your KMS key
+     * for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.
      * </p>
      * <p>
      * You can specify the KMS key using any of the following:
@@ -107,9 +105,9 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
-     *        parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
-     *        the encrypted state must be <code>true</code>.</p>
+     *        The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your
+     *        KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be
+     *        <code>true</code>.</p>
      *        <p>
      *        You can specify the KMS key using any of the following:
      *        </p>
@@ -149,9 +147,8 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
-     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
-     * must be <code>true</code>.
+     * The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your KMS key
+     * for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.
      * </p>
      * <p>
      * You can specify the KMS key using any of the following:
@@ -186,9 +183,9 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      * Amazon EBS does not support asymmetric KMS keys.
      * </p>
      * 
-     * @return The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
-     *         parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
-     *         the encrypted state must be <code>true</code>.</p>
+     * @return The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your
+     *         KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be
+     *         <code>true</code>.</p>
      *         <p>
      *         You can specify the KMS key using any of the following:
      *         </p>
@@ -228,9 +225,8 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
-     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
-     * must be <code>true</code>.
+     * The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your KMS key
+     * for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.
      * </p>
      * <p>
      * You can specify the KMS key using any of the following:
@@ -266,9 +262,9 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
-     *        parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
-     *        the encrypted state must be <code>true</code>.</p>
+     *        The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your
+     *        KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be
+     *        <code>true</code>.</p>
      *        <p>
      *        You can specify the KMS key using any of the following:
      *        </p>

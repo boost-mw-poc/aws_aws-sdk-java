@@ -122,6 +122,10 @@ public class GetDataSourceResultJsonUnmarshaller implements Unmarshaller<GetData
                     context.nextToken();
                     getDataSourceResult.setSchedule(ScheduleConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("selfGrantStatus", targetDepth)) {
+                    context.nextToken();
+                    getDataSourceResult.setSelfGrantStatus(SelfGrantStatusOutputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     getDataSourceResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

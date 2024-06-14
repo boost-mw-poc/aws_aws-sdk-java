@@ -54,6 +54,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateEnvironmentRoleResult> associateEnvironmentRoleAsync(AssociateEnvironmentRoleRequest request) {
+
+        return associateEnvironmentRoleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateEnvironmentRoleResult> associateEnvironmentRoleAsync(AssociateEnvironmentRoleRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateEnvironmentRoleRequest, AssociateEnvironmentRoleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelMetadataGenerationRunResult> cancelMetadataGenerationRunAsync(CancelMetadataGenerationRunRequest request) {
 
         return cancelMetadataGenerationRunAsync(request, null);
@@ -153,6 +166,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<CreateEnvironmentResult> createEnvironmentAsync(CreateEnvironmentRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateEnvironmentRequest, CreateEnvironmentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEnvironmentActionResult> createEnvironmentActionAsync(CreateEnvironmentActionRequest request) {
+
+        return createEnvironmentActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEnvironmentActionResult> createEnvironmentActionAsync(CreateEnvironmentActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateEnvironmentActionRequest, CreateEnvironmentActionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -379,6 +405,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteEnvironmentActionResult> deleteEnvironmentActionAsync(DeleteEnvironmentActionRequest request) {
+
+        return deleteEnvironmentActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEnvironmentActionResult> deleteEnvironmentActionAsync(DeleteEnvironmentActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteEnvironmentActionRequest, DeleteEnvironmentActionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteEnvironmentBlueprintConfigurationResult> deleteEnvironmentBlueprintConfigurationAsync(
             DeleteEnvironmentBlueprintConfigurationRequest request) {
 
@@ -537,6 +576,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateEnvironmentRoleResult> disassociateEnvironmentRoleAsync(DisassociateEnvironmentRoleRequest request) {
+
+        return disassociateEnvironmentRoleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateEnvironmentRoleResult> disassociateEnvironmentRoleAsync(DisassociateEnvironmentRoleRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateEnvironmentRoleRequest, DisassociateEnvironmentRoleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAssetResult> getAssetAsync(GetAssetRequest request) {
 
         return getAssetAsync(request, null);
@@ -610,6 +662,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<GetEnvironmentResult> getEnvironmentAsync(GetEnvironmentRequest request,
             com.amazonaws.handlers.AsyncHandler<GetEnvironmentRequest, GetEnvironmentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnvironmentActionResult> getEnvironmentActionAsync(GetEnvironmentActionRequest request) {
+
+        return getEnvironmentActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnvironmentActionResult> getEnvironmentActionAsync(GetEnvironmentActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEnvironmentActionRequest, GetEnvironmentActionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -898,6 +963,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<ListDomainsResult> listDomainsAsync(ListDomainsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListDomainsRequest, ListDomainsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentActionsResult> listEnvironmentActionsAsync(ListEnvironmentActionsRequest request) {
+
+        return listEnvironmentActionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentActionsResult> listEnvironmentActionsAsync(ListEnvironmentActionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEnvironmentActionsRequest, ListEnvironmentActionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1305,6 +1383,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     @Override
     public java.util.concurrent.Future<UpdateEnvironmentResult> updateEnvironmentAsync(UpdateEnvironmentRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateEnvironmentRequest, UpdateEnvironmentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEnvironmentActionResult> updateEnvironmentActionAsync(UpdateEnvironmentActionRequest request) {
+
+        return updateEnvironmentActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEnvironmentActionResult> updateEnvironmentActionAsync(UpdateEnvironmentActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEnvironmentActionRequest, UpdateEnvironmentActionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

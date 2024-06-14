@@ -55,6 +55,14 @@ public class SearchResourcesSimpleCriterion implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * AUTOMATED_DISCOVERY_MONITORING_STATUS - A string that represents an enumerated value that Macie defines for the
+     * <a href=
+     * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketmetadata-automateddiscoverymonitoringstatus"
+     * >BucketMetadata.automatedDiscoveryMonitoringStatus</a> property of an S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * S3_BUCKET_EFFECTIVE_PERMISSION - A string that represents an enumerated value that Macie defines for the <a href=
      * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketpublicaccess-effectivepermission"
      * >BucketPublicAccess.effectivePermission</a> property of an S3 bucket.
@@ -211,6 +219,14 @@ public class SearchResourcesSimpleCriterion implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * AUTOMATED_DISCOVERY_MONITORING_STATUS - A string that represents an enumerated value that Macie defines for the
+     * <a href=
+     * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketmetadata-automateddiscoverymonitoringstatus"
+     * >BucketMetadata.automatedDiscoveryMonitoringStatus</a> property of an S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * S3_BUCKET_EFFECTIVE_PERMISSION - A string that represents an enumerated value that Macie defines for the <a href=
      * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketpublicaccess-effectivepermission"
      * >BucketPublicAccess.effectivePermission</a> property of an S3 bucket.
@@ -240,6 +256,14 @@ public class SearchResourcesSimpleCriterion implements Serializable, Cloneable, 
      *         <p>
      *         ACCOUNT_ID - A string that represents the unique identifier for the Amazon Web Services account that owns
      *         the resource.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         AUTOMATED_DISCOVERY_MONITORING_STATUS - A string that represents an enumerated value that Macie defines
+     *         for the <a href=
+     *         "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketmetadata-automateddiscoverymonitoringstatus"
+     *         >BucketMetadata.automatedDiscoveryMonitoringStatus</a> property of an S3 bucket.
      *         </p>
      *         </li>
      *         <li>
@@ -287,6 +311,14 @@ public class SearchResourcesSimpleCriterion implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * AUTOMATED_DISCOVERY_MONITORING_STATUS - A string that represents an enumerated value that Macie defines for the
+     * <a href=
+     * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketmetadata-automateddiscoverymonitoringstatus"
+     * >BucketMetadata.automatedDiscoveryMonitoringStatus</a> property of an S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * S3_BUCKET_EFFECTIVE_PERMISSION - A string that represents an enumerated value that Macie defines for the <a href=
      * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketpublicaccess-effectivepermission"
      * >BucketPublicAccess.effectivePermission</a> property of an S3 bucket.
@@ -317,6 +349,14 @@ public class SearchResourcesSimpleCriterion implements Serializable, Cloneable, 
      *        <p>
      *        ACCOUNT_ID - A string that represents the unique identifier for the Amazon Web Services account that owns
      *        the resource.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        AUTOMATED_DISCOVERY_MONITORING_STATUS - A string that represents an enumerated value that Macie defines
+     *        for the <a href=
+     *        "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketmetadata-automateddiscoverymonitoringstatus"
+     *        >BucketMetadata.automatedDiscoveryMonitoringStatus</a> property of an S3 bucket.
      *        </p>
      *        </li>
      *        <li>
@@ -368,6 +408,14 @@ public class SearchResourcesSimpleCriterion implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * AUTOMATED_DISCOVERY_MONITORING_STATUS - A string that represents an enumerated value that Macie defines for the
+     * <a href=
+     * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketmetadata-automateddiscoverymonitoringstatus"
+     * >BucketMetadata.automatedDiscoveryMonitoringStatus</a> property of an S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * S3_BUCKET_EFFECTIVE_PERMISSION - A string that represents an enumerated value that Macie defines for the <a href=
      * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketpublicaccess-effectivepermission"
      * >BucketPublicAccess.effectivePermission</a> property of an S3 bucket.
@@ -403,6 +451,14 @@ public class SearchResourcesSimpleCriterion implements Serializable, Cloneable, 
      *        <p>
      *        ACCOUNT_ID - A string that represents the unique identifier for the Amazon Web Services account that owns
      *        the resource.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        AUTOMATED_DISCOVERY_MONITORING_STATUS - A string that represents an enumerated value that Macie defines
+     *        for the <a href=
+     *        "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketmetadata-automateddiscoverymonitoringstatus"
+     *        >BucketMetadata.automatedDiscoveryMonitoringStatus</a> property of an S3 bucket.
      *        </p>
      *        </li>
      *        <li>
@@ -456,6 +512,14 @@ public class SearchResourcesSimpleCriterion implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * AUTOMATED_DISCOVERY_MONITORING_STATUS - A string that represents an enumerated value that Macie defines for the
+     * <a href=
+     * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketmetadata-automateddiscoverymonitoringstatus"
+     * >BucketMetadata.automatedDiscoveryMonitoringStatus</a> property of an S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * S3_BUCKET_EFFECTIVE_PERMISSION - A string that represents an enumerated value that Macie defines for the <a href=
      * "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketpublicaccess-effectivepermission"
      * >BucketPublicAccess.effectivePermission</a> property of an S3 bucket.
@@ -486,6 +550,14 @@ public class SearchResourcesSimpleCriterion implements Serializable, Cloneable, 
      *        <p>
      *        ACCOUNT_ID - A string that represents the unique identifier for the Amazon Web Services account that owns
      *        the resource.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        AUTOMATED_DISCOVERY_MONITORING_STATUS - A string that represents an enumerated value that Macie defines
+     *        for the <a href=
+     *        "https://docs.aws.amazon.com/macie/latest/APIReference/datasources-s3.html#datasources-s3-prop-bucketmetadata-automateddiscoverymonitoringstatus"
+     *        >BucketMetadata.automatedDiscoveryMonitoringStatus</a> property of an S3 bucket.
      *        </p>
      *        </li>
      *        <li>

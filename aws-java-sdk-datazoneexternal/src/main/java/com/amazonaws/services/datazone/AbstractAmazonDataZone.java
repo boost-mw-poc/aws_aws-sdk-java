@@ -38,6 +38,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public AssociateEnvironmentRoleResult associateEnvironmentRole(AssociateEnvironmentRoleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CancelMetadataGenerationRunResult cancelMetadataGenerationRun(CancelMetadataGenerationRunRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -74,6 +79,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
 
     @Override
     public CreateEnvironmentResult createEnvironment(CreateEnvironmentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateEnvironmentActionResult createEnvironmentAction(CreateEnvironmentActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -163,6 +173,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public DeleteEnvironmentActionResult deleteEnvironmentAction(DeleteEnvironmentActionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteEnvironmentBlueprintConfigurationResult deleteEnvironmentBlueprintConfiguration(DeleteEnvironmentBlueprintConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -223,6 +238,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public DisassociateEnvironmentRoleResult disassociateEnvironmentRole(DisassociateEnvironmentRoleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAssetResult getAsset(GetAssetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -249,6 +269,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
 
     @Override
     public GetEnvironmentResult getEnvironment(GetEnvironmentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetEnvironmentActionResult getEnvironmentAction(GetEnvironmentActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -359,6 +384,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
 
     @Override
     public ListDomainsResult listDomains(ListDomainsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEnvironmentActionsResult listEnvironmentActions(ListEnvironmentActionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -514,6 +544,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
 
     @Override
     public UpdateEnvironmentResult updateEnvironment(UpdateEnvironmentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEnvironmentActionResult updateEnvironmentAction(UpdateEnvironmentActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -20,8 +20,8 @@ import javax.annotation.Generated;
  * Indicates whether your instance is configured for hibernation. This parameter is valid only if the instance meets the
  * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
  * prerequisites</a>. For more information, see <a
- * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
- * <i>Amazon EC2 User Guide</i>.
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a> in
+ * the <i>Amazon EC2 User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/HibernationOptionsRequest" target="_top">AWS API

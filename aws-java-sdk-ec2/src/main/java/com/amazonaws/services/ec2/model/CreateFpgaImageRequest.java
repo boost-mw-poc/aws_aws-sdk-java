@@ -52,8 +52,7 @@ public class CreateFpgaImageRequest extends AmazonWebServiceRequest implements S
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      * Idempotency</a>.
      * </p>
      */
@@ -228,16 +227,14 @@ public class CreateFpgaImageRequest extends AmazonWebServiceRequest implements S
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      * Idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring Idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -247,15 +244,13 @@ public class CreateFpgaImageRequest extends AmazonWebServiceRequest implements S
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      * Idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     *         Idempotency</a>.
+     *         href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring Idempotency</a>.
      */
 
     public String getClientToken() {
@@ -265,16 +260,14 @@ public class CreateFpgaImageRequest extends AmazonWebServiceRequest implements S
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      * Idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring Idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

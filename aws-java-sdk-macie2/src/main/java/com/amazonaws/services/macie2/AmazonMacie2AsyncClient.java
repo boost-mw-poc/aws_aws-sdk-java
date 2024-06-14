@@ -141,6 +141,41 @@ public class AmazonMacie2AsyncClient extends AmazonMacie2Client implements Amazo
     }
 
     @Override
+    public java.util.concurrent.Future<BatchUpdateAutomatedDiscoveryAccountsResult> batchUpdateAutomatedDiscoveryAccountsAsync(
+            BatchUpdateAutomatedDiscoveryAccountsRequest request) {
+
+        return batchUpdateAutomatedDiscoveryAccountsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateAutomatedDiscoveryAccountsResult> batchUpdateAutomatedDiscoveryAccountsAsync(
+            final BatchUpdateAutomatedDiscoveryAccountsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchUpdateAutomatedDiscoveryAccountsRequest, BatchUpdateAutomatedDiscoveryAccountsResult> asyncHandler) {
+        final BatchUpdateAutomatedDiscoveryAccountsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchUpdateAutomatedDiscoveryAccountsResult>() {
+            @Override
+            public BatchUpdateAutomatedDiscoveryAccountsResult call() throws Exception {
+                BatchUpdateAutomatedDiscoveryAccountsResult result = null;
+
+                try {
+                    result = executeBatchUpdateAutomatedDiscoveryAccounts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAllowListResult> createAllowListAsync(CreateAllowListRequest request) {
 
         return createAllowListAsync(request, null);
@@ -1661,6 +1696,40 @@ public class AmazonMacie2AsyncClient extends AmazonMacie2Client implements Amazo
 
                 try {
                     result = executeListAllowLists(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutomatedDiscoveryAccountsResult> listAutomatedDiscoveryAccountsAsync(ListAutomatedDiscoveryAccountsRequest request) {
+
+        return listAutomatedDiscoveryAccountsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutomatedDiscoveryAccountsResult> listAutomatedDiscoveryAccountsAsync(
+            final ListAutomatedDiscoveryAccountsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAutomatedDiscoveryAccountsRequest, ListAutomatedDiscoveryAccountsResult> asyncHandler) {
+        final ListAutomatedDiscoveryAccountsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAutomatedDiscoveryAccountsResult>() {
+            @Override
+            public ListAutomatedDiscoveryAccountsResult call() throws Exception {
+                ListAutomatedDiscoveryAccountsResult result = null;
+
+                try {
+                    result = executeListAutomatedDiscoveryAccounts(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -1,4 +1,25 @@
-# __1.12.743__ __2024-06-13__
+# __1.12.744__ __2024-06-14__
+## __AWS Elemental MediaConvert__
+  - ### Features
+    - This release adds the ability to search for historical job records within the management console using a search box and/or via the SDK/CLI with partial string matching search on input file name.
+
+## __Amazon DataZone__
+  - ### Features
+    - This release introduces a new default service blueprint for custom environment creation.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Documentation updates for Amazon EC2.
+
+## __Amazon Macie 2__
+  - ### Features
+    - This release adds support for managing the status of automated sensitive data discovery for individual accounts in an organization, and determining whether individual S3 buckets are included in the scope of the analyses.
+
+## __Amazon Route 53 Domains__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+# __1.12.743__ __2024-06-14__
 ## __AWS CloudHSM V2__
   - ### Features
     - Added support for hsm type hsm2m.medium. Added supported for creating a cluster in FIPS or NON_FIPS mode.

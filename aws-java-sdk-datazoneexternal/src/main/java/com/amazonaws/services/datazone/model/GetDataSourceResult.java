@@ -134,6 +134,12 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
     private ScheduleConfiguration schedule;
     /**
      * <p>
+     * Specifies the status of the self-granting functionality.
+     * </p>
+     */
+    private SelfGrantStatusOutput selfGrantStatus;
+    /**
+     * <p>
      * The status of the data source.
      * </p>
      */
@@ -961,6 +967,46 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
+     * Specifies the status of the self-granting functionality.
+     * </p>
+     * 
+     * @param selfGrantStatus
+     *        Specifies the status of the self-granting functionality.
+     */
+
+    public void setSelfGrantStatus(SelfGrantStatusOutput selfGrantStatus) {
+        this.selfGrantStatus = selfGrantStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies the status of the self-granting functionality.
+     * </p>
+     * 
+     * @return Specifies the status of the self-granting functionality.
+     */
+
+    public SelfGrantStatusOutput getSelfGrantStatus() {
+        return this.selfGrantStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies the status of the self-granting functionality.
+     * </p>
+     * 
+     * @param selfGrantStatus
+     *        Specifies the status of the self-granting functionality.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetDataSourceResult withSelfGrantStatus(SelfGrantStatusOutput selfGrantStatus) {
+        setSelfGrantStatus(selfGrantStatus);
+        return this;
+    }
+
+    /**
+     * <p>
      * The status of the data source.
      * </p>
      * 
@@ -1146,6 +1192,8 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
             sb.append("Recommendation: ").append(getRecommendation()).append(",");
         if (getSchedule() != null)
             sb.append("Schedule: ").append("***Sensitive Data Redacted***").append(",");
+        if (getSelfGrantStatus() != null)
+            sb.append("SelfGrantStatus: ").append(getSelfGrantStatus()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getType() != null)
@@ -1238,6 +1286,10 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getSchedule() != null && other.getSchedule().equals(this.getSchedule()) == false)
             return false;
+        if (other.getSelfGrantStatus() == null ^ this.getSelfGrantStatus() == null)
+            return false;
+        if (other.getSelfGrantStatus() != null && other.getSelfGrantStatus().equals(this.getSelfGrantStatus()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -1276,6 +1328,7 @@ public class GetDataSourceResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getPublishOnImport() == null) ? 0 : getPublishOnImport().hashCode());
         hashCode = prime * hashCode + ((getRecommendation() == null) ? 0 : getRecommendation().hashCode());
         hashCode = prime * hashCode + ((getSchedule() == null) ? 0 : getSchedule().hashCode());
+        hashCode = prime * hashCode + ((getSelfGrantStatus() == null) ? 0 : getSelfGrantStatus().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());

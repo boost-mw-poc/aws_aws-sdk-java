@@ -19,7 +19,7 @@ import javax.annotation.Generated;
  * <note>
  * <p>
  * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require graphics acceleration, we
- * recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+ * recommend that you use Amazon EC2 G4, G5, or G6 instances.
  * </p>
  * </note>
  * <p>
@@ -34,30 +34,18 @@ public class ElasticGpuSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of Elastic Graphics accelerator. For more information about the values to specify for <code>Type</code>,
-     * see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics"
-     * >Elastic Graphics Basics</a>, specifically the Elastic Graphics accelerator column, in the <i>Amazon Elastic
-     * Compute Cloud User Guide for Windows Instances</i>.
+     * The type of Elastic Graphics accelerator.
      * </p>
      */
     private String type;
 
     /**
      * <p>
-     * The type of Elastic Graphics accelerator. For more information about the values to specify for <code>Type</code>,
-     * see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics"
-     * >Elastic Graphics Basics</a>, specifically the Elastic Graphics accelerator column, in the <i>Amazon Elastic
-     * Compute Cloud User Guide for Windows Instances</i>.
+     * The type of Elastic Graphics accelerator.
      * </p>
      * 
      * @param type
-     *        The type of Elastic Graphics accelerator. For more information about the values to specify for
-     *        <code>Type</code>, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics"
-     *        >Elastic Graphics Basics</a>, specifically the Elastic Graphics accelerator column, in the <i>Amazon
-     *        Elastic Compute Cloud User Guide for Windows Instances</i>.
+     *        The type of Elastic Graphics accelerator.
      */
 
     public void setType(String type) {
@@ -66,18 +54,10 @@ public class ElasticGpuSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of Elastic Graphics accelerator. For more information about the values to specify for <code>Type</code>,
-     * see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics"
-     * >Elastic Graphics Basics</a>, specifically the Elastic Graphics accelerator column, in the <i>Amazon Elastic
-     * Compute Cloud User Guide for Windows Instances</i>.
+     * The type of Elastic Graphics accelerator.
      * </p>
      * 
-     * @return The type of Elastic Graphics accelerator. For more information about the values to specify for
-     *         <code>Type</code>, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics"
-     *         >Elastic Graphics Basics</a>, specifically the Elastic Graphics accelerator column, in the <i>Amazon
-     *         Elastic Compute Cloud User Guide for Windows Instances</i>.
+     * @return The type of Elastic Graphics accelerator.
      */
 
     public String getType() {
@@ -86,19 +66,11 @@ public class ElasticGpuSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of Elastic Graphics accelerator. For more information about the values to specify for <code>Type</code>,
-     * see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics"
-     * >Elastic Graphics Basics</a>, specifically the Elastic Graphics accelerator column, in the <i>Amazon Elastic
-     * Compute Cloud User Guide for Windows Instances</i>.
+     * The type of Elastic Graphics accelerator.
      * </p>
      * 
      * @param type
-     *        The type of Elastic Graphics accelerator. For more information about the values to specify for
-     *        <code>Type</code>, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics"
-     *        >Elastic Graphics Basics</a>, specifically the Elastic Graphics accelerator column, in the <i>Amazon
-     *        Elastic Compute Cloud User Guide for Windows Instances</i>.
+     *        The type of Elastic Graphics accelerator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

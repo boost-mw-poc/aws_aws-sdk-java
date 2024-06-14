@@ -36,14 +36,15 @@ public class FindingActor implements Serializable, Cloneable, StructuredPojo {
     private DomainDetails domainDetails;
     /**
      * <p>
-     * The IP address of the device that the entity used to perform the action on the affected resource. This object
-     * also provides information such as the owner and geographic location for the IP address.
+     * The IP address and related details about the device that the entity used to perform the action on the affected
+     * resource. The details can include information such as the owner and geographic location of the IP address.
      * </p>
      */
     private IpAddressDetails ipAddressDetails;
     /**
      * <p>
-     * The type and other characteristics of the entity that performed the action on the affected resource.
+     * The type and other characteristics of the entity that performed the action on the affected resource. This value
+     * is null if the action was performed by an anonymous (unauthenticated) entity.
      * </p>
      */
     private UserIdentity userIdentity;
@@ -90,13 +91,14 @@ public class FindingActor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IP address of the device that the entity used to perform the action on the affected resource. This object
-     * also provides information such as the owner and geographic location for the IP address.
+     * The IP address and related details about the device that the entity used to perform the action on the affected
+     * resource. The details can include information such as the owner and geographic location of the IP address.
      * </p>
      * 
      * @param ipAddressDetails
-     *        The IP address of the device that the entity used to perform the action on the affected resource. This
-     *        object also provides information such as the owner and geographic location for the IP address.
+     *        The IP address and related details about the device that the entity used to perform the action on the
+     *        affected resource. The details can include information such as the owner and geographic location of the IP
+     *        address.
      */
 
     public void setIpAddressDetails(IpAddressDetails ipAddressDetails) {
@@ -105,12 +107,13 @@ public class FindingActor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IP address of the device that the entity used to perform the action on the affected resource. This object
-     * also provides information such as the owner and geographic location for the IP address.
+     * The IP address and related details about the device that the entity used to perform the action on the affected
+     * resource. The details can include information such as the owner and geographic location of the IP address.
      * </p>
      * 
-     * @return The IP address of the device that the entity used to perform the action on the affected resource. This
-     *         object also provides information such as the owner and geographic location for the IP address.
+     * @return The IP address and related details about the device that the entity used to perform the action on the
+     *         affected resource. The details can include information such as the owner and geographic location of the
+     *         IP address.
      */
 
     public IpAddressDetails getIpAddressDetails() {
@@ -119,13 +122,14 @@ public class FindingActor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IP address of the device that the entity used to perform the action on the affected resource. This object
-     * also provides information such as the owner and geographic location for the IP address.
+     * The IP address and related details about the device that the entity used to perform the action on the affected
+     * resource. The details can include information such as the owner and geographic location of the IP address.
      * </p>
      * 
      * @param ipAddressDetails
-     *        The IP address of the device that the entity used to perform the action on the affected resource. This
-     *        object also provides information such as the owner and geographic location for the IP address.
+     *        The IP address and related details about the device that the entity used to perform the action on the
+     *        affected resource. The details can include information such as the owner and geographic location of the IP
+     *        address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,11 +140,13 @@ public class FindingActor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type and other characteristics of the entity that performed the action on the affected resource.
+     * The type and other characteristics of the entity that performed the action on the affected resource. This value
+     * is null if the action was performed by an anonymous (unauthenticated) entity.
      * </p>
      * 
      * @param userIdentity
-     *        The type and other characteristics of the entity that performed the action on the affected resource.
+     *        The type and other characteristics of the entity that performed the action on the affected resource. This
+     *        value is null if the action was performed by an anonymous (unauthenticated) entity.
      */
 
     public void setUserIdentity(UserIdentity userIdentity) {
@@ -149,10 +155,12 @@ public class FindingActor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type and other characteristics of the entity that performed the action on the affected resource.
+     * The type and other characteristics of the entity that performed the action on the affected resource. This value
+     * is null if the action was performed by an anonymous (unauthenticated) entity.
      * </p>
      * 
-     * @return The type and other characteristics of the entity that performed the action on the affected resource.
+     * @return The type and other characteristics of the entity that performed the action on the affected resource. This
+     *         value is null if the action was performed by an anonymous (unauthenticated) entity.
      */
 
     public UserIdentity getUserIdentity() {
@@ -161,11 +169,13 @@ public class FindingActor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type and other characteristics of the entity that performed the action on the affected resource.
+     * The type and other characteristics of the entity that performed the action on the affected resource. This value
+     * is null if the action was performed by an anonymous (unauthenticated) entity.
      * </p>
      * 
      * @param userIdentity
-     *        The type and other characteristics of the entity that performed the action on the affected resource.
+     *        The type and other characteristics of the entity that performed the action on the affected resource. This
+     *        value is null if the action was performed by an anonymous (unauthenticated) entity.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

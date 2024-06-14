@@ -172,7 +172,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
      * A security group connection tracking specification that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private ConnectionTrackingSpecification connectionTrackingSpecification;
@@ -1339,14 +1339,14 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
      * A security group connection tracking specification that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param connectionTrackingSpecification
      *        A security group connection tracking specification that enables you to set the timeout for connection
      *        tracking on an Elastic network interface. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     *        >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setConnectionTrackingSpecification(ConnectionTrackingSpecification connectionTrackingSpecification) {
@@ -1358,13 +1358,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
      * A security group connection tracking specification that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return A security group connection tracking specification that enables you to set the timeout for connection
      *         tracking on an Elastic network interface. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     *         >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public ConnectionTrackingSpecification getConnectionTrackingSpecification() {
@@ -1376,14 +1376,14 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecification implements Seri
      * A security group connection tracking specification that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param connectionTrackingSpecification
      *        A security group connection tracking specification that enables you to set the timeout for connection
      *        tracking on an Elastic network interface. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     *        >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

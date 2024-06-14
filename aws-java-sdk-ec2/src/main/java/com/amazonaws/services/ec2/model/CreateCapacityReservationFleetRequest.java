@@ -31,7 +31,7 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to use.
      * Currently, only the <code>prioritized</code> allocation strategy is supported. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"> Allocation
-     * strategy</a> in the Amazon EC2 User Guide.
+     * strategy</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>prioritized</code>
@@ -80,8 +80,8 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      * the instance type weights that you assign to each instance type used by the Fleet determine the number of
      * instances for which the Fleet reserves capacity. Both values are based on units that make sense for your
      * workload. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Integer totalTargetCapacity;
@@ -123,7 +123,7 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to use.
      * Currently, only the <code>prioritized</code> allocation strategy is supported. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"> Allocation
-     * strategy</a> in the Amazon EC2 User Guide.
+     * strategy</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>prioritized</code>
@@ -134,7 +134,7 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      *        use. Currently, only the <code>prioritized</code> allocation strategy is supported. For more information,
      *        see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">
-     *        Allocation strategy</a> in the Amazon EC2 User Guide.</p>
+     *        Allocation strategy</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        Valid values: <code>prioritized</code>
      */
@@ -148,7 +148,7 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to use.
      * Currently, only the <code>prioritized</code> allocation strategy is supported. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"> Allocation
-     * strategy</a> in the Amazon EC2 User Guide.
+     * strategy</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>prioritized</code>
@@ -158,7 +158,7 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      *         use. Currently, only the <code>prioritized</code> allocation strategy is supported. For more information,
      *         see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">
-     *         Allocation strategy</a> in the Amazon EC2 User Guide.</p>
+     *         Allocation strategy</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *         <p>
      *         Valid values: <code>prioritized</code>
      */
@@ -172,7 +172,7 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to use.
      * Currently, only the <code>prioritized</code> allocation strategy is supported. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"> Allocation
-     * strategy</a> in the Amazon EC2 User Guide.
+     * strategy</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>prioritized</code>
@@ -183,7 +183,7 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      *        use. Currently, only the <code>prioritized</code> allocation strategy is supported. For more information,
      *        see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">
-     *        Allocation strategy</a> in the Amazon EC2 User Guide.</p>
+     *        Allocation strategy</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        Valid values: <code>prioritized</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -507,8 +507,8 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      * the instance type weights that you assign to each instance type used by the Fleet determine the number of
      * instances for which the Fleet reserves capacity. Both values are based on units that make sense for your
      * workload. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param totalTargetCapacity
@@ -516,8 +516,8 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      *        with the instance type weights that you assign to each instance type used by the Fleet determine the
      *        number of instances for which the Fleet reserves capacity. Both values are based on units that make sense
      *        for your workload. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setTotalTargetCapacity(Integer totalTargetCapacity) {
@@ -530,16 +530,16 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      * the instance type weights that you assign to each instance type used by the Fleet determine the number of
      * instances for which the Fleet reserves capacity. Both values are based on units that make sense for your
      * workload. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The total number of capacity units to be reserved by the Capacity Reservation Fleet. This value, together
      *         with the instance type weights that you assign to each instance type used by the Fleet determine the
      *         number of instances for which the Fleet reserves capacity. Both values are based on units that make sense
      *         for your workload. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total
-     *         target capacity</a> in the Amazon EC2 User Guide.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
+     *         target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Integer getTotalTargetCapacity() {
@@ -552,8 +552,8 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      * the instance type weights that you assign to each instance type used by the Fleet determine the number of
      * instances for which the Fleet reserves capacity. Both values are based on units that make sense for your
      * workload. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param totalTargetCapacity
@@ -561,8 +561,8 @@ public class CreateCapacityReservationFleetRequest extends AmazonWebServiceReque
      *        with the instance type weights that you assign to each instance type used by the Fleet determine the
      *        number of instances for which the Fleet reserves capacity. Both values are based on units that make sense
      *        for your workload. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -29,6 +29,8 @@ public class MatchingBucketMarshaller {
 
     private static final MarshallingInfo<String> ACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("accountId").build();
+    private static final MarshallingInfo<String> AUTOMATEDDISCOVERYMONITORINGSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("automatedDiscoveryMonitoringStatus").build();
     private static final MarshallingInfo<String> BUCKETNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bucketName").build();
     private static final MarshallingInfo<Long> CLASSIFIABLEOBJECTCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
@@ -75,6 +77,7 @@ public class MatchingBucketMarshaller {
 
         try {
             protocolMarshaller.marshall(matchingBucket.getAccountId(), ACCOUNTID_BINDING);
+            protocolMarshaller.marshall(matchingBucket.getAutomatedDiscoveryMonitoringStatus(), AUTOMATEDDISCOVERYMONITORINGSTATUS_BINDING);
             protocolMarshaller.marshall(matchingBucket.getBucketName(), BUCKETNAME_BINDING);
             protocolMarshaller.marshall(matchingBucket.getClassifiableObjectCount(), CLASSIFIABLEOBJECTCOUNT_BINDING);
             protocolMarshaller.marshall(matchingBucket.getClassifiableSizeInBytes(), CLASSIFIABLESIZEINBYTES_BINDING);

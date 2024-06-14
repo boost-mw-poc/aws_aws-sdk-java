@@ -33,7 +33,7 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
     private String description;
     /**
      * <p>
-     * The managed data identifiers to explicitly exclude (not use) when analyzing data.
+     * The managed data identifiers to explicitly exclude (not use) when performing automated sensitive data discovery.
      * </p>
      * <p>
      * To exclude an allow list or custom data identifier that's currently included by the template, update the values
@@ -50,8 +50,8 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
     private String id;
     /**
      * <p>
-     * The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when analyzing
-     * data.
+     * The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when
+     * performing automated sensitive data discovery.
      * </p>
      */
     private SensitivityInspectionTemplateIncludes includes;
@@ -98,7 +98,7 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The managed data identifiers to explicitly exclude (not use) when analyzing data.
+     * The managed data identifiers to explicitly exclude (not use) when performing automated sensitive data discovery.
      * </p>
      * <p>
      * To exclude an allow list or custom data identifier that's currently included by the template, update the values
@@ -108,7 +108,8 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
      * 
      * @param excludes
      *        <p>
-     *        The managed data identifiers to explicitly exclude (not use) when analyzing data.
+     *        The managed data identifiers to explicitly exclude (not use) when performing automated sensitive data
+     *        discovery.
      *        </p>
      *        <p>
      *        To exclude an allow list or custom data identifier that's currently included by the template, update the
@@ -123,7 +124,7 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The managed data identifiers to explicitly exclude (not use) when analyzing data.
+     * The managed data identifiers to explicitly exclude (not use) when performing automated sensitive data discovery.
      * </p>
      * <p>
      * To exclude an allow list or custom data identifier that's currently included by the template, update the values
@@ -132,7 +133,8 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
      * </p>
      * 
      * @return <p>
-     *         The managed data identifiers to explicitly exclude (not use) when analyzing data.
+     *         The managed data identifiers to explicitly exclude (not use) when performing automated sensitive data
+     *         discovery.
      *         </p>
      *         <p>
      *         To exclude an allow list or custom data identifier that's currently included by the template, update the
@@ -147,7 +149,7 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The managed data identifiers to explicitly exclude (not use) when analyzing data.
+     * The managed data identifiers to explicitly exclude (not use) when performing automated sensitive data discovery.
      * </p>
      * <p>
      * To exclude an allow list or custom data identifier that's currently included by the template, update the values
@@ -157,7 +159,8 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
      * 
      * @param excludes
      *        <p>
-     *        The managed data identifiers to explicitly exclude (not use) when analyzing data.
+     *        The managed data identifiers to explicitly exclude (not use) when performing automated sensitive data
+     *        discovery.
      *        </p>
      *        <p>
      *        To exclude an allow list or custom data identifier that's currently included by the template, update the
@@ -214,13 +217,13 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when analyzing
-     * data.
+     * The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when
+     * performing automated sensitive data discovery.
      * </p>
      * 
      * @param includes
      *        The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when
-     *        analyzing data.
+     *        performing automated sensitive data discovery.
      */
 
     public void setIncludes(SensitivityInspectionTemplateIncludes includes) {
@@ -229,12 +232,12 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when analyzing
-     * data.
+     * The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when
+     * performing automated sensitive data discovery.
      * </p>
      * 
      * @return The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when
-     *         analyzing data.
+     *         performing automated sensitive data discovery.
      */
 
     public SensitivityInspectionTemplateIncludes getIncludes() {
@@ -243,13 +246,13 @@ public class UpdateSensitivityInspectionTemplateRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when analyzing
-     * data.
+     * The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when
+     * performing automated sensitive data discovery.
      * </p>
      * 
      * @param includes
      *        The allow lists, custom data identifiers, and managed data identifiers to explicitly include (use) when
-     *        analyzing data.
+     *        performing automated sensitive data discovery.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

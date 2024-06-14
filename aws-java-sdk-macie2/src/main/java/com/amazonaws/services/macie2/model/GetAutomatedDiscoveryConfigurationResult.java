@@ -26,63 +26,141 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The unique identifier for the classification scope that's used when performing automated sensitive data discovery
-     * for the account. The classification scope specifies S3 buckets to exclude from automated sensitive data
-     * discovery.
+     * Specifies whether automated sensitive data discovery is enabled automatically for accounts in the organization.
+     * Possible values are: ALL, enable it for all existing accounts and new member accounts; NEW, enable it only for
+     * new member accounts; and, NONE, don't enable it for any accounts.
+     * </p>
+     */
+    private String autoEnableOrganizationMembers;
+    /**
+     * <p>
+     * The unique identifier for the classification scope that's used when performing automated sensitive data
+     * discovery. The classification scope specifies S3 buckets to exclude from analyses.
      * </p>
      */
     private String classificationScopeId;
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most recently
-     * disabled for the account. This value is null if automated sensitive data discovery wasn't enabled and
-     * subsequently disabled for the account.
+     * disabled. This value is null if automated sensitive data discovery is currently enabled.
      * </p>
      */
     private java.util.Date disabledAt;
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was initially
-     * enabled for the account. This value is null if automated sensitive data discovery has never been enabled for the
-     * account.
+     * enabled. This value is null if automated sensitive data discovery has never been enabled.
      * </p>
      */
     private java.util.Date firstEnabledAt;
     /**
      * <p>
-     * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most recently
-     * enabled or disabled for the account.
+     * The date and time, in UTC and extended ISO 8601 format, when the configuration settings or status of automated
+     * sensitive data discovery was most recently changed.
      * </p>
      */
     private java.util.Date lastUpdatedAt;
     /**
      * <p>
      * The unique identifier for the sensitivity inspection template that's used when performing automated sensitive
-     * data discovery for the account. The template specifies which allow lists, custom data identifiers, and managed
-     * data identifiers to use when analyzing data.
+     * data discovery. The template specifies which allow lists, custom data identifiers, and managed data identifiers
+     * to use when analyzing data.
      * </p>
      */
     private String sensitivityInspectionTemplateId;
     /**
      * <p>
-     * The current status of the automated sensitive data discovery configuration for the account. Possible values are:
-     * ENABLED, use the specified settings to perform automated sensitive data discovery activities for the account;
-     * and, DISABLED, don't perform automated sensitive data discovery activities for the account.
+     * The current status of automated sensitive data discovery for the organization or account. Possible values are:
+     * ENABLED, use the specified settings to perform automated sensitive data discovery activities; and, DISABLED,
+     * don't perform automated sensitive data discovery activities.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The unique identifier for the classification scope that's used when performing automated sensitive data discovery
-     * for the account. The classification scope specifies S3 buckets to exclude from automated sensitive data
-     * discovery.
+     * Specifies whether automated sensitive data discovery is enabled automatically for accounts in the organization.
+     * Possible values are: ALL, enable it for all existing accounts and new member accounts; NEW, enable it only for
+     * new member accounts; and, NONE, don't enable it for any accounts.
+     * </p>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Specifies whether automated sensitive data discovery is enabled automatically for accounts in the
+     *        organization. Possible values are: ALL, enable it for all existing accounts and new member accounts; NEW,
+     *        enable it only for new member accounts; and, NONE, don't enable it for any accounts.
+     * @see AutoEnableMode
+     */
+
+    public void setAutoEnableOrganizationMembers(String autoEnableOrganizationMembers) {
+        this.autoEnableOrganizationMembers = autoEnableOrganizationMembers;
+    }
+
+    /**
+     * <p>
+     * Specifies whether automated sensitive data discovery is enabled automatically for accounts in the organization.
+     * Possible values are: ALL, enable it for all existing accounts and new member accounts; NEW, enable it only for
+     * new member accounts; and, NONE, don't enable it for any accounts.
+     * </p>
+     * 
+     * @return Specifies whether automated sensitive data discovery is enabled automatically for accounts in the
+     *         organization. Possible values are: ALL, enable it for all existing accounts and new member accounts; NEW,
+     *         enable it only for new member accounts; and, NONE, don't enable it for any accounts.
+     * @see AutoEnableMode
+     */
+
+    public String getAutoEnableOrganizationMembers() {
+        return this.autoEnableOrganizationMembers;
+    }
+
+    /**
+     * <p>
+     * Specifies whether automated sensitive data discovery is enabled automatically for accounts in the organization.
+     * Possible values are: ALL, enable it for all existing accounts and new member accounts; NEW, enable it only for
+     * new member accounts; and, NONE, don't enable it for any accounts.
+     * </p>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Specifies whether automated sensitive data discovery is enabled automatically for accounts in the
+     *        organization. Possible values are: ALL, enable it for all existing accounts and new member accounts; NEW,
+     *        enable it only for new member accounts; and, NONE, don't enable it for any accounts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableMode
+     */
+
+    public GetAutomatedDiscoveryConfigurationResult withAutoEnableOrganizationMembers(String autoEnableOrganizationMembers) {
+        setAutoEnableOrganizationMembers(autoEnableOrganizationMembers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether automated sensitive data discovery is enabled automatically for accounts in the organization.
+     * Possible values are: ALL, enable it for all existing accounts and new member accounts; NEW, enable it only for
+     * new member accounts; and, NONE, don't enable it for any accounts.
+     * </p>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Specifies whether automated sensitive data discovery is enabled automatically for accounts in the
+     *        organization. Possible values are: ALL, enable it for all existing accounts and new member accounts; NEW,
+     *        enable it only for new member accounts; and, NONE, don't enable it for any accounts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableMode
+     */
+
+    public GetAutomatedDiscoveryConfigurationResult withAutoEnableOrganizationMembers(AutoEnableMode autoEnableOrganizationMembers) {
+        this.autoEnableOrganizationMembers = autoEnableOrganizationMembers.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier for the classification scope that's used when performing automated sensitive data
+     * discovery. The classification scope specifies S3 buckets to exclude from analyses.
      * </p>
      * 
      * @param classificationScopeId
      *        The unique identifier for the classification scope that's used when performing automated sensitive data
-     *        discovery for the account. The classification scope specifies S3 buckets to exclude from automated
-     *        sensitive data discovery.
+     *        discovery. The classification scope specifies S3 buckets to exclude from analyses.
      */
 
     public void setClassificationScopeId(String classificationScopeId) {
@@ -91,14 +169,12 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The unique identifier for the classification scope that's used when performing automated sensitive data discovery
-     * for the account. The classification scope specifies S3 buckets to exclude from automated sensitive data
-     * discovery.
+     * The unique identifier for the classification scope that's used when performing automated sensitive data
+     * discovery. The classification scope specifies S3 buckets to exclude from analyses.
      * </p>
      * 
      * @return The unique identifier for the classification scope that's used when performing automated sensitive data
-     *         discovery for the account. The classification scope specifies S3 buckets to exclude from automated
-     *         sensitive data discovery.
+     *         discovery. The classification scope specifies S3 buckets to exclude from analyses.
      */
 
     public String getClassificationScopeId() {
@@ -107,15 +183,13 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The unique identifier for the classification scope that's used when performing automated sensitive data discovery
-     * for the account. The classification scope specifies S3 buckets to exclude from automated sensitive data
-     * discovery.
+     * The unique identifier for the classification scope that's used when performing automated sensitive data
+     * discovery. The classification scope specifies S3 buckets to exclude from analyses.
      * </p>
      * 
      * @param classificationScopeId
      *        The unique identifier for the classification scope that's used when performing automated sensitive data
-     *        discovery for the account. The classification scope specifies S3 buckets to exclude from automated
-     *        sensitive data discovery.
+     *        discovery. The classification scope specifies S3 buckets to exclude from analyses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -127,14 +201,12 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most recently
-     * disabled for the account. This value is null if automated sensitive data discovery wasn't enabled and
-     * subsequently disabled for the account.
+     * disabled. This value is null if automated sensitive data discovery is currently enabled.
      * </p>
      * 
      * @param disabledAt
      *        The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most
-     *        recently disabled for the account. This value is null if automated sensitive data discovery wasn't enabled
-     *        and subsequently disabled for the account.
+     *        recently disabled. This value is null if automated sensitive data discovery is currently enabled.
      */
 
     public void setDisabledAt(java.util.Date disabledAt) {
@@ -144,13 +216,11 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most recently
-     * disabled for the account. This value is null if automated sensitive data discovery wasn't enabled and
-     * subsequently disabled for the account.
+     * disabled. This value is null if automated sensitive data discovery is currently enabled.
      * </p>
      * 
      * @return The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most
-     *         recently disabled for the account. This value is null if automated sensitive data discovery wasn't
-     *         enabled and subsequently disabled for the account.
+     *         recently disabled. This value is null if automated sensitive data discovery is currently enabled.
      */
 
     public java.util.Date getDisabledAt() {
@@ -160,14 +230,12 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most recently
-     * disabled for the account. This value is null if automated sensitive data discovery wasn't enabled and
-     * subsequently disabled for the account.
+     * disabled. This value is null if automated sensitive data discovery is currently enabled.
      * </p>
      * 
      * @param disabledAt
      *        The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most
-     *        recently disabled for the account. This value is null if automated sensitive data discovery wasn't enabled
-     *        and subsequently disabled for the account.
+     *        recently disabled. This value is null if automated sensitive data discovery is currently enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -179,14 +247,12 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was initially
-     * enabled for the account. This value is null if automated sensitive data discovery has never been enabled for the
-     * account.
+     * enabled. This value is null if automated sensitive data discovery has never been enabled.
      * </p>
      * 
      * @param firstEnabledAt
      *        The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was
-     *        initially enabled for the account. This value is null if automated sensitive data discovery has never been
-     *        enabled for the account.
+     *        initially enabled. This value is null if automated sensitive data discovery has never been enabled.
      */
 
     public void setFirstEnabledAt(java.util.Date firstEnabledAt) {
@@ -196,13 +262,11 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was initially
-     * enabled for the account. This value is null if automated sensitive data discovery has never been enabled for the
-     * account.
+     * enabled. This value is null if automated sensitive data discovery has never been enabled.
      * </p>
      * 
      * @return The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was
-     *         initially enabled for the account. This value is null if automated sensitive data discovery has never
-     *         been enabled for the account.
+     *         initially enabled. This value is null if automated sensitive data discovery has never been enabled.
      */
 
     public java.util.Date getFirstEnabledAt() {
@@ -212,14 +276,12 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was initially
-     * enabled for the account. This value is null if automated sensitive data discovery has never been enabled for the
-     * account.
+     * enabled. This value is null if automated sensitive data discovery has never been enabled.
      * </p>
      * 
      * @param firstEnabledAt
      *        The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was
-     *        initially enabled for the account. This value is null if automated sensitive data discovery has never been
-     *        enabled for the account.
+     *        initially enabled. This value is null if automated sensitive data discovery has never been enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,13 +292,13 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most recently
-     * enabled or disabled for the account.
+     * The date and time, in UTC and extended ISO 8601 format, when the configuration settings or status of automated
+     * sensitive data discovery was most recently changed.
      * </p>
      * 
      * @param lastUpdatedAt
-     *        The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most
-     *        recently enabled or disabled for the account.
+     *        The date and time, in UTC and extended ISO 8601 format, when the configuration settings or status of
+     *        automated sensitive data discovery was most recently changed.
      */
 
     public void setLastUpdatedAt(java.util.Date lastUpdatedAt) {
@@ -245,12 +307,12 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most recently
-     * enabled or disabled for the account.
+     * The date and time, in UTC and extended ISO 8601 format, when the configuration settings or status of automated
+     * sensitive data discovery was most recently changed.
      * </p>
      * 
-     * @return The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most
-     *         recently enabled or disabled for the account.
+     * @return The date and time, in UTC and extended ISO 8601 format, when the configuration settings or status of
+     *         automated sensitive data discovery was most recently changed.
      */
 
     public java.util.Date getLastUpdatedAt() {
@@ -259,13 +321,13 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most recently
-     * enabled or disabled for the account.
+     * The date and time, in UTC and extended ISO 8601 format, when the configuration settings or status of automated
+     * sensitive data discovery was most recently changed.
      * </p>
      * 
      * @param lastUpdatedAt
-     *        The date and time, in UTC and extended ISO 8601 format, when automated sensitive data discovery was most
-     *        recently enabled or disabled for the account.
+     *        The date and time, in UTC and extended ISO 8601 format, when the configuration settings or status of
+     *        automated sensitive data discovery was most recently changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,14 +339,14 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The unique identifier for the sensitivity inspection template that's used when performing automated sensitive
-     * data discovery for the account. The template specifies which allow lists, custom data identifiers, and managed
-     * data identifiers to use when analyzing data.
+     * data discovery. The template specifies which allow lists, custom data identifiers, and managed data identifiers
+     * to use when analyzing data.
      * </p>
      * 
      * @param sensitivityInspectionTemplateId
      *        The unique identifier for the sensitivity inspection template that's used when performing automated
-     *        sensitive data discovery for the account. The template specifies which allow lists, custom data
-     *        identifiers, and managed data identifiers to use when analyzing data.
+     *        sensitive data discovery. The template specifies which allow lists, custom data identifiers, and managed
+     *        data identifiers to use when analyzing data.
      */
 
     public void setSensitivityInspectionTemplateId(String sensitivityInspectionTemplateId) {
@@ -294,13 +356,13 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The unique identifier for the sensitivity inspection template that's used when performing automated sensitive
-     * data discovery for the account. The template specifies which allow lists, custom data identifiers, and managed
-     * data identifiers to use when analyzing data.
+     * data discovery. The template specifies which allow lists, custom data identifiers, and managed data identifiers
+     * to use when analyzing data.
      * </p>
      * 
      * @return The unique identifier for the sensitivity inspection template that's used when performing automated
-     *         sensitive data discovery for the account. The template specifies which allow lists, custom data
-     *         identifiers, and managed data identifiers to use when analyzing data.
+     *         sensitive data discovery. The template specifies which allow lists, custom data identifiers, and managed
+     *         data identifiers to use when analyzing data.
      */
 
     public String getSensitivityInspectionTemplateId() {
@@ -310,14 +372,14 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     /**
      * <p>
      * The unique identifier for the sensitivity inspection template that's used when performing automated sensitive
-     * data discovery for the account. The template specifies which allow lists, custom data identifiers, and managed
-     * data identifiers to use when analyzing data.
+     * data discovery. The template specifies which allow lists, custom data identifiers, and managed data identifiers
+     * to use when analyzing data.
      * </p>
      * 
      * @param sensitivityInspectionTemplateId
      *        The unique identifier for the sensitivity inspection template that's used when performing automated
-     *        sensitive data discovery for the account. The template specifies which allow lists, custom data
-     *        identifiers, and managed data identifiers to use when analyzing data.
+     *        sensitive data discovery. The template specifies which allow lists, custom data identifiers, and managed
+     *        data identifiers to use when analyzing data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -328,16 +390,15 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The current status of the automated sensitive data discovery configuration for the account. Possible values are:
-     * ENABLED, use the specified settings to perform automated sensitive data discovery activities for the account;
-     * and, DISABLED, don't perform automated sensitive data discovery activities for the account.
+     * The current status of automated sensitive data discovery for the organization or account. Possible values are:
+     * ENABLED, use the specified settings to perform automated sensitive data discovery activities; and, DISABLED,
+     * don't perform automated sensitive data discovery activities.
      * </p>
      * 
      * @param status
-     *        The current status of the automated sensitive data discovery configuration for the account. Possible
-     *        values are: ENABLED, use the specified settings to perform automated sensitive data discovery activities
-     *        for the account; and, DISABLED, don't perform automated sensitive data discovery activities for the
-     *        account.
+     *        The current status of automated sensitive data discovery for the organization or account. Possible values
+     *        are: ENABLED, use the specified settings to perform automated sensitive data discovery activities; and,
+     *        DISABLED, don't perform automated sensitive data discovery activities.
      * @see AutomatedDiscoveryStatus
      */
 
@@ -347,15 +408,14 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The current status of the automated sensitive data discovery configuration for the account. Possible values are:
-     * ENABLED, use the specified settings to perform automated sensitive data discovery activities for the account;
-     * and, DISABLED, don't perform automated sensitive data discovery activities for the account.
+     * The current status of automated sensitive data discovery for the organization or account. Possible values are:
+     * ENABLED, use the specified settings to perform automated sensitive data discovery activities; and, DISABLED,
+     * don't perform automated sensitive data discovery activities.
      * </p>
      * 
-     * @return The current status of the automated sensitive data discovery configuration for the account. Possible
-     *         values are: ENABLED, use the specified settings to perform automated sensitive data discovery activities
-     *         for the account; and, DISABLED, don't perform automated sensitive data discovery activities for the
-     *         account.
+     * @return The current status of automated sensitive data discovery for the organization or account. Possible values
+     *         are: ENABLED, use the specified settings to perform automated sensitive data discovery activities; and,
+     *         DISABLED, don't perform automated sensitive data discovery activities.
      * @see AutomatedDiscoveryStatus
      */
 
@@ -365,16 +425,15 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The current status of the automated sensitive data discovery configuration for the account. Possible values are:
-     * ENABLED, use the specified settings to perform automated sensitive data discovery activities for the account;
-     * and, DISABLED, don't perform automated sensitive data discovery activities for the account.
+     * The current status of automated sensitive data discovery for the organization or account. Possible values are:
+     * ENABLED, use the specified settings to perform automated sensitive data discovery activities; and, DISABLED,
+     * don't perform automated sensitive data discovery activities.
      * </p>
      * 
      * @param status
-     *        The current status of the automated sensitive data discovery configuration for the account. Possible
-     *        values are: ENABLED, use the specified settings to perform automated sensitive data discovery activities
-     *        for the account; and, DISABLED, don't perform automated sensitive data discovery activities for the
-     *        account.
+     *        The current status of automated sensitive data discovery for the organization or account. Possible values
+     *        are: ENABLED, use the specified settings to perform automated sensitive data discovery activities; and,
+     *        DISABLED, don't perform automated sensitive data discovery activities.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutomatedDiscoveryStatus
      */
@@ -386,16 +445,15 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The current status of the automated sensitive data discovery configuration for the account. Possible values are:
-     * ENABLED, use the specified settings to perform automated sensitive data discovery activities for the account;
-     * and, DISABLED, don't perform automated sensitive data discovery activities for the account.
+     * The current status of automated sensitive data discovery for the organization or account. Possible values are:
+     * ENABLED, use the specified settings to perform automated sensitive data discovery activities; and, DISABLED,
+     * don't perform automated sensitive data discovery activities.
      * </p>
      * 
      * @param status
-     *        The current status of the automated sensitive data discovery configuration for the account. Possible
-     *        values are: ENABLED, use the specified settings to perform automated sensitive data discovery activities
-     *        for the account; and, DISABLED, don't perform automated sensitive data discovery activities for the
-     *        account.
+     *        The current status of automated sensitive data discovery for the organization or account. Possible values
+     *        are: ENABLED, use the specified settings to perform automated sensitive data discovery activities; and,
+     *        DISABLED, don't perform automated sensitive data discovery activities.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutomatedDiscoveryStatus
      */
@@ -417,6 +475,8 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAutoEnableOrganizationMembers() != null)
+            sb.append("AutoEnableOrganizationMembers: ").append(getAutoEnableOrganizationMembers()).append(",");
         if (getClassificationScopeId() != null)
             sb.append("ClassificationScopeId: ").append(getClassificationScopeId()).append(",");
         if (getDisabledAt() != null)
@@ -443,6 +503,11 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
         if (obj instanceof GetAutomatedDiscoveryConfigurationResult == false)
             return false;
         GetAutomatedDiscoveryConfigurationResult other = (GetAutomatedDiscoveryConfigurationResult) obj;
+        if (other.getAutoEnableOrganizationMembers() == null ^ this.getAutoEnableOrganizationMembers() == null)
+            return false;
+        if (other.getAutoEnableOrganizationMembers() != null
+                && other.getAutoEnableOrganizationMembers().equals(this.getAutoEnableOrganizationMembers()) == false)
+            return false;
         if (other.getClassificationScopeId() == null ^ this.getClassificationScopeId() == null)
             return false;
         if (other.getClassificationScopeId() != null && other.getClassificationScopeId().equals(this.getClassificationScopeId()) == false)
@@ -476,6 +541,7 @@ public class GetAutomatedDiscoveryConfigurationResult extends com.amazonaws.Amaz
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAutoEnableOrganizationMembers() == null) ? 0 : getAutoEnableOrganizationMembers().hashCode());
         hashCode = prime * hashCode + ((getClassificationScopeId() == null) ? 0 : getClassificationScopeId().hashCode());
         hashCode = prime * hashCode + ((getDisabledAt() == null) ? 0 : getDisabledAt().hashCode());
         hashCode = prime * hashCode + ((getFirstEnabledAt() == null) ? 0 : getFirstEnabledAt().hashCode());

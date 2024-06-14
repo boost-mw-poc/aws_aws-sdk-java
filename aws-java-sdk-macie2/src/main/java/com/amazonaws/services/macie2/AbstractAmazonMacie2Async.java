@@ -54,6 +54,21 @@ public class AbstractAmazonMacie2Async extends AbstractAmazonMacie2 implements A
     }
 
     @Override
+    public java.util.concurrent.Future<BatchUpdateAutomatedDiscoveryAccountsResult> batchUpdateAutomatedDiscoveryAccountsAsync(
+            BatchUpdateAutomatedDiscoveryAccountsRequest request) {
+
+        return batchUpdateAutomatedDiscoveryAccountsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateAutomatedDiscoveryAccountsResult> batchUpdateAutomatedDiscoveryAccountsAsync(
+            BatchUpdateAutomatedDiscoveryAccountsRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchUpdateAutomatedDiscoveryAccountsRequest, BatchUpdateAutomatedDiscoveryAccountsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAllowListResult> createAllowListAsync(CreateAllowListRequest request) {
 
         return createAllowListAsync(request, null);
@@ -663,6 +678,19 @@ public class AbstractAmazonMacie2Async extends AbstractAmazonMacie2 implements A
     @Override
     public java.util.concurrent.Future<ListAllowListsResult> listAllowListsAsync(ListAllowListsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListAllowListsRequest, ListAllowListsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutomatedDiscoveryAccountsResult> listAutomatedDiscoveryAccountsAsync(ListAutomatedDiscoveryAccountsRequest request) {
+
+        return listAutomatedDiscoveryAccountsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutomatedDiscoveryAccountsResult> listAutomatedDiscoveryAccountsAsync(ListAutomatedDiscoveryAccountsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAutomatedDiscoveryAccountsRequest, ListAutomatedDiscoveryAccountsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

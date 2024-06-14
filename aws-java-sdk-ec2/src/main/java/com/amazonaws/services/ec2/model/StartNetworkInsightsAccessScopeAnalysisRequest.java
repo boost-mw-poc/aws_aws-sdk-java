@@ -41,8 +41,7 @@ public class StartNetworkInsightsAccessScopeAnalysisRequest extends AmazonWebSer
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      */
@@ -164,16 +163,14 @@ public class StartNetworkInsightsAccessScopeAnalysisRequest extends AmazonWebSer
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
-     *        idempotency</a>.
+     *        information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to
+     *        ensure idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -183,15 +180,13 @@ public class StartNetworkInsightsAccessScopeAnalysisRequest extends AmazonWebSer
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
-     *         idempotency</a>.
+     *         information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How
+     *         to ensure idempotency</a>.
      */
 
     public String getClientToken() {
@@ -201,16 +196,14 @@ public class StartNetworkInsightsAccessScopeAnalysisRequest extends AmazonWebSer
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
      * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
-     *        idempotency</a>.
+     *        information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to
+     *        ensure idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

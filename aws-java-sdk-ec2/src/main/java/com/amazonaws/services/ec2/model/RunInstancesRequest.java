@@ -44,8 +44,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String instanceType;
@@ -101,27 +101,26 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     private String keyName;
     /**
      * <p>
-     * The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the target
-     * Availability Zone, Amazon EC2 launches the largest possible number of instances above <code>MinCount</code>.
+     * The maximum number of instances to launch. If you specify a value that is more capacity than Amazon EC2 can
+     * launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances above the
+     * specified minimum count.
      * </p>
      * <p>
-     * Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     * information about the default limits, and how to request an increase, see <a
-     * href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I run in
-     * Amazon EC2</a> in the Amazon EC2 FAQ.
+     * Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For more
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon
+     * EC2 instance type quotas</a>.
      * </p>
      */
     private Integer maxCount;
     /**
      * <p>
-     * The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2 can
-     * launch in the target Availability Zone, Amazon EC2 launches no instances.
+     * The minimum number of instances to launch. If you specify a value that is more capacity than Amazon EC2 can
+     * provide in the target Availability Zone, Amazon EC2 does not launch any instances.
      * </p>
      * <p>
-     * Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     * information about the default limits, and how to request an increase, see <a
-     * href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I run in
-     * Amazon EC2</a> in the Amazon EC2 General FAQ.
+     * Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For more
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon
+     * EC2 instance type quotas</a>.
      * </p>
      */
     private Integer minCount;
@@ -190,11 +189,10 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The user data script to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
-     * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
-     * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
-     * performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
-     * data is limited to 16 KB.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     * instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool, base64-encoding
+     * is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.
+     * User data is limited to 16 KB.
      * </p>
      */
     private String userData;
@@ -393,8 +391,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance meets the
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      * prerequisites</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * You can't enable hibernation and Amazon Web Services Nitro Enclaves on the same instance.
@@ -477,23 +475,23 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *        The ID of the AMI. An AMI ID is required to launch an instance and must be specified here or in a launch
      *        template.
      * @param minCount
-     *        The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2
-     *        can launch in the target Availability Zone, Amazon EC2 launches no instances.</p>
+     *        The minimum number of instances to launch. If you specify a value that is more capacity than Amazon EC2
+     *        can provide in the target Availability Zone, Amazon EC2 does not launch any instances.</p>
      *        <p>
-     *        Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     *        information about the default limits, and how to request an increase, see <a
-     *        href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I
-     *        run in Amazon EC2</a> in the Amazon EC2 General FAQ.
+     *        Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon EC2 instance
+     *        type quotas</a>.
      * @param maxCount
-     *        The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the
-     *        target Availability Zone, Amazon EC2 launches the largest possible number of instances above
-     *        <code>MinCount</code>.
+     *        The maximum number of instances to launch. If you specify a value that is more capacity than Amazon EC2
+     *        can launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances
+     *        above the specified minimum count.
      *        </p>
      *        <p>
-     *        Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     *        information about the default limits, and how to request an increase, see <a
-     *        href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I
-     *        run in Amazon EC2</a> in the Amazon EC2 FAQ.
+     *        Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon EC2 instance
+     *        type quotas</a>.
      */
     public RunInstancesRequest(String imageId, Integer minCount, Integer maxCount) {
         setImageId(imageId);
@@ -647,14 +645,14 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.
      * @see InstanceType
      */
 
@@ -665,13 +663,13 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The instance type. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *         <i>Amazon EC2 User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance
+     *         types</a> in the <i>Amazon EC2 User Guide</i>.
      * @see InstanceType
      */
 
@@ -682,14 +680,14 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -702,14 +700,14 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.
      * @see InstanceType
      */
 
@@ -720,14 +718,14 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The instance type. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance
+     *        types</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -1085,25 +1083,25 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the target
-     * Availability Zone, Amazon EC2 launches the largest possible number of instances above <code>MinCount</code>.
+     * The maximum number of instances to launch. If you specify a value that is more capacity than Amazon EC2 can
+     * launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances above the
+     * specified minimum count.
      * </p>
      * <p>
-     * Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     * information about the default limits, and how to request an increase, see <a
-     * href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I run in
-     * Amazon EC2</a> in the Amazon EC2 FAQ.
+     * Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For more
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon
+     * EC2 instance type quotas</a>.
      * </p>
      * 
      * @param maxCount
-     *        The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the
-     *        target Availability Zone, Amazon EC2 launches the largest possible number of instances above
-     *        <code>MinCount</code>.</p>
+     *        The maximum number of instances to launch. If you specify a value that is more capacity than Amazon EC2
+     *        can launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances
+     *        above the specified minimum count.</p>
      *        <p>
-     *        Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     *        information about the default limits, and how to request an increase, see <a
-     *        href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I
-     *        run in Amazon EC2</a> in the Amazon EC2 FAQ.
+     *        Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon EC2 instance
+     *        type quotas</a>.
      */
 
     public void setMaxCount(Integer maxCount) {
@@ -1112,24 +1110,24 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the target
-     * Availability Zone, Amazon EC2 launches the largest possible number of instances above <code>MinCount</code>.
+     * The maximum number of instances to launch. If you specify a value that is more capacity than Amazon EC2 can
+     * launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances above the
+     * specified minimum count.
      * </p>
      * <p>
-     * Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     * information about the default limits, and how to request an increase, see <a
-     * href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I run in
-     * Amazon EC2</a> in the Amazon EC2 FAQ.
+     * Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For more
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon
+     * EC2 instance type quotas</a>.
      * </p>
      * 
-     * @return The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in
-     *         the target Availability Zone, Amazon EC2 launches the largest possible number of instances above
-     *         <code>MinCount</code>.</p>
+     * @return The maximum number of instances to launch. If you specify a value that is more capacity than Amazon EC2
+     *         can launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances
+     *         above the specified minimum count.</p>
      *         <p>
-     *         Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     *         information about the default limits, and how to request an increase, see <a
-     *         href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can
-     *         I run in Amazon EC2</a> in the Amazon EC2 FAQ.
+     *         Constraints: Between 1 and the quota for the specified instance type for your account for this Region.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon EC2 instance
+     *         type quotas</a>.
      */
 
     public Integer getMaxCount() {
@@ -1138,25 +1136,25 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the target
-     * Availability Zone, Amazon EC2 launches the largest possible number of instances above <code>MinCount</code>.
+     * The maximum number of instances to launch. If you specify a value that is more capacity than Amazon EC2 can
+     * launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances above the
+     * specified minimum count.
      * </p>
      * <p>
-     * Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     * information about the default limits, and how to request an increase, see <a
-     * href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I run in
-     * Amazon EC2</a> in the Amazon EC2 FAQ.
+     * Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For more
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon
+     * EC2 instance type quotas</a>.
      * </p>
      * 
      * @param maxCount
-     *        The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the
-     *        target Availability Zone, Amazon EC2 launches the largest possible number of instances above
-     *        <code>MinCount</code>.</p>
+     *        The maximum number of instances to launch. If you specify a value that is more capacity than Amazon EC2
+     *        can launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances
+     *        above the specified minimum count.</p>
      *        <p>
-     *        Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     *        information about the default limits, and how to request an increase, see <a
-     *        href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I
-     *        run in Amazon EC2</a> in the Amazon EC2 FAQ.
+     *        Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon EC2 instance
+     *        type quotas</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1167,24 +1165,23 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2 can
-     * launch in the target Availability Zone, Amazon EC2 launches no instances.
+     * The minimum number of instances to launch. If you specify a value that is more capacity than Amazon EC2 can
+     * provide in the target Availability Zone, Amazon EC2 does not launch any instances.
      * </p>
      * <p>
-     * Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     * information about the default limits, and how to request an increase, see <a
-     * href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I run in
-     * Amazon EC2</a> in the Amazon EC2 General FAQ.
+     * Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For more
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon
+     * EC2 instance type quotas</a>.
      * </p>
      * 
      * @param minCount
-     *        The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2
-     *        can launch in the target Availability Zone, Amazon EC2 launches no instances.</p>
+     *        The minimum number of instances to launch. If you specify a value that is more capacity than Amazon EC2
+     *        can provide in the target Availability Zone, Amazon EC2 does not launch any instances.</p>
      *        <p>
-     *        Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     *        information about the default limits, and how to request an increase, see <a
-     *        href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I
-     *        run in Amazon EC2</a> in the Amazon EC2 General FAQ.
+     *        Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon EC2 instance
+     *        type quotas</a>.
      */
 
     public void setMinCount(Integer minCount) {
@@ -1193,23 +1190,22 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2 can
-     * launch in the target Availability Zone, Amazon EC2 launches no instances.
+     * The minimum number of instances to launch. If you specify a value that is more capacity than Amazon EC2 can
+     * provide in the target Availability Zone, Amazon EC2 does not launch any instances.
      * </p>
      * <p>
-     * Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     * information about the default limits, and how to request an increase, see <a
-     * href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I run in
-     * Amazon EC2</a> in the Amazon EC2 General FAQ.
+     * Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For more
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon
+     * EC2 instance type quotas</a>.
      * </p>
      * 
-     * @return The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon
-     *         EC2 can launch in the target Availability Zone, Amazon EC2 launches no instances.</p>
+     * @return The minimum number of instances to launch. If you specify a value that is more capacity than Amazon EC2
+     *         can provide in the target Availability Zone, Amazon EC2 does not launch any instances.</p>
      *         <p>
-     *         Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     *         information about the default limits, and how to request an increase, see <a
-     *         href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can
-     *         I run in Amazon EC2</a> in the Amazon EC2 General FAQ.
+     *         Constraints: Between 1 and the quota for the specified instance type for your account for this Region.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon EC2 instance
+     *         type quotas</a>.
      */
 
     public Integer getMinCount() {
@@ -1218,24 +1214,23 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2 can
-     * launch in the target Availability Zone, Amazon EC2 launches no instances.
+     * The minimum number of instances to launch. If you specify a value that is more capacity than Amazon EC2 can
+     * provide in the target Availability Zone, Amazon EC2 does not launch any instances.
      * </p>
      * <p>
-     * Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     * information about the default limits, and how to request an increase, see <a
-     * href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I run in
-     * Amazon EC2</a> in the Amazon EC2 General FAQ.
+     * Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For more
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon
+     * EC2 instance type quotas</a>.
      * </p>
      * 
      * @param minCount
-     *        The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2
-     *        can launch in the target Availability Zone, Amazon EC2 launches no instances.</p>
+     *        The minimum number of instances to launch. If you specify a value that is more capacity than Amazon EC2
+     *        can provide in the target Availability Zone, Amazon EC2 does not launch any instances.</p>
      *        <p>
-     *        Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more
-     *        information about the default limits, and how to request an increase, see <a
-     *        href="http://aws.amazon.com/ec2/faqs/#How_many_instances_can_I_run_in_Amazon_EC2">How many instances can I
-     *        run in Amazon EC2</a> in the Amazon EC2 General FAQ.
+     *        Constraints: Between 1 and the quota for the specified instance type for your account for this Region. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html">Amazon EC2 instance
+     *        type quotas</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1730,21 +1725,18 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The user data script to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
-     * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
-     * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
-     * performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
-     * data is limited to 16 KB.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     * instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool, base64-encoding
+     * is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.
+     * User data is limited to 16 KB.
      * </p>
      * 
      * @param userData
      *        The user data script to make available to the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
-     *        instance at launch</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run commands on
-     *        your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is performed
-     *        for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User data
-     *        is limited to 16 KB.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     *        instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool,
+     *        base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide
+     *        base64-encoded text. User data is limited to 16 KB.
      */
 
     public void setUserData(String userData) {
@@ -1754,20 +1746,17 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The user data script to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
-     * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
-     * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
-     * performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
-     * data is limited to 16 KB.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     * instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool, base64-encoding
+     * is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.
+     * User data is limited to 16 KB.
      * </p>
      * 
      * @return The user data script to make available to the instance. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
-     *         instance at launch</a> and <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run commands on
-     *         your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is performed
-     *         for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
-     *         data is limited to 16 KB.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     *         instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool,
+     *         base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide
+     *         base64-encoded text. User data is limited to 16 KB.
      */
 
     public String getUserData() {
@@ -1777,21 +1766,18 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The user data script to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
-     * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
-     * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
-     * performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
-     * data is limited to 16 KB.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     * instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool, base64-encoding
+     * is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.
+     * User data is limited to 16 KB.
      * </p>
      * 
      * @param userData
      *        The user data script to make available to the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
-     *        instance at launch</a> and <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run commands on
-     *        your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is performed
-     *        for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User data
-     *        is limited to 16 KB.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
+     *        instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool,
+     *        base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide
+     *        base64-encoded text. User data is limited to 16 KB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3279,8 +3265,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance meets the
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      * prerequisites</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * You can't enable hibernation and Amazon Web Services Nitro Enclaves on the same instance.
@@ -3291,8 +3277,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *        meets the <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      *        prerequisites</a>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in
-     *        the <i>Amazon EC2 User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2
+     *        instance</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        You can't enable hibernation and Amazon Web Services Nitro Enclaves on the same instance.
      */
@@ -3306,8 +3292,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance meets the
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      * prerequisites</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * You can't enable hibernation and Amazon Web Services Nitro Enclaves on the same instance.
@@ -3317,8 +3303,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *         meets the <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      *         prerequisites</a>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in
-     *         the <i>Amazon EC2 User Guide</i>.</p>
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2
+     *         instance</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *         <p>
      *         You can't enable hibernation and Amazon Web Services Nitro Enclaves on the same instance.
      */
@@ -3332,8 +3318,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance meets the
      * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      * prerequisites</a>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * You can't enable hibernation and Amazon Web Services Nitro Enclaves on the same instance.
@@ -3344,8 +3330,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *        meets the <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html">hibernation
      *        prerequisites</a>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in
-     *        the <i>Amazon EC2 User Guide</i>.</p>
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2
+     *        instance</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        You can't enable hibernation and Amazon Web Services Nitro Enclaves on the same instance.
      * @return Returns a reference to this object so that method calls can be chained together.

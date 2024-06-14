@@ -116,10 +116,23 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
     private Boolean publishOnImport;
     /**
      * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     */
+    private Boolean retainPermissionsOnRevokeFailure;
+    /**
+     * <p>
      * The schedule of runs for this data source.
      * </p>
      */
     private ScheduleConfiguration schedule;
+    /**
+     * <p>
+     * Specifies the status of the self-granting functionality.
+     * </p>
+     */
+    private SelfGrantStatusOutput selfGrantStatus;
     /**
      * <p>
      * The status of this data source.
@@ -829,6 +842,66 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @param retainPermissionsOnRevokeFailure
+     *        Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *        a data source.
+     */
+
+    public void setRetainPermissionsOnRevokeFailure(Boolean retainPermissionsOnRevokeFailure) {
+        this.retainPermissionsOnRevokeFailure = retainPermissionsOnRevokeFailure;
+    }
+
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @return Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *         a data source.
+     */
+
+    public Boolean getRetainPermissionsOnRevokeFailure() {
+        return this.retainPermissionsOnRevokeFailure;
+    }
+
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @param retainPermissionsOnRevokeFailure
+     *        Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *        a data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteDataSourceResult withRetainPermissionsOnRevokeFailure(Boolean retainPermissionsOnRevokeFailure) {
+        setRetainPermissionsOnRevokeFailure(retainPermissionsOnRevokeFailure);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @return Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *         a data source.
+     */
+
+    public Boolean isRetainPermissionsOnRevokeFailure() {
+        return this.retainPermissionsOnRevokeFailure;
+    }
+
+    /**
+     * <p>
      * The schedule of runs for this data source.
      * </p>
      * 
@@ -864,6 +937,46 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
 
     public DeleteDataSourceResult withSchedule(ScheduleConfiguration schedule) {
         setSchedule(schedule);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the status of the self-granting functionality.
+     * </p>
+     * 
+     * @param selfGrantStatus
+     *        Specifies the status of the self-granting functionality.
+     */
+
+    public void setSelfGrantStatus(SelfGrantStatusOutput selfGrantStatus) {
+        this.selfGrantStatus = selfGrantStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies the status of the self-granting functionality.
+     * </p>
+     * 
+     * @return Specifies the status of the self-granting functionality.
+     */
+
+    public SelfGrantStatusOutput getSelfGrantStatus() {
+        return this.selfGrantStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies the status of the self-granting functionality.
+     * </p>
+     * 
+     * @param selfGrantStatus
+     *        Specifies the status of the self-granting functionality.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteDataSourceResult withSelfGrantStatus(SelfGrantStatusOutput selfGrantStatus) {
+        setSelfGrantStatus(selfGrantStatus);
         return this;
     }
 
@@ -1048,8 +1161,12 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
             sb.append("ProjectId: ").append(getProjectId()).append(",");
         if (getPublishOnImport() != null)
             sb.append("PublishOnImport: ").append(getPublishOnImport()).append(",");
+        if (getRetainPermissionsOnRevokeFailure() != null)
+            sb.append("RetainPermissionsOnRevokeFailure: ").append(getRetainPermissionsOnRevokeFailure()).append(",");
         if (getSchedule() != null)
             sb.append("Schedule: ").append("***Sensitive Data Redacted***").append(",");
+        if (getSelfGrantStatus() != null)
+            sb.append("SelfGrantStatus: ").append(getSelfGrantStatus()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getType() != null)
@@ -1130,9 +1247,18 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getPublishOnImport() != null && other.getPublishOnImport().equals(this.getPublishOnImport()) == false)
             return false;
+        if (other.getRetainPermissionsOnRevokeFailure() == null ^ this.getRetainPermissionsOnRevokeFailure() == null)
+            return false;
+        if (other.getRetainPermissionsOnRevokeFailure() != null
+                && other.getRetainPermissionsOnRevokeFailure().equals(this.getRetainPermissionsOnRevokeFailure()) == false)
+            return false;
         if (other.getSchedule() == null ^ this.getSchedule() == null)
             return false;
         if (other.getSchedule() != null && other.getSchedule().equals(this.getSchedule()) == false)
+            return false;
+        if (other.getSelfGrantStatus() == null ^ this.getSelfGrantStatus() == null)
+            return false;
+        if (other.getSelfGrantStatus() != null && other.getSelfGrantStatus().equals(this.getSelfGrantStatus()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
@@ -1169,7 +1295,9 @@ public class DeleteDataSourceResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getProjectId() == null) ? 0 : getProjectId().hashCode());
         hashCode = prime * hashCode + ((getPublishOnImport() == null) ? 0 : getPublishOnImport().hashCode());
+        hashCode = prime * hashCode + ((getRetainPermissionsOnRevokeFailure() == null) ? 0 : getRetainPermissionsOnRevokeFailure().hashCode());
         hashCode = prime * hashCode + ((getSchedule() == null) ? 0 : getSchedule().hashCode());
+        hashCode = prime * hashCode + ((getSelfGrantStatus() == null) ? 0 : getSelfGrantStatus().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());

@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateAutomatedDiscoveryConfigurationRequestMarshaller {
 
+    private static final MarshallingInfo<String> AUTOENABLEORGANIZATIONMEMBERS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoEnableOrganizationMembers").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
 
@@ -46,6 +48,7 @@ public class UpdateAutomatedDiscoveryConfigurationRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(updateAutomatedDiscoveryConfigurationRequest.getAutoEnableOrganizationMembers(), AUTOENABLEORGANIZATIONMEMBERS_BINDING);
             protocolMarshaller.marshall(updateAutomatedDiscoveryConfigurationRequest.getStatus(), STATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

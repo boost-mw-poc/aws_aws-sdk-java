@@ -110,9 +110,17 @@ public class DeleteDataSourceResultJsonUnmarshaller implements Unmarshaller<Dele
                     context.nextToken();
                     deleteDataSourceResult.setPublishOnImport(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("retainPermissionsOnRevokeFailure", targetDepth)) {
+                    context.nextToken();
+                    deleteDataSourceResult.setRetainPermissionsOnRevokeFailure(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("schedule", targetDepth)) {
                     context.nextToken();
                     deleteDataSourceResult.setSchedule(ScheduleConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("selfGrantStatus", targetDepth)) {
+                    context.nextToken();
+                    deleteDataSourceResult.setSelfGrantStatus(SelfGrantStatusOutputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();

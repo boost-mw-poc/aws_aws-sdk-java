@@ -71,11 +71,11 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
     private Boolean singleAvailabilityZone;
     /**
      * <p>
-     * The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not reached,
-     * the fleet launches no instances.
+     * The minimum target capacity for On-Demand Instances in the fleet. If this minimum capacity isn't reached, no
+     * instances are launched.
      * </p>
      * <p>
-     * Supported only for fleets of type <code>instant</code>.
+     * Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      * </p>
      * <p>
      * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -94,7 +94,7 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
      * does not account for surplus credits, and, if you use surplus credits, your final cost might be higher than what
      * you specified for <code>MaxTotalPrice</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     * >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     * >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </note>
      */
@@ -441,11 +441,11 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not reached,
-     * the fleet launches no instances.
+     * The minimum target capacity for On-Demand Instances in the fleet. If this minimum capacity isn't reached, no
+     * instances are launched.
      * </p>
      * <p>
-     * Supported only for fleets of type <code>instant</code>.
+     * Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      * </p>
      * <p>
      * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -453,10 +453,10 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
      * </p>
      * 
      * @param minTargetCapacity
-     *        The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not
-     *        reached, the fleet launches no instances.</p>
+     *        The minimum target capacity for On-Demand Instances in the fleet. If this minimum capacity isn't reached,
+     *        no instances are launched.</p>
      *        <p>
-     *        Supported only for fleets of type <code>instant</code>.
+     *        Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      *        </p>
      *        <p>
      *        At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -469,21 +469,21 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not reached,
-     * the fleet launches no instances.
+     * The minimum target capacity for On-Demand Instances in the fleet. If this minimum capacity isn't reached, no
+     * instances are launched.
      * </p>
      * <p>
-     * Supported only for fleets of type <code>instant</code>.
+     * Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      * </p>
      * <p>
      * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
      * <code>SingleInstanceType</code>
      * </p>
      * 
-     * @return The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not
-     *         reached, the fleet launches no instances.</p>
+     * @return The minimum target capacity for On-Demand Instances in the fleet. If this minimum capacity isn't reached,
+     *         no instances are launched.</p>
      *         <p>
-     *         Supported only for fleets of type <code>instant</code>.
+     *         Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      *         </p>
      *         <p>
      *         At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -496,11 +496,11 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not reached,
-     * the fleet launches no instances.
+     * The minimum target capacity for On-Demand Instances in the fleet. If this minimum capacity isn't reached, no
+     * instances are launched.
      * </p>
      * <p>
-     * Supported only for fleets of type <code>instant</code>.
+     * Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      * </p>
      * <p>
      * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -508,10 +508,10 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
      * </p>
      * 
      * @param minTargetCapacity
-     *        The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not
-     *        reached, the fleet launches no instances.</p>
+     *        The minimum target capacity for On-Demand Instances in the fleet. If this minimum capacity isn't reached,
+     *        no instances are launched.</p>
      *        <p>
-     *        Supported only for fleets of type <code>instant</code>.
+     *        Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      *        </p>
      *        <p>
      *        At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -535,7 +535,7 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
      * does not account for surplus credits, and, if you use surplus credits, your final cost might be higher than what
      * you specified for <code>MaxTotalPrice</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     * >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     * >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </note>
      * 
@@ -548,7 +548,7 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
      *        final cost might be higher than what you specified for <code>MaxTotalPrice</code>. For more information,
      *        see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     *        >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     *        >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>
      */
 
@@ -567,7 +567,7 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
      * does not account for surplus credits, and, if you use surplus credits, your final cost might be higher than what
      * you specified for <code>MaxTotalPrice</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     * >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     * >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </note>
      * 
@@ -579,7 +579,7 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
      *         final cost might be higher than what you specified for <code>MaxTotalPrice</code>. For more information,
      *         see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     *         >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     *         >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      *         </p>
      */
 
@@ -598,7 +598,7 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
      * does not account for surplus credits, and, if you use surplus credits, your final cost might be higher than what
      * you specified for <code>MaxTotalPrice</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     * >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     * >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </note>
      * 
@@ -611,7 +611,7 @@ public class OnDemandOptionsRequest implements Serializable, Cloneable {
      *        final cost might be higher than what you specified for <code>MaxTotalPrice</code>. For more information,
      *        see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     *        >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     *        >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

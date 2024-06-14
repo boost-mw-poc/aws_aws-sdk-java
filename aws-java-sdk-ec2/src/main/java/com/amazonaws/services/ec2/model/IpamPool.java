@@ -197,8 +197,8 @@ public class IpamPool implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/intro-create-ipv6-pools.html">Create IPv6 pools</a> in the
      * <i>Amazon VPC IPAM User Guide</i>. By default, you can add only one Amazon-provided IPv6 CIDR block to a
      * top-level IPv6 pool. For information on increasing the default limit, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html"> Quotas for your IPAM</a> in the <i>Amazon
-     * VPC IPAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html">Quotas for your IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
      * </p>
      */
     private String publicIpSource;
@@ -1489,8 +1489,8 @@ public class IpamPool implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/intro-create-ipv6-pools.html">Create IPv6 pools</a> in the
      * <i>Amazon VPC IPAM User Guide</i>. By default, you can add only one Amazon-provided IPv6 CIDR block to a
      * top-level IPv6 pool. For information on increasing the default limit, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html"> Quotas for your IPAM</a> in the <i>Amazon
-     * VPC IPAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html">Quotas for your IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
      * </p>
      * 
      * @param publicIpSource
@@ -1499,7 +1499,7 @@ public class IpamPool implements Serializable, Cloneable {
      *        href="https://docs.aws.amazon.com/vpc/latest/ipam/intro-create-ipv6-pools.html">Create IPv6 pools</a> in
      *        the <i>Amazon VPC IPAM User Guide</i>. By default, you can add only one Amazon-provided IPv6 CIDR block to
      *        a top-level IPv6 pool. For information on increasing the default limit, see <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html"> Quotas for your IPAM</a> in the
+     *        href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html">Quotas for your IPAM</a> in the
      *        <i>Amazon VPC IPAM User Guide</i>.
      * @see IpamPoolPublicIpSource
      */
@@ -1515,8 +1515,8 @@ public class IpamPool implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/intro-create-ipv6-pools.html">Create IPv6 pools</a> in the
      * <i>Amazon VPC IPAM User Guide</i>. By default, you can add only one Amazon-provided IPv6 CIDR block to a
      * top-level IPv6 pool. For information on increasing the default limit, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html"> Quotas for your IPAM</a> in the <i>Amazon
-     * VPC IPAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html">Quotas for your IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
      * </p>
      * 
      * @return The IP address source for pools in the public scope. Only used for provisioning IP address CIDRs to pools
@@ -1524,7 +1524,7 @@ public class IpamPool implements Serializable, Cloneable {
      *         href="https://docs.aws.amazon.com/vpc/latest/ipam/intro-create-ipv6-pools.html">Create IPv6 pools</a> in
      *         the <i>Amazon VPC IPAM User Guide</i>. By default, you can add only one Amazon-provided IPv6 CIDR block
      *         to a top-level IPv6 pool. For information on increasing the default limit, see <a
-     *         href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html"> Quotas for your IPAM</a> in the
+     *         href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html">Quotas for your IPAM</a> in the
      *         <i>Amazon VPC IPAM User Guide</i>.
      * @see IpamPoolPublicIpSource
      */
@@ -1540,8 +1540,8 @@ public class IpamPool implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/intro-create-ipv6-pools.html">Create IPv6 pools</a> in the
      * <i>Amazon VPC IPAM User Guide</i>. By default, you can add only one Amazon-provided IPv6 CIDR block to a
      * top-level IPv6 pool. For information on increasing the default limit, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html"> Quotas for your IPAM</a> in the <i>Amazon
-     * VPC IPAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html">Quotas for your IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
      * </p>
      * 
      * @param publicIpSource
@@ -1550,7 +1550,7 @@ public class IpamPool implements Serializable, Cloneable {
      *        href="https://docs.aws.amazon.com/vpc/latest/ipam/intro-create-ipv6-pools.html">Create IPv6 pools</a> in
      *        the <i>Amazon VPC IPAM User Guide</i>. By default, you can add only one Amazon-provided IPv6 CIDR block to
      *        a top-level IPv6 pool. For information on increasing the default limit, see <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html"> Quotas for your IPAM</a> in the
+     *        href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html">Quotas for your IPAM</a> in the
      *        <i>Amazon VPC IPAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpamPoolPublicIpSource
@@ -1568,8 +1568,8 @@ public class IpamPool implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/intro-create-ipv6-pools.html">Create IPv6 pools</a> in the
      * <i>Amazon VPC IPAM User Guide</i>. By default, you can add only one Amazon-provided IPv6 CIDR block to a
      * top-level IPv6 pool. For information on increasing the default limit, see <a
-     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html"> Quotas for your IPAM</a> in the <i>Amazon
-     * VPC IPAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html">Quotas for your IPAM</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
      * </p>
      * 
      * @param publicIpSource
@@ -1578,7 +1578,7 @@ public class IpamPool implements Serializable, Cloneable {
      *        href="https://docs.aws.amazon.com/vpc/latest/ipam/intro-create-ipv6-pools.html">Create IPv6 pools</a> in
      *        the <i>Amazon VPC IPAM User Guide</i>. By default, you can add only one Amazon-provided IPv6 CIDR block to
      *        a top-level IPv6 pool. For information on increasing the default limit, see <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html"> Quotas for your IPAM</a> in the
+     *        href="https://docs.aws.amazon.com/vpc/latest/ipam/quotas-ipam.html">Quotas for your IPAM</a> in the
      *        <i>Amazon VPC IPAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpamPoolPublicIpSource

@@ -49,6 +49,10 @@ public class GetAutomatedDiscoveryConfigurationResultJsonUnmarshaller implements
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("autoEnableOrganizationMembers", targetDepth)) {
+                    context.nextToken();
+                    getAutomatedDiscoveryConfigurationResult.setAutoEnableOrganizationMembers(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("classificationScopeId", targetDepth)) {
                     context.nextToken();
                     getAutomatedDiscoveryConfigurationResult.setClassificationScopeId(context.getUnmarshaller(String.class).unmarshall(context));

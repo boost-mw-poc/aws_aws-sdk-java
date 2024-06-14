@@ -100,6 +100,41 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
+     * Changes the status of automated sensitive data discovery for one or more accounts.
+     * </p>
+     * 
+     * @param batchUpdateAutomatedDiscoveryAccountsRequest
+     * @return A Java Future containing the result of the BatchUpdateAutomatedDiscoveryAccounts operation returned by
+     *         the service.
+     * @sample AmazonMacie2Async.BatchUpdateAutomatedDiscoveryAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/BatchUpdateAutomatedDiscoveryAccounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateAutomatedDiscoveryAccountsResult> batchUpdateAutomatedDiscoveryAccountsAsync(
+            BatchUpdateAutomatedDiscoveryAccountsRequest batchUpdateAutomatedDiscoveryAccountsRequest);
+
+    /**
+     * <p>
+     * Changes the status of automated sensitive data discovery for one or more accounts.
+     * </p>
+     * 
+     * @param batchUpdateAutomatedDiscoveryAccountsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchUpdateAutomatedDiscoveryAccounts operation returned by
+     *         the service.
+     * @sample AmazonMacie2AsyncHandler.BatchUpdateAutomatedDiscoveryAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/BatchUpdateAutomatedDiscoveryAccounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateAutomatedDiscoveryAccountsResult> batchUpdateAutomatedDiscoveryAccountsAsync(
+            BatchUpdateAutomatedDiscoveryAccountsRequest batchUpdateAutomatedDiscoveryAccountsRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchUpdateAutomatedDiscoveryAccountsRequest, BatchUpdateAutomatedDiscoveryAccountsResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates and defines the settings for an allow list.
      * </p>
      * 
@@ -907,7 +942,8 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the configuration settings and status of automated sensitive data discovery for an account.
+     * Retrieves the configuration settings and status of automated sensitive data discovery for an organization or
+     * standalone account.
      * </p>
      * 
      * @param getAutomatedDiscoveryConfigurationRequest
@@ -922,7 +958,8 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the configuration settings and status of automated sensitive data discovery for an account.
+     * Retrieves the configuration settings and status of automated sensitive data discovery for an organization or
+     * standalone account.
      * </p>
      * 
      * @param getAutomatedDiscoveryConfigurationRequest
@@ -1586,6 +1623,41 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
+     * Retrieves the status of automated sensitive data discovery for one or more accounts.
+     * </p>
+     * 
+     * @param listAutomatedDiscoveryAccountsRequest
+     * @return A Java Future containing the result of the ListAutomatedDiscoveryAccounts operation returned by the
+     *         service.
+     * @sample AmazonMacie2Async.ListAutomatedDiscoveryAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListAutomatedDiscoveryAccounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAutomatedDiscoveryAccountsResult> listAutomatedDiscoveryAccountsAsync(
+            ListAutomatedDiscoveryAccountsRequest listAutomatedDiscoveryAccountsRequest);
+
+    /**
+     * <p>
+     * Retrieves the status of automated sensitive data discovery for one or more accounts.
+     * </p>
+     * 
+     * @param listAutomatedDiscoveryAccountsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAutomatedDiscoveryAccounts operation returned by the
+     *         service.
+     * @sample AmazonMacie2AsyncHandler.ListAutomatedDiscoveryAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListAutomatedDiscoveryAccounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAutomatedDiscoveryAccountsResult> listAutomatedDiscoveryAccountsAsync(
+            ListAutomatedDiscoveryAccountsRequest listAutomatedDiscoveryAccountsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAutomatedDiscoveryAccountsRequest, ListAutomatedDiscoveryAccountsResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves a subset of information about one or more classification jobs.
      * </p>
      * 
@@ -1743,7 +1815,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves information about the Amazon Macie membership invitations that were received by an account.
+     * Retrieves information about Amazon Macie membership invitations that were received by an account.
      * </p>
      * 
      * @param listInvitationsRequest
@@ -1756,7 +1828,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves information about the Amazon Macie membership invitations that were received by an account.
+     * Retrieves information about Amazon Macie membership invitations that were received by an account.
      * </p>
      * 
      * @param listInvitationsRequest
@@ -1875,7 +1947,8 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves information about objects that were selected from an S3 bucket for automated sensitive data discovery.
+     * Retrieves information about objects that Amazon Macie selected from an S3 bucket for automated sensitive data
+     * discovery.
      * </p>
      * 
      * @param listResourceProfileArtifactsRequest
@@ -1890,7 +1963,8 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves information about objects that were selected from an S3 bucket for automated sensitive data discovery.
+     * Retrieves information about objects that Amazon Macie selected from an S3 bucket for automated sensitive data
+     * discovery.
      * </p>
      * 
      * @param listResourceProfileArtifactsRequest
@@ -2011,7 +2085,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Creates or updates the configuration settings for storing data classification results.
+     * Adds or updates the configuration settings for storing data classification results.
      * </p>
      * 
      * @param putClassificationExportConfigurationRequest
@@ -2026,7 +2100,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Creates or updates the configuration settings for storing data classification results.
+     * Adds or updates the configuration settings for storing data classification results.
      * </p>
      * 
      * @param putClassificationExportConfigurationRequest
@@ -2145,7 +2219,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Tests a custom data identifier.
+     * Tests criteria for a custom data identifier.
      * </p>
      * 
      * @param testCustomDataIdentifierRequest
@@ -2158,7 +2232,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Tests a custom data identifier.
+     * Tests criteria for a custom data identifier.
      * </p>
      * 
      * @param testCustomDataIdentifierRequest
@@ -2238,7 +2312,8 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Enables or disables automated sensitive data discovery for an account.
+     * Changes the configuration settings and status of automated sensitive data discovery for an organization or
+     * standalone account.
      * </p>
      * 
      * @param updateAutomatedDiscoveryConfigurationRequest
@@ -2253,7 +2328,8 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Enables or disables automated sensitive data discovery for an account.
+     * Changes the configuration settings and status of automated sensitive data discovery for an organization or
+     * standalone account.
      * </p>
      * 
      * @param updateAutomatedDiscoveryConfigurationRequest

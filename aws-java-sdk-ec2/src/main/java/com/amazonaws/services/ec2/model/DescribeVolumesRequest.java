@@ -136,17 +136,16 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
     private com.amazonaws.internal.SdkInternalList<String> volumeIds;
     /**
      * <p>
-     * The maximum number of volumes to return for this request. This value can be between 5 and 500; if you specify a
-     * value larger than 500, only 500 items are returned. If this parameter is not used, then all items are returned.
-     * You cannot specify this parameter and the volume IDs parameter in the same request. For more information, see <a
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * The token returned from a previous paginated request. Pagination continues from the end of the items returned
-     * from the previous request.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      */
     private String nextToken;
@@ -1093,17 +1092,14 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The maximum number of volumes to return for this request. This value can be between 5 and 500; if you specify a
-     * value larger than 500, only 500 items are returned. If this parameter is not used, then all items are returned.
-     * You cannot specify this parameter and the volume IDs parameter in the same request. For more information, see <a
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of volumes to return for this request. This value can be between 5 and 500; if you
-     *        specify a value larger than 500, only 500 items are returned. If this parameter is not used, then all
-     *        items are returned. You cannot specify this parameter and the volume IDs parameter in the same request.
-     *        For more information, see <a
+     *        The maximum number of items to return for this request. To get the next page of items, make another
+     *        request with the token returned in the output. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
      *        >Pagination</a>.
      */
@@ -1114,16 +1110,13 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The maximum number of volumes to return for this request. This value can be between 5 and 500; if you specify a
-     * value larger than 500, only 500 items are returned. If this parameter is not used, then all items are returned.
-     * You cannot specify this parameter and the volume IDs parameter in the same request. For more information, see <a
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
-     * @return The maximum number of volumes to return for this request. This value can be between 5 and 500; if you
-     *         specify a value larger than 500, only 500 items are returned. If this parameter is not used, then all
-     *         items are returned. You cannot specify this parameter and the volume IDs parameter in the same request.
-     *         For more information, see <a
+     * @return The maximum number of items to return for this request. To get the next page of items, make another
+     *         request with the token returned in the output. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
      *         >Pagination</a>.
      */
@@ -1134,17 +1127,14 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The maximum number of volumes to return for this request. This value can be between 5 and 500; if you specify a
-     * value larger than 500, only 500 items are returned. If this parameter is not used, then all items are returned.
-     * You cannot specify this parameter and the volume IDs parameter in the same request. For more information, see <a
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of volumes to return for this request. This value can be between 5 and 500; if you
-     *        specify a value larger than 500, only 500 items are returned. If this parameter is not used, then all
-     *        items are returned. You cannot specify this parameter and the volume IDs parameter in the same request.
-     *        For more information, see <a
+     *        The maximum number of items to return for this request. To get the next page of items, make another
+     *        request with the token returned in the output. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
      *        >Pagination</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1157,13 +1147,13 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The token returned from a previous paginated request. Pagination continues from the end of the items returned
-     * from the previous request.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
      * @param nextToken
      *        The token returned from a previous paginated request. Pagination continues from the end of the items
-     *        returned from the previous request.
+     *        returned by the previous request.
      */
 
     public void setNextToken(String nextToken) {
@@ -1172,12 +1162,12 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The token returned from a previous paginated request. Pagination continues from the end of the items returned
-     * from the previous request.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
      * @return The token returned from a previous paginated request. Pagination continues from the end of the items
-     *         returned from the previous request.
+     *         returned by the previous request.
      */
 
     public String getNextToken() {
@@ -1186,13 +1176,13 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The token returned from a previous paginated request. Pagination continues from the end of the items returned
-     * from the previous request.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
      * @param nextToken
      *        The token returned from a previous paginated request. Pagination continues from the end of the items
-     *        returned from the previous request.
+     *        returned by the previous request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

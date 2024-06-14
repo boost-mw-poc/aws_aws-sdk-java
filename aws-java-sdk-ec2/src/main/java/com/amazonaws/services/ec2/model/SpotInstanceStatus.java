@@ -30,7 +30,7 @@ public class SpotInstanceStatus implements Serializable, Cloneable {
      * <p>
      * The status code. For a list of status codes, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html#spot-instance-request-status-understand"
-     * >Spot request status codes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * >Spot request status codes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String code;
@@ -52,13 +52,13 @@ public class SpotInstanceStatus implements Serializable, Cloneable {
      * <p>
      * The status code. For a list of status codes, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html#spot-instance-request-status-understand"
-     * >Spot request status codes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * >Spot request status codes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param code
      *        The status code. For a list of status codes, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html#spot-instance-request-status-understand"
-     *        >Spot request status codes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        >Spot request status codes</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setCode(String code) {
@@ -69,12 +69,12 @@ public class SpotInstanceStatus implements Serializable, Cloneable {
      * <p>
      * The status code. For a list of status codes, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html#spot-instance-request-status-understand"
-     * >Spot request status codes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * >Spot request status codes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The status code. For a list of status codes, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html#spot-instance-request-status-understand"
-     *         >Spot request status codes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *         >Spot request status codes</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public String getCode() {
@@ -85,13 +85,13 @@ public class SpotInstanceStatus implements Serializable, Cloneable {
      * <p>
      * The status code. For a list of status codes, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html#spot-instance-request-status-understand"
-     * >Spot request status codes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * >Spot request status codes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param code
      *        The status code. For a list of status codes, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html#spot-instance-request-status-understand"
-     *        >Spot request status codes</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        >Spot request status codes</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -88,23 +88,23 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.datazone.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.datazone.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.datazone.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.datazone.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.datazone.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.datazone.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnauthorizedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.datazone.model.transform.UnauthorizedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.datazone.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.datazone.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.datazone.model.AmazonDataZoneException.class));
 
     public static AmazonDataZoneClientBuilder builder() {
@@ -283,6 +283,77 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
             HttpResponseHandler<AmazonWebServiceResponse<AcceptSubscriptionRequestResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new AcceptSubscriptionRequestResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Associates the environment role in Amazon DataZone.
+     * </p>
+     * 
+     * @param associateEnvironmentRoleRequest
+     * @return Result of the AssociateEnvironmentRole operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.AssociateEnvironmentRole
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/AssociateEnvironmentRole"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateEnvironmentRoleResult associateEnvironmentRole(AssociateEnvironmentRoleRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateEnvironmentRole(request);
+    }
+
+    @SdkInternalApi
+    final AssociateEnvironmentRoleResult executeAssociateEnvironmentRole(AssociateEnvironmentRoleRequest associateEnvironmentRoleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateEnvironmentRoleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateEnvironmentRoleRequest> request = null;
+        Response<AssociateEnvironmentRoleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateEnvironmentRoleRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(associateEnvironmentRoleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateEnvironmentRole");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AssociateEnvironmentRoleResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new AssociateEnvironmentRoleResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -843,6 +914,78 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateEnvironmentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateEnvironmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an action for the environment, for example, creates a console link for an analytics tool that is
+     * available in this environment.
+     * </p>
+     * 
+     * @param createEnvironmentActionRequest
+     * @return Result of the CreateEnvironmentAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.CreateEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/CreateEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateEnvironmentActionResult createEnvironmentAction(CreateEnvironmentActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateEnvironmentAction(request);
+    }
+
+    @SdkInternalApi
+    final CreateEnvironmentActionResult executeCreateEnvironmentAction(CreateEnvironmentActionRequest createEnvironmentActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createEnvironmentActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateEnvironmentActionRequest> request = null;
+        Response<CreateEnvironmentActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateEnvironmentActionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createEnvironmentActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateEnvironmentAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateEnvironmentActionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateEnvironmentActionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2039,6 +2182,78 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Deletes an action for the environment, for example, deletes a console link for an analytics tool that is
+     * available in this environment.
+     * </p>
+     * 
+     * @param deleteEnvironmentActionRequest
+     * @return Result of the DeleteEnvironmentAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.DeleteEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteEnvironmentActionResult deleteEnvironmentAction(DeleteEnvironmentActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteEnvironmentAction(request);
+    }
+
+    @SdkInternalApi
+    final DeleteEnvironmentActionResult executeDeleteEnvironmentAction(DeleteEnvironmentActionRequest deleteEnvironmentActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteEnvironmentActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteEnvironmentActionRequest> request = null;
+        Response<DeleteEnvironmentActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteEnvironmentActionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteEnvironmentActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteEnvironmentAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteEnvironmentActionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteEnvironmentActionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the blueprint configuration in Amazon DataZone.
      * </p>
      * 
@@ -2872,6 +3087,77 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Disassociates the environment role in Amazon DataZone.
+     * </p>
+     * 
+     * @param disassociateEnvironmentRoleRequest
+     * @return Result of the DisassociateEnvironmentRole operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.DisassociateEnvironmentRole
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DisassociateEnvironmentRole"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateEnvironmentRoleResult disassociateEnvironmentRole(DisassociateEnvironmentRoleRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateEnvironmentRole(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateEnvironmentRoleResult executeDisassociateEnvironmentRole(DisassociateEnvironmentRoleRequest disassociateEnvironmentRoleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateEnvironmentRoleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateEnvironmentRoleRequest> request = null;
+        Response<DisassociateEnvironmentRoleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateEnvironmentRoleRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(disassociateEnvironmentRoleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateEnvironmentRole");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisassociateEnvironmentRoleResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DisassociateEnvironmentRoleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets an Amazon DataZone asset.
      * </p>
      * 
@@ -3272,6 +3558,73 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<GetEnvironmentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetEnvironmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the specified environment action.
+     * </p>
+     * 
+     * @param getEnvironmentActionRequest
+     * @return Result of the GetEnvironmentAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.GetEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetEnvironmentAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetEnvironmentActionResult getEnvironmentAction(GetEnvironmentActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetEnvironmentAction(request);
+    }
+
+    @SdkInternalApi
+    final GetEnvironmentActionResult executeGetEnvironmentAction(GetEnvironmentActionRequest getEnvironmentActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getEnvironmentActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetEnvironmentActionRequest> request = null;
+        Response<GetEnvironmentActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetEnvironmentActionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getEnvironmentActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetEnvironmentAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetEnvironmentActionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetEnvironmentActionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4778,6 +5131,72 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<ListDomainsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListDomainsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists existing environment actions.
+     * </p>
+     * 
+     * @param listEnvironmentActionsRequest
+     * @return Result of the ListEnvironmentActions operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.ListEnvironmentActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListEnvironmentActions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListEnvironmentActionsResult listEnvironmentActions(ListEnvironmentActionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListEnvironmentActions(request);
+    }
+
+    @SdkInternalApi
+    final ListEnvironmentActionsResult executeListEnvironmentActions(ListEnvironmentActionsRequest listEnvironmentActionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listEnvironmentActionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListEnvironmentActionsRequest> request = null;
+        Response<ListEnvironmentActionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListEnvironmentActionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listEnvironmentActionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListEnvironmentActions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListEnvironmentActionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListEnvironmentActionsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -6897,6 +7316,77 @@ public class AmazonDataZoneClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateEnvironmentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateEnvironmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an environment action.
+     * </p>
+     * 
+     * @param updateEnvironmentActionRequest
+     * @return Result of the UpdateEnvironmentAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.UpdateEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/UpdateEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateEnvironmentActionResult updateEnvironmentAction(UpdateEnvironmentActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateEnvironmentAction(request);
+    }
+
+    @SdkInternalApi
+    final UpdateEnvironmentActionResult executeUpdateEnvironmentAction(UpdateEnvironmentActionRequest updateEnvironmentActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateEnvironmentActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateEnvironmentActionRequest> request = null;
+        Response<UpdateEnvironmentActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateEnvironmentActionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateEnvironmentActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataZone");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateEnvironmentAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateEnvironmentActionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateEnvironmentActionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

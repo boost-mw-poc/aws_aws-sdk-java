@@ -56,8 +56,7 @@ public class Volume implements Serializable, Cloneable {
     private Boolean encrypted;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
-     * encryption key for the volume.
+     * The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the volume.
      * </p>
      */
     private String kmsKeyId;
@@ -394,13 +393,12 @@ public class Volume implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
-     * encryption key for the volume.
+     * The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the volume.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the
-     *        volume encryption key for the volume.
+     *        The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the
+     *        volume.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -409,12 +407,11 @@ public class Volume implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
-     * encryption key for the volume.
+     * The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the volume.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the
-     *         volume encryption key for the volume.
+     * @return The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the
+     *         volume.
      */
 
     public String getKmsKeyId() {
@@ -423,13 +420,12 @@ public class Volume implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
-     * encryption key for the volume.
+     * The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the volume.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the
-     *        volume encryption key for the volume.
+     *        The Amazon Resource Name (ARN) of the KMS key that was used to protect the volume encryption key for the
+     *        volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

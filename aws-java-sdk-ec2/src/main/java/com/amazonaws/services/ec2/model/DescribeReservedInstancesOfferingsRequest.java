@@ -104,8 +104,8 @@ public class DescribeReservedInstancesOfferingsRequest extends AmazonWebServiceR
     /**
      * <p>
      * The instance type that the reservation will cover (for example, <code>m1.small</code>). For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String instanceType;
@@ -807,15 +807,14 @@ public class DescribeReservedInstancesOfferingsRequest extends AmazonWebServiceR
     /**
      * <p>
      * The instance type that the reservation will cover (for example, <code>m1.small</code>). For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param instanceType
      *        The instance type that the reservation will cover (for example, <code>m1.small</code>). For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon
+     *        EC2 instance types</a> in the <i>Amazon EC2 User Guide</i>.
      * @see InstanceType
      */
 
@@ -826,14 +825,13 @@ public class DescribeReservedInstancesOfferingsRequest extends AmazonWebServiceR
     /**
      * <p>
      * The instance type that the reservation will cover (for example, <code>m1.small</code>). For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The instance type that the reservation will cover (for example, <code>m1.small</code>). For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *         <i>Amazon EC2 User Guide</i>.
+     *         information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon
+     *         EC2 instance types</a> in the <i>Amazon EC2 User Guide</i>.
      * @see InstanceType
      */
 
@@ -844,15 +842,14 @@ public class DescribeReservedInstancesOfferingsRequest extends AmazonWebServiceR
     /**
      * <p>
      * The instance type that the reservation will cover (for example, <code>m1.small</code>). For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param instanceType
      *        The instance type that the reservation will cover (for example, <code>m1.small</code>). For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon
+     *        EC2 instance types</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -865,15 +862,14 @@ public class DescribeReservedInstancesOfferingsRequest extends AmazonWebServiceR
     /**
      * <p>
      * The instance type that the reservation will cover (for example, <code>m1.small</code>). For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param instanceType
      *        The instance type that the reservation will cover (for example, <code>m1.small</code>). For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon
+     *        EC2 instance types</a> in the <i>Amazon EC2 User Guide</i>.
      * @see InstanceType
      */
 
@@ -884,15 +880,14 @@ public class DescribeReservedInstancesOfferingsRequest extends AmazonWebServiceR
     /**
      * <p>
      * The instance type that the reservation will cover (for example, <code>m1.small</code>). For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     * <i>Amazon EC2 User Guide</i>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon EC2 instance types</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param instanceType
      *        The instance type that the reservation will cover (for example, <code>m1.small</code>). For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
-     *        <i>Amazon EC2 User Guide</i>.
+     *        information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Amazon
+     *        EC2 instance types</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */

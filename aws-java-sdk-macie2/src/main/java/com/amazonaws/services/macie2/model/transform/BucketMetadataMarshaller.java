@@ -32,6 +32,8 @@ public class BucketMetadataMarshaller {
             .marshallLocationName("accountId").build();
     private static final MarshallingInfo<String> ALLOWSUNENCRYPTEDOBJECTUPLOADS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("allowsUnencryptedObjectUploads").build();
+    private static final MarshallingInfo<String> AUTOMATEDDISCOVERYMONITORINGSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("automatedDiscoveryMonitoringStatus").build();
     private static final MarshallingInfo<String> BUCKETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("bucketArn").build();
     private static final MarshallingInfo<java.util.Date> BUCKETCREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -99,6 +101,7 @@ public class BucketMetadataMarshaller {
         try {
             protocolMarshaller.marshall(bucketMetadata.getAccountId(), ACCOUNTID_BINDING);
             protocolMarshaller.marshall(bucketMetadata.getAllowsUnencryptedObjectUploads(), ALLOWSUNENCRYPTEDOBJECTUPLOADS_BINDING);
+            protocolMarshaller.marshall(bucketMetadata.getAutomatedDiscoveryMonitoringStatus(), AUTOMATEDDISCOVERYMONITORINGSTATUS_BINDING);
             protocolMarshaller.marshall(bucketMetadata.getBucketArn(), BUCKETARN_BINDING);
             protocolMarshaller.marshall(bucketMetadata.getBucketCreatedAt(), BUCKETCREATEDAT_BINDING);
             protocolMarshaller.marshall(bucketMetadata.getBucketName(), BUCKETNAME_BINDING);

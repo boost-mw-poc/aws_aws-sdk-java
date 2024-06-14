@@ -114,9 +114,17 @@ public class UpdateDataSourceResultJsonUnmarshaller implements Unmarshaller<Upda
                     context.nextToken();
                     updateDataSourceResult.setRecommendation(RecommendationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("retainPermissionsOnRevokeFailure", targetDepth)) {
+                    context.nextToken();
+                    updateDataSourceResult.setRetainPermissionsOnRevokeFailure(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("schedule", targetDepth)) {
                     context.nextToken();
                     updateDataSourceResult.setSchedule(ScheduleConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("selfGrantStatus", targetDepth)) {
+                    context.nextToken();
+                    updateDataSourceResult.setSelfGrantStatus(SelfGrantStatusOutputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();

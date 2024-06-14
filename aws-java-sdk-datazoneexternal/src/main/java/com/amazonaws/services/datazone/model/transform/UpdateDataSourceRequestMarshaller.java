@@ -46,6 +46,8 @@ public class UpdateDataSourceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("publishOnImport").build();
     private static final MarshallingInfo<StructuredPojo> RECOMMENDATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendation").build();
+    private static final MarshallingInfo<Boolean> RETAINPERMISSIONSONREVOKEFAILURE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retainPermissionsOnRevokeFailure").build();
     private static final MarshallingInfo<StructuredPojo> SCHEDULE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schedule").build();
 
@@ -74,6 +76,7 @@ public class UpdateDataSourceRequestMarshaller {
             protocolMarshaller.marshall(updateDataSourceRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getPublishOnImport(), PUBLISHONIMPORT_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getRecommendation(), RECOMMENDATION_BINDING);
+            protocolMarshaller.marshall(updateDataSourceRequest.getRetainPermissionsOnRevokeFailure(), RETAINPERMISSIONSONREVOKEFAILURE_BINDING);
             protocolMarshaller.marshall(updateDataSourceRequest.getSchedule(), SCHEDULE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

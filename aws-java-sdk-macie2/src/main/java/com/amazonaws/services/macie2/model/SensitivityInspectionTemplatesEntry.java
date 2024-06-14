@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information about the sensitivity inspection template for an Amazon Macie account. Macie uses the template's
- * settings when it performs automated sensitive data discovery for the account.
+ * Provides information about the sensitivity inspection template for an Amazon Macie account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/SensitivityInspectionTemplatesEntry"

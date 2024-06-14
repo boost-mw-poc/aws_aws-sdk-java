@@ -156,9 +156,6 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
      * <p>
      * The IDs of the route tables.
      * </p>
-     * <p>
-     * Default: Describes all your route tables.
-     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> routeTableIds;
     /**
@@ -1226,13 +1223,8 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
      * <p>
      * The IDs of the route tables.
      * </p>
-     * <p>
-     * Default: Describes all your route tables.
-     * </p>
      * 
-     * @return The IDs of the route tables.</p>
-     *         <p>
-     *         Default: Describes all your route tables.
+     * @return The IDs of the route tables.
      */
 
     public java.util.List<String> getRouteTableIds() {
@@ -1246,14 +1238,9 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
      * <p>
      * The IDs of the route tables.
      * </p>
-     * <p>
-     * Default: Describes all your route tables.
-     * </p>
      * 
      * @param routeTableIds
-     *        The IDs of the route tables.</p>
-     *        <p>
-     *        Default: Describes all your route tables.
+     *        The IDs of the route tables.
      */
 
     public void setRouteTableIds(java.util.Collection<String> routeTableIds) {
@@ -1270,18 +1257,13 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
      * The IDs of the route tables.
      * </p>
      * <p>
-     * Default: Describes all your route tables.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRouteTableIds(java.util.Collection)} or {@link #withRouteTableIds(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param routeTableIds
-     *        The IDs of the route tables.</p>
-     *        <p>
-     *        Default: Describes all your route tables.
+     *        The IDs of the route tables.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1299,14 +1281,9 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
      * <p>
      * The IDs of the route tables.
      * </p>
-     * <p>
-     * Default: Describes all your route tables.
-     * </p>
      * 
      * @param routeTableIds
-     *        The IDs of the route tables.</p>
-     *        <p>
-     *        Default: Describes all your route tables.
+     *        The IDs of the route tables.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -88,7 +88,7 @@ public class CreateLaunchTemplateVersionRequest extends AmazonWebServiceRequest 
      * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
      * displayed in the response for <code>imageID</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Default: <code>false</code>
@@ -458,7 +458,7 @@ public class CreateLaunchTemplateVersionRequest extends AmazonWebServiceRequest 
      * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
      * displayed in the response for <code>imageID</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Default: <code>false</code>
@@ -468,8 +468,7 @@ public class CreateLaunchTemplateVersionRequest extends AmazonWebServiceRequest 
      *        If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID
      *        is displayed in the response for <code>imageID</code>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.</p>
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        Default: <code>false</code>
      */
@@ -483,7 +482,7 @@ public class CreateLaunchTemplateVersionRequest extends AmazonWebServiceRequest 
      * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
      * displayed in the response for <code>imageID</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Default: <code>false</code>
@@ -492,8 +491,7 @@ public class CreateLaunchTemplateVersionRequest extends AmazonWebServiceRequest 
      * @return If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI
      *         ID is displayed in the response for <code>imageID</code>. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *         Guide</i>.</p>
+     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *         <p>
      *         Default: <code>false</code>
      */
@@ -507,7 +505,7 @@ public class CreateLaunchTemplateVersionRequest extends AmazonWebServiceRequest 
      * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
      * displayed in the response for <code>imageID</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Default: <code>false</code>
@@ -517,8 +515,7 @@ public class CreateLaunchTemplateVersionRequest extends AmazonWebServiceRequest 
      *        If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID
      *        is displayed in the response for <code>imageID</code>. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.</p>
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        Default: <code>false</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -534,7 +531,7 @@ public class CreateLaunchTemplateVersionRequest extends AmazonWebServiceRequest 
      * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
      * displayed in the response for <code>imageID</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * Default: <code>false</code>
@@ -543,8 +540,7 @@ public class CreateLaunchTemplateVersionRequest extends AmazonWebServiceRequest 
      * @return If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI
      *         ID is displayed in the response for <code>imageID</code>. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *         Guide</i>.</p>
+     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *         <p>
      *         Default: <code>false</code>
      */

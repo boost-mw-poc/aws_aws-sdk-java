@@ -52,6 +52,10 @@ public class MatchingBucketJsonUnmarshaller implements Unmarshaller<MatchingBuck
                     context.nextToken();
                     matchingBucket.setAccountId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("automatedDiscoveryMonitoringStatus", targetDepth)) {
+                    context.nextToken();
+                    matchingBucket.setAutomatedDiscoveryMonitoringStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("bucketName", targetDepth)) {
                     context.nextToken();
                     matchingBucket.setBucketName(context.getUnmarshaller(String.class).unmarshall(context));

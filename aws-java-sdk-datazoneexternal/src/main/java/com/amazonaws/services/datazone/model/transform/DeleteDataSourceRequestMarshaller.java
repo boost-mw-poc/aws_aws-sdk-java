@@ -36,6 +36,8 @@ public class DeleteDataSourceRequestMarshaller {
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("domainIdentifier").build();
     private static final MarshallingInfo<String> IDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("identifier").build();
+    private static final MarshallingInfo<Boolean> RETAINPERMISSIONSONREVOKEFAILURE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("retainPermissionsOnRevokeFailure").build();
 
     private static final DeleteDataSourceRequestMarshaller instance = new DeleteDataSourceRequestMarshaller();
 
@@ -56,6 +58,7 @@ public class DeleteDataSourceRequestMarshaller {
             protocolMarshaller.marshall(deleteDataSourceRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(deleteDataSourceRequest.getDomainIdentifier(), DOMAINIDENTIFIER_BINDING);
             protocolMarshaller.marshall(deleteDataSourceRequest.getIdentifier(), IDENTIFIER_BINDING);
+            protocolMarshaller.marshall(deleteDataSourceRequest.getRetainPermissionsOnRevokeFailure(), RETAINPERMISSIONSONREVOKEFAILURE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

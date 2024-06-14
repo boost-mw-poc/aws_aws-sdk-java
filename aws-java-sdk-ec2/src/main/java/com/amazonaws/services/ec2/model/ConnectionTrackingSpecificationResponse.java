@@ -20,7 +20,7 @@ import javax.annotation.Generated;
  * A security group connection tracking specification response that enables you to set the idle timeout for connection
  * tracking on an Elastic network interface. For more information, see <a href=
  * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
- * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+ * >Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ConnectionTrackingSpecificationResponse"

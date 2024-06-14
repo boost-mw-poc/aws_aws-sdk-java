@@ -50,10 +50,6 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
      * addresses. Use this parameter to limit the IP address to this location. IP addresses cannot move between network
      * border groups.
      * </p>
-     * <p>
-     * Use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html">
-     * DescribeAvailabilityZones</a> to view the network border groups.
-     * </p>
      */
     private String networkBorderGroup;
     /**
@@ -238,18 +234,11 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
      * addresses. Use this parameter to limit the IP address to this location. IP addresses cannot move between network
      * border groups.
      * </p>
-     * <p>
-     * Use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html">
-     * DescribeAvailabilityZones</a> to view the network border groups.
-     * </p>
      * 
      * @param networkBorderGroup
      *        A unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services
      *        advertises IP addresses. Use this parameter to limit the IP address to this location. IP addresses cannot
-     *        move between network border groups.</p>
-     *        <p>
-     *        Use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html">
-     *        DescribeAvailabilityZones</a> to view the network border groups.
+     *        move between network border groups.
      */
 
     public void setNetworkBorderGroup(String networkBorderGroup) {
@@ -262,17 +251,10 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
      * addresses. Use this parameter to limit the IP address to this location. IP addresses cannot move between network
      * border groups.
      * </p>
-     * <p>
-     * Use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html">
-     * DescribeAvailabilityZones</a> to view the network border groups.
-     * </p>
      * 
      * @return A unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services
      *         advertises IP addresses. Use this parameter to limit the IP address to this location. IP addresses cannot
-     *         move between network border groups.</p>
-     *         <p>
-     *         Use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html">
-     *         DescribeAvailabilityZones</a> to view the network border groups.
+     *         move between network border groups.
      */
 
     public String getNetworkBorderGroup() {
@@ -285,18 +267,11 @@ public class AllocateAddressRequest extends AmazonWebServiceRequest implements S
      * addresses. Use this parameter to limit the IP address to this location. IP addresses cannot move between network
      * border groups.
      * </p>
-     * <p>
-     * Use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html">
-     * DescribeAvailabilityZones</a> to view the network border groups.
-     * </p>
      * 
      * @param networkBorderGroup
      *        A unique set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services
      *        advertises IP addresses. Use this parameter to limit the IP address to this location. IP addresses cannot
-     *        move between network border groups.</p>
-     *        <p>
-     *        Use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html">
-     *        DescribeAvailabilityZones</a> to view the network border groups.
+     *        move between network border groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

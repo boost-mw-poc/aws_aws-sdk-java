@@ -53,8 +53,8 @@ public class AssociateTrunkInterfaceRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How
-     * to Ensure Idempotency</a>.
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     * idempotency</a>.
      * </p>
      */
     private String clientToken;
@@ -222,15 +222,14 @@ public class AssociateTrunkInterfaceRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How
-     * to Ensure Idempotency</a>.
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How to Ensure
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -240,14 +239,13 @@ public class AssociateTrunkInterfaceRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How
-     * to Ensure Idempotency</a>.
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     * idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How to Ensure
-     *         Idempotency</a>.
+     *         href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      */
 
     public String getClientToken() {
@@ -257,15 +255,14 @@ public class AssociateTrunkInterfaceRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How
-     * to Ensure Idempotency</a>.
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html">How to Ensure
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

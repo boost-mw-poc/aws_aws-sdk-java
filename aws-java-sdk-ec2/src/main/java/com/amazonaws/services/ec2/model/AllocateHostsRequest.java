@@ -34,7 +34,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      * > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
-     * Default: <code>on</code>
+     * Default: <code>off</code>
      * </p>
      */
     private String autoPlacement;
@@ -155,7 +155,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      * > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
-     * Default: <code>on</code>
+     * Default: <code>off</code>
      * </p>
      * 
      * @param autoPlacement
@@ -165,7 +165,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding"
      *        > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
-     *        Default: <code>on</code>
+     *        Default: <code>off</code>
      * @see AutoPlacement
      */
 
@@ -182,7 +182,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      * > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
-     * Default: <code>on</code>
+     * Default: <code>off</code>
      * </p>
      * 
      * @return Indicates whether the host accepts any untargeted instance launches that match its instance type
@@ -191,7 +191,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding"
      *         > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *         <p>
-     *         Default: <code>on</code>
+     *         Default: <code>off</code>
      * @see AutoPlacement
      */
 
@@ -208,7 +208,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      * > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
-     * Default: <code>on</code>
+     * Default: <code>off</code>
      * </p>
      * 
      * @param autoPlacement
@@ -218,7 +218,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding"
      *        > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
-     *        Default: <code>on</code>
+     *        Default: <code>off</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoPlacement
      */
@@ -237,7 +237,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      * > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
-     * Default: <code>on</code>
+     * Default: <code>off</code>
      * </p>
      * 
      * @param autoPlacement
@@ -247,7 +247,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding"
      *        > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
-     *        Default: <code>on</code>
+     *        Default: <code>off</code>
      * @see AutoPlacement
      */
 
@@ -264,7 +264,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      * > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
-     * Default: <code>on</code>
+     * Default: <code>off</code>
      * </p>
      * 
      * @param autoPlacement
@@ -274,7 +274,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding"
      *        > Understanding auto-placement and affinity</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
-     *        Default: <code>on</code>
+     *        Default: <code>off</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoPlacement
      */

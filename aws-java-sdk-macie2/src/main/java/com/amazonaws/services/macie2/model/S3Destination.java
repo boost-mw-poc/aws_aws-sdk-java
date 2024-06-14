@@ -31,7 +31,7 @@ public class S3Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the bucket.
+     * The name of the bucket. This must be the name of an existing general purpose bucket.
      * </p>
      */
     private String bucketName;
@@ -53,11 +53,11 @@ public class S3Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the bucket.
+     * The name of the bucket. This must be the name of an existing general purpose bucket.
      * </p>
      * 
      * @param bucketName
-     *        The name of the bucket.
+     *        The name of the bucket. This must be the name of an existing general purpose bucket.
      */
 
     public void setBucketName(String bucketName) {
@@ -66,10 +66,10 @@ public class S3Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the bucket.
+     * The name of the bucket. This must be the name of an existing general purpose bucket.
      * </p>
      * 
-     * @return The name of the bucket.
+     * @return The name of the bucket. This must be the name of an existing general purpose bucket.
      */
 
     public String getBucketName() {
@@ -78,11 +78,11 @@ public class S3Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the bucket.
+     * The name of the bucket. This must be the name of an existing general purpose bucket.
      * </p>
      * 
      * @param bucketName
-     *        The name of the bucket.
+     *        The name of the bucket. This must be the name of an existing general purpose bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

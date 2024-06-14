@@ -32,6 +32,12 @@ public class CreateEnvironmentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> DOMAINIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("domainIdentifier").build();
+    private static final MarshallingInfo<String> ENVIRONMENTACCOUNTIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("environmentAccountIdentifier").build();
+    private static final MarshallingInfo<String> ENVIRONMENTACCOUNTREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("environmentAccountRegion").build();
+    private static final MarshallingInfo<String> ENVIRONMENTBLUEPRINTIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("environmentBlueprintIdentifier").build();
     private static final MarshallingInfo<String> ENVIRONMENTPROFILEIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("environmentProfileIdentifier").build();
     private static final MarshallingInfo<List> GLOSSARYTERMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -61,6 +67,9 @@ public class CreateEnvironmentRequestMarshaller {
         try {
             protocolMarshaller.marshall(createEnvironmentRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getDomainIdentifier(), DOMAINIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(createEnvironmentRequest.getEnvironmentAccountIdentifier(), ENVIRONMENTACCOUNTIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(createEnvironmentRequest.getEnvironmentAccountRegion(), ENVIRONMENTACCOUNTREGION_BINDING);
+            protocolMarshaller.marshall(createEnvironmentRequest.getEnvironmentBlueprintIdentifier(), ENVIRONMENTBLUEPRINTIDENTIFIER_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getEnvironmentProfileIdentifier(), ENVIRONMENTPROFILEIDENTIFIER_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getGlossaryTerms(), GLOSSARYTERMS_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getName(), NAME_BINDING);

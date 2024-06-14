@@ -25,7 +25,7 @@ public class DescribeSubnetsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Information about one or more subnets.
+     * Information about the subnets.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Subnet> subnets;
@@ -39,10 +39,10 @@ public class DescribeSubnetsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Information about one or more subnets.
+     * Information about the subnets.
      * </p>
      * 
-     * @return Information about one or more subnets.
+     * @return Information about the subnets.
      */
 
     public java.util.List<Subnet> getSubnets() {
@@ -54,11 +54,11 @@ public class DescribeSubnetsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Information about one or more subnets.
+     * Information about the subnets.
      * </p>
      * 
      * @param subnets
-     *        Information about one or more subnets.
+     *        Information about the subnets.
      */
 
     public void setSubnets(java.util.Collection<Subnet> subnets) {
@@ -72,7 +72,7 @@ public class DescribeSubnetsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Information about one or more subnets.
+     * Information about the subnets.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DescribeSubnetsResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      * 
      * @param subnets
-     *        Information about one or more subnets.
+     *        Information about the subnets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DescribeSubnetsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Information about one or more subnets.
+     * Information about the subnets.
      * </p>
      * 
      * @param subnets
-     *        Information about one or more subnets.
+     *        Information about the subnets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -98,7 +98,7 @@ public class DescribeVolumesModificationsRequest extends AmazonWebServiceRequest
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
     /**
      * <p>
-     * The token returned by a previous paginated request. Pagination continues from the end of the items returned by
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
      * the previous request.
      * </p>
      */
@@ -736,12 +736,12 @@ public class DescribeVolumesModificationsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The token returned by a previous paginated request. Pagination continues from the end of the items returned by
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
      * the previous request.
      * </p>
      * 
      * @param nextToken
-     *        The token returned by a previous paginated request. Pagination continues from the end of the items
+     *        The token returned from a previous paginated request. Pagination continues from the end of the items
      *        returned by the previous request.
      */
 
@@ -751,11 +751,11 @@ public class DescribeVolumesModificationsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The token returned by a previous paginated request. Pagination continues from the end of the items returned by
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
      * the previous request.
      * </p>
      * 
-     * @return The token returned by a previous paginated request. Pagination continues from the end of the items
+     * @return The token returned from a previous paginated request. Pagination continues from the end of the items
      *         returned by the previous request.
      */
 
@@ -765,12 +765,12 @@ public class DescribeVolumesModificationsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The token returned by a previous paginated request. Pagination continues from the end of the items returned by
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
      * the previous request.
      * </p>
      * 
      * @param nextToken
-     *        The token returned by a previous paginated request. Pagination continues from the end of the items
+     *        The token returned from a previous paginated request. Pagination continues from the end of the items
      *        returned by the previous request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

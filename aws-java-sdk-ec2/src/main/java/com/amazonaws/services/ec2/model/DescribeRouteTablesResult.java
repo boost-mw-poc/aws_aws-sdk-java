@@ -27,7 +27,7 @@ public class DescribeRouteTablesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more route tables.
+     * Information about the route tables.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<RouteTable> routeTables;
@@ -41,10 +41,10 @@ public class DescribeRouteTablesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more route tables.
+     * Information about the route tables.
      * </p>
      * 
-     * @return Information about one or more route tables.
+     * @return Information about the route tables.
      */
 
     public java.util.List<RouteTable> getRouteTables() {
@@ -56,11 +56,11 @@ public class DescribeRouteTablesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more route tables.
+     * Information about the route tables.
      * </p>
      * 
      * @param routeTables
-     *        Information about one or more route tables.
+     *        Information about the route tables.
      */
 
     public void setRouteTables(java.util.Collection<RouteTable> routeTables) {
@@ -74,7 +74,7 @@ public class DescribeRouteTablesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more route tables.
+     * Information about the route tables.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,7 +83,7 @@ public class DescribeRouteTablesResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param routeTables
-     *        Information about one or more route tables.
+     *        Information about the route tables.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,11 +99,11 @@ public class DescribeRouteTablesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more route tables.
+     * Information about the route tables.
      * </p>
      * 
      * @param routeTables
-     *        Information about one or more route tables.
+     *        Information about the route tables.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

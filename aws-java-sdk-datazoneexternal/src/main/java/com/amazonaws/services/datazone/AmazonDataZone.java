@@ -100,6 +100,33 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Associates the environment role in Amazon DataZone.
+     * </p>
+     * 
+     * @param associateEnvironmentRoleRequest
+     * @return Result of the AssociateEnvironmentRole operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.AssociateEnvironmentRole
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/AssociateEnvironmentRole"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateEnvironmentRoleResult associateEnvironmentRole(AssociateEnvironmentRoleRequest associateEnvironmentRoleRequest);
+
+    /**
+     * <p>
      * Cancels the metadata generation run.
      * </p>
      * 
@@ -319,6 +346,34 @@ public interface AmazonDataZone {
      *      Documentation</a>
      */
     CreateEnvironmentResult createEnvironment(CreateEnvironmentRequest createEnvironmentRequest);
+
+    /**
+     * <p>
+     * Creates an action for the environment, for example, creates a console link for an analytics tool that is
+     * available in this environment.
+     * </p>
+     * 
+     * @param createEnvironmentActionRequest
+     * @return Result of the CreateEnvironmentAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.CreateEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/CreateEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateEnvironmentActionResult createEnvironmentAction(CreateEnvironmentActionRequest createEnvironmentActionRequest);
 
     /**
      * <p>
@@ -781,6 +836,34 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Deletes an action for the environment, for example, deletes a console link for an analytics tool that is
+     * available in this environment.
+     * </p>
+     * 
+     * @param deleteEnvironmentActionRequest
+     * @return Result of the DeleteEnvironmentAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.DeleteEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteEnvironmentActionResult deleteEnvironmentAction(DeleteEnvironmentActionRequest deleteEnvironmentActionRequest);
+
+    /**
+     * <p>
      * Deletes the blueprint configuration in Amazon DataZone.
      * </p>
      * 
@@ -1096,6 +1179,33 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Disassociates the environment role in Amazon DataZone.
+     * </p>
+     * 
+     * @param disassociateEnvironmentRoleRequest
+     * @return Result of the DisassociateEnvironmentRole operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.DisassociateEnvironmentRole
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DisassociateEnvironmentRole"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateEnvironmentRoleResult disassociateEnvironmentRole(DisassociateEnvironmentRoleRequest disassociateEnvironmentRoleRequest);
+
+    /**
+     * <p>
      * Gets an Amazon DataZone asset.
      * </p>
      * 
@@ -1253,6 +1363,31 @@ public interface AmazonDataZone {
      *      Documentation</a>
      */
     GetEnvironmentResult getEnvironment(GetEnvironmentRequest getEnvironmentRequest);
+
+    /**
+     * <p>
+     * Gets the specified environment action.
+     * </p>
+     * 
+     * @param getEnvironmentActionRequest
+     * @return Result of the GetEnvironmentAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.GetEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetEnvironmentAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetEnvironmentActionResult getEnvironmentAction(GetEnvironmentActionRequest getEnvironmentActionRequest);
 
     /**
      * <p>
@@ -1822,6 +1957,29 @@ public interface AmazonDataZone {
      *      Documentation</a>
      */
     ListDomainsResult listDomains(ListDomainsRequest listDomainsRequest);
+
+    /**
+     * <p>
+     * Lists existing environment actions.
+     * </p>
+     * 
+     * @param listEnvironmentActionsRequest
+     * @return Result of the ListEnvironmentActions operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.ListEnvironmentActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListEnvironmentActions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEnvironmentActionsResult listEnvironmentActions(ListEnvironmentActionsRequest listEnvironmentActionsRequest);
 
     /**
      * <p>
@@ -2615,6 +2773,33 @@ public interface AmazonDataZone {
      *      Documentation</a>
      */
     UpdateEnvironmentResult updateEnvironment(UpdateEnvironmentRequest updateEnvironmentRequest);
+
+    /**
+     * <p>
+     * Updates an environment action.
+     * </p>
+     * 
+     * @param updateEnvironmentActionRequest
+     * @return Result of the UpdateEnvironmentAction operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ConflictException
+     *         There is a conflict while performing this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.UpdateEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/UpdateEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateEnvironmentActionResult updateEnvironmentAction(UpdateEnvironmentActionRequest updateEnvironmentActionRequest);
 
     /**
      * <p>

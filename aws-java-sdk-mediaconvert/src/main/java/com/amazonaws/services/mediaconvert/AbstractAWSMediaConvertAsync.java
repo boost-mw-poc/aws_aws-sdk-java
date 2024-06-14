@@ -329,6 +329,19 @@ public class AbstractAWSMediaConvertAsync extends AbstractAWSMediaConvert implem
     }
 
     @Override
+    public java.util.concurrent.Future<SearchJobsResult> searchJobsAsync(SearchJobsRequest request) {
+
+        return searchJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchJobsResult> searchJobsAsync(SearchJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchJobsRequest, SearchJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);

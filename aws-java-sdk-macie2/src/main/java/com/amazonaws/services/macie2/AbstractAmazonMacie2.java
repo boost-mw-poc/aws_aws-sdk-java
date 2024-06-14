@@ -39,6 +39,11 @@ public class AbstractAmazonMacie2 implements AmazonMacie2 {
     }
 
     @Override
+    public BatchUpdateAutomatedDiscoveryAccountsResult batchUpdateAutomatedDiscoveryAccounts(BatchUpdateAutomatedDiscoveryAccountsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateAllowListResult createAllowList(CreateAllowListRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -265,6 +270,11 @@ public class AbstractAmazonMacie2 implements AmazonMacie2 {
 
     @Override
     public ListAllowListsResult listAllowLists(ListAllowListsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAutomatedDiscoveryAccountsResult listAutomatedDiscoveryAccounts(ListAutomatedDiscoveryAccountsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

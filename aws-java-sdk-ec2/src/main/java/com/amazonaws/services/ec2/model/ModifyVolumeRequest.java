@@ -109,8 +109,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </ul>
      * <p>
      * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
-     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on the Nitro
+     * System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      * </p>
      * <p>
      * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
@@ -135,8 +135,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
-     * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html"> Nitro-based
+     * instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
@@ -570,8 +570,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </ul>
      * <p>
      * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
-     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on the Nitro
+     * System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      * </p>
      * <p>
      * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
@@ -603,9 +603,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </ul>
      *        <p>
      *        For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >instances built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000
-     *        IOPS.
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on
+     *        the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      *        </p>
      *        <p>
      *        Default: The existing value is retained if you keep the same volume type. If you change the volume type to
@@ -643,8 +642,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </ul>
      * <p>
      * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
-     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on the Nitro
+     * System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      * </p>
      * <p>
      * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
@@ -675,9 +674,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         </ul>
      *         <p>
      *         For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *         >instances built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000
-     *         IOPS.
+     *         href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on
+     *         the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      *         </p>
      *         <p>
      *         Default: The existing value is retained if you keep the same volume type. If you change the volume type
@@ -715,8 +713,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </ul>
      * <p>
      * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
-     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on the Nitro
+     * System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      * </p>
      * <p>
      * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
@@ -748,9 +746,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </ul>
      *        <p>
      *        For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >instances built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000
-     *        IOPS.
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on
+     *        the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      *        </p>
      *        <p>
      *        Default: The existing value is retained if you keep the same volume type. If you change the volume type to
@@ -851,8 +848,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
-     * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html"> Nitro-based
+     * instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
@@ -860,8 +857,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * 
      * @param multiAttachEnabled
      *        Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume
-     *        to up to 16 <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
+     *        to up to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">
      *        Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code>
      *        and <code>io2</code> volumes only. For more information, see <a
      *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
@@ -875,8 +871,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
-     * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html"> Nitro-based
+     * instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
@@ -884,9 +880,9 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * 
      * @return Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the
      *         volume to up to 16 <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
-     *         Nitro-based instances</a> in the same Availability Zone. This parameter is supported with
-     *         <code>io1</code> and <code>io2</code> volumes only. For more information, see <a
+     *         href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html"> Nitro-based
+     *         instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     *         <code>io2</code> volumes only. For more information, see <a
      *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
      *         Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      */
@@ -898,8 +894,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
-     * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html"> Nitro-based
+     * instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
@@ -907,8 +903,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * 
      * @param multiAttachEnabled
      *        Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume
-     *        to up to 16 <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
+     *        to up to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">
      *        Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code>
      *        and <code>io2</code> volumes only. For more information, see <a
      *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
@@ -924,8 +919,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
-     * Nitro-based instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html"> Nitro-based
+     * instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
      * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
@@ -933,9 +928,9 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * 
      * @return Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the
      *         volume to up to 16 <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">
-     *         Nitro-based instances</a> in the same Availability Zone. This parameter is supported with
-     *         <code>io1</code> and <code>io2</code> volumes only. For more information, see <a
+     *         href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html"> Nitro-based
+     *         instances</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     *         <code>io2</code> volumes only. For more information, see <a
      *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
      *         Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      */

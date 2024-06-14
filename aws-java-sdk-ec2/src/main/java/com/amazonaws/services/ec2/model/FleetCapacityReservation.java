@@ -65,8 +65,8 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The number of capacity units fulfilled by the Capacity Reservation. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Double fulfilledCapacity;
@@ -85,16 +85,16 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The weight of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight"> Instance type
-     * weight</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight">Instance type
+     * weight</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Double weight;
     /**
      * <p>
      * The priority of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"> Instance type
-     * priority</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">Instance type
+     * priority</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Integer priority;
@@ -380,14 +380,14 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The number of capacity units fulfilled by the Capacity Reservation. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param fulfilledCapacity
      *        The number of capacity units fulfilled by the Capacity Reservation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setFulfilledCapacity(Double fulfilledCapacity) {
@@ -397,13 +397,13 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The number of capacity units fulfilled by the Capacity Reservation. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The number of capacity units fulfilled by the Capacity Reservation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total
-     *         target capacity</a> in the Amazon EC2 User Guide.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
+     *         target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Double getFulfilledCapacity() {
@@ -413,14 +413,14 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The number of capacity units fulfilled by the Capacity Reservation. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param fulfilledCapacity
      *        The number of capacity units fulfilled by the Capacity Reservation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"> Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -524,14 +524,14 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The weight of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight"> Instance type
-     * weight</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight">Instance type
+     * weight</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param weight
      *        The weight of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight"> Instance
-     *        type weight</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight">Instance
+     *        type weight</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setWeight(Double weight) {
@@ -541,13 +541,13 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The weight of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight"> Instance type
-     * weight</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight">Instance type
+     * weight</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The weight of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight">
-     *         Instance type weight</a> in the Amazon EC2 User Guide.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight">Instance
+     *         type weight</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Double getWeight() {
@@ -557,14 +557,14 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The weight of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight"> Instance type
-     * weight</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight">Instance type
+     * weight</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param weight
      *        The weight of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight"> Instance
-     *        type weight</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight">Instance
+     *        type weight</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -576,14 +576,14 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The priority of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"> Instance type
-     * priority</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">Instance type
+     * priority</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param priority
      *        The priority of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">
-     *        Instance type priority</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"
+     *        >Instance type priority</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setPriority(Integer priority) {
@@ -593,13 +593,13 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The priority of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"> Instance type
-     * priority</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">Instance type
+     * priority</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The priority of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">
-     *         Instance type priority</a> in the Amazon EC2 User Guide.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"
+     *         >Instance type priority</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Integer getPriority() {
@@ -609,14 +609,14 @@ public class FleetCapacityReservation implements Serializable, Cloneable {
     /**
      * <p>
      * The priority of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"> Instance type
-     * priority</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">Instance type
+     * priority</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param priority
      *        The priority of the instance type in the Capacity Reservation Fleet. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">
-     *        Instance type priority</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"
+     *        >Instance type priority</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

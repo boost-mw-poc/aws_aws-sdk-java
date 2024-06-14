@@ -80,7 +80,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * <p>
      * The type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more
      * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric
-     * Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Adapter</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you are not creating an EFA, specify <code>interface</code> or omit this parameter.
@@ -189,7 +189,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * A security group connection tracking specification that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private ConnectionTrackingSpecificationRequest connectionTrackingSpecification;
@@ -602,7 +602,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * <p>
      * The type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more
      * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric
-     * Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Adapter</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you are not creating an EFA, specify <code>interface</code> or omit this parameter.
@@ -614,7 +614,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * @param interfaceType
      *        The type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For
      *        more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic
-     *        Fabric Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        Fabric Adapter</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        If you are not creating an EFA, specify <code>interface</code> or omit this parameter.
      *        </p>
@@ -630,7 +630,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * <p>
      * The type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more
      * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric
-     * Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Adapter</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you are not creating an EFA, specify <code>interface</code> or omit this parameter.
@@ -641,7 +641,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * 
      * @return The type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For
      *         more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic
-     *         Fabric Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *         Fabric Adapter</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *         <p>
      *         If you are not creating an EFA, specify <code>interface</code> or omit this parameter.
      *         </p>
@@ -657,7 +657,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * <p>
      * The type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more
      * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric
-     * Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Adapter</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * If you are not creating an EFA, specify <code>interface</code> or omit this parameter.
@@ -669,7 +669,7 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * @param interfaceType
      *        The type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For
      *        more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic
-     *        Fabric Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        Fabric Adapter</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        If you are not creating an EFA, specify <code>interface</code> or omit this parameter.
      *        </p>
@@ -1465,14 +1465,14 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * A security group connection tracking specification that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param connectionTrackingSpecification
      *        A security group connection tracking specification that enables you to set the timeout for connection
      *        tracking on an Elastic network interface. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     *        >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setConnectionTrackingSpecification(ConnectionTrackingSpecificationRequest connectionTrackingSpecification) {
@@ -1484,13 +1484,13 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * A security group connection tracking specification that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return A security group connection tracking specification that enables you to set the timeout for connection
      *         tracking on an Elastic network interface. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     *         >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public ConnectionTrackingSpecificationRequest getConnectionTrackingSpecification() {
@@ -1502,14 +1502,14 @@ public class LaunchTemplateInstanceNetworkInterfaceSpecificationRequest implemen
      * A security group connection tracking specification that enables you to set the timeout for connection tracking on
      * an Elastic network interface. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     * >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param connectionTrackingSpecification
      *        A security group connection tracking specification that enables you to set the timeout for connection
      *        tracking on an Elastic network interface. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts"
-     *        >Connection tracking timeouts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        >Idle connection tracking timeout</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

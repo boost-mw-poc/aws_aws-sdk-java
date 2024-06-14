@@ -37,8 +37,8 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when the free trial of automated sensitive data discovery
-     * started for the account. If the account is a member account in an organization, this value is the same as the
-     * value for the organization's Amazon Macie administrator account.
+     * started for the account. This value is null if automated sensitive data discovery hasn't been enabled for the
+     * account.
      * </p>
      */
     private java.util.Date automatedDiscoveryFreeTrialStartDate;
@@ -99,14 +99,14 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when the free trial of automated sensitive data discovery
-     * started for the account. If the account is a member account in an organization, this value is the same as the
-     * value for the organization's Amazon Macie administrator account.
+     * started for the account. This value is null if automated sensitive data discovery hasn't been enabled for the
+     * account.
      * </p>
      * 
      * @param automatedDiscoveryFreeTrialStartDate
      *        The date and time, in UTC and extended ISO 8601 format, when the free trial of automated sensitive data
-     *        discovery started for the account. If the account is a member account in an organization, this value is
-     *        the same as the value for the organization's Amazon Macie administrator account.
+     *        discovery started for the account. This value is null if automated sensitive data discovery hasn't been
+     *        enabled for the account.
      */
 
     public void setAutomatedDiscoveryFreeTrialStartDate(java.util.Date automatedDiscoveryFreeTrialStartDate) {
@@ -116,13 +116,13 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when the free trial of automated sensitive data discovery
-     * started for the account. If the account is a member account in an organization, this value is the same as the
-     * value for the organization's Amazon Macie administrator account.
+     * started for the account. This value is null if automated sensitive data discovery hasn't been enabled for the
+     * account.
      * </p>
      * 
      * @return The date and time, in UTC and extended ISO 8601 format, when the free trial of automated sensitive data
-     *         discovery started for the account. If the account is a member account in an organization, this value is
-     *         the same as the value for the organization's Amazon Macie administrator account.
+     *         discovery started for the account. This value is null if automated sensitive data discovery hasn't been
+     *         enabled for the account.
      */
 
     public java.util.Date getAutomatedDiscoveryFreeTrialStartDate() {
@@ -132,14 +132,14 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when the free trial of automated sensitive data discovery
-     * started for the account. If the account is a member account in an organization, this value is the same as the
-     * value for the organization's Amazon Macie administrator account.
+     * started for the account. This value is null if automated sensitive data discovery hasn't been enabled for the
+     * account.
      * </p>
      * 
      * @param automatedDiscoveryFreeTrialStartDate
      *        The date and time, in UTC and extended ISO 8601 format, when the free trial of automated sensitive data
-     *        discovery started for the account. If the account is a member account in an organization, this value is
-     *        the same as the value for the organization's Amazon Macie administrator account.
+     *        discovery started for the account. This value is null if automated sensitive data discovery hasn't been
+     *        enabled for the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -62,8 +62,13 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * EC2 Fleet requests instances from all of the Spot Instance pools that you specify.
      * </p>
      * </dd>
-     * <dt>lowest-price</dt>
-     * <dd>
+     * <dt>lowest-price (not recommended)</dt>
+     * <dd><important>
+     * <p>
+     * We don't recommend the <code>lowest-price</code> allocation strategy because it has the highest risk of
+     * interruption for your Spot Instances.
+     * </p>
+     * </important>
      * <p>
      * EC2 Fleet requests instances from the lowest priced Spot Instance pool that has available capacity. If the lowest
      * priced pool doesn't have available capacity, the Spot Instances come from the next lowest priced pool that has
@@ -130,11 +135,11 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
     private Boolean singleAvailabilityZone;
     /**
      * <p>
-     * The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not reached, the
-     * fleet launches no instances.
+     * The minimum target capacity for Spot Instances in the fleet. If this minimum capacity isn't reached, no instances
+     * are launched.
      * </p>
      * <p>
-     * Supported only for fleets of type <code>instant</code>.
+     * Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      * </p>
      * <p>
      * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -160,7 +165,7 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * does not account for surplus credits, and, if you use surplus credits, your final cost might be higher than what
      * you specified for <code>MaxTotalPrice</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     * >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     * >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </note>
      */
@@ -202,8 +207,13 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * EC2 Fleet requests instances from all of the Spot Instance pools that you specify.
      * </p>
      * </dd>
-     * <dt>lowest-price</dt>
-     * <dd>
+     * <dt>lowest-price (not recommended)</dt>
+     * <dd><important>
+     * <p>
+     * We don't recommend the <code>lowest-price</code> allocation strategy because it has the highest risk of
+     * interruption for your Spot Instances.
+     * </p>
+     * </important>
      * <p>
      * EC2 Fleet requests instances from the lowest priced Spot Instance pool that has available capacity. If the lowest
      * priced pool doesn't have available capacity, the Spot Instances come from the next lowest priced pool that has
@@ -253,8 +263,13 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      *        EC2 Fleet requests instances from all of the Spot Instance pools that you specify.
      *        </p>
      *        </dd>
-     *        <dt>lowest-price</dt>
-     *        <dd>
+     *        <dt>lowest-price (not recommended)</dt>
+     *        <dd><important>
+     *        <p>
+     *        We don't recommend the <code>lowest-price</code> allocation strategy because it has the highest risk of
+     *        interruption for your Spot Instances.
+     *        </p>
+     *        </important>
      *        <p>
      *        EC2 Fleet requests instances from the lowest priced Spot Instance pool that has available capacity. If the
      *        lowest priced pool doesn't have available capacity, the Spot Instances come from the next lowest priced
@@ -311,8 +326,13 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * EC2 Fleet requests instances from all of the Spot Instance pools that you specify.
      * </p>
      * </dd>
-     * <dt>lowest-price</dt>
-     * <dd>
+     * <dt>lowest-price (not recommended)</dt>
+     * <dd><important>
+     * <p>
+     * We don't recommend the <code>lowest-price</code> allocation strategy because it has the highest risk of
+     * interruption for your Spot Instances.
+     * </p>
+     * </important>
      * <p>
      * EC2 Fleet requests instances from the lowest priced Spot Instance pool that has available capacity. If the lowest
      * priced pool doesn't have available capacity, the Spot Instances come from the next lowest priced pool that has
@@ -362,8 +382,13 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      *         EC2 Fleet requests instances from all of the Spot Instance pools that you specify.
      *         </p>
      *         </dd>
-     *         <dt>lowest-price</dt>
-     *         <dd>
+     *         <dt>lowest-price (not recommended)</dt>
+     *         <dd><important>
+     *         <p>
+     *         We don't recommend the <code>lowest-price</code> allocation strategy because it has the highest risk of
+     *         interruption for your Spot Instances.
+     *         </p>
+     *         </important>
      *         <p>
      *         EC2 Fleet requests instances from the lowest priced Spot Instance pool that has available capacity. If
      *         the lowest priced pool doesn't have available capacity, the Spot Instances come from the next lowest
@@ -420,8 +445,13 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * EC2 Fleet requests instances from all of the Spot Instance pools that you specify.
      * </p>
      * </dd>
-     * <dt>lowest-price</dt>
-     * <dd>
+     * <dt>lowest-price (not recommended)</dt>
+     * <dd><important>
+     * <p>
+     * We don't recommend the <code>lowest-price</code> allocation strategy because it has the highest risk of
+     * interruption for your Spot Instances.
+     * </p>
+     * </important>
      * <p>
      * EC2 Fleet requests instances from the lowest priced Spot Instance pool that has available capacity. If the lowest
      * priced pool doesn't have available capacity, the Spot Instances come from the next lowest priced pool that has
@@ -471,8 +501,13 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      *        EC2 Fleet requests instances from all of the Spot Instance pools that you specify.
      *        </p>
      *        </dd>
-     *        <dt>lowest-price</dt>
-     *        <dd>
+     *        <dt>lowest-price (not recommended)</dt>
+     *        <dd><important>
+     *        <p>
+     *        We don't recommend the <code>lowest-price</code> allocation strategy because it has the highest risk of
+     *        interruption for your Spot Instances.
+     *        </p>
+     *        </important>
      *        <p>
      *        EC2 Fleet requests instances from the lowest priced Spot Instance pool that has available capacity. If the
      *        lowest priced pool doesn't have available capacity, the Spot Instances come from the next lowest priced
@@ -531,8 +566,13 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * EC2 Fleet requests instances from all of the Spot Instance pools that you specify.
      * </p>
      * </dd>
-     * <dt>lowest-price</dt>
-     * <dd>
+     * <dt>lowest-price (not recommended)</dt>
+     * <dd><important>
+     * <p>
+     * We don't recommend the <code>lowest-price</code> allocation strategy because it has the highest risk of
+     * interruption for your Spot Instances.
+     * </p>
+     * </important>
      * <p>
      * EC2 Fleet requests instances from the lowest priced Spot Instance pool that has available capacity. If the lowest
      * priced pool doesn't have available capacity, the Spot Instances come from the next lowest priced pool that has
@@ -582,8 +622,13 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      *        EC2 Fleet requests instances from all of the Spot Instance pools that you specify.
      *        </p>
      *        </dd>
-     *        <dt>lowest-price</dt>
-     *        <dd>
+     *        <dt>lowest-price (not recommended)</dt>
+     *        <dd><important>
+     *        <p>
+     *        We don't recommend the <code>lowest-price</code> allocation strategy because it has the highest risk of
+     *        interruption for your Spot Instances.
+     *        </p>
+     *        </important>
      *        <p>
      *        EC2 Fleet requests instances from the lowest priced Spot Instance pool that has available capacity. If the
      *        lowest priced pool doesn't have available capacity, the Spot Instances come from the next lowest priced
@@ -969,11 +1014,11 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not reached, the
-     * fleet launches no instances.
+     * The minimum target capacity for Spot Instances in the fleet. If this minimum capacity isn't reached, no instances
+     * are launched.
      * </p>
      * <p>
-     * Supported only for fleets of type <code>instant</code>.
+     * Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      * </p>
      * <p>
      * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -981,10 +1026,10 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * </p>
      * 
      * @param minTargetCapacity
-     *        The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not
-     *        reached, the fleet launches no instances.</p>
+     *        The minimum target capacity for Spot Instances in the fleet. If this minimum capacity isn't reached, no
+     *        instances are launched.</p>
      *        <p>
-     *        Supported only for fleets of type <code>instant</code>.
+     *        Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      *        </p>
      *        <p>
      *        At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -997,21 +1042,21 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not reached, the
-     * fleet launches no instances.
+     * The minimum target capacity for Spot Instances in the fleet. If this minimum capacity isn't reached, no instances
+     * are launched.
      * </p>
      * <p>
-     * Supported only for fleets of type <code>instant</code>.
+     * Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      * </p>
      * <p>
      * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
      * <code>SingleInstanceType</code>
      * </p>
      * 
-     * @return The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not
-     *         reached, the fleet launches no instances.</p>
+     * @return The minimum target capacity for Spot Instances in the fleet. If this minimum capacity isn't reached, no
+     *         instances are launched.</p>
      *         <p>
-     *         Supported only for fleets of type <code>instant</code>.
+     *         Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      *         </p>
      *         <p>
      *         At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -1024,11 +1069,11 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not reached, the
-     * fleet launches no instances.
+     * The minimum target capacity for Spot Instances in the fleet. If this minimum capacity isn't reached, no instances
+     * are launched.
      * </p>
      * <p>
-     * Supported only for fleets of type <code>instant</code>.
+     * Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      * </p>
      * <p>
      * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -1036,10 +1081,10 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * </p>
      * 
      * @param minTargetCapacity
-     *        The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not
-     *        reached, the fleet launches no instances.</p>
+     *        The minimum target capacity for Spot Instances in the fleet. If this minimum capacity isn't reached, no
+     *        instances are launched.</p>
      *        <p>
-     *        Supported only for fleets of type <code>instant</code>.
+     *        Constraints: Maximum value of <code>1000</code>. Supported only for fleets of type <code>instant</code>.
      *        </p>
      *        <p>
      *        At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
@@ -1070,7 +1115,7 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * does not account for surplus credits, and, if you use surplus credits, your final cost might be higher than what
      * you specified for <code>MaxTotalPrice</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     * >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     * >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </note>
      * 
@@ -1090,7 +1135,7 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      *        final cost might be higher than what you specified for <code>MaxTotalPrice</code>. For more information,
      *        see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     *        >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     *        >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>
      */
 
@@ -1116,7 +1161,7 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * does not account for surplus credits, and, if you use surplus credits, your final cost might be higher than what
      * you specified for <code>MaxTotalPrice</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     * >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     * >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </note>
      * 
@@ -1135,7 +1180,7 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      *         final cost might be higher than what you specified for <code>MaxTotalPrice</code>. For more information,
      *         see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     *         >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     *         >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      *         </p>
      */
 
@@ -1161,7 +1206,7 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      * does not account for surplus credits, and, if you use surplus credits, your final cost might be higher than what
      * you specified for <code>MaxTotalPrice</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     * >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     * >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </note>
      * 
@@ -1181,7 +1226,7 @@ public class SpotOptionsRequest implements Serializable, Cloneable {
      *        final cost might be higher than what you specified for <code>MaxTotalPrice</code>. For more information,
      *        see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits"
-     *        >Surplus credits can incur charges</a> in the <i>EC2 User Guide</i>.
+     *        >Surplus credits can incur charges</a> in the <i>Amazon EC2 User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

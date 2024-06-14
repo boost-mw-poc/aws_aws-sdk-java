@@ -31,7 +31,7 @@ public class SpotMaintenanceStrategies implements Serializable, Cloneable {
      * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an
      * elevated risk of being interrupted. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html">Capacity
-     * rebalancing</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * rebalancing</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private SpotCapacityRebalance capacityRebalance;
@@ -41,14 +41,14 @@ public class SpotMaintenanceStrategies implements Serializable, Cloneable {
      * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an
      * elevated risk of being interrupted. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html">Capacity
-     * rebalancing</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * rebalancing</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param capacityRebalance
      *        The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is at
      *        an elevated risk of being interrupted. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html">Capacity
-     *        rebalancing</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        rebalancing</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setCapacityRebalance(SpotCapacityRebalance capacityRebalance) {
@@ -60,13 +60,13 @@ public class SpotMaintenanceStrategies implements Serializable, Cloneable {
      * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an
      * elevated risk of being interrupted. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html">Capacity
-     * rebalancing</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * rebalancing</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is
      *         at an elevated risk of being interrupted. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html">Capacity
-     *         rebalancing</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *         rebalancing</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public SpotCapacityRebalance getCapacityRebalance() {
@@ -78,14 +78,14 @@ public class SpotMaintenanceStrategies implements Serializable, Cloneable {
      * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an
      * elevated risk of being interrupted. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html">Capacity
-     * rebalancing</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * rebalancing</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param capacityRebalance
      *        The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is at
      *        an elevated risk of being interrupted. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html">Capacity
-     *        rebalancing</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        rebalancing</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

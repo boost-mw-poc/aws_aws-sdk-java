@@ -101,6 +101,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
 
     /**
      * <p>
+     * Associates the environment role in Amazon DataZone.
+     * </p>
+     * 
+     * @param associateEnvironmentRoleRequest
+     * @return A Java Future containing the result of the AssociateEnvironmentRole operation returned by the service.
+     * @sample AmazonDataZoneAsync.AssociateEnvironmentRole
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/AssociateEnvironmentRole"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateEnvironmentRoleResult> associateEnvironmentRoleAsync(AssociateEnvironmentRoleRequest associateEnvironmentRoleRequest);
+
+    /**
+     * <p>
+     * Associates the environment role in Amazon DataZone.
+     * </p>
+     * 
+     * @param associateEnvironmentRoleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateEnvironmentRole operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.AssociateEnvironmentRole
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/AssociateEnvironmentRole"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateEnvironmentRoleResult> associateEnvironmentRoleAsync(AssociateEnvironmentRoleRequest associateEnvironmentRoleRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateEnvironmentRoleRequest, AssociateEnvironmentRoleResult> asyncHandler);
+
+    /**
+     * <p>
      * Cancels the metadata generation run.
      * </p>
      * 
@@ -348,6 +379,39 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<CreateEnvironmentResult> createEnvironmentAsync(CreateEnvironmentRequest createEnvironmentRequest,
             com.amazonaws.handlers.AsyncHandler<CreateEnvironmentRequest, CreateEnvironmentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an action for the environment, for example, creates a console link for an analytics tool that is
+     * available in this environment.
+     * </p>
+     * 
+     * @param createEnvironmentActionRequest
+     * @return A Java Future containing the result of the CreateEnvironmentAction operation returned by the service.
+     * @sample AmazonDataZoneAsync.CreateEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/CreateEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEnvironmentActionResult> createEnvironmentActionAsync(CreateEnvironmentActionRequest createEnvironmentActionRequest);
+
+    /**
+     * <p>
+     * Creates an action for the environment, for example, creates a console link for an analytics tool that is
+     * available in this environment.
+     * </p>
+     * 
+     * @param createEnvironmentActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEnvironmentAction operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.CreateEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/CreateEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEnvironmentActionResult> createEnvironmentActionAsync(CreateEnvironmentActionRequest createEnvironmentActionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEnvironmentActionRequest, CreateEnvironmentActionResult> asyncHandler);
 
     /**
      * <p>
@@ -880,6 +944,39 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
 
     /**
      * <p>
+     * Deletes an action for the environment, for example, deletes a console link for an analytics tool that is
+     * available in this environment.
+     * </p>
+     * 
+     * @param deleteEnvironmentActionRequest
+     * @return A Java Future containing the result of the DeleteEnvironmentAction operation returned by the service.
+     * @sample AmazonDataZoneAsync.DeleteEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEnvironmentActionResult> deleteEnvironmentActionAsync(DeleteEnvironmentActionRequest deleteEnvironmentActionRequest);
+
+    /**
+     * <p>
+     * Deletes an action for the environment, for example, deletes a console link for an analytics tool that is
+     * available in this environment.
+     * </p>
+     * 
+     * @param deleteEnvironmentActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEnvironmentAction operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.DeleteEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DeleteEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEnvironmentActionResult> deleteEnvironmentActionAsync(DeleteEnvironmentActionRequest deleteEnvironmentActionRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEnvironmentActionRequest, DeleteEnvironmentActionResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the blueprint configuration in Amazon DataZone.
      * </p>
      * 
@@ -1260,6 +1357,39 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
 
     /**
      * <p>
+     * Disassociates the environment role in Amazon DataZone.
+     * </p>
+     * 
+     * @param disassociateEnvironmentRoleRequest
+     * @return A Java Future containing the result of the DisassociateEnvironmentRole operation returned by the service.
+     * @sample AmazonDataZoneAsync.DisassociateEnvironmentRole
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DisassociateEnvironmentRole"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateEnvironmentRoleResult> disassociateEnvironmentRoleAsync(
+            DisassociateEnvironmentRoleRequest disassociateEnvironmentRoleRequest);
+
+    /**
+     * <p>
+     * Disassociates the environment role in Amazon DataZone.
+     * </p>
+     * 
+     * @param disassociateEnvironmentRoleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateEnvironmentRole operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.DisassociateEnvironmentRole
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DisassociateEnvironmentRole"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateEnvironmentRoleResult> disassociateEnvironmentRoleAsync(
+            DisassociateEnvironmentRoleRequest disassociateEnvironmentRoleRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateEnvironmentRoleRequest, DisassociateEnvironmentRoleResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets an Amazon DataZone asset.
      * </p>
      * 
@@ -1443,6 +1573,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<GetEnvironmentResult> getEnvironmentAsync(GetEnvironmentRequest getEnvironmentRequest,
             com.amazonaws.handlers.AsyncHandler<GetEnvironmentRequest, GetEnvironmentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the specified environment action.
+     * </p>
+     * 
+     * @param getEnvironmentActionRequest
+     * @return A Java Future containing the result of the GetEnvironmentAction operation returned by the service.
+     * @sample AmazonDataZoneAsync.GetEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetEnvironmentAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEnvironmentActionResult> getEnvironmentActionAsync(GetEnvironmentActionRequest getEnvironmentActionRequest);
+
+    /**
+     * <p>
+     * Gets the specified environment action.
+     * </p>
+     * 
+     * @param getEnvironmentActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEnvironmentAction operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.GetEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetEnvironmentAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEnvironmentActionResult> getEnvironmentActionAsync(GetEnvironmentActionRequest getEnvironmentActionRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEnvironmentActionRequest, GetEnvironmentActionResult> asyncHandler);
 
     /**
      * <p>
@@ -2135,6 +2296,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<ListDomainsResult> listDomainsAsync(ListDomainsRequest listDomainsRequest,
             com.amazonaws.handlers.AsyncHandler<ListDomainsRequest, ListDomainsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists existing environment actions.
+     * </p>
+     * 
+     * @param listEnvironmentActionsRequest
+     * @return A Java Future containing the result of the ListEnvironmentActions operation returned by the service.
+     * @sample AmazonDataZoneAsync.ListEnvironmentActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListEnvironmentActions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEnvironmentActionsResult> listEnvironmentActionsAsync(ListEnvironmentActionsRequest listEnvironmentActionsRequest);
+
+    /**
+     * <p>
+     * Lists existing environment actions.
+     * </p>
+     * 
+     * @param listEnvironmentActionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEnvironmentActions operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.ListEnvironmentActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/ListEnvironmentActions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEnvironmentActionsResult> listEnvironmentActionsAsync(ListEnvironmentActionsRequest listEnvironmentActionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEnvironmentActionsRequest, ListEnvironmentActionsResult> asyncHandler);
 
     /**
      * <p>
@@ -3112,6 +3304,37 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
      */
     java.util.concurrent.Future<UpdateEnvironmentResult> updateEnvironmentAsync(UpdateEnvironmentRequest updateEnvironmentRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateEnvironmentRequest, UpdateEnvironmentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an environment action.
+     * </p>
+     * 
+     * @param updateEnvironmentActionRequest
+     * @return A Java Future containing the result of the UpdateEnvironmentAction operation returned by the service.
+     * @sample AmazonDataZoneAsync.UpdateEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/UpdateEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEnvironmentActionResult> updateEnvironmentActionAsync(UpdateEnvironmentActionRequest updateEnvironmentActionRequest);
+
+    /**
+     * <p>
+     * Updates an environment action.
+     * </p>
+     * 
+     * @param updateEnvironmentActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEnvironmentAction operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.UpdateEnvironmentAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/UpdateEnvironmentAction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEnvironmentActionResult> updateEnvironmentActionAsync(UpdateEnvironmentActionRequest updateEnvironmentActionRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEnvironmentActionRequest, UpdateEnvironmentActionResult> asyncHandler);
 
     /**
      * <p>

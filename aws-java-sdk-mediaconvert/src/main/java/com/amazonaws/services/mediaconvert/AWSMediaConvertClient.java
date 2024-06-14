@@ -827,7 +827,9 @@ public class AWSMediaConvertClient extends AmazonWebServiceClient implements AWS
     }
 
     /**
-     * Send an request with an empty body to the regional API endpoint to get your account API endpoint.
+     * Send a request with an empty body to the regional API endpoint to get your account API endpoint. Note that
+     * DescribeEndpoints is no longer required. We recommend that you send your requests directly to the regional
+     * endpoint instead.
      * 
      * @param describeEndpointsRequest
      * @return Result of the DescribeEndpoints operation returned by the service.
@@ -1710,6 +1712,76 @@ public class AWSMediaConvertClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<PutPolicyResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * Retrieve a JSON array that includes job details for up to twenty of your most recent jobs. Optionally filter
+     * results further according to input file, queue, or status. To retrieve the twenty next most recent jobs, use the
+     * nextToken string returned with the array.
+     * 
+     * @param searchJobsRequest
+     * @return Result of the SearchJobs operation returned by the service.
+     * @throws BadRequestException
+     *         The service can't process your request because of a problem in the request. Please check your request
+     *         form and syntax.
+     * @throws InternalServerErrorException
+     *         The service encountered an unexpected condition and can't fulfill your request.
+     * @throws ForbiddenException
+     *         You don't have permissions for this action with the credentials you sent.
+     * @throws NotFoundException
+     *         The resource you requested doesn't exist.
+     * @throws TooManyRequestsException
+     *         Too many requests have been sent in too short of a time. The service limits the rate at which it will
+     *         accept requests.
+     * @throws ConflictException
+     *         The service couldn't complete your request because there is a conflict with the current state of the
+     *         resource.
+     * @sample AWSMediaConvert.SearchJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/SearchJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public SearchJobsResult searchJobs(SearchJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeSearchJobs(request);
+    }
+
+    @SdkInternalApi
+    final SearchJobsResult executeSearchJobs(SearchJobsRequest searchJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(searchJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SearchJobsRequest> request = null;
+        Response<SearchJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SearchJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(searchJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaConvert");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SearchJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SearchJobsResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new SearchJobsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

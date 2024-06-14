@@ -25,7 +25,7 @@ public class DescribeVpcsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Information about one or more VPCs.
+     * Information about the VPCs.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Vpc> vpcs;
@@ -39,10 +39,10 @@ public class DescribeVpcsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Information about one or more VPCs.
+     * Information about the VPCs.
      * </p>
      * 
-     * @return Information about one or more VPCs.
+     * @return Information about the VPCs.
      */
 
     public java.util.List<Vpc> getVpcs() {
@@ -54,11 +54,11 @@ public class DescribeVpcsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Information about one or more VPCs.
+     * Information about the VPCs.
      * </p>
      * 
      * @param vpcs
-     *        Information about one or more VPCs.
+     *        Information about the VPCs.
      */
 
     public void setVpcs(java.util.Collection<Vpc> vpcs) {
@@ -72,7 +72,7 @@ public class DescribeVpcsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Information about one or more VPCs.
+     * Information about the VPCs.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DescribeVpcsResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param vpcs
-     *        Information about one or more VPCs.
+     *        Information about the VPCs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DescribeVpcsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Information about one or more VPCs.
+     * Information about the VPCs.
      * </p>
      * 
      * @param vpcs
-     *        Information about one or more VPCs.
+     *        Information about the VPCs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

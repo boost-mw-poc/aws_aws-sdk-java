@@ -76,8 +76,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </ul>
      * <p>
      * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
-     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on the Nitro
+     * System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      * </p>
      * <p>
      * This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for <code>gp3</code>
@@ -88,9 +88,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     private Integer iops;
     /**
      * <p>
-     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
-     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
-     * must be <code>true</code>.
+     * The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your KMS key
+     * for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.
      * </p>
      * <p>
      * You can specify the KMS key using any of the following:
@@ -228,10 +227,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Indicates whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code>
-     * and <code>io2</code> volumes only. For more information, see <a
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     * the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
      * </p>
@@ -252,8 +250,7 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensure
      * Idempotency</a>.
      * </p>
      */
@@ -522,8 +519,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </ul>
      * <p>
      * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
-     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on the Nitro
+     * System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      * </p>
      * <p>
      * This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for <code>gp3</code>
@@ -558,9 +555,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </ul>
      *        <p>
      *        For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >instances built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000
-     *        IOPS.
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on
+     *        the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      *        </p>
      *        <p>
      *        This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for
@@ -601,8 +597,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </ul>
      * <p>
      * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
-     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on the Nitro
+     * System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      * </p>
      * <p>
      * This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for <code>gp3</code>
@@ -636,9 +632,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         </ul>
      *         <p>
      *         For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *         >instances built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000
-     *         IOPS.
+     *         href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on
+     *         the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      *         </p>
      *         <p>
      *         This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for
@@ -679,8 +674,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </ul>
      * <p>
      * For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">instances
-     * built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
+     * href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on the Nitro
+     * System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      * </p>
      * <p>
      * This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for <code>gp3</code>
@@ -715,9 +710,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </ul>
      *        <p>
      *        For <code>io2</code> volumes, you can achieve up to 256,000 IOPS on <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >instances built on the Nitro System</a>. On other instances, you can achieve performance up to 32,000
-     *        IOPS.
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">instances built on
+     *        the Nitro System</a>. On other instances, you can achieve performance up to 32,000 IOPS.
      *        </p>
      *        <p>
      *        This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for
@@ -733,9 +727,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
-     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
-     * must be <code>true</code>.
+     * The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your KMS key
+     * for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.
      * </p>
      * <p>
      * You can specify the KMS key using any of the following:
@@ -768,9 +761,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
-     *        parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
-     *        the encrypted state must be <code>true</code>.</p>
+     *        The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your
+     *        KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be
+     *        <code>true</code>.</p>
      *        <p>
      *        You can specify the KMS key using any of the following:
      *        </p>
@@ -807,9 +800,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
-     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
-     * must be <code>true</code>.
+     * The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your KMS key
+     * for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.
      * </p>
      * <p>
      * You can specify the KMS key using any of the following:
@@ -841,9 +833,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * is not valid, the action can appear to complete, but eventually fails.
      * </p>
      * 
-     * @return The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
-     *         parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
-     *         the encrypted state must be <code>true</code>.</p>
+     * @return The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your
+     *         KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be
+     *         <code>true</code>.</p>
      *         <p>
      *         You can specify the KMS key using any of the following:
      *         </p>
@@ -880,9 +872,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
-     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
-     * must be <code>true</code>.
+     * The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your KMS key
+     * for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.
      * </p>
      * <p>
      * You can specify the KMS key using any of the following:
@@ -915,9 +906,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
-     *        parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
-     *        the encrypted state must be <code>true</code>.</p>
+     *        The identifier of the KMS key to use for Amazon EBS encryption. If this parameter is not specified, your
+     *        KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state must be
+     *        <code>true</code>.</p>
      *        <p>
      *        You can specify the KMS key using any of the following:
      *        </p>
@@ -1812,10 +1803,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Indicates whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code>
-     * and <code>io2</code> volumes only. For more information, see <a
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     * the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
      * </p>
@@ -1823,9 +1813,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * @param multiAttachEnabled
      *        Indicates whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume
      *        to up to 16 <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >Instances built on the Nitro System</a> in the same Availability Zone. This parameter is supported with
-     *        <code>io1</code> and <code>io2</code> volumes only. For more information, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     *        the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     *        <code>io2</code> volumes only. For more information, see <a
      *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
      *        Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      */
@@ -1837,19 +1827,18 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Indicates whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code>
-     * and <code>io2</code> volumes only. For more information, see <a
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     * the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @return Indicates whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the
      *         volume to up to 16 <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *         >Instances built on the Nitro System</a> in the same Availability Zone. This parameter is supported with
-     *         <code>io1</code> and <code>io2</code> volumes only. For more information, see <a
+     *         href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     *         the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     *         <code>io2</code> volumes only. For more information, see <a
      *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
      *         Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      */
@@ -1861,10 +1850,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Indicates whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code>
-     * and <code>io2</code> volumes only. For more information, see <a
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     * the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
      * </p>
@@ -1872,9 +1860,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * @param multiAttachEnabled
      *        Indicates whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume
      *        to up to 16 <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >Instances built on the Nitro System</a> in the same Availability Zone. This parameter is supported with
-     *        <code>io1</code> and <code>io2</code> volumes only. For more information, see <a
+     *        href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     *        the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     *        <code>io2</code> volumes only. For more information, see <a
      *        href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
      *        Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1888,19 +1876,18 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Indicates whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up
-     * to 16 <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code>
-     * and <code>io2</code> volumes only. For more information, see <a
+     * to 16 <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     * the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     * <code>io2</code> volumes only. For more information, see <a
      * href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS Multi-Attach</a> in
      * the <i>Amazon EBS User Guide</i>.
      * </p>
      * 
      * @return Indicates whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the
      *         volume to up to 16 <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *         >Instances built on the Nitro System</a> in the same Availability Zone. This parameter is supported with
-     *         <code>io1</code> and <code>io2</code> volumes only. For more information, see <a
+     *         href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html">Instances built on
+     *         the Nitro System</a> in the same Availability Zone. This parameter is supported with <code>io1</code> and
+     *         <code>io2</code> volumes only. For more information, see <a
      *         href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html"> Amazon EBS
      *         Multi-Attach</a> in the <i>Amazon EBS User Guide</i>.
      */
@@ -1985,15 +1972,13 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensure
      * Idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     *        information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensure
      *        Idempotency</a>.
      */
 
@@ -2004,15 +1989,13 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensure
      * Idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
-     *         Idempotency</a>.
+     *         href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensure Idempotency</a>.
      */
 
     public String getClientToken() {
@@ -2022,15 +2005,13 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensure
      * Idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     *        information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensure
      *        Idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -44,7 +44,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      * capacity that you specify for the Fleet determine the number of instances for which the Fleet reserves capacity.
      * Both values are based on units that make sense for your workload. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Double weight;
@@ -79,7 +79,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      * specified for the Fleet should be prioritized for use. A lower value indicates a high priority. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">Instance type
-     * priority</a> in the Amazon EC2 User Guide.
+     * priority</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Integer priority;
@@ -208,7 +208,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      * capacity that you specify for the Fleet determine the number of instances for which the Fleet reserves capacity.
      * Both values are based on units that make sense for your workload. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param weight
@@ -217,7 +217,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      *        reserves capacity. Both values are based on units that make sense for your workload. For more information,
      *        see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setWeight(Double weight) {
@@ -230,7 +230,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      * capacity that you specify for the Fleet determine the number of instances for which the Fleet reserves capacity.
      * Both values are based on units that make sense for your workload. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The number of capacity units provided by the specified instance type. This value, together with the total
@@ -238,7 +238,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      *         reserves capacity. Both values are based on units that make sense for your workload. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
-     *         target capacity</a> in the Amazon EC2 User Guide.
+     *         target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Double getWeight() {
@@ -251,7 +251,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      * capacity that you specify for the Fleet determine the number of instances for which the Fleet reserves capacity.
      * Both values are based on units that make sense for your workload. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param weight
@@ -260,7 +260,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      *        reserves capacity. Both values are based on units that make sense for your workload. For more information,
      *        see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -455,7 +455,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      * specified for the Fleet should be prioritized for use. A lower value indicates a high priority. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">Instance type
-     * priority</a> in the Amazon EC2 User Guide.
+     * priority</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param priority
@@ -463,7 +463,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      *        specified for the Fleet should be prioritized for use. A lower value indicates a high priority. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"
-     *        >Instance type priority</a> in the Amazon EC2 User Guide.
+     *        >Instance type priority</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setPriority(Integer priority) {
@@ -476,14 +476,14 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      * specified for the Fleet should be prioritized for use. A lower value indicates a high priority. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">Instance type
-     * priority</a> in the Amazon EC2 User Guide.
+     * priority</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The priority to assign to the instance type. This value is used to determine which of the instance types
      *         specified for the Fleet should be prioritized for use. A lower value indicates a high priority. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"
-     *         >Instance type priority</a> in the Amazon EC2 User Guide.
+     *         >Instance type priority</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Integer getPriority() {
@@ -496,7 +496,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      * specified for the Fleet should be prioritized for use. A lower value indicates a high priority. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">Instance type
-     * priority</a> in the Amazon EC2 User Guide.
+     * priority</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param priority
@@ -504,7 +504,7 @@ public class ReservationFleetInstanceSpecification implements Serializable, Clon
      *        specified for the Fleet should be prioritized for use. A lower value indicates a high priority. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority"
-     *        >Instance type priority</a> in the Amazon EC2 User Guide.
+     *        >Instance type priority</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

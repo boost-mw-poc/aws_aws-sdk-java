@@ -43,6 +43,13 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String identifier;
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     */
+    private Boolean retainPermissionsOnRevokeFailure;
 
     /**
      * <p>
@@ -165,6 +172,66 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @param retainPermissionsOnRevokeFailure
+     *        Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *        a data source.
+     */
+
+    public void setRetainPermissionsOnRevokeFailure(Boolean retainPermissionsOnRevokeFailure) {
+        this.retainPermissionsOnRevokeFailure = retainPermissionsOnRevokeFailure;
+    }
+
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @return Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *         a data source.
+     */
+
+    public Boolean getRetainPermissionsOnRevokeFailure() {
+        return this.retainPermissionsOnRevokeFailure;
+    }
+
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @param retainPermissionsOnRevokeFailure
+     *        Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *        a data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteDataSourceRequest withRetainPermissionsOnRevokeFailure(Boolean retainPermissionsOnRevokeFailure) {
+        setRetainPermissionsOnRevokeFailure(retainPermissionsOnRevokeFailure);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for a data
+     * source.
+     * </p>
+     * 
+     * @return Specifies that the granted permissions are retained in case of a self-subscribe functionality failure for
+     *         a data source.
+     */
+
+    public Boolean isRetainPermissionsOnRevokeFailure() {
+        return this.retainPermissionsOnRevokeFailure;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +248,9 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getDomainIdentifier() != null)
             sb.append("DomainIdentifier: ").append(getDomainIdentifier()).append(",");
         if (getIdentifier() != null)
-            sb.append("Identifier: ").append(getIdentifier());
+            sb.append("Identifier: ").append(getIdentifier()).append(",");
+        if (getRetainPermissionsOnRevokeFailure() != null)
+            sb.append("RetainPermissionsOnRevokeFailure: ").append(getRetainPermissionsOnRevokeFailure());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +277,11 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getIdentifier() != null && other.getIdentifier().equals(this.getIdentifier()) == false)
             return false;
+        if (other.getRetainPermissionsOnRevokeFailure() == null ^ this.getRetainPermissionsOnRevokeFailure() == null)
+            return false;
+        if (other.getRetainPermissionsOnRevokeFailure() != null
+                && other.getRetainPermissionsOnRevokeFailure().equals(this.getRetainPermissionsOnRevokeFailure()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +293,7 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getDomainIdentifier() == null) ? 0 : getDomainIdentifier().hashCode());
         hashCode = prime * hashCode + ((getIdentifier() == null) ? 0 : getIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getRetainPermissionsOnRevokeFailure() == null) ? 0 : getRetainPermissionsOnRevokeFailure().hashCode());
         return hashCode;
     }
 

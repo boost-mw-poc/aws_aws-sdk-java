@@ -27,10 +27,7 @@ public class DescribeDhcpOptionsRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The IDs of one or more DHCP options sets.
-     * </p>
-     * <p>
-     * Default: Describes all your DHCP options sets.
+     * The IDs of DHCP option sets.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> dhcpOptionsIds;
@@ -94,15 +91,10 @@ public class DescribeDhcpOptionsRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The IDs of one or more DHCP options sets.
-     * </p>
-     * <p>
-     * Default: Describes all your DHCP options sets.
+     * The IDs of DHCP option sets.
      * </p>
      * 
-     * @return The IDs of one or more DHCP options sets.</p>
-     *         <p>
-     *         Default: Describes all your DHCP options sets.
+     * @return The IDs of DHCP option sets.
      */
 
     public java.util.List<String> getDhcpOptionsIds() {
@@ -114,16 +106,11 @@ public class DescribeDhcpOptionsRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The IDs of one or more DHCP options sets.
-     * </p>
-     * <p>
-     * Default: Describes all your DHCP options sets.
+     * The IDs of DHCP option sets.
      * </p>
      * 
      * @param dhcpOptionsIds
-     *        The IDs of one or more DHCP options sets.</p>
-     *        <p>
-     *        Default: Describes all your DHCP options sets.
+     *        The IDs of DHCP option sets.
      */
 
     public void setDhcpOptionsIds(java.util.Collection<String> dhcpOptionsIds) {
@@ -137,10 +124,7 @@ public class DescribeDhcpOptionsRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The IDs of one or more DHCP options sets.
-     * </p>
-     * <p>
-     * Default: Describes all your DHCP options sets.
+     * The IDs of DHCP option sets.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -149,9 +133,7 @@ public class DescribeDhcpOptionsRequest extends AmazonWebServiceRequest implemen
      * </p>
      * 
      * @param dhcpOptionsIds
-     *        The IDs of one or more DHCP options sets.</p>
-     *        <p>
-     *        Default: Describes all your DHCP options sets.
+     *        The IDs of DHCP option sets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -167,16 +149,11 @@ public class DescribeDhcpOptionsRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The IDs of one or more DHCP options sets.
-     * </p>
-     * <p>
-     * Default: Describes all your DHCP options sets.
+     * The IDs of DHCP option sets.
      * </p>
      * 
      * @param dhcpOptionsIds
-     *        The IDs of one or more DHCP options sets.</p>
-     *        <p>
-     *        Default: Describes all your DHCP options sets.
+     *        The IDs of DHCP option sets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

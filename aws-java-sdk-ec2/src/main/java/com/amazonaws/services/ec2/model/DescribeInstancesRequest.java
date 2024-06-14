@@ -645,7 +645,9 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.
+     * <code>private-ip-address</code> - The private IPv4 address of the instance. This can only be used to filter by
+     * the primary IP address of the network interface attached to the instance. To filter by additional IP addresses
+     * assigned to the network interface, use the filter <code>network-interface.addresses.private-ip-address</code>.
      * </p>
      * </li>
      * <li>
@@ -1426,7 +1428,9 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.
+     * <code>private-ip-address</code> - The private IPv4 address of the instance. This can only be used to filter by
+     * the primary IP address of the network interface attached to the instance. To filter by additional IP addresses
+     * assigned to the network interface, use the filter <code>network-interface.addresses.private-ip-address</code>.
      * </p>
      * </li>
      * <li>
@@ -2184,7 +2188,10 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
-     *         <code>private-ip-address</code> - The private IPv4 address of the instance.
+     *         <code>private-ip-address</code> - The private IPv4 address of the instance. This can only be used to
+     *         filter by the primary IP address of the network interface attached to the instance. To filter by
+     *         additional IP addresses assigned to the network interface, use the filter
+     *         <code>network-interface.addresses.private-ip-address</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -2948,7 +2955,9 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.
+     * <code>private-ip-address</code> - The private IPv4 address of the instance. This can only be used to filter by
+     * the primary IP address of the network interface attached to the instance. To filter by additional IP addresses
+     * assigned to the network interface, use the filter <code>network-interface.addresses.private-ip-address</code>.
      * </p>
      * </li>
      * <li>
@@ -3707,7 +3716,10 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>private-ip-address</code> - The private IPv4 address of the instance.
+     *        <code>private-ip-address</code> - The private IPv4 address of the instance. This can only be used to
+     *        filter by the primary IP address of the network interface attached to the instance. To filter by
+     *        additional IP addresses assigned to the network interface, use the filter
+     *        <code>network-interface.addresses.private-ip-address</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -4472,7 +4484,9 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.
+     * <code>private-ip-address</code> - The private IPv4 address of the instance. This can only be used to filter by
+     * the primary IP address of the network interface attached to the instance. To filter by additional IP addresses
+     * assigned to the network interface, use the filter <code>network-interface.addresses.private-ip-address</code>.
      * </p>
      * </li>
      * <li>
@@ -5236,7 +5250,10 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>private-ip-address</code> - The private IPv4 address of the instance.
+     *        <code>private-ip-address</code> - The private IPv4 address of the instance. This can only be used to
+     *        filter by the primary IP address of the network interface attached to the instance. To filter by
+     *        additional IP addresses assigned to the network interface, use the filter
+     *        <code>network-interface.addresses.private-ip-address</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -6003,7 +6020,9 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>private-ip-address</code> - The private IPv4 address of the instance.
+     * <code>private-ip-address</code> - The private IPv4 address of the instance. This can only be used to filter by
+     * the primary IP address of the network interface attached to the instance. To filter by additional IP addresses
+     * assigned to the network interface, use the filter <code>network-interface.addresses.private-ip-address</code>.
      * </p>
      * </li>
      * <li>
@@ -6762,7 +6781,10 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>private-ip-address</code> - The private IPv4 address of the instance.
+     *        <code>private-ip-address</code> - The private IPv4 address of the instance. This can only be used to
+     *        filter by the primary IP address of the network interface attached to the instance. To filter by
+     *        additional IP addresses assigned to the network interface, use the filter
+     *        <code>network-interface.addresses.private-ip-address</code>.
      *        </p>
      *        </li>
      *        <li>

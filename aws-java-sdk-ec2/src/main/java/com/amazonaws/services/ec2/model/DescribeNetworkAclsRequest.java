@@ -138,9 +138,6 @@ public class DescribeNetworkAclsRequest extends AmazonWebServiceRequest implemen
      * <p>
      * The IDs of the network ACLs.
      * </p>
-     * <p>
-     * Default: Describes all your network ACLs.
-     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> networkAclIds;
     /**
@@ -1060,13 +1057,8 @@ public class DescribeNetworkAclsRequest extends AmazonWebServiceRequest implemen
      * <p>
      * The IDs of the network ACLs.
      * </p>
-     * <p>
-     * Default: Describes all your network ACLs.
-     * </p>
      * 
-     * @return The IDs of the network ACLs.</p>
-     *         <p>
-     *         Default: Describes all your network ACLs.
+     * @return The IDs of the network ACLs.
      */
 
     public java.util.List<String> getNetworkAclIds() {
@@ -1080,14 +1072,9 @@ public class DescribeNetworkAclsRequest extends AmazonWebServiceRequest implemen
      * <p>
      * The IDs of the network ACLs.
      * </p>
-     * <p>
-     * Default: Describes all your network ACLs.
-     * </p>
      * 
      * @param networkAclIds
-     *        The IDs of the network ACLs.</p>
-     *        <p>
-     *        Default: Describes all your network ACLs.
+     *        The IDs of the network ACLs.
      */
 
     public void setNetworkAclIds(java.util.Collection<String> networkAclIds) {
@@ -1104,18 +1091,13 @@ public class DescribeNetworkAclsRequest extends AmazonWebServiceRequest implemen
      * The IDs of the network ACLs.
      * </p>
      * <p>
-     * Default: Describes all your network ACLs.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setNetworkAclIds(java.util.Collection)} or {@link #withNetworkAclIds(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param networkAclIds
-     *        The IDs of the network ACLs.</p>
-     *        <p>
-     *        Default: Describes all your network ACLs.
+     *        The IDs of the network ACLs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1133,14 +1115,9 @@ public class DescribeNetworkAclsRequest extends AmazonWebServiceRequest implemen
      * <p>
      * The IDs of the network ACLs.
      * </p>
-     * <p>
-     * Default: Describes all your network ACLs.
-     * </p>
      * 
      * @param networkAclIds
-     *        The IDs of the network ACLs.</p>
-     *        <p>
-     *        Default: Describes all your network ACLs.
+     *        The IDs of the network ACLs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

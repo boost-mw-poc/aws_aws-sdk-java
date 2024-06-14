@@ -27,42 +27,163 @@ public class UpdateAutomatedDiscoveryConfigurationRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The new status of automated sensitive data discovery for the account. Valid values are: ENABLED, start or resume
-     * automated sensitive data discovery activities for the account; and, DISABLED, stop performing automated sensitive
-     * data discovery activities for the account.
+     * Specifies whether to automatically enable automated sensitive data discovery for accounts in the organization.
+     * Valid values are: ALL (default), enable it for all existing accounts and new member accounts; NEW, enable it only
+     * for new member accounts; and, NONE, don't enable it for any accounts.
      * </p>
      * <p>
-     * When you enable automated sensitive data discovery for the first time, Amazon Macie uses default configuration
-     * settings to determine which data sources to analyze and which managed data identifiers to use. To change these
-     * settings, use the UpdateClassificationScope and UpdateSensitivityInspectionTemplate operations, respectively. If
-     * you change the settings and subsequently disable the configuration, Amazon Macie retains your changes.
+     * If you specify NEW or NONE, automated sensitive data discovery continues to be enabled for any existing accounts
+     * that it's currently enabled for. To enable or disable it for individual member accounts, specify NEW or NONE, and
+     * then enable or disable it for each account by using the BatchUpdateAutomatedDiscoveryAccounts operation.
+     * </p>
+     */
+    private String autoEnableOrganizationMembers;
+    /**
+     * <p>
+     * The new status of automated sensitive data discovery for the organization or account. Valid values are: ENABLED,
+     * start or resume all automated sensitive data discovery activities; and, DISABLED, stop performing all automated
+     * sensitive data discovery activities.
+     * </p>
+     * <p>
+     * If you specify DISABLED for an administrator account, you also disable automated sensitive data discovery for all
+     * member accounts in the organization.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The new status of automated sensitive data discovery for the account. Valid values are: ENABLED, start or resume
-     * automated sensitive data discovery activities for the account; and, DISABLED, stop performing automated sensitive
-     * data discovery activities for the account.
+     * Specifies whether to automatically enable automated sensitive data discovery for accounts in the organization.
+     * Valid values are: ALL (default), enable it for all existing accounts and new member accounts; NEW, enable it only
+     * for new member accounts; and, NONE, don't enable it for any accounts.
      * </p>
      * <p>
-     * When you enable automated sensitive data discovery for the first time, Amazon Macie uses default configuration
-     * settings to determine which data sources to analyze and which managed data identifiers to use. To change these
-     * settings, use the UpdateClassificationScope and UpdateSensitivityInspectionTemplate operations, respectively. If
-     * you change the settings and subsequently disable the configuration, Amazon Macie retains your changes.
+     * If you specify NEW or NONE, automated sensitive data discovery continues to be enabled for any existing accounts
+     * that it's currently enabled for. To enable or disable it for individual member accounts, specify NEW or NONE, and
+     * then enable or disable it for each account by using the BatchUpdateAutomatedDiscoveryAccounts operation.
+     * </p>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Specifies whether to automatically enable automated sensitive data discovery for accounts in the
+     *        organization. Valid values are: ALL (default), enable it for all existing accounts and new member
+     *        accounts; NEW, enable it only for new member accounts; and, NONE, don't enable it for any accounts.</p>
+     *        <p>
+     *        If you specify NEW or NONE, automated sensitive data discovery continues to be enabled for any existing
+     *        accounts that it's currently enabled for. To enable or disable it for individual member accounts, specify
+     *        NEW or NONE, and then enable or disable it for each account by using the
+     *        BatchUpdateAutomatedDiscoveryAccounts operation.
+     * @see AutoEnableMode
+     */
+
+    public void setAutoEnableOrganizationMembers(String autoEnableOrganizationMembers) {
+        this.autoEnableOrganizationMembers = autoEnableOrganizationMembers;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to automatically enable automated sensitive data discovery for accounts in the organization.
+     * Valid values are: ALL (default), enable it for all existing accounts and new member accounts; NEW, enable it only
+     * for new member accounts; and, NONE, don't enable it for any accounts.
+     * </p>
+     * <p>
+     * If you specify NEW or NONE, automated sensitive data discovery continues to be enabled for any existing accounts
+     * that it's currently enabled for. To enable or disable it for individual member accounts, specify NEW or NONE, and
+     * then enable or disable it for each account by using the BatchUpdateAutomatedDiscoveryAccounts operation.
+     * </p>
+     * 
+     * @return Specifies whether to automatically enable automated sensitive data discovery for accounts in the
+     *         organization. Valid values are: ALL (default), enable it for all existing accounts and new member
+     *         accounts; NEW, enable it only for new member accounts; and, NONE, don't enable it for any accounts.</p>
+     *         <p>
+     *         If you specify NEW or NONE, automated sensitive data discovery continues to be enabled for any existing
+     *         accounts that it's currently enabled for. To enable or disable it for individual member accounts, specify
+     *         NEW or NONE, and then enable or disable it for each account by using the
+     *         BatchUpdateAutomatedDiscoveryAccounts operation.
+     * @see AutoEnableMode
+     */
+
+    public String getAutoEnableOrganizationMembers() {
+        return this.autoEnableOrganizationMembers;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to automatically enable automated sensitive data discovery for accounts in the organization.
+     * Valid values are: ALL (default), enable it for all existing accounts and new member accounts; NEW, enable it only
+     * for new member accounts; and, NONE, don't enable it for any accounts.
+     * </p>
+     * <p>
+     * If you specify NEW or NONE, automated sensitive data discovery continues to be enabled for any existing accounts
+     * that it's currently enabled for. To enable or disable it for individual member accounts, specify NEW or NONE, and
+     * then enable or disable it for each account by using the BatchUpdateAutomatedDiscoveryAccounts operation.
+     * </p>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Specifies whether to automatically enable automated sensitive data discovery for accounts in the
+     *        organization. Valid values are: ALL (default), enable it for all existing accounts and new member
+     *        accounts; NEW, enable it only for new member accounts; and, NONE, don't enable it for any accounts.</p>
+     *        <p>
+     *        If you specify NEW or NONE, automated sensitive data discovery continues to be enabled for any existing
+     *        accounts that it's currently enabled for. To enable or disable it for individual member accounts, specify
+     *        NEW or NONE, and then enable or disable it for each account by using the
+     *        BatchUpdateAutomatedDiscoveryAccounts operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableMode
+     */
+
+    public UpdateAutomatedDiscoveryConfigurationRequest withAutoEnableOrganizationMembers(String autoEnableOrganizationMembers) {
+        setAutoEnableOrganizationMembers(autoEnableOrganizationMembers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to automatically enable automated sensitive data discovery for accounts in the organization.
+     * Valid values are: ALL (default), enable it for all existing accounts and new member accounts; NEW, enable it only
+     * for new member accounts; and, NONE, don't enable it for any accounts.
+     * </p>
+     * <p>
+     * If you specify NEW or NONE, automated sensitive data discovery continues to be enabled for any existing accounts
+     * that it's currently enabled for. To enable or disable it for individual member accounts, specify NEW or NONE, and
+     * then enable or disable it for each account by using the BatchUpdateAutomatedDiscoveryAccounts operation.
+     * </p>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Specifies whether to automatically enable automated sensitive data discovery for accounts in the
+     *        organization. Valid values are: ALL (default), enable it for all existing accounts and new member
+     *        accounts; NEW, enable it only for new member accounts; and, NONE, don't enable it for any accounts.</p>
+     *        <p>
+     *        If you specify NEW or NONE, automated sensitive data discovery continues to be enabled for any existing
+     *        accounts that it's currently enabled for. To enable or disable it for individual member accounts, specify
+     *        NEW or NONE, and then enable or disable it for each account by using the
+     *        BatchUpdateAutomatedDiscoveryAccounts operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableMode
+     */
+
+    public UpdateAutomatedDiscoveryConfigurationRequest withAutoEnableOrganizationMembers(AutoEnableMode autoEnableOrganizationMembers) {
+        this.autoEnableOrganizationMembers = autoEnableOrganizationMembers.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The new status of automated sensitive data discovery for the organization or account. Valid values are: ENABLED,
+     * start or resume all automated sensitive data discovery activities; and, DISABLED, stop performing all automated
+     * sensitive data discovery activities.
+     * </p>
+     * <p>
+     * If you specify DISABLED for an administrator account, you also disable automated sensitive data discovery for all
+     * member accounts in the organization.
      * </p>
      * 
      * @param status
-     *        The new status of automated sensitive data discovery for the account. Valid values are: ENABLED, start or
-     *        resume automated sensitive data discovery activities for the account; and, DISABLED, stop performing
-     *        automated sensitive data discovery activities for the account.</p>
+     *        The new status of automated sensitive data discovery for the organization or account. Valid values are:
+     *        ENABLED, start or resume all automated sensitive data discovery activities; and, DISABLED, stop performing
+     *        all automated sensitive data discovery activities.</p>
      *        <p>
-     *        When you enable automated sensitive data discovery for the first time, Amazon Macie uses default
-     *        configuration settings to determine which data sources to analyze and which managed data identifiers to
-     *        use. To change these settings, use the UpdateClassificationScope and UpdateSensitivityInspectionTemplate
-     *        operations, respectively. If you change the settings and subsequently disable the configuration, Amazon
-     *        Macie retains your changes.
+     *        If you specify DISABLED for an administrator account, you also disable automated sensitive data discovery
+     *        for all member accounts in the organization.
      * @see AutomatedDiscoveryStatus
      */
 
@@ -72,26 +193,21 @@ public class UpdateAutomatedDiscoveryConfigurationRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The new status of automated sensitive data discovery for the account. Valid values are: ENABLED, start or resume
-     * automated sensitive data discovery activities for the account; and, DISABLED, stop performing automated sensitive
-     * data discovery activities for the account.
+     * The new status of automated sensitive data discovery for the organization or account. Valid values are: ENABLED,
+     * start or resume all automated sensitive data discovery activities; and, DISABLED, stop performing all automated
+     * sensitive data discovery activities.
      * </p>
      * <p>
-     * When you enable automated sensitive data discovery for the first time, Amazon Macie uses default configuration
-     * settings to determine which data sources to analyze and which managed data identifiers to use. To change these
-     * settings, use the UpdateClassificationScope and UpdateSensitivityInspectionTemplate operations, respectively. If
-     * you change the settings and subsequently disable the configuration, Amazon Macie retains your changes.
+     * If you specify DISABLED for an administrator account, you also disable automated sensitive data discovery for all
+     * member accounts in the organization.
      * </p>
      * 
-     * @return The new status of automated sensitive data discovery for the account. Valid values are: ENABLED, start or
-     *         resume automated sensitive data discovery activities for the account; and, DISABLED, stop performing
-     *         automated sensitive data discovery activities for the account.</p>
+     * @return The new status of automated sensitive data discovery for the organization or account. Valid values are:
+     *         ENABLED, start or resume all automated sensitive data discovery activities; and, DISABLED, stop
+     *         performing all automated sensitive data discovery activities.</p>
      *         <p>
-     *         When you enable automated sensitive data discovery for the first time, Amazon Macie uses default
-     *         configuration settings to determine which data sources to analyze and which managed data identifiers to
-     *         use. To change these settings, use the UpdateClassificationScope and UpdateSensitivityInspectionTemplate
-     *         operations, respectively. If you change the settings and subsequently disable the configuration, Amazon
-     *         Macie retains your changes.
+     *         If you specify DISABLED for an administrator account, you also disable automated sensitive data discovery
+     *         for all member accounts in the organization.
      * @see AutomatedDiscoveryStatus
      */
 
@@ -101,27 +217,22 @@ public class UpdateAutomatedDiscoveryConfigurationRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The new status of automated sensitive data discovery for the account. Valid values are: ENABLED, start or resume
-     * automated sensitive data discovery activities for the account; and, DISABLED, stop performing automated sensitive
-     * data discovery activities for the account.
+     * The new status of automated sensitive data discovery for the organization or account. Valid values are: ENABLED,
+     * start or resume all automated sensitive data discovery activities; and, DISABLED, stop performing all automated
+     * sensitive data discovery activities.
      * </p>
      * <p>
-     * When you enable automated sensitive data discovery for the first time, Amazon Macie uses default configuration
-     * settings to determine which data sources to analyze and which managed data identifiers to use. To change these
-     * settings, use the UpdateClassificationScope and UpdateSensitivityInspectionTemplate operations, respectively. If
-     * you change the settings and subsequently disable the configuration, Amazon Macie retains your changes.
+     * If you specify DISABLED for an administrator account, you also disable automated sensitive data discovery for all
+     * member accounts in the organization.
      * </p>
      * 
      * @param status
-     *        The new status of automated sensitive data discovery for the account. Valid values are: ENABLED, start or
-     *        resume automated sensitive data discovery activities for the account; and, DISABLED, stop performing
-     *        automated sensitive data discovery activities for the account.</p>
+     *        The new status of automated sensitive data discovery for the organization or account. Valid values are:
+     *        ENABLED, start or resume all automated sensitive data discovery activities; and, DISABLED, stop performing
+     *        all automated sensitive data discovery activities.</p>
      *        <p>
-     *        When you enable automated sensitive data discovery for the first time, Amazon Macie uses default
-     *        configuration settings to determine which data sources to analyze and which managed data identifiers to
-     *        use. To change these settings, use the UpdateClassificationScope and UpdateSensitivityInspectionTemplate
-     *        operations, respectively. If you change the settings and subsequently disable the configuration, Amazon
-     *        Macie retains your changes.
+     *        If you specify DISABLED for an administrator account, you also disable automated sensitive data discovery
+     *        for all member accounts in the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutomatedDiscoveryStatus
      */
@@ -133,27 +244,22 @@ public class UpdateAutomatedDiscoveryConfigurationRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The new status of automated sensitive data discovery for the account. Valid values are: ENABLED, start or resume
-     * automated sensitive data discovery activities for the account; and, DISABLED, stop performing automated sensitive
-     * data discovery activities for the account.
+     * The new status of automated sensitive data discovery for the organization or account. Valid values are: ENABLED,
+     * start or resume all automated sensitive data discovery activities; and, DISABLED, stop performing all automated
+     * sensitive data discovery activities.
      * </p>
      * <p>
-     * When you enable automated sensitive data discovery for the first time, Amazon Macie uses default configuration
-     * settings to determine which data sources to analyze and which managed data identifiers to use. To change these
-     * settings, use the UpdateClassificationScope and UpdateSensitivityInspectionTemplate operations, respectively. If
-     * you change the settings and subsequently disable the configuration, Amazon Macie retains your changes.
+     * If you specify DISABLED for an administrator account, you also disable automated sensitive data discovery for all
+     * member accounts in the organization.
      * </p>
      * 
      * @param status
-     *        The new status of automated sensitive data discovery for the account. Valid values are: ENABLED, start or
-     *        resume automated sensitive data discovery activities for the account; and, DISABLED, stop performing
-     *        automated sensitive data discovery activities for the account.</p>
+     *        The new status of automated sensitive data discovery for the organization or account. Valid values are:
+     *        ENABLED, start or resume all automated sensitive data discovery activities; and, DISABLED, stop performing
+     *        all automated sensitive data discovery activities.</p>
      *        <p>
-     *        When you enable automated sensitive data discovery for the first time, Amazon Macie uses default
-     *        configuration settings to determine which data sources to analyze and which managed data identifiers to
-     *        use. To change these settings, use the UpdateClassificationScope and UpdateSensitivityInspectionTemplate
-     *        operations, respectively. If you change the settings and subsequently disable the configuration, Amazon
-     *        Macie retains your changes.
+     *        If you specify DISABLED for an administrator account, you also disable automated sensitive data discovery
+     *        for all member accounts in the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutomatedDiscoveryStatus
      */
@@ -175,6 +281,8 @@ public class UpdateAutomatedDiscoveryConfigurationRequest extends com.amazonaws.
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAutoEnableOrganizationMembers() != null)
+            sb.append("AutoEnableOrganizationMembers: ").append(getAutoEnableOrganizationMembers()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus());
         sb.append("}");
@@ -191,6 +299,11 @@ public class UpdateAutomatedDiscoveryConfigurationRequest extends com.amazonaws.
         if (obj instanceof UpdateAutomatedDiscoveryConfigurationRequest == false)
             return false;
         UpdateAutomatedDiscoveryConfigurationRequest other = (UpdateAutomatedDiscoveryConfigurationRequest) obj;
+        if (other.getAutoEnableOrganizationMembers() == null ^ this.getAutoEnableOrganizationMembers() == null)
+            return false;
+        if (other.getAutoEnableOrganizationMembers() != null
+                && other.getAutoEnableOrganizationMembers().equals(this.getAutoEnableOrganizationMembers()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -203,6 +316,7 @@ public class UpdateAutomatedDiscoveryConfigurationRequest extends com.amazonaws.
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAutoEnableOrganizationMembers() == null) ? 0 : getAutoEnableOrganizationMembers().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }

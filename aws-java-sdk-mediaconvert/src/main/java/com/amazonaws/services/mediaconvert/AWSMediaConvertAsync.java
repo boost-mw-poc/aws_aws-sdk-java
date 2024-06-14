@@ -309,7 +309,9 @@ public interface AWSMediaConvertAsync extends AWSMediaConvert {
             com.amazonaws.handlers.AsyncHandler<DeleteQueueRequest, DeleteQueueResult> asyncHandler);
 
     /**
-     * Send an request with an empty body to the regional API endpoint to get your account API endpoint.
+     * Send a request with an empty body to the regional API endpoint to get your account API endpoint. Note that
+     * DescribeEndpoints is no longer required. We recommend that you send your requests directly to the regional
+     * endpoint instead.
      * 
      * @param describeEndpointsRequest
      * @return A Java Future containing the result of the DescribeEndpoints operation returned by the service.
@@ -321,7 +323,9 @@ public interface AWSMediaConvertAsync extends AWSMediaConvert {
     java.util.concurrent.Future<DescribeEndpointsResult> describeEndpointsAsync(DescribeEndpointsRequest describeEndpointsRequest);
 
     /**
-     * Send an request with an empty body to the regional API endpoint to get your account API endpoint.
+     * Send a request with an empty body to the regional API endpoint to get your account API endpoint. Note that
+     * DescribeEndpoints is no longer required. We recommend that you send your requests directly to the regional
+     * endpoint instead.
      * 
      * @param describeEndpointsRequest
      * @param asyncHandler
@@ -674,6 +678,37 @@ public interface AWSMediaConvertAsync extends AWSMediaConvert {
      */
     java.util.concurrent.Future<PutPolicyResult> putPolicyAsync(PutPolicyRequest putPolicyRequest,
             com.amazonaws.handlers.AsyncHandler<PutPolicyRequest, PutPolicyResult> asyncHandler);
+
+    /**
+     * Retrieve a JSON array that includes job details for up to twenty of your most recent jobs. Optionally filter
+     * results further according to input file, queue, or status. To retrieve the twenty next most recent jobs, use the
+     * nextToken string returned with the array.
+     * 
+     * @param searchJobsRequest
+     * @return A Java Future containing the result of the SearchJobs operation returned by the service.
+     * @sample AWSMediaConvertAsync.SearchJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/SearchJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchJobsResult> searchJobsAsync(SearchJobsRequest searchJobsRequest);
+
+    /**
+     * Retrieve a JSON array that includes job details for up to twenty of your most recent jobs. Optionally filter
+     * results further according to input file, queue, or status. To retrieve the twenty next most recent jobs, use the
+     * nextToken string returned with the array.
+     * 
+     * @param searchJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchJobs operation returned by the service.
+     * @sample AWSMediaConvertAsyncHandler.SearchJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/SearchJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchJobsResult> searchJobsAsync(SearchJobsRequest searchJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchJobsRequest, SearchJobsResult> asyncHandler);
 
     /**
      * Add tags to a MediaConvert queue, preset, or job template. For information about tagging, see the User Guide at

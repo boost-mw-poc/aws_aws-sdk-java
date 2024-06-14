@@ -39,6 +39,24 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String domainIdentifier;
     /**
      * <p>
+     * The ID of the account in which the environment is being created.
+     * </p>
+     */
+    private String environmentAccountIdentifier;
+    /**
+     * <p>
+     * The region of the account in which the environment is being created.
+     * </p>
+     */
+    private String environmentAccountRegion;
+    /**
+     * <p>
+     * The ID of the blueprint with which the environment is being created.
+     * </p>
+     */
+    private String environmentBlueprintIdentifier;
+    /**
+     * <p>
      * The identifier of the environment profile that is used to create this Amazon DataZone environment.
      * </p>
      */
@@ -145,6 +163,126 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     public CreateEnvironmentRequest withDomainIdentifier(String domainIdentifier) {
         setDomainIdentifier(domainIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the account in which the environment is being created.
+     * </p>
+     * 
+     * @param environmentAccountIdentifier
+     *        The ID of the account in which the environment is being created.
+     */
+
+    public void setEnvironmentAccountIdentifier(String environmentAccountIdentifier) {
+        this.environmentAccountIdentifier = environmentAccountIdentifier;
+    }
+
+    /**
+     * <p>
+     * The ID of the account in which the environment is being created.
+     * </p>
+     * 
+     * @return The ID of the account in which the environment is being created.
+     */
+
+    public String getEnvironmentAccountIdentifier() {
+        return this.environmentAccountIdentifier;
+    }
+
+    /**
+     * <p>
+     * The ID of the account in which the environment is being created.
+     * </p>
+     * 
+     * @param environmentAccountIdentifier
+     *        The ID of the account in which the environment is being created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest withEnvironmentAccountIdentifier(String environmentAccountIdentifier) {
+        setEnvironmentAccountIdentifier(environmentAccountIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The region of the account in which the environment is being created.
+     * </p>
+     * 
+     * @param environmentAccountRegion
+     *        The region of the account in which the environment is being created.
+     */
+
+    public void setEnvironmentAccountRegion(String environmentAccountRegion) {
+        this.environmentAccountRegion = environmentAccountRegion;
+    }
+
+    /**
+     * <p>
+     * The region of the account in which the environment is being created.
+     * </p>
+     * 
+     * @return The region of the account in which the environment is being created.
+     */
+
+    public String getEnvironmentAccountRegion() {
+        return this.environmentAccountRegion;
+    }
+
+    /**
+     * <p>
+     * The region of the account in which the environment is being created.
+     * </p>
+     * 
+     * @param environmentAccountRegion
+     *        The region of the account in which the environment is being created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest withEnvironmentAccountRegion(String environmentAccountRegion) {
+        setEnvironmentAccountRegion(environmentAccountRegion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the blueprint with which the environment is being created.
+     * </p>
+     * 
+     * @param environmentBlueprintIdentifier
+     *        The ID of the blueprint with which the environment is being created.
+     */
+
+    public void setEnvironmentBlueprintIdentifier(String environmentBlueprintIdentifier) {
+        this.environmentBlueprintIdentifier = environmentBlueprintIdentifier;
+    }
+
+    /**
+     * <p>
+     * The ID of the blueprint with which the environment is being created.
+     * </p>
+     * 
+     * @return The ID of the blueprint with which the environment is being created.
+     */
+
+    public String getEnvironmentBlueprintIdentifier() {
+        return this.environmentBlueprintIdentifier;
+    }
+
+    /**
+     * <p>
+     * The ID of the blueprint with which the environment is being created.
+     * </p>
+     * 
+     * @param environmentBlueprintIdentifier
+     *        The ID of the blueprint with which the environment is being created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest withEnvironmentBlueprintIdentifier(String environmentBlueprintIdentifier) {
+        setEnvironmentBlueprintIdentifier(environmentBlueprintIdentifier);
         return this;
     }
 
@@ -424,6 +562,12 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
             sb.append("Description: ").append(getDescription()).append(",");
         if (getDomainIdentifier() != null)
             sb.append("DomainIdentifier: ").append(getDomainIdentifier()).append(",");
+        if (getEnvironmentAccountIdentifier() != null)
+            sb.append("EnvironmentAccountIdentifier: ").append(getEnvironmentAccountIdentifier()).append(",");
+        if (getEnvironmentAccountRegion() != null)
+            sb.append("EnvironmentAccountRegion: ").append(getEnvironmentAccountRegion()).append(",");
+        if (getEnvironmentBlueprintIdentifier() != null)
+            sb.append("EnvironmentBlueprintIdentifier: ").append(getEnvironmentBlueprintIdentifier()).append(",");
         if (getEnvironmentProfileIdentifier() != null)
             sb.append("EnvironmentProfileIdentifier: ").append(getEnvironmentProfileIdentifier()).append(",");
         if (getGlossaryTerms() != null)
@@ -456,6 +600,19 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getDomainIdentifier() != null && other.getDomainIdentifier().equals(this.getDomainIdentifier()) == false)
             return false;
+        if (other.getEnvironmentAccountIdentifier() == null ^ this.getEnvironmentAccountIdentifier() == null)
+            return false;
+        if (other.getEnvironmentAccountIdentifier() != null && other.getEnvironmentAccountIdentifier().equals(this.getEnvironmentAccountIdentifier()) == false)
+            return false;
+        if (other.getEnvironmentAccountRegion() == null ^ this.getEnvironmentAccountRegion() == null)
+            return false;
+        if (other.getEnvironmentAccountRegion() != null && other.getEnvironmentAccountRegion().equals(this.getEnvironmentAccountRegion()) == false)
+            return false;
+        if (other.getEnvironmentBlueprintIdentifier() == null ^ this.getEnvironmentBlueprintIdentifier() == null)
+            return false;
+        if (other.getEnvironmentBlueprintIdentifier() != null
+                && other.getEnvironmentBlueprintIdentifier().equals(this.getEnvironmentBlueprintIdentifier()) == false)
+            return false;
         if (other.getEnvironmentProfileIdentifier() == null ^ this.getEnvironmentProfileIdentifier() == null)
             return false;
         if (other.getEnvironmentProfileIdentifier() != null && other.getEnvironmentProfileIdentifier().equals(this.getEnvironmentProfileIdentifier()) == false)
@@ -486,6 +643,9 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getDomainIdentifier() == null) ? 0 : getDomainIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getEnvironmentAccountIdentifier() == null) ? 0 : getEnvironmentAccountIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getEnvironmentAccountRegion() == null) ? 0 : getEnvironmentAccountRegion().hashCode());
+        hashCode = prime * hashCode + ((getEnvironmentBlueprintIdentifier() == null) ? 0 : getEnvironmentBlueprintIdentifier().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentProfileIdentifier() == null) ? 0 : getEnvironmentProfileIdentifier().hashCode());
         hashCode = prime * hashCode + ((getGlossaryTerms() == null) ? 0 : getGlossaryTerms().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());

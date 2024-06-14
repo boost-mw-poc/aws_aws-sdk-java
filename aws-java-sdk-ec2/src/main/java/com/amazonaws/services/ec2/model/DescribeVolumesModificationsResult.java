@@ -31,7 +31,7 @@ public class DescribeVolumesModificationsResult extends com.amazonaws.AmazonWebS
     private com.amazonaws.internal.SdkInternalList<VolumeModification> volumesModifications;
     /**
      * <p>
-     * The token to include in another request to get the next page of items. This value is <code>null</code> if there
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
      * are no more items to return.
      * </p>
      */
@@ -112,13 +112,13 @@ public class DescribeVolumesModificationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The token to include in another request to get the next page of items. This value is <code>null</code> if there
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
      * are no more items to return.
      * </p>
      * 
      * @param nextToken
-     *        The token to include in another request to get the next page of items. This value is <code>null</code> if
-     *        there are no more items to return.
+     *        The token to include in another request to get the next page of items. This value is <code>null</code>
+     *        when there are no more items to return.
      */
 
     public void setNextToken(String nextToken) {
@@ -127,12 +127,12 @@ public class DescribeVolumesModificationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The token to include in another request to get the next page of items. This value is <code>null</code> if there
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
      * are no more items to return.
      * </p>
      * 
-     * @return The token to include in another request to get the next page of items. This value is <code>null</code> if
-     *         there are no more items to return.
+     * @return The token to include in another request to get the next page of items. This value is <code>null</code>
+     *         when there are no more items to return.
      */
 
     public String getNextToken() {
@@ -141,13 +141,13 @@ public class DescribeVolumesModificationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The token to include in another request to get the next page of items. This value is <code>null</code> if there
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
      * are no more items to return.
      * </p>
      * 
      * @param nextToken
-     *        The token to include in another request to get the next page of items. This value is <code>null</code> if
-     *        there are no more items to return.
+     *        The token to include in another request to get the next page of items. This value is <code>null</code>
+     *        when there are no more items to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

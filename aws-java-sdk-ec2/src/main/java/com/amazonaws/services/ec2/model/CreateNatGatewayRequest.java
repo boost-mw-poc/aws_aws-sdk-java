@@ -36,8 +36,7 @@ public class CreateNatGatewayRequest extends AmazonWebServiceRequest implements 
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      * idempotency</a>.
      * </p>
      * <p>
@@ -151,8 +150,7 @@ public class CreateNatGatewayRequest extends AmazonWebServiceRequest implements 
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      * idempotency</a>.
      * </p>
      * <p>
@@ -162,7 +160,7 @@ public class CreateNatGatewayRequest extends AmazonWebServiceRequest implements 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      *        idempotency</a>.</p>
      *        <p>
      *        Constraint: Maximum 64 ASCII characters.
@@ -175,8 +173,7 @@ public class CreateNatGatewayRequest extends AmazonWebServiceRequest implements 
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      * idempotency</a>.
      * </p>
      * <p>
@@ -185,7 +182,7 @@ public class CreateNatGatewayRequest extends AmazonWebServiceRequest implements 
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *         href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      *         idempotency</a>.</p>
      *         <p>
      *         Constraint: Maximum 64 ASCII characters.
@@ -198,8 +195,7 @@ public class CreateNatGatewayRequest extends AmazonWebServiceRequest implements 
     /**
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      * idempotency</a>.
      * </p>
      * <p>
@@ -209,7 +205,7 @@ public class CreateNatGatewayRequest extends AmazonWebServiceRequest implements 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
      *        idempotency</a>.</p>
      *        <p>
      *        Constraint: Maximum 64 ASCII characters.

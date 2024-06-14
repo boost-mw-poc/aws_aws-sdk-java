@@ -47,8 +47,7 @@ public class CreateReplaceRootVolumeTaskRequest extends AmazonWebServiceRequest 
      * <p>
      * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a
      * client token, a randomly generated token is used for the request to ensure idempotency. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * idempotency</a>.
+     * <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * </p>
      */
     private String clientToken;
@@ -189,16 +188,14 @@ public class CreateReplaceRootVolumeTaskRequest extends AmazonWebServiceRequest 
      * <p>
      * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a
      * client token, a randomly generated token is used for the request to ensure idempotency. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * idempotency</a>.
+     * <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not
      *        specify a client token, a randomly generated token is used for the request to ensure idempotency. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *        idempotency</a>.
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -209,15 +206,13 @@ public class CreateReplaceRootVolumeTaskRequest extends AmazonWebServiceRequest 
      * <p>
      * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a
      * client token, a randomly generated token is used for the request to ensure idempotency. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * idempotency</a>.
+     * <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not
      *         specify a client token, a randomly generated token is used for the request to ensure idempotency. For
      *         more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *         idempotency</a>.
+     *         href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      */
 
     public String getClientToken() {
@@ -228,16 +223,14 @@ public class CreateReplaceRootVolumeTaskRequest extends AmazonWebServiceRequest 
      * <p>
      * Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not specify a
      * client token, a randomly generated token is used for the request to ensure idempotency. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * idempotency</a>.
+     * <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier you provide to ensure the idempotency of the request. If you do not
      *        specify a client token, a randomly generated token is used for the request to ensure idempotency. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *        idempotency</a>.
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

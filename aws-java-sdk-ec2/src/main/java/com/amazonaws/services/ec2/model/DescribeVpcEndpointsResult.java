@@ -25,7 +25,7 @@ public class DescribeVpcEndpointsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Information about the endpoints.
+     * Information about the VPC endpoints.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<VpcEndpoint> vpcEndpoints;
@@ -39,10 +39,10 @@ public class DescribeVpcEndpointsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Information about the endpoints.
+     * Information about the VPC endpoints.
      * </p>
      * 
-     * @return Information about the endpoints.
+     * @return Information about the VPC endpoints.
      */
 
     public java.util.List<VpcEndpoint> getVpcEndpoints() {
@@ -54,11 +54,11 @@ public class DescribeVpcEndpointsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Information about the endpoints.
+     * Information about the VPC endpoints.
      * </p>
      * 
      * @param vpcEndpoints
-     *        Information about the endpoints.
+     *        Information about the VPC endpoints.
      */
 
     public void setVpcEndpoints(java.util.Collection<VpcEndpoint> vpcEndpoints) {
@@ -72,7 +72,7 @@ public class DescribeVpcEndpointsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Information about the endpoints.
+     * Information about the VPC endpoints.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DescribeVpcEndpointsResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param vpcEndpoints
-     *        Information about the endpoints.
+     *        Information about the VPC endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DescribeVpcEndpointsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Information about the endpoints.
+     * Information about the VPC endpoints.
      * </p>
      * 
      * @param vpcEndpoints
-     *        Information about the endpoints.
+     *        Information about the VPC endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

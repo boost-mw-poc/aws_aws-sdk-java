@@ -100,6 +100,30 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
+     * Changes the status of automated sensitive data discovery for one or more accounts.
+     * </p>
+     * 
+     * @param batchUpdateAutomatedDiscoveryAccountsRequest
+     * @return Result of the BatchUpdateAutomatedDiscoveryAccounts operation returned by the service.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because the input doesn't satisfy the constraints specified by the service.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws ConflictException
+     *         The request failed because it conflicts with the current state of the specified resource.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.BatchUpdateAutomatedDiscoveryAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/BatchUpdateAutomatedDiscoveryAccounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchUpdateAutomatedDiscoveryAccountsResult batchUpdateAutomatedDiscoveryAccounts(
+            BatchUpdateAutomatedDiscoveryAccountsRequest batchUpdateAutomatedDiscoveryAccountsRequest);
+
+    /**
+     * <p>
      * Creates and defines the settings for an allow list.
      * </p>
      * 
@@ -794,7 +818,8 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the configuration settings and status of automated sensitive data discovery for an account.
+     * Retrieves the configuration settings and status of automated sensitive data discovery for an organization or
+     * standalone account.
      * </p>
      * 
      * @param getAutomatedDiscoveryConfigurationRequest
@@ -1348,6 +1373,29 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
+     * Retrieves the status of automated sensitive data discovery for one or more accounts.
+     * </p>
+     * 
+     * @param listAutomatedDiscoveryAccountsRequest
+     * @return Result of the ListAutomatedDiscoveryAccounts operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because the input doesn't satisfy the constraints specified by the service.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.ListAutomatedDiscoveryAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListAutomatedDiscoveryAccounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAutomatedDiscoveryAccountsResult listAutomatedDiscoveryAccounts(ListAutomatedDiscoveryAccountsRequest listAutomatedDiscoveryAccountsRequest);
+
+    /**
+     * <p>
      * Retrieves a subset of information about one or more classification jobs.
      * </p>
      * 
@@ -1481,7 +1529,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves information about the Amazon Macie membership invitations that were received by an account.
+     * Retrieves information about Amazon Macie membership invitations that were received by an account.
      * </p>
      * 
      * @param listInvitationsRequest
@@ -1579,7 +1627,8 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves information about objects that were selected from an S3 bucket for automated sensitive data discovery.
+     * Retrieves information about objects that Amazon Macie selected from an S3 bucket for automated sensitive data
+     * discovery.
      * </p>
      * 
      * @param listResourceProfileArtifactsRequest
@@ -1666,7 +1715,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Creates or updates the configuration settings for storing data classification results.
+     * Adds or updates the configuration settings for storing data classification results.
      * </p>
      * 
      * @param putClassificationExportConfigurationRequest
@@ -1766,7 +1815,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Tests a custom data identifier.
+     * Tests criteria for a custom data identifier.
      * </p>
      * 
      * @param testCustomDataIdentifierRequest
@@ -1830,7 +1879,8 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Enables or disables automated sensitive data discovery for an account.
+     * Changes the configuration settings and status of automated sensitive data discovery for an organization or
+     * standalone account.
      * </p>
      * 
      * @param updateAutomatedDiscoveryConfigurationRequest

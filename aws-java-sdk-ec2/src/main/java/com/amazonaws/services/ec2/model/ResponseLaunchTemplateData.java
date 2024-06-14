@@ -86,7 +86,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String imageId;
@@ -204,8 +204,8 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU options</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private LaunchTemplateCpuOptions cpuOptions;
@@ -224,8 +224,8 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether an instance is configured for hibernation. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private LaunchTemplateHibernationOptions hibernationOptions;
@@ -233,7 +233,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata and user
-     * data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * data</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private LaunchTemplateInstanceMetadataOptions metadataOptions;
@@ -268,8 +268,8 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Boolean disableApiStop;
@@ -582,7 +582,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param imageId
@@ -613,8 +613,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setImageId(String imageId) {
@@ -651,7 +650,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The ID of the AMI or a Systems Manager parameter. The Systems Manager parameter will resolve to the ID of
@@ -681,8 +680,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *         Guide</i>.
+     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public String getImageId() {
@@ -719,7 +717,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param imageId
@@ -750,8 +748,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1745,14 +1742,14 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU options</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param cpuOptions
      *        The CPU options for the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU
-     *        options</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU
+     *        options</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setCpuOptions(LaunchTemplateCpuOptions cpuOptions) {
@@ -1762,13 +1759,13 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU options</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The CPU options for the instance. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU
-     *         options</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU
+     *         options</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public LaunchTemplateCpuOptions getCpuOptions() {
@@ -1778,14 +1775,14 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU options</a>
-     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param cpuOptions
      *        The CPU options for the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU
-     *        options</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU
+     *        options</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1911,14 +1908,14 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether an instance is configured for hibernation. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param hibernationOptions
      *        Indicates whether an instance is configured for hibernation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2
+     *        instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setHibernationOptions(LaunchTemplateHibernationOptions hibernationOptions) {
@@ -1928,13 +1925,13 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether an instance is configured for hibernation. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Indicates whether an instance is configured for hibernation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in
-     *         the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2
+     *         instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public LaunchTemplateHibernationOptions getHibernationOptions() {
@@ -1944,14 +1941,14 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether an instance is configured for hibernation. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2 instance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param hibernationOptions
      *        Indicates whether an instance is configured for hibernation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your Amazon EC2
+     *        instance</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1964,13 +1961,13 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata and user
-     * data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * data</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param metadataOptions
      *        The metadata options for the instance. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata
-     *        and user data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        and user data</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setMetadataOptions(LaunchTemplateInstanceMetadataOptions metadataOptions) {
@@ -1981,12 +1978,12 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata and user
-     * data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * data</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The metadata options for the instance. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata
-     *         and user data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         and user data</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public LaunchTemplateInstanceMetadataOptions getMetadataOptions() {
@@ -1997,13 +1994,13 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * The metadata options for the instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata and user
-     * data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * data</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param metadataOptions
      *        The metadata options for the instance. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">Instance metadata
-     *        and user data</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        and user data</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2196,14 +2193,14 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param disableApiStop
      *        Indicates whether the instance is enabled for stop protection. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection
+     *        for your instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setDisableApiStop(Boolean disableApiStop) {
@@ -2213,13 +2210,13 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Indicates whether the instance is enabled for stop protection. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop
+     *         protection for your instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Boolean getDisableApiStop() {
@@ -2229,14 +2226,14 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param disableApiStop
      *        Indicates whether the instance is enabled for stop protection. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection
+     *        for your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2248,13 +2245,13 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Indicates whether the instance is enabled for stop protection. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop
+     *         protection for your instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Boolean isDisableApiStop() {

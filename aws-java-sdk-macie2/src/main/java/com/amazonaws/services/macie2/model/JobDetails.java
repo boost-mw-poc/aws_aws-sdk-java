@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies whether any one-time or recurring classification jobs are configured to analyze data in an S3 bucket, and,
- * if so, the details of the job that ran most recently.
+ * Specifies whether any one-time or recurring classification jobs are configured to analyze objects in an S3 bucket,
+ * and, if so, the details of the job that ran most recently.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/JobDetails" target="_top">AWS API
@@ -31,7 +31,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether any one-time or recurring jobs are configured to analyze data in the bucket. Possible values
+     * Specifies whether any one-time or recurring jobs are configured to analyze objects in the bucket. Possible values
      * are:
      * </p>
      * <ul>
@@ -59,7 +59,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
     private String isDefinedInJob;
     /**
      * <p>
-     * Specifies whether any recurring jobs are configured to analyze data in the bucket. Possible values are:
+     * Specifies whether any recurring jobs are configured to analyze objects in the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -86,8 +86,8 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
     private String isMonitoredByJob;
     /**
      * <p>
-     * The unique identifier for the job that ran most recently and is configured to analyze data in the bucket, either
-     * the latest run of a recurring job or the only run of a one-time job.
+     * The unique identifier for the job that ran most recently and is configured to analyze objects in the bucket,
+     * either the latest run of a recurring job or the only run of a one-time job.
      * </p>
      * <p>
      * This value is typically null if the value for the isDefinedInJob property is FALSE or UNKNOWN.
@@ -107,7 +107,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether any one-time or recurring jobs are configured to analyze data in the bucket. Possible values
+     * Specifies whether any one-time or recurring jobs are configured to analyze objects in the bucket. Possible values
      * are:
      * </p>
      * <ul>
@@ -133,7 +133,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param isDefinedInJob
-     *        Specifies whether any one-time or recurring jobs are configured to analyze data in the bucket. Possible
+     *        Specifies whether any one-time or recurring jobs are configured to analyze objects in the bucket. Possible
      *        values are:</p>
      *        <ul>
      *        <li>
@@ -165,7 +165,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether any one-time or recurring jobs are configured to analyze data in the bucket. Possible values
+     * Specifies whether any one-time or recurring jobs are configured to analyze objects in the bucket. Possible values
      * are:
      * </p>
      * <ul>
@@ -190,8 +190,8 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return Specifies whether any one-time or recurring jobs are configured to analyze data in the bucket. Possible
-     *         values are:</p>
+     * @return Specifies whether any one-time or recurring jobs are configured to analyze objects in the bucket.
+     *         Possible values are:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -222,7 +222,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether any one-time or recurring jobs are configured to analyze data in the bucket. Possible values
+     * Specifies whether any one-time or recurring jobs are configured to analyze objects in the bucket. Possible values
      * are:
      * </p>
      * <ul>
@@ -248,7 +248,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param isDefinedInJob
-     *        Specifies whether any one-time or recurring jobs are configured to analyze data in the bucket. Possible
+     *        Specifies whether any one-time or recurring jobs are configured to analyze objects in the bucket. Possible
      *        values are:</p>
      *        <ul>
      *        <li>
@@ -282,7 +282,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether any one-time or recurring jobs are configured to analyze data in the bucket. Possible values
+     * Specifies whether any one-time or recurring jobs are configured to analyze objects in the bucket. Possible values
      * are:
      * </p>
      * <ul>
@@ -308,7 +308,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param isDefinedInJob
-     *        Specifies whether any one-time or recurring jobs are configured to analyze data in the bucket. Possible
+     *        Specifies whether any one-time or recurring jobs are configured to analyze objects in the bucket. Possible
      *        values are:</p>
      *        <ul>
      *        <li>
@@ -342,7 +342,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether any recurring jobs are configured to analyze data in the bucket. Possible values are:
+     * Specifies whether any recurring jobs are configured to analyze objects in the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -367,7 +367,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param isMonitoredByJob
-     *        Specifies whether any recurring jobs are configured to analyze data in the bucket. Possible values
+     *        Specifies whether any recurring jobs are configured to analyze objects in the bucket. Possible values
      *        are:</p>
      *        <ul>
      *        <li>
@@ -399,7 +399,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether any recurring jobs are configured to analyze data in the bucket. Possible values are:
+     * Specifies whether any recurring jobs are configured to analyze objects in the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -423,7 +423,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return Specifies whether any recurring jobs are configured to analyze data in the bucket. Possible values
+     * @return Specifies whether any recurring jobs are configured to analyze objects in the bucket. Possible values
      *         are:</p>
      *         <ul>
      *         <li>
@@ -455,7 +455,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether any recurring jobs are configured to analyze data in the bucket. Possible values are:
+     * Specifies whether any recurring jobs are configured to analyze objects in the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -480,7 +480,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param isMonitoredByJob
-     *        Specifies whether any recurring jobs are configured to analyze data in the bucket. Possible values
+     *        Specifies whether any recurring jobs are configured to analyze objects in the bucket. Possible values
      *        are:</p>
      *        <ul>
      *        <li>
@@ -514,7 +514,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether any recurring jobs are configured to analyze data in the bucket. Possible values are:
+     * Specifies whether any recurring jobs are configured to analyze objects in the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -539,7 +539,7 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param isMonitoredByJob
-     *        Specifies whether any recurring jobs are configured to analyze data in the bucket. Possible values
+     *        Specifies whether any recurring jobs are configured to analyze objects in the bucket. Possible values
      *        are:</p>
      *        <ul>
      *        <li>
@@ -573,16 +573,16 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the job that ran most recently and is configured to analyze data in the bucket, either
-     * the latest run of a recurring job or the only run of a one-time job.
+     * The unique identifier for the job that ran most recently and is configured to analyze objects in the bucket,
+     * either the latest run of a recurring job or the only run of a one-time job.
      * </p>
      * <p>
      * This value is typically null if the value for the isDefinedInJob property is FALSE or UNKNOWN.
      * </p>
      * 
      * @param lastJobId
-     *        The unique identifier for the job that ran most recently and is configured to analyze data in the bucket,
-     *        either the latest run of a recurring job or the only run of a one-time job.</p>
+     *        The unique identifier for the job that ran most recently and is configured to analyze objects in the
+     *        bucket, either the latest run of a recurring job or the only run of a one-time job.</p>
      *        <p>
      *        This value is typically null if the value for the isDefinedInJob property is FALSE or UNKNOWN.
      */
@@ -593,15 +593,15 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the job that ran most recently and is configured to analyze data in the bucket, either
-     * the latest run of a recurring job or the only run of a one-time job.
+     * The unique identifier for the job that ran most recently and is configured to analyze objects in the bucket,
+     * either the latest run of a recurring job or the only run of a one-time job.
      * </p>
      * <p>
      * This value is typically null if the value for the isDefinedInJob property is FALSE or UNKNOWN.
      * </p>
      * 
-     * @return The unique identifier for the job that ran most recently and is configured to analyze data in the bucket,
-     *         either the latest run of a recurring job or the only run of a one-time job.</p>
+     * @return The unique identifier for the job that ran most recently and is configured to analyze objects in the
+     *         bucket, either the latest run of a recurring job or the only run of a one-time job.</p>
      *         <p>
      *         This value is typically null if the value for the isDefinedInJob property is FALSE or UNKNOWN.
      */
@@ -612,16 +612,16 @@ public class JobDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the job that ran most recently and is configured to analyze data in the bucket, either
-     * the latest run of a recurring job or the only run of a one-time job.
+     * The unique identifier for the job that ran most recently and is configured to analyze objects in the bucket,
+     * either the latest run of a recurring job or the only run of a one-time job.
      * </p>
      * <p>
      * This value is typically null if the value for the isDefinedInJob property is FALSE or UNKNOWN.
      * </p>
      * 
      * @param lastJobId
-     *        The unique identifier for the job that ran most recently and is configured to analyze data in the bucket,
-     *        either the latest run of a recurring job or the only run of a one-time job.</p>
+     *        The unique identifier for the job that ran most recently and is configured to analyze objects in the
+     *        bucket, either the latest run of a recurring job or the only run of a one-time job.</p>
      *        <p>
      *        This value is typically null if the value for the isDefinedInJob property is FALSE or UNKNOWN.
      * @return Returns a reference to this object so that method calls can be chained together.

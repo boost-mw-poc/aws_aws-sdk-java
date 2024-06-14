@@ -45,6 +45,14 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
     private String accountId;
     /**
      * <p>
+     * Specifies whether automated sensitive data discovery is currently configured to analyze objects in the bucket.
+     * Possible values are: MONITORED, the bucket is included in analyses; and, NOT_MONITORED, the bucket is excluded
+     * from analyses. If automated sensitive data discovery is disabled for your account, this value is NOT_MONITORED.
+     * </p>
+     */
+    private String automatedDiscoveryMonitoringStatus;
+    /**
+     * <p>
      * The name of the bucket.
      * </p>
      */
@@ -94,9 +102,9 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
     private JobDetails jobDetails;
     /**
      * <p>
-     * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed data in the
-     * bucket while performing automated sensitive data discovery for your account. This value is null if automated
-     * sensitive data discovery is currently disabled for your account.
+     * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed objects in the
+     * bucket while performing automated sensitive data discovery. This value is null if automated sensitive data
+     * discovery is disabled for your account.
      * </p>
      */
     private java.util.Date lastAutomatedDiscoveryTime;
@@ -115,8 +123,12 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
     private ObjectCountByEncryptionType objectCountByEncryptionType;
     /**
      * <p>
-     * The current sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive). This
-     * value is null if automated sensitive data discovery is currently disabled for your account.
+     * The sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).
+     * </p>
+     * <p>
+     * If automated sensitive data discovery has never been enabled for your account or it’s been disabled for your
+     * organization or your standalone account for more than 30 days, possible values are: 1, the bucket is empty; or,
+     * 50, the bucket stores objects but it’s been excluded from recent analyses.
      * </p>
      */
     private Integer sensitivityScore;
@@ -194,6 +206,85 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
 
     public MatchingBucket withAccountId(String accountId) {
         setAccountId(accountId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether automated sensitive data discovery is currently configured to analyze objects in the bucket.
+     * Possible values are: MONITORED, the bucket is included in analyses; and, NOT_MONITORED, the bucket is excluded
+     * from analyses. If automated sensitive data discovery is disabled for your account, this value is NOT_MONITORED.
+     * </p>
+     * 
+     * @param automatedDiscoveryMonitoringStatus
+     *        Specifies whether automated sensitive data discovery is currently configured to analyze objects in the
+     *        bucket. Possible values are: MONITORED, the bucket is included in analyses; and, NOT_MONITORED, the bucket
+     *        is excluded from analyses. If automated sensitive data discovery is disabled for your account, this value
+     *        is NOT_MONITORED.
+     * @see AutomatedDiscoveryMonitoringStatus
+     */
+
+    public void setAutomatedDiscoveryMonitoringStatus(String automatedDiscoveryMonitoringStatus) {
+        this.automatedDiscoveryMonitoringStatus = automatedDiscoveryMonitoringStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies whether automated sensitive data discovery is currently configured to analyze objects in the bucket.
+     * Possible values are: MONITORED, the bucket is included in analyses; and, NOT_MONITORED, the bucket is excluded
+     * from analyses. If automated sensitive data discovery is disabled for your account, this value is NOT_MONITORED.
+     * </p>
+     * 
+     * @return Specifies whether automated sensitive data discovery is currently configured to analyze objects in the
+     *         bucket. Possible values are: MONITORED, the bucket is included in analyses; and, NOT_MONITORED, the
+     *         bucket is excluded from analyses. If automated sensitive data discovery is disabled for your account,
+     *         this value is NOT_MONITORED.
+     * @see AutomatedDiscoveryMonitoringStatus
+     */
+
+    public String getAutomatedDiscoveryMonitoringStatus() {
+        return this.automatedDiscoveryMonitoringStatus;
+    }
+
+    /**
+     * <p>
+     * Specifies whether automated sensitive data discovery is currently configured to analyze objects in the bucket.
+     * Possible values are: MONITORED, the bucket is included in analyses; and, NOT_MONITORED, the bucket is excluded
+     * from analyses. If automated sensitive data discovery is disabled for your account, this value is NOT_MONITORED.
+     * </p>
+     * 
+     * @param automatedDiscoveryMonitoringStatus
+     *        Specifies whether automated sensitive data discovery is currently configured to analyze objects in the
+     *        bucket. Possible values are: MONITORED, the bucket is included in analyses; and, NOT_MONITORED, the bucket
+     *        is excluded from analyses. If automated sensitive data discovery is disabled for your account, this value
+     *        is NOT_MONITORED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutomatedDiscoveryMonitoringStatus
+     */
+
+    public MatchingBucket withAutomatedDiscoveryMonitoringStatus(String automatedDiscoveryMonitoringStatus) {
+        setAutomatedDiscoveryMonitoringStatus(automatedDiscoveryMonitoringStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether automated sensitive data discovery is currently configured to analyze objects in the bucket.
+     * Possible values are: MONITORED, the bucket is included in analyses; and, NOT_MONITORED, the bucket is excluded
+     * from analyses. If automated sensitive data discovery is disabled for your account, this value is NOT_MONITORED.
+     * </p>
+     * 
+     * @param automatedDiscoveryMonitoringStatus
+     *        Specifies whether automated sensitive data discovery is currently configured to analyze objects in the
+     *        bucket. Possible values are: MONITORED, the bucket is included in analyses; and, NOT_MONITORED, the bucket
+     *        is excluded from analyses. If automated sensitive data discovery is disabled for your account, this value
+     *        is NOT_MONITORED.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutomatedDiscoveryMonitoringStatus
+     */
+
+    public MatchingBucket withAutomatedDiscoveryMonitoringStatus(AutomatedDiscoveryMonitoringStatus automatedDiscoveryMonitoringStatus) {
+        this.automatedDiscoveryMonitoringStatus = automatedDiscoveryMonitoringStatus.toString();
         return this;
     }
 
@@ -542,15 +633,15 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed data in the
-     * bucket while performing automated sensitive data discovery for your account. This value is null if automated
-     * sensitive data discovery is currently disabled for your account.
+     * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed objects in the
+     * bucket while performing automated sensitive data discovery. This value is null if automated sensitive data
+     * discovery is disabled for your account.
      * </p>
      * 
      * @param lastAutomatedDiscoveryTime
-     *        The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed data in
-     *        the bucket while performing automated sensitive data discovery for your account. This value is null if
-     *        automated sensitive data discovery is currently disabled for your account.
+     *        The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed objects
+     *        in the bucket while performing automated sensitive data discovery. This value is null if automated
+     *        sensitive data discovery is disabled for your account.
      */
 
     public void setLastAutomatedDiscoveryTime(java.util.Date lastAutomatedDiscoveryTime) {
@@ -559,14 +650,14 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed data in the
-     * bucket while performing automated sensitive data discovery for your account. This value is null if automated
-     * sensitive data discovery is currently disabled for your account.
+     * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed objects in the
+     * bucket while performing automated sensitive data discovery. This value is null if automated sensitive data
+     * discovery is disabled for your account.
      * </p>
      * 
-     * @return The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed data in
-     *         the bucket while performing automated sensitive data discovery for your account. This value is null if
-     *         automated sensitive data discovery is currently disabled for your account.
+     * @return The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed objects
+     *         in the bucket while performing automated sensitive data discovery. This value is null if automated
+     *         sensitive data discovery is disabled for your account.
      */
 
     public java.util.Date getLastAutomatedDiscoveryTime() {
@@ -575,15 +666,15 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed data in the
-     * bucket while performing automated sensitive data discovery for your account. This value is null if automated
-     * sensitive data discovery is currently disabled for your account.
+     * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed objects in the
+     * bucket while performing automated sensitive data discovery. This value is null if automated sensitive data
+     * discovery is disabled for your account.
      * </p>
      * 
      * @param lastAutomatedDiscoveryTime
-     *        The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed data in
-     *        the bucket while performing automated sensitive data discovery for your account. This value is null if
-     *        automated sensitive data discovery is currently disabled for your account.
+     *        The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently analyzed objects
+     *        in the bucket while performing automated sensitive data discovery. This value is null if automated
+     *        sensitive data discovery is disabled for your account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -680,13 +771,20 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive). This
-     * value is null if automated sensitive data discovery is currently disabled for your account.
+     * The sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).
+     * </p>
+     * <p>
+     * If automated sensitive data discovery has never been enabled for your account or it’s been disabled for your
+     * organization or your standalone account for more than 30 days, possible values are: 1, the bucket is empty; or,
+     * 50, the bucket stores objects but it’s been excluded from recent analyses.
      * </p>
      * 
      * @param sensitivityScore
-     *        The current sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).
-     *        This value is null if automated sensitive data discovery is currently disabled for your account.
+     *        The sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).</p>
+     *        <p>
+     *        If automated sensitive data discovery has never been enabled for your account or it’s been disabled for
+     *        your organization or your standalone account for more than 30 days, possible values are: 1, the bucket is
+     *        empty; or, 50, the bucket stores objects but it’s been excluded from recent analyses.
      */
 
     public void setSensitivityScore(Integer sensitivityScore) {
@@ -695,12 +793,19 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive). This
-     * value is null if automated sensitive data discovery is currently disabled for your account.
+     * The sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).
+     * </p>
+     * <p>
+     * If automated sensitive data discovery has never been enabled for your account or it’s been disabled for your
+     * organization or your standalone account for more than 30 days, possible values are: 1, the bucket is empty; or,
+     * 50, the bucket stores objects but it’s been excluded from recent analyses.
      * </p>
      * 
-     * @return The current sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).
-     *         This value is null if automated sensitive data discovery is currently disabled for your account.
+     * @return The sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).</p>
+     *         <p>
+     *         If automated sensitive data discovery has never been enabled for your account or it’s been disabled for
+     *         your organization or your standalone account for more than 30 days, possible values are: 1, the bucket is
+     *         empty; or, 50, the bucket stores objects but it’s been excluded from recent analyses.
      */
 
     public Integer getSensitivityScore() {
@@ -709,13 +814,20 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive). This
-     * value is null if automated sensitive data discovery is currently disabled for your account.
+     * The sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).
+     * </p>
+     * <p>
+     * If automated sensitive data discovery has never been enabled for your account or it’s been disabled for your
+     * organization or your standalone account for more than 30 days, possible values are: 1, the bucket is empty; or,
+     * 50, the bucket stores objects but it’s been excluded from recent analyses.
      * </p>
      * 
      * @param sensitivityScore
-     *        The current sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).
-     *        This value is null if automated sensitive data discovery is currently disabled for your account.
+     *        The sensitivity score for the bucket, ranging from -1 (classification error) to 100 (sensitive).</p>
+     *        <p>
+     *        If automated sensitive data discovery has never been enabled for your account or it’s been disabled for
+     *        your organization or your standalone account for more than 30 days, possible values are: 1, the bucket is
+     *        empty; or, 50, the bucket stores objects but it’s been excluded from recent analyses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -970,6 +1082,8 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getAccountId() != null)
             sb.append("AccountId: ").append(getAccountId()).append(",");
+        if (getAutomatedDiscoveryMonitoringStatus() != null)
+            sb.append("AutomatedDiscoveryMonitoringStatus: ").append(getAutomatedDiscoveryMonitoringStatus()).append(",");
         if (getBucketName() != null)
             sb.append("BucketName: ").append(getBucketName()).append(",");
         if (getClassifiableObjectCount() != null)
@@ -1015,6 +1129,11 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
         if (other.getAccountId() == null ^ this.getAccountId() == null)
             return false;
         if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
+            return false;
+        if (other.getAutomatedDiscoveryMonitoringStatus() == null ^ this.getAutomatedDiscoveryMonitoringStatus() == null)
+            return false;
+        if (other.getAutomatedDiscoveryMonitoringStatus() != null
+                && other.getAutomatedDiscoveryMonitoringStatus().equals(this.getAutomatedDiscoveryMonitoringStatus()) == false)
             return false;
         if (other.getBucketName() == null ^ this.getBucketName() == null)
             return false;
@@ -1082,6 +1201,7 @@ public class MatchingBucket implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
+        hashCode = prime * hashCode + ((getAutomatedDiscoveryMonitoringStatus() == null) ? 0 : getAutomatedDiscoveryMonitoringStatus().hashCode());
         hashCode = prime * hashCode + ((getBucketName() == null) ? 0 : getBucketName().hashCode());
         hashCode = prime * hashCode + ((getClassifiableObjectCount() == null) ? 0 : getClassifiableObjectCount().hashCode());
         hashCode = prime * hashCode + ((getClassifiableSizeInBytes() == null) ? 0 : getClassifiableSizeInBytes().hashCode());

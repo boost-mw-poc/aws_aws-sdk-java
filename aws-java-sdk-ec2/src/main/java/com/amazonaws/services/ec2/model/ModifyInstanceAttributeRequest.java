@@ -167,8 +167,8 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a>.
      * </p>
      * <p/>
      */
@@ -1338,15 +1338,15 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a>.
      * </p>
      * <p/>
      * 
      * @param disableApiStop
      *        Indicates whether an instance is enabled for stop protection. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        Protection</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection
+     *        for your instance</a>.
      *        </p>
      */
 
@@ -1357,14 +1357,14 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a>.
      * </p>
      * <p/>
      * 
      * @return Indicates whether an instance is enabled for stop protection. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         Protection</a>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop
+     *         protection for your instance</a>.
      *         </p>
      */
 
@@ -1375,15 +1375,15 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a>.
      * </p>
      * <p/>
      * 
      * @param disableApiStop
      *        Indicates whether an instance is enabled for stop protection. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        Protection</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection
+     *        for your instance</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1396,14 +1396,14 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for
+     * your instance</a>.
      * </p>
      * <p/>
      * 
      * @return Indicates whether an instance is enabled for stop protection. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         Protection</a>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop
+     *         protection for your instance</a>.
      *         </p>
      */
 

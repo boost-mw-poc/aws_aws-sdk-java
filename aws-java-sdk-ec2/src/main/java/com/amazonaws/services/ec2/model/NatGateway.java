@@ -103,8 +103,8 @@ public class NatGateway implements Serializable, Cloneable {
     /**
      * <p>
      * Reserved. If you need to sustain traffic greater than the <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">documented limits</a>, contact us
-     * through the <a href="https://console.aws.amazon.com/support/home?">Support Center</a>.
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-gateways">documented
+     * limits</a>, contact Amazon Web Services Support.
      * </p>
      */
     private ProvisionedBandwidth provisionedBandwidth;
@@ -671,14 +671,14 @@ public class NatGateway implements Serializable, Cloneable {
     /**
      * <p>
      * Reserved. If you need to sustain traffic greater than the <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">documented limits</a>, contact us
-     * through the <a href="https://console.aws.amazon.com/support/home?">Support Center</a>.
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-gateways">documented
+     * limits</a>, contact Amazon Web Services Support.
      * </p>
      * 
      * @param provisionedBandwidth
      *        Reserved. If you need to sustain traffic greater than the <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">documented limits</a>,
-     *        contact us through the <a href="https://console.aws.amazon.com/support/home?">Support Center</a>.
+     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-gateways"
+     *        >documented limits</a>, contact Amazon Web Services Support.
      */
 
     public void setProvisionedBandwidth(ProvisionedBandwidth provisionedBandwidth) {
@@ -688,13 +688,13 @@ public class NatGateway implements Serializable, Cloneable {
     /**
      * <p>
      * Reserved. If you need to sustain traffic greater than the <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">documented limits</a>, contact us
-     * through the <a href="https://console.aws.amazon.com/support/home?">Support Center</a>.
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-gateways">documented
+     * limits</a>, contact Amazon Web Services Support.
      * </p>
      * 
      * @return Reserved. If you need to sustain traffic greater than the <a
-     *         href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">documented limits</a>,
-     *         contact us through the <a href="https://console.aws.amazon.com/support/home?">Support Center</a>.
+     *         href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-gateways"
+     *         >documented limits</a>, contact Amazon Web Services Support.
      */
 
     public ProvisionedBandwidth getProvisionedBandwidth() {
@@ -704,14 +704,14 @@ public class NatGateway implements Serializable, Cloneable {
     /**
      * <p>
      * Reserved. If you need to sustain traffic greater than the <a
-     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">documented limits</a>, contact us
-     * through the <a href="https://console.aws.amazon.com/support/home?">Support Center</a>.
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-gateways">documented
+     * limits</a>, contact Amazon Web Services Support.
      * </p>
      * 
      * @param provisionedBandwidth
      *        Reserved. If you need to sustain traffic greater than the <a
-     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">documented limits</a>,
-     *        contact us through the <a href="https://console.aws.amazon.com/support/home?">Support Center</a>.
+     *        href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-gateways"
+     *        >documented limits</a>, contact Amazon Web Services Support.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

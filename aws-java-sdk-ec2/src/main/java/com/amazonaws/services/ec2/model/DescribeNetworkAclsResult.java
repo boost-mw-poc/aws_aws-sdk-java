@@ -25,7 +25,7 @@ public class DescribeNetworkAclsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more network ACLs.
+     * Information about the network ACLs.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<NetworkAcl> networkAcls;
@@ -39,10 +39,10 @@ public class DescribeNetworkAclsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more network ACLs.
+     * Information about the network ACLs.
      * </p>
      * 
-     * @return Information about one or more network ACLs.
+     * @return Information about the network ACLs.
      */
 
     public java.util.List<NetworkAcl> getNetworkAcls() {
@@ -54,11 +54,11 @@ public class DescribeNetworkAclsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more network ACLs.
+     * Information about the network ACLs.
      * </p>
      * 
      * @param networkAcls
-     *        Information about one or more network ACLs.
+     *        Information about the network ACLs.
      */
 
     public void setNetworkAcls(java.util.Collection<NetworkAcl> networkAcls) {
@@ -72,7 +72,7 @@ public class DescribeNetworkAclsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more network ACLs.
+     * Information about the network ACLs.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DescribeNetworkAclsResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param networkAcls
-     *        Information about one or more network ACLs.
+     *        Information about the network ACLs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DescribeNetworkAclsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about one or more network ACLs.
+     * Information about the network ACLs.
      * </p>
      * 
      * @param networkAcls
-     *        Information about one or more network ACLs.
+     *        Information about the network ACLs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

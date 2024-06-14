@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The status of the automated sensitive data discovery configuration for an Amazon Macie account. Valid values are:
+ * The status of the automated sensitive data discovery configuration for an organization in Amazon Macie or a
+ * standalone Macie account. Valid values are:
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

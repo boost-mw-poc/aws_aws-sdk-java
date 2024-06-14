@@ -39,7 +39,7 @@ public class ModifyCapacityReservationFleetRequest extends AmazonWebServiceReque
      * instances for which the Fleet reserves capacity. Both values are based on units that make sense for your
      * workload. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Integer totalTargetCapacity;
@@ -117,7 +117,7 @@ public class ModifyCapacityReservationFleetRequest extends AmazonWebServiceReque
      * instances for which the Fleet reserves capacity. Both values are based on units that make sense for your
      * workload. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param totalTargetCapacity
@@ -126,7 +126,7 @@ public class ModifyCapacityReservationFleetRequest extends AmazonWebServiceReque
      *        number of instances for which the Fleet reserves capacity. Both values are based on units that make sense
      *        for your workload. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setTotalTargetCapacity(Integer totalTargetCapacity) {
@@ -140,7 +140,7 @@ public class ModifyCapacityReservationFleetRequest extends AmazonWebServiceReque
      * instances for which the Fleet reserves capacity. Both values are based on units that make sense for your
      * workload. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The total number of capacity units to be reserved by the Capacity Reservation Fleet. This value, together
@@ -148,7 +148,7 @@ public class ModifyCapacityReservationFleetRequest extends AmazonWebServiceReque
      *         number of instances for which the Fleet reserves capacity. Both values are based on units that make sense
      *         for your workload. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
-     *         target capacity</a> in the Amazon EC2 User Guide.
+     *         target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Integer getTotalTargetCapacity() {
@@ -162,7 +162,7 @@ public class ModifyCapacityReservationFleetRequest extends AmazonWebServiceReque
      * instances for which the Fleet reserves capacity. Both values are based on units that make sense for your
      * workload. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param totalTargetCapacity
@@ -171,7 +171,7 @@ public class ModifyCapacityReservationFleetRequest extends AmazonWebServiceReque
      *        number of instances for which the Fleet reserves capacity. Both values are based on units that make sense
      *        for your workload. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

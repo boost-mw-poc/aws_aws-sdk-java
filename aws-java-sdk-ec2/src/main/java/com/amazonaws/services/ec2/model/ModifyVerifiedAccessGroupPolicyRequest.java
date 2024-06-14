@@ -47,9 +47,8 @@ public class ModifyVerifiedAccessGroupPolicyRequest extends AmazonWebServiceRequ
     /**
      * <p>
      * A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     * idempotency</a>.
      * </p>
      */
     private String clientToken;
@@ -195,16 +194,14 @@ public class ModifyVerifiedAccessGroupPolicyRequest extends AmazonWebServiceRequ
     /**
      * <p>
      * A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For
      *        more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -214,15 +211,13 @@ public class ModifyVerifiedAccessGroupPolicyRequest extends AmazonWebServiceRequ
     /**
      * <p>
      * A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     * idempotency</a>.
      * </p>
      * 
      * @return A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For
      *         more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *         Idempotency</a>.
+     *         href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      */
 
     public String getClientToken() {
@@ -232,16 +227,14 @@ public class ModifyVerifiedAccessGroupPolicyRequest extends AmazonWebServiceRequ
     /**
      * <p>
      * A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For
      *        more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

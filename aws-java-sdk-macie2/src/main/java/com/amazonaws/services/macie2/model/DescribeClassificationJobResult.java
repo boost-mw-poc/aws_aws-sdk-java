@@ -25,7 +25,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of unique identifiers, one for each allow list that the job uses when it analyzes data.
+     * An array of unique identifiers, one for each allow list that the job is configured to use when it analyzes data.
      * </p>
      */
     private java.util.List<String> allowListIds;
@@ -43,8 +43,8 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
     private java.util.Date createdAt;
     /**
      * <p>
-     * An array of unique identifiers, one for each custom data identifier that the job uses when it analyzes data. This
-     * value is null if the job uses only managed data identifiers to analyze data.
+     * An array of unique identifiers, one for each custom data identifier that the job is configured to use when it
+     * analyzes data. This value is null if the job is configured to use only managed data identifiers to analyze data.
      * </p>
      */
     private java.util.List<String> customDataIdentifierIds;
@@ -204,9 +204,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -244,7 +244,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
     private Statistics statistics;
     /**
      * <p>
-     * A map of key-value pairs that specifies which tags (keys and values) are associated with the classification job.
+     * A map of key-value pairs that specifies which tags (keys and values) are associated with the job.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -259,10 +259,11 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of unique identifiers, one for each allow list that the job uses when it analyzes data.
+     * An array of unique identifiers, one for each allow list that the job is configured to use when it analyzes data.
      * </p>
      * 
-     * @return An array of unique identifiers, one for each allow list that the job uses when it analyzes data.
+     * @return An array of unique identifiers, one for each allow list that the job is configured to use when it
+     *         analyzes data.
      */
 
     public java.util.List<String> getAllowListIds() {
@@ -271,11 +272,12 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of unique identifiers, one for each allow list that the job uses when it analyzes data.
+     * An array of unique identifiers, one for each allow list that the job is configured to use when it analyzes data.
      * </p>
      * 
      * @param allowListIds
-     *        An array of unique identifiers, one for each allow list that the job uses when it analyzes data.
+     *        An array of unique identifiers, one for each allow list that the job is configured to use when it analyzes
+     *        data.
      */
 
     public void setAllowListIds(java.util.Collection<String> allowListIds) {
@@ -289,7 +291,7 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of unique identifiers, one for each allow list that the job uses when it analyzes data.
+     * An array of unique identifiers, one for each allow list that the job is configured to use when it analyzes data.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -298,7 +300,8 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param allowListIds
-     *        An array of unique identifiers, one for each allow list that the job uses when it analyzes data.
+     *        An array of unique identifiers, one for each allow list that the job is configured to use when it analyzes
+     *        data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -314,11 +317,12 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of unique identifiers, one for each allow list that the job uses when it analyzes data.
+     * An array of unique identifiers, one for each allow list that the job is configured to use when it analyzes data.
      * </p>
      * 
      * @param allowListIds
-     *        An array of unique identifiers, one for each allow list that the job uses when it analyzes data.
+     *        An array of unique identifiers, one for each allow list that the job is configured to use when it analyzes
+     *        data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -409,12 +413,13 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of unique identifiers, one for each custom data identifier that the job uses when it analyzes data. This
-     * value is null if the job uses only managed data identifiers to analyze data.
+     * An array of unique identifiers, one for each custom data identifier that the job is configured to use when it
+     * analyzes data. This value is null if the job is configured to use only managed data identifiers to analyze data.
      * </p>
      * 
-     * @return An array of unique identifiers, one for each custom data identifier that the job uses when it analyzes
-     *         data. This value is null if the job uses only managed data identifiers to analyze data.
+     * @return An array of unique identifiers, one for each custom data identifier that the job is configured to use
+     *         when it analyzes data. This value is null if the job is configured to use only managed data identifiers
+     *         to analyze data.
      */
 
     public java.util.List<String> getCustomDataIdentifierIds() {
@@ -423,13 +428,14 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of unique identifiers, one for each custom data identifier that the job uses when it analyzes data. This
-     * value is null if the job uses only managed data identifiers to analyze data.
+     * An array of unique identifiers, one for each custom data identifier that the job is configured to use when it
+     * analyzes data. This value is null if the job is configured to use only managed data identifiers to analyze data.
      * </p>
      * 
      * @param customDataIdentifierIds
-     *        An array of unique identifiers, one for each custom data identifier that the job uses when it analyzes
-     *        data. This value is null if the job uses only managed data identifiers to analyze data.
+     *        An array of unique identifiers, one for each custom data identifier that the job is configured to use when
+     *        it analyzes data. This value is null if the job is configured to use only managed data identifiers to
+     *        analyze data.
      */
 
     public void setCustomDataIdentifierIds(java.util.Collection<String> customDataIdentifierIds) {
@@ -443,8 +449,8 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of unique identifiers, one for each custom data identifier that the job uses when it analyzes data. This
-     * value is null if the job uses only managed data identifiers to analyze data.
+     * An array of unique identifiers, one for each custom data identifier that the job is configured to use when it
+     * analyzes data. This value is null if the job is configured to use only managed data identifiers to analyze data.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -453,8 +459,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param customDataIdentifierIds
-     *        An array of unique identifiers, one for each custom data identifier that the job uses when it analyzes
-     *        data. This value is null if the job uses only managed data identifiers to analyze data.
+     *        An array of unique identifiers, one for each custom data identifier that the job is configured to use when
+     *        it analyzes data. This value is null if the job is configured to use only managed data identifiers to
+     *        analyze data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -470,13 +477,14 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of unique identifiers, one for each custom data identifier that the job uses when it analyzes data. This
-     * value is null if the job uses only managed data identifiers to analyze data.
+     * An array of unique identifiers, one for each custom data identifier that the job is configured to use when it
+     * analyzes data. This value is null if the job is configured to use only managed data identifiers to analyze data.
      * </p>
      * 
      * @param customDataIdentifierIds
-     *        An array of unique identifiers, one for each custom data identifier that the job uses when it analyzes
-     *        data. This value is null if the job uses only managed data identifiers to analyze data.
+     *        An array of unique identifiers, one for each custom data identifier that the job is configured to use when
+     *        it analyzes data. This value is null if the job is configured to use only managed data identifiers to
+     *        analyze data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1442,9 +1450,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -1489,10 +1497,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *        job run uses all the managed data identifiers that are in the recommended set when the run starts.
      *        </p>
      *        <p>
-     *        For information about individual managed data identifiers or to determine which ones are in the
-     *        recommended set, see <a
-     *        href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     *        identifiers</a> and <a
+     *        To learn about individual managed data identifiers or determine which ones are in the recommended set, see
+     *        <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     *        identifiers</a> or <a
      *        href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended
      *        managed data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * @see ManagedDataIdentifierSelector
@@ -1543,9 +1550,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -1590,10 +1597,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *         each job run uses all the managed data identifiers that are in the recommended set when the run starts.
      *         </p>
      *         <p>
-     *         For information about individual managed data identifiers or to determine which ones are in the
-     *         recommended set, see <a
-     *         href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     *         identifiers</a> and <a
+     *         To learn about individual managed data identifiers or determine which ones are in the recommended set,
+     *         see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed
+     *         data identifiers</a> or <a
      *         href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended
      *         managed data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * @see ManagedDataIdentifierSelector
@@ -1644,9 +1650,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -1691,10 +1697,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *        job run uses all the managed data identifiers that are in the recommended set when the run starts.
      *        </p>
      *        <p>
-     *        For information about individual managed data identifiers or to determine which ones are in the
-     *        recommended set, see <a
-     *        href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     *        identifiers</a> and <a
+     *        To learn about individual managed data identifiers or determine which ones are in the recommended set, see
+     *        <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     *        identifiers</a> or <a
      *        href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended
      *        managed data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1747,9 +1752,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      * the managed data identifiers that are in the recommended set when the run starts.
      * </p>
      * <p>
-     * For information about individual managed data identifiers or to determine which ones are in the recommended set,
-     * see <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     * identifiers</a> and <a
+     * To learn about individual managed data identifiers or determine which ones are in the recommended set, see <a
+     * href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     * identifiers</a> or <a
      * href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended managed
      * data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * </p>
@@ -1794,10 +1799,9 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
      *        job run uses all the managed data identifiers that are in the recommended set when the run starts.
      *        </p>
      *        <p>
-     *        For information about individual managed data identifiers or to determine which ones are in the
-     *        recommended set, see <a
-     *        href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
-     *        identifiers</a> and <a
+     *        To learn about individual managed data identifiers or determine which ones are in the recommended set, see
+     *        <a href="https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html">Using managed data
+     *        identifiers</a> or <a
      *        href="https://docs.aws.amazon.com/macie/latest/user/discovery-jobs-mdis-recommended.html">Recommended
      *        managed data identifiers</a> in the <i>Amazon Macie User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2014,11 +2018,10 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A map of key-value pairs that specifies which tags (keys and values) are associated with the classification job.
+     * A map of key-value pairs that specifies which tags (keys and values) are associated with the job.
      * </p>
      * 
-     * @return A map of key-value pairs that specifies which tags (keys and values) are associated with the
-     *         classification job.
+     * @return A map of key-value pairs that specifies which tags (keys and values) are associated with the job.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -2027,12 +2030,11 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A map of key-value pairs that specifies which tags (keys and values) are associated with the classification job.
+     * A map of key-value pairs that specifies which tags (keys and values) are associated with the job.
      * </p>
      * 
      * @param tags
-     *        A map of key-value pairs that specifies which tags (keys and values) are associated with the
-     *        classification job.
+     *        A map of key-value pairs that specifies which tags (keys and values) are associated with the job.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -2041,12 +2043,11 @@ public class DescribeClassificationJobResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A map of key-value pairs that specifies which tags (keys and values) are associated with the classification job.
+     * A map of key-value pairs that specifies which tags (keys and values) are associated with the job.
      * </p>
      * 
      * @param tags
-     *        A map of key-value pairs that specifies which tags (keys and values) are associated with the
-     *        classification job.
+     *        A map of key-value pairs that specifies which tags (keys and values) are associated with the job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

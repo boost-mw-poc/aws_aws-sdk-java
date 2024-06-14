@@ -105,7 +105,7 @@ public class CapacityReservationFleet implements Serializable, Cloneable {
      * The total number of capacity units for which the Capacity Reservation Fleet reserves capacity. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private Integer totalTargetCapacity;
@@ -164,8 +164,8 @@ public class CapacityReservationFleet implements Serializable, Cloneable {
      * <p>
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to use.
      * For more information, see For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"> Allocation
-     * strategy</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">Allocation
+     * strategy</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String allocationStrategy;
@@ -774,14 +774,14 @@ public class CapacityReservationFleet implements Serializable, Cloneable {
      * The total number of capacity units for which the Capacity Reservation Fleet reserves capacity. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param totalTargetCapacity
      *        The total number of capacity units for which the Capacity Reservation Fleet reserves capacity. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setTotalTargetCapacity(Integer totalTargetCapacity) {
@@ -793,13 +793,13 @@ public class CapacityReservationFleet implements Serializable, Cloneable {
      * The total number of capacity units for which the Capacity Reservation Fleet reserves capacity. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The total number of capacity units for which the Capacity Reservation Fleet reserves capacity. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
-     *         target capacity</a> in the Amazon EC2 User Guide.
+     *         target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public Integer getTotalTargetCapacity() {
@@ -811,14 +811,14 @@ public class CapacityReservationFleet implements Serializable, Cloneable {
      * The total number of capacity units for which the Capacity Reservation Fleet reserves capacity. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-     * capacity</a> in the Amazon EC2 User Guide.
+     * capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param totalTargetCapacity
      *        The total number of capacity units for which the Capacity Reservation Fleet reserves capacity. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total
-     *        target capacity</a> in the Amazon EC2 User Guide.
+     *        target capacity</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1229,15 +1229,15 @@ public class CapacityReservationFleet implements Serializable, Cloneable {
      * <p>
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to use.
      * For more information, see For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"> Allocation
-     * strategy</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">Allocation
+     * strategy</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param allocationStrategy
      *        The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to
      *        use. For more information, see For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">
-     *        Allocation strategy</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"
+     *        >Allocation strategy</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setAllocationStrategy(String allocationStrategy) {
@@ -1248,14 +1248,14 @@ public class CapacityReservationFleet implements Serializable, Cloneable {
      * <p>
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to use.
      * For more information, see For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"> Allocation
-     * strategy</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">Allocation
+     * strategy</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to
      *         use. For more information, see For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">
-     *         Allocation strategy</a> in the Amazon EC2 User Guide.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"
+     *         >Allocation strategy</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public String getAllocationStrategy() {
@@ -1266,15 +1266,15 @@ public class CapacityReservationFleet implements Serializable, Cloneable {
      * <p>
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to use.
      * For more information, see For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"> Allocation
-     * strategy</a> in the Amazon EC2 User Guide.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">Allocation
+     * strategy</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param allocationStrategy
      *        The strategy used by the Capacity Reservation Fleet to determine which of the specified instance types to
      *        use. For more information, see For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy">
-     *        Allocation strategy</a> in the Amazon EC2 User Guide.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"
+     *        >Allocation strategy</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

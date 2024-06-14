@@ -143,6 +143,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateEnvironmentRoleResult> associateEnvironmentRoleAsync(AssociateEnvironmentRoleRequest request) {
+
+        return associateEnvironmentRoleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateEnvironmentRoleResult> associateEnvironmentRoleAsync(final AssociateEnvironmentRoleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateEnvironmentRoleRequest, AssociateEnvironmentRoleResult> asyncHandler) {
+        final AssociateEnvironmentRoleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateEnvironmentRoleResult>() {
+            @Override
+            public AssociateEnvironmentRoleResult call() throws Exception {
+                AssociateEnvironmentRoleResult result = null;
+
+                try {
+                    result = executeAssociateEnvironmentRole(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelMetadataGenerationRunResult> cancelMetadataGenerationRunAsync(CancelMetadataGenerationRunRequest request) {
 
         return cancelMetadataGenerationRunAsync(request, null);
@@ -391,6 +424,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeCreateEnvironment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEnvironmentActionResult> createEnvironmentActionAsync(CreateEnvironmentActionRequest request) {
+
+        return createEnvironmentActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEnvironmentActionResult> createEnvironmentActionAsync(final CreateEnvironmentActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateEnvironmentActionRequest, CreateEnvironmentActionResult> asyncHandler) {
+        final CreateEnvironmentActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateEnvironmentActionResult>() {
+            @Override
+            public CreateEnvironmentActionResult call() throws Exception {
+                CreateEnvironmentActionResult result = null;
+
+                try {
+                    result = executeCreateEnvironmentAction(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -968,6 +1034,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteEnvironmentActionResult> deleteEnvironmentActionAsync(DeleteEnvironmentActionRequest request) {
+
+        return deleteEnvironmentActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEnvironmentActionResult> deleteEnvironmentActionAsync(final DeleteEnvironmentActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEnvironmentActionRequest, DeleteEnvironmentActionResult> asyncHandler) {
+        final DeleteEnvironmentActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEnvironmentActionResult>() {
+            @Override
+            public DeleteEnvironmentActionResult call() throws Exception {
+                DeleteEnvironmentActionResult result = null;
+
+                try {
+                    result = executeDeleteEnvironmentAction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteEnvironmentBlueprintConfigurationResult> deleteEnvironmentBlueprintConfigurationAsync(
             DeleteEnvironmentBlueprintConfigurationRequest request) {
 
@@ -1366,6 +1465,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateEnvironmentRoleResult> disassociateEnvironmentRoleAsync(DisassociateEnvironmentRoleRequest request) {
+
+        return disassociateEnvironmentRoleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateEnvironmentRoleResult> disassociateEnvironmentRoleAsync(final DisassociateEnvironmentRoleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateEnvironmentRoleRequest, DisassociateEnvironmentRoleResult> asyncHandler) {
+        final DisassociateEnvironmentRoleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateEnvironmentRoleResult>() {
+            @Override
+            public DisassociateEnvironmentRoleResult call() throws Exception {
+                DisassociateEnvironmentRoleResult result = null;
+
+                try {
+                    result = executeDisassociateEnvironmentRole(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAssetResult> getAssetAsync(GetAssetRequest request) {
 
         return getAssetAsync(request, null);
@@ -1548,6 +1680,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeGetEnvironment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnvironmentActionResult> getEnvironmentActionAsync(GetEnvironmentActionRequest request) {
+
+        return getEnvironmentActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnvironmentActionResult> getEnvironmentActionAsync(final GetEnvironmentActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEnvironmentActionRequest, GetEnvironmentActionResult> asyncHandler) {
+        final GetEnvironmentActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEnvironmentActionResult>() {
+            @Override
+            public GetEnvironmentActionResult call() throws Exception {
+                GetEnvironmentActionResult result = null;
+
+                try {
+                    result = executeGetEnvironmentAction(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2277,6 +2442,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeListDomains(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentActionsResult> listEnvironmentActionsAsync(ListEnvironmentActionsRequest request) {
+
+        return listEnvironmentActionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentActionsResult> listEnvironmentActionsAsync(final ListEnvironmentActionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEnvironmentActionsRequest, ListEnvironmentActionsResult> asyncHandler) {
+        final ListEnvironmentActionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEnvironmentActionsResult>() {
+            @Override
+            public ListEnvironmentActionsResult call() throws Exception {
+                ListEnvironmentActionsResult result = null;
+
+                try {
+                    result = executeListEnvironmentActions(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3304,6 +3502,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
 
                 try {
                     result = executeUpdateEnvironment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEnvironmentActionResult> updateEnvironmentActionAsync(UpdateEnvironmentActionRequest request) {
+
+        return updateEnvironmentActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEnvironmentActionResult> updateEnvironmentActionAsync(final UpdateEnvironmentActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEnvironmentActionRequest, UpdateEnvironmentActionResult> asyncHandler) {
+        final UpdateEnvironmentActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEnvironmentActionResult>() {
+            @Override
+            public UpdateEnvironmentActionResult call() throws Exception {
+                UpdateEnvironmentActionResult result = null;
+
+                try {
+                    result = executeUpdateEnvironmentAction(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

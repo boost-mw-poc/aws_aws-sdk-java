@@ -20,8 +20,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides information about an S3 object that Amazon Macie selected for analysis while performing automated sensitive
- * data discovery for an S3 bucket, and the status and results of the analysis. This information is available only if
- * automated sensitive data discovery is currently enabled for your account.
+ * data discovery for an account, and the status and results of the analysis. This information is available only if
+ * automated sensitive data discovery has been enabled for the account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ResourceProfileArtifact" target="_top">AWS API

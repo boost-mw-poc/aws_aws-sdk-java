@@ -28,7 +28,7 @@ public class NetworkAcl implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Any associations between the network ACL and one or more subnets
+     * Any associations between the network ACL and your subnets
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<NetworkAclAssociation> associations;
@@ -71,10 +71,10 @@ public class NetworkAcl implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Any associations between the network ACL and one or more subnets
+     * Any associations between the network ACL and your subnets
      * </p>
      * 
-     * @return Any associations between the network ACL and one or more subnets
+     * @return Any associations between the network ACL and your subnets
      */
 
     public java.util.List<NetworkAclAssociation> getAssociations() {
@@ -86,11 +86,11 @@ public class NetworkAcl implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Any associations between the network ACL and one or more subnets
+     * Any associations between the network ACL and your subnets
      * </p>
      * 
      * @param associations
-     *        Any associations between the network ACL and one or more subnets
+     *        Any associations between the network ACL and your subnets
      */
 
     public void setAssociations(java.util.Collection<NetworkAclAssociation> associations) {
@@ -104,7 +104,7 @@ public class NetworkAcl implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Any associations between the network ACL and one or more subnets
+     * Any associations between the network ACL and your subnets
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -113,7 +113,7 @@ public class NetworkAcl implements Serializable, Cloneable {
      * </p>
      * 
      * @param associations
-     *        Any associations between the network ACL and one or more subnets
+     *        Any associations between the network ACL and your subnets
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class NetworkAcl implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Any associations between the network ACL and one or more subnets
+     * Any associations between the network ACL and your subnets
      * </p>
      * 
      * @param associations
-     *        Any associations between the network ACL and one or more subnets
+     *        Any associations between the network ACL and your subnets
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
