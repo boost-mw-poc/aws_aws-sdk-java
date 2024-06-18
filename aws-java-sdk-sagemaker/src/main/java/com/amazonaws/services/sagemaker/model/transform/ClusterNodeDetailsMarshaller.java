@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -41,6 +42,8 @@ public class ClusterNodeDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LifeCycleConfig").build();
     private static final MarshallingInfo<Integer> THREADSPERCORE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThreadsPerCore").build();
+    private static final MarshallingInfo<List> INSTANCESTORAGECONFIGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceStorageConfigs").build();
     private static final MarshallingInfo<String> PRIVATEPRIMARYIP_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrivatePrimaryIp").build();
     private static final MarshallingInfo<String> PRIVATEDNSHOSTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -71,6 +74,7 @@ public class ClusterNodeDetailsMarshaller {
             protocolMarshaller.marshall(clusterNodeDetails.getLaunchTime(), LAUNCHTIME_BINDING);
             protocolMarshaller.marshall(clusterNodeDetails.getLifeCycleConfig(), LIFECYCLECONFIG_BINDING);
             protocolMarshaller.marshall(clusterNodeDetails.getThreadsPerCore(), THREADSPERCORE_BINDING);
+            protocolMarshaller.marshall(clusterNodeDetails.getInstanceStorageConfigs(), INSTANCESTORAGECONFIGS_BINDING);
             protocolMarshaller.marshall(clusterNodeDetails.getPrivatePrimaryIp(), PRIVATEPRIMARYIP_BINDING);
             protocolMarshaller.marshall(clusterNodeDetails.getPrivateDnsHostname(), PRIVATEDNSHOSTNAME_BINDING);
             protocolMarshaller.marshall(clusterNodeDetails.getPlacement(), PLACEMENT_BINDING);

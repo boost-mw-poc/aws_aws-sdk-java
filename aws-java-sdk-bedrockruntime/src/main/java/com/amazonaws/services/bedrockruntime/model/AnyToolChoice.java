@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The model must request at least one tool (no text is generated).
+ * The model must request at least one tool (no text is generated). For example, <code>{"any" : {}}</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/AnyToolChoice" target="_top">AWS API

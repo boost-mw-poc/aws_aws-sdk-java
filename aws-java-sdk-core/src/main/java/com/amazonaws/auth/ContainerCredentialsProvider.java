@@ -17,22 +17,47 @@ package com.amazonaws.auth;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.internal.CredentialsEndpointProvider;
 import com.amazonaws.retry.internal.CredentialsEndpointRetryPolicy;
+import com.amazonaws.util.StringUtils;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.URI;
 import java.net.UnknownHostException;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
 import java.util.*;
 
 /**
  * <p>
- * {@link AWSCredentialsProvider} implementation that loads credentials
- * from an Amazon Elastic Container.
+ * {@link AWSCredentialsProvider} implementation that loads credentials from a local metadata service.
+ * </p>
+ * Currently supported containers:
+ * <ul>
+ *     <li>Amazon Elastic Container Service (ECS)</li>
+ *     <li>Amazon Elastic Kubernetes Service (EKS)</li>
+ *     <li>AWS Greengrass</li>
+ * </ul>
+ * <p>
+ * The URI path is retrieved from the environment variable "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI" or
+ * "AWS_CONTAINER_CREDENTIALS_FULL_URI" in the container's environment. Resolving to use relative or absolute path
+ * is the role of {@link EC2ContainerCredentialsProviderWrapper}.
  * </p>
  * <p>
- * By default, the URI path is retrieved from the environment variable
- * "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI" in the container's environment.
- * </p>
- *
+ * <b>Full (absolute) URI configuration</b>
+ * <p>
+ * For absolute paths, only loopback hosts are allowed when using HTTP, including known endpoints for ECS and EKS.
+ * All HTTPS endpoints are allowed.
+ * <p>
+ * IPv6 addresses are supported when setting the "AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE" environment variable.
+ * <p>
+ * Optionally, an authorization token can be included in the "Authorization" header of the request.
+ * There are two ways of providing the token, in order of priority:
+ * <ul>
+ *     <li>Setting the "AWS_CONTAINER_AUTHORIZATION_TOKEN" environment variable</li>
+ *     <li>Entering the token into a file and providing the path to it using the
+ *     "AWS_CONTAINER_AUTHORIZATION_TOKEN_FILE" environment variable. Note that the token content will be
+ *     used as-is.</li>
+ * </ul>.
  * <p>
  * <b>Migrating to the AWS SDK for Java v2</b>
  * <p>
@@ -51,12 +76,21 @@ public class ContainerCredentialsProvider implements AWSCredentialsProvider {
     /** Environment variable to get the full URI for a credentials path */
     static final String CONTAINER_CREDENTIALS_FULL_URI = "AWS_CONTAINER_CREDENTIALS_FULL_URI";
 
+    static final String AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE = "AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE";
+
     static final String CONTAINER_AUTHORIZATION_TOKEN = "AWS_CONTAINER_AUTHORIZATION_TOKEN";
+    static final String CONTAINER_AUTHORIZATION_TOKEN_FILE = "AWS_CONTAINER_AUTHORIZATION_TOKEN_FILE";
 
     private static final String HTTPS = "https";
 
     /** Default endpoint to retrieve the Amazon ECS Credentials. */
     private static final String ECS_CREDENTIALS_ENDPOINT = "http://169.254.170.2";
+
+    private static final String ECS_CONTAINER_HOST = "169.254.170.2";
+    private static final String EKS_CONTAINER_HOST = "169.254.170.23";
+    private static final String EKS_CONTAINER_HOST_IPV6 = "[fd00:ec2::23]";
+    private static final List<String> VALID_LOOP_BACK_IPV4 = Arrays.asList(ECS_CONTAINER_HOST, EKS_CONTAINER_HOST);
+    private static final List<String> VALID_LOOP_BACK_IPV6 = Arrays.asList(EKS_CONTAINER_HOST_IPV6);
 
     private final ContainerCredentialsFetcher credentialsFetcher;
 
@@ -132,10 +166,31 @@ public class ContainerCredentialsProvider implements AWSCredentialsProvider {
 
         @Override
         public Map<String, String> getHeaders() {
-            if (System.getenv(CONTAINER_AUTHORIZATION_TOKEN) != null) {
-                return Collections.singletonMap("Authorization", System.getenv(CONTAINER_AUTHORIZATION_TOKEN));
+            String tokenValue = getTokenValue();
+            if (StringUtils.isNullOrEmpty(tokenValue) ) {
+                return new HashMap<String, String>();
             }
-            return new HashMap<String, String>();
+            return Collections.singletonMap("Authorization", tokenValue);
+        }
+
+        private String getTokenValue() {
+            if (System.getenv(CONTAINER_AUTHORIZATION_TOKEN) != null) {
+                return System.getenv(CONTAINER_AUTHORIZATION_TOKEN);
+            } else if (System.getenv(CONTAINER_AUTHORIZATION_TOKEN_FILE) != null) {
+                String tokenFile = System.getenv(CONTAINER_AUTHORIZATION_TOKEN_FILE);
+                return readToken(tokenFile);
+            }
+            return null;
+        }
+
+        private String readToken(String tokenFile) {
+            try {
+                byte[] bytes = Files.readAllBytes(FileSystems.getDefault().getPath(tokenFile));
+                return new String(bytes, StringUtils.UTF8);
+            } catch (IOException e) {
+                throw new SdkClientException(
+                        String.format("Cannot fetch credentials from container - failed to read %s", tokenFile));
+            }
         }
 
         private boolean isHttps(URI endpoint) {
@@ -161,7 +216,7 @@ public class ContainerCredentialsProvider implements AWSCredentialsProvider {
                     }
                 }
 
-                return addresses.length > 0 && allAllowed;
+                return addresses.length > 0 && (allAllowed || isMetadataServiceEndpoint(host));
 
             } catch (UnknownHostException e) {
                 throw new SdkClientException(String.format("host (%s) could not be resolved to an IP address.", host), e);
@@ -170,6 +225,19 @@ public class ContainerCredentialsProvider implements AWSCredentialsProvider {
 
         private boolean isLoopbackAddress(InetAddress inetAddress) {
             return inetAddress.isLoopbackAddress();
+        }
+
+        private boolean isMetadataServiceEndpoint(String host) {
+            String mode = System.getenv(AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE);
+            if ("IPV6".equalsIgnoreCase(mode)) {
+                return VALID_LOOP_BACK_IPV6.contains(host);
+            }
+            return VALID_LOOP_BACK_IPV4.contains(host);
+        }
+
+        @Override
+        public CredentialsEndpointRetryPolicy getRetryPolicy() {
+            return ContainerCredentialsRetryPolicy.getInstance();
         }
     }
 

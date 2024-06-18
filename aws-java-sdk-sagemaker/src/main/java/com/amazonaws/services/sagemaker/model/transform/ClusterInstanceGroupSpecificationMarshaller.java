@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -39,6 +40,8 @@ public class ClusterInstanceGroupSpecificationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionRole").build();
     private static final MarshallingInfo<Integer> THREADSPERCORE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThreadsPerCore").build();
+    private static final MarshallingInfo<List> INSTANCESTORAGECONFIGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceStorageConfigs").build();
 
     private static final ClusterInstanceGroupSpecificationMarshaller instance = new ClusterInstanceGroupSpecificationMarshaller();
 
@@ -62,6 +65,7 @@ public class ClusterInstanceGroupSpecificationMarshaller {
             protocolMarshaller.marshall(clusterInstanceGroupSpecification.getLifeCycleConfig(), LIFECYCLECONFIG_BINDING);
             protocolMarshaller.marshall(clusterInstanceGroupSpecification.getExecutionRole(), EXECUTIONROLE_BINDING);
             protocolMarshaller.marshall(clusterInstanceGroupSpecification.getThreadsPerCore(), THREADSPERCORE_BINDING);
+            protocolMarshaller.marshall(clusterInstanceGroupSpecification.getInstanceStorageConfigs(), INSTANCESTORAGECONFIGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

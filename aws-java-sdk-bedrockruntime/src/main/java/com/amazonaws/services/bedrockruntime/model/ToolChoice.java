@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Forces a model to use a tool.
+ * Determines which tools the model should request in a call to <code>Converse</code> or <code>ConverseStream</code>.
+ * <code>ToolChoice</code> is only supported by Anthropic Claude 3 models and by Mistral AI Mistral Large.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/ToolChoice" target="_top">AWS API
@@ -30,7 +31,7 @@ public class ToolChoice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Model automatically decides if a tool should be called or to whether to generate text instead.
+     * (Default). The Model automatically decides if a tool should be called or whether to generate text instead.
      * </p>
      */
     private AutoToolChoice auto;
@@ -42,18 +43,18 @@ public class ToolChoice implements Serializable, Cloneable, StructuredPojo {
     private AnyToolChoice any;
     /**
      * <p>
-     * The Model must request the specified tool.
+     * The Model must request the specified tool. Only supported by Anthropic Claude 3 models.
      * </p>
      */
     private SpecificToolChoice tool;
 
     /**
      * <p>
-     * The Model automatically decides if a tool should be called or to whether to generate text instead.
+     * (Default). The Model automatically decides if a tool should be called or whether to generate text instead.
      * </p>
      * 
      * @param auto
-     *        The Model automatically decides if a tool should be called or to whether to generate text instead.
+     *        (Default). The Model automatically decides if a tool should be called or whether to generate text instead.
      */
 
     public void setAuto(AutoToolChoice auto) {
@@ -62,10 +63,11 @@ public class ToolChoice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Model automatically decides if a tool should be called or to whether to generate text instead.
+     * (Default). The Model automatically decides if a tool should be called or whether to generate text instead.
      * </p>
      * 
-     * @return The Model automatically decides if a tool should be called or to whether to generate text instead.
+     * @return (Default). The Model automatically decides if a tool should be called or whether to generate text
+     *         instead.
      */
 
     public AutoToolChoice getAuto() {
@@ -74,11 +76,11 @@ public class ToolChoice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Model automatically decides if a tool should be called or to whether to generate text instead.
+     * (Default). The Model automatically decides if a tool should be called or whether to generate text instead.
      * </p>
      * 
      * @param auto
-     *        The Model automatically decides if a tool should be called or to whether to generate text instead.
+     *        (Default). The Model automatically decides if a tool should be called or whether to generate text instead.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +131,11 @@ public class ToolChoice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Model must request the specified tool.
+     * The Model must request the specified tool. Only supported by Anthropic Claude 3 models.
      * </p>
      * 
      * @param tool
-     *        The Model must request the specified tool.
+     *        The Model must request the specified tool. Only supported by Anthropic Claude 3 models.
      */
 
     public void setTool(SpecificToolChoice tool) {
@@ -142,10 +144,10 @@ public class ToolChoice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Model must request the specified tool.
+     * The Model must request the specified tool. Only supported by Anthropic Claude 3 models.
      * </p>
      * 
-     * @return The Model must request the specified tool.
+     * @return The Model must request the specified tool. Only supported by Anthropic Claude 3 models.
      */
 
     public SpecificToolChoice getTool() {
@@ -154,11 +156,11 @@ public class ToolChoice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Model must request the specified tool.
+     * The Model must request the specified tool. Only supported by Anthropic Claude 3 models.
      * </p>
      * 
      * @param tool
-     *        The Model must request the specified tool.
+     *        The Model must request the specified tool. Only supported by Anthropic Claude 3 models.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

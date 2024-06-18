@@ -2173,6 +2173,45 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Creates an MLflow Tracking Server using a general purpose Amazon S3 bucket as the artifact store. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-create-tracking-server.html">Create an MLflow
+     * Tracking Server</a>.
+     * </p>
+     * 
+     * @param createMlflowTrackingServerRequest
+     * @return A Java Future containing the result of the CreateMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsync.CreateMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMlflowTrackingServerResult> createMlflowTrackingServerAsync(
+            CreateMlflowTrackingServerRequest createMlflowTrackingServerRequest);
+
+    /**
+     * <p>
+     * Creates an MLflow Tracking Server using a general purpose Amazon S3 bucket as the artifact store. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-create-tracking-server.html">Create an MLflow
+     * Tracking Server</a>.
+     * </p>
+     * 
+     * @param createMlflowTrackingServerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.CreateMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMlflowTrackingServerResult> createMlflowTrackingServerAsync(
+            CreateMlflowTrackingServerRequest createMlflowTrackingServerRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateMlflowTrackingServerRequest, CreateMlflowTrackingServerResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a model in SageMaker. In the request, you name the model and describe a primary container. For the
      * primary container, you specify the Docker image that contains inference code, artifacts (from prior training),
      * and a custom environment map that the inference code uses when you deploy the model for predictions.
@@ -2873,6 +2912,45 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<CreatePresignedDomainUrlResult> createPresignedDomainUrlAsync(CreatePresignedDomainUrlRequest createPresignedDomainUrlRequest,
             com.amazonaws.handlers.AsyncHandler<CreatePresignedDomainUrlRequest, CreatePresignedDomainUrlResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a presigned URL that you can use to connect to the MLflow UI attached to your tracking server. For more
+     * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-launch-ui.html">Launch the
+     * MLflow UI using a presigned URL</a>.
+     * </p>
+     * 
+     * @param createPresignedMlflowTrackingServerUrlRequest
+     * @return A Java Future containing the result of the CreatePresignedMlflowTrackingServerUrl operation returned by
+     *         the service.
+     * @sample AmazonSageMakerAsync.CreatePresignedMlflowTrackingServerUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedMlflowTrackingServerUrl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePresignedMlflowTrackingServerUrlResult> createPresignedMlflowTrackingServerUrlAsync(
+            CreatePresignedMlflowTrackingServerUrlRequest createPresignedMlflowTrackingServerUrlRequest);
+
+    /**
+     * <p>
+     * Returns a presigned URL that you can use to connect to the MLflow UI attached to your tracking server. For more
+     * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-launch-ui.html">Launch the
+     * MLflow UI using a presigned URL</a>.
+     * </p>
+     * 
+     * @param createPresignedMlflowTrackingServerUrlRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePresignedMlflowTrackingServerUrl operation returned by
+     *         the service.
+     * @sample AmazonSageMakerAsyncHandler.CreatePresignedMlflowTrackingServerUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedMlflowTrackingServerUrl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePresignedMlflowTrackingServerUrlResult> createPresignedMlflowTrackingServerUrlAsync(
+            CreatePresignedMlflowTrackingServerUrlRequest createPresignedMlflowTrackingServerUrlRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePresignedMlflowTrackingServerUrlRequest, CreatePresignedMlflowTrackingServerUrlResult> asyncHandler);
 
     /**
      * <p>
@@ -4698,6 +4776,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Deletes an MLflow Tracking Server. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-cleanup.html.html">Clean up MLflow resources</a>.
+     * </p>
+     * 
+     * @param deleteMlflowTrackingServerRequest
+     * @return A Java Future containing the result of the DeleteMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsync.DeleteMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMlflowTrackingServerResult> deleteMlflowTrackingServerAsync(
+            DeleteMlflowTrackingServerRequest deleteMlflowTrackingServerRequest);
+
+    /**
+     * <p>
+     * Deletes an MLflow Tracking Server. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-cleanup.html.html">Clean up MLflow resources</a>.
+     * </p>
+     * 
+     * @param deleteMlflowTrackingServerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DeleteMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMlflowTrackingServerResult> deleteMlflowTrackingServerAsync(
+            DeleteMlflowTrackingServerRequest deleteMlflowTrackingServerRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteMlflowTrackingServerRequest, DeleteMlflowTrackingServerResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a model. The <code>DeleteModel</code> API deletes only the model entry that was created in SageMaker when
      * you called the <code>CreateModel</code> API. It does not delete model artifacts, inference code, or the IAM role
      * that you specified when creating the model.
@@ -5398,7 +5511,7 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * If a private workforce contains one or more work teams, you must use the <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkteam.html">DeleteWorkteam</a>
      * operation to delete all work teams before you delete the workforce. If you try to delete a workforce that
-     * contains one or more work teams, you will recieve a <code>ResourceInUse</code> error.
+     * contains one or more work teams, you will receive a <code>ResourceInUse</code> error.
      * </p>
      * </important>
      * 
@@ -5425,7 +5538,7 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * If a private workforce contains one or more work teams, you must use the <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkteam.html">DeleteWorkteam</a>
      * operation to delete all work teams before you delete the workforce. If you try to delete a workforce that
-     * contains one or more work teams, you will recieve a <code>ResourceInUse</code> error.
+     * contains one or more work teams, you will receive a <code>ResourceInUse</code> error.
      * </p>
      * </important>
      * 
@@ -6673,6 +6786,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Returns information about an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param describeMlflowTrackingServerRequest
+     * @return A Java Future containing the result of the DescribeMlflowTrackingServer operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsync.DescribeMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMlflowTrackingServerResult> describeMlflowTrackingServerAsync(
+            DescribeMlflowTrackingServerRequest describeMlflowTrackingServerRequest);
+
+    /**
+     * <p>
+     * Returns information about an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param describeMlflowTrackingServerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeMlflowTrackingServer operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsyncHandler.DescribeMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMlflowTrackingServerResult> describeMlflowTrackingServerAsync(
+            DescribeMlflowTrackingServerRequest describeMlflowTrackingServerRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeMlflowTrackingServerRequest, DescribeMlflowTrackingServerResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes a model that you created using the <code>CreateModel</code> API.
      * </p>
      * 
@@ -7548,7 +7696,7 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Gets information about a specific work team. You can see information such as the create date, the last updated
+     * Gets information about a specific work team. You can see information such as the creation date, the last updated
      * date, membership information, and the work team's Amazon Resource Name (ARN).
      * </p>
      * 
@@ -7562,7 +7710,7 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Gets information about a specific work team. You can see information such as the create date, the last updated
+     * Gets information about a specific work team. You can see information such as the creation date, the last updated
      * date, membership information, and the work team's Amazon Resource Name (ARN).
      * </p>
      * 
@@ -9254,6 +9402,39 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Lists all MLflow Tracking Servers.
+     * </p>
+     * 
+     * @param listMlflowTrackingServersRequest
+     * @return A Java Future containing the result of the ListMlflowTrackingServers operation returned by the service.
+     * @sample AmazonSageMakerAsync.ListMlflowTrackingServers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListMlflowTrackingServers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMlflowTrackingServersResult> listMlflowTrackingServersAsync(
+            ListMlflowTrackingServersRequest listMlflowTrackingServersRequest);
+
+    /**
+     * <p>
+     * Lists all MLflow Tracking Servers.
+     * </p>
+     * 
+     * @param listMlflowTrackingServersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMlflowTrackingServers operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.ListMlflowTrackingServers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListMlflowTrackingServers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMlflowTrackingServersResult> listMlflowTrackingServersAsync(
+            ListMlflowTrackingServersRequest listMlflowTrackingServersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMlflowTrackingServersRequest, ListMlflowTrackingServersResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists model bias jobs definitions that satisfy various filters.
      * </p>
      * 
@@ -10870,6 +11051,39 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Programmatically start an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param startMlflowTrackingServerRequest
+     * @return A Java Future containing the result of the StartMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsync.StartMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMlflowTrackingServerResult> startMlflowTrackingServerAsync(
+            StartMlflowTrackingServerRequest startMlflowTrackingServerRequest);
+
+    /**
+     * <p>
+     * Programmatically start an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param startMlflowTrackingServerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.StartMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMlflowTrackingServerResult> startMlflowTrackingServerAsync(
+            StartMlflowTrackingServerRequest startMlflowTrackingServerRequest,
+            com.amazonaws.handlers.AsyncHandler<StartMlflowTrackingServerRequest, StartMlflowTrackingServerResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts a previously stopped monitoring schedule.
      * </p>
      * <note>
@@ -11260,6 +11474,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<StopLabelingJobResult> stopLabelingJobAsync(StopLabelingJobRequest stopLabelingJobRequest,
             com.amazonaws.handlers.AsyncHandler<StopLabelingJobRequest, StopLabelingJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Programmatically stop an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param stopMlflowTrackingServerRequest
+     * @return A Java Future containing the result of the StopMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsync.StopMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopMlflowTrackingServerResult> stopMlflowTrackingServerAsync(StopMlflowTrackingServerRequest stopMlflowTrackingServerRequest);
+
+    /**
+     * <p>
+     * Programmatically stop an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param stopMlflowTrackingServerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.StopMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopMlflowTrackingServerResult> stopMlflowTrackingServerAsync(StopMlflowTrackingServerRequest stopMlflowTrackingServerRequest,
+            com.amazonaws.handlers.AsyncHandler<StopMlflowTrackingServerRequest, StopMlflowTrackingServerResult> asyncHandler);
 
     /**
      * <p>
@@ -12307,6 +12552,39 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
     java.util.concurrent.Future<UpdateInferenceExperimentResult> updateInferenceExperimentAsync(
             UpdateInferenceExperimentRequest updateInferenceExperimentRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateInferenceExperimentRequest, UpdateInferenceExperimentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates properties of an existing MLflow Tracking Server.
+     * </p>
+     * 
+     * @param updateMlflowTrackingServerRequest
+     * @return A Java Future containing the result of the UpdateMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsync.UpdateMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMlflowTrackingServerResult> updateMlflowTrackingServerAsync(
+            UpdateMlflowTrackingServerRequest updateMlflowTrackingServerRequest);
+
+    /**
+     * <p>
+     * Updates properties of an existing MLflow Tracking Server.
+     * </p>
+     * 
+     * @param updateMlflowTrackingServerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateMlflowTrackingServer operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.UpdateMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMlflowTrackingServerResult> updateMlflowTrackingServerAsync(
+            UpdateMlflowTrackingServerRequest updateMlflowTrackingServerRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateMlflowTrackingServerRequest, UpdateMlflowTrackingServerResult> asyncHandler);
 
     /**
      * <p>

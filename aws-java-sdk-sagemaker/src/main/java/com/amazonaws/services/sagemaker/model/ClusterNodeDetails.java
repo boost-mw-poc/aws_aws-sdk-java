@@ -72,6 +72,12 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
     private Integer threadsPerCore;
     /**
      * <p>
+     * The configurations of additional storage specified to the instance group where the instance (node) is launched.
+     * </p>
+     */
+    private java.util.List<ClusterInstanceStorageConfig> instanceStorageConfigs;
+    /**
+     * <p>
      * The private primary IP address of the SageMaker HyperPod cluster node.
      * </p>
      */
@@ -390,6 +396,80 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * The configurations of additional storage specified to the instance group where the instance (node) is launched.
+     * </p>
+     * 
+     * @return The configurations of additional storage specified to the instance group where the instance (node) is
+     *         launched.
+     */
+
+    public java.util.List<ClusterInstanceStorageConfig> getInstanceStorageConfigs() {
+        return instanceStorageConfigs;
+    }
+
+    /**
+     * <p>
+     * The configurations of additional storage specified to the instance group where the instance (node) is launched.
+     * </p>
+     * 
+     * @param instanceStorageConfigs
+     *        The configurations of additional storage specified to the instance group where the instance (node) is
+     *        launched.
+     */
+
+    public void setInstanceStorageConfigs(java.util.Collection<ClusterInstanceStorageConfig> instanceStorageConfigs) {
+        if (instanceStorageConfigs == null) {
+            this.instanceStorageConfigs = null;
+            return;
+        }
+
+        this.instanceStorageConfigs = new java.util.ArrayList<ClusterInstanceStorageConfig>(instanceStorageConfigs);
+    }
+
+    /**
+     * <p>
+     * The configurations of additional storage specified to the instance group where the instance (node) is launched.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setInstanceStorageConfigs(java.util.Collection)} or
+     * {@link #withInstanceStorageConfigs(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param instanceStorageConfigs
+     *        The configurations of additional storage specified to the instance group where the instance (node) is
+     *        launched.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterNodeDetails withInstanceStorageConfigs(ClusterInstanceStorageConfig... instanceStorageConfigs) {
+        if (this.instanceStorageConfigs == null) {
+            setInstanceStorageConfigs(new java.util.ArrayList<ClusterInstanceStorageConfig>(instanceStorageConfigs.length));
+        }
+        for (ClusterInstanceStorageConfig ele : instanceStorageConfigs) {
+            this.instanceStorageConfigs.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configurations of additional storage specified to the instance group where the instance (node) is launched.
+     * </p>
+     * 
+     * @param instanceStorageConfigs
+     *        The configurations of additional storage specified to the instance group where the instance (node) is
+     *        launched.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterNodeDetails withInstanceStorageConfigs(java.util.Collection<ClusterInstanceStorageConfig> instanceStorageConfigs) {
+        setInstanceStorageConfigs(instanceStorageConfigs);
+        return this;
+    }
+
+    /**
+     * <p>
      * The private primary IP address of the SageMaker HyperPod cluster node.
      * </p>
      * 
@@ -534,6 +614,8 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
             sb.append("LifeCycleConfig: ").append(getLifeCycleConfig()).append(",");
         if (getThreadsPerCore() != null)
             sb.append("ThreadsPerCore: ").append(getThreadsPerCore()).append(",");
+        if (getInstanceStorageConfigs() != null)
+            sb.append("InstanceStorageConfigs: ").append(getInstanceStorageConfigs()).append(",");
         if (getPrivatePrimaryIp() != null)
             sb.append("PrivatePrimaryIp: ").append(getPrivatePrimaryIp()).append(",");
         if (getPrivateDnsHostname() != null)
@@ -582,6 +664,10 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getThreadsPerCore() != null && other.getThreadsPerCore().equals(this.getThreadsPerCore()) == false)
             return false;
+        if (other.getInstanceStorageConfigs() == null ^ this.getInstanceStorageConfigs() == null)
+            return false;
+        if (other.getInstanceStorageConfigs() != null && other.getInstanceStorageConfigs().equals(this.getInstanceStorageConfigs()) == false)
+            return false;
         if (other.getPrivatePrimaryIp() == null ^ this.getPrivatePrimaryIp() == null)
             return false;
         if (other.getPrivatePrimaryIp() != null && other.getPrivatePrimaryIp().equals(this.getPrivatePrimaryIp()) == false)
@@ -609,6 +695,7 @@ public class ClusterNodeDetails implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getLaunchTime() == null) ? 0 : getLaunchTime().hashCode());
         hashCode = prime * hashCode + ((getLifeCycleConfig() == null) ? 0 : getLifeCycleConfig().hashCode());
         hashCode = prime * hashCode + ((getThreadsPerCore() == null) ? 0 : getThreadsPerCore().hashCode());
+        hashCode = prime * hashCode + ((getInstanceStorageConfigs() == null) ? 0 : getInstanceStorageConfigs().hashCode());
         hashCode = prime * hashCode + ((getPrivatePrimaryIp() == null) ? 0 : getPrivatePrimaryIp().hashCode());
         hashCode = prime * hashCode + ((getPrivateDnsHostname() == null) ? 0 : getPrivateDnsHostname().hashCode());
         hashCode = prime * hashCode + ((getPlacement() == null) ? 0 : getPlacement().hashCode());

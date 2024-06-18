@@ -24,6 +24,7 @@ public enum StopReason {
     Tool_use("tool_use"),
     Max_tokens("max_tokens"),
     Stop_sequence("stop_sequence"),
+    Guardrail_intervened("guardrail_intervened"),
     Content_filtered("content_filtered");
 
     private String value;

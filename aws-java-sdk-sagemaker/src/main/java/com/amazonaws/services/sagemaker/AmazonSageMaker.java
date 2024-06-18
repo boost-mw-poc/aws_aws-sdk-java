@@ -1159,6 +1159,25 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Creates an MLflow Tracking Server using a general purpose Amazon S3 bucket as the artifact store. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-create-tracking-server.html">Create an MLflow
+     * Tracking Server</a>.
+     * </p>
+     * 
+     * @param createMlflowTrackingServerRequest
+     * @return Result of the CreateMlflowTrackingServer operation returned by the service.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateMlflowTrackingServerResult createMlflowTrackingServer(CreateMlflowTrackingServerRequest createMlflowTrackingServerRequest);
+
+    /**
+     * <p>
      * Creates a model in SageMaker. In the request, you name the model and describe a primary container. For the
      * primary container, you specify the Docker image that contains inference code, artifacts (from prior training),
      * and a custom environment map that the inference code uses when you deploy the model for predictions.
@@ -1531,6 +1550,24 @@ public interface AmazonSageMaker {
      *      target="_top">AWS API Documentation</a>
      */
     CreatePresignedDomainUrlResult createPresignedDomainUrl(CreatePresignedDomainUrlRequest createPresignedDomainUrlRequest);
+
+    /**
+     * <p>
+     * Returns a presigned URL that you can use to connect to the MLflow UI attached to your tracking server. For more
+     * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-launch-ui.html">Launch the
+     * MLflow UI using a presigned URL</a>.
+     * </p>
+     * 
+     * @param createPresignedMlflowTrackingServerUrlRequest
+     * @return Result of the CreatePresignedMlflowTrackingServerUrl operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.CreatePresignedMlflowTrackingServerUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedMlflowTrackingServerUrl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreatePresignedMlflowTrackingServerUrlResult createPresignedMlflowTrackingServerUrl(
+            CreatePresignedMlflowTrackingServerUrlRequest createPresignedMlflowTrackingServerUrlRequest);
 
     /**
      * <p>
@@ -2453,6 +2490,22 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Deletes an MLflow Tracking Server. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-cleanup.html.html">Clean up MLflow resources</a>.
+     * </p>
+     * 
+     * @param deleteMlflowTrackingServerRequest
+     * @return Result of the DeleteMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DeleteMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteMlflowTrackingServerResult deleteMlflowTrackingServer(DeleteMlflowTrackingServerRequest deleteMlflowTrackingServerRequest);
+
+    /**
+     * <p>
      * Deletes a model. The <code>DeleteModel</code> API deletes only the model entry that was created in SageMaker when
      * you called the <code>CreateModel</code> API. It does not delete model artifacts, inference code, or the IAM role
      * that you specified when creating the model.
@@ -2796,7 +2849,7 @@ public interface AmazonSageMaker {
      * If a private workforce contains one or more work teams, you must use the <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkteam.html">DeleteWorkteam</a>
      * operation to delete all work teams before you delete the workforce. If you try to delete a workforce that
-     * contains one or more work teams, you will recieve a <code>ResourceInUse</code> error.
+     * contains one or more work teams, you will receive a <code>ResourceInUse</code> error.
      * </p>
      * </important>
      * 
@@ -3387,6 +3440,21 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Returns information about an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param describeMlflowTrackingServerRequest
+     * @return Result of the DescribeMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeMlflowTrackingServerResult describeMlflowTrackingServer(DescribeMlflowTrackingServerRequest describeMlflowTrackingServerRequest);
+
+    /**
+     * <p>
      * Describes a model that you created using the <code>CreateModel</code> API.
      * </p>
      * 
@@ -3785,7 +3853,7 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * Gets information about a specific work team. You can see information such as the create date, the last updated
+     * Gets information about a specific work team. You can see information such as the creation date, the last updated
      * date, membership information, and the work team's Amazon Resource Name (ARN).
      * </p>
      * 
@@ -4535,6 +4603,19 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Lists all MLflow Tracking Servers.
+     * </p>
+     * 
+     * @param listMlflowTrackingServersRequest
+     * @return Result of the ListMlflowTrackingServers operation returned by the service.
+     * @sample AmazonSageMaker.ListMlflowTrackingServers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListMlflowTrackingServers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListMlflowTrackingServersResult listMlflowTrackingServers(ListMlflowTrackingServersRequest listMlflowTrackingServersRequest);
+
+    /**
+     * <p>
      * Lists model bias jobs definitions that satisfy various filters.
      * </p>
      * 
@@ -5272,6 +5353,24 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Programmatically start an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param startMlflowTrackingServerRequest
+     * @return Result of the StartMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ConflictException
+     *         There was a conflict when you attempted to modify a SageMaker entity such as an <code>Experiment</code>
+     *         or <code>Artifact</code>.
+     * @sample AmazonSageMaker.StartMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartMlflowTrackingServerResult startMlflowTrackingServer(StartMlflowTrackingServerRequest startMlflowTrackingServerRequest);
+
+    /**
+     * <p>
      * Starts a previously stopped monitoring schedule.
      * </p>
      * <note>
@@ -5463,6 +5562,24 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     StopLabelingJobResult stopLabelingJob(StopLabelingJobRequest stopLabelingJobRequest);
+
+    /**
+     * <p>
+     * Programmatically stop an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param stopMlflowTrackingServerRequest
+     * @return Result of the StopMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ConflictException
+     *         There was a conflict when you attempted to modify a SageMaker entity such as an <code>Experiment</code>
+     *         or <code>Artifact</code>.
+     * @sample AmazonSageMaker.StopMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StopMlflowTrackingServerResult stopMlflowTrackingServer(StopMlflowTrackingServerRequest stopMlflowTrackingServerRequest);
 
     /**
      * <p>
@@ -6010,6 +6127,27 @@ public interface AmazonSageMaker {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateInferenceExperimentResult updateInferenceExperiment(UpdateInferenceExperimentRequest updateInferenceExperimentRequest);
+
+    /**
+     * <p>
+     * Updates properties of an existing MLflow Tracking Server.
+     * </p>
+     * 
+     * @param updateMlflowTrackingServerRequest
+     * @return Result of the UpdateMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @throws ConflictException
+     *         There was a conflict when you attempted to modify a SageMaker entity such as an <code>Experiment</code>
+     *         or <code>Artifact</code>.
+     * @sample AmazonSageMaker.UpdateMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateMlflowTrackingServerResult updateMlflowTrackingServer(UpdateMlflowTrackingServerRequest updateMlflowTrackingServerRequest);
 
     /**
      * <p>

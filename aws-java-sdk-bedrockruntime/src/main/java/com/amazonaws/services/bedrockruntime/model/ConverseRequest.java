@@ -92,8 +92,14 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private ToolConfiguration toolConfig;
     /**
      * <p>
+     * Configuration information for a guardrail that you want to use in the request.
+     * </p>
+     */
+    private GuardrailConfiguration guardrailConfig;
+    /**
+     * <p>
      * Additional model parameters field paths to return in the response. <code>Converse</code> returns the requested
-     * fields as a JSON Pointer object in the <code>additionalModelResultFields</code> field. The following is example
+     * fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The following is example
      * JSON for <code>additionalModelResponseFieldPaths</code>.
      * </p>
      * <p>
@@ -574,8 +580,48 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
+     * Configuration information for a guardrail that you want to use in the request.
+     * </p>
+     * 
+     * @param guardrailConfig
+     *        Configuration information for a guardrail that you want to use in the request.
+     */
+
+    public void setGuardrailConfig(GuardrailConfiguration guardrailConfig) {
+        this.guardrailConfig = guardrailConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration information for a guardrail that you want to use in the request.
+     * </p>
+     * 
+     * @return Configuration information for a guardrail that you want to use in the request.
+     */
+
+    public GuardrailConfiguration getGuardrailConfig() {
+        return this.guardrailConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration information for a guardrail that you want to use in the request.
+     * </p>
+     * 
+     * @param guardrailConfig
+     *        Configuration information for a guardrail that you want to use in the request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConverseRequest withGuardrailConfig(GuardrailConfiguration guardrailConfig) {
+        setGuardrailConfig(guardrailConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * Additional model parameters field paths to return in the response. <code>Converse</code> returns the requested
-     * fields as a JSON Pointer object in the <code>additionalModelResultFields</code> field. The following is example
+     * fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The following is example
      * JSON for <code>additionalModelResponseFieldPaths</code>.
      * </p>
      * <p>
@@ -592,7 +638,7 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      * 
      * @return Additional model parameters field paths to return in the response. <code>Converse</code> returns the
-     *         requested fields as a JSON Pointer object in the <code>additionalModelResultFields</code> field. The
+     *         requested fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The
      *         following is example JSON for <code>additionalModelResponseFieldPaths</code>.</p>
      *         <p>
      *         <code>[ "/stop_sequence" ]</code>
@@ -615,7 +661,7 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
     /**
      * <p>
      * Additional model parameters field paths to return in the response. <code>Converse</code> returns the requested
-     * fields as a JSON Pointer object in the <code>additionalModelResultFields</code> field. The following is example
+     * fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The following is example
      * JSON for <code>additionalModelResponseFieldPaths</code>.
      * </p>
      * <p>
@@ -633,7 +679,7 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * 
      * @param additionalModelResponseFieldPaths
      *        Additional model parameters field paths to return in the response. <code>Converse</code> returns the
-     *        requested fields as a JSON Pointer object in the <code>additionalModelResultFields</code> field. The
+     *        requested fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The
      *        following is example JSON for <code>additionalModelResponseFieldPaths</code>.</p>
      *        <p>
      *        <code>[ "/stop_sequence" ]</code>
@@ -661,7 +707,7 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
     /**
      * <p>
      * Additional model parameters field paths to return in the response. <code>Converse</code> returns the requested
-     * fields as a JSON Pointer object in the <code>additionalModelResultFields</code> field. The following is example
+     * fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The following is example
      * JSON for <code>additionalModelResponseFieldPaths</code>.
      * </p>
      * <p>
@@ -684,7 +730,7 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * 
      * @param additionalModelResponseFieldPaths
      *        Additional model parameters field paths to return in the response. <code>Converse</code> returns the
-     *        requested fields as a JSON Pointer object in the <code>additionalModelResultFields</code> field. The
+     *        requested fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The
      *        following is example JSON for <code>additionalModelResponseFieldPaths</code>.</p>
      *        <p>
      *        <code>[ "/stop_sequence" ]</code>
@@ -714,7 +760,7 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
     /**
      * <p>
      * Additional model parameters field paths to return in the response. <code>Converse</code> returns the requested
-     * fields as a JSON Pointer object in the <code>additionalModelResultFields</code> field. The following is example
+     * fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The following is example
      * JSON for <code>additionalModelResponseFieldPaths</code>.
      * </p>
      * <p>
@@ -732,7 +778,7 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * 
      * @param additionalModelResponseFieldPaths
      *        Additional model parameters field paths to return in the response. <code>Converse</code> returns the
-     *        requested fields as a JSON Pointer object in the <code>additionalModelResultFields</code> field. The
+     *        requested fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The
      *        following is example JSON for <code>additionalModelResponseFieldPaths</code>.</p>
      *        <p>
      *        <code>[ "/stop_sequence" ]</code>
@@ -776,6 +822,8 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
             sb.append("InferenceConfig: ").append(getInferenceConfig()).append(",");
         if (getToolConfig() != null)
             sb.append("ToolConfig: ").append(getToolConfig()).append(",");
+        if (getGuardrailConfig() != null)
+            sb.append("GuardrailConfig: ").append(getGuardrailConfig()).append(",");
         if (getAdditionalModelResponseFieldPaths() != null)
             sb.append("AdditionalModelResponseFieldPaths: ").append(getAdditionalModelResponseFieldPaths());
         sb.append("}");
@@ -812,6 +860,10 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
             return false;
         if (other.getToolConfig() != null && other.getToolConfig().equals(this.getToolConfig()) == false)
             return false;
+        if (other.getGuardrailConfig() == null ^ this.getGuardrailConfig() == null)
+            return false;
+        if (other.getGuardrailConfig() != null && other.getGuardrailConfig().equals(this.getGuardrailConfig()) == false)
+            return false;
         if (other.getAdditionalModelResponseFieldPaths() == null ^ this.getAdditionalModelResponseFieldPaths() == null)
             return false;
         if (other.getAdditionalModelResponseFieldPaths() != null
@@ -830,6 +882,7 @@ public class ConverseRequest extends com.amazonaws.AmazonWebServiceRequest imple
         hashCode = prime * hashCode + ((getSystem() == null) ? 0 : getSystem().hashCode());
         hashCode = prime * hashCode + ((getInferenceConfig() == null) ? 0 : getInferenceConfig().hashCode());
         hashCode = prime * hashCode + ((getToolConfig() == null) ? 0 : getToolConfig().hashCode());
+        hashCode = prime * hashCode + ((getGuardrailConfig() == null) ? 0 : getGuardrailConfig().hashCode());
         hashCode = prime * hashCode + ((getAdditionalModelResponseFieldPaths() == null) ? 0 : getAdditionalModelResponseFieldPaths().hashCode());
         return hashCode;
     }

@@ -60,6 +60,10 @@ public class ContentBlockJsonUnmarshaller implements Unmarshaller<ContentBlock, 
                     context.nextToken();
                     contentBlock.setToolResult(ToolResultBlockJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("guardContent", targetDepth)) {
+                    context.nextToken();
+                    contentBlock.setGuardContent(GuardrailConverseContentBlockJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

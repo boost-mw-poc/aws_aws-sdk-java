@@ -86,6 +86,13 @@ public class FargateProfile implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The health status of the Fargate profile. If there are issues with your Fargate profile's health, they are listed
+     * here.
+     * </p>
+     */
+    private FargateProfileHealth health;
 
     /**
      * <p>
@@ -579,6 +586,52 @@ public class FargateProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The health status of the Fargate profile. If there are issues with your Fargate profile's health, they are listed
+     * here.
+     * </p>
+     * 
+     * @param health
+     *        The health status of the Fargate profile. If there are issues with your Fargate profile's health, they are
+     *        listed here.
+     */
+
+    public void setHealth(FargateProfileHealth health) {
+        this.health = health;
+    }
+
+    /**
+     * <p>
+     * The health status of the Fargate profile. If there are issues with your Fargate profile's health, they are listed
+     * here.
+     * </p>
+     * 
+     * @return The health status of the Fargate profile. If there are issues with your Fargate profile's health, they
+     *         are listed here.
+     */
+
+    public FargateProfileHealth getHealth() {
+        return this.health;
+    }
+
+    /**
+     * <p>
+     * The health status of the Fargate profile. If there are issues with your Fargate profile's health, they are listed
+     * here.
+     * </p>
+     * 
+     * @param health
+     *        The health status of the Fargate profile. If there are issues with your Fargate profile's health, they are
+     *        listed here.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FargateProfile withHealth(FargateProfileHealth health) {
+        setHealth(health);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -607,7 +660,9 @@ public class FargateProfile implements Serializable, Cloneable, StructuredPojo {
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getHealth() != null)
+            sb.append("Health: ").append(getHealth());
         sb.append("}");
         return sb.toString();
     }
@@ -658,6 +713,10 @@ public class FargateProfile implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getHealth() == null ^ this.getHealth() == null)
+            return false;
+        if (other.getHealth() != null && other.getHealth().equals(this.getHealth()) == false)
+            return false;
         return true;
     }
 
@@ -675,6 +734,7 @@ public class FargateProfile implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSelectors() == null) ? 0 : getSelectors().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getHealth() == null) ? 0 : getHealth().hashCode());
         return hashCode;
     }
 

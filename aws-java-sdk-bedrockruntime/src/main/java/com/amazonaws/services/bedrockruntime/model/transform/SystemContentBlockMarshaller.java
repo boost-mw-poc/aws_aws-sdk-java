@@ -29,6 +29,8 @@ public class SystemContentBlockMarshaller {
 
     private static final MarshallingInfo<String> TEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("text").build();
+    private static final MarshallingInfo<StructuredPojo> GUARDCONTENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("guardContent").build();
 
     private static final SystemContentBlockMarshaller instance = new SystemContentBlockMarshaller();
 
@@ -47,6 +49,7 @@ public class SystemContentBlockMarshaller {
 
         try {
             protocolMarshaller.marshall(systemContentBlock.getText(), TEXT_BINDING);
+            protocolMarshaller.marshall(systemContentBlock.getGuardContent(), GUARDCONTENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

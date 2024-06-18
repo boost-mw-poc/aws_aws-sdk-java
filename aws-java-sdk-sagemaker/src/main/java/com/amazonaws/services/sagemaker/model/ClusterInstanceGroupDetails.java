@@ -74,6 +74,12 @@ public class ClusterInstanceGroupDetails implements Serializable, Cloneable, Str
      * </p>
      */
     private Integer threadsPerCore;
+    /**
+     * <p>
+     * The additional storage configurations for the instances in the SageMaker HyperPod cluster instance group.
+     * </p>
+     */
+    private java.util.List<ClusterInstanceStorageConfig> instanceStorageConfigs;
 
     /**
      * <p>
@@ -403,6 +409,76 @@ public class ClusterInstanceGroupDetails implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * The additional storage configurations for the instances in the SageMaker HyperPod cluster instance group.
+     * </p>
+     * 
+     * @return The additional storage configurations for the instances in the SageMaker HyperPod cluster instance group.
+     */
+
+    public java.util.List<ClusterInstanceStorageConfig> getInstanceStorageConfigs() {
+        return instanceStorageConfigs;
+    }
+
+    /**
+     * <p>
+     * The additional storage configurations for the instances in the SageMaker HyperPod cluster instance group.
+     * </p>
+     * 
+     * @param instanceStorageConfigs
+     *        The additional storage configurations for the instances in the SageMaker HyperPod cluster instance group.
+     */
+
+    public void setInstanceStorageConfigs(java.util.Collection<ClusterInstanceStorageConfig> instanceStorageConfigs) {
+        if (instanceStorageConfigs == null) {
+            this.instanceStorageConfigs = null;
+            return;
+        }
+
+        this.instanceStorageConfigs = new java.util.ArrayList<ClusterInstanceStorageConfig>(instanceStorageConfigs);
+    }
+
+    /**
+     * <p>
+     * The additional storage configurations for the instances in the SageMaker HyperPod cluster instance group.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setInstanceStorageConfigs(java.util.Collection)} or
+     * {@link #withInstanceStorageConfigs(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param instanceStorageConfigs
+     *        The additional storage configurations for the instances in the SageMaker HyperPod cluster instance group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterInstanceGroupDetails withInstanceStorageConfigs(ClusterInstanceStorageConfig... instanceStorageConfigs) {
+        if (this.instanceStorageConfigs == null) {
+            setInstanceStorageConfigs(new java.util.ArrayList<ClusterInstanceStorageConfig>(instanceStorageConfigs.length));
+        }
+        for (ClusterInstanceStorageConfig ele : instanceStorageConfigs) {
+            this.instanceStorageConfigs.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The additional storage configurations for the instances in the SageMaker HyperPod cluster instance group.
+     * </p>
+     * 
+     * @param instanceStorageConfigs
+     *        The additional storage configurations for the instances in the SageMaker HyperPod cluster instance group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterInstanceGroupDetails withInstanceStorageConfigs(java.util.Collection<ClusterInstanceStorageConfig> instanceStorageConfigs) {
+        setInstanceStorageConfigs(instanceStorageConfigs);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -427,7 +503,9 @@ public class ClusterInstanceGroupDetails implements Serializable, Cloneable, Str
         if (getExecutionRole() != null)
             sb.append("ExecutionRole: ").append(getExecutionRole()).append(",");
         if (getThreadsPerCore() != null)
-            sb.append("ThreadsPerCore: ").append(getThreadsPerCore());
+            sb.append("ThreadsPerCore: ").append(getThreadsPerCore()).append(",");
+        if (getInstanceStorageConfigs() != null)
+            sb.append("InstanceStorageConfigs: ").append(getInstanceStorageConfigs());
         sb.append("}");
         return sb.toString();
     }
@@ -470,6 +548,10 @@ public class ClusterInstanceGroupDetails implements Serializable, Cloneable, Str
             return false;
         if (other.getThreadsPerCore() != null && other.getThreadsPerCore().equals(this.getThreadsPerCore()) == false)
             return false;
+        if (other.getInstanceStorageConfigs() == null ^ this.getInstanceStorageConfigs() == null)
+            return false;
+        if (other.getInstanceStorageConfigs() != null && other.getInstanceStorageConfigs().equals(this.getInstanceStorageConfigs()) == false)
+            return false;
         return true;
     }
 
@@ -485,6 +567,7 @@ public class ClusterInstanceGroupDetails implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getLifeCycleConfig() == null) ? 0 : getLifeCycleConfig().hashCode());
         hashCode = prime * hashCode + ((getExecutionRole() == null) ? 0 : getExecutionRole().hashCode());
         hashCode = prime * hashCode + ((getThreadsPerCore() == null) ? 0 : getThreadsPerCore().hashCode());
+        hashCode = prime * hashCode + ((getInstanceStorageConfigs() == null) ? 0 : getInstanceStorageConfigs().hashCode());
         return hashCode;
     }
 

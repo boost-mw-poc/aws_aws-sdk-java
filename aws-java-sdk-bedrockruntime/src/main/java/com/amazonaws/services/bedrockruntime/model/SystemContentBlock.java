@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A system content block
+ * A system content block.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/SystemContentBlock" target="_top">AWS
@@ -34,6 +34,16 @@ public class SystemContentBlock implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String text;
+    /**
+     * <p>
+     * A content block to assess with the guardrail. Use with the Converse API (<a>Converse</a> and
+     * <a>ConverseStream</a>).
+     * </p>
+     * <p>
+     * For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
+     * </p>
+     */
+    private GuardrailConverseContentBlock guardContent;
 
     /**
      * <p>
@@ -76,6 +86,70 @@ public class SystemContentBlock implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A content block to assess with the guardrail. Use with the Converse API (<a>Converse</a> and
+     * <a>ConverseStream</a>).
+     * </p>
+     * <p>
+     * For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
+     * </p>
+     * 
+     * @param guardContent
+     *        A content block to assess with the guardrail. Use with the Converse API (<a>Converse</a> and
+     *        <a>ConverseStream</a>). </p>
+     *        <p>
+     *        For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User
+     *        Guide</i>.
+     */
+
+    public void setGuardContent(GuardrailConverseContentBlock guardContent) {
+        this.guardContent = guardContent;
+    }
+
+    /**
+     * <p>
+     * A content block to assess with the guardrail. Use with the Converse API (<a>Converse</a> and
+     * <a>ConverseStream</a>).
+     * </p>
+     * <p>
+     * For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
+     * </p>
+     * 
+     * @return A content block to assess with the guardrail. Use with the Converse API (<a>Converse</a> and
+     *         <a>ConverseStream</a>). </p>
+     *         <p>
+     *         For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User
+     *         Guide</i>.
+     */
+
+    public GuardrailConverseContentBlock getGuardContent() {
+        return this.guardContent;
+    }
+
+    /**
+     * <p>
+     * A content block to assess with the guardrail. Use with the Converse API (<a>Converse</a> and
+     * <a>ConverseStream</a>).
+     * </p>
+     * <p>
+     * For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
+     * </p>
+     * 
+     * @param guardContent
+     *        A content block to assess with the guardrail. Use with the Converse API (<a>Converse</a> and
+     *        <a>ConverseStream</a>). </p>
+     *        <p>
+     *        For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User
+     *        Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SystemContentBlock withGuardContent(GuardrailConverseContentBlock guardContent) {
+        setGuardContent(guardContent);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +162,9 @@ public class SystemContentBlock implements Serializable, Cloneable, StructuredPo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getText() != null)
-            sb.append("Text: ").append(getText());
+            sb.append("Text: ").append(getText()).append(",");
+        if (getGuardContent() != null)
+            sb.append("GuardContent: ").append(getGuardContent());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +183,10 @@ public class SystemContentBlock implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getText() != null && other.getText().equals(this.getText()) == false)
             return false;
+        if (other.getGuardContent() == null ^ this.getGuardContent() == null)
+            return false;
+        if (other.getGuardContent() != null && other.getGuardContent().equals(this.getGuardContent()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +196,7 @@ public class SystemContentBlock implements Serializable, Cloneable, StructuredPo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getText() == null) ? 0 : getText().hashCode());
+        hashCode = prime * hashCode + ((getGuardContent() == null) ? 0 : getGuardContent().hashCode());
         return hashCode;
     }
 

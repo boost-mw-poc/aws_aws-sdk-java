@@ -31,11 +31,13 @@ import org.apache.commons.logging.LogFactory;
  *     <li>
  *         If environment variable "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI" is
  *         set (typically on EC2) it is used to hit the metadata service at the following endpoint: http://169.254.170.2
+ *          (ECS). See {@link ContainerCredentialsProvider} for more
+ *           information.
  *     </li>
  *     <li>
  *         If environment variable "AWS_CONTAINER_CREDENTIALS_FULL_URI" is
- *         set it is used to hit a metadata service at that URI. <br/> Optionally an authorization token can be included
- *         in the "Authorization" header of the request by setting the "AWS_CONTAINER_AUTHORIZATION_TOKEN" environment variable.
+ *         set it is used to hit a metadata service at that URI. See {@link ContainerCredentialsProvider} for more
+ *         information.
  *     </li>
  *     <li>
  *         If neither of the above environment variables are specified credentials are attempted to be loaded from Amazon EC2

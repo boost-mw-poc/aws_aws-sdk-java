@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A block of content for a message.
+ * A block of content for a message that you pass to, or receive from, a model with the Converse API (<a>Converse</a>
+ * and <a>ConverseStream</a>).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/ContentBlock" target="_top">AWS API
@@ -51,6 +52,19 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ToolResultBlock toolResult;
+    /**
+     * <p>
+     * Contains the content to assess with the guardrail. If you don't specify <code>guardContent</code> in a call to
+     * the Converse API, the guardrail (if passed in the Converse API) assesses the entire message.
+     * </p>
+     * <p>
+     * For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
+     */
+    private GuardrailConverseContentBlock guardContent;
 
     /**
      * <p>
@@ -197,6 +211,89 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains the content to assess with the guardrail. If you don't specify <code>guardContent</code> in a call to
+     * the Converse API, the guardrail (if passed in the Converse API) assesses the entire message.
+     * </p>
+     * <p>
+     * For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
+     * 
+     * @param guardContent
+     *        Contains the content to assess with the guardrail. If you don't specify <code>guardContent</code> in a
+     *        call to the Converse API, the guardrail (if passed in the Converse API) assesses the entire message.
+     *        </p>
+     *        <p>
+     *        For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User
+     *        Guide</i>.
+     * 
+     * <pre><code> &lt;/p&gt; </code>
+     */
+
+    public void setGuardContent(GuardrailConverseContentBlock guardContent) {
+        this.guardContent = guardContent;
+    }
+
+    /**
+     * <p>
+     * Contains the content to assess with the guardrail. If you don't specify <code>guardContent</code> in a call to
+     * the Converse API, the guardrail (if passed in the Converse API) assesses the entire message.
+     * </p>
+     * <p>
+     * For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
+     * 
+     * @return Contains the content to assess with the guardrail. If you don't specify <code>guardContent</code> in a
+     *         call to the Converse API, the guardrail (if passed in the Converse API) assesses the entire message.
+     *         </p>
+     *         <p>
+     *         For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User
+     *         Guide</i>.
+     * 
+     * <pre><code> &lt;/p&gt; </code>
+     */
+
+    public GuardrailConverseContentBlock getGuardContent() {
+        return this.guardContent;
+    }
+
+    /**
+     * <p>
+     * Contains the content to assess with the guardrail. If you don't specify <code>guardContent</code> in a call to
+     * the Converse API, the guardrail (if passed in the Converse API) assesses the entire message.
+     * </p>
+     * <p>
+     * For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
+     * 
+     * @param guardContent
+     *        Contains the content to assess with the guardrail. If you don't specify <code>guardContent</code> in a
+     *        call to the Converse API, the guardrail (if passed in the Converse API) assesses the entire message.
+     *        </p>
+     *        <p>
+     *        For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User
+     *        Guide</i>.
+     * 
+     *        <pre>
+     * <code> &lt;/p&gt; </code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContentBlock withGuardContent(GuardrailConverseContentBlock guardContent) {
+        setGuardContent(guardContent);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -213,7 +310,9 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
         if (getImage() != null)
             sb.append("Image: ").append(getImage()).append(",");
         if (getToolResult() != null)
-            sb.append("ToolResult: ").append(getToolResult());
+            sb.append("ToolResult: ").append(getToolResult()).append(",");
+        if (getGuardContent() != null)
+            sb.append("GuardContent: ").append(getGuardContent());
         sb.append("}");
         return sb.toString();
     }
@@ -240,6 +339,10 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getToolResult() != null && other.getToolResult().equals(this.getToolResult()) == false)
             return false;
+        if (other.getGuardContent() == null ^ this.getGuardContent() == null)
+            return false;
+        if (other.getGuardContent() != null && other.getGuardContent().equals(this.getGuardContent()) == false)
+            return false;
         return true;
     }
 
@@ -251,6 +354,7 @@ public class ContentBlock implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getText() == null) ? 0 : getText().hashCode());
         hashCode = prime * hashCode + ((getImage() == null) ? 0 : getImage().hashCode());
         hashCode = prime * hashCode + ((getToolResult() == null) ? 0 : getToolResult().hashCode());
+        hashCode = prime * hashCode + ((getGuardContent() == null) ? 0 : getGuardContent().hashCode());
         return hashCode;
     }
 

@@ -485,6 +485,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateMlflowTrackingServerResult> createMlflowTrackingServerAsync(CreateMlflowTrackingServerRequest request) {
+
+        return createMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMlflowTrackingServerResult> createMlflowTrackingServerAsync(CreateMlflowTrackingServerRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateMlflowTrackingServerRequest, CreateMlflowTrackingServerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateModelResult> createModelAsync(CreateModelRequest request) {
 
         return createModelAsync(request, null);
@@ -655,6 +668,21 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<CreatePresignedDomainUrlResult> createPresignedDomainUrlAsync(CreatePresignedDomainUrlRequest request,
             com.amazonaws.handlers.AsyncHandler<CreatePresignedDomainUrlRequest, CreatePresignedDomainUrlResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePresignedMlflowTrackingServerUrlResult> createPresignedMlflowTrackingServerUrlAsync(
+            CreatePresignedMlflowTrackingServerUrlRequest request) {
+
+        return createPresignedMlflowTrackingServerUrlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePresignedMlflowTrackingServerUrlResult> createPresignedMlflowTrackingServerUrlAsync(
+            CreatePresignedMlflowTrackingServerUrlRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePresignedMlflowTrackingServerUrlRequest, CreatePresignedMlflowTrackingServerUrlResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1177,6 +1205,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<DeleteInferenceExperimentResult> deleteInferenceExperimentAsync(DeleteInferenceExperimentRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteInferenceExperimentRequest, DeleteInferenceExperimentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMlflowTrackingServerResult> deleteMlflowTrackingServerAsync(DeleteMlflowTrackingServerRequest request) {
+
+        return deleteMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMlflowTrackingServerResult> deleteMlflowTrackingServerAsync(DeleteMlflowTrackingServerRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteMlflowTrackingServerRequest, DeleteMlflowTrackingServerResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1930,6 +1971,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<DescribeLineageGroupResult> describeLineageGroupAsync(DescribeLineageGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeLineageGroupRequest, DescribeLineageGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMlflowTrackingServerResult> describeMlflowTrackingServerAsync(DescribeMlflowTrackingServerRequest request) {
+
+        return describeMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMlflowTrackingServerResult> describeMlflowTrackingServerAsync(DescribeMlflowTrackingServerRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeMlflowTrackingServerRequest, DescribeMlflowTrackingServerResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2930,6 +2984,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListMlflowTrackingServersResult> listMlflowTrackingServersAsync(ListMlflowTrackingServersRequest request) {
+
+        return listMlflowTrackingServersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMlflowTrackingServersResult> listMlflowTrackingServersAsync(ListMlflowTrackingServersRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMlflowTrackingServersRequest, ListMlflowTrackingServersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListModelBiasJobDefinitionsResult> listModelBiasJobDefinitionsAsync(ListModelBiasJobDefinitionsRequest request) {
 
         return listModelBiasJobDefinitionsAsync(request, null);
@@ -3540,6 +3607,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<StartMlflowTrackingServerResult> startMlflowTrackingServerAsync(StartMlflowTrackingServerRequest request) {
+
+        return startMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartMlflowTrackingServerResult> startMlflowTrackingServerAsync(StartMlflowTrackingServerRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartMlflowTrackingServerRequest, StartMlflowTrackingServerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartMonitoringScheduleResult> startMonitoringScheduleAsync(StartMonitoringScheduleRequest request) {
 
         return startMonitoringScheduleAsync(request, null);
@@ -3680,6 +3760,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<StopLabelingJobResult> stopLabelingJobAsync(StopLabelingJobRequest request,
             com.amazonaws.handlers.AsyncHandler<StopLabelingJobRequest, StopLabelingJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopMlflowTrackingServerResult> stopMlflowTrackingServerAsync(StopMlflowTrackingServerRequest request) {
+
+        return stopMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopMlflowTrackingServerResult> stopMlflowTrackingServerAsync(StopMlflowTrackingServerRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopMlflowTrackingServerRequest, StopMlflowTrackingServerResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -4035,6 +4128,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<UpdateInferenceExperimentResult> updateInferenceExperimentAsync(UpdateInferenceExperimentRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateInferenceExperimentRequest, UpdateInferenceExperimentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMlflowTrackingServerResult> updateMlflowTrackingServerAsync(UpdateMlflowTrackingServerRequest request) {
+
+        return updateMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMlflowTrackingServerResult> updateMlflowTrackingServerAsync(UpdateMlflowTrackingServerRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateMlflowTrackingServerRequest, UpdateMlflowTrackingServerResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

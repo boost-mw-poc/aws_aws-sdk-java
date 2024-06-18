@@ -27,8 +27,9 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The prompt and inference parameters in the format specified in the <code>contentType</code> in the header. To see
-     * the format and content of the request and response bodies for different models, refer to <a
+     * The prompt and inference parameters in the format specified in the <code>contentType</code> in the header. You
+     * must provide the body in JSON format. To see the format and content of the request and response bodies for
+     * different models, refer to <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters</a>. For
      * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
      * inference</a> in the Bedrock User Guide.
@@ -37,7 +38,7 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.nio.ByteBuffer body;
     /**
      * <p>
-     * The MIME type of the input data in the request. The default value is <code>application/json</code>.
+     * The MIME type of the input data in the request. You must specify <code>application/json</code>.
      * </p>
      */
     private String contentType;
@@ -123,8 +124,9 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The prompt and inference parameters in the format specified in the <code>contentType</code> in the header. To see
-     * the format and content of the request and response bodies for different models, refer to <a
+     * The prompt and inference parameters in the format specified in the <code>contentType</code> in the header. You
+     * must provide the body in JSON format. To see the format and content of the request and response bodies for
+     * different models, refer to <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters</a>. For
      * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
      * inference</a> in the Bedrock User Guide.
@@ -142,7 +144,8 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param body
      *        The prompt and inference parameters in the format specified in the <code>contentType</code> in the header.
-     *        To see the format and content of the request and response bodies for different models, refer to <a
+     *        You must provide the body in JSON format. To see the format and content of the request and response bodies
+     *        for different models, refer to <a
      *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference
      *        parameters</a>. For more information, see <a
      *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run inference</a> in the
@@ -155,8 +158,9 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The prompt and inference parameters in the format specified in the <code>contentType</code> in the header. To see
-     * the format and content of the request and response bodies for different models, refer to <a
+     * The prompt and inference parameters in the format specified in the <code>contentType</code> in the header. You
+     * must provide the body in JSON format. To see the format and content of the request and response bodies for
+     * different models, refer to <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters</a>. For
      * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
      * inference</a> in the Bedrock User Guide.
@@ -170,8 +174,9 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return The prompt and inference parameters in the format specified in the <code>contentType</code> in the
-     *         header. To see the format and content of the request and response bodies for different models, refer to
-     *         <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference
+     *         header. You must provide the body in JSON format. To see the format and content of the request and
+     *         response bodies for different models, refer to <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference
      *         parameters</a>. For more information, see <a
      *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run inference</a> in the
      *         Bedrock User Guide.
@@ -183,8 +188,9 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The prompt and inference parameters in the format specified in the <code>contentType</code> in the header. To see
-     * the format and content of the request and response bodies for different models, refer to <a
+     * The prompt and inference parameters in the format specified in the <code>contentType</code> in the header. You
+     * must provide the body in JSON format. To see the format and content of the request and response bodies for
+     * different models, refer to <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters</a>. For
      * more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
      * inference</a> in the Bedrock User Guide.
@@ -202,7 +208,8 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param body
      *        The prompt and inference parameters in the format specified in the <code>contentType</code> in the header.
-     *        To see the format and content of the request and response bodies for different models, refer to <a
+     *        You must provide the body in JSON format. To see the format and content of the request and response bodies
+     *        for different models, refer to <a
      *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference
      *        parameters</a>. For more information, see <a
      *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run inference</a> in the
@@ -217,11 +224,11 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The MIME type of the input data in the request. The default value is <code>application/json</code>.
+     * The MIME type of the input data in the request. You must specify <code>application/json</code>.
      * </p>
      * 
      * @param contentType
-     *        The MIME type of the input data in the request. The default value is <code>application/json</code>.
+     *        The MIME type of the input data in the request. You must specify <code>application/json</code>.
      */
 
     public void setContentType(String contentType) {
@@ -230,10 +237,10 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The MIME type of the input data in the request. The default value is <code>application/json</code>.
+     * The MIME type of the input data in the request. You must specify <code>application/json</code>.
      * </p>
      * 
-     * @return The MIME type of the input data in the request. The default value is <code>application/json</code>.
+     * @return The MIME type of the input data in the request. You must specify <code>application/json</code>.
      */
 
     public String getContentType() {
@@ -242,11 +249,11 @@ public class InvokeModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The MIME type of the input data in the request. The default value is <code>application/json</code>.
+     * The MIME type of the input data in the request. You must specify <code>application/json</code>.
      * </p>
      * 
      * @param contentType
-     *        The MIME type of the input data in the request. The default value is <code>application/json</code>.
+     *        The MIME type of the input data in the request. You must specify <code>application/json</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

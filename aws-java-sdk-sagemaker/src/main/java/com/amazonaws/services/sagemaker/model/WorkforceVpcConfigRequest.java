@@ -36,8 +36,8 @@ public class WorkforceVpcConfigRequest implements Serializable, Cloneable, Struc
     private String vpcId;
     /**
      * <p>
-     * The VPC security group IDs, in the form sg-xxxxxxxx. The security groups must be for the same VPC as specified in
-     * the subnet.
+     * The VPC security group IDs, in the form <code>sg-xxxxxxxx</code>. The security groups must be for the same VPC as
+     * specified in the subnet.
      * </p>
      */
     private java.util.List<String> securityGroupIds;
@@ -90,12 +90,12 @@ public class WorkforceVpcConfigRequest implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The VPC security group IDs, in the form sg-xxxxxxxx. The security groups must be for the same VPC as specified in
-     * the subnet.
+     * The VPC security group IDs, in the form <code>sg-xxxxxxxx</code>. The security groups must be for the same VPC as
+     * specified in the subnet.
      * </p>
      * 
-     * @return The VPC security group IDs, in the form sg-xxxxxxxx. The security groups must be for the same VPC as
-     *         specified in the subnet.
+     * @return The VPC security group IDs, in the form <code>sg-xxxxxxxx</code>. The security groups must be for the
+     *         same VPC as specified in the subnet.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -104,13 +104,13 @@ public class WorkforceVpcConfigRequest implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The VPC security group IDs, in the form sg-xxxxxxxx. The security groups must be for the same VPC as specified in
-     * the subnet.
+     * The VPC security group IDs, in the form <code>sg-xxxxxxxx</code>. The security groups must be for the same VPC as
+     * specified in the subnet.
      * </p>
      * 
      * @param securityGroupIds
-     *        The VPC security group IDs, in the form sg-xxxxxxxx. The security groups must be for the same VPC as
-     *        specified in the subnet.
+     *        The VPC security group IDs, in the form <code>sg-xxxxxxxx</code>. The security groups must be for the same
+     *        VPC as specified in the subnet.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -124,8 +124,8 @@ public class WorkforceVpcConfigRequest implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The VPC security group IDs, in the form sg-xxxxxxxx. The security groups must be for the same VPC as specified in
-     * the subnet.
+     * The VPC security group IDs, in the form <code>sg-xxxxxxxx</code>. The security groups must be for the same VPC as
+     * specified in the subnet.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -134,8 +134,8 @@ public class WorkforceVpcConfigRequest implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param securityGroupIds
-     *        The VPC security group IDs, in the form sg-xxxxxxxx. The security groups must be for the same VPC as
-     *        specified in the subnet.
+     *        The VPC security group IDs, in the form <code>sg-xxxxxxxx</code>. The security groups must be for the same
+     *        VPC as specified in the subnet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -151,13 +151,13 @@ public class WorkforceVpcConfigRequest implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The VPC security group IDs, in the form sg-xxxxxxxx. The security groups must be for the same VPC as specified in
-     * the subnet.
+     * The VPC security group IDs, in the form <code>sg-xxxxxxxx</code>. The security groups must be for the same VPC as
+     * specified in the subnet.
      * </p>
      * 
      * @param securityGroupIds
-     *        The VPC security group IDs, in the form sg-xxxxxxxx. The security groups must be for the same VPC as
-     *        specified in the subnet.
+     *        The VPC security group IDs, in the form <code>sg-xxxxxxxx</code>. The security groups must be for the same
+     *        VPC as specified in the subnet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

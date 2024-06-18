@@ -2747,6 +2747,69 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Creates an MLflow Tracking Server using a general purpose Amazon S3 bucket as the artifact store. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-create-tracking-server.html">Create an MLflow
+     * Tracking Server</a>.
+     * </p>
+     * 
+     * @param createMlflowTrackingServerRequest
+     * @return Result of the CreateMlflowTrackingServer operation returned by the service.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateMlflowTrackingServerResult createMlflowTrackingServer(CreateMlflowTrackingServerRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateMlflowTrackingServer(request);
+    }
+
+    @SdkInternalApi
+    final CreateMlflowTrackingServerResult executeCreateMlflowTrackingServer(CreateMlflowTrackingServerRequest createMlflowTrackingServerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createMlflowTrackingServerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateMlflowTrackingServerRequest> request = null;
+        Response<CreateMlflowTrackingServerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateMlflowTrackingServerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createMlflowTrackingServerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateMlflowTrackingServer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateMlflowTrackingServerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateMlflowTrackingServerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a model in SageMaker. In the request, you name the model and describe a primary container. For the
      * primary container, you specify the Docker image that contains inference code, artifacts (from prior training),
      * and a custom environment map that the inference code uses when you deploy the model for predictions.
@@ -3674,6 +3737,68 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
             HttpResponseHandler<AmazonWebServiceResponse<CreatePresignedDomainUrlResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new CreatePresignedDomainUrlResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a presigned URL that you can use to connect to the MLflow UI attached to your tracking server. For more
+     * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-launch-ui.html">Launch the
+     * MLflow UI using a presigned URL</a>.
+     * </p>
+     * 
+     * @param createPresignedMlflowTrackingServerUrlRequest
+     * @return Result of the CreatePresignedMlflowTrackingServerUrl operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.CreatePresignedMlflowTrackingServerUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreatePresignedMlflowTrackingServerUrl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreatePresignedMlflowTrackingServerUrlResult createPresignedMlflowTrackingServerUrl(CreatePresignedMlflowTrackingServerUrlRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreatePresignedMlflowTrackingServerUrl(request);
+    }
+
+    @SdkInternalApi
+    final CreatePresignedMlflowTrackingServerUrlResult executeCreatePresignedMlflowTrackingServerUrl(
+            CreatePresignedMlflowTrackingServerUrlRequest createPresignedMlflowTrackingServerUrlRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createPresignedMlflowTrackingServerUrlRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreatePresignedMlflowTrackingServerUrlRequest> request = null;
+        Response<CreatePresignedMlflowTrackingServerUrlResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreatePresignedMlflowTrackingServerUrlRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createPresignedMlflowTrackingServerUrlRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreatePresignedMlflowTrackingServerUrl");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreatePresignedMlflowTrackingServerUrlResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreatePresignedMlflowTrackingServerUrlResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -6301,6 +6426,66 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Deletes an MLflow Tracking Server. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow-cleanup.html.html">Clean up MLflow resources</a>.
+     * </p>
+     * 
+     * @param deleteMlflowTrackingServerRequest
+     * @return Result of the DeleteMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DeleteMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteMlflowTrackingServerResult deleteMlflowTrackingServer(DeleteMlflowTrackingServerRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteMlflowTrackingServer(request);
+    }
+
+    @SdkInternalApi
+    final DeleteMlflowTrackingServerResult executeDeleteMlflowTrackingServer(DeleteMlflowTrackingServerRequest deleteMlflowTrackingServerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteMlflowTrackingServerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteMlflowTrackingServerRequest> request = null;
+        Response<DeleteMlflowTrackingServerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteMlflowTrackingServerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteMlflowTrackingServerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteMlflowTrackingServer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteMlflowTrackingServerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteMlflowTrackingServerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a model. The <code>DeleteModel</code> API deletes only the model entry that was created in SageMaker when
      * you called the <code>CreateModel</code> API. It does not delete model artifacts, inference code, or the IAM role
      * that you specified when creating the model.
@@ -7460,7 +7645,7 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * If a private workforce contains one or more work teams, you must use the <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteWorkteam.html">DeleteWorkteam</a>
      * operation to delete all work teams before you delete the workforce. If you try to delete a workforce that
-     * contains one or more work teams, you will recieve a <code>ResourceInUse</code> error.
+     * contains one or more work teams, you will receive a <code>ResourceInUse</code> error.
      * </p>
      * </important>
      * 
@@ -9670,6 +9855,65 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Returns information about an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param describeMlflowTrackingServerRequest
+     * @return Result of the DescribeMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeMlflowTrackingServerResult describeMlflowTrackingServer(DescribeMlflowTrackingServerRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeMlflowTrackingServer(request);
+    }
+
+    @SdkInternalApi
+    final DescribeMlflowTrackingServerResult executeDescribeMlflowTrackingServer(DescribeMlflowTrackingServerRequest describeMlflowTrackingServerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeMlflowTrackingServerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeMlflowTrackingServerRequest> request = null;
+        Response<DescribeMlflowTrackingServerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeMlflowTrackingServerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeMlflowTrackingServerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeMlflowTrackingServer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeMlflowTrackingServerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeMlflowTrackingServerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes a model that you created using the <code>CreateModel</code> API.
      * </p>
      * 
@@ -11145,7 +11389,7 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Gets information about a specific work team. You can see information such as the create date, the last updated
+     * Gets information about a specific work team. You can see information such as the creation date, the last updated
      * date, membership information, and the work team's Amazon Resource Name (ARN).
      * </p>
      * 
@@ -14029,6 +14273,63 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Lists all MLflow Tracking Servers.
+     * </p>
+     * 
+     * @param listMlflowTrackingServersRequest
+     * @return Result of the ListMlflowTrackingServers operation returned by the service.
+     * @sample AmazonSageMaker.ListMlflowTrackingServers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListMlflowTrackingServers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListMlflowTrackingServersResult listMlflowTrackingServers(ListMlflowTrackingServersRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMlflowTrackingServers(request);
+    }
+
+    @SdkInternalApi
+    final ListMlflowTrackingServersResult executeListMlflowTrackingServers(ListMlflowTrackingServersRequest listMlflowTrackingServersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMlflowTrackingServersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMlflowTrackingServersRequest> request = null;
+        Response<ListMlflowTrackingServersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMlflowTrackingServersRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listMlflowTrackingServersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMlflowTrackingServers");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListMlflowTrackingServersResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListMlflowTrackingServersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists model bias jobs definitions that satisfy various filters.
      * </p>
      * 
@@ -16741,6 +17042,68 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Programmatically start an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param startMlflowTrackingServerRequest
+     * @return Result of the StartMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ConflictException
+     *         There was a conflict when you attempted to modify a SageMaker entity such as an <code>Experiment</code>
+     *         or <code>Artifact</code>.
+     * @sample AmazonSageMaker.StartMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartMlflowTrackingServerResult startMlflowTrackingServer(StartMlflowTrackingServerRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartMlflowTrackingServer(request);
+    }
+
+    @SdkInternalApi
+    final StartMlflowTrackingServerResult executeStartMlflowTrackingServer(StartMlflowTrackingServerRequest startMlflowTrackingServerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startMlflowTrackingServerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartMlflowTrackingServerRequest> request = null;
+        Response<StartMlflowTrackingServerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartMlflowTrackingServerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startMlflowTrackingServerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartMlflowTrackingServer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartMlflowTrackingServerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartMlflowTrackingServerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Starts a previously stopped monitoring schedule.
      * </p>
      * <note>
@@ -17398,6 +17761,68 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<StopLabelingJobResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopLabelingJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Programmatically stop an MLflow Tracking Server.
+     * </p>
+     * 
+     * @param stopMlflowTrackingServerRequest
+     * @return Result of the StopMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ConflictException
+     *         There was a conflict when you attempted to modify a SageMaker entity such as an <code>Experiment</code>
+     *         or <code>Artifact</code>.
+     * @sample AmazonSageMaker.StopMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StopMlflowTrackingServerResult stopMlflowTrackingServer(StopMlflowTrackingServerRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopMlflowTrackingServer(request);
+    }
+
+    @SdkInternalApi
+    final StopMlflowTrackingServerResult executeStopMlflowTrackingServer(StopMlflowTrackingServerRequest stopMlflowTrackingServerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopMlflowTrackingServerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopMlflowTrackingServerRequest> request = null;
+        Response<StopMlflowTrackingServerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopMlflowTrackingServerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(stopMlflowTrackingServerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopMlflowTrackingServer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopMlflowTrackingServerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StopMlflowTrackingServerResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -19091,6 +19516,71 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
             HttpResponseHandler<AmazonWebServiceResponse<UpdateInferenceExperimentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateInferenceExperimentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates properties of an existing MLflow Tracking Server.
+     * </p>
+     * 
+     * @param updateMlflowTrackingServerRequest
+     * @return Result of the UpdateMlflowTrackingServer operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @throws ConflictException
+     *         There was a conflict when you attempted to modify a SageMaker entity such as an <code>Experiment</code>
+     *         or <code>Artifact</code>.
+     * @sample AmazonSageMaker.UpdateMlflowTrackingServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateMlflowTrackingServer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateMlflowTrackingServerResult updateMlflowTrackingServer(UpdateMlflowTrackingServerRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateMlflowTrackingServer(request);
+    }
+
+    @SdkInternalApi
+    final UpdateMlflowTrackingServerResult executeUpdateMlflowTrackingServer(UpdateMlflowTrackingServerRequest updateMlflowTrackingServerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateMlflowTrackingServerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateMlflowTrackingServerRequest> request = null;
+        Response<UpdateMlflowTrackingServerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateMlflowTrackingServerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateMlflowTrackingServerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateMlflowTrackingServer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateMlflowTrackingServerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateMlflowTrackingServerResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

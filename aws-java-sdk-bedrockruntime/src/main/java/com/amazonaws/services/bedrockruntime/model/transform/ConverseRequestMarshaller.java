@@ -38,6 +38,8 @@ public class ConverseRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferenceConfig").build();
     private static final MarshallingInfo<StructuredPojo> TOOLCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("toolConfig").build();
+    private static final MarshallingInfo<StructuredPojo> GUARDRAILCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("guardrailConfig").build();
     private static final MarshallingInfo<List> ADDITIONALMODELRESPONSEFIELDPATHS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("additionalModelResponseFieldPaths").build();
 
@@ -62,6 +64,7 @@ public class ConverseRequestMarshaller {
             protocolMarshaller.marshall(converseRequest.getSystem(), SYSTEM_BINDING);
             protocolMarshaller.marshall(converseRequest.getInferenceConfig(), INFERENCECONFIG_BINDING);
             protocolMarshaller.marshall(converseRequest.getToolConfig(), TOOLCONFIG_BINDING);
+            protocolMarshaller.marshall(converseRequest.getGuardrailConfig(), GUARDRAILCONFIG_BINDING);
             protocolMarshaller.marshall(converseRequest.getAdditionalModelResponseFieldPaths(), ADDITIONALMODELRESPONSEFIELDPATHS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

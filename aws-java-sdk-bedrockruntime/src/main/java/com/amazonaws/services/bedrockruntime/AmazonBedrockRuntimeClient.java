@@ -82,29 +82,29 @@ public class AmazonBedrockRuntimeClient extends AmazonWebServiceClient implement
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ModelTimeoutException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.bedrockruntime.model.transform.ModelTimeoutExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.bedrockruntime.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.bedrockruntime.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ModelErrorException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.ModelErrorExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ModelTimeoutException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.bedrockruntime.model.transform.ModelTimeoutExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ModelNotReadyException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.ModelNotReadyExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.bedrockruntime.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.bedrockruntime.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.bedrockruntime.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.bedrockruntime.model.AmazonBedrockRuntimeException.class));
 
     public static AmazonBedrockRuntimeClientBuilder builder() {
@@ -157,9 +157,15 @@ public class AmazonBedrockRuntimeClient extends AmazonWebServiceClient implement
      * <p>
      * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
      * works with all models that support messages. This allows you to write code once and use it with different models.
-     * Should a model have unique inference parameters, you can also pass those unique parameters to the model. For more
-     * information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
-     * inference</a> in the Bedrock User Guide.
+     * Should a model have unique inference parameters, you can also pass those unique parameters to the model.
+     * </p>
+     * <p>
+     * For information about the Converse API, see <i>Use the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
+     * To use a guardrail, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>. To
+     * use a tool with a model, see <i>Tool use (Function calling)</i> in the <i>Amazon Bedrock User Guide</i>
+     * </p>
+     * <p>
+     * For example code, see <i>Converse API examples</i> in the <i>Amazon Bedrock User Guide</i>.
      * </p>
      * <p>
      * This operation requires permission for the <code>bedrock:InvokeModel</code> action.

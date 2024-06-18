@@ -204,6 +204,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public CreateMlflowTrackingServerResult createMlflowTrackingServer(CreateMlflowTrackingServerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateModelResult createModel(CreateModelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -265,6 +270,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public CreatePresignedDomainUrlResult createPresignedDomainUrl(CreatePresignedDomainUrlRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreatePresignedMlflowTrackingServerUrlResult createPresignedMlflowTrackingServerUrl(CreatePresignedMlflowTrackingServerUrlRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -465,6 +475,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public DeleteInferenceExperimentResult deleteInferenceExperiment(DeleteInferenceExperimentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteMlflowTrackingServerResult deleteMlflowTrackingServer(DeleteMlflowTrackingServerRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -750,6 +765,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public DescribeLineageGroupResult describeLineageGroup(DescribeLineageGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeMlflowTrackingServerResult describeMlflowTrackingServer(DescribeMlflowTrackingServerRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1129,6 +1149,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public ListMlflowTrackingServersResult listMlflowTrackingServers(ListMlflowTrackingServersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListModelBiasJobDefinitionsResult listModelBiasJobDefinitions(ListModelBiasJobDefinitionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1359,6 +1384,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public StartMlflowTrackingServerResult startMlflowTrackingServer(StartMlflowTrackingServerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartMonitoringScheduleResult startMonitoringSchedule(StartMonitoringScheduleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1410,6 +1440,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public StopLabelingJobResult stopLabelingJob(StopLabelingJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopMlflowTrackingServerResult stopMlflowTrackingServer(StopMlflowTrackingServerRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1545,6 +1580,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public UpdateInferenceExperimentResult updateInferenceExperiment(UpdateInferenceExperimentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateMlflowTrackingServerResult updateMlflowTrackingServer(UpdateMlflowTrackingServerRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

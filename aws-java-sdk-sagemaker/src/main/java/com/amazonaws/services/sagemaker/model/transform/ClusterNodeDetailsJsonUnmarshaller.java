@@ -76,6 +76,13 @@ public class ClusterNodeDetailsJsonUnmarshaller implements Unmarshaller<ClusterN
                     context.nextToken();
                     clusterNodeDetails.setThreadsPerCore(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("InstanceStorageConfigs", targetDepth)) {
+                    context.nextToken();
+                    clusterNodeDetails.setInstanceStorageConfigs(new ListUnmarshaller<ClusterInstanceStorageConfig>(
+                            ClusterInstanceStorageConfigJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("PrivatePrimaryIp", targetDepth)) {
                     context.nextToken();
                     clusterNodeDetails.setPrivatePrimaryIp(context.getUnmarshaller(String.class).unmarshall(context));

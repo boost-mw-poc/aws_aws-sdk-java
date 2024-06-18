@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Model automatically decides if a tool should be called or to whether to generate text instead.
+ * The Model automatically decides if a tool should be called or whether to generate text instead. For example,
+ * <code>{"auto" : {}}</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/AutoToolChoice" target="_top">AWS API

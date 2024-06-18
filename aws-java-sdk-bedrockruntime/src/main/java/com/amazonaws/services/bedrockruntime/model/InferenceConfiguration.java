@@ -43,15 +43,7 @@ public class InferenceConfiguration implements Serializable, Cloneable, Structur
      * The maximum number of tokens to allow in the generated response. The default value is the maximum allowed value
      * for the model that you are using. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for
-     * foundatio{ "messages": [ { "role": "user", "content": [ { "text":
-     * "what's the weather in Queens, NY and Austin, TX?" } ] }, { "role": "assistant", "content": [ { "toolUse": {
-     * "toolUseId": "1", "name": "get_weather", "input": { "city": "Queens", "state": "NY" } } }, { "toolUse": {
-     * "toolUseId": "2", "name": "get_weather", "input": { "city": "Austin", "state": "TX" } } } ] }, { "role": "user",
-     * "content": [ { "toolResult": { "toolUseId": "2", "content": [ { "json": { "weather": "40" } } ] } }, { "text":
-     * "..." }, { "toolResult": { "toolUseId": "1", "content": [ { "text": "result text" } ] } } ] } ], "toolConfig": {
-     * "tools": [ { "name": "get_weather", "description": "Get weather", "inputSchema": { "type": "object",
-     * "properties": { "city": { "type": "string", "description": "City of location" }, "state": { "type": "string",
-     * "description": "State of location" } }, "required": ["city", "state"] } } ] } } n models</a>.
+     * foundation models</a>.
      * </p>
      */
     private Integer maxTokens;
@@ -94,31 +86,14 @@ public class InferenceConfiguration implements Serializable, Cloneable, Structur
      * The maximum number of tokens to allow in the generated response. The default value is the maximum allowed value
      * for the model that you are using. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for
-     * foundatio{ "messages": [ { "role": "user", "content": [ { "text":
-     * "what's the weather in Queens, NY and Austin, TX?" } ] }, { "role": "assistant", "content": [ { "toolUse": {
-     * "toolUseId": "1", "name": "get_weather", "input": { "city": "Queens", "state": "NY" } } }, { "toolUse": {
-     * "toolUseId": "2", "name": "get_weather", "input": { "city": "Austin", "state": "TX" } } } ] }, { "role": "user",
-     * "content": [ { "toolResult": { "toolUseId": "2", "content": [ { "json": { "weather": "40" } } ] } }, { "text":
-     * "..." }, { "toolResult": { "toolUseId": "1", "content": [ { "text": "result text" } ] } } ] } ], "toolConfig": {
-     * "tools": [ { "name": "get_weather", "description": "Get weather", "inputSchema": { "type": "object",
-     * "properties": { "city": { "type": "string", "description": "City of location" }, "state": { "type": "string",
-     * "description": "State of location" } }, "required": ["city", "state"] } } ] } } n models</a>.
+     * foundation models</a>.
      * </p>
      * 
      * @param maxTokens
      *        The maximum number of tokens to allow in the generated response. The default value is the maximum allowed
      *        value for the model that you are using. For more information, see <a
      *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for
-     *        foundatio{ "messages": [ { "role": "user", "content": [ { "text":
-     *        "what's the weather in Queens, NY and Austin, TX?" } ] }, { "role": "assistant", "content": [ { "toolUse":
-     *        { "toolUseId": "1", "name": "get_weather", "input": { "city": "Queens", "state": "NY" } } }, { "toolUse":
-     *        { "toolUseId": "2", "name": "get_weather", "input": { "city": "Austin", "state": "TX" } } } ] }, { "role":
-     *        "user", "content": [ { "toolResult": { "toolUseId": "2", "content": [ { "json": { "weather": "40" } } ] }
-     *        }, { "text": "..." }, { "toolResult": { "toolUseId": "1", "content": [ { "text": "result text" } ] } } ] }
-     *        ], "toolConfig": { "tools": [ { "name": "get_weather", "description": "Get weather", "inputSchema": {
-     *        "type": "object", "properties": { "city": { "type": "string", "description": "City of location" },
-     *        "state": { "type": "string", "description": "State of location" } }, "required": ["city", "state"] } } ] }
-     *        } n models</a>.
+     *        foundation models</a>.
      */
 
     public void setMaxTokens(Integer maxTokens) {
@@ -130,30 +105,13 @@ public class InferenceConfiguration implements Serializable, Cloneable, Structur
      * The maximum number of tokens to allow in the generated response. The default value is the maximum allowed value
      * for the model that you are using. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for
-     * foundatio{ "messages": [ { "role": "user", "content": [ { "text":
-     * "what's the weather in Queens, NY and Austin, TX?" } ] }, { "role": "assistant", "content": [ { "toolUse": {
-     * "toolUseId": "1", "name": "get_weather", "input": { "city": "Queens", "state": "NY" } } }, { "toolUse": {
-     * "toolUseId": "2", "name": "get_weather", "input": { "city": "Austin", "state": "TX" } } } ] }, { "role": "user",
-     * "content": [ { "toolResult": { "toolUseId": "2", "content": [ { "json": { "weather": "40" } } ] } }, { "text":
-     * "..." }, { "toolResult": { "toolUseId": "1", "content": [ { "text": "result text" } ] } } ] } ], "toolConfig": {
-     * "tools": [ { "name": "get_weather", "description": "Get weather", "inputSchema": { "type": "object",
-     * "properties": { "city": { "type": "string", "description": "City of location" }, "state": { "type": "string",
-     * "description": "State of location" } }, "required": ["city", "state"] } } ] } } n models</a>.
+     * foundation models</a>.
      * </p>
      * 
      * @return The maximum number of tokens to allow in the generated response. The default value is the maximum allowed
      *         value for the model that you are using. For more information, see <a
      *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters
-     *         for foundatio{ "messages": [ { "role": "user", "content": [ { "text":
-     *         "what's the weather in Queens, NY and Austin, TX?" } ] }, { "role": "assistant", "content": [ {
-     *         "toolUse": { "toolUseId": "1", "name": "get_weather", "input": { "city": "Queens", "state": "NY" } } }, {
-     *         "toolUse": { "toolUseId": "2", "name": "get_weather", "input": { "city": "Austin", "state": "TX" } } } ]
-     *         }, { "role": "user", "content": [ { "toolResult": { "toolUseId": "2", "content": [ { "json": { "weather":
-     *         "40" } } ] } }, { "text": "..." }, { "toolResult": { "toolUseId": "1", "content": [ { "text":
-     *         "result text" } ] } } ] } ], "toolConfig": { "tools": [ { "name": "get_weather", "description":
-     *         "Get weather", "inputSchema": { "type": "object", "properties": { "city": { "type": "string",
-     *         "description": "City of location" }, "state": { "type": "string", "description": "State of location" } },
-     *         "required": ["city", "state"] } } ] } } n models</a>.
+     *         for foundation models</a>.
      */
 
     public Integer getMaxTokens() {
@@ -165,31 +123,14 @@ public class InferenceConfiguration implements Serializable, Cloneable, Structur
      * The maximum number of tokens to allow in the generated response. The default value is the maximum allowed value
      * for the model that you are using. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for
-     * foundatio{ "messages": [ { "role": "user", "content": [ { "text":
-     * "what's the weather in Queens, NY and Austin, TX?" } ] }, { "role": "assistant", "content": [ { "toolUse": {
-     * "toolUseId": "1", "name": "get_weather", "input": { "city": "Queens", "state": "NY" } } }, { "toolUse": {
-     * "toolUseId": "2", "name": "get_weather", "input": { "city": "Austin", "state": "TX" } } } ] }, { "role": "user",
-     * "content": [ { "toolResult": { "toolUseId": "2", "content": [ { "json": { "weather": "40" } } ] } }, { "text":
-     * "..." }, { "toolResult": { "toolUseId": "1", "content": [ { "text": "result text" } ] } } ] } ], "toolConfig": {
-     * "tools": [ { "name": "get_weather", "description": "Get weather", "inputSchema": { "type": "object",
-     * "properties": { "city": { "type": "string", "description": "City of location" }, "state": { "type": "string",
-     * "description": "State of location" } }, "required": ["city", "state"] } } ] } } n models</a>.
+     * foundation models</a>.
      * </p>
      * 
      * @param maxTokens
      *        The maximum number of tokens to allow in the generated response. The default value is the maximum allowed
      *        value for the model that you are using. For more information, see <a
      *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for
-     *        foundatio{ "messages": [ { "role": "user", "content": [ { "text":
-     *        "what's the weather in Queens, NY and Austin, TX?" } ] }, { "role": "assistant", "content": [ { "toolUse":
-     *        { "toolUseId": "1", "name": "get_weather", "input": { "city": "Queens", "state": "NY" } } }, { "toolUse":
-     *        { "toolUseId": "2", "name": "get_weather", "input": { "city": "Austin", "state": "TX" } } } ] }, { "role":
-     *        "user", "content": [ { "toolResult": { "toolUseId": "2", "content": [ { "json": { "weather": "40" } } ] }
-     *        }, { "text": "..." }, { "toolResult": { "toolUseId": "1", "content": [ { "text": "result text" } ] } } ] }
-     *        ], "toolConfig": { "tools": [ { "name": "get_weather", "description": "Get weather", "inputSchema": {
-     *        "type": "object", "properties": { "city": { "type": "string", "description": "City of location" },
-     *        "state": { "type": "string", "description": "State of location" } }, "required": ["city", "state"] } } ] }
-     *        } n models</a>.
+     *        foundation models</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

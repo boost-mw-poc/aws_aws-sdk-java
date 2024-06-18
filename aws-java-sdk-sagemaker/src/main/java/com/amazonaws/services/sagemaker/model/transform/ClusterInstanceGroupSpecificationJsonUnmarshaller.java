@@ -72,6 +72,13 @@ public class ClusterInstanceGroupSpecificationJsonUnmarshaller implements Unmars
                     context.nextToken();
                     clusterInstanceGroupSpecification.setThreadsPerCore(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("InstanceStorageConfigs", targetDepth)) {
+                    context.nextToken();
+                    clusterInstanceGroupSpecification.setInstanceStorageConfigs(new ListUnmarshaller<ClusterInstanceStorageConfig>(
+                            ClusterInstanceStorageConfigJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

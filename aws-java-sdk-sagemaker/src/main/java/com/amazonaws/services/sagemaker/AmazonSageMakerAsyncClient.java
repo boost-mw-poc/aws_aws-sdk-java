@@ -1249,6 +1249,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateMlflowTrackingServerResult> createMlflowTrackingServerAsync(CreateMlflowTrackingServerRequest request) {
+
+        return createMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMlflowTrackingServerResult> createMlflowTrackingServerAsync(final CreateMlflowTrackingServerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateMlflowTrackingServerRequest, CreateMlflowTrackingServerResult> asyncHandler) {
+        final CreateMlflowTrackingServerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateMlflowTrackingServerResult>() {
+            @Override
+            public CreateMlflowTrackingServerResult call() throws Exception {
+                CreateMlflowTrackingServerResult result = null;
+
+                try {
+                    result = executeCreateMlflowTrackingServer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateModelResult> createModelAsync(CreateModelRequest request) {
 
         return createModelAsync(request, null);
@@ -1668,6 +1701,41 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeCreatePresignedDomainUrl(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePresignedMlflowTrackingServerUrlResult> createPresignedMlflowTrackingServerUrlAsync(
+            CreatePresignedMlflowTrackingServerUrlRequest request) {
+
+        return createPresignedMlflowTrackingServerUrlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePresignedMlflowTrackingServerUrlResult> createPresignedMlflowTrackingServerUrlAsync(
+            final CreatePresignedMlflowTrackingServerUrlRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePresignedMlflowTrackingServerUrlRequest, CreatePresignedMlflowTrackingServerUrlResult> asyncHandler) {
+        final CreatePresignedMlflowTrackingServerUrlRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePresignedMlflowTrackingServerUrlResult>() {
+            @Override
+            public CreatePresignedMlflowTrackingServerUrlResult call() throws Exception {
+                CreatePresignedMlflowTrackingServerUrlResult result = null;
+
+                try {
+                    result = executeCreatePresignedMlflowTrackingServerUrl(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2992,6 +3060,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeDeleteInferenceExperiment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMlflowTrackingServerResult> deleteMlflowTrackingServerAsync(DeleteMlflowTrackingServerRequest request) {
+
+        return deleteMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMlflowTrackingServerResult> deleteMlflowTrackingServerAsync(final DeleteMlflowTrackingServerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteMlflowTrackingServerRequest, DeleteMlflowTrackingServerResult> asyncHandler) {
+        final DeleteMlflowTrackingServerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteMlflowTrackingServerResult>() {
+            @Override
+            public DeleteMlflowTrackingServerResult call() throws Exception {
+                DeleteMlflowTrackingServerResult result = null;
+
+                try {
+                    result = executeDeleteMlflowTrackingServer(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -4886,6 +4987,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeDescribeLineageGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMlflowTrackingServerResult> describeMlflowTrackingServerAsync(DescribeMlflowTrackingServerRequest request) {
+
+        return describeMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMlflowTrackingServerResult> describeMlflowTrackingServerAsync(final DescribeMlflowTrackingServerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeMlflowTrackingServerRequest, DescribeMlflowTrackingServerResult> asyncHandler) {
+        final DescribeMlflowTrackingServerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeMlflowTrackingServerResult>() {
+            @Override
+            public DescribeMlflowTrackingServerResult call() throws Exception {
+                DescribeMlflowTrackingServerResult result = null;
+
+                try {
+                    result = executeDescribeMlflowTrackingServer(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -7400,6 +7534,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListMlflowTrackingServersResult> listMlflowTrackingServersAsync(ListMlflowTrackingServersRequest request) {
+
+        return listMlflowTrackingServersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMlflowTrackingServersResult> listMlflowTrackingServersAsync(final ListMlflowTrackingServersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMlflowTrackingServersRequest, ListMlflowTrackingServersResult> asyncHandler) {
+        final ListMlflowTrackingServersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMlflowTrackingServersResult>() {
+            @Override
+            public ListMlflowTrackingServersResult call() throws Exception {
+                ListMlflowTrackingServersResult result = null;
+
+                try {
+                    result = executeListMlflowTrackingServers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListModelBiasJobDefinitionsResult> listModelBiasJobDefinitionsAsync(ListModelBiasJobDefinitionsRequest request) {
 
         return listModelBiasJobDefinitionsAsync(request, null);
@@ -8931,6 +9098,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<StartMlflowTrackingServerResult> startMlflowTrackingServerAsync(StartMlflowTrackingServerRequest request) {
+
+        return startMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartMlflowTrackingServerResult> startMlflowTrackingServerAsync(final StartMlflowTrackingServerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartMlflowTrackingServerRequest, StartMlflowTrackingServerResult> asyncHandler) {
+        final StartMlflowTrackingServerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartMlflowTrackingServerResult>() {
+            @Override
+            public StartMlflowTrackingServerResult call() throws Exception {
+                StartMlflowTrackingServerResult result = null;
+
+                try {
+                    result = executeStartMlflowTrackingServer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartMonitoringScheduleResult> startMonitoringScheduleAsync(StartMonitoringScheduleRequest request) {
 
         return startMonitoringScheduleAsync(request, null);
@@ -9280,6 +9480,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeStopLabelingJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopMlflowTrackingServerResult> stopMlflowTrackingServerAsync(StopMlflowTrackingServerRequest request) {
+
+        return stopMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopMlflowTrackingServerResult> stopMlflowTrackingServerAsync(final StopMlflowTrackingServerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopMlflowTrackingServerRequest, StopMlflowTrackingServerResult> asyncHandler) {
+        final StopMlflowTrackingServerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopMlflowTrackingServerResult>() {
+            @Override
+            public StopMlflowTrackingServerResult call() throws Exception {
+                StopMlflowTrackingServerResult result = null;
+
+                try {
+                    result = executeStopMlflowTrackingServer(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -10175,6 +10408,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeUpdateInferenceExperiment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMlflowTrackingServerResult> updateMlflowTrackingServerAsync(UpdateMlflowTrackingServerRequest request) {
+
+        return updateMlflowTrackingServerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMlflowTrackingServerResult> updateMlflowTrackingServerAsync(final UpdateMlflowTrackingServerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateMlflowTrackingServerRequest, UpdateMlflowTrackingServerResult> asyncHandler) {
+        final UpdateMlflowTrackingServerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateMlflowTrackingServerResult>() {
+            @Override
+            public UpdateMlflowTrackingServerResult call() throws Exception {
+                UpdateMlflowTrackingServerResult result = null;
+
+                try {
+                    result = executeUpdateMlflowTrackingServer(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

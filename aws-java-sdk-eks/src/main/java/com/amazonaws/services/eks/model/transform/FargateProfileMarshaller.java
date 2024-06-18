@@ -47,6 +47,8 @@ public class FargateProfileMarshaller {
             .marshallLocationName("status").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> HEALTH_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("health").build();
 
     private static final FargateProfileMarshaller instance = new FargateProfileMarshaller();
 
@@ -73,6 +75,7 @@ public class FargateProfileMarshaller {
             protocolMarshaller.marshall(fargateProfile.getSelectors(), SELECTORS_BINDING);
             protocolMarshaller.marshall(fargateProfile.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(fargateProfile.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(fargateProfile.getHealth(), HEALTH_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

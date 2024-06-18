@@ -48,6 +48,12 @@ public class ConverseResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * </p>
      */
     private ConverseMetrics metrics;
+    /**
+     * <p>
+     * A trace object that contains information about the Guardrail behavior.
+     * </p>
+     */
+    private ConverseTrace trace;
 
     /**
      * <p>
@@ -235,6 +241,46 @@ public class ConverseResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     }
 
     /**
+     * <p>
+     * A trace object that contains information about the Guardrail behavior.
+     * </p>
+     * 
+     * @param trace
+     *        A trace object that contains information about the Guardrail behavior.
+     */
+
+    public void setTrace(ConverseTrace trace) {
+        this.trace = trace;
+    }
+
+    /**
+     * <p>
+     * A trace object that contains information about the Guardrail behavior.
+     * </p>
+     * 
+     * @return A trace object that contains information about the Guardrail behavior.
+     */
+
+    public ConverseTrace getTrace() {
+        return this.trace;
+    }
+
+    /**
+     * <p>
+     * A trace object that contains information about the Guardrail behavior.
+     * </p>
+     * 
+     * @param trace
+     *        A trace object that contains information about the Guardrail behavior.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConverseResult withTrace(ConverseTrace trace) {
+        setTrace(trace);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -253,7 +299,9 @@ public class ConverseResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         if (getUsage() != null)
             sb.append("Usage: ").append(getUsage()).append(",");
         if (getMetrics() != null)
-            sb.append("Metrics: ").append(getMetrics());
+            sb.append("Metrics: ").append(getMetrics()).append(",");
+        if (getTrace() != null)
+            sb.append("Trace: ").append(getTrace());
         sb.append("}");
         return sb.toString();
     }
@@ -284,6 +332,10 @@ public class ConverseResult extends com.amazonaws.AmazonWebServiceResult<com.ama
             return false;
         if (other.getMetrics() != null && other.getMetrics().equals(this.getMetrics()) == false)
             return false;
+        if (other.getTrace() == null ^ this.getTrace() == null)
+            return false;
+        if (other.getTrace() != null && other.getTrace().equals(this.getTrace()) == false)
+            return false;
         return true;
     }
 
@@ -296,6 +348,7 @@ public class ConverseResult extends com.amazonaws.AmazonWebServiceResult<com.ama
         hashCode = prime * hashCode + ((getStopReason() == null) ? 0 : getStopReason().hashCode());
         hashCode = prime * hashCode + ((getUsage() == null) ? 0 : getUsage().hashCode());
         hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
+        hashCode = prime * hashCode + ((getTrace() == null) ? 0 : getTrace().hashCode());
         return hashCode;
     }
 

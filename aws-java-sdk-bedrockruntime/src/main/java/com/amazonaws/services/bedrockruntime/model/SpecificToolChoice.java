@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The model must request a specific tool.
+ * The model must request a specific tool. For example, <code>{"tool" : {"name" : "Your tool name"}}</code>.
  * </p>
  * <note>
  * <p>

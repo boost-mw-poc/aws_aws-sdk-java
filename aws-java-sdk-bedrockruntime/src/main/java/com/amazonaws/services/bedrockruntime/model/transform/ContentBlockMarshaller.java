@@ -33,6 +33,8 @@ public class ContentBlockMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("image").build();
     private static final MarshallingInfo<StructuredPojo> TOOLRESULT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("toolResult").build();
+    private static final MarshallingInfo<StructuredPojo> GUARDCONTENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("guardContent").build();
 
     private static final ContentBlockMarshaller instance = new ContentBlockMarshaller();
 
@@ -53,6 +55,7 @@ public class ContentBlockMarshaller {
             protocolMarshaller.marshall(contentBlock.getText(), TEXT_BINDING);
             protocolMarshaller.marshall(contentBlock.getImage(), IMAGE_BINDING);
             protocolMarshaller.marshall(contentBlock.getToolResult(), TOOLRESULT_BINDING);
+            protocolMarshaller.marshall(contentBlock.getGuardContent(), GUARDCONTENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
