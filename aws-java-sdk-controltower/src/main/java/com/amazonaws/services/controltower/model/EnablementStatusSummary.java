@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The deployment summary of the enabled control.
+ * The deployment summary of an <code>EnabledControl</code> or <code>EnabledBaseline</code> resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/EnablementStatusSummary"
@@ -30,13 +30,13 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The last operation identifier for the enabled control.
+     * The last operation identifier for the enabled resource.
      * </p>
      */
     private String lastOperationIdentifier;
     /**
      * <p>
-     * The deployment status of the enabled control.
+     * The deployment status of the enabled resource.
      * </p>
      * <p>
      * Valid values:
@@ -44,17 +44,20 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
      * <ul>
      * <li>
      * <p>
-     * <code>SUCCEEDED</code>: The <code>enabledControl</code> configuration was deployed successfully.
+     * <code>SUCCEEDED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration was
+     * deployed successfully.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNDER_CHANGE</code>: The <code>enabledControl</code> configuration is changing.
+     * <code>UNDER_CHANGE</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration is
+     * changing.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The <code>enabledControl</code> configuration failed to deploy.
+     * <code>FAILED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration failed to
+     * deploy.
      * </p>
      * </li>
      * </ul>
@@ -63,11 +66,11 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The last operation identifier for the enabled control.
+     * The last operation identifier for the enabled resource.
      * </p>
      * 
      * @param lastOperationIdentifier
-     *        The last operation identifier for the enabled control.
+     *        The last operation identifier for the enabled resource.
      */
 
     public void setLastOperationIdentifier(String lastOperationIdentifier) {
@@ -76,10 +79,10 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The last operation identifier for the enabled control.
+     * The last operation identifier for the enabled resource.
      * </p>
      * 
-     * @return The last operation identifier for the enabled control.
+     * @return The last operation identifier for the enabled resource.
      */
 
     public String getLastOperationIdentifier() {
@@ -88,11 +91,11 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The last operation identifier for the enabled control.
+     * The last operation identifier for the enabled resource.
      * </p>
      * 
      * @param lastOperationIdentifier
-     *        The last operation identifier for the enabled control.
+     *        The last operation identifier for the enabled resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,7 +106,7 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The deployment status of the enabled control.
+     * The deployment status of the enabled resource.
      * </p>
      * <p>
      * Valid values:
@@ -111,40 +114,46 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
      * <ul>
      * <li>
      * <p>
-     * <code>SUCCEEDED</code>: The <code>enabledControl</code> configuration was deployed successfully.
+     * <code>SUCCEEDED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration was
+     * deployed successfully.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNDER_CHANGE</code>: The <code>enabledControl</code> configuration is changing.
+     * <code>UNDER_CHANGE</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration is
+     * changing.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The <code>enabledControl</code> configuration failed to deploy.
+     * <code>FAILED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration failed to
+     * deploy.
      * </p>
      * </li>
      * </ul>
      * 
      * @param status
-     *        The deployment status of the enabled control.</p>
+     *        The deployment status of the enabled resource.</p>
      *        <p>
      *        Valid values:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SUCCEEDED</code>: The <code>enabledControl</code> configuration was deployed successfully.
+     *        <code>SUCCEEDED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration was
+     *        deployed successfully.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNDER_CHANGE</code>: The <code>enabledControl</code> configuration is changing.
+     *        <code>UNDER_CHANGE</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration
+     *        is changing.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code>: The <code>enabledControl</code> configuration failed to deploy.
+     *        <code>FAILED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration failed
+     *        to deploy.
      *        </p>
      *        </li>
      * @see EnablementStatus
@@ -156,7 +165,7 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The deployment status of the enabled control.
+     * The deployment status of the enabled resource.
      * </p>
      * <p>
      * Valid values:
@@ -164,39 +173,45 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
      * <ul>
      * <li>
      * <p>
-     * <code>SUCCEEDED</code>: The <code>enabledControl</code> configuration was deployed successfully.
+     * <code>SUCCEEDED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration was
+     * deployed successfully.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNDER_CHANGE</code>: The <code>enabledControl</code> configuration is changing.
+     * <code>UNDER_CHANGE</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration is
+     * changing.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The <code>enabledControl</code> configuration failed to deploy.
+     * <code>FAILED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration failed to
+     * deploy.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The deployment status of the enabled control.</p>
+     * @return The deployment status of the enabled resource.</p>
      *         <p>
      *         Valid values:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>SUCCEEDED</code>: The <code>enabledControl</code> configuration was deployed successfully.
+     *         <code>SUCCEEDED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration was
+     *         deployed successfully.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UNDER_CHANGE</code>: The <code>enabledControl</code> configuration is changing.
+     *         <code>UNDER_CHANGE</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration
+     *         is changing.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>FAILED</code>: The <code>enabledControl</code> configuration failed to deploy.
+     *         <code>FAILED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration failed
+     *         to deploy.
      *         </p>
      *         </li>
      * @see EnablementStatus
@@ -208,7 +223,7 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The deployment status of the enabled control.
+     * The deployment status of the enabled resource.
      * </p>
      * <p>
      * Valid values:
@@ -216,40 +231,46 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
      * <ul>
      * <li>
      * <p>
-     * <code>SUCCEEDED</code>: The <code>enabledControl</code> configuration was deployed successfully.
+     * <code>SUCCEEDED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration was
+     * deployed successfully.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNDER_CHANGE</code>: The <code>enabledControl</code> configuration is changing.
+     * <code>UNDER_CHANGE</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration is
+     * changing.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The <code>enabledControl</code> configuration failed to deploy.
+     * <code>FAILED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration failed to
+     * deploy.
      * </p>
      * </li>
      * </ul>
      * 
      * @param status
-     *        The deployment status of the enabled control.</p>
+     *        The deployment status of the enabled resource.</p>
      *        <p>
      *        Valid values:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SUCCEEDED</code>: The <code>enabledControl</code> configuration was deployed successfully.
+     *        <code>SUCCEEDED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration was
+     *        deployed successfully.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNDER_CHANGE</code>: The <code>enabledControl</code> configuration is changing.
+     *        <code>UNDER_CHANGE</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration
+     *        is changing.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code>: The <code>enabledControl</code> configuration failed to deploy.
+     *        <code>FAILED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration failed
+     *        to deploy.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -263,7 +284,7 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The deployment status of the enabled control.
+     * The deployment status of the enabled resource.
      * </p>
      * <p>
      * Valid values:
@@ -271,40 +292,46 @@ public class EnablementStatusSummary implements Serializable, Cloneable, Structu
      * <ul>
      * <li>
      * <p>
-     * <code>SUCCEEDED</code>: The <code>enabledControl</code> configuration was deployed successfully.
+     * <code>SUCCEEDED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration was
+     * deployed successfully.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNDER_CHANGE</code>: The <code>enabledControl</code> configuration is changing.
+     * <code>UNDER_CHANGE</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration is
+     * changing.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The <code>enabledControl</code> configuration failed to deploy.
+     * <code>FAILED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration failed to
+     * deploy.
      * </p>
      * </li>
      * </ul>
      * 
      * @param status
-     *        The deployment status of the enabled control.</p>
+     *        The deployment status of the enabled resource.</p>
      *        <p>
      *        Valid values:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SUCCEEDED</code>: The <code>enabledControl</code> configuration was deployed successfully.
+     *        <code>SUCCEEDED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration was
+     *        deployed successfully.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNDER_CHANGE</code>: The <code>enabledControl</code> configuration is changing.
+     *        <code>UNDER_CHANGE</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration
+     *        is changing.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code>: The <code>enabledControl</code> configuration failed to deploy.
+     *        <code>FAILED</code>: The <code>EnabledControl</code> or <code>EnabledBaseline</code> configuration failed
+     *        to deploy.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -27,61 +27,52 @@ import com.amazonaws.services.ivsrealtime.model.*;
  * </p>
  * <p>
  * <p>
- * <b>Introduction</b>
- * </p>
- * <p>
  * The Amazon Interactive Video Service (IVS) real-time API is REST compatible, using a standard HTTP API and an AWS
  * EventBridge event stream for responses. JSON is used for both requests and responses, including errors.
  * </p>
  * <p>
- * Terminology:
+ * <b>Key Concepts</b>
  * </p>
  * <ul>
  * <li>
  * <p>
- * A <i>stage</i> is a virtual space where participants can exchange video in real time.
+ * <b>Stage</b> — A virtual space where participants can exchange video in real time.
  * </p>
  * </li>
  * <li>
  * <p>
- * A <i>participant token</i> is a token that authenticates a participant when they join a stage.
+ * <b>Participant token</b> — A token that authenticates a participant when they join a stage.
  * </p>
  * </li>
  * <li>
  * <p>
- * A <i>participant object</i> represents participants (people) in the stage and contains information about them. When a
+ * <b>Participant object</b> — Represents participants (people) in the stage and contains information about them. When a
  * token is created, it includes a participant ID; when a participant uses that token to join a stage, the participant
  * is associated with that participant ID. There is a 1:1 mapping between participant tokens and participants.
  * </p>
  * </li>
- * <li>
- * <p>
- * Server-side composition: The <i>composition</i> process composites participants of a stage into a single video and
- * forwards it to a set of outputs (e.g., IVS channels). Composition endpoints support this process.
- * </p>
- * </li>
- * <li>
- * <p>
- * Server-side composition: A <i>composition</i> controls the look of the outputs, including how participants are
- * positioned in the video.
- * </p>
- * </li>
  * </ul>
  * <p>
- * <b>Resources</b>
- * </p>
- * <p>
- * The following resources contain information about your IVS live stream (see <a
- * href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/getting-started.html">Getting Started with Amazon IVS
- * Real-Time Streaming</a>):
+ * For server-side composition:
  * </p>
  * <ul>
  * <li>
  * <p>
- * <b>Stage</b> — A stage is a virtual space where participants can exchange video in real time.
+ * <b>Composition process</b> — Composites participants of a stage into a single video and forwards it to a set of
+ * outputs (e.g., IVS channels). Composition endpoints support this process.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <b>Composition</b> — Controls the look of the outputs, including how participants are positioned in the video.
  * </p>
  * </li>
  * </ul>
+ * <p>
+ * For more information about your IVS live stream, also see <a
+ * href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/getting-started.html">Getting Started with Amazon IVS
+ * Real-Time Streaming</a>.
+ * </p>
  * <p>
  * <b>Tagging</b>
  * </p>
@@ -104,175 +95,6 @@ import com.amazonaws.services.ivsrealtime.model.*;
  * <p>
  * At most 50 tags can be applied to a resource.
  * </p>
- * <p>
- * <b>Stages Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>CreateParticipantToken</a> — Creates an additional token for a specified stage. This can be done after stage
- * creation or when tokens expire.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>CreateStage</a> — Creates a new stage (and optionally participant tokens).
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteStage</a> — Shuts down and deletes the specified stage (disconnecting all participants).
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DisconnectParticipant</a> — Disconnects a specified participant and revokes the participant permanently from a
- * specified stage.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetParticipant</a> — Gets information about the specified participant token.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStage</a> — Gets information for the specified stage.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStageSession</a> — Gets information for the specified stage session.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListParticipantEvents</a> — Lists events for a specified participant that occurred during a specified stage
- * session.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListParticipants</a> — Lists all participants in a specified stage session.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStages</a> — Gets summary information about all stages in your account, in the AWS region where the API
- * request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStageSessions</a> — Gets all sessions for a specified stage.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>UpdateStage</a> — Updates a stage’s configuration.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Composition Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>GetComposition</a> — Gets information about the specified Composition resource.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListCompositions</a> — Gets summary information about all Compositions in your account, in the AWS region where
- * the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StartComposition</a> — Starts a Composition from a stage based on the configuration provided in the request.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StopComposition</a> — Stops and deletes a Composition resource. Any broadcast from the Composition resource is
- * stopped.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>EncoderConfiguration Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>CreateEncoderConfiguration</a> — Creates an EncoderConfiguration object.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteEncoderConfiguration</a> — Deletes an EncoderConfiguration resource. Ensures that no Compositions are using
- * this template; otherwise, returns an error.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetEncoderConfiguration</a> — Gets information about the specified EncoderConfiguration resource.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListEncoderConfigurations</a> — Gets summary information about all EncoderConfigurations in your account, in the
- * AWS region where the API request is processed.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>StorageConfiguration Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>CreateStorageConfiguration</a> — Creates a new storage configuration, used to enable recording to Amazon S3.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteStorageConfiguration</a> — Deletes the storage configuration for the specified ARN.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStorageConfiguration</a> — Gets the storage configuration for the specified ARN.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStorageConfigurations</a> — Gets summary information about all storage configurations in your account, in the
- * AWS region where the API request is processed.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Tags Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>ListTagsForResource</a> — Gets information about AWS tags for the specified ARN.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>TagResource</a> — Adds or updates tags for the AWS resource with the specified ARN.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>UntagResource</a> — Removes tags from the resource with the specified ARN.
- * </p>
- * </li>
- * </ul>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonIVSRealTime {
@@ -385,6 +207,25 @@ public interface AmazonIVSRealTime {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteEncoderConfigurationResult deleteEncoderConfiguration(DeleteEncoderConfigurationRequest deleteEncoderConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes the specified public key used to sign stage participant tokens. This invalidates future participant
+     * tokens generated using the key pair’s private key.
+     * </p>
+     * 
+     * @param deletePublicKeyRequest
+     * @return Result of the DeletePublicKey operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws ValidationException
+     * @throws AccessDeniedException
+     * @throws ConflictException
+     * @throws PendingVerificationException
+     * @sample AmazonIVSRealTime.DeletePublicKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/DeletePublicKey" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeletePublicKeyResult deletePublicKey(DeletePublicKeyRequest deletePublicKeyRequest);
 
     /**
      * <p>
@@ -501,6 +342,22 @@ public interface AmazonIVSRealTime {
 
     /**
      * <p>
+     * Gets information for the specified public key.
+     * </p>
+     * 
+     * @param getPublicKeyRequest
+     * @return Result of the GetPublicKey operation returned by the service.
+     * @throws ResourceNotFoundException
+     * @throws ValidationException
+     * @throws AccessDeniedException
+     * @sample AmazonIVSRealTime.GetPublicKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/GetPublicKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetPublicKeyResult getPublicKey(GetPublicKeyRequest getPublicKeyRequest);
+
+    /**
+     * <p>
      * Gets information for the specified stage.
      * </p>
      * 
@@ -549,6 +406,24 @@ public interface AmazonIVSRealTime {
      *      target="_top">AWS API Documentation</a>
      */
     GetStorageConfigurationResult getStorageConfiguration(GetStorageConfigurationRequest getStorageConfigurationRequest);
+
+    /**
+     * <p>
+     * Import a public key to be used for signing stage participant tokens.
+     * </p>
+     * 
+     * @param importPublicKeyRequest
+     * @return Result of the ImportPublicKey operation returned by the service.
+     * @throws ValidationException
+     * @throws AccessDeniedException
+     * @throws ServiceQuotaExceededException
+     * @throws ConflictException
+     * @throws PendingVerificationException
+     * @sample AmazonIVSRealTime.ImportPublicKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/ImportPublicKey" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ImportPublicKeyResult importPublicKey(ImportPublicKeyRequest importPublicKeyRequest);
 
     /**
      * <p>
@@ -617,6 +492,22 @@ public interface AmazonIVSRealTime {
      *      API Documentation</a>
      */
     ListParticipantsResult listParticipants(ListParticipantsRequest listParticipantsRequest);
+
+    /**
+     * <p>
+     * Gets summary information about all public keys in your account, in the AWS region where the API request is
+     * processed.
+     * </p>
+     * 
+     * @param listPublicKeysRequest
+     * @return Result of the ListPublicKeys operation returned by the service.
+     * @throws ValidationException
+     * @throws AccessDeniedException
+     * @sample AmazonIVSRealTime.ListPublicKeys
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/ListPublicKeys" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListPublicKeysResult listPublicKeys(ListPublicKeysRequest listPublicKeysRequest);
 
     /**
      * <p>

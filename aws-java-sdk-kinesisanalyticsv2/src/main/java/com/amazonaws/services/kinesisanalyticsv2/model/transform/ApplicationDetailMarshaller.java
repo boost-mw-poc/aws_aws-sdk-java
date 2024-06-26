@@ -57,6 +57,8 @@ public class ApplicationDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationVersionUpdatedFrom").build();
     private static final MarshallingInfo<Long> APPLICATIONVERSIONROLLEDBACKFROM_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationVersionRolledBackFrom").build();
+    private static final MarshallingInfo<java.util.Date> APPLICATIONVERSIONCREATETIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationVersionCreateTimestamp").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> CONDITIONALTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConditionalToken").build();
     private static final MarshallingInfo<Long> APPLICATIONVERSIONROLLEDBACKTO_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
@@ -95,6 +97,7 @@ public class ApplicationDetailMarshaller {
                     APPLICATIONMAINTENANCECONFIGURATIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(applicationDetail.getApplicationVersionUpdatedFrom(), APPLICATIONVERSIONUPDATEDFROM_BINDING);
             protocolMarshaller.marshall(applicationDetail.getApplicationVersionRolledBackFrom(), APPLICATIONVERSIONROLLEDBACKFROM_BINDING);
+            protocolMarshaller.marshall(applicationDetail.getApplicationVersionCreateTimestamp(), APPLICATIONVERSIONCREATETIMESTAMP_BINDING);
             protocolMarshaller.marshall(applicationDetail.getConditionalToken(), CONDITIONALTOKEN_BINDING);
             protocolMarshaller.marshall(applicationDetail.getApplicationVersionRolledBackTo(), APPLICATIONVERSIONROLLEDBACKTO_BINDING);
             protocolMarshaller.marshall(applicationDetail.getApplicationMode(), APPLICATIONMODE_BINDING);

@@ -103,6 +103,11 @@ public class AbstractAWSControlTower implements AWSControlTower {
     }
 
     @Override
+    public ListLandingZoneOperationsResult listLandingZoneOperations(ListLandingZoneOperationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListLandingZonesResult listLandingZones(ListLandingZonesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -660,6 +660,39 @@ public class AmazonKinesisAnalyticsV2AsyncClient extends AmazonKinesisAnalyticsV
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeApplicationOperationResult> describeApplicationOperationAsync(DescribeApplicationOperationRequest request) {
+
+        return describeApplicationOperationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeApplicationOperationResult> describeApplicationOperationAsync(final DescribeApplicationOperationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeApplicationOperationRequest, DescribeApplicationOperationResult> asyncHandler) {
+        final DescribeApplicationOperationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeApplicationOperationResult>() {
+            @Override
+            public DescribeApplicationOperationResult call() throws Exception {
+                DescribeApplicationOperationResult result = null;
+
+                try {
+                    result = executeDescribeApplicationOperation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeApplicationSnapshotResult> describeApplicationSnapshotAsync(DescribeApplicationSnapshotRequest request) {
 
         return describeApplicationSnapshotAsync(request, null);
@@ -743,6 +776,39 @@ public class AmazonKinesisAnalyticsV2AsyncClient extends AmazonKinesisAnalyticsV
 
                 try {
                     result = executeDiscoverInputSchema(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListApplicationOperationsResult> listApplicationOperationsAsync(ListApplicationOperationsRequest request) {
+
+        return listApplicationOperationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListApplicationOperationsResult> listApplicationOperationsAsync(final ListApplicationOperationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListApplicationOperationsRequest, ListApplicationOperationsResult> asyncHandler) {
+        final ListApplicationOperationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListApplicationOperationsResult>() {
+            @Override
+            public ListApplicationOperationsResult call() throws Exception {
+                ListApplicationOperationsResult result = null;
+
+                try {
+                    result = executeListApplicationOperations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

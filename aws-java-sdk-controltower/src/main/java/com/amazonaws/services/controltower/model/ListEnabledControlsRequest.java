@@ -27,8 +27,8 @@ public class ListEnabledControlsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
-     * operations to view.
+     * An input filter for the <code>ListEnabledControls</code> API that lets you select the types of control operations
+     * to view.
      * </p>
      */
     private EnabledControlFilter filter;
@@ -54,12 +54,12 @@ public class ListEnabledControlsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
-     * operations to view.
+     * An input filter for the <code>ListEnabledControls</code> API that lets you select the types of control operations
+     * to view.
      * </p>
      * 
      * @param filter
-     *        An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     *        An input filter for the <code>ListEnabledControls</code> API that lets you select the types of control
      *        operations to view.
      */
 
@@ -69,11 +69,11 @@ public class ListEnabledControlsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
-     * operations to view.
+     * An input filter for the <code>ListEnabledControls</code> API that lets you select the types of control operations
+     * to view.
      * </p>
      * 
-     * @return An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     * @return An input filter for the <code>ListEnabledControls</code> API that lets you select the types of control
      *         operations to view.
      */
 
@@ -83,12 +83,12 @@ public class ListEnabledControlsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
-     * operations to view.
+     * An input filter for the <code>ListEnabledControls</code> API that lets you select the types of control operations
+     * to view.
      * </p>
      * 
      * @param filter
-     *        An input filter for the <code>ListCEnabledControls</code> API that lets you select the types of control
+     *        An input filter for the <code>ListEnabledControls</code> API that lets you select the types of control
      *        operations to view.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

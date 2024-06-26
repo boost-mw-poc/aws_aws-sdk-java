@@ -53,6 +53,11 @@ public class AbstractAmazonIVSRealTime implements AmazonIVSRealTime {
     }
 
     @Override
+    public DeletePublicKeyResult deletePublicKey(DeletePublicKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteStageResult deleteStage(DeleteStageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -83,6 +88,11 @@ public class AbstractAmazonIVSRealTime implements AmazonIVSRealTime {
     }
 
     @Override
+    public GetPublicKeyResult getPublicKey(GetPublicKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetStageResult getStage(GetStageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -94,6 +104,11 @@ public class AbstractAmazonIVSRealTime implements AmazonIVSRealTime {
 
     @Override
     public GetStorageConfigurationResult getStorageConfiguration(GetStorageConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ImportPublicKeyResult importPublicKey(ImportPublicKeyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -114,6 +129,11 @@ public class AbstractAmazonIVSRealTime implements AmazonIVSRealTime {
 
     @Override
     public ListParticipantsResult listParticipants(ListParticipantsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListPublicKeysResult listPublicKeys(ListPublicKeysRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

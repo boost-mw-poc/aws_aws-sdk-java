@@ -223,6 +223,19 @@ public class AbstractAWSControlTowerAsync extends AbstractAWSControlTower implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListLandingZoneOperationsResult> listLandingZoneOperationsAsync(ListLandingZoneOperationsRequest request) {
+
+        return listLandingZoneOperationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLandingZoneOperationsResult> listLandingZoneOperationsAsync(ListLandingZoneOperationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListLandingZoneOperationsRequest, ListLandingZoneOperationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListLandingZonesResult> listLandingZonesAsync(ListLandingZonesRequest request) {
 
         return listLandingZonesAsync(request, null);

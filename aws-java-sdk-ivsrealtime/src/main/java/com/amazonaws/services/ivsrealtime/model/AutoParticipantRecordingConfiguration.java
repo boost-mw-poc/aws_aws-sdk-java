@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Object specifying an auto-participant-recording configuration.
+ * Object specifying a configuration for individual participant recording.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ivs-realtime-2020-07-14/AutoParticipantRecordingConfiguration"
@@ -30,9 +30,9 @@ public class AutoParticipantRecordingConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * ARN of the <a>StorageConfiguration</a> resource to use for auto participant recording. Default: "" (empty string,
-     * no storage configuration is specified). Individual participant recording cannot be started unless a storage
-     * configuration is specified, when a <a>Stage</a> is created or updated.
+     * ARN of the <a>StorageConfiguration</a> resource to use for individual participant recording. Default:
+     * <code>""</code> (empty string, no storage configuration is specified). Individual participant recording cannot be
+     * started unless a storage configuration is specified, when a <a>Stage</a> is created or updated.
      * </p>
      */
     private String storageConfigurationArn;
@@ -45,15 +45,15 @@ public class AutoParticipantRecordingConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * ARN of the <a>StorageConfiguration</a> resource to use for auto participant recording. Default: "" (empty string,
-     * no storage configuration is specified). Individual participant recording cannot be started unless a storage
-     * configuration is specified, when a <a>Stage</a> is created or updated.
+     * ARN of the <a>StorageConfiguration</a> resource to use for individual participant recording. Default:
+     * <code>""</code> (empty string, no storage configuration is specified). Individual participant recording cannot be
+     * started unless a storage configuration is specified, when a <a>Stage</a> is created or updated.
      * </p>
      * 
      * @param storageConfigurationArn
-     *        ARN of the <a>StorageConfiguration</a> resource to use for auto participant recording. Default: "" (empty
-     *        string, no storage configuration is specified). Individual participant recording cannot be started unless
-     *        a storage configuration is specified, when a <a>Stage</a> is created or updated.
+     *        ARN of the <a>StorageConfiguration</a> resource to use for individual participant recording. Default:
+     *        <code>""</code> (empty string, no storage configuration is specified). Individual participant recording
+     *        cannot be started unless a storage configuration is specified, when a <a>Stage</a> is created or updated.
      */
 
     public void setStorageConfigurationArn(String storageConfigurationArn) {
@@ -62,14 +62,14 @@ public class AutoParticipantRecordingConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * ARN of the <a>StorageConfiguration</a> resource to use for auto participant recording. Default: "" (empty string,
-     * no storage configuration is specified). Individual participant recording cannot be started unless a storage
-     * configuration is specified, when a <a>Stage</a> is created or updated.
+     * ARN of the <a>StorageConfiguration</a> resource to use for individual participant recording. Default:
+     * <code>""</code> (empty string, no storage configuration is specified). Individual participant recording cannot be
+     * started unless a storage configuration is specified, when a <a>Stage</a> is created or updated.
      * </p>
      * 
-     * @return ARN of the <a>StorageConfiguration</a> resource to use for auto participant recording. Default: "" (empty
-     *         string, no storage configuration is specified). Individual participant recording cannot be started unless
-     *         a storage configuration is specified, when a <a>Stage</a> is created or updated.
+     * @return ARN of the <a>StorageConfiguration</a> resource to use for individual participant recording. Default:
+     *         <code>""</code> (empty string, no storage configuration is specified). Individual participant recording
+     *         cannot be started unless a storage configuration is specified, when a <a>Stage</a> is created or updated.
      */
 
     public String getStorageConfigurationArn() {
@@ -78,15 +78,15 @@ public class AutoParticipantRecordingConfiguration implements Serializable, Clon
 
     /**
      * <p>
-     * ARN of the <a>StorageConfiguration</a> resource to use for auto participant recording. Default: "" (empty string,
-     * no storage configuration is specified). Individual participant recording cannot be started unless a storage
-     * configuration is specified, when a <a>Stage</a> is created or updated.
+     * ARN of the <a>StorageConfiguration</a> resource to use for individual participant recording. Default:
+     * <code>""</code> (empty string, no storage configuration is specified). Individual participant recording cannot be
+     * started unless a storage configuration is specified, when a <a>Stage</a> is created or updated.
      * </p>
      * 
      * @param storageConfigurationArn
-     *        ARN of the <a>StorageConfiguration</a> resource to use for auto participant recording. Default: "" (empty
-     *        string, no storage configuration is specified). Individual participant recording cannot be started unless
-     *        a storage configuration is specified, when a <a>Stage</a> is created or updated.
+     *        ARN of the <a>StorageConfiguration</a> resource to use for individual participant recording. Default:
+     *        <code>""</code> (empty string, no storage configuration is specified). Individual participant recording
+     *        cannot be started unless a storage configuration is specified, when a <a>Stage</a> is created or updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -93,6 +93,8 @@ public class DomainStatusMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DomainProcessingStatus").build();
     private static final MarshallingInfo<List> MODIFYINGPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModifyingProperties").build();
+    private static final MarshallingInfo<StructuredPojo> AIMLOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AIMLOptions").build();
 
     private static final DomainStatusMarshaller instance = new DomainStatusMarshaller();
 
@@ -142,6 +144,7 @@ public class DomainStatusMarshaller {
             protocolMarshaller.marshall(domainStatus.getSoftwareUpdateOptions(), SOFTWAREUPDATEOPTIONS_BINDING);
             protocolMarshaller.marshall(domainStatus.getDomainProcessingStatus(), DOMAINPROCESSINGSTATUS_BINDING);
             protocolMarshaller.marshall(domainStatus.getModifyingProperties(), MODIFYINGPROPERTIES_BINDING);
+            protocolMarshaller.marshall(domainStatus.getAIMLOptions(), AIMLOPTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -24,6 +24,8 @@ import javax.annotation.Generated;
 public class RollbackApplicationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
     private ApplicationDetail applicationDetail;
+    /** Operation ID for tracking RollbackApplication request */
+    private String operationId;
 
     /**
      * @param applicationDetail
@@ -52,6 +54,40 @@ public class RollbackApplicationResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * Operation ID for tracking RollbackApplication request
+     * 
+     * @param operationId
+     *        Operation ID for tracking RollbackApplication request
+     */
+
+    public void setOperationId(String operationId) {
+        this.operationId = operationId;
+    }
+
+    /**
+     * Operation ID for tracking RollbackApplication request
+     * 
+     * @return Operation ID for tracking RollbackApplication request
+     */
+
+    public String getOperationId() {
+        return this.operationId;
+    }
+
+    /**
+     * Operation ID for tracking RollbackApplication request
+     * 
+     * @param operationId
+     *        Operation ID for tracking RollbackApplication request
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RollbackApplicationResult withOperationId(String operationId) {
+        setOperationId(operationId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -64,7 +100,9 @@ public class RollbackApplicationResult extends com.amazonaws.AmazonWebServiceRes
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getApplicationDetail() != null)
-            sb.append("ApplicationDetail: ").append(getApplicationDetail());
+            sb.append("ApplicationDetail: ").append(getApplicationDetail()).append(",");
+        if (getOperationId() != null)
+            sb.append("OperationId: ").append(getOperationId());
         sb.append("}");
         return sb.toString();
     }
@@ -83,6 +121,10 @@ public class RollbackApplicationResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getApplicationDetail() != null && other.getApplicationDetail().equals(this.getApplicationDetail()) == false)
             return false;
+        if (other.getOperationId() == null ^ this.getOperationId() == null)
+            return false;
+        if (other.getOperationId() != null && other.getOperationId().equals(this.getOperationId()) == false)
+            return false;
         return true;
     }
 
@@ -92,6 +134,7 @@ public class RollbackApplicationResult extends com.amazonaws.AmazonWebServiceRes
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getApplicationDetail() == null) ? 0 : getApplicationDetail().hashCode());
+        hashCode = prime * hashCode + ((getOperationId() == null) ? 0 : getOperationId().hashCode());
         return hashCode;
     }
 

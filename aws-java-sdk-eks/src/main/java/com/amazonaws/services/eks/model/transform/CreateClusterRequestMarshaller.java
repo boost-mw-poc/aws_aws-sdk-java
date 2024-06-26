@@ -54,6 +54,8 @@ public class CreateClusterRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outpostConfig").build();
     private static final MarshallingInfo<StructuredPojo> ACCESSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accessConfig").build();
+    private static final MarshallingInfo<Boolean> BOOTSTRAPSELFMANAGEDADDONS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bootstrapSelfManagedAddons").build();
 
     private static final CreateClusterRequestMarshaller instance = new CreateClusterRequestMarshaller();
 
@@ -82,6 +84,7 @@ public class CreateClusterRequestMarshaller {
             protocolMarshaller.marshall(createClusterRequest.getEncryptionConfig(), ENCRYPTIONCONFIG_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getOutpostConfig(), OUTPOSTCONFIG_BINDING);
             protocolMarshaller.marshall(createClusterRequest.getAccessConfig(), ACCESSCONFIG_BINDING);
+            protocolMarshaller.marshall(createClusterRequest.getBootstrapSelfManagedAddons(), BOOTSTRAPSELFMANAGEDADDONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

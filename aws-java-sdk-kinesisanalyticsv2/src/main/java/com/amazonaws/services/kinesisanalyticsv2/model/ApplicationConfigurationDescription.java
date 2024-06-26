@@ -66,6 +66,8 @@ public class ApplicationConfigurationDescription implements Serializable, Clonea
      * </p>
      */
     private ApplicationSnapshotConfigurationDescription applicationSnapshotConfigurationDescription;
+
+    private ApplicationSystemRollbackConfigurationDescription applicationSystemRollbackConfigurationDescription;
     /**
      * <p>
      * The array of descriptions of VPC configurations available to the application.
@@ -327,6 +329,34 @@ public class ApplicationConfigurationDescription implements Serializable, Clonea
     }
 
     /**
+     * @param applicationSystemRollbackConfigurationDescription
+     */
+
+    public void setApplicationSystemRollbackConfigurationDescription(
+            ApplicationSystemRollbackConfigurationDescription applicationSystemRollbackConfigurationDescription) {
+        this.applicationSystemRollbackConfigurationDescription = applicationSystemRollbackConfigurationDescription;
+    }
+
+    /**
+     * @return
+     */
+
+    public ApplicationSystemRollbackConfigurationDescription getApplicationSystemRollbackConfigurationDescription() {
+        return this.applicationSystemRollbackConfigurationDescription;
+    }
+
+    /**
+     * @param applicationSystemRollbackConfigurationDescription
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApplicationConfigurationDescription withApplicationSystemRollbackConfigurationDescription(
+            ApplicationSystemRollbackConfigurationDescription applicationSystemRollbackConfigurationDescription) {
+        setApplicationSystemRollbackConfigurationDescription(applicationSystemRollbackConfigurationDescription);
+        return this;
+    }
+
+    /**
      * <p>
      * The array of descriptions of VPC configurations available to the application.
      * </p>
@@ -461,6 +491,8 @@ public class ApplicationConfigurationDescription implements Serializable, Clonea
             sb.append("EnvironmentPropertyDescriptions: ").append(getEnvironmentPropertyDescriptions()).append(",");
         if (getApplicationSnapshotConfigurationDescription() != null)
             sb.append("ApplicationSnapshotConfigurationDescription: ").append(getApplicationSnapshotConfigurationDescription()).append(",");
+        if (getApplicationSystemRollbackConfigurationDescription() != null)
+            sb.append("ApplicationSystemRollbackConfigurationDescription: ").append(getApplicationSystemRollbackConfigurationDescription()).append(",");
         if (getVpcConfigurationDescriptions() != null)
             sb.append("VpcConfigurationDescriptions: ").append(getVpcConfigurationDescriptions()).append(",");
         if (getZeppelinApplicationConfigurationDescription() != null)
@@ -508,6 +540,11 @@ public class ApplicationConfigurationDescription implements Serializable, Clonea
         if (other.getApplicationSnapshotConfigurationDescription() != null
                 && other.getApplicationSnapshotConfigurationDescription().equals(this.getApplicationSnapshotConfigurationDescription()) == false)
             return false;
+        if (other.getApplicationSystemRollbackConfigurationDescription() == null ^ this.getApplicationSystemRollbackConfigurationDescription() == null)
+            return false;
+        if (other.getApplicationSystemRollbackConfigurationDescription() != null
+                && other.getApplicationSystemRollbackConfigurationDescription().equals(this.getApplicationSystemRollbackConfigurationDescription()) == false)
+            return false;
         if (other.getVpcConfigurationDescriptions() == null ^ this.getVpcConfigurationDescriptions() == null)
             return false;
         if (other.getVpcConfigurationDescriptions() != null && other.getVpcConfigurationDescriptions().equals(this.getVpcConfigurationDescriptions()) == false)
@@ -532,6 +569,8 @@ public class ApplicationConfigurationDescription implements Serializable, Clonea
         hashCode = prime * hashCode + ((getEnvironmentPropertyDescriptions() == null) ? 0 : getEnvironmentPropertyDescriptions().hashCode());
         hashCode = prime * hashCode
                 + ((getApplicationSnapshotConfigurationDescription() == null) ? 0 : getApplicationSnapshotConfigurationDescription().hashCode());
+        hashCode = prime * hashCode
+                + ((getApplicationSystemRollbackConfigurationDescription() == null) ? 0 : getApplicationSystemRollbackConfigurationDescription().hashCode());
         hashCode = prime * hashCode + ((getVpcConfigurationDescriptions() == null) ? 0 : getVpcConfigurationDescriptions().hashCode());
         hashCode = prime * hashCode
                 + ((getZeppelinApplicationConfigurationDescription() == null) ? 0 : getZeppelinApplicationConfigurationDescription().hashCode());

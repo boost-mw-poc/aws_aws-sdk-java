@@ -44,6 +44,8 @@ public class AddApplicationCloudWatchLoggingOptionResult extends com.amazonaws.A
      * </p>
      */
     private java.util.List<CloudWatchLoggingOptionDescription> cloudWatchLoggingOptionDescriptions;
+    /** Operation ID for tracking AddApplicationCloudWatchLoggingOption request */
+    private String operationId;
 
     /**
      * <p>
@@ -209,6 +211,40 @@ public class AddApplicationCloudWatchLoggingOptionResult extends com.amazonaws.A
     }
 
     /**
+     * Operation ID for tracking AddApplicationCloudWatchLoggingOption request
+     * 
+     * @param operationId
+     *        Operation ID for tracking AddApplicationCloudWatchLoggingOption request
+     */
+
+    public void setOperationId(String operationId) {
+        this.operationId = operationId;
+    }
+
+    /**
+     * Operation ID for tracking AddApplicationCloudWatchLoggingOption request
+     * 
+     * @return Operation ID for tracking AddApplicationCloudWatchLoggingOption request
+     */
+
+    public String getOperationId() {
+        return this.operationId;
+    }
+
+    /**
+     * Operation ID for tracking AddApplicationCloudWatchLoggingOption request
+     * 
+     * @param operationId
+     *        Operation ID for tracking AddApplicationCloudWatchLoggingOption request
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AddApplicationCloudWatchLoggingOptionResult withOperationId(String operationId) {
+        setOperationId(operationId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -225,7 +261,9 @@ public class AddApplicationCloudWatchLoggingOptionResult extends com.amazonaws.A
         if (getApplicationVersionId() != null)
             sb.append("ApplicationVersionId: ").append(getApplicationVersionId()).append(",");
         if (getCloudWatchLoggingOptionDescriptions() != null)
-            sb.append("CloudWatchLoggingOptionDescriptions: ").append(getCloudWatchLoggingOptionDescriptions());
+            sb.append("CloudWatchLoggingOptionDescriptions: ").append(getCloudWatchLoggingOptionDescriptions()).append(",");
+        if (getOperationId() != null)
+            sb.append("OperationId: ").append(getOperationId());
         sb.append("}");
         return sb.toString();
     }
@@ -253,6 +291,10 @@ public class AddApplicationCloudWatchLoggingOptionResult extends com.amazonaws.A
         if (other.getCloudWatchLoggingOptionDescriptions() != null
                 && other.getCloudWatchLoggingOptionDescriptions().equals(this.getCloudWatchLoggingOptionDescriptions()) == false)
             return false;
+        if (other.getOperationId() == null ^ this.getOperationId() == null)
+            return false;
+        if (other.getOperationId() != null && other.getOperationId().equals(this.getOperationId()) == false)
+            return false;
         return true;
     }
 
@@ -264,6 +306,7 @@ public class AddApplicationCloudWatchLoggingOptionResult extends com.amazonaws.A
         hashCode = prime * hashCode + ((getApplicationARN() == null) ? 0 : getApplicationARN().hashCode());
         hashCode = prime * hashCode + ((getApplicationVersionId() == null) ? 0 : getApplicationVersionId().hashCode());
         hashCode = prime * hashCode + ((getCloudWatchLoggingOptionDescriptions() == null) ? 0 : getCloudWatchLoggingOptionDescriptions().hashCode());
+        hashCode = prime * hashCode + ((getOperationId() == null) ? 0 : getOperationId().hashCode());
         return hashCode;
     }
 

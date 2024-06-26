@@ -29,6 +29,8 @@ public class LandingZoneOperationDetailMarshaller {
 
     private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> OPERATIONIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("operationIdentifier").build();
     private static final MarshallingInfo<String> OPERATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("operationType").build();
     private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -55,6 +57,7 @@ public class LandingZoneOperationDetailMarshaller {
 
         try {
             protocolMarshaller.marshall(landingZoneOperationDetail.getEndTime(), ENDTIME_BINDING);
+            protocolMarshaller.marshall(landingZoneOperationDetail.getOperationIdentifier(), OPERATIONIDENTIFIER_BINDING);
             protocolMarshaller.marshall(landingZoneOperationDetail.getOperationType(), OPERATIONTYPE_BINDING);
             protocolMarshaller.marshall(landingZoneOperationDetail.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(landingZoneOperationDetail.getStatus(), STATUS_BINDING);

@@ -117,6 +117,8 @@ public class ApplicationDetail implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private Long applicationVersionRolledBackFrom;
+    /** The current timestamp when the application version was created. */
+    private java.util.Date applicationVersionCreateTimestamp;
     /**
      * <p>
      * A value you use to implement strong concurrency for application updates.
@@ -793,6 +795,40 @@ public class ApplicationDetail implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * The current timestamp when the application version was created.
+     * 
+     * @param applicationVersionCreateTimestamp
+     *        The current timestamp when the application version was created.
+     */
+
+    public void setApplicationVersionCreateTimestamp(java.util.Date applicationVersionCreateTimestamp) {
+        this.applicationVersionCreateTimestamp = applicationVersionCreateTimestamp;
+    }
+
+    /**
+     * The current timestamp when the application version was created.
+     * 
+     * @return The current timestamp when the application version was created.
+     */
+
+    public java.util.Date getApplicationVersionCreateTimestamp() {
+        return this.applicationVersionCreateTimestamp;
+    }
+
+    /**
+     * The current timestamp when the application version was created.
+     * 
+     * @param applicationVersionCreateTimestamp
+     *        The current timestamp when the application version was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApplicationDetail withApplicationVersionCreateTimestamp(java.util.Date applicationVersionCreateTimestamp) {
+        setApplicationVersionCreateTimestamp(applicationVersionCreateTimestamp);
+        return this;
+    }
+
+    /**
      * <p>
      * A value you use to implement strong concurrency for application updates.
      * </p>
@@ -983,6 +1019,8 @@ public class ApplicationDetail implements Serializable, Cloneable, StructuredPoj
             sb.append("ApplicationVersionUpdatedFrom: ").append(getApplicationVersionUpdatedFrom()).append(",");
         if (getApplicationVersionRolledBackFrom() != null)
             sb.append("ApplicationVersionRolledBackFrom: ").append(getApplicationVersionRolledBackFrom()).append(",");
+        if (getApplicationVersionCreateTimestamp() != null)
+            sb.append("ApplicationVersionCreateTimestamp: ").append(getApplicationVersionCreateTimestamp()).append(",");
         if (getConditionalToken() != null)
             sb.append("ConditionalToken: ").append(getConditionalToken()).append(",");
         if (getApplicationVersionRolledBackTo() != null)
@@ -1064,6 +1102,11 @@ public class ApplicationDetail implements Serializable, Cloneable, StructuredPoj
         if (other.getApplicationVersionRolledBackFrom() != null
                 && other.getApplicationVersionRolledBackFrom().equals(this.getApplicationVersionRolledBackFrom()) == false)
             return false;
+        if (other.getApplicationVersionCreateTimestamp() == null ^ this.getApplicationVersionCreateTimestamp() == null)
+            return false;
+        if (other.getApplicationVersionCreateTimestamp() != null
+                && other.getApplicationVersionCreateTimestamp().equals(this.getApplicationVersionCreateTimestamp()) == false)
+            return false;
         if (other.getConditionalToken() == null ^ this.getConditionalToken() == null)
             return false;
         if (other.getConditionalToken() != null && other.getConditionalToken().equals(this.getConditionalToken()) == false)
@@ -1100,6 +1143,7 @@ public class ApplicationDetail implements Serializable, Cloneable, StructuredPoj
                 + ((getApplicationMaintenanceConfigurationDescription() == null) ? 0 : getApplicationMaintenanceConfigurationDescription().hashCode());
         hashCode = prime * hashCode + ((getApplicationVersionUpdatedFrom() == null) ? 0 : getApplicationVersionUpdatedFrom().hashCode());
         hashCode = prime * hashCode + ((getApplicationVersionRolledBackFrom() == null) ? 0 : getApplicationVersionRolledBackFrom().hashCode());
+        hashCode = prime * hashCode + ((getApplicationVersionCreateTimestamp() == null) ? 0 : getApplicationVersionCreateTimestamp().hashCode());
         hashCode = prime * hashCode + ((getConditionalToken() == null) ? 0 : getConditionalToken().hashCode());
         hashCode = prime * hashCode + ((getApplicationVersionRolledBackTo() == null) ? 0 : getApplicationVersionRolledBackTo().hashCode());
         hashCode = prime * hashCode + ((getApplicationMode() == null) ? 0 : getApplicationMode().hashCode());

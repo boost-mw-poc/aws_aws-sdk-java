@@ -58,6 +58,8 @@ public class ApplicationConfigurationUpdate implements Serializable, Cloneable, 
      * </p>
      */
     private ApplicationSnapshotConfigurationUpdate applicationSnapshotConfigurationUpdate;
+
+    private ApplicationSystemRollbackConfigurationUpdate applicationSystemRollbackConfigurationUpdate;
     /**
      * <p>
      * Updates to the array of descriptions of VPC configurations available to the application.
@@ -273,6 +275,33 @@ public class ApplicationConfigurationUpdate implements Serializable, Cloneable, 
     }
 
     /**
+     * @param applicationSystemRollbackConfigurationUpdate
+     */
+
+    public void setApplicationSystemRollbackConfigurationUpdate(ApplicationSystemRollbackConfigurationUpdate applicationSystemRollbackConfigurationUpdate) {
+        this.applicationSystemRollbackConfigurationUpdate = applicationSystemRollbackConfigurationUpdate;
+    }
+
+    /**
+     * @return
+     */
+
+    public ApplicationSystemRollbackConfigurationUpdate getApplicationSystemRollbackConfigurationUpdate() {
+        return this.applicationSystemRollbackConfigurationUpdate;
+    }
+
+    /**
+     * @param applicationSystemRollbackConfigurationUpdate
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApplicationConfigurationUpdate withApplicationSystemRollbackConfigurationUpdate(
+            ApplicationSystemRollbackConfigurationUpdate applicationSystemRollbackConfigurationUpdate) {
+        setApplicationSystemRollbackConfigurationUpdate(applicationSystemRollbackConfigurationUpdate);
+        return this;
+    }
+
+    /**
      * <p>
      * Updates to the array of descriptions of VPC configurations available to the application.
      * </p>
@@ -405,6 +434,8 @@ public class ApplicationConfigurationUpdate implements Serializable, Cloneable, 
             sb.append("EnvironmentPropertyUpdates: ").append(getEnvironmentPropertyUpdates()).append(",");
         if (getApplicationSnapshotConfigurationUpdate() != null)
             sb.append("ApplicationSnapshotConfigurationUpdate: ").append(getApplicationSnapshotConfigurationUpdate()).append(",");
+        if (getApplicationSystemRollbackConfigurationUpdate() != null)
+            sb.append("ApplicationSystemRollbackConfigurationUpdate: ").append(getApplicationSystemRollbackConfigurationUpdate()).append(",");
         if (getVpcConfigurationUpdates() != null)
             sb.append("VpcConfigurationUpdates: ").append(getVpcConfigurationUpdates()).append(",");
         if (getZeppelinApplicationConfigurationUpdate() != null)
@@ -447,6 +478,11 @@ public class ApplicationConfigurationUpdate implements Serializable, Cloneable, 
         if (other.getApplicationSnapshotConfigurationUpdate() != null
                 && other.getApplicationSnapshotConfigurationUpdate().equals(this.getApplicationSnapshotConfigurationUpdate()) == false)
             return false;
+        if (other.getApplicationSystemRollbackConfigurationUpdate() == null ^ this.getApplicationSystemRollbackConfigurationUpdate() == null)
+            return false;
+        if (other.getApplicationSystemRollbackConfigurationUpdate() != null
+                && other.getApplicationSystemRollbackConfigurationUpdate().equals(this.getApplicationSystemRollbackConfigurationUpdate()) == false)
+            return false;
         if (other.getVpcConfigurationUpdates() == null ^ this.getVpcConfigurationUpdates() == null)
             return false;
         if (other.getVpcConfigurationUpdates() != null && other.getVpcConfigurationUpdates().equals(this.getVpcConfigurationUpdates()) == false)
@@ -469,6 +505,8 @@ public class ApplicationConfigurationUpdate implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getFlinkApplicationConfigurationUpdate() == null) ? 0 : getFlinkApplicationConfigurationUpdate().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentPropertyUpdates() == null) ? 0 : getEnvironmentPropertyUpdates().hashCode());
         hashCode = prime * hashCode + ((getApplicationSnapshotConfigurationUpdate() == null) ? 0 : getApplicationSnapshotConfigurationUpdate().hashCode());
+        hashCode = prime * hashCode
+                + ((getApplicationSystemRollbackConfigurationUpdate() == null) ? 0 : getApplicationSystemRollbackConfigurationUpdate().hashCode());
         hashCode = prime * hashCode + ((getVpcConfigurationUpdates() == null) ? 0 : getVpcConfigurationUpdates().hashCode());
         hashCode = prime * hashCode + ((getZeppelinApplicationConfigurationUpdate() == null) ? 0 : getZeppelinApplicationConfigurationUpdate().hashCode());
         return hashCode;

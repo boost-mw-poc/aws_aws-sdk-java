@@ -25,7 +25,7 @@ public class ListControlOperationsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Returns a list of output from control operations. PLACEHOLDER
+     * Returns a list of output from control operations.
      * </p>
      */
     private java.util.List<ControlOperationSummary> controlOperations;
@@ -38,10 +38,10 @@ public class ListControlOperationsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Returns a list of output from control operations. PLACEHOLDER
+     * Returns a list of output from control operations.
      * </p>
      * 
-     * @return Returns a list of output from control operations. PLACEHOLDER
+     * @return Returns a list of output from control operations.
      */
 
     public java.util.List<ControlOperationSummary> getControlOperations() {
@@ -50,11 +50,11 @@ public class ListControlOperationsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Returns a list of output from control operations. PLACEHOLDER
+     * Returns a list of output from control operations.
      * </p>
      * 
      * @param controlOperations
-     *        Returns a list of output from control operations. PLACEHOLDER
+     *        Returns a list of output from control operations.
      */
 
     public void setControlOperations(java.util.Collection<ControlOperationSummary> controlOperations) {
@@ -68,7 +68,7 @@ public class ListControlOperationsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Returns a list of output from control operations. PLACEHOLDER
+     * Returns a list of output from control operations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListControlOperationsResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param controlOperations
-     *        Returns a list of output from control operations. PLACEHOLDER
+     *        Returns a list of output from control operations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListControlOperationsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Returns a list of output from control operations. PLACEHOLDER
+     * Returns a list of output from control operations.
      * </p>
      * 
      * @param controlOperations
-     *        Returns a list of output from control operations. PLACEHOLDER
+     *        Returns a list of output from control operations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

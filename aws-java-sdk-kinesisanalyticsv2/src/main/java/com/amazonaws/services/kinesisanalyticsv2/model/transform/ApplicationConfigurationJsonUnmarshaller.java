@@ -69,6 +69,11 @@ public class ApplicationConfigurationJsonUnmarshaller implements Unmarshaller<Ap
                     applicationConfiguration.setApplicationSnapshotConfiguration(ApplicationSnapshotConfigurationJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("ApplicationSystemRollbackConfiguration", targetDepth)) {
+                    context.nextToken();
+                    applicationConfiguration.setApplicationSystemRollbackConfiguration(ApplicationSystemRollbackConfigurationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
                 if (context.testExpression("VpcConfigurations", targetDepth)) {
                     context.nextToken();
                     applicationConfiguration.setVpcConfigurations(new ListUnmarshaller<VpcConfiguration>(VpcConfigurationJsonUnmarshaller.getInstance())

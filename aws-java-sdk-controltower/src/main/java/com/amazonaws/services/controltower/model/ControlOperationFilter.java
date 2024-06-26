@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A filter object that lets you call <code>ListCOntrolOperations</code> with a specific filter.
+ * A filter object that lets you call <code>ListControlOperations</code> with a specific filter.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ControlOperationFilter"

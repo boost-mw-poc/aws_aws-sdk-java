@@ -62,7 +62,7 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
     private Boolean published;
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      */
     private String recordingState;
@@ -315,11 +315,11 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      * 
      * @param recordingState
-     *        Participant’s recording state.
+     *        The participant’s recording state.
      * @see ParticipantRecordingState
      */
 
@@ -329,10 +329,10 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      * 
-     * @return Participant’s recording state.
+     * @return The participant’s recording state.
      * @see ParticipantRecordingState
      */
 
@@ -342,11 +342,11 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      * 
      * @param recordingState
-     *        Participant’s recording state.
+     *        The participant’s recording state.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParticipantRecordingState
      */
@@ -358,11 +358,11 @@ public class ParticipantSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      * 
      * @param recordingState
-     *        Participant’s recording state.
+     *        The participant’s recording state.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParticipantRecordingState
      */

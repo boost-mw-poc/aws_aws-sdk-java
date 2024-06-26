@@ -26,61 +26,52 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * <b>Introduction</b>
- * </p>
- * <p>
  * The Amazon Interactive Video Service (IVS) real-time API is REST compatible, using a standard HTTP API and an AWS
  * EventBridge event stream for responses. JSON is used for both requests and responses, including errors.
  * </p>
  * <p>
- * Terminology:
+ * <b>Key Concepts</b>
  * </p>
  * <ul>
  * <li>
  * <p>
- * A <i>stage</i> is a virtual space where participants can exchange video in real time.
+ * <b>Stage</b> — A virtual space where participants can exchange video in real time.
  * </p>
  * </li>
  * <li>
  * <p>
- * A <i>participant token</i> is a token that authenticates a participant when they join a stage.
+ * <b>Participant token</b> — A token that authenticates a participant when they join a stage.
  * </p>
  * </li>
  * <li>
  * <p>
- * A <i>participant object</i> represents participants (people) in the stage and contains information about them. When a
+ * <b>Participant object</b> — Represents participants (people) in the stage and contains information about them. When a
  * token is created, it includes a participant ID; when a participant uses that token to join a stage, the participant
  * is associated with that participant ID. There is a 1:1 mapping between participant tokens and participants.
  * </p>
  * </li>
- * <li>
- * <p>
- * Server-side composition: The <i>composition</i> process composites participants of a stage into a single video and
- * forwards it to a set of outputs (e.g., IVS channels). Composition endpoints support this process.
- * </p>
- * </li>
- * <li>
- * <p>
- * Server-side composition: A <i>composition</i> controls the look of the outputs, including how participants are
- * positioned in the video.
- * </p>
- * </li>
  * </ul>
  * <p>
- * <b>Resources</b>
- * </p>
- * <p>
- * The following resources contain information about your IVS live stream (see <a
- * href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/getting-started.html">Getting Started with Amazon IVS
- * Real-Time Streaming</a>):
+ * For server-side composition:
  * </p>
  * <ul>
  * <li>
  * <p>
- * <b>Stage</b> — A stage is a virtual space where participants can exchange video in real time.
+ * <b>Composition process</b> — Composites participants of a stage into a single video and forwards it to a set of
+ * outputs (e.g., IVS channels). Composition endpoints support this process.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <b>Composition</b> — Controls the look of the outputs, including how participants are positioned in the video.
  * </p>
  * </li>
  * </ul>
+ * <p>
+ * For more information about your IVS live stream, also see <a
+ * href="https://docs.aws.amazon.com/ivs/latest/RealTimeUserGuide/getting-started.html">Getting Started with Amazon IVS
+ * Real-Time Streaming</a>.
+ * </p>
  * <p>
  * <b>Tagging</b>
  * </p>
@@ -103,175 +94,6 @@ import java.util.concurrent.ExecutorService;
  * <p>
  * At most 50 tags can be applied to a resource.
  * </p>
- * <p>
- * <b>Stages Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>CreateParticipantToken</a> — Creates an additional token for a specified stage. This can be done after stage
- * creation or when tokens expire.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>CreateStage</a> — Creates a new stage (and optionally participant tokens).
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteStage</a> — Shuts down and deletes the specified stage (disconnecting all participants).
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DisconnectParticipant</a> — Disconnects a specified participant and revokes the participant permanently from a
- * specified stage.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetParticipant</a> — Gets information about the specified participant token.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStage</a> — Gets information for the specified stage.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStageSession</a> — Gets information for the specified stage session.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListParticipantEvents</a> — Lists events for a specified participant that occurred during a specified stage
- * session.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListParticipants</a> — Lists all participants in a specified stage session.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStages</a> — Gets summary information about all stages in your account, in the AWS region where the API
- * request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStageSessions</a> — Gets all sessions for a specified stage.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>UpdateStage</a> — Updates a stage’s configuration.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Composition Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>GetComposition</a> — Gets information about the specified Composition resource.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListCompositions</a> — Gets summary information about all Compositions in your account, in the AWS region where
- * the API request is processed.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StartComposition</a> — Starts a Composition from a stage based on the configuration provided in the request.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>StopComposition</a> — Stops and deletes a Composition resource. Any broadcast from the Composition resource is
- * stopped.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>EncoderConfiguration Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>CreateEncoderConfiguration</a> — Creates an EncoderConfiguration object.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteEncoderConfiguration</a> — Deletes an EncoderConfiguration resource. Ensures that no Compositions are using
- * this template; otherwise, returns an error.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetEncoderConfiguration</a> — Gets information about the specified EncoderConfiguration resource.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListEncoderConfigurations</a> — Gets summary information about all EncoderConfigurations in your account, in the
- * AWS region where the API request is processed.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>StorageConfiguration Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>CreateStorageConfiguration</a> — Creates a new storage configuration, used to enable recording to Amazon S3.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>DeleteStorageConfiguration</a> — Deletes the storage configuration for the specified ARN.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>GetStorageConfiguration</a> — Gets the storage configuration for the specified ARN.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>ListStorageConfigurations</a> — Gets summary information about all storage configurations in your account, in the
- * AWS region where the API request is processed.
- * </p>
- * </li>
- * </ul>
- * <p>
- * <b>Tags Endpoints</b>
- * </p>
- * <ul>
- * <li>
- * <p>
- * <a>ListTagsForResource</a> — Gets information about AWS tags for the specified ARN.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>TagResource</a> — Adds or updates tags for the AWS resource with the specified ARN.
- * </p>
- * </li>
- * <li>
- * <p>
- * <a>UntagResource</a> — Removes tags from the resource with the specified ARN.
- * </p>
- * </li>
- * </ul>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -467,6 +289,39 @@ public class AmazonIVSRealTimeAsyncClient extends AmazonIVSRealTimeClient implem
 
                 try {
                     result = executeDeleteEncoderConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePublicKeyResult> deletePublicKeyAsync(DeletePublicKeyRequest request) {
+
+        return deletePublicKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePublicKeyResult> deletePublicKeyAsync(final DeletePublicKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePublicKeyRequest, DeletePublicKeyResult> asyncHandler) {
+        final DeletePublicKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePublicKeyResult>() {
+            @Override
+            public DeletePublicKeyResult call() throws Exception {
+                DeletePublicKeyResult result = null;
+
+                try {
+                    result = executeDeletePublicKey(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -681,6 +536,39 @@ public class AmazonIVSRealTimeAsyncClient extends AmazonIVSRealTimeClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetPublicKeyResult> getPublicKeyAsync(GetPublicKeyRequest request) {
+
+        return getPublicKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPublicKeyResult> getPublicKeyAsync(final GetPublicKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPublicKeyRequest, GetPublicKeyResult> asyncHandler) {
+        final GetPublicKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPublicKeyResult>() {
+            @Override
+            public GetPublicKeyResult call() throws Exception {
+                GetPublicKeyResult result = null;
+
+                try {
+                    result = executeGetPublicKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetStageResult> getStageAsync(GetStageRequest request) {
 
         return getStageAsync(request, null);
@@ -764,6 +652,39 @@ public class AmazonIVSRealTimeAsyncClient extends AmazonIVSRealTimeClient implem
 
                 try {
                     result = executeGetStorageConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportPublicKeyResult> importPublicKeyAsync(ImportPublicKeyRequest request) {
+
+        return importPublicKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportPublicKeyResult> importPublicKeyAsync(final ImportPublicKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ImportPublicKeyRequest, ImportPublicKeyResult> asyncHandler) {
+        final ImportPublicKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ImportPublicKeyResult>() {
+            @Override
+            public ImportPublicKeyResult call() throws Exception {
+                ImportPublicKeyResult result = null;
+
+                try {
+                    result = executeImportPublicKey(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -896,6 +817,39 @@ public class AmazonIVSRealTimeAsyncClient extends AmazonIVSRealTimeClient implem
 
                 try {
                     result = executeListParticipants(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPublicKeysResult> listPublicKeysAsync(ListPublicKeysRequest request) {
+
+        return listPublicKeysAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPublicKeysResult> listPublicKeysAsync(final ListPublicKeysRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListPublicKeysRequest, ListPublicKeysResult> asyncHandler) {
+        final ListPublicKeysRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListPublicKeysResult>() {
+            @Override
+            public ListPublicKeysResult call() throws Exception {
+                ListPublicKeysResult result = null;
+
+                try {
+                    result = executeListPublicKeys(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

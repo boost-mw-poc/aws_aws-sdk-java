@@ -48,7 +48,7 @@ public class CreateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * Auto participant recording configuration object attached to the stage.
+     * Configuration object for individual participant recording, to attach to the new stage.
      * </p>
      */
     private AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration;
@@ -251,11 +251,11 @@ public class CreateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Auto participant recording configuration object attached to the stage.
+     * Configuration object for individual participant recording, to attach to the new stage.
      * </p>
      * 
      * @param autoParticipantRecordingConfiguration
-     *        Auto participant recording configuration object attached to the stage.
+     *        Configuration object for individual participant recording, to attach to the new stage.
      */
 
     public void setAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
@@ -264,10 +264,10 @@ public class CreateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Auto participant recording configuration object attached to the stage.
+     * Configuration object for individual participant recording, to attach to the new stage.
      * </p>
      * 
-     * @return Auto participant recording configuration object attached to the stage.
+     * @return Configuration object for individual participant recording, to attach to the new stage.
      */
 
     public AutoParticipantRecordingConfiguration getAutoParticipantRecordingConfiguration() {
@@ -276,11 +276,11 @@ public class CreateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Auto participant recording configuration object attached to the stage.
+     * Configuration object for individual participant recording, to attach to the new stage.
      * </p>
      * 
      * @param autoParticipantRecordingConfiguration
-     *        Auto participant recording configuration object attached to the stage.
+     *        Configuration object for individual participant recording, to attach to the new stage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -114,6 +114,11 @@ public class AbstractAmazonKinesisAnalyticsV2 implements AmazonKinesisAnalyticsV
     }
 
     @Override
+    public DescribeApplicationOperationResult describeApplicationOperation(DescribeApplicationOperationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeApplicationSnapshotResult describeApplicationSnapshot(DescribeApplicationSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -125,6 +130,11 @@ public class AbstractAmazonKinesisAnalyticsV2 implements AmazonKinesisAnalyticsV
 
     @Override
     public DiscoverInputSchemaResult discoverInputSchema(DiscoverInputSchemaRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListApplicationOperationsResult listApplicationOperations(ListApplicationOperationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

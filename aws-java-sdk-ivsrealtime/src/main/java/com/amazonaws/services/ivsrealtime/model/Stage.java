@@ -57,10 +57,16 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * Auto-participant-recording configuration object attached to the stage.
+     * Configuration object for individual participant recording, attached to the stage.
      * </p>
      */
     private AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration;
+    /**
+     * <p>
+     * Summary information about various endpoints for a stage.
+     * </p>
+     */
+    private StageEndpoints endpoints;
 
     /**
      * <p>
@@ -270,11 +276,11 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Auto-participant-recording configuration object attached to the stage.
+     * Configuration object for individual participant recording, attached to the stage.
      * </p>
      * 
      * @param autoParticipantRecordingConfiguration
-     *        Auto-participant-recording configuration object attached to the stage.
+     *        Configuration object for individual participant recording, attached to the stage.
      */
 
     public void setAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
@@ -283,10 +289,10 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Auto-participant-recording configuration object attached to the stage.
+     * Configuration object for individual participant recording, attached to the stage.
      * </p>
      * 
-     * @return Auto-participant-recording configuration object attached to the stage.
+     * @return Configuration object for individual participant recording, attached to the stage.
      */
 
     public AutoParticipantRecordingConfiguration getAutoParticipantRecordingConfiguration() {
@@ -295,16 +301,56 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Auto-participant-recording configuration object attached to the stage.
+     * Configuration object for individual participant recording, attached to the stage.
      * </p>
      * 
      * @param autoParticipantRecordingConfiguration
-     *        Auto-participant-recording configuration object attached to the stage.
+     *        Configuration object for individual participant recording, attached to the stage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Stage withAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
         setAutoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Summary information about various endpoints for a stage.
+     * </p>
+     * 
+     * @param endpoints
+     *        Summary information about various endpoints for a stage.
+     */
+
+    public void setEndpoints(StageEndpoints endpoints) {
+        this.endpoints = endpoints;
+    }
+
+    /**
+     * <p>
+     * Summary information about various endpoints for a stage.
+     * </p>
+     * 
+     * @return Summary information about various endpoints for a stage.
+     */
+
+    public StageEndpoints getEndpoints() {
+        return this.endpoints;
+    }
+
+    /**
+     * <p>
+     * Summary information about various endpoints for a stage.
+     * </p>
+     * 
+     * @param endpoints
+     *        Summary information about various endpoints for a stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Stage withEndpoints(StageEndpoints endpoints) {
+        setEndpoints(endpoints);
         return this;
     }
 
@@ -329,7 +375,9 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getAutoParticipantRecordingConfiguration() != null)
-            sb.append("AutoParticipantRecordingConfiguration: ").append(getAutoParticipantRecordingConfiguration());
+            sb.append("AutoParticipantRecordingConfiguration: ").append(getAutoParticipantRecordingConfiguration()).append(",");
+        if (getEndpoints() != null)
+            sb.append("Endpoints: ").append(getEndpoints());
         sb.append("}");
         return sb.toString();
     }
@@ -365,6 +413,10 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
         if (other.getAutoParticipantRecordingConfiguration() != null
                 && other.getAutoParticipantRecordingConfiguration().equals(this.getAutoParticipantRecordingConfiguration()) == false)
             return false;
+        if (other.getEndpoints() == null ^ this.getEndpoints() == null)
+            return false;
+        if (other.getEndpoints() != null && other.getEndpoints().equals(this.getEndpoints()) == false)
+            return false;
         return true;
     }
 
@@ -378,6 +430,7 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getActiveSessionId() == null) ? 0 : getActiveSessionId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getAutoParticipantRecordingConfiguration() == null) ? 0 : getAutoParticipantRecordingConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getEndpoints() == null) ? 0 : getEndpoints().hashCode());
         return hashCode;
     }
 

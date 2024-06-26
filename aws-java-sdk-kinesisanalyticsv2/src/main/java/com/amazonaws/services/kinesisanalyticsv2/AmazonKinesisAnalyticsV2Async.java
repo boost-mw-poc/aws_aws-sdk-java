@@ -777,6 +777,41 @@ public interface AmazonKinesisAnalyticsV2Async extends AmazonKinesisAnalyticsV2 
             com.amazonaws.handlers.AsyncHandler<DescribeApplicationRequest, DescribeApplicationResult> asyncHandler);
 
     /**
+     * Returns information about a specific operation performed on a Managed Service for Apache Flink application
+     * 
+     * @param describeApplicationOperationRequest
+     *        Request for information about a specific operation performed on a Managed Service for Apache Flink
+     *        application
+     * @return A Java Future containing the result of the DescribeApplicationOperation operation returned by the
+     *         service.
+     * @sample AmazonKinesisAnalyticsV2Async.DescribeApplicationOperation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisanalyticsv2-2018-05-23/DescribeApplicationOperation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeApplicationOperationResult> describeApplicationOperationAsync(
+            DescribeApplicationOperationRequest describeApplicationOperationRequest);
+
+    /**
+     * Returns information about a specific operation performed on a Managed Service for Apache Flink application
+     * 
+     * @param describeApplicationOperationRequest
+     *        Request for information about a specific operation performed on a Managed Service for Apache Flink
+     *        application
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeApplicationOperation operation returned by the
+     *         service.
+     * @sample AmazonKinesisAnalyticsV2AsyncHandler.DescribeApplicationOperation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisanalyticsv2-2018-05-23/DescribeApplicationOperation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeApplicationOperationResult> describeApplicationOperationAsync(
+            DescribeApplicationOperationRequest describeApplicationOperationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeApplicationOperationRequest, DescribeApplicationOperationResult> asyncHandler);
+
+    /**
      * <p>
      * Returns information about a snapshot of application state data.
      * </p>
@@ -900,6 +935,37 @@ public interface AmazonKinesisAnalyticsV2Async extends AmazonKinesisAnalyticsV2 
      */
     java.util.concurrent.Future<DiscoverInputSchemaResult> discoverInputSchemaAsync(DiscoverInputSchemaRequest discoverInputSchemaRequest,
             com.amazonaws.handlers.AsyncHandler<DiscoverInputSchemaRequest, DiscoverInputSchemaResult> asyncHandler);
+
+    /**
+     * Lists information about operations performed on a Managed Service for Apache Flink application
+     * 
+     * @param listApplicationOperationsRequest
+     *        Request to list operations performed on an application
+     * @return A Java Future containing the result of the ListApplicationOperations operation returned by the service.
+     * @sample AmazonKinesisAnalyticsV2Async.ListApplicationOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisanalyticsv2-2018-05-23/ListApplicationOperations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListApplicationOperationsResult> listApplicationOperationsAsync(
+            ListApplicationOperationsRequest listApplicationOperationsRequest);
+
+    /**
+     * Lists information about operations performed on a Managed Service for Apache Flink application
+     * 
+     * @param listApplicationOperationsRequest
+     *        Request to list operations performed on an application
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListApplicationOperations operation returned by the service.
+     * @sample AmazonKinesisAnalyticsV2AsyncHandler.ListApplicationOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisanalyticsv2-2018-05-23/ListApplicationOperations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListApplicationOperationsResult> listApplicationOperationsAsync(
+            ListApplicationOperationsRequest listApplicationOperationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListApplicationOperationsRequest, ListApplicationOperationsResult> asyncHandler);
 
     /**
      * <p>
@@ -1058,17 +1124,15 @@ public interface AmazonKinesisAnalyticsV2Async extends AmazonKinesisAnalyticsV2 
     /**
      * <p>
      * Reverts the application to the previous running version. You can roll back an application if you suspect it is
-     * stuck in a transient status.
+     * stuck in a transient status or in the running status.
      * </p>
      * <p>
-     * You can roll back an application only if it is in the <code>UPDATING</code> or <code>AUTOSCALING</code> status.
+     * You can roll back an application only if it is in the <code>UPDATING</code>, <code>AUTOSCALING</code>, or
+     * <code>RUNNING</code> statuses.
      * </p>
      * <p>
      * When you rollback an application, it loads state data from the last successful snapshot. If the application has
      * no snapshots, Managed Service for Apache Flink rejects the rollback request.
-     * </p>
-     * <p>
-     * This action is not supported for Managed Service for Apache Flink for SQL applications.
      * </p>
      * 
      * @param rollbackApplicationRequest
@@ -1082,17 +1146,15 @@ public interface AmazonKinesisAnalyticsV2Async extends AmazonKinesisAnalyticsV2 
     /**
      * <p>
      * Reverts the application to the previous running version. You can roll back an application if you suspect it is
-     * stuck in a transient status.
+     * stuck in a transient status or in the running status.
      * </p>
      * <p>
-     * You can roll back an application only if it is in the <code>UPDATING</code> or <code>AUTOSCALING</code> status.
+     * You can roll back an application only if it is in the <code>UPDATING</code>, <code>AUTOSCALING</code>, or
+     * <code>RUNNING</code> statuses.
      * </p>
      * <p>
      * When you rollback an application, it loads state data from the last successful snapshot. If the application has
      * no snapshots, Managed Service for Apache Flink rejects the rollback request.
-     * </p>
-     * <p>
-     * This action is not supported for Managed Service for Apache Flink for SQL applications.
      * </p>
      * 
      * @param rollbackApplicationRequest

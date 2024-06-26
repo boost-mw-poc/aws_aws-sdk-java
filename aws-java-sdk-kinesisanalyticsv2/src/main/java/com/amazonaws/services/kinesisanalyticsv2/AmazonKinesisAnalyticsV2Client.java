@@ -1427,6 +1427,70 @@ public class AmazonKinesisAnalyticsV2Client extends AmazonWebServiceClient imple
     }
 
     /**
+     * Returns information about a specific operation performed on a Managed Service for Apache Flink application
+     * 
+     * @param describeApplicationOperationRequest
+     *        Request for information about a specific operation performed on a Managed Service for Apache Flink
+     *        application
+     * @return Result of the DescribeApplicationOperation operation returned by the service.
+     * @throws InvalidArgumentException
+     *         The specified input parameter value is not valid.
+     * @throws ResourceNotFoundException
+     *         Specified application can't be found.
+     * @throws UnsupportedOperationException
+     *         The request was rejected because a specified parameter is not supported or a specified resource is not
+     *         valid for this operation.
+     * @sample AmazonKinesisAnalyticsV2.DescribeApplicationOperation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisanalyticsv2-2018-05-23/DescribeApplicationOperation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeApplicationOperationResult describeApplicationOperation(DescribeApplicationOperationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeApplicationOperation(request);
+    }
+
+    @SdkInternalApi
+    final DescribeApplicationOperationResult executeDescribeApplicationOperation(DescribeApplicationOperationRequest describeApplicationOperationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeApplicationOperationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeApplicationOperationRequest> request = null;
+        Response<DescribeApplicationOperationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeApplicationOperationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeApplicationOperationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kinesis Analytics V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeApplicationOperation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeApplicationOperationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeApplicationOperationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * <p>
      * Returns information about a snapshot of application state data.
      * </p>
@@ -1630,6 +1694,69 @@ public class AmazonKinesisAnalyticsV2Client extends AmazonWebServiceClient imple
 
             HttpResponseHandler<AmazonWebServiceResponse<DiscoverInputSchemaResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DiscoverInputSchemaResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * Lists information about operations performed on a Managed Service for Apache Flink application
+     * 
+     * @param listApplicationOperationsRequest
+     *        Request to list operations performed on an application
+     * @return Result of the ListApplicationOperations operation returned by the service.
+     * @throws InvalidArgumentException
+     *         The specified input parameter value is not valid.
+     * @throws ResourceNotFoundException
+     *         Specified application can't be found.
+     * @throws UnsupportedOperationException
+     *         The request was rejected because a specified parameter is not supported or a specified resource is not
+     *         valid for this operation.
+     * @sample AmazonKinesisAnalyticsV2.ListApplicationOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisanalyticsv2-2018-05-23/ListApplicationOperations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListApplicationOperationsResult listApplicationOperations(ListApplicationOperationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListApplicationOperations(request);
+    }
+
+    @SdkInternalApi
+    final ListApplicationOperationsResult executeListApplicationOperations(ListApplicationOperationsRequest listApplicationOperationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listApplicationOperationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListApplicationOperationsRequest> request = null;
+        Response<ListApplicationOperationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListApplicationOperationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listApplicationOperationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kinesis Analytics V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListApplicationOperations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListApplicationOperationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListApplicationOperationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1903,17 +2030,15 @@ public class AmazonKinesisAnalyticsV2Client extends AmazonWebServiceClient imple
     /**
      * <p>
      * Reverts the application to the previous running version. You can roll back an application if you suspect it is
-     * stuck in a transient status.
+     * stuck in a transient status or in the running status.
      * </p>
      * <p>
-     * You can roll back an application only if it is in the <code>UPDATING</code> or <code>AUTOSCALING</code> status.
+     * You can roll back an application only if it is in the <code>UPDATING</code>, <code>AUTOSCALING</code>, or
+     * <code>RUNNING</code> statuses.
      * </p>
      * <p>
      * When you rollback an application, it loads state data from the last successful snapshot. If the application has
      * no snapshots, Managed Service for Apache Flink rejects the rollback request.
-     * </p>
-     * <p>
-     * This action is not supported for Managed Service for Apache Flink for SQL applications.
      * </p>
      * 
      * @param rollbackApplicationRequest

@@ -20,6 +20,7 @@ import com.amazonaws.services.kinesisanalyticsv2.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
+import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
@@ -30,6 +31,35 @@ public class StopApplicationResultJsonUnmarshaller implements Unmarshaller<StopA
 
     public StopApplicationResult unmarshall(JsonUnmarshallerContext context) throws Exception {
         StopApplicationResult stopApplicationResult = new StopApplicationResult();
+
+        int originalDepth = context.getCurrentDepth();
+        String currentParentElement = context.getCurrentParentElement();
+        int targetDepth = originalDepth + 1;
+
+        JsonToken token = context.getCurrentToken();
+        if (token == null)
+            token = context.nextToken();
+        if (token == VALUE_NULL) {
+            return stopApplicationResult;
+        }
+
+        while (true) {
+            if (token == null)
+                break;
+
+            if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("OperationId", targetDepth)) {
+                    context.nextToken();
+                    stopApplicationResult.setOperationId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+            } else if (token == END_ARRAY || token == END_OBJECT) {
+                if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
+                    if (context.getCurrentDepth() <= originalDepth)
+                        break;
+                }
+            }
+            token = context.nextToken();
+        }
 
         return stopApplicationResult;
     }

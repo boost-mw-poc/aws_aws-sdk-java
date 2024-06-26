@@ -93,6 +93,19 @@ public class AbstractAmazonIVSRealTimeAsync extends AbstractAmazonIVSRealTime im
     }
 
     @Override
+    public java.util.concurrent.Future<DeletePublicKeyResult> deletePublicKeyAsync(DeletePublicKeyRequest request) {
+
+        return deletePublicKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePublicKeyResult> deletePublicKeyAsync(DeletePublicKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePublicKeyRequest, DeletePublicKeyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteStageResult> deleteStageAsync(DeleteStageRequest request) {
 
         return deleteStageAsync(request, null);
@@ -171,6 +184,19 @@ public class AbstractAmazonIVSRealTimeAsync extends AbstractAmazonIVSRealTime im
     }
 
     @Override
+    public java.util.concurrent.Future<GetPublicKeyResult> getPublicKeyAsync(GetPublicKeyRequest request) {
+
+        return getPublicKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPublicKeyResult> getPublicKeyAsync(GetPublicKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetPublicKeyRequest, GetPublicKeyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetStageResult> getStageAsync(GetStageRequest request) {
 
         return getStageAsync(request, null);
@@ -205,6 +231,19 @@ public class AbstractAmazonIVSRealTimeAsync extends AbstractAmazonIVSRealTime im
     @Override
     public java.util.concurrent.Future<GetStorageConfigurationResult> getStorageConfigurationAsync(GetStorageConfigurationRequest request,
             com.amazonaws.handlers.AsyncHandler<GetStorageConfigurationRequest, GetStorageConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportPublicKeyResult> importPublicKeyAsync(ImportPublicKeyRequest request) {
+
+        return importPublicKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportPublicKeyResult> importPublicKeyAsync(ImportPublicKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<ImportPublicKeyRequest, ImportPublicKeyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -257,6 +296,19 @@ public class AbstractAmazonIVSRealTimeAsync extends AbstractAmazonIVSRealTime im
     @Override
     public java.util.concurrent.Future<ListParticipantsResult> listParticipantsAsync(ListParticipantsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListParticipantsRequest, ListParticipantsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPublicKeysResult> listPublicKeysAsync(ListPublicKeysRequest request) {
+
+        return listPublicKeysAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPublicKeysResult> listPublicKeysAsync(ListPublicKeysRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListPublicKeysRequest, ListPublicKeysResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -32,18 +32,171 @@ import com.amazonaws.services.controltower.model.*;
  * <ul>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/controls.html"> <i>controls</i> </a>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/controls.html"> <i>Controls</i> </a>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_DisableControl.html">DisableControl</a>
  * </p>
  * </li>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/lz-api-launch.html"> <i>landing zones</i> </a>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_EnableControl.html">EnableControl</a>
  * </p>
  * </li>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/types-of-baselines.html"> <i>baselines</i> </a>
+ * <a
+ * href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_GetEnabledControl.html">GetEnabledControl</a>
  * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_ListControlOperations.html">
+ * ListControlOperations</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_ListEnabledControls.html">
+ * ListEnabledControls</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_UpdateEnabledControl.html">
+ * UpdateEnabledControl</a>
+ * </p>
+ * </li>
+ * </ul>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/lz-api-launch.html"> <i>Landing zones</i> </a>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_CreateLandingZone.html">CreateLandingZone</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_DeleteLandingZone.html">DeleteLandingZone</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_GetLandingZone.html">GetLandingZone</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_GetLandingZoneOperation.html">
+ * GetLandingZoneOperation</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_ListLandingZones.html">ListLandingZones</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_ResetLandingZone.html">ResetLandingZone</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_UpdateLandingZone.html">UpdateLandingZone</a>
+ * </p>
+ * </li>
+ * </ul>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/types-of-baselines.html"> <i>Baselines</i> </a>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_DisableBaseline.html">DisableBaseline</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_EnableBaseline.html">EnableBaseline</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_GetBaseline.html">GetBaseline</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_GetBaselineOperation.html">
+ * GetBaselineOperation</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_GetEnabledBaseline.html">GetEnabledBaseline<
+ * /a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_ListBaselines.html">ListBaselines</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_ListEnabledBaselines.html">
+ * ListEnabledBaselines</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_ResetEnabledBaseline.html">
+ * ResetEnabledBaseline</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_UpdateEnabledBaseline.html">
+ * UpdateEnabledBaseline</a>
+ * </p>
+ * </li>
+ * </ul>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/controlreference/tagging.html">Tagging</a>
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_ListTagsForResource.html">
+ * ListTagsForResource</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_TagResource.html">TagResource</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/APIReference/API_UntagResource.html">UntagResource</a>
+ * </p>
+ * </li>
+ * </ul>
  * </li>
  * </ul>
  * <p>
@@ -89,19 +242,19 @@ import com.amazonaws.services.controltower.model.*;
  * <p>
  * The <code>controlIdentifier</code> is unique in each Amazon Web Services Region for each control. You can find the
  * <code>controlIdentifier</code> for each Region and control in the <a
- * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-metadata-tables.html">Tables of control
- * metadata</a> or the <a
- * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-region-tables.html">Control availability by
- * Region tables</a> in the <i>Amazon Web Services Control Tower User Guide.</i>
+ * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-metadata-tables.html">Tables of
+ * control metadata</a> or the <a
+ * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-region-tables.html">Control
+ * availability by Region tables</a> in the <i>Amazon Web Services Control Tower Controls Reference Guide</i>.
  * </p>
  * <p>
  * A quick-reference list of control identifers for the Amazon Web Services Control Tower legacy <i>Strongly
  * recommended</i> and <i>Elective</i> controls is given in <a
- * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-identifiers.html.html">Resource identifiers
- * for APIs and controls</a> in the <a
- * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-identifiers.html">Controls reference guide
- * section</a> of the <i>Amazon Web Services Control Tower User Guide</i>. Remember that <i>Mandatory</i> controls
- * cannot be added or removed.
+ * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-identifiers.html.html">Resource
+ * identifiers for APIs and controls</a> in the <a
+ * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-identifiers.html"> <i>Amazon Web
+ * Services Control Tower Controls Reference Guide</i> </a>. Remember that <i>Mandatory</i> controls cannot be added or
+ * removed.
  * </p>
  * <note>
  * <p>
@@ -173,8 +326,8 @@ import com.amazonaws.services.controltower.model.*;
  * <ul>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html">Control API input
- * and output examples with CLI</a>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">Control
+ * API input and output examples with CLI</a>
  * </p>
  * </li>
  * <li>
@@ -185,7 +338,7 @@ import com.amazonaws.services.controltower.model.*;
  * </li>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/enable-controls.html">Enable controls with
+ * <a href="https://docs.aws.amazon.com/controltower/latest/controlreference/enable-controls.html">Enable controls with
  * CloudFormation</a>
  * </p>
  * </li>
@@ -197,30 +350,30 @@ import com.amazonaws.services.controltower.model.*;
  * </li>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/control-metadata-tables.html">Control metadata
- * tables (large page)</a>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-metadata-tables.html">Control
+ * metadata tables (large page)</a>
  * </p>
  * </li>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/control-region-tables.html">Control availability
- * by Region tables (large page)</a>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-region-tables.html">Control
+ * availability by Region tables (large page)</a>
  * </p>
  * </li>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/control-identifiers.html">List of identifiers for
- * legacy controls</a>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-identifiers.html">List of
+ * identifiers for legacy controls</a>
  * </p>
  * </li>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/controls.html">Controls reference guide</a>
+ * <a href="https://docs.aws.amazon.com/controltower/latest/controlreference/controls.html">Controls reference guide</a>
  * </p>
  * </li>
  * <li>
  * <p>
- * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/controls-reference.html">Controls library
+ * <a href="https://docs.aws.amazon.com/controltower/latest/controlreference/controls-reference.html">Controls library
  * groupings</a>
  * </p>
  * </li>
@@ -328,11 +481,11 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * This API call turns off a control. It starts an asynchronous operation that deletes AWS resources on the
-     * specified organizational unit and the accounts it contains. The resources will vary according to the control that
-     * you specify. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * This API call turns off a control. It starts an asynchronous operation that deletes Amazon Web Services resources
+     * on the specified organizational unit and the accounts it contains. The resources will vary according to the
+     * control that you specify. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param disableControlRequest
@@ -345,11 +498,11 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * This API call turns off a control. It starts an asynchronous operation that deletes AWS resources on the
-     * specified organizational unit and the accounts it contains. The resources will vary according to the control that
-     * you specify. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * This API call turns off a control. It starts an asynchronous operation that deletes Amazon Web Services resources
+     * on the specified organizational unit and the accounts it contains. The resources will vary according to the
+     * control that you specify. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param disableControlRequest
@@ -406,9 +559,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
      * <p>
      * This API call activates a control. It starts an asynchronous operation that creates Amazon Web Services resources
      * on the specified organizational unit and the accounts it contains. The resources created will vary according to
-     * the control that you specify. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * the control that you specify. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param enableControlRequest
@@ -423,9 +576,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
      * <p>
      * This API call activates a control. It starts an asynchronous operation that creates Amazon Web Services resources
      * on the specified organizational unit and the accounts it contains. The resources created will vary according to
-     * the control that you specify. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * the control that you specify. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param enableControlRequest
@@ -518,9 +671,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
     /**
      * <p>
      * Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code> operation. Displays
-     * a message in case of error. Details for an operation are available for 90 days. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * a message in case of error. Details for an operation are available for 90 days. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param getControlOperationRequest
@@ -534,9 +687,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
     /**
      * <p>
      * Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code> operation. Displays
-     * a message in case of error. Details for an operation are available for 90 days. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * a message in case of error. Details for an operation are available for 90 days. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param getControlOperationRequest
@@ -585,9 +738,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Retrieves details about an enabled control. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * Retrieves details about an enabled control. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param getEnabledControlRequest
@@ -600,9 +753,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Retrieves details about an enabled control. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * Retrieves details about an enabled control. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param getEnabledControlRequest
@@ -686,7 +839,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Provides a list of operations in progress or queued.
+     * Provides a list of operations in progress or queued. For usage examples, see <a href=
+     * "https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html#list-control-operations-api-examples"
+     * >ListControlOperation examples</a>.
      * </p>
      * 
      * @param listControlOperationsRequest
@@ -699,7 +854,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Provides a list of operations in progress or queued.
+     * Provides a list of operations in progress or queued. For usage examples, see <a href=
+     * "https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html#list-control-operations-api-examples"
+     * >ListControlOperation examples</a>.
      * </p>
      * 
      * @param listControlOperationsRequest
@@ -757,9 +914,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
     /**
      * <p>
      * Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and the
-     * accounts it contains. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * accounts it contains. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param listEnabledControlsRequest
@@ -773,9 +930,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
     /**
      * <p>
      * Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and the
-     * accounts it contains. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * accounts it contains. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param listEnabledControlsRequest
@@ -790,6 +947,41 @@ public interface AWSControlTowerAsync extends AWSControlTower {
      */
     java.util.concurrent.Future<ListEnabledControlsResult> listEnabledControlsAsync(ListEnabledControlsRequest listEnabledControlsRequest,
             com.amazonaws.handlers.AsyncHandler<ListEnabledControlsRequest, ListEnabledControlsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all landing zone operations from the past 90 days. Results are sorted by time, with the most recent
+     * operation first.
+     * </p>
+     * 
+     * @param listLandingZoneOperationsRequest
+     * @return A Java Future containing the result of the ListLandingZoneOperations operation returned by the service.
+     * @sample AWSControlTowerAsync.ListLandingZoneOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListLandingZoneOperations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLandingZoneOperationsResult> listLandingZoneOperationsAsync(
+            ListLandingZoneOperationsRequest listLandingZoneOperationsRequest);
+
+    /**
+     * <p>
+     * Lists all landing zone operations from the past 90 days. Results are sorted by time, with the most recent
+     * operation first.
+     * </p>
+     * 
+     * @param listLandingZoneOperationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListLandingZoneOperations operation returned by the service.
+     * @sample AWSControlTowerAsyncHandler.ListLandingZoneOperations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListLandingZoneOperations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLandingZoneOperationsResult> listLandingZoneOperationsAsync(
+            ListLandingZoneOperationsRequest listLandingZoneOperationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListLandingZoneOperationsRequest, ListLandingZoneOperationsResult> asyncHandler);
 
     /**
      * <p>
@@ -832,9 +1024,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Returns a list of tags associated with the resource. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * Returns a list of tags associated with the resource. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -847,9 +1039,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Returns a list of tags associated with the resource. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * Returns a list of tags associated with the resource. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -905,7 +1097,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
     /**
      * <p>
      * This API call resets a landing zone. It starts an asynchronous operation that resets the landing zone to the
-     * parameters specified in its original configuration.
+     * parameters specified in the original configuration, which you specified in the manifest file. Nothing in the
+     * manifest file's original landing zone configuration is changed during the reset process, by default. This API is
+     * not the same as a rollback of a landing zone version, which is not a supported operation.
      * </p>
      * 
      * @param resetLandingZoneRequest
@@ -919,7 +1113,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
     /**
      * <p>
      * This API call resets a landing zone. It starts an asynchronous operation that resets the landing zone to the
-     * parameters specified in its original configuration.
+     * parameters specified in the original configuration, which you specified in the manifest file. Nothing in the
+     * manifest file's original landing zone configuration is changed during the reset process, by default. This API is
+     * not the same as a rollback of a landing zone version, which is not a supported operation.
      * </p>
      * 
      * @param resetLandingZoneRequest
@@ -937,9 +1133,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Applies tags to a resource. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * Applies tags to a resource. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -952,9 +1148,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Applies tags to a resource. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * Applies tags to a resource. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -972,9 +1168,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Removes tags from a resource. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * Removes tags from a resource. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param untagResourceRequest
@@ -987,9 +1183,9 @@ public interface AWSControlTowerAsync extends AWSControlTower {
 
     /**
      * <p>
-     * Removes tags from a resource. For usage examples, see <a
-     * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-api-examples-short.html"> <i>the Amazon
-     * Web Services Control Tower User Guide</i> </a>.
+     * Removes tags from a resource. For usage examples, see the <a
+     * href="https://docs.aws.amazon.com/controltower/latest/controlreference/control-api-examples-short.html">
+     * <i>Controls Reference Guide</i> </a>.
      * </p>
      * 
      * @param untagResourceRequest

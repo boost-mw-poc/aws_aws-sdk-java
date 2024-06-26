@@ -52,6 +52,10 @@ public class UpdateApplicationResultJsonUnmarshaller implements Unmarshaller<Upd
                     context.nextToken();
                     updateApplicationResult.setApplicationDetail(ApplicationDetailJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OperationId", targetDepth)) {
+                    context.nextToken();
+                    updateApplicationResult.setOperationId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

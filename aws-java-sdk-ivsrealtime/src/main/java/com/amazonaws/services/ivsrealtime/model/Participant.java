@@ -107,20 +107,20 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Name of the S3 bucket to where the participant is being recorded, if individual participant recording is enabled,
-     * or "" (empty string), if recording is not enabled.
+     * or <code>""</code> (empty string), if recording is not enabled.
      * </p>
      */
     private String recordingS3BucketName;
     /**
      * <p>
-     * S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording is
-     * enabled, or "" (empty string), if recording is not enabled.
+     * S3 prefix of the S3 bucket where the participant is being recorded, if individual participant recording is
+     * enabled, or <code>""</code> (empty string), if recording is not enabled.
      * </p>
      */
     private String recordingS3Prefix;
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      */
     private String recordingState;
@@ -697,12 +697,12 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Name of the S3 bucket to where the participant is being recorded, if individual participant recording is enabled,
-     * or "" (empty string), if recording is not enabled.
+     * or <code>""</code> (empty string), if recording is not enabled.
      * </p>
      * 
      * @param recordingS3BucketName
      *        Name of the S3 bucket to where the participant is being recorded, if individual participant recording is
-     *        enabled, or "" (empty string), if recording is not enabled.
+     *        enabled, or <code>""</code> (empty string), if recording is not enabled.
      */
 
     public void setRecordingS3BucketName(String recordingS3BucketName) {
@@ -712,11 +712,11 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Name of the S3 bucket to where the participant is being recorded, if individual participant recording is enabled,
-     * or "" (empty string), if recording is not enabled.
+     * or <code>""</code> (empty string), if recording is not enabled.
      * </p>
      * 
      * @return Name of the S3 bucket to where the participant is being recorded, if individual participant recording is
-     *         enabled, or "" (empty string), if recording is not enabled.
+     *         enabled, or <code>""</code> (empty string), if recording is not enabled.
      */
 
     public String getRecordingS3BucketName() {
@@ -726,12 +726,12 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Name of the S3 bucket to where the participant is being recorded, if individual participant recording is enabled,
-     * or "" (empty string), if recording is not enabled.
+     * or <code>""</code> (empty string), if recording is not enabled.
      * </p>
      * 
      * @param recordingS3BucketName
      *        Name of the S3 bucket to where the participant is being recorded, if individual participant recording is
-     *        enabled, or "" (empty string), if recording is not enabled.
+     *        enabled, or <code>""</code> (empty string), if recording is not enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -742,13 +742,13 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording is
-     * enabled, or "" (empty string), if recording is not enabled.
+     * S3 prefix of the S3 bucket where the participant is being recorded, if individual participant recording is
+     * enabled, or <code>""</code> (empty string), if recording is not enabled.
      * </p>
      * 
      * @param recordingS3Prefix
-     *        S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording
-     *        is enabled, or "" (empty string), if recording is not enabled.
+     *        S3 prefix of the S3 bucket where the participant is being recorded, if individual participant recording is
+     *        enabled, or <code>""</code> (empty string), if recording is not enabled.
      */
 
     public void setRecordingS3Prefix(String recordingS3Prefix) {
@@ -757,12 +757,12 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording is
-     * enabled, or "" (empty string), if recording is not enabled.
+     * S3 prefix of the S3 bucket where the participant is being recorded, if individual participant recording is
+     * enabled, or <code>""</code> (empty string), if recording is not enabled.
      * </p>
      * 
-     * @return S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant
-     *         recording is enabled, or "" (empty string), if recording is not enabled.
+     * @return S3 prefix of the S3 bucket where the participant is being recorded, if individual participant recording
+     *         is enabled, or <code>""</code> (empty string), if recording is not enabled.
      */
 
     public String getRecordingS3Prefix() {
@@ -771,13 +771,13 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording is
-     * enabled, or "" (empty string), if recording is not enabled.
+     * S3 prefix of the S3 bucket where the participant is being recorded, if individual participant recording is
+     * enabled, or <code>""</code> (empty string), if recording is not enabled.
      * </p>
      * 
      * @param recordingS3Prefix
-     *        S3 prefix of the S3 bucket to where the participant is being recorded, if individual participant recording
-     *        is enabled, or "" (empty string), if recording is not enabled.
+     *        S3 prefix of the S3 bucket where the participant is being recorded, if individual participant recording is
+     *        enabled, or <code>""</code> (empty string), if recording is not enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -788,11 +788,11 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      * 
      * @param recordingState
-     *        Participant’s recording state.
+     *        The participant’s recording state.
      * @see ParticipantRecordingState
      */
 
@@ -802,10 +802,10 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      * 
-     * @return Participant’s recording state.
+     * @return The participant’s recording state.
      * @see ParticipantRecordingState
      */
 
@@ -815,11 +815,11 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      * 
      * @param recordingState
-     *        Participant’s recording state.
+     *        The participant’s recording state.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParticipantRecordingState
      */
@@ -831,11 +831,11 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Participant’s recording state.
+     * The participant’s recording state.
      * </p>
      * 
      * @param recordingState
-     *        Participant’s recording state.
+     *        The participant’s recording state.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParticipantRecordingState
      */

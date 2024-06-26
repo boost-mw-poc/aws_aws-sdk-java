@@ -43,6 +43,8 @@ public class AddApplicationVpcConfigurationResult extends com.amazonaws.AmazonWe
      * </p>
      */
     private VpcConfigurationDescription vpcConfigurationDescription;
+    /** Operation ID for tracking AddApplicationVpcConfiguration request */
+    private String operationId;
 
     /**
      * <p>
@@ -171,6 +173,40 @@ public class AddApplicationVpcConfigurationResult extends com.amazonaws.AmazonWe
     }
 
     /**
+     * Operation ID for tracking AddApplicationVpcConfiguration request
+     * 
+     * @param operationId
+     *        Operation ID for tracking AddApplicationVpcConfiguration request
+     */
+
+    public void setOperationId(String operationId) {
+        this.operationId = operationId;
+    }
+
+    /**
+     * Operation ID for tracking AddApplicationVpcConfiguration request
+     * 
+     * @return Operation ID for tracking AddApplicationVpcConfiguration request
+     */
+
+    public String getOperationId() {
+        return this.operationId;
+    }
+
+    /**
+     * Operation ID for tracking AddApplicationVpcConfiguration request
+     * 
+     * @param operationId
+     *        Operation ID for tracking AddApplicationVpcConfiguration request
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AddApplicationVpcConfigurationResult withOperationId(String operationId) {
+        setOperationId(operationId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -187,7 +223,9 @@ public class AddApplicationVpcConfigurationResult extends com.amazonaws.AmazonWe
         if (getApplicationVersionId() != null)
             sb.append("ApplicationVersionId: ").append(getApplicationVersionId()).append(",");
         if (getVpcConfigurationDescription() != null)
-            sb.append("VpcConfigurationDescription: ").append(getVpcConfigurationDescription());
+            sb.append("VpcConfigurationDescription: ").append(getVpcConfigurationDescription()).append(",");
+        if (getOperationId() != null)
+            sb.append("OperationId: ").append(getOperationId());
         sb.append("}");
         return sb.toString();
     }
@@ -214,6 +252,10 @@ public class AddApplicationVpcConfigurationResult extends com.amazonaws.AmazonWe
             return false;
         if (other.getVpcConfigurationDescription() != null && other.getVpcConfigurationDescription().equals(this.getVpcConfigurationDescription()) == false)
             return false;
+        if (other.getOperationId() == null ^ this.getOperationId() == null)
+            return false;
+        if (other.getOperationId() != null && other.getOperationId().equals(this.getOperationId()) == false)
+            return false;
         return true;
     }
 
@@ -225,6 +267,7 @@ public class AddApplicationVpcConfigurationResult extends com.amazonaws.AmazonWe
         hashCode = prime * hashCode + ((getApplicationARN() == null) ? 0 : getApplicationARN().hashCode());
         hashCode = prime * hashCode + ((getApplicationVersionId() == null) ? 0 : getApplicationVersionId().hashCode());
         hashCode = prime * hashCode + ((getVpcConfigurationDescription() == null) ? 0 : getVpcConfigurationDescription().hashCode());
+        hashCode = prime * hashCode + ((getOperationId() == null) ? 0 : getOperationId().hashCode());
         return hashCode;
     }
 

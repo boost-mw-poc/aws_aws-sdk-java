@@ -58,6 +58,8 @@ public class ApplicationConfiguration implements Serializable, Cloneable, Struct
      * </p>
      */
     private ApplicationSnapshotConfiguration applicationSnapshotConfiguration;
+
+    private ApplicationSystemRollbackConfiguration applicationSystemRollbackConfiguration;
     /**
      * <p>
      * The array of descriptions of VPC configurations available to the application.
@@ -272,6 +274,32 @@ public class ApplicationConfiguration implements Serializable, Cloneable, Struct
     }
 
     /**
+     * @param applicationSystemRollbackConfiguration
+     */
+
+    public void setApplicationSystemRollbackConfiguration(ApplicationSystemRollbackConfiguration applicationSystemRollbackConfiguration) {
+        this.applicationSystemRollbackConfiguration = applicationSystemRollbackConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public ApplicationSystemRollbackConfiguration getApplicationSystemRollbackConfiguration() {
+        return this.applicationSystemRollbackConfiguration;
+    }
+
+    /**
+     * @param applicationSystemRollbackConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApplicationConfiguration withApplicationSystemRollbackConfiguration(ApplicationSystemRollbackConfiguration applicationSystemRollbackConfiguration) {
+        setApplicationSystemRollbackConfiguration(applicationSystemRollbackConfiguration);
+        return this;
+    }
+
+    /**
      * <p>
      * The array of descriptions of VPC configurations available to the application.
      * </p>
@@ -403,6 +431,8 @@ public class ApplicationConfiguration implements Serializable, Cloneable, Struct
             sb.append("ApplicationCodeConfiguration: ").append(getApplicationCodeConfiguration()).append(",");
         if (getApplicationSnapshotConfiguration() != null)
             sb.append("ApplicationSnapshotConfiguration: ").append(getApplicationSnapshotConfiguration()).append(",");
+        if (getApplicationSystemRollbackConfiguration() != null)
+            sb.append("ApplicationSystemRollbackConfiguration: ").append(getApplicationSystemRollbackConfiguration()).append(",");
         if (getVpcConfigurations() != null)
             sb.append("VpcConfigurations: ").append(getVpcConfigurations()).append(",");
         if (getZeppelinApplicationConfiguration() != null)
@@ -443,6 +473,11 @@ public class ApplicationConfiguration implements Serializable, Cloneable, Struct
         if (other.getApplicationSnapshotConfiguration() != null
                 && other.getApplicationSnapshotConfiguration().equals(this.getApplicationSnapshotConfiguration()) == false)
             return false;
+        if (other.getApplicationSystemRollbackConfiguration() == null ^ this.getApplicationSystemRollbackConfiguration() == null)
+            return false;
+        if (other.getApplicationSystemRollbackConfiguration() != null
+                && other.getApplicationSystemRollbackConfiguration().equals(this.getApplicationSystemRollbackConfiguration()) == false)
+            return false;
         if (other.getVpcConfigurations() == null ^ this.getVpcConfigurations() == null)
             return false;
         if (other.getVpcConfigurations() != null && other.getVpcConfigurations().equals(this.getVpcConfigurations()) == false)
@@ -465,6 +500,7 @@ public class ApplicationConfiguration implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getEnvironmentProperties() == null) ? 0 : getEnvironmentProperties().hashCode());
         hashCode = prime * hashCode + ((getApplicationCodeConfiguration() == null) ? 0 : getApplicationCodeConfiguration().hashCode());
         hashCode = prime * hashCode + ((getApplicationSnapshotConfiguration() == null) ? 0 : getApplicationSnapshotConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getApplicationSystemRollbackConfiguration() == null) ? 0 : getApplicationSystemRollbackConfiguration().hashCode());
         hashCode = prime * hashCode + ((getVpcConfigurations() == null) ? 0 : getVpcConfigurations().hashCode());
         hashCode = prime * hashCode + ((getZeppelinApplicationConfiguration() == null) ? 0 : getZeppelinApplicationConfiguration().hashCode());
         return hashCode;

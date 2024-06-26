@@ -120,6 +120,20 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private CreateAccessConfigRequest accessConfig;
+    /**
+     * <p>
+     * If you set this value to <code>False</code> when creating a cluster, the default networking add-ons will not be
+     * installed.
+     * </p>
+     * <p>
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * </p>
+     * <p>
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the default networking
+     * add-ons.
+     * </p>
+     */
+    private Boolean bootstrapSelfManagedAddons;
 
     /**
      * <p>
@@ -782,6 +796,118 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * If you set this value to <code>False</code> when creating a cluster, the default networking add-ons will not be
+     * installed.
+     * </p>
+     * <p>
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * </p>
+     * <p>
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the default networking
+     * add-ons.
+     * </p>
+     * 
+     * @param bootstrapSelfManagedAddons
+     *        If you set this value to <code>False</code> when creating a cluster, the default networking add-ons will
+     *        not be installed.</p>
+     *        <p>
+     *        The default networking addons include vpc-cni, coredns, and kube-proxy.
+     *        </p>
+     *        <p>
+     *        Use this option when you plan to install third-party alternative add-ons or self-manage the default
+     *        networking add-ons.
+     */
+
+    public void setBootstrapSelfManagedAddons(Boolean bootstrapSelfManagedAddons) {
+        this.bootstrapSelfManagedAddons = bootstrapSelfManagedAddons;
+    }
+
+    /**
+     * <p>
+     * If you set this value to <code>False</code> when creating a cluster, the default networking add-ons will not be
+     * installed.
+     * </p>
+     * <p>
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * </p>
+     * <p>
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the default networking
+     * add-ons.
+     * </p>
+     * 
+     * @return If you set this value to <code>False</code> when creating a cluster, the default networking add-ons will
+     *         not be installed.</p>
+     *         <p>
+     *         The default networking addons include vpc-cni, coredns, and kube-proxy.
+     *         </p>
+     *         <p>
+     *         Use this option when you plan to install third-party alternative add-ons or self-manage the default
+     *         networking add-ons.
+     */
+
+    public Boolean getBootstrapSelfManagedAddons() {
+        return this.bootstrapSelfManagedAddons;
+    }
+
+    /**
+     * <p>
+     * If you set this value to <code>False</code> when creating a cluster, the default networking add-ons will not be
+     * installed.
+     * </p>
+     * <p>
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * </p>
+     * <p>
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the default networking
+     * add-ons.
+     * </p>
+     * 
+     * @param bootstrapSelfManagedAddons
+     *        If you set this value to <code>False</code> when creating a cluster, the default networking add-ons will
+     *        not be installed.</p>
+     *        <p>
+     *        The default networking addons include vpc-cni, coredns, and kube-proxy.
+     *        </p>
+     *        <p>
+     *        Use this option when you plan to install third-party alternative add-ons or self-manage the default
+     *        networking add-ons.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateClusterRequest withBootstrapSelfManagedAddons(Boolean bootstrapSelfManagedAddons) {
+        setBootstrapSelfManagedAddons(bootstrapSelfManagedAddons);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If you set this value to <code>False</code> when creating a cluster, the default networking add-ons will not be
+     * installed.
+     * </p>
+     * <p>
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     * </p>
+     * <p>
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the default networking
+     * add-ons.
+     * </p>
+     * 
+     * @return If you set this value to <code>False</code> when creating a cluster, the default networking add-ons will
+     *         not be installed.</p>
+     *         <p>
+     *         The default networking addons include vpc-cni, coredns, and kube-proxy.
+     *         </p>
+     *         <p>
+     *         Use this option when you plan to install third-party alternative add-ons or self-manage the default
+     *         networking add-ons.
+     */
+
+    public Boolean isBootstrapSelfManagedAddons() {
+        return this.bootstrapSelfManagedAddons;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -814,7 +940,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getOutpostConfig() != null)
             sb.append("OutpostConfig: ").append(getOutpostConfig()).append(",");
         if (getAccessConfig() != null)
-            sb.append("AccessConfig: ").append(getAccessConfig());
+            sb.append("AccessConfig: ").append(getAccessConfig()).append(",");
+        if (getBootstrapSelfManagedAddons() != null)
+            sb.append("BootstrapSelfManagedAddons: ").append(getBootstrapSelfManagedAddons());
         sb.append("}");
         return sb.toString();
     }
@@ -873,6 +1001,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getAccessConfig() != null && other.getAccessConfig().equals(this.getAccessConfig()) == false)
             return false;
+        if (other.getBootstrapSelfManagedAddons() == null ^ this.getBootstrapSelfManagedAddons() == null)
+            return false;
+        if (other.getBootstrapSelfManagedAddons() != null && other.getBootstrapSelfManagedAddons().equals(this.getBootstrapSelfManagedAddons()) == false)
+            return false;
         return true;
     }
 
@@ -892,6 +1024,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getEncryptionConfig() == null) ? 0 : getEncryptionConfig().hashCode());
         hashCode = prime * hashCode + ((getOutpostConfig() == null) ? 0 : getOutpostConfig().hashCode());
         hashCode = prime * hashCode + ((getAccessConfig() == null) ? 0 : getAccessConfig().hashCode());
+        hashCode = prime * hashCode + ((getBootstrapSelfManagedAddons() == null) ? 0 : getBootstrapSelfManagedAddons().hashCode());
         return hashCode;
     }
 

@@ -36,6 +36,12 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
     private java.util.Date endTime;
     /**
      * <p>
+     * The <code>operationIdentifier</code> of the landing zone operation.
+     * </p>
+     */
+    private String operationIdentifier;
+    /**
+     * <p>
      * The landing zone operation type.
      * </p>
      * <p>
@@ -138,6 +144,46 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
 
     public LandingZoneOperationDetail withEndTime(java.util.Date endTime) {
         setEndTime(endTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The <code>operationIdentifier</code> of the landing zone operation.
+     * </p>
+     * 
+     * @param operationIdentifier
+     *        The <code>operationIdentifier</code> of the landing zone operation.
+     */
+
+    public void setOperationIdentifier(String operationIdentifier) {
+        this.operationIdentifier = operationIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>operationIdentifier</code> of the landing zone operation.
+     * </p>
+     * 
+     * @return The <code>operationIdentifier</code> of the landing zone operation.
+     */
+
+    public String getOperationIdentifier() {
+        return this.operationIdentifier;
+    }
+
+    /**
+     * <p>
+     * The <code>operationIdentifier</code> of the landing zone operation.
+     * </p>
+     * 
+     * @param operationIdentifier
+     *        The <code>operationIdentifier</code> of the landing zone operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LandingZoneOperationDetail withOperationIdentifier(String operationIdentifier) {
+        setOperationIdentifier(operationIdentifier);
         return this;
     }
 
@@ -681,6 +727,8 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
         sb.append("{");
         if (getEndTime() != null)
             sb.append("EndTime: ").append(getEndTime()).append(",");
+        if (getOperationIdentifier() != null)
+            sb.append("OperationIdentifier: ").append(getOperationIdentifier()).append(",");
         if (getOperationType() != null)
             sb.append("OperationType: ").append(getOperationType()).append(",");
         if (getStartTime() != null)
@@ -707,6 +755,10 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
             return false;
         if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
             return false;
+        if (other.getOperationIdentifier() == null ^ this.getOperationIdentifier() == null)
+            return false;
+        if (other.getOperationIdentifier() != null && other.getOperationIdentifier().equals(this.getOperationIdentifier()) == false)
+            return false;
         if (other.getOperationType() == null ^ this.getOperationType() == null)
             return false;
         if (other.getOperationType() != null && other.getOperationType().equals(this.getOperationType()) == false)
@@ -732,6 +784,7 @@ public class LandingZoneOperationDetail implements Serializable, Cloneable, Stru
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
+        hashCode = prime * hashCode + ((getOperationIdentifier() == null) ? 0 : getOperationIdentifier().hashCode());
         hashCode = prime * hashCode + ((getOperationType() == null) ? 0 : getOperationType().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());

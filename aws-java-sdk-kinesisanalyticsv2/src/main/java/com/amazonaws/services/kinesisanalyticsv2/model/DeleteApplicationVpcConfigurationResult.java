@@ -36,6 +36,8 @@ public class DeleteApplicationVpcConfigurationResult extends com.amazonaws.Amazo
      * </p>
      */
     private Long applicationVersionId;
+    /** Operation ID for tracking DeleteApplicationVpcConfiguration request */
+    private String operationId;
 
     /**
      * <p>
@@ -118,6 +120,40 @@ public class DeleteApplicationVpcConfigurationResult extends com.amazonaws.Amazo
     }
 
     /**
+     * Operation ID for tracking DeleteApplicationVpcConfiguration request
+     * 
+     * @param operationId
+     *        Operation ID for tracking DeleteApplicationVpcConfiguration request
+     */
+
+    public void setOperationId(String operationId) {
+        this.operationId = operationId;
+    }
+
+    /**
+     * Operation ID for tracking DeleteApplicationVpcConfiguration request
+     * 
+     * @return Operation ID for tracking DeleteApplicationVpcConfiguration request
+     */
+
+    public String getOperationId() {
+        return this.operationId;
+    }
+
+    /**
+     * Operation ID for tracking DeleteApplicationVpcConfiguration request
+     * 
+     * @param operationId
+     *        Operation ID for tracking DeleteApplicationVpcConfiguration request
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteApplicationVpcConfigurationResult withOperationId(String operationId) {
+        setOperationId(operationId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -132,7 +168,9 @@ public class DeleteApplicationVpcConfigurationResult extends com.amazonaws.Amazo
         if (getApplicationARN() != null)
             sb.append("ApplicationARN: ").append(getApplicationARN()).append(",");
         if (getApplicationVersionId() != null)
-            sb.append("ApplicationVersionId: ").append(getApplicationVersionId());
+            sb.append("ApplicationVersionId: ").append(getApplicationVersionId()).append(",");
+        if (getOperationId() != null)
+            sb.append("OperationId: ").append(getOperationId());
         sb.append("}");
         return sb.toString();
     }
@@ -155,6 +193,10 @@ public class DeleteApplicationVpcConfigurationResult extends com.amazonaws.Amazo
             return false;
         if (other.getApplicationVersionId() != null && other.getApplicationVersionId().equals(this.getApplicationVersionId()) == false)
             return false;
+        if (other.getOperationId() == null ^ this.getOperationId() == null)
+            return false;
+        if (other.getOperationId() != null && other.getOperationId().equals(this.getOperationId()) == false)
+            return false;
         return true;
     }
 
@@ -165,6 +207,7 @@ public class DeleteApplicationVpcConfigurationResult extends com.amazonaws.Amazo
 
         hashCode = prime * hashCode + ((getApplicationARN() == null) ? 0 : getApplicationARN().hashCode());
         hashCode = prime * hashCode + ((getApplicationVersionId() == null) ? 0 : getApplicationVersionId().hashCode());
+        hashCode = prime * hashCode + ((getOperationId() == null) ? 0 : getOperationId().hashCode());
         return hashCode;
     }
 

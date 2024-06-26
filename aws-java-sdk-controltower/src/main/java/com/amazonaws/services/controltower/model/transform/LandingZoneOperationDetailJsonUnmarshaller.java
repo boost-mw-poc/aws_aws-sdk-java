@@ -52,6 +52,10 @@ public class LandingZoneOperationDetailJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     landingZoneOperationDetail.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("operationIdentifier", targetDepth)) {
+                    context.nextToken();
+                    landingZoneOperationDetail.setOperationIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("operationType", targetDepth)) {
                     context.nextToken();
                     landingZoneOperationDetail.setOperationType(context.getUnmarshaller(String.class).unmarshall(context));

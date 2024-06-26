@@ -38,6 +38,8 @@ public class ApplicationConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationCodeConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> APPLICATIONSNAPSHOTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationSnapshotConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> APPLICATIONSYSTEMROLLBACKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationSystemRollbackConfiguration").build();
     private static final MarshallingInfo<List> VPCCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcConfigurations").build();
     private static final MarshallingInfo<StructuredPojo> ZEPPELINAPPLICATIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -64,6 +66,7 @@ public class ApplicationConfigurationMarshaller {
             protocolMarshaller.marshall(applicationConfiguration.getEnvironmentProperties(), ENVIRONMENTPROPERTIES_BINDING);
             protocolMarshaller.marshall(applicationConfiguration.getApplicationCodeConfiguration(), APPLICATIONCODECONFIGURATION_BINDING);
             protocolMarshaller.marshall(applicationConfiguration.getApplicationSnapshotConfiguration(), APPLICATIONSNAPSHOTCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(applicationConfiguration.getApplicationSystemRollbackConfiguration(), APPLICATIONSYSTEMROLLBACKCONFIGURATION_BINDING);
             protocolMarshaller.marshall(applicationConfiguration.getVpcConfigurations(), VPCCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(applicationConfiguration.getZeppelinApplicationConfiguration(), ZEPPELINAPPLICATIONCONFIGURATION_BINDING);
         } catch (Exception e) {

@@ -109,6 +109,10 @@ public class ApplicationDetailJsonUnmarshaller implements Unmarshaller<Applicati
                     context.nextToken();
                     applicationDetail.setApplicationVersionRolledBackFrom(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("ApplicationVersionCreateTimestamp", targetDepth)) {
+                    context.nextToken();
+                    applicationDetail.setApplicationVersionCreateTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
                 if (context.testExpression("ConditionalToken", targetDepth)) {
                     context.nextToken();
                     applicationDetail.setConditionalToken(context.getUnmarshaller(String.class).unmarshall(context));

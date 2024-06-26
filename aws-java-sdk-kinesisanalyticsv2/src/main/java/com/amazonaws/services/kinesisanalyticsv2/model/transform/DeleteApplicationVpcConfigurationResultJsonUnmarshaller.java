@@ -56,6 +56,10 @@ public class DeleteApplicationVpcConfigurationResultJsonUnmarshaller implements 
                     context.nextToken();
                     deleteApplicationVpcConfigurationResult.setApplicationVersionId(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("OperationId", targetDepth)) {
+                    context.nextToken();
+                    deleteApplicationVpcConfigurationResult.setOperationId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

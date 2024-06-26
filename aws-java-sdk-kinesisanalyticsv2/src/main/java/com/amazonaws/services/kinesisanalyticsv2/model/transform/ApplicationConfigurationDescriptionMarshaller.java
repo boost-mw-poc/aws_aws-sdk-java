@@ -41,6 +41,9 @@ public class ApplicationConfigurationDescriptionMarshaller {
     private static final MarshallingInfo<StructuredPojo> APPLICATIONSNAPSHOTCONFIGURATIONDESCRIPTION_BINDING = MarshallingInfo
             .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplicationSnapshotConfigurationDescription")
             .build();
+    private static final MarshallingInfo<StructuredPojo> APPLICATIONSYSTEMROLLBACKCONFIGURATIONDESCRIPTION_BINDING = MarshallingInfo
+            .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ApplicationSystemRollbackConfigurationDescription").build();
     private static final MarshallingInfo<List> VPCCONFIGURATIONDESCRIPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcConfigurationDescriptions").build();
     private static final MarshallingInfo<StructuredPojo> ZEPPELINAPPLICATIONCONFIGURATIONDESCRIPTION_BINDING = MarshallingInfo
@@ -73,6 +76,8 @@ public class ApplicationConfigurationDescriptionMarshaller {
             protocolMarshaller.marshall(applicationConfigurationDescription.getEnvironmentPropertyDescriptions(), ENVIRONMENTPROPERTYDESCRIPTIONS_BINDING);
             protocolMarshaller.marshall(applicationConfigurationDescription.getApplicationSnapshotConfigurationDescription(),
                     APPLICATIONSNAPSHOTCONFIGURATIONDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(applicationConfigurationDescription.getApplicationSystemRollbackConfigurationDescription(),
+                    APPLICATIONSYSTEMROLLBACKCONFIGURATIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(applicationConfigurationDescription.getVpcConfigurationDescriptions(), VPCCONFIGURATIONDESCRIPTIONS_BINDING);
             protocolMarshaller.marshall(applicationConfigurationDescription.getZeppelinApplicationConfigurationDescription(),
                     ZEPPELINAPPLICATIONCONFIGURATIONDESCRIPTION_BINDING);

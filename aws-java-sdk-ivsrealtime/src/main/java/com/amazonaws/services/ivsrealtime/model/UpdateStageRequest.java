@@ -39,8 +39,8 @@ public class UpdateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String name;
     /**
      * <p>
-     * Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording configuration
-     * cannot be updated while recording is active.
+     * Configuration object for individual participant recording, to attach to the stage. Note that this cannot be
+     * updated while recording is active.
      * </p>
      */
     private AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration;
@@ -127,13 +127,13 @@ public class UpdateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording configuration
-     * cannot be updated while recording is active.
+     * Configuration object for individual participant recording, to attach to the stage. Note that this cannot be
+     * updated while recording is active.
      * </p>
      * 
      * @param autoParticipantRecordingConfiguration
-     *        Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording
-     *        configuration cannot be updated while recording is active.
+     *        Configuration object for individual participant recording, to attach to the stage. Note that this cannot
+     *        be updated while recording is active.
      */
 
     public void setAutoParticipantRecordingConfiguration(AutoParticipantRecordingConfiguration autoParticipantRecordingConfiguration) {
@@ -142,12 +142,12 @@ public class UpdateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording configuration
-     * cannot be updated while recording is active.
+     * Configuration object for individual participant recording, to attach to the stage. Note that this cannot be
+     * updated while recording is active.
      * </p>
      * 
-     * @return Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording
-     *         configuration cannot be updated while recording is active.
+     * @return Configuration object for individual participant recording, to attach to the stage. Note that this cannot
+     *         be updated while recording is active.
      */
 
     public AutoParticipantRecordingConfiguration getAutoParticipantRecordingConfiguration() {
@@ -156,13 +156,13 @@ public class UpdateStageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording configuration
-     * cannot be updated while recording is active.
+     * Configuration object for individual participant recording, to attach to the stage. Note that this cannot be
+     * updated while recording is active.
      * </p>
      * 
      * @param autoParticipantRecordingConfiguration
-     *        Auto-participant-recording configuration object to attach to the stage. Auto-participant-recording
-     *        configuration cannot be updated while recording is active.
+     *        Configuration object for individual participant recording, to attach to the stage. Note that this cannot
+     *        be updated while recording is active.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

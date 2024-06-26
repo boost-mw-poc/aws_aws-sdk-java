@@ -39,6 +39,8 @@ public class StageMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<StructuredPojo> AUTOPARTICIPANTRECORDINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoParticipantRecordingConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> ENDPOINTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endpoints").build();
 
     private static final StageMarshaller instance = new StageMarshaller();
 
@@ -61,6 +63,7 @@ public class StageMarshaller {
             protocolMarshaller.marshall(stage.getActiveSessionId(), ACTIVESESSIONID_BINDING);
             protocolMarshaller.marshall(stage.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(stage.getAutoParticipantRecordingConfiguration(), AUTOPARTICIPANTRECORDINGCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(stage.getEndpoints(), ENDPOINTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

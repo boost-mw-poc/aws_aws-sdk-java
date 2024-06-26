@@ -189,6 +189,12 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private SoftwareUpdateOptions softwareUpdateOptions;
+    /**
+     * <p>
+     * Options for all machine learning features for the specified domain.
+     * </p>
+     */
+    private AIMLOptionsInput aIMLOptions;
 
     /**
      * <p>
@@ -1395,6 +1401,46 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * Options for all machine learning features for the specified domain.
+     * </p>
+     * 
+     * @param aIMLOptions
+     *        Options for all machine learning features for the specified domain.
+     */
+
+    public void setAIMLOptions(AIMLOptionsInput aIMLOptions) {
+        this.aIMLOptions = aIMLOptions;
+    }
+
+    /**
+     * <p>
+     * Options for all machine learning features for the specified domain.
+     * </p>
+     * 
+     * @return Options for all machine learning features for the specified domain.
+     */
+
+    public AIMLOptionsInput getAIMLOptions() {
+        return this.aIMLOptions;
+    }
+
+    /**
+     * <p>
+     * Options for all machine learning features for the specified domain.
+     * </p>
+     * 
+     * @param aIMLOptions
+     *        Options for all machine learning features for the specified domain.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDomainConfigRequest withAIMLOptions(AIMLOptionsInput aIMLOptions) {
+        setAIMLOptions(aIMLOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1443,7 +1489,9 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
         if (getOffPeakWindowOptions() != null)
             sb.append("OffPeakWindowOptions: ").append(getOffPeakWindowOptions()).append(",");
         if (getSoftwareUpdateOptions() != null)
-            sb.append("SoftwareUpdateOptions: ").append(getSoftwareUpdateOptions());
+            sb.append("SoftwareUpdateOptions: ").append(getSoftwareUpdateOptions()).append(",");
+        if (getAIMLOptions() != null)
+            sb.append("AIMLOptions: ").append(getAIMLOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -1534,6 +1582,10 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getSoftwareUpdateOptions() != null && other.getSoftwareUpdateOptions().equals(this.getSoftwareUpdateOptions()) == false)
             return false;
+        if (other.getAIMLOptions() == null ^ this.getAIMLOptions() == null)
+            return false;
+        if (other.getAIMLOptions() != null && other.getAIMLOptions().equals(this.getAIMLOptions()) == false)
+            return false;
         return true;
     }
 
@@ -1561,6 +1613,7 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getDryRunMode() == null) ? 0 : getDryRunMode().hashCode());
         hashCode = prime * hashCode + ((getOffPeakWindowOptions() == null) ? 0 : getOffPeakWindowOptions().hashCode());
         hashCode = prime * hashCode + ((getSoftwareUpdateOptions() == null) ? 0 : getSoftwareUpdateOptions().hashCode());
+        hashCode = prime * hashCode + ((getAIMLOptions() == null) ? 0 : getAIMLOptions().hashCode());
         return hashCode;
     }
 

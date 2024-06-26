@@ -79,6 +79,12 @@ public class ApplicationConfigurationDescriptionJsonUnmarshaller implements Unma
                             .setApplicationSnapshotConfigurationDescription(ApplicationSnapshotConfigurationDescriptionJsonUnmarshaller.getInstance()
                                     .unmarshall(context));
                 }
+                if (context.testExpression("ApplicationSystemRollbackConfigurationDescription", targetDepth)) {
+                    context.nextToken();
+                    applicationConfigurationDescription
+                            .setApplicationSystemRollbackConfigurationDescription(ApplicationSystemRollbackConfigurationDescriptionJsonUnmarshaller
+                                    .getInstance().unmarshall(context));
+                }
                 if (context.testExpression("VpcConfigurationDescriptions", targetDepth)) {
                     context.nextToken();
                     applicationConfigurationDescription.setVpcConfigurationDescriptions(new ListUnmarshaller<VpcConfigurationDescription>(

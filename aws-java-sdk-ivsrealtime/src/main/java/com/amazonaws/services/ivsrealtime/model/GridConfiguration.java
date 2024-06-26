@@ -33,7 +33,8 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * This attribute name identifies the featured slot. A participant with this attribute set to <code>"true"</code>
-     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot.
+     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot. Default:
+     * <code>""</code> (no featured participant).
      * </p>
      */
     private String featuredParticipantAttribute;
@@ -45,13 +46,15 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
     private Boolean omitStoppedVideo;
     /**
      * <p>
-     * Sets the non-featured participant display mode. Default: <code>VIDEO</code>.
+     * Sets the non-featured participant display mode, to control the aspect ratio of video tiles. <code>VIDEO</code> is
+     * 16:9, <code>SQUARE</code> is 1:1, and <code>PORTRAIT</code> is 3:4. Default: <code>VIDEO</code>.
      * </p>
      */
     private String videoAspectRatio;
     /**
      * <p>
-     * Defines how video fits within the participant tile. When not set, <code>videoFillMode</code> defaults to
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). When not set, <code>videoFillMode</code> defaults to
      * <code>COVER</code> fill mode for participants in the grid and to <code>CONTAIN</code> fill mode for featured
      * participants.
      * </p>
@@ -67,13 +70,14 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * This attribute name identifies the featured slot. A participant with this attribute set to <code>"true"</code>
-     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot.
+     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot. Default:
+     * <code>""</code> (no featured participant).
      * </p>
      * 
      * @param featuredParticipantAttribute
      *        This attribute name identifies the featured slot. A participant with this attribute set to
      *        <code>"true"</code> (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured
-     *        slot.
+     *        slot. Default: <code>""</code> (no featured participant).
      */
 
     public void setFeaturedParticipantAttribute(String featuredParticipantAttribute) {
@@ -83,12 +87,13 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * This attribute name identifies the featured slot. A participant with this attribute set to <code>"true"</code>
-     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot.
+     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot. Default:
+     * <code>""</code> (no featured participant).
      * </p>
      * 
      * @return This attribute name identifies the featured slot. A participant with this attribute set to
      *         <code>"true"</code> (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured
-     *         slot.
+     *         slot. Default: <code>""</code> (no featured participant).
      */
 
     public String getFeaturedParticipantAttribute() {
@@ -98,13 +103,14 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * This attribute name identifies the featured slot. A participant with this attribute set to <code>"true"</code>
-     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot.
+     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot. Default:
+     * <code>""</code> (no featured participant).
      * </p>
      * 
      * @param featuredParticipantAttribute
      *        This attribute name identifies the featured slot. A participant with this attribute set to
      *        <code>"true"</code> (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured
-     *        slot.
+     *        slot. Default: <code>""</code> (no featured participant).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -171,11 +177,14 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Sets the non-featured participant display mode. Default: <code>VIDEO</code>.
+     * Sets the non-featured participant display mode, to control the aspect ratio of video tiles. <code>VIDEO</code> is
+     * 16:9, <code>SQUARE</code> is 1:1, and <code>PORTRAIT</code> is 3:4. Default: <code>VIDEO</code>.
      * </p>
      * 
      * @param videoAspectRatio
-     *        Sets the non-featured participant display mode. Default: <code>VIDEO</code>.
+     *        Sets the non-featured participant display mode, to control the aspect ratio of video tiles.
+     *        <code>VIDEO</code> is 16:9, <code>SQUARE</code> is 1:1, and <code>PORTRAIT</code> is 3:4. Default:
+     *        <code>VIDEO</code>.
      * @see VideoAspectRatio
      */
 
@@ -185,10 +194,13 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Sets the non-featured participant display mode. Default: <code>VIDEO</code>.
+     * Sets the non-featured participant display mode, to control the aspect ratio of video tiles. <code>VIDEO</code> is
+     * 16:9, <code>SQUARE</code> is 1:1, and <code>PORTRAIT</code> is 3:4. Default: <code>VIDEO</code>.
      * </p>
      * 
-     * @return Sets the non-featured participant display mode. Default: <code>VIDEO</code>.
+     * @return Sets the non-featured participant display mode, to control the aspect ratio of video tiles.
+     *         <code>VIDEO</code> is 16:9, <code>SQUARE</code> is 1:1, and <code>PORTRAIT</code> is 3:4. Default:
+     *         <code>VIDEO</code>.
      * @see VideoAspectRatio
      */
 
@@ -198,11 +210,14 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Sets the non-featured participant display mode. Default: <code>VIDEO</code>.
+     * Sets the non-featured participant display mode, to control the aspect ratio of video tiles. <code>VIDEO</code> is
+     * 16:9, <code>SQUARE</code> is 1:1, and <code>PORTRAIT</code> is 3:4. Default: <code>VIDEO</code>.
      * </p>
      * 
      * @param videoAspectRatio
-     *        Sets the non-featured participant display mode. Default: <code>VIDEO</code>.
+     *        Sets the non-featured participant display mode, to control the aspect ratio of video tiles.
+     *        <code>VIDEO</code> is 16:9, <code>SQUARE</code> is 1:1, and <code>PORTRAIT</code> is 3:4. Default:
+     *        <code>VIDEO</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VideoAspectRatio
      */
@@ -214,11 +229,14 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Sets the non-featured participant display mode. Default: <code>VIDEO</code>.
+     * Sets the non-featured participant display mode, to control the aspect ratio of video tiles. <code>VIDEO</code> is
+     * 16:9, <code>SQUARE</code> is 1:1, and <code>PORTRAIT</code> is 3:4. Default: <code>VIDEO</code>.
      * </p>
      * 
      * @param videoAspectRatio
-     *        Sets the non-featured participant display mode. Default: <code>VIDEO</code>.
+     *        Sets the non-featured participant display mode, to control the aspect ratio of video tiles.
+     *        <code>VIDEO</code> is 16:9, <code>SQUARE</code> is 1:1, and <code>PORTRAIT</code> is 3:4. Default:
+     *        <code>VIDEO</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VideoAspectRatio
      */
@@ -230,15 +248,17 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. When not set, <code>videoFillMode</code> defaults to
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). When not set, <code>videoFillMode</code> defaults to
      * <code>COVER</code> fill mode for participants in the grid and to <code>CONTAIN</code> fill mode for featured
      * participants.
      * </p>
      * 
      * @param videoFillMode
-     *        Defines how video fits within the participant tile. When not set, <code>videoFillMode</code> defaults to
-     *        <code>COVER</code> fill mode for participants in the grid and to <code>CONTAIN</code> fill mode for
-     *        featured participants.
+     *        Defines how video content fits within the participant tile: <code>FILL</code> (stretched),
+     *        <code>COVER</code> (cropped), or <code>CONTAIN</code> (letterboxed). When not set,
+     *        <code>videoFillMode</code> defaults to <code>COVER</code> fill mode for participants in the grid and to
+     *        <code>CONTAIN</code> fill mode for featured participants.
      * @see VideoFillMode
      */
 
@@ -248,14 +268,16 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. When not set, <code>videoFillMode</code> defaults to
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). When not set, <code>videoFillMode</code> defaults to
      * <code>COVER</code> fill mode for participants in the grid and to <code>CONTAIN</code> fill mode for featured
      * participants.
      * </p>
      * 
-     * @return Defines how video fits within the participant tile. When not set, <code>videoFillMode</code> defaults to
-     *         <code>COVER</code> fill mode for participants in the grid and to <code>CONTAIN</code> fill mode for
-     *         featured participants.
+     * @return Defines how video content fits within the participant tile: <code>FILL</code> (stretched),
+     *         <code>COVER</code> (cropped), or <code>CONTAIN</code> (letterboxed). When not set,
+     *         <code>videoFillMode</code> defaults to <code>COVER</code> fill mode for participants in the grid and to
+     *         <code>CONTAIN</code> fill mode for featured participants.
      * @see VideoFillMode
      */
 
@@ -265,15 +287,17 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. When not set, <code>videoFillMode</code> defaults to
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). When not set, <code>videoFillMode</code> defaults to
      * <code>COVER</code> fill mode for participants in the grid and to <code>CONTAIN</code> fill mode for featured
      * participants.
      * </p>
      * 
      * @param videoFillMode
-     *        Defines how video fits within the participant tile. When not set, <code>videoFillMode</code> defaults to
-     *        <code>COVER</code> fill mode for participants in the grid and to <code>CONTAIN</code> fill mode for
-     *        featured participants.
+     *        Defines how video content fits within the participant tile: <code>FILL</code> (stretched),
+     *        <code>COVER</code> (cropped), or <code>CONTAIN</code> (letterboxed). When not set,
+     *        <code>videoFillMode</code> defaults to <code>COVER</code> fill mode for participants in the grid and to
+     *        <code>CONTAIN</code> fill mode for featured participants.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VideoFillMode
      */
@@ -285,15 +309,17 @@ public class GridConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. When not set, <code>videoFillMode</code> defaults to
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). When not set, <code>videoFillMode</code> defaults to
      * <code>COVER</code> fill mode for participants in the grid and to <code>CONTAIN</code> fill mode for featured
      * participants.
      * </p>
      * 
      * @param videoFillMode
-     *        Defines how video fits within the participant tile. When not set, <code>videoFillMode</code> defaults to
-     *        <code>COVER</code> fill mode for participants in the grid and to <code>CONTAIN</code> fill mode for
-     *        featured participants.
+     *        Defines how video content fits within the participant tile: <code>FILL</code> (stretched),
+     *        <code>COVER</code> (cropped), or <code>CONTAIN</code> (letterboxed). When not set,
+     *        <code>videoFillMode</code> defaults to <code>COVER</code> fill mode for participants in the grid and to
+     *        <code>CONTAIN</code> fill mode for featured participants.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VideoFillMode
      */

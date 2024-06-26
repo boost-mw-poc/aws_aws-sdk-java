@@ -1,3 +1,24 @@
+# __1.12.751__ __2024-06-26__
+## __AWS Control Tower__
+  - ### Features
+    - Added ListLandingZoneOperations API.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Added support for disabling unmanaged addons during cluster creation.
+
+## __Amazon Interactive Video Service RealTime__
+  - ### Features
+    - IVS Real-Time now offers customers the ability to upload public keys for customer vended participant tokens.
+
+## __Amazon Kinesis Analytics__
+  - ### Features
+    - This release adds support for new ListApplicationOperations and DescribeApplicationOperation APIs. It adds a new configuration to enable system rollbacks, adds field ApplicationVersionCreateTimestamp for clarity and improves support for pagination for APIs.
+
+## __Amazon OpenSearch Service__
+  - ### Features
+    - This release adds support for enabling or disabling Natural Language Query Processing feature for Amazon OpenSearch Service domains, and provides visibility into the current state of the setup or tear-down.
+
 # __1.12.750__ __2024-06-25__
 ## __AWS Network Manager__
   - ### Features

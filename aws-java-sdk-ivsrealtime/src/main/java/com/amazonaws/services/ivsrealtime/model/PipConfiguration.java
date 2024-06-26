@@ -33,7 +33,8 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * This attribute name identifies the featured slot. A participant with this attribute set to <code>"true"</code>
-     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot.
+     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot. Default:
+     * <code>""</code> (no featured participant).
      * </p>
      */
     private String featuredParticipantAttribute;
@@ -45,7 +46,8 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
     private Boolean omitStoppedVideo;
     /**
      * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). Default: <code>COVER</code>.
      * </p>
      */
     private String videoFillMode;
@@ -57,14 +59,16 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
     private Integer gridGap;
     /**
      * <p>
-     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
-     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     * Specifies the participant for the PiP window. A participant with this attribute set to <code>"true"</code> (as a
+     * string value) in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot. Default: <code>""</code> (no PiP
+     * participant).
      * </p>
      */
     private String pipParticipantAttribute;
     /**
      * <p>
-     * Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
+     * Defines PiP behavior when all participants have left: <code>STATIC</code> (maintains original position/size) or
+     * <code>DYNAMIC</code> (expands to full composition). Default: <code>STATIC</code>.
      * </p>
      */
     private String pipBehavior;
@@ -99,13 +103,14 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * This attribute name identifies the featured slot. A participant with this attribute set to <code>"true"</code>
-     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot.
+     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot. Default:
+     * <code>""</code> (no featured participant).
      * </p>
      * 
      * @param featuredParticipantAttribute
      *        This attribute name identifies the featured slot. A participant with this attribute set to
      *        <code>"true"</code> (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured
-     *        slot.
+     *        slot. Default: <code>""</code> (no featured participant).
      */
 
     public void setFeaturedParticipantAttribute(String featuredParticipantAttribute) {
@@ -115,12 +120,13 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * This attribute name identifies the featured slot. A participant with this attribute set to <code>"true"</code>
-     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot.
+     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot. Default:
+     * <code>""</code> (no featured participant).
      * </p>
      * 
      * @return This attribute name identifies the featured slot. A participant with this attribute set to
      *         <code>"true"</code> (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured
-     *         slot.
+     *         slot. Default: <code>""</code> (no featured participant).
      */
 
     public String getFeaturedParticipantAttribute() {
@@ -130,13 +136,14 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * This attribute name identifies the featured slot. A participant with this attribute set to <code>"true"</code>
-     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot.
+     * (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured slot. Default:
+     * <code>""</code> (no featured participant).
      * </p>
      * 
      * @param featuredParticipantAttribute
      *        This attribute name identifies the featured slot. A participant with this attribute set to
      *        <code>"true"</code> (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the featured
-     *        slot.
+     *        slot. Default: <code>""</code> (no featured participant).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -203,11 +210,13 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). Default: <code>COVER</code>.
      * </p>
      * 
      * @param videoFillMode
-     *        Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     *        Defines how video content fits within the participant tile: <code>FILL</code> (stretched),
+     *        <code>COVER</code> (cropped), or <code>CONTAIN</code> (letterboxed). Default: <code>COVER</code>.
      * @see VideoFillMode
      */
 
@@ -217,10 +226,12 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). Default: <code>COVER</code>.
      * </p>
      * 
-     * @return Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * @return Defines how video content fits within the participant tile: <code>FILL</code> (stretched),
+     *         <code>COVER</code> (cropped), or <code>CONTAIN</code> (letterboxed). Default: <code>COVER</code>.
      * @see VideoFillMode
      */
 
@@ -230,11 +241,13 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). Default: <code>COVER</code>.
      * </p>
      * 
      * @param videoFillMode
-     *        Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     *        Defines how video content fits within the participant tile: <code>FILL</code> (stretched),
+     *        <code>COVER</code> (cropped), or <code>CONTAIN</code> (letterboxed). Default: <code>COVER</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VideoFillMode
      */
@@ -246,11 +259,13 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     * Defines how video content fits within the participant tile: <code>FILL</code> (stretched), <code>COVER</code>
+     * (cropped), or <code>CONTAIN</code> (letterboxed). Default: <code>COVER</code>.
      * </p>
      * 
      * @param videoFillMode
-     *        Defines how video fits within the participant tile. Default: <code>COVER</code>.
+     *        Defines how video content fits within the participant tile: <code>FILL</code> (stretched),
+     *        <code>COVER</code> (cropped), or <code>CONTAIN</code> (letterboxed). Default: <code>COVER</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VideoFillMode
      */
@@ -302,13 +317,15 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
-     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     * Specifies the participant for the PiP window. A participant with this attribute set to <code>"true"</code> (as a
+     * string value) in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot. Default: <code>""</code> (no PiP
+     * participant).
      * </p>
      * 
      * @param pipParticipantAttribute
-     *        Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value)
-     *        in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     *        Specifies the participant for the PiP window. A participant with this attribute set to <code>"true"</code>
+     *        (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot. Default:
+     *        <code>""</code> (no PiP participant).
      */
 
     public void setPipParticipantAttribute(String pipParticipantAttribute) {
@@ -317,12 +334,14 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
-     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     * Specifies the participant for the PiP window. A participant with this attribute set to <code>"true"</code> (as a
+     * string value) in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot. Default: <code>""</code> (no PiP
+     * participant).
      * </p>
      * 
-     * @return Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value)
-     *         in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     * @return Specifies the participant for the PiP window. A participant with this attribute set to
+     *         <code>"true"</code> (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the PiP
+     *         slot. Default: <code>""</code> (no PiP participant).
      */
 
     public String getPipParticipantAttribute() {
@@ -331,13 +350,15 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value) in
-     * <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     * Specifies the participant for the PiP window. A participant with this attribute set to <code>"true"</code> (as a
+     * string value) in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot. Default: <code>""</code> (no PiP
+     * participant).
      * </p>
      * 
      * @param pipParticipantAttribute
-     *        Identifies the PiP slot. A participant with this attribute set to <code>"true"</code> (as a string value)
-     *        in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot.
+     *        Specifies the participant for the PiP window. A participant with this attribute set to <code>"true"</code>
+     *        (as a string value) in <a>ParticipantTokenConfiguration</a> is placed in the PiP slot. Default:
+     *        <code>""</code> (no PiP participant).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -348,11 +369,13 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
+     * Defines PiP behavior when all participants have left: <code>STATIC</code> (maintains original position/size) or
+     * <code>DYNAMIC</code> (expands to full composition). Default: <code>STATIC</code>.
      * </p>
      * 
      * @param pipBehavior
-     *        Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
+     *        Defines PiP behavior when all participants have left: <code>STATIC</code> (maintains original
+     *        position/size) or <code>DYNAMIC</code> (expands to full composition). Default: <code>STATIC</code>.
      * @see PipBehavior
      */
 
@@ -362,10 +385,12 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
+     * Defines PiP behavior when all participants have left: <code>STATIC</code> (maintains original position/size) or
+     * <code>DYNAMIC</code> (expands to full composition). Default: <code>STATIC</code>.
      * </p>
      * 
-     * @return Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
+     * @return Defines PiP behavior when all participants have left: <code>STATIC</code> (maintains original
+     *         position/size) or <code>DYNAMIC</code> (expands to full composition). Default: <code>STATIC</code>.
      * @see PipBehavior
      */
 
@@ -375,11 +400,13 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
+     * Defines PiP behavior when all participants have left: <code>STATIC</code> (maintains original position/size) or
+     * <code>DYNAMIC</code> (expands to full composition). Default: <code>STATIC</code>.
      * </p>
      * 
      * @param pipBehavior
-     *        Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
+     *        Defines PiP behavior when all participants have left: <code>STATIC</code> (maintains original
+     *        position/size) or <code>DYNAMIC</code> (expands to full composition). Default: <code>STATIC</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PipBehavior
      */
@@ -391,11 +418,13 @@ public class PipConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
+     * Defines PiP behavior when all participants have left: <code>STATIC</code> (maintains original position/size) or
+     * <code>DYNAMIC</code> (expands to full composition). Default: <code>STATIC</code>.
      * </p>
      * 
      * @param pipBehavior
-     *        Defines PiP behavior when all participants have left. Default: <code>STATIC</code>.
+     *        Defines PiP behavior when all participants have left: <code>STATIC</code> (maintains original
+     *        position/size) or <code>DYNAMIC</code> (expands to full composition). Default: <code>STATIC</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PipBehavior
      */
