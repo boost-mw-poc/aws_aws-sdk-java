@@ -41,23 +41,22 @@ public class CreateInstanceConnectEndpointRequest extends AmazonWebServiceReques
     private com.amazonaws.internal.SdkInternalList<String> securityGroupIds;
     /**
      * <p>
-     * Indicates whether your client's IP address is preserved as the source. The value is <code>true</code> or
-     * <code>false</code>.
+     * Indicates whether the client IP address is preserved as the source. The following are the possible values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>true</code>, your client's IP address is used when you connect to a resource.
+     * <code>true</code> - Use the client IP address as the source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If <code>false</code>, the elastic network interface IP address is used when you connect to a resource.
+     * <code>false</code> - Use the network interface IP address as the source.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>true</code>
+     * Default: <code>false</code>
      * </p>
      */
     private Boolean preserveClientIp;
@@ -197,42 +196,41 @@ public class CreateInstanceConnectEndpointRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * Indicates whether your client's IP address is preserved as the source. The value is <code>true</code> or
-     * <code>false</code>.
+     * Indicates whether the client IP address is preserved as the source. The following are the possible values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>true</code>, your client's IP address is used when you connect to a resource.
+     * <code>true</code> - Use the client IP address as the source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If <code>false</code>, the elastic network interface IP address is used when you connect to a resource.
+     * <code>false</code> - Use the network interface IP address as the source.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>true</code>
+     * Default: <code>false</code>
      * </p>
      * 
      * @param preserveClientIp
-     *        Indicates whether your client's IP address is preserved as the source. The value is <code>true</code> or
-     *        <code>false</code>.</p>
+     *        Indicates whether the client IP address is preserved as the source. The following are the possible
+     *        values.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>true</code>, your client's IP address is used when you connect to a resource.
+     *        <code>true</code> - Use the client IP address as the source.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If <code>false</code>, the elastic network interface IP address is used when you connect to a resource.
+     *        <code>false</code> - Use the network interface IP address as the source.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: <code>true</code>
+     *        Default: <code>false</code>
      */
 
     public void setPreserveClientIp(Boolean preserveClientIp) {
@@ -241,41 +239,40 @@ public class CreateInstanceConnectEndpointRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * Indicates whether your client's IP address is preserved as the source. The value is <code>true</code> or
-     * <code>false</code>.
+     * Indicates whether the client IP address is preserved as the source. The following are the possible values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>true</code>, your client's IP address is used when you connect to a resource.
+     * <code>true</code> - Use the client IP address as the source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If <code>false</code>, the elastic network interface IP address is used when you connect to a resource.
+     * <code>false</code> - Use the network interface IP address as the source.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>true</code>
+     * Default: <code>false</code>
      * </p>
      * 
-     * @return Indicates whether your client's IP address is preserved as the source. The value is <code>true</code> or
-     *         <code>false</code>.</p>
+     * @return Indicates whether the client IP address is preserved as the source. The following are the possible
+     *         values.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         If <code>true</code>, your client's IP address is used when you connect to a resource.
+     *         <code>true</code> - Use the client IP address as the source.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If <code>false</code>, the elastic network interface IP address is used when you connect to a resource.
+     *         <code>false</code> - Use the network interface IP address as the source.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         Default: <code>true</code>
+     *         Default: <code>false</code>
      */
 
     public Boolean getPreserveClientIp() {
@@ -284,42 +281,41 @@ public class CreateInstanceConnectEndpointRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * Indicates whether your client's IP address is preserved as the source. The value is <code>true</code> or
-     * <code>false</code>.
+     * Indicates whether the client IP address is preserved as the source. The following are the possible values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>true</code>, your client's IP address is used when you connect to a resource.
+     * <code>true</code> - Use the client IP address as the source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If <code>false</code>, the elastic network interface IP address is used when you connect to a resource.
+     * <code>false</code> - Use the network interface IP address as the source.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>true</code>
+     * Default: <code>false</code>
      * </p>
      * 
      * @param preserveClientIp
-     *        Indicates whether your client's IP address is preserved as the source. The value is <code>true</code> or
-     *        <code>false</code>.</p>
+     *        Indicates whether the client IP address is preserved as the source. The following are the possible
+     *        values.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>true</code>, your client's IP address is used when you connect to a resource.
+     *        <code>true</code> - Use the client IP address as the source.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If <code>false</code>, the elastic network interface IP address is used when you connect to a resource.
+     *        <code>false</code> - Use the network interface IP address as the source.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: <code>true</code>
+     *        Default: <code>false</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -330,41 +326,40 @@ public class CreateInstanceConnectEndpointRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * Indicates whether your client's IP address is preserved as the source. The value is <code>true</code> or
-     * <code>false</code>.
+     * Indicates whether the client IP address is preserved as the source. The following are the possible values.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>true</code>, your client's IP address is used when you connect to a resource.
+     * <code>true</code> - Use the client IP address as the source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If <code>false</code>, the elastic network interface IP address is used when you connect to a resource.
+     * <code>false</code> - Use the network interface IP address as the source.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>true</code>
+     * Default: <code>false</code>
      * </p>
      * 
-     * @return Indicates whether your client's IP address is preserved as the source. The value is <code>true</code> or
-     *         <code>false</code>.</p>
+     * @return Indicates whether the client IP address is preserved as the source. The following are the possible
+     *         values.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         If <code>true</code>, your client's IP address is used when you connect to a resource.
+     *         <code>true</code> - Use the client IP address as the source.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If <code>false</code>, the elastic network interface IP address is used when you connect to a resource.
+     *         <code>false</code> - Use the network interface IP address as the source.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         Default: <code>true</code>
+     *         Default: <code>false</code>
      */
 
     public Boolean isPreserveClientIp() {

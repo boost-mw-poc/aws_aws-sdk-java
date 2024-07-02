@@ -188,11 +188,10 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     private String subnetId;
     /**
      * <p>
-     * The user data script to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
-     * instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool, base64-encoding
-     * is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.
-     * User data is limited to 16 KB.
+     * The user data to make available to the instance. User data must be base64-encoded. Depending on the tool or SDK
+     * that you're using, the base64-encoding might be performed for you. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-add-user-data.html">Work with instance
+     * user data</a>.
      * </p>
      */
     private String userData;
@@ -1724,19 +1723,17 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The user data script to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
-     * instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool, base64-encoding
-     * is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.
-     * User data is limited to 16 KB.
+     * The user data to make available to the instance. User data must be base64-encoded. Depending on the tool or SDK
+     * that you're using, the base64-encoding might be performed for you. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-add-user-data.html">Work with instance
+     * user data</a>.
      * </p>
      * 
      * @param userData
-     *        The user data script to make available to the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
-     *        instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool,
-     *        base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide
-     *        base64-encoded text. User data is limited to 16 KB.
+     *        The user data to make available to the instance. User data must be base64-encoded. Depending on the tool
+     *        or SDK that you're using, the base64-encoding might be performed for you. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-add-user-data.html">Work with
+     *        instance user data</a>.
      */
 
     public void setUserData(String userData) {
@@ -1745,18 +1742,16 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The user data script to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
-     * instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool, base64-encoding
-     * is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.
-     * User data is limited to 16 KB.
+     * The user data to make available to the instance. User data must be base64-encoded. Depending on the tool or SDK
+     * that you're using, the base64-encoding might be performed for you. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-add-user-data.html">Work with instance
+     * user data</a>.
      * </p>
      * 
-     * @return The user data script to make available to the instance. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
-     *         instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool,
-     *         base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide
-     *         base64-encoded text. User data is limited to 16 KB.
+     * @return The user data to make available to the instance. User data must be base64-encoded. Depending on the tool
+     *         or SDK that you're using, the base64-encoding might be performed for you. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-add-user-data.html">Work with
+     *         instance user data</a>.
      */
 
     public String getUserData() {
@@ -1765,19 +1760,17 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The user data script to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
-     * instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool, base64-encoding
-     * is performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text.
-     * User data is limited to 16 KB.
+     * The user data to make available to the instance. User data must be base64-encoded. Depending on the tool or SDK
+     * that you're using, the base64-encoding might be performed for you. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-add-user-data.html">Work with instance
+     * user data</a>.
      * </p>
      * 
      * @param userData
-     *        The user data script to make available to the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Amazon EC2
-     *        instance at launch</a> in the <i>Amazon EC2 User Guide</i>. If you are using a command line tool,
-     *        base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide
-     *        base64-encoded text. User data is limited to 16 KB.
+     *        The user data to make available to the instance. User data must be base64-encoded. Depending on the tool
+     *        or SDK that you're using, the base64-encoding might be performed for you. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-add-user-data.html">Work with
+     *        instance user data</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

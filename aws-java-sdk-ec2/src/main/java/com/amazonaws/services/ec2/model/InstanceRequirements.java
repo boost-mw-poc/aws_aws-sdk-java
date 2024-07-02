@@ -592,8 +592,8 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      * </p>
      * <p>
-     * If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection
-     * threshold is based on the per vCPU or per memory price instead of the per instance price.
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is based on the per vCPU or per memory price instead of the per instance price.
      * </p>
      * <note>
      * <p>
@@ -5051,8 +5051,8 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      * </p>
      * <p>
-     * If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection
-     * threshold is based on the per vCPU or per memory price instead of the per instance price.
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is based on the per vCPU or per memory price instead of the per instance price.
      * </p>
      * <note>
      * <p>
@@ -5077,7 +5077,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *        </p>
      *        <p>
-     *        If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     *        If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
      *        protection threshold is based on the per vCPU or per memory price instead of the per instance price.
      *        </p>
      *        <note>
@@ -5108,8 +5108,8 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      * </p>
      * <p>
-     * If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection
-     * threshold is based on the per vCPU or per memory price instead of the per instance price.
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is based on the per vCPU or per memory price instead of the per instance price.
      * </p>
      * <note>
      * <p>
@@ -5133,7 +5133,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *         The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *         </p>
      *         <p>
-     *         If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     *         If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
      *         protection threshold is based on the per vCPU or per memory price instead of the per instance price.
      *         </p>
      *         <note>
@@ -5164,8 +5164,8 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      * </p>
      * <p>
-     * If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price protection
-     * threshold is based on the per vCPU or per memory price instead of the per instance price.
+     * If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     * protection threshold is based on the per vCPU or per memory price instead of the per instance price.
      * </p>
      * <note>
      * <p>
@@ -5190,7 +5190,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *        </p>
      *        <p>
-     *        If you set <code>DesiredCapacityType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
+     *        If you set <code>TargetCapacityUnitType</code> to <code>vcpu</code> or <code>memory-mib</code>, the price
      *        protection threshold is based on the per vCPU or per memory price instead of the per instance price.
      *        </p>
      *        <note>

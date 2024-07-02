@@ -130,7 +130,7 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
     /**
      * <p>
-     * The volume IDs.
+     * The volume IDs. If not specified, then all volumes are included in the response.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> volumeIds;
@@ -162,7 +162,7 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
      * to initialize any additional object members.
      * 
      * @param volumeIds
-     *        The volume IDs.
+     *        The volume IDs. If not specified, then all volumes are included in the response.
      */
     public DescribeVolumesRequest(java.util.List<String> volumeIds) {
         setVolumeIds(volumeIds);
@@ -1019,10 +1019,10 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The volume IDs.
+     * The volume IDs. If not specified, then all volumes are included in the response.
      * </p>
      * 
-     * @return The volume IDs.
+     * @return The volume IDs. If not specified, then all volumes are included in the response.
      */
 
     public java.util.List<String> getVolumeIds() {
@@ -1034,11 +1034,11 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The volume IDs.
+     * The volume IDs. If not specified, then all volumes are included in the response.
      * </p>
      * 
      * @param volumeIds
-     *        The volume IDs.
+     *        The volume IDs. If not specified, then all volumes are included in the response.
      */
 
     public void setVolumeIds(java.util.Collection<String> volumeIds) {
@@ -1052,7 +1052,7 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The volume IDs.
+     * The volume IDs. If not specified, then all volumes are included in the response.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1061,7 +1061,7 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
      * </p>
      * 
      * @param volumeIds
-     *        The volume IDs.
+     *        The volume IDs. If not specified, then all volumes are included in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1077,11 +1077,11 @@ public class DescribeVolumesRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The volume IDs.
+     * The volume IDs. If not specified, then all volumes are included in the response.
      * </p>
      * 
      * @param volumeIds
-     *        The volume IDs.
+     *        The volume IDs. If not specified, then all volumes are included in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

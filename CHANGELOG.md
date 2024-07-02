@@ -1,3 +1,16 @@
+# __1.12.755__ __2024-07-02__
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Documentation updates for Elastic Compute Cloud (EC2).
+
+## __Amazon Simple Storage Service__
+  - ### Features
+    - Added response overrides to Head Object requests.
+
+## __Firewall Management Service__
+  - ### Features
+    - Increases Customer API's ManagedServiceData length
+
 # __1.12.754__ __2024-07-01__
 ## __AWS Step Functions__
   - ### Features

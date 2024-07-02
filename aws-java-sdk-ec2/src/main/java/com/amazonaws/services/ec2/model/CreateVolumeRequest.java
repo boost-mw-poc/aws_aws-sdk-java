@@ -124,7 +124,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     private String kmsKeyId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Outpost.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the volume.
+     * </p>
+     * <p>
+     * If you intend to use a volume with an instance running on an outpost, then you must create the volume on the same
+     * outpost as the instance. You can't use a volume created in an Amazon Web Services Region with an instance on an
+     * Amazon Web Services outpost, or the other way around.
      * </p>
      */
     private String outpostArn;
@@ -947,11 +952,20 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Outpost.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the volume.
+     * </p>
+     * <p>
+     * If you intend to use a volume with an instance running on an outpost, then you must create the volume on the same
+     * outpost as the instance. You can't use a volume created in an Amazon Web Services Region with an instance on an
+     * Amazon Web Services outpost, or the other way around.
      * </p>
      * 
      * @param outpostArn
-     *        The Amazon Resource Name (ARN) of the Outpost.
+     *        The Amazon Resource Name (ARN) of the Outpost on which to create the volume.</p>
+     *        <p>
+     *        If you intend to use a volume with an instance running on an outpost, then you must create the volume on
+     *        the same outpost as the instance. You can't use a volume created in an Amazon Web Services Region with an
+     *        instance on an Amazon Web Services outpost, or the other way around.
      */
 
     public void setOutpostArn(String outpostArn) {
@@ -960,10 +974,19 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Outpost.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the volume.
+     * </p>
+     * <p>
+     * If you intend to use a volume with an instance running on an outpost, then you must create the volume on the same
+     * outpost as the instance. You can't use a volume created in an Amazon Web Services Region with an instance on an
+     * Amazon Web Services outpost, or the other way around.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Outpost.
+     * @return The Amazon Resource Name (ARN) of the Outpost on which to create the volume.</p>
+     *         <p>
+     *         If you intend to use a volume with an instance running on an outpost, then you must create the volume on
+     *         the same outpost as the instance. You can't use a volume created in an Amazon Web Services Region with an
+     *         instance on an Amazon Web Services outpost, or the other way around.
      */
 
     public String getOutpostArn() {
@@ -972,11 +995,20 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Outpost.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the volume.
+     * </p>
+     * <p>
+     * If you intend to use a volume with an instance running on an outpost, then you must create the volume on the same
+     * outpost as the instance. You can't use a volume created in an Amazon Web Services Region with an instance on an
+     * Amazon Web Services outpost, or the other way around.
      * </p>
      * 
      * @param outpostArn
-     *        The Amazon Resource Name (ARN) of the Outpost.
+     *        The Amazon Resource Name (ARN) of the Outpost on which to create the volume.</p>
+     *        <p>
+     *        If you intend to use a volume with an instance running on an outpost, then you must create the volume on
+     *        the same outpost as the instance. You can't use a volume created in an Amazon Web Services Region with an
+     *        instance on an Amazon Web Services outpost, or the other way around.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
