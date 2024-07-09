@@ -36,6 +36,8 @@ public class DomainSettingsForUpdateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityGroupIds").build();
     private static final MarshallingInfo<StructuredPojo> DOCKERSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DockerSettings").build();
+    private static final MarshallingInfo<StructuredPojo> AMAZONQSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmazonQSettings").build();
 
     private static final DomainSettingsForUpdateMarshaller instance = new DomainSettingsForUpdateMarshaller();
 
@@ -57,6 +59,7 @@ public class DomainSettingsForUpdateMarshaller {
             protocolMarshaller.marshall(domainSettingsForUpdate.getExecutionRoleIdentityConfig(), EXECUTIONROLEIDENTITYCONFIG_BINDING);
             protocolMarshaller.marshall(domainSettingsForUpdate.getSecurityGroupIds(), SECURITYGROUPIDS_BINDING);
             protocolMarshaller.marshall(domainSettingsForUpdate.getDockerSettings(), DOCKERSETTINGS_BINDING);
+            protocolMarshaller.marshall(domainSettingsForUpdate.getAmazonQSettings(), AMAZONQSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

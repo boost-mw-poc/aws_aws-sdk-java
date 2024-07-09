@@ -23,6 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DataProductItem" target="_top">AWS API
  *      Documentation</a>
  */
+@Deprecated
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DataProductItem implements Serializable, Cloneable, StructuredPojo {
 

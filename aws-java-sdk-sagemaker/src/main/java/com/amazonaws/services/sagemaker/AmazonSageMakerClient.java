@@ -3665,6 +3665,75 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Creates a job that optimizes a model for inference performance. To create the job, you provide the location of a
+     * source model, and you provide the settings for the optimization techniques that you want the job to apply. When
+     * the job completes successfully, SageMaker uploads the new optimized model to the output destination that you
+     * specify.
+     * </p>
+     * <p>
+     * For more information about how to use this action, and about the supported optimization techniques, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-optimize.html">Optimize model inference with Amazon
+     * SageMaker</a>.
+     * </p>
+     * 
+     * @param createOptimizationJobRequest
+     * @return Result of the CreateOptimizationJob operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateOptimizationJobResult createOptimizationJob(CreateOptimizationJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateOptimizationJob(request);
+    }
+
+    @SdkInternalApi
+    final CreateOptimizationJobResult executeCreateOptimizationJob(CreateOptimizationJobRequest createOptimizationJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createOptimizationJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateOptimizationJobRequest> request = null;
+        Response<CreateOptimizationJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateOptimizationJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createOptimizationJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateOptimizationJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateOptimizationJobResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreateOptimizationJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a pipeline using a JSON pipeline definition.
      * </p>
      * 
@@ -7250,6 +7319,64 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Deletes an optimization job.
+     * </p>
+     * 
+     * @param deleteOptimizationJobRequest
+     * @return Result of the DeleteOptimizationJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DeleteOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteOptimizationJobResult deleteOptimizationJob(DeleteOptimizationJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteOptimizationJob(request);
+    }
+
+    @SdkInternalApi
+    final DeleteOptimizationJobResult executeDeleteOptimizationJob(DeleteOptimizationJobRequest deleteOptimizationJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteOptimizationJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteOptimizationJobRequest> request = null;
+        Response<DeleteOptimizationJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteOptimizationJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteOptimizationJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteOptimizationJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteOptimizationJobResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DeleteOptimizationJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a pipeline if there are no running instances of the pipeline. To delete a pipeline, you must stop all
      * running instances of the pipeline using the <code>StopPipelineExecution</code> API. When you delete a pipeline,
      * all instances of the pipeline are deleted.
@@ -10654,6 +10781,65 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
             HttpResponseHandler<AmazonWebServiceResponse<DescribeNotebookInstanceLifecycleConfigResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new DescribeNotebookInstanceLifecycleConfigResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides the properties of the specified optimization job.
+     * </p>
+     * 
+     * @param describeOptimizationJobRequest
+     * @return Result of the DescribeOptimizationJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeOptimizationJobResult describeOptimizationJob(DescribeOptimizationJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeOptimizationJob(request);
+    }
+
+    @SdkInternalApi
+    final DescribeOptimizationJobResult executeDescribeOptimizationJob(DescribeOptimizationJobRequest describeOptimizationJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeOptimizationJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeOptimizationJobRequest> request = null;
+        Response<DescribeOptimizationJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeOptimizationJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeOptimizationJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeOptimizationJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeOptimizationJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeOptimizationJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -15317,6 +15503,61 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Lists the optimization jobs in your account and their properties.
+     * </p>
+     * 
+     * @param listOptimizationJobsRequest
+     * @return Result of the ListOptimizationJobs operation returned by the service.
+     * @sample AmazonSageMaker.ListOptimizationJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListOptimizationJobs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListOptimizationJobsResult listOptimizationJobs(ListOptimizationJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListOptimizationJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListOptimizationJobsResult executeListOptimizationJobs(ListOptimizationJobsRequest listOptimizationJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listOptimizationJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListOptimizationJobsRequest> request = null;
+        Response<ListOptimizationJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListOptimizationJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listOptimizationJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListOptimizationJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListOptimizationJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListOptimizationJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets a list of <code>PipeLineExecutionStep</code> objects.
      * </p>
      * 
@@ -18021,6 +18262,63 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<StopNotebookInstanceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopNotebookInstanceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Ends a running inference optimization job.
+     * </p>
+     * 
+     * @param stopOptimizationJobRequest
+     * @return Result of the StopOptimizationJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.StopOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopOptimizationJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public StopOptimizationJobResult stopOptimizationJob(StopOptimizationJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopOptimizationJob(request);
+    }
+
+    @SdkInternalApi
+    final StopOptimizationJobResult executeStopOptimizationJob(StopOptimizationJobRequest stopOptimizationJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopOptimizationJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopOptimizationJobRequest> request = null;
+        Response<StopOptimizationJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopOptimizationJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopOptimizationJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopOptimizationJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopOptimizationJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopOptimizationJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

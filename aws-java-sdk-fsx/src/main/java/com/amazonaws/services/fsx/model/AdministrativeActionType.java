@@ -41,7 +41,7 @@ import javax.annotation.Generated;
  * <li>
  * <p>
  * <code>STORAGE_OPTIMIZATION</code> - After the <code>FILE_SYSTEM_UPDATE</code> task to increase a file system's
- * storage capacity has been completed successfully, a <code>STORAGE_OPTIMIZATION</code> task starts.
+ * storage capacity has completed successfully, a <code>STORAGE_OPTIMIZATION</code> task starts.
  * </p>
  * <ul>
  * <li>
@@ -134,6 +134,13 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
+ * <code>DOWNLOAD_DATA_FROM_BACKUP</code> - An FSx for ONTAP backup is being restored to a new volume on a
+ * second-generation file system. Once the all the file metadata is loaded onto the volume, you can mount the volume
+ * with read-only access. during this process.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <code>VOLUME_INITIALIZE_WITH_SNAPSHOT</code> - A volume is being created from a snapshot on a different FSx for
  * OpenZFS file system. You can initiate this from the Amazon FSx console, API (<code>CreateVolume</code>), or CLI (
  * <code>create-volume</code>) when using the using the <code>FULL_COPY</code> strategy.
@@ -164,7 +171,8 @@ public enum AdministrativeActionType {
     STORAGE_TYPE_OPTIMIZATION("STORAGE_TYPE_OPTIMIZATION"),
     MISCONFIGURED_STATE_RECOVERY("MISCONFIGURED_STATE_RECOVERY"),
     VOLUME_UPDATE_WITH_SNAPSHOT("VOLUME_UPDATE_WITH_SNAPSHOT"),
-    VOLUME_INITIALIZE_WITH_SNAPSHOT("VOLUME_INITIALIZE_WITH_SNAPSHOT");
+    VOLUME_INITIALIZE_WITH_SNAPSHOT("VOLUME_INITIALIZE_WITH_SNAPSHOT"),
+    DOWNLOAD_DATA_FROM_BACKUP("DOWNLOAD_DATA_FROM_BACKUP");
 
     private String value;
 

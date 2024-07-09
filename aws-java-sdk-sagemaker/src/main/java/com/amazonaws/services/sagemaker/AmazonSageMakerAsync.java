@@ -2834,6 +2834,53 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Creates a job that optimizes a model for inference performance. To create the job, you provide the location of a
+     * source model, and you provide the settings for the optimization techniques that you want the job to apply. When
+     * the job completes successfully, SageMaker uploads the new optimized model to the output destination that you
+     * specify.
+     * </p>
+     * <p>
+     * For more information about how to use this action, and about the supported optimization techniques, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-optimize.html">Optimize model inference with Amazon
+     * SageMaker</a>.
+     * </p>
+     * 
+     * @param createOptimizationJobRequest
+     * @return A Java Future containing the result of the CreateOptimizationJob operation returned by the service.
+     * @sample AmazonSageMakerAsync.CreateOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateOptimizationJobResult> createOptimizationJobAsync(CreateOptimizationJobRequest createOptimizationJobRequest);
+
+    /**
+     * <p>
+     * Creates a job that optimizes a model for inference performance. To create the job, you provide the location of a
+     * source model, and you provide the settings for the optimization techniques that you want the job to apply. When
+     * the job completes successfully, SageMaker uploads the new optimized model to the output destination that you
+     * specify.
+     * </p>
+     * <p>
+     * For more information about how to use this action, and about the supported optimization techniques, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-optimize.html">Optimize model inference with Amazon
+     * SageMaker</a>.
+     * </p>
+     * 
+     * @param createOptimizationJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateOptimizationJob operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.CreateOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateOptimizationJobResult> createOptimizationJobAsync(CreateOptimizationJobRequest createOptimizationJobRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateOptimizationJobRequest, CreateOptimizationJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a pipeline using a JSON pipeline definition.
      * </p>
      * 
@@ -5236,6 +5283,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Deletes an optimization job.
+     * </p>
+     * 
+     * @param deleteOptimizationJobRequest
+     * @return A Java Future containing the result of the DeleteOptimizationJob operation returned by the service.
+     * @sample AmazonSageMakerAsync.DeleteOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteOptimizationJobResult> deleteOptimizationJobAsync(DeleteOptimizationJobRequest deleteOptimizationJobRequest);
+
+    /**
+     * <p>
+     * Deletes an optimization job.
+     * </p>
+     * 
+     * @param deleteOptimizationJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteOptimizationJob operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DeleteOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteOptimizationJobResult> deleteOptimizationJobAsync(DeleteOptimizationJobRequest deleteOptimizationJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteOptimizationJobRequest, DeleteOptimizationJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a pipeline if there are no running instances of the pipeline. To delete a pipeline, you must stop all
      * running instances of the pipeline using the <code>StopPipelineExecution</code> API. When you delete a pipeline,
      * all instances of the pipeline are deleted.
@@ -7233,6 +7311,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
     java.util.concurrent.Future<DescribeNotebookInstanceLifecycleConfigResult> describeNotebookInstanceLifecycleConfigAsync(
             DescribeNotebookInstanceLifecycleConfigRequest describeNotebookInstanceLifecycleConfigRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeNotebookInstanceLifecycleConfigRequest, DescribeNotebookInstanceLifecycleConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides the properties of the specified optimization job.
+     * </p>
+     * 
+     * @param describeOptimizationJobRequest
+     * @return A Java Future containing the result of the DescribeOptimizationJob operation returned by the service.
+     * @sample AmazonSageMakerAsync.DescribeOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeOptimizationJobResult> describeOptimizationJobAsync(DescribeOptimizationJobRequest describeOptimizationJobRequest);
+
+    /**
+     * <p>
+     * Provides the properties of the specified optimization job.
+     * </p>
+     * 
+     * @param describeOptimizationJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeOptimizationJob operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DescribeOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeOptimizationJobResult> describeOptimizationJobAsync(DescribeOptimizationJobRequest describeOptimizationJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeOptimizationJobRequest, DescribeOptimizationJobResult> asyncHandler);
 
     /**
      * <p>
@@ -9927,6 +10036,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Lists the optimization jobs in your account and their properties.
+     * </p>
+     * 
+     * @param listOptimizationJobsRequest
+     * @return A Java Future containing the result of the ListOptimizationJobs operation returned by the service.
+     * @sample AmazonSageMakerAsync.ListOptimizationJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListOptimizationJobs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListOptimizationJobsResult> listOptimizationJobsAsync(ListOptimizationJobsRequest listOptimizationJobsRequest);
+
+    /**
+     * <p>
+     * Lists the optimization jobs in your account and their properties.
+     * </p>
+     * 
+     * @param listOptimizationJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListOptimizationJobs operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.ListOptimizationJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListOptimizationJobs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListOptimizationJobsResult> listOptimizationJobsAsync(ListOptimizationJobsRequest listOptimizationJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListOptimizationJobsRequest, ListOptimizationJobsResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a list of <code>PipeLineExecutionStep</code> objects.
      * </p>
      * 
@@ -11557,6 +11697,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<StopNotebookInstanceResult> stopNotebookInstanceAsync(StopNotebookInstanceRequest stopNotebookInstanceRequest,
             com.amazonaws.handlers.AsyncHandler<StopNotebookInstanceRequest, StopNotebookInstanceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Ends a running inference optimization job.
+     * </p>
+     * 
+     * @param stopOptimizationJobRequest
+     * @return A Java Future containing the result of the StopOptimizationJob operation returned by the service.
+     * @sample AmazonSageMakerAsync.StopOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopOptimizationJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StopOptimizationJobResult> stopOptimizationJobAsync(StopOptimizationJobRequest stopOptimizationJobRequest);
+
+    /**
+     * <p>
+     * Ends a running inference optimization job.
+     * </p>
+     * 
+     * @param stopOptimizationJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopOptimizationJob operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.StopOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopOptimizationJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StopOptimizationJobResult> stopOptimizationJobAsync(StopOptimizationJobRequest stopOptimizationJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StopOptimizationJobRequest, StopOptimizationJobResult> asyncHandler);
 
     /**
      * <p>

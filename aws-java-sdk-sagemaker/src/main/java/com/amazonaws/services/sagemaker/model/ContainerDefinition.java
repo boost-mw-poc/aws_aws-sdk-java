@@ -128,6 +128,13 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
     private ModelDataSource modelDataSource;
     /**
      * <p>
+     * Data sources that are available to your model in addition to the one that you specify for
+     * <code>ModelDataSource</code> when you use the <code>CreateModel</code> action.
+     * </p>
+     */
+    private java.util.List<AdditionalModelDataSource> additionalModelDataSources;
+    /**
+     * <p>
      * The environment variables to set in the Docker container.
      * </p>
      * <p>
@@ -769,6 +776,84 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * Data sources that are available to your model in addition to the one that you specify for
+     * <code>ModelDataSource</code> when you use the <code>CreateModel</code> action.
+     * </p>
+     * 
+     * @return Data sources that are available to your model in addition to the one that you specify for
+     *         <code>ModelDataSource</code> when you use the <code>CreateModel</code> action.
+     */
+
+    public java.util.List<AdditionalModelDataSource> getAdditionalModelDataSources() {
+        return additionalModelDataSources;
+    }
+
+    /**
+     * <p>
+     * Data sources that are available to your model in addition to the one that you specify for
+     * <code>ModelDataSource</code> when you use the <code>CreateModel</code> action.
+     * </p>
+     * 
+     * @param additionalModelDataSources
+     *        Data sources that are available to your model in addition to the one that you specify for
+     *        <code>ModelDataSource</code> when you use the <code>CreateModel</code> action.
+     */
+
+    public void setAdditionalModelDataSources(java.util.Collection<AdditionalModelDataSource> additionalModelDataSources) {
+        if (additionalModelDataSources == null) {
+            this.additionalModelDataSources = null;
+            return;
+        }
+
+        this.additionalModelDataSources = new java.util.ArrayList<AdditionalModelDataSource>(additionalModelDataSources);
+    }
+
+    /**
+     * <p>
+     * Data sources that are available to your model in addition to the one that you specify for
+     * <code>ModelDataSource</code> when you use the <code>CreateModel</code> action.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdditionalModelDataSources(java.util.Collection)} or
+     * {@link #withAdditionalModelDataSources(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param additionalModelDataSources
+     *        Data sources that are available to your model in addition to the one that you specify for
+     *        <code>ModelDataSource</code> when you use the <code>CreateModel</code> action.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContainerDefinition withAdditionalModelDataSources(AdditionalModelDataSource... additionalModelDataSources) {
+        if (this.additionalModelDataSources == null) {
+            setAdditionalModelDataSources(new java.util.ArrayList<AdditionalModelDataSource>(additionalModelDataSources.length));
+        }
+        for (AdditionalModelDataSource ele : additionalModelDataSources) {
+            this.additionalModelDataSources.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Data sources that are available to your model in addition to the one that you specify for
+     * <code>ModelDataSource</code> when you use the <code>CreateModel</code> action.
+     * </p>
+     * 
+     * @param additionalModelDataSources
+     *        Data sources that are available to your model in addition to the one that you specify for
+     *        <code>ModelDataSource</code> when you use the <code>CreateModel</code> action.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContainerDefinition withAdditionalModelDataSources(java.util.Collection<AdditionalModelDataSource> additionalModelDataSources) {
+        setAdditionalModelDataSources(additionalModelDataSources);
+        return this;
+    }
+
+    /**
+     * <p>
      * The environment variables to set in the Docker container.
      * </p>
      * <p>
@@ -1006,6 +1091,8 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
             sb.append("ModelDataUrl: ").append(getModelDataUrl()).append(",");
         if (getModelDataSource() != null)
             sb.append("ModelDataSource: ").append(getModelDataSource()).append(",");
+        if (getAdditionalModelDataSources() != null)
+            sb.append("AdditionalModelDataSources: ").append(getAdditionalModelDataSources()).append(",");
         if (getEnvironment() != null)
             sb.append("Environment: ").append(getEnvironment()).append(",");
         if (getModelPackageName() != null)
@@ -1052,6 +1139,10 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getModelDataSource() != null && other.getModelDataSource().equals(this.getModelDataSource()) == false)
             return false;
+        if (other.getAdditionalModelDataSources() == null ^ this.getAdditionalModelDataSources() == null)
+            return false;
+        if (other.getAdditionalModelDataSources() != null && other.getAdditionalModelDataSources().equals(this.getAdditionalModelDataSources()) == false)
+            return false;
         if (other.getEnvironment() == null ^ this.getEnvironment() == null)
             return false;
         if (other.getEnvironment() != null && other.getEnvironment().equals(this.getEnvironment()) == false)
@@ -1082,6 +1173,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         hashCode = prime * hashCode + ((getModelDataUrl() == null) ? 0 : getModelDataUrl().hashCode());
         hashCode = prime * hashCode + ((getModelDataSource() == null) ? 0 : getModelDataSource().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalModelDataSources() == null) ? 0 : getAdditionalModelDataSources().hashCode());
         hashCode = prime * hashCode + ((getEnvironment() == null) ? 0 : getEnvironment().hashCode());
         hashCode = prime * hashCode + ((getModelPackageName() == null) ? 0 : getModelPackageName().hashCode());
         hashCode = prime * hashCode + ((getInferenceSpecificationName() == null) ? 0 : getInferenceSpecificationName().hashCode());

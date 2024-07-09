@@ -85,7 +85,7 @@ public class FileCacheCreating implements Serializable, Cloneable, StructuredPoj
     private String lifecycle;
     /**
      * <p>
-     * A structure providing details of any failures that occurred.
+     * A structure providing details of any failures that occurred in creating a cache.
      * </p>
      */
     private FileCacheFailureDetails failureDetails;
@@ -611,11 +611,11 @@ public class FileCacheCreating implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A structure providing details of any failures that occurred.
+     * A structure providing details of any failures that occurred in creating a cache.
      * </p>
      * 
      * @param failureDetails
-     *        A structure providing details of any failures that occurred.
+     *        A structure providing details of any failures that occurred in creating a cache.
      */
 
     public void setFailureDetails(FileCacheFailureDetails failureDetails) {
@@ -624,10 +624,10 @@ public class FileCacheCreating implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A structure providing details of any failures that occurred.
+     * A structure providing details of any failures that occurred in creating a cache.
      * </p>
      * 
-     * @return A structure providing details of any failures that occurred.
+     * @return A structure providing details of any failures that occurred in creating a cache.
      */
 
     public FileCacheFailureDetails getFailureDetails() {
@@ -636,11 +636,11 @@ public class FileCacheCreating implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A structure providing details of any failures that occurred.
+     * A structure providing details of any failures that occurred in creating a cache.
      * </p>
      * 
      * @param failureDetails
-     *        A structure providing details of any failures that occurred.
+     *        A structure providing details of any failures that occurred in creating a cache.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

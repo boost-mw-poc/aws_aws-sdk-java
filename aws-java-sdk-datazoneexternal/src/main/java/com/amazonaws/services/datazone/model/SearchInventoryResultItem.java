@@ -39,6 +39,7 @@ public class SearchInventoryResultItem implements Serializable, Cloneable, Struc
      * The data product item included in the search results.
      * </p>
      */
+    @Deprecated
     private DataProductSummary dataProductItem;
     /**
      * <p>
@@ -101,7 +102,7 @@ public class SearchInventoryResultItem implements Serializable, Cloneable, Struc
      * @param dataProductItem
      *        The data product item included in the search results.
      */
-
+    @Deprecated
     public void setDataProductItem(DataProductSummary dataProductItem) {
         this.dataProductItem = dataProductItem;
     }
@@ -113,7 +114,7 @@ public class SearchInventoryResultItem implements Serializable, Cloneable, Struc
      * 
      * @return The data product item included in the search results.
      */
-
+    @Deprecated
     public DataProductSummary getDataProductItem() {
         return this.dataProductItem;
     }
@@ -127,7 +128,7 @@ public class SearchInventoryResultItem implements Serializable, Cloneable, Struc
      *        The data product item included in the search results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public SearchInventoryResultItem withDataProductItem(DataProductSummary dataProductItem) {
         setDataProductItem(dataProductItem);
         return this;

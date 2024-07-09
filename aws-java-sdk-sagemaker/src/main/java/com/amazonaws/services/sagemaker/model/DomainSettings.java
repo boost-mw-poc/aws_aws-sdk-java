@@ -56,6 +56,13 @@ public class DomainSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private DockerSettings dockerSettings;
+    /**
+     * <p>
+     * A collection of settings that configure the Amazon Q experience within the domain. The <code>AuthMode</code> that
+     * you use to create the domain must be <code>SSO</code>.
+     * </p>
+     */
+    private AmazonQSettings amazonQSettings;
 
     /**
      * <p>
@@ -291,6 +298,52 @@ public class DomainSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A collection of settings that configure the Amazon Q experience within the domain. The <code>AuthMode</code> that
+     * you use to create the domain must be <code>SSO</code>.
+     * </p>
+     * 
+     * @param amazonQSettings
+     *        A collection of settings that configure the Amazon Q experience within the domain. The
+     *        <code>AuthMode</code> that you use to create the domain must be <code>SSO</code>.
+     */
+
+    public void setAmazonQSettings(AmazonQSettings amazonQSettings) {
+        this.amazonQSettings = amazonQSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure the Amazon Q experience within the domain. The <code>AuthMode</code> that
+     * you use to create the domain must be <code>SSO</code>.
+     * </p>
+     * 
+     * @return A collection of settings that configure the Amazon Q experience within the domain. The
+     *         <code>AuthMode</code> that you use to create the domain must be <code>SSO</code>.
+     */
+
+    public AmazonQSettings getAmazonQSettings() {
+        return this.amazonQSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure the Amazon Q experience within the domain. The <code>AuthMode</code> that
+     * you use to create the domain must be <code>SSO</code>.
+     * </p>
+     * 
+     * @param amazonQSettings
+     *        A collection of settings that configure the Amazon Q experience within the domain. The
+     *        <code>AuthMode</code> that you use to create the domain must be <code>SSO</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainSettings withAmazonQSettings(AmazonQSettings amazonQSettings) {
+        setAmazonQSettings(amazonQSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -309,7 +362,9 @@ public class DomainSettings implements Serializable, Cloneable, StructuredPojo {
         if (getExecutionRoleIdentityConfig() != null)
             sb.append("ExecutionRoleIdentityConfig: ").append(getExecutionRoleIdentityConfig()).append(",");
         if (getDockerSettings() != null)
-            sb.append("DockerSettings: ").append(getDockerSettings());
+            sb.append("DockerSettings: ").append(getDockerSettings()).append(",");
+        if (getAmazonQSettings() != null)
+            sb.append("AmazonQSettings: ").append(getAmazonQSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -341,6 +396,10 @@ public class DomainSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDockerSettings() != null && other.getDockerSettings().equals(this.getDockerSettings()) == false)
             return false;
+        if (other.getAmazonQSettings() == null ^ this.getAmazonQSettings() == null)
+            return false;
+        if (other.getAmazonQSettings() != null && other.getAmazonQSettings().equals(this.getAmazonQSettings()) == false)
+            return false;
         return true;
     }
 
@@ -353,6 +412,7 @@ public class DomainSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRStudioServerProDomainSettings() == null) ? 0 : getRStudioServerProDomainSettings().hashCode());
         hashCode = prime * hashCode + ((getExecutionRoleIdentityConfig() == null) ? 0 : getExecutionRoleIdentityConfig().hashCode());
         hashCode = prime * hashCode + ((getDockerSettings() == null) ? 0 : getDockerSettings().hashCode());
+        hashCode = prime * hashCode + ((getAmazonQSettings() == null) ? 0 : getAmazonQSettings().hashCode());
         return hashCode;
     }
 

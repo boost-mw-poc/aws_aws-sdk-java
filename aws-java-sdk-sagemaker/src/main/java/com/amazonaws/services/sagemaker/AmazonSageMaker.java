@@ -1511,6 +1511,32 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Creates a job that optimizes a model for inference performance. To create the job, you provide the location of a
+     * source model, and you provide the settings for the optimization techniques that you want the job to apply. When
+     * the job completes successfully, SageMaker uploads the new optimized model to the output destination that you
+     * specify.
+     * </p>
+     * <p>
+     * For more information about how to use this action, and about the supported optimization techniques, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-optimize.html">Optimize model inference with Amazon
+     * SageMaker</a>.
+     * </p>
+     * 
+     * @param createOptimizationJobRequest
+     * @return Result of the CreateOptimizationJob operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateOptimizationJobResult createOptimizationJob(CreateOptimizationJobRequest createOptimizationJobRequest);
+
+    /**
+     * <p>
      * Creates a pipeline using a JSON pipeline definition.
      * </p>
      * 
@@ -2704,6 +2730,21 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Deletes an optimization job.
+     * </p>
+     * 
+     * @param deleteOptimizationJobRequest
+     * @return Result of the DeleteOptimizationJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DeleteOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteOptimizationJobResult deleteOptimizationJob(DeleteOptimizationJobRequest deleteOptimizationJobRequest);
+
+    /**
+     * <p>
      * Deletes a pipeline if there are no running instances of the pipeline. To delete a pipeline, you must stop all
      * running instances of the pipeline using the <code>StopPipelineExecution</code> API. When you delete a pipeline,
      * all instances of the pipeline are deleted.
@@ -3637,6 +3678,21 @@ public interface AmazonSageMaker {
      */
     DescribeNotebookInstanceLifecycleConfigResult describeNotebookInstanceLifecycleConfig(
             DescribeNotebookInstanceLifecycleConfigRequest describeNotebookInstanceLifecycleConfigRequest);
+
+    /**
+     * <p>
+     * Provides the properties of the specified optimization job.
+     * </p>
+     * 
+     * @param describeOptimizationJobRequest
+     * @return Result of the DescribeOptimizationJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeOptimizationJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeOptimizationJobResult describeOptimizationJob(DescribeOptimizationJobRequest describeOptimizationJobRequest);
 
     /**
      * <p>
@@ -4824,6 +4880,19 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Lists the optimization jobs in your account and their properties.
+     * </p>
+     * 
+     * @param listOptimizationJobsRequest
+     * @return Result of the ListOptimizationJobs operation returned by the service.
+     * @sample AmazonSageMaker.ListOptimizationJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListOptimizationJobs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListOptimizationJobsResult listOptimizationJobs(ListOptimizationJobsRequest listOptimizationJobsRequest);
+
+    /**
+     * <p>
      * Gets a list of <code>PipeLineExecutionStep</code> objects.
      * </p>
      * 
@@ -5605,6 +5674,21 @@ public interface AmazonSageMaker {
      *      API Documentation</a>
      */
     StopNotebookInstanceResult stopNotebookInstance(StopNotebookInstanceRequest stopNotebookInstanceRequest);
+
+    /**
+     * <p>
+     * Ends a running inference optimization job.
+     * </p>
+     * 
+     * @param stopOptimizationJobRequest
+     * @return Result of the StopOptimizationJob operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.StopOptimizationJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopOptimizationJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StopOptimizationJobResult stopOptimizationJob(StopOptimizationJobRequest stopOptimizationJobRequest);
 
     /**
      * <p>

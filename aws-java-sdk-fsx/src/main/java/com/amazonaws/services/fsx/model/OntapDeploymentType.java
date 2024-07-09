@@ -22,7 +22,8 @@ public enum OntapDeploymentType {
 
     MULTI_AZ_1("MULTI_AZ_1"),
     SINGLE_AZ_1("SINGLE_AZ_1"),
-    SINGLE_AZ_2("SINGLE_AZ_2");
+    SINGLE_AZ_2("SINGLE_AZ_2"),
+    MULTI_AZ_2("MULTI_AZ_2");
 
     private String value;
 

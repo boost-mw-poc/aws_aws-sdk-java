@@ -46,6 +46,8 @@ public class UpdateFileSystemOntapConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RemoveRouteTableIds").build();
     private static final MarshallingInfo<Integer> THROUGHPUTCAPACITYPERHAPAIR_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThroughputCapacityPerHAPair").build();
+    private static final MarshallingInfo<Integer> HAPAIRS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("HAPairs").build();
 
     private static final UpdateFileSystemOntapConfigurationMarshaller instance = new UpdateFileSystemOntapConfigurationMarshaller();
 
@@ -72,6 +74,7 @@ public class UpdateFileSystemOntapConfigurationMarshaller {
             protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getAddRouteTableIds(), ADDROUTETABLEIDS_BINDING);
             protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getRemoveRouteTableIds(), REMOVEROUTETABLEIDS_BINDING);
             protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getThroughputCapacityPerHAPair(), THROUGHPUTCAPACITYPERHAPAIR_BINDING);
+            protocolMarshaller.marshall(updateFileSystemOntapConfiguration.getHAPairs(), HAPAIRS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

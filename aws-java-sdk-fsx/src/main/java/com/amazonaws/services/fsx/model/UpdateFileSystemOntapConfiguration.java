@@ -107,13 +107,18 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
-     * MBps.
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512, 1024,
+     * 2048, or 4096 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -130,7 +135,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     * <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      * </p>
      * </li>
      * <li>
@@ -141,6 +146,19 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </ul>
      */
     private Integer throughputCapacityPerHAPair;
+    /**
+     * <p>
+     * Use to update the number of high-availability (HA) pairs for a second-generation single-AZ file system. If you
+     * increase the number of HA pairs for your file system, you must specify proportional increases for
+     * <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see
+     * <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs">High-
+     * availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe over
+     * TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     * block storage protocols</a>.
+     * </p>
+     */
+    private Integer hAPairs;
 
     /**
      * @param automaticBackupRetentionDays
@@ -688,13 +706,18 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
-     * MBps.
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512, 1024,
+     * 2048, or 4096 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -711,7 +734,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     * <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      * </p>
      * </li>
      * <li>
@@ -734,13 +757,18 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
-     *        4096 MBps.
+     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512,
+     *        1024, 2048, or 4096 MBps.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *        For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      *        </p>
      *        </li>
      *        </ul>
@@ -757,7 +785,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     *        <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      *        </p>
      *        </li>
      *        <li>
@@ -784,13 +812,18 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
-     * MBps.
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512, 1024,
+     * 2048, or 4096 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -807,7 +840,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     * <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      * </p>
      * </li>
      * <li>
@@ -829,13 +862,18 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         <ul>
      *         <li>
      *         <p>
-     *         For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
-     *         4096 MBps.
+     *         For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512,
+     *         1024, 2048, or 4096 MBps.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *         For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      *         </p>
      *         </li>
      *         </ul>
@@ -852,7 +890,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         <li>
      *         <p>
      *         The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     *         <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      *         </p>
      *         </li>
      *         <li>
@@ -879,13 +917,18 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
-     * MBps.
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512, 1024,
+     * 2048, or 4096 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -902,7 +945,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     * <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      * </p>
      * </li>
      * <li>
@@ -925,13 +968,18 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
-     *        4096 MBps.
+     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code> file systems, valid values are 128, 256, 512,
+     *        1024, 2048, or 4096 MBps.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *        For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      *        </p>
      *        </li>
      *        </ul>
@@ -948,7 +996,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     *        <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      *        </p>
      *        </li>
      *        <li>
@@ -961,6 +1009,93 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     public UpdateFileSystemOntapConfiguration withThroughputCapacityPerHAPair(Integer throughputCapacityPerHAPair) {
         setThroughputCapacityPerHAPair(throughputCapacityPerHAPair);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use to update the number of high-availability (HA) pairs for a second-generation single-AZ file system. If you
+     * increase the number of HA pairs for your file system, you must specify proportional increases for
+     * <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see
+     * <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs">High-
+     * availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe over
+     * TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     * block storage protocols</a>.
+     * </p>
+     * 
+     * @param hAPairs
+     *        Use to update the number of high-availability (HA) pairs for a second-generation single-AZ file system. If
+     *        you increase the number of HA pairs for your file system, you must specify proportional increases for
+     *        <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     *        >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI
+     *        and NVMe over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     *        href
+     *        ="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     *        block storage protocols</a>.
+     */
+
+    public void setHAPairs(Integer hAPairs) {
+        this.hAPairs = hAPairs;
+    }
+
+    /**
+     * <p>
+     * Use to update the number of high-availability (HA) pairs for a second-generation single-AZ file system. If you
+     * increase the number of HA pairs for your file system, you must specify proportional increases for
+     * <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see
+     * <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs">High-
+     * availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe over
+     * TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     * block storage protocols</a>.
+     * </p>
+     * 
+     * @return Use to update the number of high-availability (HA) pairs for a second-generation single-AZ file system.
+     *         If you increase the number of HA pairs for your file system, you must specify proportional increases for
+     *         <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     *         >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI
+     *         and NVMe over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">
+     *         Using block storage protocols</a>.
+     */
+
+    public Integer getHAPairs() {
+        return this.hAPairs;
+    }
+
+    /**
+     * <p>
+     * Use to update the number of high-availability (HA) pairs for a second-generation single-AZ file system. If you
+     * increase the number of HA pairs for your file system, you must specify proportional increases for
+     * <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see
+     * <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs">High-
+     * availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe over
+     * TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     * block storage protocols</a>.
+     * </p>
+     * 
+     * @param hAPairs
+     *        Use to update the number of high-availability (HA) pairs for a second-generation single-AZ file system. If
+     *        you increase the number of HA pairs for your file system, you must specify proportional increases for
+     *        <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
+     *        >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI
+     *        and NVMe over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     *        href
+     *        ="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     *        block storage protocols</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFileSystemOntapConfiguration withHAPairs(Integer hAPairs) {
+        setHAPairs(hAPairs);
         return this;
     }
 
@@ -993,7 +1128,9 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
         if (getRemoveRouteTableIds() != null)
             sb.append("RemoveRouteTableIds: ").append(getRemoveRouteTableIds()).append(",");
         if (getThroughputCapacityPerHAPair() != null)
-            sb.append("ThroughputCapacityPerHAPair: ").append(getThroughputCapacityPerHAPair());
+            sb.append("ThroughputCapacityPerHAPair: ").append(getThroughputCapacityPerHAPair()).append(",");
+        if (getHAPairs() != null)
+            sb.append("HAPairs: ").append(getHAPairs());
         sb.append("}");
         return sb.toString();
     }
@@ -1045,6 +1182,10 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
             return false;
         if (other.getThroughputCapacityPerHAPair() != null && other.getThroughputCapacityPerHAPair().equals(this.getThroughputCapacityPerHAPair()) == false)
             return false;
+        if (other.getHAPairs() == null ^ this.getHAPairs() == null)
+            return false;
+        if (other.getHAPairs() != null && other.getHAPairs().equals(this.getHAPairs()) == false)
+            return false;
         return true;
     }
 
@@ -1062,6 +1203,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getAddRouteTableIds() == null) ? 0 : getAddRouteTableIds().hashCode());
         hashCode = prime * hashCode + ((getRemoveRouteTableIds() == null) ? 0 : getRemoveRouteTableIds().hashCode());
         hashCode = prime * hashCode + ((getThroughputCapacityPerHAPair() == null) ? 0 : getThroughputCapacityPerHAPair().hashCode());
+        hashCode = prime * hashCode + ((getHAPairs() == null) ? 0 : getHAPairs().hashCode());
         return hashCode;
     }
 

@@ -13,7 +13,7 @@
 package com.amazonaws.services.sagemaker.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -41,6 +41,8 @@ public class ContainerDefinitionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelDataUrl").build();
     private static final MarshallingInfo<StructuredPojo> MODELDATASOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelDataSource").build();
+    private static final MarshallingInfo<List> ADDITIONALMODELDATASOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdditionalModelDataSources").build();
     private static final MarshallingInfo<Map> ENVIRONMENT_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Environment").build();
     private static final MarshallingInfo<String> MODELPACKAGENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -72,6 +74,7 @@ public class ContainerDefinitionMarshaller {
             protocolMarshaller.marshall(containerDefinition.getMode(), MODE_BINDING);
             protocolMarshaller.marshall(containerDefinition.getModelDataUrl(), MODELDATAURL_BINDING);
             protocolMarshaller.marshall(containerDefinition.getModelDataSource(), MODELDATASOURCE_BINDING);
+            protocolMarshaller.marshall(containerDefinition.getAdditionalModelDataSources(), ADDITIONALMODELDATASOURCES_BINDING);
             protocolMarshaller.marshall(containerDefinition.getEnvironment(), ENVIRONMENT_BINDING);
             protocolMarshaller.marshall(containerDefinition.getModelPackageName(), MODELPACKAGENAME_BINDING);
             protocolMarshaller.marshall(containerDefinition.getInferenceSpecificationName(), INFERENCESPECIFICATIONNAME_BINDING);

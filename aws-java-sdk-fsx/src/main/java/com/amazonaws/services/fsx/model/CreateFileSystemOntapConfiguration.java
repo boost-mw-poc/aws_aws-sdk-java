@@ -38,19 +38,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability.
+     * <code>MULTI_AZ_1</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * <code>MULTI_AZ_2</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy. This is a first-generation FSx for
+     * ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
-     * redundancy.
+     * redundancy. This is a second-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * </ul>
@@ -86,8 +93,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     private DiskIopsConfiguration diskIopsConfiguration;
     /**
      * <p>
-     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
-     * you want the preferred file server to be located.
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code> or <code>MULTI_AZ_2</code>. This
+     * specifies the subnet in which you want the preferred file server to be located.
      * </p>
      */
     private String preferredSubnetId;
@@ -136,12 +143,16 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     private String weeklyMaintenanceStartTime;
     /**
      * <p>
-     * Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
-     * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
-     * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
-     * and <code>ThroughputCapacity</code>. For more information, see <a
+     * Specifies how many high-availability (HA) pairs of file servers will power your file system. First-generation
+     * file systems are powered by 1 HA pair. Second-generation multi-AZ file systems are powered by 1 HA pair. Second
+     * generation single-AZ file systems are powered by up to 12 HA pairs. The default value is 1. The value of this
+     * property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
+     * <code>ThroughputCapacity</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
-     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.
+     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe
+     * over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     * block storage protocols</a>.
      * </p>
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
@@ -155,7 +166,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
-     * <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     * <code>SINGLE_AZ_1</code>, <code>MULTI_AZ_1</code>, or <code>MULTI_AZ_2</code>.
      * </p>
      * </li>
      * </ul>
@@ -170,7 +181,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * creating a file system, but not both.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA pair.
+     * This field and <code>ThroughputCapacity</code> are the same for file systems powered by one HA pair.
      * </p>
      * <ul>
      * <li>
@@ -181,7 +192,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -198,7 +214,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     * <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      * </p>
      * </li>
      * <li>
@@ -269,19 +285,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability.
+     * <code>MULTI_AZ_1</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * <code>MULTI_AZ_2</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy. This is a first-generation FSx for
+     * ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
-     * redundancy.
+     * redundancy. This is a second-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * </ul>
@@ -296,19 +319,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
-     *        tolerate temporary Availability Zone (AZ) unavailability.
+     *        <code>MULTI_AZ_1</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     *        temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for ONTAP file system.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        <code>MULTI_AZ_2</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     *        temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy. This is a first-generation
+     *        FSx for ONTAP file system.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for
-     *        Single-AZ redundancy.
+     *        Single-AZ redundancy. This is a second-generation FSx for ONTAP file system.
      *        </p>
      *        </li>
      *        </ul>
@@ -330,19 +360,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability.
+     * <code>MULTI_AZ_1</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * <code>MULTI_AZ_2</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy. This is a first-generation FSx for
+     * ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
-     * redundancy.
+     * redundancy. This is a second-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * </ul>
@@ -356,19 +393,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
-     *         tolerate temporary Availability Zone (AZ) unavailability.
+     *         <code>MULTI_AZ_1</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     *         temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for ONTAP file system.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *         <code>MULTI_AZ_2</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     *         temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy. This is a first-generation
+     *         FSx for ONTAP file system.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for
-     *         Single-AZ redundancy.
+     *         Single-AZ redundancy. This is a second-generation FSx for ONTAP file system.
      *         </p>
      *         </li>
      *         </ul>
@@ -390,19 +434,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability.
+     * <code>MULTI_AZ_1</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * <code>MULTI_AZ_2</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy. This is a first-generation FSx for
+     * ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
-     * redundancy.
+     * redundancy. This is a second-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * </ul>
@@ -417,19 +468,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
-     *        tolerate temporary Availability Zone (AZ) unavailability.
+     *        <code>MULTI_AZ_1</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     *        temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for ONTAP file system.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        <code>MULTI_AZ_2</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     *        temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy. This is a first-generation
+     *        FSx for ONTAP file system.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for
-     *        Single-AZ redundancy.
+     *        Single-AZ redundancy. This is a second-generation FSx for ONTAP file system.
      *        </p>
      *        </li>
      *        </ul>
@@ -453,19 +511,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <ul>
      * <li>
      * <p>
-     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
-     * tolerate temporary Availability Zone (AZ) unavailability.
+     * <code>MULTI_AZ_1</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * <code>MULTI_AZ_2</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     * temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy. This is a first-generation FSx for
+     * ONTAP file system.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
-     * redundancy.
+     * redundancy. This is a second-generation FSx for ONTAP file system.
      * </p>
      * </li>
      * </ul>
@@ -480,19 +545,26 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
-     *        tolerate temporary Availability Zone (AZ) unavailability.
+     *        <code>MULTI_AZ_1</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     *        temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for ONTAP file system.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        <code>MULTI_AZ_2</code> - A high availability file system configured for Multi-AZ redundancy to tolerate
+     *        temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy. This is a first-generation
+     *        FSx for ONTAP file system.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for
-     *        Single-AZ redundancy.
+     *        Single-AZ redundancy. This is a second-generation FSx for ONTAP file system.
      *        </p>
      *        </li>
      *        </ul>
@@ -664,13 +736,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
-     * you want the preferred file server to be located.
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code> or <code>MULTI_AZ_2</code>. This
+     * specifies the subnet in which you want the preferred file server to be located.
      * </p>
      * 
      * @param preferredSubnetId
-     *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
-     *        which you want the preferred file server to be located.
+     *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code> or <code>MULTI_AZ_2</code>.
+     *        This specifies the subnet in which you want the preferred file server to be located.
      */
 
     public void setPreferredSubnetId(String preferredSubnetId) {
@@ -679,12 +751,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
-     * you want the preferred file server to be located.
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code> or <code>MULTI_AZ_2</code>. This
+     * specifies the subnet in which you want the preferred file server to be located.
      * </p>
      * 
-     * @return Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
-     *         which you want the preferred file server to be located.
+     * @return Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code> or <code>MULTI_AZ_2</code>.
+     *         This specifies the subnet in which you want the preferred file server to be located.
      */
 
     public String getPreferredSubnetId() {
@@ -693,13 +765,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
-     * you want the preferred file server to be located.
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code> or <code>MULTI_AZ_2</code>. This
+     * specifies the subnet in which you want the preferred file server to be located.
      * </p>
      * 
      * @param preferredSubnetId
-     *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
-     *        which you want the preferred file server to be located.
+     *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code> or <code>MULTI_AZ_2</code>.
+     *        This specifies the subnet in which you want the preferred file server to be located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1036,12 +1108,16 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
-     * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
-     * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
-     * and <code>ThroughputCapacity</code>. For more information, see <a
+     * Specifies how many high-availability (HA) pairs of file servers will power your file system. First-generation
+     * file systems are powered by 1 HA pair. Second-generation multi-AZ file systems are powered by 1 HA pair. Second
+     * generation single-AZ file systems are powered by up to 12 HA pairs. The default value is 1. The value of this
+     * property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
+     * <code>ThroughputCapacity</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
-     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.
+     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe
+     * over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     * block storage protocols</a>.
      * </p>
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
@@ -1055,18 +1131,23 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
-     * <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     * <code>SINGLE_AZ_1</code>, <code>MULTI_AZ_1</code>, or <code>MULTI_AZ_2</code>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param hAPairs
-     *        Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
-     *        systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered
-     *        by up to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>,
+     *        Specifies how many high-availability (HA) pairs of file servers will power your file system.
+     *        First-generation file systems are powered by 1 HA pair. Second-generation multi-AZ file systems are
+     *        powered by 1 HA pair. Second generation single-AZ file systems are powered by up to 12 HA pairs. The
+     *        default value is 1. The value of this property affects the values of <code>StorageCapacity</code>,
      *        <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
-     *        >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.</p>
+     *        >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI
+     *        and NVMe over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     *        href
+     *        ="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     *        block storage protocols</a>. </p>
      *        <p>
      *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *        </p>
@@ -1079,7 +1160,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
-     *        <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     *        <code>SINGLE_AZ_1</code>, <code>MULTI_AZ_1</code>, or <code>MULTI_AZ_2</code>.
      *        </p>
      *        </li>
      */
@@ -1090,12 +1171,16 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
-     * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
-     * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
-     * and <code>ThroughputCapacity</code>. For more information, see <a
+     * Specifies how many high-availability (HA) pairs of file servers will power your file system. First-generation
+     * file systems are powered by 1 HA pair. Second-generation multi-AZ file systems are powered by 1 HA pair. Second
+     * generation single-AZ file systems are powered by up to 12 HA pairs. The default value is 1. The value of this
+     * property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
+     * <code>ThroughputCapacity</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
-     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.
+     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe
+     * over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     * block storage protocols</a>.
      * </p>
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
@@ -1109,18 +1194,21 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
-     * <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     * <code>SINGLE_AZ_1</code>, <code>MULTI_AZ_1</code>, or <code>MULTI_AZ_2</code>.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up
-     *         file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are
-     *         powered by up to 12 HA pairs. The value of this property affects the values of
-     *         <code>StorageCapacity</code>, <code>Iops</code>, and <code>ThroughputCapacity</code>. For more
-     *         information, see <a
+     * @return Specifies how many high-availability (HA) pairs of file servers will power your file system.
+     *         First-generation file systems are powered by 1 HA pair. Second-generation multi-AZ file systems are
+     *         powered by 1 HA pair. Second generation single-AZ file systems are powered by up to 12 HA pairs. The
+     *         default value is 1. The value of this property affects the values of <code>StorageCapacity</code>,
+     *         <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
-     *         >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.</p>
+     *         >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI
+     *         and NVMe over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">
+     *         Using block storage protocols</a>. </p>
      *         <p>
      *         Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *         </p>
@@ -1133,7 +1221,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         <li>
      *         <p>
      *         The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
-     *         <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     *         <code>SINGLE_AZ_1</code>, <code>MULTI_AZ_1</code>, or <code>MULTI_AZ_2</code>.
      *         </p>
      *         </li>
      */
@@ -1144,12 +1232,16 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
-     * systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered by up
-     * to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
-     * and <code>ThroughputCapacity</code>. For more information, see <a
+     * Specifies how many high-availability (HA) pairs of file servers will power your file system. First-generation
+     * file systems are powered by 1 HA pair. Second-generation multi-AZ file systems are powered by 1 HA pair. Second
+     * generation single-AZ file systems are powered by up to 12 HA pairs. The default value is 1. The value of this
+     * property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
+     * <code>ThroughputCapacity</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
-     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.
+     * >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe
+     * over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     * block storage protocols</a>.
      * </p>
      * <p>
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
@@ -1163,18 +1255,23 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
-     * <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     * <code>SINGLE_AZ_1</code>, <code>MULTI_AZ_1</code>, or <code>MULTI_AZ_2</code>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param hAPairs
-     *        Specifies how many high-availability (HA) pairs of file servers will power your file system. Scale-up file
-     *        systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP scale-out file systems are powered
-     *        by up to 12 HA pairs. The value of this property affects the values of <code>StorageCapacity</code>,
+     *        Specifies how many high-availability (HA) pairs of file servers will power your file system.
+     *        First-generation file systems are powered by 1 HA pair. Second-generation multi-AZ file systems are
+     *        powered by 1 HA pair. Second generation single-AZ file systems are powered by up to 12 HA pairs. The
+     *        default value is 1. The value of this property affects the values of <code>StorageCapacity</code>,
      *        <code>Iops</code>, and <code>ThroughputCapacity</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs"
-     *        >High-availability (HA) pairs</a> in the FSx for ONTAP user guide.</p>
+     *        >High-availability (HA) pairs</a> in the FSx for ONTAP user guide. Block storage protocol support (iSCSI
+     *        and NVMe over TCP) is disabled on file systems with more than 6 HA pairs. For more information, see <a
+     *        href
+     *        ="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage">Using
+     *        block storage protocols</a>. </p>
      *        <p>
      *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *        </p>
@@ -1187,7 +1284,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
-     *        <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     *        <code>SINGLE_AZ_1</code>, <code>MULTI_AZ_1</code>, or <code>MULTI_AZ_2</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1207,7 +1304,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * creating a file system, but not both.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA pair.
+     * This field and <code>ThroughputCapacity</code> are the same for file systems powered by one HA pair.
      * </p>
      * <ul>
      * <li>
@@ -1218,7 +1315,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -1235,7 +1337,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     * <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      * </p>
      * </li>
      * <li>
@@ -1253,8 +1355,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        when creating a file system, but not both.
      *        </p>
      *        <p>
-     *        This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA
-     *        pair.
+     *        This field and <code>ThroughputCapacity</code> are the same for file systems powered by one HA pair.
      *        </p>
      *        <ul>
      *        <li>
@@ -1265,7 +1366,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
+     *        For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      *        </p>
      *        </li>
      *        </ul>
@@ -1282,7 +1388,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     *        <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      *        </p>
      *        </li>
      *        <li>
@@ -1305,7 +1411,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * creating a file system, but not both.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA pair.
+     * This field and <code>ThroughputCapacity</code> are the same for file systems powered by one HA pair.
      * </p>
      * <ul>
      * <li>
@@ -1316,7 +1422,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -1333,7 +1444,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     * <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      * </p>
      * </li>
      * <li>
@@ -1350,8 +1461,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         when creating a file system, but not both.
      *         </p>
      *         <p>
-     *         This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA
-     *         pair.
+     *         This field and <code>ThroughputCapacity</code> are the same for file systems powered by one HA pair.
      *         </p>
      *         <ul>
      *         <li>
@@ -1362,7 +1472,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         </li>
      *         <li>
      *         <p>
-     *         For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
+     *         For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      *         </p>
      *         </li>
      *         </ul>
@@ -1379,7 +1494,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *         <li>
      *         <p>
      *         The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     *         <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      *         </p>
      *         </li>
      *         <li>
@@ -1402,7 +1517,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * creating a file system, but not both.
      * </p>
      * <p>
-     * This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA pair.
+     * This field and <code>ThroughputCapacity</code> are the same for file systems powered by one HA pair.
      * </p>
      * <ul>
      * <li>
@@ -1413,7 +1528,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
+     * For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      * </p>
      * </li>
      * </ul>
@@ -1430,7 +1550,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * <li>
      * <p>
      * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     * <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      * </p>
      * </li>
      * <li>
@@ -1448,8 +1568,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        when creating a file system, but not both.
      *        </p>
      *        <p>
-     *        This field and <code>ThroughputCapacity</code> are the same for scale-up file systems powered by one HA
-     *        pair.
+     *        This field and <code>ThroughputCapacity</code> are the same for file systems powered by one HA pair.
      *        </p>
      *        <ul>
      *        <li>
@@ -1460,7 +1579,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code> file systems, valid values are 3072 or 6144 MBps.
+     *        For <code>SINGLE_AZ_2</code>, valid values are 1536, 3072, or 6144 MBps.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>MULTI_AZ_2</code>, valid values are 384, 768, 1536, 3072, or 6144 MBps.
      *        </p>
      *        </li>
      *        </ul>
@@ -1477,7 +1601,7 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
-     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 12).
+     *        <code>ThroughputCapacityPerHAPair</code> is not a valid HA pair (a value between 1 and 12).
      *        </p>
      *        </li>
      *        <li>

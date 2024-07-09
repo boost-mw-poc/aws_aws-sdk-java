@@ -67,6 +67,10 @@ public class DomainSettingsForUpdateJsonUnmarshaller implements Unmarshaller<Dom
                     context.nextToken();
                     domainSettingsForUpdate.setDockerSettings(DockerSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AmazonQSettings", targetDepth)) {
+                    context.nextToken();
+                    domainSettingsForUpdate.setAmazonQSettings(AmazonQSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

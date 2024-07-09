@@ -19,9 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies a limit to how long a model training job or model compilation job can run. It also specifies how long a
- * managed spot training job has to complete. When the job reaches the time limit, SageMaker ends the training or
- * compilation job. Use this API to cap model training costs.
+ * Specifies a limit to how long a job can run. When the job reaches the time limit, SageMaker ends the job. Use this
+ * API to cap costs.
  * </p>
  * <p>
  * To stop a training job, SageMaker sends the algorithm the <code>SIGTERM</code> signal, which delays job termination

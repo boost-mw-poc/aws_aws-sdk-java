@@ -660,6 +660,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateOptimizationJobResult> createOptimizationJobAsync(CreateOptimizationJobRequest request) {
+
+        return createOptimizationJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateOptimizationJobResult> createOptimizationJobAsync(CreateOptimizationJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateOptimizationJobRequest, CreateOptimizationJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreatePipelineResult> createPipelineAsync(CreatePipelineRequest request) {
 
         return createPipelineAsync(request, null);
@@ -1393,6 +1406,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     public java.util.concurrent.Future<DeleteNotebookInstanceLifecycleConfigResult> deleteNotebookInstanceLifecycleConfigAsync(
             DeleteNotebookInstanceLifecycleConfigRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteNotebookInstanceLifecycleConfigRequest, DeleteNotebookInstanceLifecycleConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteOptimizationJobResult> deleteOptimizationJobAsync(DeleteOptimizationJobRequest request) {
+
+        return deleteOptimizationJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteOptimizationJobResult> deleteOptimizationJobAsync(DeleteOptimizationJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteOptimizationJobRequest, DeleteOptimizationJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2159,6 +2185,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     public java.util.concurrent.Future<DescribeNotebookInstanceLifecycleConfigResult> describeNotebookInstanceLifecycleConfigAsync(
             DescribeNotebookInstanceLifecycleConfigRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeNotebookInstanceLifecycleConfigRequest, DescribeNotebookInstanceLifecycleConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOptimizationJobResult> describeOptimizationJobAsync(DescribeOptimizationJobRequest request) {
+
+        return describeOptimizationJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOptimizationJobResult> describeOptimizationJobAsync(DescribeOptimizationJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeOptimizationJobRequest, DescribeOptimizationJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -3235,6 +3274,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListOptimizationJobsResult> listOptimizationJobsAsync(ListOptimizationJobsRequest request) {
+
+        return listOptimizationJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOptimizationJobsResult> listOptimizationJobsAsync(ListOptimizationJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListOptimizationJobsRequest, ListOptimizationJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListPipelineExecutionStepsResult> listPipelineExecutionStepsAsync(ListPipelineExecutionStepsRequest request) {
 
         return listPipelineExecutionStepsAsync(request, null);
@@ -3825,6 +3877,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<StopNotebookInstanceResult> stopNotebookInstanceAsync(StopNotebookInstanceRequest request,
             com.amazonaws.handlers.AsyncHandler<StopNotebookInstanceRequest, StopNotebookInstanceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopOptimizationJobResult> stopOptimizationJobAsync(StopOptimizationJobRequest request) {
+
+        return stopOptimizationJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopOptimizationJobResult> stopOptimizationJobAsync(StopOptimizationJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopOptimizationJobRequest, StopOptimizationJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

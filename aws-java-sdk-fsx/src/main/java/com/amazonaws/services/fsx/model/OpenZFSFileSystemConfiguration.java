@@ -54,7 +54,7 @@ public class OpenZFSFileSystemConfiguration implements Serializable, Cloneable, 
     /**
      * <p>
      * Specifies the file-system deployment type. Amazon FSx for OpenZFS supports&#x2028; <code>MULTI_AZ_1</code>,
-     * <code>SINGLE_AZ_1</code>, and <code>SINGLE_AZ_2</code>.
+     * <code>SINGLE_AZ_HA_2</code>, <code>SINGLE_AZ_HA_1</code>, <code>SINGLE_AZ_2</code>, and <code>SINGLE_AZ_1</code>.
      * </p>
      */
     private String deploymentType;
@@ -326,12 +326,13 @@ public class OpenZFSFileSystemConfiguration implements Serializable, Cloneable, 
     /**
      * <p>
      * Specifies the file-system deployment type. Amazon FSx for OpenZFS supports&#x2028; <code>MULTI_AZ_1</code>,
-     * <code>SINGLE_AZ_1</code>, and <code>SINGLE_AZ_2</code>.
+     * <code>SINGLE_AZ_HA_2</code>, <code>SINGLE_AZ_HA_1</code>, <code>SINGLE_AZ_2</code>, and <code>SINGLE_AZ_1</code>.
      * </p>
      * 
      * @param deploymentType
      *        Specifies the file-system deployment type. Amazon FSx for OpenZFS supports&#x2028; <code>MULTI_AZ_1</code>
-     *        , <code>SINGLE_AZ_1</code>, and <code>SINGLE_AZ_2</code>.
+     *        , <code>SINGLE_AZ_HA_2</code>, <code>SINGLE_AZ_HA_1</code>, <code>SINGLE_AZ_2</code>, and
+     *        <code>SINGLE_AZ_1</code>.
      * @see OpenZFSDeploymentType
      */
 
@@ -342,11 +343,12 @@ public class OpenZFSFileSystemConfiguration implements Serializable, Cloneable, 
     /**
      * <p>
      * Specifies the file-system deployment type. Amazon FSx for OpenZFS supports&#x2028; <code>MULTI_AZ_1</code>,
-     * <code>SINGLE_AZ_1</code>, and <code>SINGLE_AZ_2</code>.
+     * <code>SINGLE_AZ_HA_2</code>, <code>SINGLE_AZ_HA_1</code>, <code>SINGLE_AZ_2</code>, and <code>SINGLE_AZ_1</code>.
      * </p>
      * 
      * @return Specifies the file-system deployment type. Amazon FSx for OpenZFS supports&#x2028;
-     *         <code>MULTI_AZ_1</code>, <code>SINGLE_AZ_1</code>, and <code>SINGLE_AZ_2</code>.
+     *         <code>MULTI_AZ_1</code>, <code>SINGLE_AZ_HA_2</code>, <code>SINGLE_AZ_HA_1</code>,
+     *         <code>SINGLE_AZ_2</code>, and <code>SINGLE_AZ_1</code>.
      * @see OpenZFSDeploymentType
      */
 
@@ -357,12 +359,13 @@ public class OpenZFSFileSystemConfiguration implements Serializable, Cloneable, 
     /**
      * <p>
      * Specifies the file-system deployment type. Amazon FSx for OpenZFS supports&#x2028; <code>MULTI_AZ_1</code>,
-     * <code>SINGLE_AZ_1</code>, and <code>SINGLE_AZ_2</code>.
+     * <code>SINGLE_AZ_HA_2</code>, <code>SINGLE_AZ_HA_1</code>, <code>SINGLE_AZ_2</code>, and <code>SINGLE_AZ_1</code>.
      * </p>
      * 
      * @param deploymentType
      *        Specifies the file-system deployment type. Amazon FSx for OpenZFS supports&#x2028; <code>MULTI_AZ_1</code>
-     *        , <code>SINGLE_AZ_1</code>, and <code>SINGLE_AZ_2</code>.
+     *        , <code>SINGLE_AZ_HA_2</code>, <code>SINGLE_AZ_HA_1</code>, <code>SINGLE_AZ_2</code>, and
+     *        <code>SINGLE_AZ_1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OpenZFSDeploymentType
      */
@@ -375,12 +378,13 @@ public class OpenZFSFileSystemConfiguration implements Serializable, Cloneable, 
     /**
      * <p>
      * Specifies the file-system deployment type. Amazon FSx for OpenZFS supports&#x2028; <code>MULTI_AZ_1</code>,
-     * <code>SINGLE_AZ_1</code>, and <code>SINGLE_AZ_2</code>.
+     * <code>SINGLE_AZ_HA_2</code>, <code>SINGLE_AZ_HA_1</code>, <code>SINGLE_AZ_2</code>, and <code>SINGLE_AZ_1</code>.
      * </p>
      * 
      * @param deploymentType
      *        Specifies the file-system deployment type. Amazon FSx for OpenZFS supports&#x2028; <code>MULTI_AZ_1</code>
-     *        , <code>SINGLE_AZ_1</code>, and <code>SINGLE_AZ_2</code>.
+     *        , <code>SINGLE_AZ_HA_2</code>, <code>SINGLE_AZ_HA_1</code>, <code>SINGLE_AZ_2</code>, and
+     *        <code>SINGLE_AZ_1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OpenZFSDeploymentType
      */

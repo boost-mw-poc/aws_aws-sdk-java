@@ -269,6 +269,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public CreateOptimizationJobResult createOptimizationJob(CreateOptimizationJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreatePipelineResult createPipeline(CreatePipelineRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -545,6 +550,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public DeleteNotebookInstanceLifecycleConfigResult deleteNotebookInstanceLifecycleConfig(DeleteNotebookInstanceLifecycleConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteOptimizationJobResult deleteOptimizationJob(DeleteOptimizationJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -835,6 +845,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public DescribeNotebookInstanceLifecycleConfigResult describeNotebookInstanceLifecycleConfig(DescribeNotebookInstanceLifecycleConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeOptimizationJobResult describeOptimizationJob(DescribeOptimizationJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1244,6 +1259,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public ListOptimizationJobsResult listOptimizationJobs(ListOptimizationJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListPipelineExecutionStepsResult listPipelineExecutionSteps(ListPipelineExecutionStepsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1465,6 +1485,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public StopNotebookInstanceResult stopNotebookInstance(StopNotebookInstanceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopOptimizationJobResult stopOptimizationJob(StopOptimizationJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

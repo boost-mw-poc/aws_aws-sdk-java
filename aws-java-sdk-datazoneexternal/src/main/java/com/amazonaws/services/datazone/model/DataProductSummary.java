@@ -23,6 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/DataProductSummary" target="_top">AWS API
  *      Documentation</a>
  */
+@Deprecated
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DataProductSummary implements Serializable, Cloneable, StructuredPojo {
 

@@ -88,6 +88,10 @@ public class UpdateFileSystemOntapConfigurationJsonUnmarshaller implements Unmar
                     context.nextToken();
                     updateFileSystemOntapConfiguration.setThroughputCapacityPerHAPair(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("HAPairs", targetDepth)) {
+                    context.nextToken();
+                    updateFileSystemOntapConfiguration.setHAPairs(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

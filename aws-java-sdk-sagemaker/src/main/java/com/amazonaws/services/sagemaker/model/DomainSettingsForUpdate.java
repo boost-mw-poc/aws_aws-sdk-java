@@ -57,6 +57,12 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
      * </p>
      */
     private DockerSettings dockerSettings;
+    /**
+     * <p>
+     * A collection of settings that configure the Amazon Q experience within the domain.
+     * </p>
+     */
+    private AmazonQSettings amazonQSettings;
 
     /**
      * <p>
@@ -306,6 +312,46 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * A collection of settings that configure the Amazon Q experience within the domain.
+     * </p>
+     * 
+     * @param amazonQSettings
+     *        A collection of settings that configure the Amazon Q experience within the domain.
+     */
+
+    public void setAmazonQSettings(AmazonQSettings amazonQSettings) {
+        this.amazonQSettings = amazonQSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure the Amazon Q experience within the domain.
+     * </p>
+     * 
+     * @return A collection of settings that configure the Amazon Q experience within the domain.
+     */
+
+    public AmazonQSettings getAmazonQSettings() {
+        return this.amazonQSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure the Amazon Q experience within the domain.
+     * </p>
+     * 
+     * @param amazonQSettings
+     *        A collection of settings that configure the Amazon Q experience within the domain.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainSettingsForUpdate withAmazonQSettings(AmazonQSettings amazonQSettings) {
+        setAmazonQSettings(amazonQSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -324,7 +370,9 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
         if (getSecurityGroupIds() != null)
             sb.append("SecurityGroupIds: ").append(getSecurityGroupIds()).append(",");
         if (getDockerSettings() != null)
-            sb.append("DockerSettings: ").append(getDockerSettings());
+            sb.append("DockerSettings: ").append(getDockerSettings()).append(",");
+        if (getAmazonQSettings() != null)
+            sb.append("AmazonQSettings: ").append(getAmazonQSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -356,6 +404,10 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
             return false;
         if (other.getDockerSettings() != null && other.getDockerSettings().equals(this.getDockerSettings()) == false)
             return false;
+        if (other.getAmazonQSettings() == null ^ this.getAmazonQSettings() == null)
+            return false;
+        if (other.getAmazonQSettings() != null && other.getAmazonQSettings().equals(this.getAmazonQSettings()) == false)
+            return false;
         return true;
     }
 
@@ -368,6 +420,7 @@ public class DomainSettingsForUpdate implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getExecutionRoleIdentityConfig() == null) ? 0 : getExecutionRoleIdentityConfig().hashCode());
         hashCode = prime * hashCode + ((getSecurityGroupIds() == null) ? 0 : getSecurityGroupIds().hashCode());
         hashCode = prime * hashCode + ((getDockerSettings() == null) ? 0 : getDockerSettings().hashCode());
+        hashCode = prime * hashCode + ((getAmazonQSettings() == null) ? 0 : getAmazonQSettings().hashCode());
         return hashCode;
     }
 

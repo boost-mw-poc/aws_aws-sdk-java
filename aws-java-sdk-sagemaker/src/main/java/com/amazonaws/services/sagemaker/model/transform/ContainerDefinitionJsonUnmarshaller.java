@@ -72,6 +72,13 @@ public class ContainerDefinitionJsonUnmarshaller implements Unmarshaller<Contain
                     context.nextToken();
                     containerDefinition.setModelDataSource(ModelDataSourceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AdditionalModelDataSources", targetDepth)) {
+                    context.nextToken();
+                    containerDefinition.setAdditionalModelDataSources(new ListUnmarshaller<AdditionalModelDataSource>(AdditionalModelDataSourceJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Environment", targetDepth)) {
                     context.nextToken();
                     containerDefinition.setEnvironment(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

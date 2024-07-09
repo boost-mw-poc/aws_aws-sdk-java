@@ -1684,6 +1684,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateOptimizationJobResult> createOptimizationJobAsync(CreateOptimizationJobRequest request) {
+
+        return createOptimizationJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateOptimizationJobResult> createOptimizationJobAsync(final CreateOptimizationJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateOptimizationJobRequest, CreateOptimizationJobResult> asyncHandler) {
+        final CreateOptimizationJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateOptimizationJobResult>() {
+            @Override
+            public CreateOptimizationJobResult call() throws Exception {
+                CreateOptimizationJobResult result = null;
+
+                try {
+                    result = executeCreateOptimizationJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreatePipelineResult> createPipelineAsync(CreatePipelineRequest request) {
 
         return createPipelineAsync(request, null);
@@ -3529,6 +3562,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeDeleteNotebookInstanceLifecycleConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteOptimizationJobResult> deleteOptimizationJobAsync(DeleteOptimizationJobRequest request) {
+
+        return deleteOptimizationJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteOptimizationJobResult> deleteOptimizationJobAsync(final DeleteOptimizationJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteOptimizationJobRequest, DeleteOptimizationJobResult> asyncHandler) {
+        final DeleteOptimizationJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteOptimizationJobResult>() {
+            @Override
+            public DeleteOptimizationJobResult call() throws Exception {
+                DeleteOptimizationJobResult result = null;
+
+                try {
+                    result = executeDeleteOptimizationJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -5456,6 +5522,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeDescribeNotebookInstanceLifecycleConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOptimizationJobResult> describeOptimizationJobAsync(DescribeOptimizationJobRequest request) {
+
+        return describeOptimizationJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOptimizationJobResult> describeOptimizationJobAsync(final DescribeOptimizationJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeOptimizationJobRequest, DescribeOptimizationJobResult> asyncHandler) {
+        final DescribeOptimizationJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeOptimizationJobResult>() {
+            @Override
+            public DescribeOptimizationJobResult call() throws Exception {
+                DescribeOptimizationJobResult result = null;
+
+                try {
+                    result = executeDescribeOptimizationJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -8166,6 +8265,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListOptimizationJobsResult> listOptimizationJobsAsync(ListOptimizationJobsRequest request) {
+
+        return listOptimizationJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOptimizationJobsResult> listOptimizationJobsAsync(final ListOptimizationJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListOptimizationJobsRequest, ListOptimizationJobsResult> asyncHandler) {
+        final ListOptimizationJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListOptimizationJobsResult>() {
+            @Override
+            public ListOptimizationJobsResult call() throws Exception {
+                ListOptimizationJobsResult result = null;
+
+                try {
+                    result = executeListOptimizationJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListPipelineExecutionStepsResult> listPipelineExecutionStepsAsync(ListPipelineExecutionStepsRequest request) {
 
         return listPipelineExecutionStepsAsync(request, null);
@@ -9645,6 +9777,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeStopNotebookInstance(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopOptimizationJobResult> stopOptimizationJobAsync(StopOptimizationJobRequest request) {
+
+        return stopOptimizationJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopOptimizationJobResult> stopOptimizationJobAsync(final StopOptimizationJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopOptimizationJobRequest, StopOptimizationJobResult> asyncHandler) {
+        final StopOptimizationJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopOptimizationJobResult>() {
+            @Override
+            public StopOptimizationJobResult call() throws Exception {
+                StopOptimizationJobResult result = null;
+
+                try {
+                    result = executeStopOptimizationJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
