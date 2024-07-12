@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListCertificateAuthoritiesRequestMarshaller {
 
-    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<String> RESOURCEOWNER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceOwner").build();
 
@@ -50,8 +50,8 @@ public class ListCertificateAuthoritiesRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listCertificateAuthoritiesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listCertificateAuthoritiesRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listCertificateAuthoritiesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listCertificateAuthoritiesRequest.getResourceOwner(), RESOURCEOWNER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

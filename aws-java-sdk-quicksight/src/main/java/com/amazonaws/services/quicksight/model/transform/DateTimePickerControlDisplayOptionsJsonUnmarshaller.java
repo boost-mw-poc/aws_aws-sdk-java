@@ -61,6 +61,14 @@ public class DateTimePickerControlDisplayOptionsJsonUnmarshaller implements Unma
                     dateTimePickerControlDisplayOptions.setInfoIconLabelOptions(SheetControlInfoIconLabelOptionsJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("HelperTextVisibility", targetDepth)) {
+                    context.nextToken();
+                    dateTimePickerControlDisplayOptions.setHelperTextVisibility(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DateIconVisibility", targetDepth)) {
+                    context.nextToken();
+                    dateTimePickerControlDisplayOptions.setDateIconVisibility(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

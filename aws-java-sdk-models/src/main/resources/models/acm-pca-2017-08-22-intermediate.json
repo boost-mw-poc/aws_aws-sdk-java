@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -100,20 +100,20 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "InvalidArgsException",
-        "documentation" : "<p>One or more of the specified arguments was not valid.</p>",
+        "exceptionName" : "LimitExceededException",
+        "documentation" : "<p>An Amazon Web Services Private CA quota has been exceeded. See the exception message returned to determine the quota that was exceeded.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "InvalidPolicyException",
-        "documentation" : "<p>The resource policy is invalid or is missing a required statement. For general information about IAM policy and statement structure, see <a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policies-json\">Overview of JSON Policies</a>.</p>",
+        "exceptionName" : "InvalidArgsException",
+        "documentation" : "<p>One or more of the specified arguments was not valid.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidTagException",
         "documentation" : "<p>The tag associated with the CA is not valid. The invalid argument is contained in the message field.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "LimitExceededException",
-        "documentation" : "<p>An Amazon Web Services Private CA quota has been exceeded. See the exception message returned to determine the quota that was exceeded.</p>",
+        "exceptionName" : "InvalidPolicyException",
+        "documentation" : "<p>The resource policy is invalid or is missing a required statement. For general information about IAM policy and statement structure, see <a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policies-json\">Overview of JSON Policies</a>.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -149,14 +149,6 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "RequestInProgressException",
-        "documentation" : "<p>Your request is already in progress.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "RequestFailedException",
-        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
@@ -169,8 +161,16 @@
         "documentation" : "<p>One or more of the specified arguments was not valid.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "RequestFailedException",
+        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "InvalidStateException",
         "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "RequestInProgressException",
+        "documentation" : "<p>Your request is already in progress.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -206,6 +206,14 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "LimitExceededException",
+        "documentation" : "<p>An Amazon Web Services Private CA quota has been exceeded. See the exception message returned to determine the quota that was exceeded.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "PermissionAlreadyExistsException",
+        "documentation" : "<p>The designated permission has already been given to the user.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
@@ -214,20 +222,12 @@
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "PermissionAlreadyExistsException",
-        "documentation" : "<p>The designated permission has already been given to the user.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "LimitExceededException",
-        "documentation" : "<p>An Amazon Web Services Private CA quota has been exceeded. See the exception message returned to determine the quota that was exceeded.</p>",
+        "exceptionName" : "RequestFailedException",
+        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidStateException",
         "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "RequestFailedException",
-        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -263,10 +263,6 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ConcurrentModificationException",
-        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
@@ -277,6 +273,10 @@
       }, {
         "exceptionName" : "InvalidStateException",
         "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConcurrentModificationException",
+        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -320,12 +320,12 @@
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "InvalidStateException",
-        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "RequestFailedException",
         "documentation" : "<p>The request has failed for an unspecified reason.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "InvalidStateException",
+        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -361,28 +361,28 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ConcurrentModificationException",
-        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
+        "exceptionName" : "LockoutPreventedException",
+        "documentation" : "<p>The current action was prevented because it would lock the caller out from performing subsequent actions. Verify that the specified parameters would not result in the caller being denied access to the resource. </p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidArnException",
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "InvalidStateException",
-        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "LockoutPreventedException",
-        "documentation" : "<p>The current action was prevented because it would lock the caller out from performing subsequent actions. Verify that the specified parameters would not result in the caller being denied access to the resource. </p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "RequestFailedException",
         "documentation" : "<p>The request has failed for an unspecified reason.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
+        "exceptionName" : "InvalidStateException",
+        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConcurrentModificationException",
+        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -504,14 +504,6 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "RequestInProgressException",
-        "documentation" : "<p>Your request is already in progress.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "RequestFailedException",
-        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
@@ -520,8 +512,16 @@
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "RequestFailedException",
+        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "InvalidStateException",
         "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "RequestInProgressException",
+        "documentation" : "<p>Your request is already in progress.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -561,12 +561,12 @@
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "InvalidStateException",
-        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "InvalidArnException",
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "InvalidStateException",
+        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -602,14 +602,6 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "RequestInProgressException",
-        "documentation" : "<p>Your request is already in progress.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "RequestFailedException",
-        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
@@ -618,8 +610,16 @@
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "RequestFailedException",
+        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "InvalidStateException",
         "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "RequestInProgressException",
+        "documentation" : "<p>Your request is already in progress.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -655,20 +655,20 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "InvalidArnException",
-        "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "InvalidStateException",
-        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "exceptionName" : "InvalidArnException",
+        "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "RequestFailedException",
         "documentation" : "<p>The request has failed for an unspecified reason.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
+        "exceptionName" : "InvalidStateException",
+        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -698,22 +698,18 @@
       "asyncReturnType" : "ImportCertificateAuthorityCertificateResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Imports a signed private CA certificate into Amazon Web Services Private CA. This action is used when you are using a chain of trust whose root is located outside Amazon Web Services Private CA. Before you can call this action, the following preparations must in place:</p> <ol> <li> <p>In Amazon Web Services Private CA, call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action to create the private CA that you plan to back with the imported certificate.</p> </li> <li> <p>Call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_GetCertificateAuthorityCsr.html\">GetCertificateAuthorityCsr</a> action to generate a certificate signing request (CSR).</p> </li> <li> <p>Sign the CSR using a root or intermediate CA hosted by either an on-premises PKI hierarchy or by a commercial CA.</p> </li> <li> <p>Create a certificate chain and copy the signed certificate and the certificate chain to your working directory.</p> </li> </ol> <p>Amazon Web Services Private CA supports three scenarios for installing a CA certificate:</p> <ul> <li> <p>Installing a certificate for a root CA hosted by Amazon Web Services Private CA.</p> </li> <li> <p>Installing a subordinate CA certificate whose parent authority is hosted by Amazon Web Services Private CA.</p> </li> <li> <p>Installing a subordinate CA certificate whose parent authority is externally hosted.</p> </li> </ul> <p>The following additional requirements apply when you import a CA certificate.</p> <ul> <li> <p>Only a self-signed certificate can be imported as a root CA.</p> </li> <li> <p>A self-signed certificate cannot be imported as a subordinate CA.</p> </li> <li> <p>Your certificate chain must not include the private CA certificate that you are importing.</p> </li> <li> <p>Your root CA must be the last certificate in your chain. The subordinate certificate, if any, that your root CA signed must be next to last. The subordinate certificate signed by the preceding subordinate CA must come next, and so on until your chain is built. </p> </li> <li> <p>The chain must be PEM-encoded.</p> </li> <li> <p>The maximum allowed size of a certificate is 32 KB.</p> </li> <li> <p>The maximum allowed size of a certificate chain is 2 MB.</p> </li> </ul> <p> <i>Enforcement of Critical Constraints</i> </p> <p>Amazon Web Services Private CA allows the following extensions to be marked critical in the imported CA certificate or chain.</p> <ul> <li> <p>Authority key identifier</p> </li> <li> <p>Basic constraints (<i>must</i> be marked critical)</p> </li> <li> <p>Certificate policies</p> </li> <li> <p>Extended key usage</p> </li> <li> <p>Inhibit anyPolicy</p> </li> <li> <p>Issuer alternative name</p> </li> <li> <p>Key usage</p> </li> <li> <p>Name constraints</p> </li> <li> <p>Policy mappings</p> </li> <li> <p>Subject alternative name</p> </li> <li> <p>Subject directory attributes</p> </li> <li> <p>Subject key identifier</p> </li> <li> <p>Subject information access</p> </li> </ul> <p>Amazon Web Services Private CA rejects the following extensions when they are marked critical in an imported CA certificate or chain.</p> <ul> <li> <p>Authority information access</p> </li> <li> <p>CRL distribution points</p> </li> <li> <p>Freshest CRL</p> </li> <li> <p>Policy constraints</p> </li> </ul> <p>Amazon Web Services Private Certificate Authority will also reject any other extension marked as critical not contained on the preceding list of allowed extensions.</p>",
+      "documentation" : "<p>Imports a signed private CA certificate into Amazon Web Services Private CA. This action is used when you are using a chain of trust whose root is located outside Amazon Web Services Private CA. Before you can call this action, the following preparations must in place:</p> <ol> <li> <p>In Amazon Web Services Private CA, call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action to create the private CA that you plan to back with the imported certificate.</p> </li> <li> <p>Call the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_GetCertificateAuthorityCsr.html\">GetCertificateAuthorityCsr</a> action to generate a certificate signing request (CSR).</p> </li> <li> <p>Sign the CSR using a root or intermediate CA hosted by either an on-premises PKI hierarchy or by a commercial CA.</p> </li> <li> <p>Create a certificate chain and copy the signed certificate and the certificate chain to your working directory.</p> </li> </ol> <p>Amazon Web Services Private CA supports three scenarios for installing a CA certificate:</p> <ul> <li> <p>Installing a certificate for a root CA hosted by Amazon Web Services Private CA.</p> </li> <li> <p>Installing a subordinate CA certificate whose parent authority is hosted by Amazon Web Services Private CA.</p> </li> <li> <p>Installing a subordinate CA certificate whose parent authority is externally hosted.</p> </li> </ul> <p>The following additional requirements apply when you import a CA certificate.</p> <ul> <li> <p>Only a self-signed certificate can be imported as a root CA.</p> </li> <li> <p>A self-signed certificate cannot be imported as a subordinate CA.</p> </li> <li> <p>Your certificate chain must not include the private CA certificate that you are importing.</p> </li> <li> <p>Your root CA must be the last certificate in your chain. The subordinate certificate, if any, that your root CA signed must be next to last. The subordinate certificate signed by the preceding subordinate CA must come next, and so on until your chain is built. </p> </li> <li> <p>The chain must be PEM-encoded.</p> </li> <li> <p>The maximum allowed size of a certificate is 32 KB.</p> </li> <li> <p>The maximum allowed size of a certificate chain is 2 MB.</p> </li> </ul> <p> <i>Enforcement of Critical Constraints</i> </p> <p>Amazon Web Services Private CA allows the following extensions to be marked critical in the imported CA certificate or chain.</p> <ul> <li> <p>Basic constraints (<i>must</i> be marked critical)</p> </li> <li> <p>Subject alternative names</p> </li> <li> <p>Key usage</p> </li> <li> <p>Extended key usage</p> </li> <li> <p>Authority key identifier</p> </li> <li> <p>Subject key identifier</p> </li> <li> <p>Issuer alternative name</p> </li> <li> <p>Subject directory attributes</p> </li> <li> <p>Subject information access</p> </li> <li> <p>Certificate policies</p> </li> <li> <p>Policy mappings</p> </li> <li> <p>Inhibit anyPolicy</p> </li> </ul> <p>Amazon Web Services Private CA rejects the following extensions when they are marked critical in an imported CA certificate or chain.</p> <ul> <li> <p>Name constraints</p> </li> <li> <p>Policy constraints</p> </li> <li> <p>CRL distribution points</p> </li> <li> <p>Authority information access</p> </li> <li> <p>Freshest CRL</p> </li> <li> <p>Any other extension</p> </li> </ul>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ConcurrentModificationException",
-        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
+        "exceptionName" : "CertificateMismatchException",
+        "documentation" : "<p>The certificate authority certificate you are importing does not comply with conditions specified in the certificate that signed it.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "RequestInProgressException",
-        "documentation" : "<p>Your request is already in progress.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "RequestFailedException",
-        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
+        "exceptionName" : "MalformedCertificateException",
+        "documentation" : "<p>One or more fields in the certificate are invalid.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -728,16 +724,20 @@
         "documentation" : "<p>The request action cannot be performed or is prohibited.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "RequestFailedException",
+        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "InvalidStateException",
         "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "MalformedCertificateException",
-        "documentation" : "<p>One or more fields in the certificate are invalid.</p>",
+        "exceptionName" : "ConcurrentModificationException",
+        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "CertificateMismatchException",
-        "documentation" : "<p>The certificate authority certificate you are importing does not comply with conditions specified in the certificate that signed it.</p>",
+        "exceptionName" : "RequestInProgressException",
+        "documentation" : "<p>Your request is already in progress.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -781,16 +781,16 @@
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "InvalidStateException",
-        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "InvalidArnException",
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidArgsException",
         "documentation" : "<p>One or more of the specified arguments was not valid.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "InvalidStateException",
+        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "MalformedCSRException",
@@ -875,16 +875,16 @@
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "InvalidNextTokenException",
-        "documentation" : "<p>The token specified in the <code>NextToken</code> argument is not valid. Use the token returned from your previous call to <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a>.</p>",
+        "exceptionName" : "RequestFailedException",
+        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidStateException",
         "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "RequestFailedException",
-        "documentation" : "<p>The request has failed for an unspecified reason.</p>",
+        "exceptionName" : "InvalidNextTokenException",
+        "documentation" : "<p>The token specified in the <code>NextToken</code> argument is not valid. Use the token returned from your previous call to <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a>.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -965,32 +965,32 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ConcurrentModificationException",
-        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
+        "exceptionName" : "LockoutPreventedException",
+        "documentation" : "<p>The current action was prevented because it would lock the caller out from performing subsequent actions. Verify that the specified parameters would not result in the caller being denied access to the resource. </p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ResourceNotFoundException",
+        "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidArnException",
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "InvalidStateException",
-        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "InvalidPolicyException",
-        "documentation" : "<p>The resource policy is invalid or is missing a required statement. For general information about IAM policy and statement structure, see <a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policies-json\">Overview of JSON Policies</a>.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "LockoutPreventedException",
-        "documentation" : "<p>The current action was prevented because it would lock the caller out from performing subsequent actions. Verify that the specified parameters would not result in the caller being denied access to the resource. </p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "RequestFailedException",
         "documentation" : "<p>The request has failed for an unspecified reason.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
+        "exceptionName" : "InvalidStateException",
+        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConcurrentModificationException",
+        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "InvalidPolicyException",
+        "documentation" : "<p>The resource policy is invalid or is missing a required statement. For general information about IAM policy and statement structure, see <a href=\"https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policies-json\">Overview of JSON Policies</a>.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -1030,12 +1030,12 @@
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "InvalidStateException",
-        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "InvalidArnException",
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "InvalidStateException",
+        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -1071,20 +1071,8 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ConcurrentModificationException",
-        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "InvalidArnException",
-        "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "InvalidRequestException",
-        "documentation" : "<p>The request action cannot be performed or is prohibited.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "InvalidStateException",
-        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "exceptionName" : "RequestAlreadyProcessedException",
+        "documentation" : "<p>Your request has already been completed.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "LimitExceededException",
@@ -1095,16 +1083,28 @@
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "RequestAlreadyProcessedException",
-        "documentation" : "<p>Your request has already been completed.</p>",
+        "exceptionName" : "InvalidArnException",
+        "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
-        "exceptionName" : "RequestInProgressException",
-        "documentation" : "<p>Your request is already in progress.</p>",
+        "exceptionName" : "InvalidRequestException",
+        "documentation" : "<p>The request action cannot be performed or is prohibited.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "RequestFailedException",
         "documentation" : "<p>The request has failed for an unspecified reason.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "InvalidStateException",
+        "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConcurrentModificationException",
+        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "RequestInProgressException",
+        "documentation" : "<p>Your request is already in progress.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -1242,24 +1242,24 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
-        "exceptionName" : "ConcurrentModificationException",
-        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
-        "httpStatusCode" : null
-      }, {
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.</p>",
-        "httpStatusCode" : null
-      }, {
-        "exceptionName" : "InvalidArgsException",
-        "documentation" : "<p>One or more of the specified arguments was not valid.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidArnException",
         "documentation" : "<p>The requested Amazon Resource Name (ARN) does not refer to an existing resource.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "InvalidArgsException",
+        "documentation" : "<p>One or more of the specified arguments was not valid.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "InvalidStateException",
         "documentation" : "<p>The state of the private CA does not allow this action to occur.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConcurrentModificationException",
+        "documentation" : "<p>A previous update to your private CA is still ongoing.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InvalidPolicyException",
@@ -20377,12 +20377,12 @@
         "c2jName" : "ResourceArn",
         "c2jShape" : "Arn",
         "deprecated" : false,
-        "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>",
+        "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withResourceArn",
-        "getterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>\n@return The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action.*/",
+        "getterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>\n@return The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code>*/",
         "getterMethodName" : "getResourceArn",
         "getterModel" : {
           "returnType" : "String",
@@ -20416,7 +20416,7 @@
         "marshallingType" : "STRING",
         "name" : "ResourceArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action.*/",
+        "setterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code>*/",
         "setterMethodName" : "setResourceArn",
         "setterModel" : {
           "timestampFormat" : null,
@@ -20431,13 +20431,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "resourceArn",
           "variableType" : "String",
-          "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>",
+          "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -20448,12 +20448,12 @@
           "c2jName" : "ResourceArn",
           "c2jShape" : "Arn",
           "deprecated" : false,
-          "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>",
+          "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withResourceArn",
-          "getterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>\n@return The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action.*/",
+          "getterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>\n@return The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code>*/",
           "getterMethodName" : "getResourceArn",
           "getterModel" : {
             "returnType" : "String",
@@ -20487,7 +20487,7 @@
           "marshallingType" : "STRING",
           "name" : "ResourceArn",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action.*/",
+          "setterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code>*/",
           "setterMethodName" : "setResourceArn",
           "setterModel" : {
             "timestampFormat" : null,
@@ -20502,13 +20502,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>\n@param resourceArn The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "resourceArn",
             "variableType" : "String",
-            "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. </p>",
+            "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN by calling the ListCertificateAuthorities action. <pre><code> &lt;/p&gt; </code></pre>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -24337,75 +24337,6 @@
         "xmlNameSpaceUri" : null
       },
       "members" : [ {
-        "c2jName" : "NextToken",
-        "c2jShape" : "NextToken",
-        "deprecated" : false,
-        "documentation" : "<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>",
-        "endpointDiscoveryId" : false,
-        "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>\n@param nextToken Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "fluentSetterMethodName" : "withNextToken",
-        "getterDocumentation" : "/**<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>\n@return Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.*/",
-        "getterMethodName" : "getNextToken",
-        "getterModel" : {
-          "returnType" : "String",
-          "documentation" : null
-        },
-        "http" : {
-          "additionalMarshallingPath" : null,
-          "additionalUnmarshallingPath" : null,
-          "flattened" : false,
-          "greedy" : false,
-          "header" : false,
-          "isPayload" : false,
-          "isStreaming" : false,
-          "location" : null,
-          "marshallLocation" : "PAYLOAD",
-          "marshallLocationName" : "NextToken",
-          "queryString" : false,
-          "requiresLength" : false,
-          "statusCode" : false,
-          "unmarshallLocationName" : "NextToken",
-          "uri" : false
-        },
-        "idempotencyToken" : false,
-        "isBinary" : false,
-        "jsonValue" : false,
-        "list" : false,
-        "listModel" : null,
-        "map" : false,
-        "mapModel" : null,
-        "marshallingTargetClass" : "String",
-        "marshallingType" : "STRING",
-        "name" : "NextToken",
-        "sensitive" : false,
-        "setterDocumentation" : "/**<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>\n@param nextToken Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.*/",
-        "setterMethodName" : "setNextToken",
-        "setterModel" : {
-          "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "nextToken",
-          "variableType" : "String",
-          "documentation" : "",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
-        },
-        "shouldEmitLegacyEnumSetter" : false,
-        "shouldFullyQualify" : false,
-        "simple" : true,
-        "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>\n@param nextToken Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "variable" : {
-          "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "nextToken",
-          "variableType" : "String",
-          "documentation" : "<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
-        },
-        "xmlNameSpaceUri" : null
-      }, {
         "c2jName" : "MaxResults",
         "c2jShape" : "MaxResults",
         "deprecated" : false,
@@ -24472,6 +24403,75 @@
           "documentation" : "<p>Use this parameter when paginating results to specify the maximum number of items to return in the response on each page. If additional items exist beyond the number you specify, the <code>NextToken</code> element is sent in the response. Use this <code>NextToken</code> value in a subsequent request to retrieve additional items.</p> <p>Although the maximum value is 1000, the action only returns a maximum of 100 items.</p>",
           "simpleType" : "Integer",
           "variableSetterType" : "Integer"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "NextToken",
+        "c2jShape" : "NextToken",
+        "deprecated" : false,
+        "documentation" : "<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>\n@param nextToken Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withNextToken",
+        "getterDocumentation" : "/**<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>\n@return Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.*/",
+        "getterMethodName" : "getNextToken",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "NextToken",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "NextToken",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "NextToken",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>\n@param nextToken Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.*/",
+        "setterMethodName" : "setNextToken",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "nextToken",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>\n@param nextToken Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "nextToken",
+          "variableType" : "String",
+          "documentation" : "<p>Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
       }, {
@@ -24796,6 +24796,75 @@
       "hasStreamingMember" : false,
       "marshaller" : null,
       "members" : [ {
+        "c2jName" : "NextToken",
+        "c2jShape" : "NextToken",
+        "deprecated" : false,
+        "documentation" : "<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>\n@param nextToken When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withNextToken",
+        "getterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>\n@return When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.*/",
+        "getterMethodName" : "getNextToken",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "NextToken",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "NextToken",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "NextToken",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>\n@param nextToken When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.*/",
+        "setterMethodName" : "setNextToken",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "nextToken",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>\n@param nextToken When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "nextToken",
+          "variableType" : "String",
+          "documentation" : "<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
         "c2jName" : "CertificateAuthorities",
         "c2jShape" : "CertificateAuthorities",
         "deprecated" : false,
@@ -24946,75 +25015,6 @@
           "documentation" : "<p>Summary information about each certificate authority you have created.</p>",
           "simpleType" : "List<CertificateAuthority>",
           "variableSetterType" : "java.util.Collection<CertificateAuthority>"
-        },
-        "xmlNameSpaceUri" : null
-      }, {
-        "c2jName" : "NextToken",
-        "c2jShape" : "NextToken",
-        "deprecated" : false,
-        "documentation" : "<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>",
-        "endpointDiscoveryId" : false,
-        "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>\n@param nextToken When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "fluentSetterMethodName" : "withNextToken",
-        "getterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>\n@return When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.*/",
-        "getterMethodName" : "getNextToken",
-        "getterModel" : {
-          "returnType" : "String",
-          "documentation" : null
-        },
-        "http" : {
-          "additionalMarshallingPath" : null,
-          "additionalUnmarshallingPath" : null,
-          "flattened" : false,
-          "greedy" : false,
-          "header" : false,
-          "isPayload" : false,
-          "isStreaming" : false,
-          "location" : null,
-          "marshallLocation" : "PAYLOAD",
-          "marshallLocationName" : "NextToken",
-          "queryString" : false,
-          "requiresLength" : false,
-          "statusCode" : false,
-          "unmarshallLocationName" : "NextToken",
-          "uri" : false
-        },
-        "idempotencyToken" : false,
-        "isBinary" : false,
-        "jsonValue" : false,
-        "list" : false,
-        "listModel" : null,
-        "map" : false,
-        "mapModel" : null,
-        "marshallingTargetClass" : "String",
-        "marshallingType" : "STRING",
-        "name" : "NextToken",
-        "sensitive" : false,
-        "setterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>\n@param nextToken When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.*/",
-        "setterMethodName" : "setNextToken",
-        "setterModel" : {
-          "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "nextToken",
-          "variableType" : "String",
-          "documentation" : "",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
-        },
-        "shouldEmitLegacyEnumSetter" : false,
-        "shouldFullyQualify" : false,
-        "simple" : true,
-        "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>\n@param nextToken When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "variable" : {
-          "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "nextToken",
-          "variableType" : "String",
-          "documentation" : "<p>When the list is truncated, this value is present and should be used for the <code>NextToken</code> parameter in a subsequent pagination request.</p>",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
       } ],
@@ -25294,18 +25294,18 @@
         "xmlNameSpaceUri" : null
       },
       "members" : [ {
-        "c2jName" : "CertificateAuthorityArn",
-        "c2jShape" : "Arn",
+        "c2jName" : "MaxResults",
+        "c2jShape" : "MaxResults",
         "deprecated" : false,
-        "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>",
+        "documentation" : "<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>\n@param certificateAuthorityArn The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "fluentSetterMethodName" : "withCertificateAuthorityArn",
-        "getterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>\n@return The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.*/",
-        "getterMethodName" : "getCertificateAuthorityArn",
+        "fluentSetterDocumentation" : "/**<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withMaxResults",
+        "getterDocumentation" : "/**<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@return When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.*/",
+        "getterMethodName" : "getMaxResults",
         "getterModel" : {
-          "returnType" : "String",
+          "returnType" : "Integer",
           "documentation" : null
         },
         "http" : {
@@ -25318,11 +25318,11 @@
           "isStreaming" : false,
           "location" : null,
           "marshallLocation" : "PAYLOAD",
-          "marshallLocationName" : "CertificateAuthorityArn",
+          "marshallLocationName" : "MaxResults",
           "queryString" : false,
           "requiresLength" : false,
           "statusCode" : false,
-          "unmarshallLocationName" : "CertificateAuthorityArn",
+          "unmarshallLocationName" : "MaxResults",
           "uri" : false
         },
         "idempotencyToken" : false,
@@ -25332,34 +25332,34 @@
         "listModel" : null,
         "map" : false,
         "mapModel" : null,
-        "marshallingTargetClass" : "String",
-        "marshallingType" : "STRING",
-        "name" : "CertificateAuthorityArn",
+        "marshallingTargetClass" : "Integer",
+        "marshallingType" : "INTEGER",
+        "name" : "MaxResults",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>\n@param certificateAuthorityArn The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.*/",
-        "setterMethodName" : "setCertificateAuthorityArn",
+        "setterDocumentation" : "/**<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.*/",
+        "setterMethodName" : "setMaxResults",
         "setterModel" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "certificateAuthorityArn",
-          "variableType" : "String",
+          "variableDeclarationType" : "Integer",
+          "variableName" : "maxResults",
+          "variableType" : "Integer",
           "documentation" : "",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
+          "simpleType" : "Integer",
+          "variableSetterType" : "Integer"
         },
         "shouldEmitLegacyEnumSetter" : false,
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>\n@param certificateAuthorityArn The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "certificateAuthorityArn",
-          "variableType" : "String",
-          "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
+          "variableDeclarationType" : "Integer",
+          "variableName" : "maxResults",
+          "variableType" : "Integer",
+          "documentation" : "<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>",
+          "simpleType" : "Integer",
+          "variableSetterType" : "Integer"
         },
         "xmlNameSpaceUri" : null
       }, {
@@ -25432,18 +25432,18 @@
         },
         "xmlNameSpaceUri" : null
       }, {
-        "c2jName" : "MaxResults",
-        "c2jShape" : "MaxResults",
+        "c2jName" : "CertificateAuthorityArn",
+        "c2jShape" : "Arn",
         "deprecated" : false,
-        "documentation" : "<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>",
+        "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "fluentSetterMethodName" : "withMaxResults",
-        "getterDocumentation" : "/**<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@return When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.*/",
-        "getterMethodName" : "getMaxResults",
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>\n@param certificateAuthorityArn The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withCertificateAuthorityArn",
+        "getterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>\n@return The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.*/",
+        "getterMethodName" : "getCertificateAuthorityArn",
         "getterModel" : {
-          "returnType" : "Integer",
+          "returnType" : "String",
           "documentation" : null
         },
         "http" : {
@@ -25456,11 +25456,11 @@
           "isStreaming" : false,
           "location" : null,
           "marshallLocation" : "PAYLOAD",
-          "marshallLocationName" : "MaxResults",
+          "marshallLocationName" : "CertificateAuthorityArn",
           "queryString" : false,
           "requiresLength" : false,
           "statusCode" : false,
-          "unmarshallLocationName" : "MaxResults",
+          "unmarshallLocationName" : "CertificateAuthorityArn",
           "uri" : false
         },
         "idempotencyToken" : false,
@@ -25470,34 +25470,34 @@
         "listModel" : null,
         "map" : false,
         "mapModel" : null,
-        "marshallingTargetClass" : "Integer",
-        "marshallingType" : "INTEGER",
-        "name" : "MaxResults",
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "CertificateAuthorityArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.*/",
-        "setterMethodName" : "setMaxResults",
+        "setterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>\n@param certificateAuthorityArn The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.*/",
+        "setterMethodName" : "setCertificateAuthorityArn",
         "setterModel" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "Integer",
-          "variableName" : "maxResults",
-          "variableType" : "Integer",
+          "variableDeclarationType" : "String",
+          "variableName" : "certificateAuthorityArn",
+          "variableType" : "String",
           "documentation" : "",
-          "simpleType" : "Integer",
-          "variableSetterType" : "Integer"
+          "simpleType" : "String",
+          "variableSetterType" : "String"
         },
         "shouldEmitLegacyEnumSetter" : false,
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>\n@param certificateAuthorityArn The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "Integer",
-          "variableName" : "maxResults",
-          "variableType" : "Integer",
-          "documentation" : "<p>When paginating results, use this parameter to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>",
-          "simpleType" : "Integer",
-          "variableSetterType" : "Integer"
+          "variableDeclarationType" : "String",
+          "variableName" : "certificateAuthorityArn",
+          "variableType" : "String",
+          "documentation" : "<p>The Amazon Resource Number (ARN) of the private CA to inspect. You can find the ARN by calling the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action. This must be of the form: <code>arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012</code> You can get a private CA's ARN by running the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html\">ListCertificateAuthorities</a> action.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
       } ],
@@ -25753,6 +25753,75 @@
       "hasStreamingMember" : false,
       "marshaller" : null,
       "members" : [ {
+        "c2jName" : "NextToken",
+        "c2jShape" : "NextToken",
+        "deprecated" : false,
+        "documentation" : "<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withNextToken",
+        "getterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@return When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.*/",
+        "getterMethodName" : "getNextToken",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "NextToken",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "NextToken",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "NextToken",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.*/",
+        "setterMethodName" : "setNextToken",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "nextToken",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "nextToken",
+          "variableType" : "String",
+          "documentation" : "<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
         "c2jName" : "Permissions",
         "c2jShape" : "PermissionList",
         "deprecated" : false,
@@ -25903,75 +25972,6 @@
           "documentation" : "<p>Summary information about each permission assigned by the specified private CA, including the action enabled, the policy provided, and the time of creation.</p>",
           "simpleType" : "List<Permission>",
           "variableSetterType" : "java.util.Collection<Permission>"
-        },
-        "xmlNameSpaceUri" : null
-      }, {
-        "c2jName" : "NextToken",
-        "c2jShape" : "NextToken",
-        "deprecated" : false,
-        "documentation" : "<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>",
-        "endpointDiscoveryId" : false,
-        "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "fluentSetterMethodName" : "withNextToken",
-        "getterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@return When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.*/",
-        "getterMethodName" : "getNextToken",
-        "getterModel" : {
-          "returnType" : "String",
-          "documentation" : null
-        },
-        "http" : {
-          "additionalMarshallingPath" : null,
-          "additionalUnmarshallingPath" : null,
-          "flattened" : false,
-          "greedy" : false,
-          "header" : false,
-          "isPayload" : false,
-          "isStreaming" : false,
-          "location" : null,
-          "marshallLocation" : "PAYLOAD",
-          "marshallLocationName" : "NextToken",
-          "queryString" : false,
-          "requiresLength" : false,
-          "statusCode" : false,
-          "unmarshallLocationName" : "NextToken",
-          "uri" : false
-        },
-        "idempotencyToken" : false,
-        "isBinary" : false,
-        "jsonValue" : false,
-        "list" : false,
-        "listModel" : null,
-        "map" : false,
-        "mapModel" : null,
-        "marshallingTargetClass" : "String",
-        "marshallingType" : "STRING",
-        "name" : "NextToken",
-        "sensitive" : false,
-        "setterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.*/",
-        "setterMethodName" : "setNextToken",
-        "setterModel" : {
-          "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "nextToken",
-          "variableType" : "String",
-          "documentation" : "",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
-        },
-        "shouldEmitLegacyEnumSetter" : false,
-        "shouldFullyQualify" : false,
-        "simple" : true,
-        "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "variable" : {
-          "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "nextToken",
-          "variableType" : "String",
-          "documentation" : "<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
       } ],
@@ -26251,18 +26251,18 @@
         "xmlNameSpaceUri" : null
       },
       "members" : [ {
-        "c2jName" : "CertificateAuthorityArn",
-        "c2jShape" : "Arn",
+        "c2jName" : "MaxResults",
+        "c2jShape" : "MaxResults",
         "deprecated" : false,
-        "documentation" : "<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>",
+        "documentation" : "<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>\n@param certificateAuthorityArn The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "fluentSetterMethodName" : "withCertificateAuthorityArn",
-        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>\n@return The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>*/",
-        "getterMethodName" : "getCertificateAuthorityArn",
+        "fluentSetterDocumentation" : "/**<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withMaxResults",
+        "getterDocumentation" : "/**<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@return Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.*/",
+        "getterMethodName" : "getMaxResults",
         "getterModel" : {
-          "returnType" : "String",
+          "returnType" : "Integer",
           "documentation" : null
         },
         "http" : {
@@ -26275,11 +26275,11 @@
           "isStreaming" : false,
           "location" : null,
           "marshallLocation" : "PAYLOAD",
-          "marshallLocationName" : "CertificateAuthorityArn",
+          "marshallLocationName" : "MaxResults",
           "queryString" : false,
           "requiresLength" : false,
           "statusCode" : false,
-          "unmarshallLocationName" : "CertificateAuthorityArn",
+          "unmarshallLocationName" : "MaxResults",
           "uri" : false
         },
         "idempotencyToken" : false,
@@ -26289,34 +26289,34 @@
         "listModel" : null,
         "map" : false,
         "mapModel" : null,
-        "marshallingTargetClass" : "String",
-        "marshallingType" : "STRING",
-        "name" : "CertificateAuthorityArn",
+        "marshallingTargetClass" : "Integer",
+        "marshallingType" : "INTEGER",
+        "name" : "MaxResults",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>\n@param certificateAuthorityArn The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>*/",
-        "setterMethodName" : "setCertificateAuthorityArn",
+        "setterDocumentation" : "/**<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.*/",
+        "setterMethodName" : "setMaxResults",
         "setterModel" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "certificateAuthorityArn",
-          "variableType" : "String",
+          "variableDeclarationType" : "Integer",
+          "variableName" : "maxResults",
+          "variableType" : "Integer",
           "documentation" : "",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
+          "simpleType" : "Integer",
+          "variableSetterType" : "Integer"
         },
         "shouldEmitLegacyEnumSetter" : false,
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>\n@param certificateAuthorityArn The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "certificateAuthorityArn",
-          "variableType" : "String",
-          "documentation" : "<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
+          "variableDeclarationType" : "Integer",
+          "variableName" : "maxResults",
+          "variableType" : "Integer",
+          "documentation" : "<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>",
+          "simpleType" : "Integer",
+          "variableSetterType" : "Integer"
         },
         "xmlNameSpaceUri" : null
       }, {
@@ -26389,18 +26389,18 @@
         },
         "xmlNameSpaceUri" : null
       }, {
-        "c2jName" : "MaxResults",
-        "c2jShape" : "MaxResults",
+        "c2jName" : "CertificateAuthorityArn",
+        "c2jShape" : "Arn",
         "deprecated" : false,
-        "documentation" : "<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>",
+        "documentation" : "<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "fluentSetterMethodName" : "withMaxResults",
-        "getterDocumentation" : "/**<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@return Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.*/",
-        "getterMethodName" : "getMaxResults",
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>\n@param certificateAuthorityArn The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withCertificateAuthorityArn",
+        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>\n@return The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>*/",
+        "getterMethodName" : "getCertificateAuthorityArn",
         "getterModel" : {
-          "returnType" : "Integer",
+          "returnType" : "String",
           "documentation" : null
         },
         "http" : {
@@ -26413,11 +26413,11 @@
           "isStreaming" : false,
           "location" : null,
           "marshallLocation" : "PAYLOAD",
-          "marshallLocationName" : "MaxResults",
+          "marshallLocationName" : "CertificateAuthorityArn",
           "queryString" : false,
           "requiresLength" : false,
           "statusCode" : false,
-          "unmarshallLocationName" : "MaxResults",
+          "unmarshallLocationName" : "CertificateAuthorityArn",
           "uri" : false
         },
         "idempotencyToken" : false,
@@ -26427,34 +26427,34 @@
         "listModel" : null,
         "map" : false,
         "mapModel" : null,
-        "marshallingTargetClass" : "Integer",
-        "marshallingType" : "INTEGER",
-        "name" : "MaxResults",
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "CertificateAuthorityArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.*/",
-        "setterMethodName" : "setMaxResults",
+        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>\n@param certificateAuthorityArn The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>*/",
+        "setterMethodName" : "setCertificateAuthorityArn",
         "setterModel" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "Integer",
-          "variableName" : "maxResults",
-          "variableType" : "Integer",
+          "variableDeclarationType" : "String",
+          "variableName" : "certificateAuthorityArn",
+          "variableType" : "String",
           "documentation" : "",
-          "simpleType" : "Integer",
-          "variableSetterType" : "Integer"
+          "simpleType" : "String",
+          "variableSetterType" : "String"
         },
         "shouldEmitLegacyEnumSetter" : false,
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>\n@param maxResults Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>\n@param certificateAuthorityArn The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "Integer",
-          "variableName" : "maxResults",
-          "variableType" : "Integer",
-          "documentation" : "<p>Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.</p>",
-          "simpleType" : "Integer",
-          "variableSetterType" : "Integer"
+          "variableDeclarationType" : "String",
+          "variableName" : "certificateAuthorityArn",
+          "variableType" : "String",
+          "documentation" : "<p>The Amazon Resource Name (ARN) that was returned when you called the <a href=\"https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html\">CreateCertificateAuthority</a> action. This must be of the form: </p> <p> <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code> </p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
       } ],
@@ -26710,6 +26710,75 @@
       "hasStreamingMember" : false,
       "marshaller" : null,
       "members" : [ {
+        "c2jName" : "NextToken",
+        "c2jShape" : "NextToken",
+        "deprecated" : false,
+        "documentation" : "<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withNextToken",
+        "getterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@return When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.*/",
+        "getterMethodName" : "getNextToken",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "NextToken",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "NextToken",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "NextToken",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.*/",
+        "setterMethodName" : "setNextToken",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "nextToken",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "nextToken",
+          "variableType" : "String",
+          "documentation" : "<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
         "c2jName" : "Tags",
         "c2jShape" : "TagList",
         "deprecated" : false,
@@ -26860,75 +26929,6 @@
           "documentation" : "<p>The tags associated with your private CA.</p>",
           "simpleType" : "List<Tag>",
           "variableSetterType" : "java.util.Collection<Tag>"
-        },
-        "xmlNameSpaceUri" : null
-      }, {
-        "c2jName" : "NextToken",
-        "c2jShape" : "NextToken",
-        "deprecated" : false,
-        "documentation" : "<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>",
-        "endpointDiscoveryId" : false,
-        "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "fluentSetterMethodName" : "withNextToken",
-        "getterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@return When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.*/",
-        "getterMethodName" : "getNextToken",
-        "getterModel" : {
-          "returnType" : "String",
-          "documentation" : null
-        },
-        "http" : {
-          "additionalMarshallingPath" : null,
-          "additionalUnmarshallingPath" : null,
-          "flattened" : false,
-          "greedy" : false,
-          "header" : false,
-          "isPayload" : false,
-          "isStreaming" : false,
-          "location" : null,
-          "marshallLocation" : "PAYLOAD",
-          "marshallLocationName" : "NextToken",
-          "queryString" : false,
-          "requiresLength" : false,
-          "statusCode" : false,
-          "unmarshallLocationName" : "NextToken",
-          "uri" : false
-        },
-        "idempotencyToken" : false,
-        "isBinary" : false,
-        "jsonValue" : false,
-        "list" : false,
-        "listModel" : null,
-        "map" : false,
-        "mapModel" : null,
-        "marshallingTargetClass" : "String",
-        "marshallingType" : "STRING",
-        "name" : "NextToken",
-        "sensitive" : false,
-        "setterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.*/",
-        "setterMethodName" : "setNextToken",
-        "setterModel" : {
-          "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "nextToken",
-          "variableType" : "String",
-          "documentation" : "",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
-        },
-        "shouldEmitLegacyEnumSetter" : false,
-        "shouldFullyQualify" : false,
-        "simple" : true,
-        "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>\n@param nextToken When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "variable" : {
-          "timestampFormat" : null,
-          "variableDeclarationType" : "String",
-          "variableName" : "nextToken",
-          "variableType" : "String",
-          "documentation" : "<p>When the list is truncated, this value is present and should be used for the <b>NextToken</b> parameter in a subsequent pagination request. </p>",
-          "simpleType" : "String",
-          "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
       } ],

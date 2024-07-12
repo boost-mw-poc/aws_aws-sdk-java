@@ -46,6 +46,60 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
+     * Creates new reviewed answers for a Q Topic.
+     * </p>
+     * 
+     * @param batchCreateTopicReviewedAnswerRequest
+     * @return Result of the BatchCreateTopicReviewedAnswer operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.BatchCreateTopicReviewedAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/BatchCreateTopicReviewedAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchCreateTopicReviewedAnswerResult batchCreateTopicReviewedAnswer(BatchCreateTopicReviewedAnswerRequest batchCreateTopicReviewedAnswerRequest);
+
+    /**
+     * <p>
+     * Deletes reviewed answers for Q Topic.
+     * </p>
+     * 
+     * @param batchDeleteTopicReviewedAnswerRequest
+     * @return Result of the BatchDeleteTopicReviewedAnswer operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.BatchDeleteTopicReviewedAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/BatchDeleteTopicReviewedAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchDeleteTopicReviewedAnswerResult batchDeleteTopicReviewedAnswer(BatchDeleteTopicReviewedAnswerRequest batchDeleteTopicReviewedAnswerRequest);
+
+    /**
+     * <p>
      * Cancels an ongoing ingestion of data into SPICE.
      * </p>
      * 
@@ -4117,6 +4171,32 @@ public interface AmazonQuickSight {
      *      target="_top">AWS API Documentation</a>
      */
     ListTopicRefreshSchedulesResult listTopicRefreshSchedules(ListTopicRefreshSchedulesRequest listTopicRefreshSchedulesRequest);
+
+    /**
+     * <p>
+     * Lists all reviewed answers for a Q Topic.
+     * </p>
+     * 
+     * @param listTopicReviewedAnswersRequest
+     * @return Result of the ListTopicReviewedAnswers operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.ListTopicReviewedAnswers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListTopicReviewedAnswers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTopicReviewedAnswersResult listTopicReviewedAnswers(ListTopicReviewedAnswersRequest listTopicReviewedAnswersRequest);
 
     /**
      * <p>

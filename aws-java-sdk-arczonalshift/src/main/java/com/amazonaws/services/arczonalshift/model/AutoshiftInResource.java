@@ -37,16 +37,16 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -57,10 +57,11 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
     private String appliedStatus;
     /**
      * <p>
-     * The Availability Zone that traffic is shifted away from for a resource, when Amazon Web Services starts an
-     * autoshift. Until the autoshift ends, traffic for the resource is instead directed to other Availability Zones in
-     * the Amazon Web Services Region. An autoshift can end for a resource, for example, when Amazon Web Services ends
-     * the autoshift for the Availability Zone or when you disable zonal autoshift for the resource.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is shifted away from for a resource, when
+     * Amazon Web Services starts an autoshift. Until the autoshift ends, traffic for the resource is instead directed
+     * to other Availability Zones in the Amazon Web Services Region. An autoshift can end for a resource, for example,
+     * when Amazon Web Services ends the autoshift for the Availability Zone or when you disable zonal autoshift for the
+     * resource.
      * </p>
      */
     private String awayFrom;
@@ -74,16 +75,16 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -93,14 +94,14 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
      * 
      * @param appliedStatus
      *        The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource
-     *        when there is more than one traffic shift active. There can be more than one application traffic shift in
-     *        progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an
-     *        autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
-     *        values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
-     *        in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *        when there is more than one active traffic shift. There can be more than one application traffic shift in
+     *        progress at the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an
+     *        autoshift. The <code>appliedStatus</code> field for a shift that is in progress for a resource can have
+     *        one of two values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is
+     *        currently in effect for the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.</p>
      *        <p>
      *        The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     *        autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *        autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt;
      *        autoshifts &gt; practice run zonal shifts.
      *        </p>
      *        <p>
@@ -118,16 +119,16 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -136,14 +137,15 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @return The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a
-     *         resource when there is more than one traffic shift active. There can be more than one application traffic
-     *         shift in progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts,
-     *         or an autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
-     *         values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
-     *         in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *         resource when there is more than one active traffic shift. There can be more than one application traffic
+     *         shift in progress at the same time - that is, practice run zonal shifts, customer-initiated zonal shifts,
+     *         or an autoshift. The <code>appliedStatus</code> field for a shift that is in progress for a resource can
+     *         have one of two values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift
+     *         that is currently in effect for the resource has an <code>appliedStatus</code> set to
+     *         <code>APPLIED</code>.</p>
      *         <p>
      *         The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     *         autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *         autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt;
      *         autoshifts &gt; practice run zonal shifts.
      *         </p>
      *         <p>
@@ -161,16 +163,16 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -180,14 +182,14 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
      * 
      * @param appliedStatus
      *        The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource
-     *        when there is more than one traffic shift active. There can be more than one application traffic shift in
-     *        progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an
-     *        autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
-     *        values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
-     *        in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *        when there is more than one active traffic shift. There can be more than one application traffic shift in
+     *        progress at the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an
+     *        autoshift. The <code>appliedStatus</code> field for a shift that is in progress for a resource can have
+     *        one of two values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is
+     *        currently in effect for the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.</p>
      *        <p>
      *        The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     *        autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *        autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt;
      *        autoshifts &gt; practice run zonal shifts.
      *        </p>
      *        <p>
@@ -207,16 +209,16 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -226,14 +228,14 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
      * 
      * @param appliedStatus
      *        The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource
-     *        when there is more than one traffic shift active. There can be more than one application traffic shift in
-     *        progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an
-     *        autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
-     *        values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
-     *        in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *        when there is more than one active traffic shift. There can be more than one application traffic shift in
+     *        progress at the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an
+     *        autoshift. The <code>appliedStatus</code> field for a shift that is in progress for a resource can have
+     *        one of two values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is
+     *        currently in effect for the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.</p>
      *        <p>
      *        The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     *        autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *        autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt;
      *        autoshifts &gt; practice run zonal shifts.
      *        </p>
      *        <p>
@@ -252,18 +254,19 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Availability Zone that traffic is shifted away from for a resource, when Amazon Web Services starts an
-     * autoshift. Until the autoshift ends, traffic for the resource is instead directed to other Availability Zones in
-     * the Amazon Web Services Region. An autoshift can end for a resource, for example, when Amazon Web Services ends
-     * the autoshift for the Availability Zone or when you disable zonal autoshift for the resource.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is shifted away from for a resource, when
+     * Amazon Web Services starts an autoshift. Until the autoshift ends, traffic for the resource is instead directed
+     * to other Availability Zones in the Amazon Web Services Region. An autoshift can end for a resource, for example,
+     * when Amazon Web Services ends the autoshift for the Availability Zone or when you disable zonal autoshift for the
+     * resource.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is shifted away from for a resource, when Amazon Web Services starts an
-     *        autoshift. Until the autoshift ends, traffic for the resource is instead directed to other Availability
-     *        Zones in the Amazon Web Services Region. An autoshift can end for a resource, for example, when Amazon Web
-     *        Services ends the autoshift for the Availability Zone or when you disable zonal autoshift for the
-     *        resource.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is shifted away from for a
+     *        resource, when Amazon Web Services starts an autoshift. Until the autoshift ends, traffic for the resource
+     *        is instead directed to other Availability Zones in the Amazon Web Services Region. An autoshift can end
+     *        for a resource, for example, when Amazon Web Services ends the autoshift for the Availability Zone or when
+     *        you disable zonal autoshift for the resource.
      */
 
     public void setAwayFrom(String awayFrom) {
@@ -272,17 +275,18 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Availability Zone that traffic is shifted away from for a resource, when Amazon Web Services starts an
-     * autoshift. Until the autoshift ends, traffic for the resource is instead directed to other Availability Zones in
-     * the Amazon Web Services Region. An autoshift can end for a resource, for example, when Amazon Web Services ends
-     * the autoshift for the Availability Zone or when you disable zonal autoshift for the resource.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is shifted away from for a resource, when
+     * Amazon Web Services starts an autoshift. Until the autoshift ends, traffic for the resource is instead directed
+     * to other Availability Zones in the Amazon Web Services Region. An autoshift can end for a resource, for example,
+     * when Amazon Web Services ends the autoshift for the Availability Zone or when you disable zonal autoshift for the
+     * resource.
      * </p>
      * 
-     * @return The Availability Zone that traffic is shifted away from for a resource, when Amazon Web Services starts
-     *         an autoshift. Until the autoshift ends, traffic for the resource is instead directed to other
-     *         Availability Zones in the Amazon Web Services Region. An autoshift can end for a resource, for example,
-     *         when Amazon Web Services ends the autoshift for the Availability Zone or when you disable zonal autoshift
-     *         for the resource.
+     * @return The Availability Zone (for example, <code>use1-az1</code>) that traffic is shifted away from for a
+     *         resource, when Amazon Web Services starts an autoshift. Until the autoshift ends, traffic for the
+     *         resource is instead directed to other Availability Zones in the Amazon Web Services Region. An autoshift
+     *         can end for a resource, for example, when Amazon Web Services ends the autoshift for the Availability
+     *         Zone or when you disable zonal autoshift for the resource.
      */
 
     public String getAwayFrom() {
@@ -291,18 +295,19 @@ public class AutoshiftInResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Availability Zone that traffic is shifted away from for a resource, when Amazon Web Services starts an
-     * autoshift. Until the autoshift ends, traffic for the resource is instead directed to other Availability Zones in
-     * the Amazon Web Services Region. An autoshift can end for a resource, for example, when Amazon Web Services ends
-     * the autoshift for the Availability Zone or when you disable zonal autoshift for the resource.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is shifted away from for a resource, when
+     * Amazon Web Services starts an autoshift. Until the autoshift ends, traffic for the resource is instead directed
+     * to other Availability Zones in the Amazon Web Services Region. An autoshift can end for a resource, for example,
+     * when Amazon Web Services ends the autoshift for the Availability Zone or when you disable zonal autoshift for the
+     * resource.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is shifted away from for a resource, when Amazon Web Services starts an
-     *        autoshift. Until the autoshift ends, traffic for the resource is instead directed to other Availability
-     *        Zones in the Amazon Web Services Region. An autoshift can end for a resource, for example, when Amazon Web
-     *        Services ends the autoshift for the Availability Zone or when you disable zonal autoshift for the
-     *        resource.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is shifted away from for a
+     *        resource, when Amazon Web Services starts an autoshift. Until the autoshift ends, traffic for the resource
+     *        is instead directed to other Availability Zones in the Amazon Web Services Region. An autoshift can end
+     *        for a resource, for example, when Amazon Web Services ends the autoshift for the Availability Zone or when
+     *        you disable zonal autoshift for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

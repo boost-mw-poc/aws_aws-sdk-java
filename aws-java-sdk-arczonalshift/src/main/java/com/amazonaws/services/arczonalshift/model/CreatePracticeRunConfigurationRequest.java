@@ -78,8 +78,8 @@ public class CreatePracticeRunConfigurationRequest extends com.amazonaws.AmazonW
     private java.util.List<ControlCondition> outcomeAlarms;
     /**
      * <p>
-     * The identifier of the resource to shift away traffic for when a practice run starts a zonal shift. The identifier
-     * is the Amazon Resource Name (ARN) for the resource.
+     * The identifier of the resource that Amazon Web Services shifts traffic for with a practice run zonal shift. The
+     * identifier is the Amazon Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
@@ -583,8 +583,8 @@ public class CreatePracticeRunConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier of the resource to shift away traffic for when a practice run starts a zonal shift. The identifier
-     * is the Amazon Resource Name (ARN) for the resource.
+     * The identifier of the resource that Amazon Web Services shifts traffic for with a practice run zonal shift. The
+     * identifier is the Amazon Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
@@ -592,8 +592,8 @@ public class CreatePracticeRunConfigurationRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier of the resource to shift away traffic for when a practice run starts a zonal shift. The
-     *        identifier is the Amazon Resource Name (ARN) for the resource.</p>
+     *        The identifier of the resource that Amazon Web Services shifts traffic for with a practice run zonal
+     *        shift. The identifier is the Amazon Resource Name (ARN) for the resource.</p>
      *        <p>
      *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
      *        cross-zone load balancing turned off.
@@ -605,16 +605,16 @@ public class CreatePracticeRunConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier of the resource to shift away traffic for when a practice run starts a zonal shift. The identifier
-     * is the Amazon Resource Name (ARN) for the resource.
+     * The identifier of the resource that Amazon Web Services shifts traffic for with a practice run zonal shift. The
+     * identifier is the Amazon Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
      * balancing turned off.
      * </p>
      * 
-     * @return The identifier of the resource to shift away traffic for when a practice run starts a zonal shift. The
-     *         identifier is the Amazon Resource Name (ARN) for the resource.</p>
+     * @return The identifier of the resource that Amazon Web Services shifts traffic for with a practice run zonal
+     *         shift. The identifier is the Amazon Resource Name (ARN) for the resource.</p>
      *         <p>
      *         At this time, supported resources are Network Load Balancers and Application Load Balancers with
      *         cross-zone load balancing turned off.
@@ -626,8 +626,8 @@ public class CreatePracticeRunConfigurationRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier of the resource to shift away traffic for when a practice run starts a zonal shift. The identifier
-     * is the Amazon Resource Name (ARN) for the resource.
+     * The identifier of the resource that Amazon Web Services shifts traffic for with a practice run zonal shift. The
+     * identifier is the Amazon Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
@@ -635,8 +635,8 @@ public class CreatePracticeRunConfigurationRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier of the resource to shift away traffic for when a practice run starts a zonal shift. The
-     *        identifier is the Amazon Resource Name (ARN) for the resource.</p>
+     *        The identifier of the resource that Amazon Web Services shifts traffic for with a practice run zonal
+     *        shift. The identifier is the Amazon Resource Name (ARN) for the resource.</p>
      *        <p>
      *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
      *        cross-zone load balancing turned off.

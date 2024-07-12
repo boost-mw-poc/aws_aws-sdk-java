@@ -31,16 +31,16 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -51,23 +51,23 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
     private String appliedStatus;
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      */
     private String awayFrom;
     /**
      * <p>
-     * A comment that you enter about the zonal shift. Only the latest comment is retained; no comment history is
-     * maintained. That is, a new comment overwrites any existing comment string.
+     * A comment that you enter for a customer-initiated zonal shift. Only the latest comment is retained; no comment
+     * history is maintained. That is, a new comment overwrites any existing comment string.
      * </p>
      */
     private String comment;
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -142,16 +142,16 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -161,14 +161,14 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * 
      * @param appliedStatus
      *        The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource
-     *        when there is more than one traffic shift active. There can be more than one application traffic shift in
-     *        progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an
-     *        autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
-     *        values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
-     *        in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *        when there is more than one active traffic shift. There can be more than one application traffic shift in
+     *        progress at the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an
+     *        autoshift. The <code>appliedStatus</code> field for a shift that is in progress for a resource can have
+     *        one of two values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is
+     *        currently in effect for the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.</p>
      *        <p>
      *        The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     *        autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *        autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt;
      *        autoshifts &gt; practice run zonal shifts.
      *        </p>
      *        <p>
@@ -186,16 +186,16 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -204,14 +204,15 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @return The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a
-     *         resource when there is more than one traffic shift active. There can be more than one application traffic
-     *         shift in progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts,
-     *         or an autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
-     *         values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
-     *         in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *         resource when there is more than one active traffic shift. There can be more than one application traffic
+     *         shift in progress at the same time - that is, practice run zonal shifts, customer-initiated zonal shifts,
+     *         or an autoshift. The <code>appliedStatus</code> field for a shift that is in progress for a resource can
+     *         have one of two values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift
+     *         that is currently in effect for the resource has an <code>appliedStatus</code> set to
+     *         <code>APPLIED</code>.</p>
      *         <p>
      *         The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     *         autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *         autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt;
      *         autoshifts &gt; practice run zonal shifts.
      *         </p>
      *         <p>
@@ -229,16 +230,16 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -248,14 +249,14 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * 
      * @param appliedStatus
      *        The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource
-     *        when there is more than one traffic shift active. There can be more than one application traffic shift in
-     *        progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an
-     *        autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
-     *        values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
-     *        in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *        when there is more than one active traffic shift. There can be more than one application traffic shift in
+     *        progress at the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an
+     *        autoshift. The <code>appliedStatus</code> field for a shift that is in progress for a resource can have
+     *        one of two values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is
+     *        currently in effect for the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.</p>
      *        <p>
      *        The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     *        autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *        autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt;
      *        autoshifts &gt; practice run zonal shifts.
      *        </p>
      *        <p>
@@ -275,16 +276,16 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
-     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
-     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
-     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
-     * applied status set to <code>APPLIED</code>.
+     * there is more than one active traffic shift. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for a shift that is in progress for a resource can have one of two values:
+     * <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for
+     * the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.
      * </p>
      * <p>
      * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
-     * practice run zonal shifts.
+     * autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt; autoshifts
+     * &gt; practice run zonal shifts.
      * </p>
      * <p>
      * For more information, see <a
@@ -294,14 +295,14 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * 
      * @param appliedStatus
      *        The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource
-     *        when there is more than one traffic shift active. There can be more than one application traffic shift in
-     *        progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an
-     *        autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
-     *        values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
-     *        in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *        when there is more than one active traffic shift. There can be more than one application traffic shift in
+     *        progress at the same time - that is, practice run zonal shifts, customer-initiated zonal shifts, or an
+     *        autoshift. The <code>appliedStatus</code> field for a shift that is in progress for a resource can have
+     *        one of two values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is
+     *        currently in effect for the resource has an <code>appliedStatus</code> set to <code>APPLIED</code>.</p>
      *        <p>
      *        The overall principle for precedence is that zonal shifts that you start as a customer take precedence
-     *        autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *        autoshifts, which take precedence over practice runs. That is, customer-initiated zonal shifts &gt;
      *        autoshifts &gt; practice run zonal shifts.
      *        </p>
      *        <p>
@@ -320,15 +321,15 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the Amazon Web Services Region.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *        when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *        instead moved to other Availability Zones in the Amazon Web Services Region.
      */
 
     public void setAwayFrom(String awayFrom) {
@@ -337,14 +338,14 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
-     * @return The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *         the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *         Zones in the Amazon Web Services Region.
+     * @return The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *         when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *         instead moved to other Availability Zones in the Amazon Web Services Region.
      */
 
     public String getAwayFrom() {
@@ -353,15 +354,15 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the Amazon Web Services Region.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *        when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *        instead moved to other Availability Zones in the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -372,13 +373,13 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A comment that you enter about the zonal shift. Only the latest comment is retained; no comment history is
-     * maintained. That is, a new comment overwrites any existing comment string.
+     * A comment that you enter for a customer-initiated zonal shift. Only the latest comment is retained; no comment
+     * history is maintained. That is, a new comment overwrites any existing comment string.
      * </p>
      * 
      * @param comment
-     *        A comment that you enter about the zonal shift. Only the latest comment is retained; no comment history is
-     *        maintained. That is, a new comment overwrites any existing comment string.
+     *        A comment that you enter for a customer-initiated zonal shift. Only the latest comment is retained; no
+     *        comment history is maintained. That is, a new comment overwrites any existing comment string.
      */
 
     public void setComment(String comment) {
@@ -387,12 +388,12 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A comment that you enter about the zonal shift. Only the latest comment is retained; no comment history is
-     * maintained. That is, a new comment overwrites any existing comment string.
+     * A comment that you enter for a customer-initiated zonal shift. Only the latest comment is retained; no comment
+     * history is maintained. That is, a new comment overwrites any existing comment string.
      * </p>
      * 
-     * @return A comment that you enter about the zonal shift. Only the latest comment is retained; no comment history
-     *         is maintained. That is, a new comment overwrites any existing comment string.
+     * @return A comment that you enter for a customer-initiated zonal shift. Only the latest comment is retained; no
+     *         comment history is maintained. That is, a new comment overwrites any existing comment string.
      */
 
     public String getComment() {
@@ -401,13 +402,13 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A comment that you enter about the zonal shift. Only the latest comment is retained; no comment history is
-     * maintained. That is, a new comment overwrites any existing comment string.
+     * A comment that you enter for a customer-initiated zonal shift. Only the latest comment is retained; no comment
+     * history is maintained. That is, a new comment overwrites any existing comment string.
      * </p>
      * 
      * @param comment
-     *        A comment that you enter about the zonal shift. Only the latest comment is retained; no comment history is
-     *        maintained. That is, a new comment overwrites any existing comment string.
+     *        A comment that you enter for a customer-initiated zonal shift. Only the latest comment is retained; no
+     *        comment history is maintained. That is, a new comment overwrites any existing comment string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -418,8 +419,8 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -430,8 +431,8 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param expiryTime
-     *        The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
-     *        be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     *        The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and
+     *        must be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
      *        maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
      *        time. </p>
      *        <p>
@@ -447,8 +448,8 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -458,8 +459,8 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * time to expire in.
      * </p>
      * 
-     * @return The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
-     *         be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     * @return The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and
+     *         must be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
      *         maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
      *         time. </p>
      *         <p>
@@ -475,8 +476,8 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -487,8 +488,8 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param expiryTime
-     *        The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
-     *        be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     *        The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and
+     *        must be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
      *        maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
      *        time. </p>
      *        <p>

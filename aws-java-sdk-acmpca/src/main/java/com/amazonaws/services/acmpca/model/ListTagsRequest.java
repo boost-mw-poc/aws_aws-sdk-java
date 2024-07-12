@@ -27,15 +27,12 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) that was returned when you called the <a
-     * href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html"
-     * >CreateCertificateAuthority</a> action. This must be of the form:
-     * </p>
-     * <p>
-     * <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>
+     * Use this parameter when paginating results to specify the maximum number of items to return in the response. If
+     * additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use
+     * this <b>NextToken</b> value in a subsequent request to retrieve additional items.
      * </p>
      */
-    private String certificateAuthorityArn;
+    private Integer maxResults;
     /**
      * <p>
      * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
@@ -45,12 +42,113 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private String nextToken;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) that was returned when you called the <a
+     * href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html"
+     * >CreateCertificateAuthority</a> action. This must be of the form:
+     * </p>
+     * <p>
+     * <code>arn:aws:acm-pca:<i>region</i>:<i>account</i>:certificate-authority/<i>12345678-1234-1234-1234-123456789012</i> </code>
+     * </p>
+     */
+    private String certificateAuthorityArn;
+
+    /**
+     * <p>
      * Use this parameter when paginating results to specify the maximum number of items to return in the response. If
      * additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use
      * this <b>NextToken</b> value in a subsequent request to retrieve additional items.
      * </p>
+     * 
+     * @param maxResults
+     *        Use this parameter when paginating results to specify the maximum number of items to return in the
+     *        response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in
+     *        the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.
      */
-    private Integer maxResults;
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * Use this parameter when paginating results to specify the maximum number of items to return in the response. If
+     * additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use
+     * this <b>NextToken</b> value in a subsequent request to retrieve additional items.
+     * </p>
+     * 
+     * @return Use this parameter when paginating results to specify the maximum number of items to return in the
+     *         response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent
+     *         in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * Use this parameter when paginating results to specify the maximum number of items to return in the response. If
+     * additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use
+     * this <b>NextToken</b> value in a subsequent request to retrieve additional items.
+     * </p>
+     * 
+     * @param maxResults
+     *        Use this parameter when paginating results to specify the maximum number of items to return in the
+     *        response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in
+     *        the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListTagsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
+     * results. Set it to the value of <b>NextToken</b> from the response you just received.
+     * </p>
+     * 
+     * @param nextToken
+     *        Use this parameter when paginating results in a subsequent request after you receive a response with
+     *        truncated results. Set it to the value of <b>NextToken</b> from the response you just received.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
+     * results. Set it to the value of <b>NextToken</b> from the response you just received.
+     * </p>
+     * 
+     * @return Use this parameter when paginating results in a subsequent request after you receive a response with
+     *         truncated results. Set it to the value of <b>NextToken</b> from the response you just received.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
+     * results. Set it to the value of <b>NextToken</b> from the response you just received.
+     * </p>
+     * 
+     * @param nextToken
+     *        Use this parameter when paginating results in a subsequent request after you receive a response with
+     *        truncated results. Set it to the value of <b>NextToken</b> from the response you just received.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListTagsRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
 
     /**
      * <p>
@@ -120,104 +218,6 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
-     * <p>
-     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
-     * results. Set it to the value of <b>NextToken</b> from the response you just received.
-     * </p>
-     * 
-     * @param nextToken
-     *        Use this parameter when paginating results in a subsequent request after you receive a response with
-     *        truncated results. Set it to the value of <b>NextToken</b> from the response you just received.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
-     * results. Set it to the value of <b>NextToken</b> from the response you just received.
-     * </p>
-     * 
-     * @return Use this parameter when paginating results in a subsequent request after you receive a response with
-     *         truncated results. Set it to the value of <b>NextToken</b> from the response you just received.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
-     * results. Set it to the value of <b>NextToken</b> from the response you just received.
-     * </p>
-     * 
-     * @param nextToken
-     *        Use this parameter when paginating results in a subsequent request after you receive a response with
-     *        truncated results. Set it to the value of <b>NextToken</b> from the response you just received.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListTagsRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Use this parameter when paginating results to specify the maximum number of items to return in the response. If
-     * additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use
-     * this <b>NextToken</b> value in a subsequent request to retrieve additional items.
-     * </p>
-     * 
-     * @param maxResults
-     *        Use this parameter when paginating results to specify the maximum number of items to return in the
-     *        response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in
-     *        the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.
-     */
-
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-    }
-
-    /**
-     * <p>
-     * Use this parameter when paginating results to specify the maximum number of items to return in the response. If
-     * additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use
-     * this <b>NextToken</b> value in a subsequent request to retrieve additional items.
-     * </p>
-     * 
-     * @return Use this parameter when paginating results to specify the maximum number of items to return in the
-     *         response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent
-     *         in the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.
-     */
-
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * <p>
-     * Use this parameter when paginating results to specify the maximum number of items to return in the response. If
-     * additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in the response. Use
-     * this <b>NextToken</b> value in a subsequent request to retrieve additional items.
-     * </p>
-     * 
-     * @param maxResults
-     *        Use this parameter when paginating results to specify the maximum number of items to return in the
-     *        response. If additional items exist beyond the number you specify, the <b>NextToken</b> element is sent in
-     *        the response. Use this <b>NextToken</b> value in a subsequent request to retrieve additional items.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListTagsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -229,12 +229,12 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCertificateAuthorityArn() != null)
-            sb.append("CertificateAuthorityArn: ").append(getCertificateAuthorityArn()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+        if (getCertificateAuthorityArn() != null)
+            sb.append("CertificateAuthorityArn: ").append(getCertificateAuthorityArn());
         sb.append("}");
         return sb.toString();
     }
@@ -249,17 +249,17 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
         if (obj instanceof ListTagsRequest == false)
             return false;
         ListTagsRequest other = (ListTagsRequest) obj;
-        if (other.getCertificateAuthorityArn() == null ^ this.getCertificateAuthorityArn() == null)
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
-        if (other.getCertificateAuthorityArn() != null && other.getCertificateAuthorityArn().equals(this.getCertificateAuthorityArn()) == false)
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+        if (other.getCertificateAuthorityArn() == null ^ this.getCertificateAuthorityArn() == null)
             return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+        if (other.getCertificateAuthorityArn() != null && other.getCertificateAuthorityArn().equals(this.getCertificateAuthorityArn()) == false)
             return false;
         return true;
     }
@@ -269,9 +269,9 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCertificateAuthorityArn() == null) ? 0 : getCertificateAuthorityArn().hashCode());
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getCertificateAuthorityArn() == null) ? 0 : getCertificateAuthorityArn().hashCode());
         return hashCode;
     }
 

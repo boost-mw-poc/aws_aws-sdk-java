@@ -1171,32 +1171,12 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * <ul>
      * <li>
      * <p>
-     * Authority key identifier
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Basic constraints (<i>must</i> be marked critical)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Certificate policies
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Extended key usage
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Inhibit anyPolicy
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Issuer alternative name
+     * Subject alternative names
      * </p>
      * </li>
      * <li>
@@ -1206,22 +1186,12 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * </li>
      * <li>
      * <p>
-     * Name constraints
+     * Extended key usage
      * </p>
      * </li>
      * <li>
      * <p>
-     * Policy mappings
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Subject alternative name
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Subject directory attributes
+     * Authority key identifier
      * </p>
      * </li>
      * <li>
@@ -1231,7 +1201,32 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * </li>
      * <li>
      * <p>
+     * Issuer alternative name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Subject directory attributes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Subject information access
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Certificate policies
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Policy mappings
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Inhibit anyPolicy
      * </p>
      * </li>
      * </ul>
@@ -1242,7 +1237,12 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * <ul>
      * <li>
      * <p>
-     * Authority information access
+     * Name constraints
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Policy constraints
      * </p>
      * </li>
      * <li>
@@ -1252,19 +1252,20 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * </li>
      * <li>
      * <p>
+     * Authority information access
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Freshest CRL
      * </p>
      * </li>
      * <li>
      * <p>
-     * Policy constraints
+     * Any other extension
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * Amazon Web Services Private Certificate Authority will also reject any other extension marked as critical not
-     * contained on the preceding list of allowed extensions.
-     * </p>
      * 
      * @param importCertificateAuthorityCertificateRequest
      * @return A Java Future containing the result of the ImportCertificateAuthorityCertificate operation returned by
@@ -1380,32 +1381,12 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * <ul>
      * <li>
      * <p>
-     * Authority key identifier
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Basic constraints (<i>must</i> be marked critical)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Certificate policies
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Extended key usage
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Inhibit anyPolicy
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Issuer alternative name
+     * Subject alternative names
      * </p>
      * </li>
      * <li>
@@ -1415,22 +1396,12 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * </li>
      * <li>
      * <p>
-     * Name constraints
+     * Extended key usage
      * </p>
      * </li>
      * <li>
      * <p>
-     * Policy mappings
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Subject alternative name
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Subject directory attributes
+     * Authority key identifier
      * </p>
      * </li>
      * <li>
@@ -1440,7 +1411,32 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * </li>
      * <li>
      * <p>
+     * Issuer alternative name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Subject directory attributes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Subject information access
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Certificate policies
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Policy mappings
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Inhibit anyPolicy
      * </p>
      * </li>
      * </ul>
@@ -1451,7 +1447,12 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * <ul>
      * <li>
      * <p>
-     * Authority information access
+     * Name constraints
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Policy constraints
      * </p>
      * </li>
      * <li>
@@ -1461,19 +1462,20 @@ public interface AWSACMPCAAsync extends AWSACMPCA {
      * </li>
      * <li>
      * <p>
+     * Authority information access
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Freshest CRL
      * </p>
      * </li>
      * <li>
      * <p>
-     * Policy constraints
+     * Any other extension
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * Amazon Web Services Private Certificate Authority will also reject any other extension marked as critical not
-     * contained on the preceding list of allowed extensions.
-     * </p>
      * 
      * @param importCertificateAuthorityCertificateRequest
      * @param asyncHandler

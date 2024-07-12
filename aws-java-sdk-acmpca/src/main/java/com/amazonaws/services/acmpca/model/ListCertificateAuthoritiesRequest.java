@@ -27,13 +27,6 @@ public class ListCertificateAuthoritiesRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
-     * results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.
-     * </p>
-     */
-    private String nextToken;
-    /**
-     * <p>
      * Use this parameter when paginating results to specify the maximum number of items to return in the response on
      * each page. If additional items exist beyond the number you specify, the <code>NextToken</code> element is sent in
      * the response. Use this <code>NextToken</code> value in a subsequent request to retrieve additional items.
@@ -45,60 +38,18 @@ public class ListCertificateAuthoritiesRequest extends com.amazonaws.AmazonWebSe
     private Integer maxResults;
     /**
      * <p>
+     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
+     * results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.
+     * </p>
+     */
+    private String nextToken;
+    /**
+     * <p>
      * Use this parameter to filter the returned set of certificate authorities based on their owner. The default is
      * SELF.
      * </p>
      */
     private String resourceOwner;
-
-    /**
-     * <p>
-     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
-     * results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.
-     * </p>
-     * 
-     * @param nextToken
-     *        Use this parameter when paginating results in a subsequent request after you receive a response with
-     *        truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just
-     *        received.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
-     * results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.
-     * </p>
-     * 
-     * @return Use this parameter when paginating results in a subsequent request after you receive a response with
-     *         truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just
-     *         received.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
-     * results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.
-     * </p>
-     * 
-     * @param nextToken
-     *        Use this parameter when paginating results in a subsequent request after you receive a response with
-     *        truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just
-     *        received.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListCertificateAuthoritiesRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
 
     /**
      * <p>
@@ -167,6 +118,55 @@ public class ListCertificateAuthoritiesRequest extends com.amazonaws.AmazonWebSe
 
     public ListCertificateAuthoritiesRequest withMaxResults(Integer maxResults) {
         setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
+     * results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.
+     * </p>
+     * 
+     * @param nextToken
+     *        Use this parameter when paginating results in a subsequent request after you receive a response with
+     *        truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just
+     *        received.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
+     * results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.
+     * </p>
+     * 
+     * @return Use this parameter when paginating results in a subsequent request after you receive a response with
+     *         truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just
+     *         received.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated
+     * results. Set it to the value of the <code>NextToken</code> parameter from the response you just received.
+     * </p>
+     * 
+     * @param nextToken
+     *        Use this parameter when paginating results in a subsequent request after you receive a response with
+     *        truncated results. Set it to the value of the <code>NextToken</code> parameter from the response you just
+     *        received.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListCertificateAuthoritiesRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
         return this;
     }
 
@@ -249,10 +249,10 @@ public class ListCertificateAuthoritiesRequest extends com.amazonaws.AmazonWebSe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getResourceOwner() != null)
             sb.append("ResourceOwner: ").append(getResourceOwner());
         sb.append("}");
@@ -269,13 +269,13 @@ public class ListCertificateAuthoritiesRequest extends com.amazonaws.AmazonWebSe
         if (obj instanceof ListCertificateAuthoritiesRequest == false)
             return false;
         ListCertificateAuthoritiesRequest other = (ListCertificateAuthoritiesRequest) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         if (other.getResourceOwner() == null ^ this.getResourceOwner() == null)
             return false;
@@ -289,8 +289,8 @@ public class ListCertificateAuthoritiesRequest extends com.amazonaws.AmazonWebSe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getResourceOwner() == null) ? 0 : getResourceOwner().hashCode());
         return hashCode;
     }

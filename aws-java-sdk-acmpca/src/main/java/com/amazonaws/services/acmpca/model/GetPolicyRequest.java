@@ -29,7 +29,10 @@ public class GetPolicyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN
      * by calling the ListCertificateAuthorities action.
-     * </p>
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
      */
     private String resourceArn;
 
@@ -37,11 +40,18 @@ public class GetPolicyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN
      * by calling the ListCertificateAuthorities action.
-     * </p>
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
      * 
      * @param resourceArn
      *        The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the
      *        CA's ARN by calling the ListCertificateAuthorities action.
+     * 
+     *        <pre>
+     * 
+     *        <code> &lt;/p&gt; </code>
      */
 
     public void setResourceArn(String resourceArn) {
@@ -52,10 +62,17 @@ public class GetPolicyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN
      * by calling the ListCertificateAuthorities action.
-     * </p>
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
      * 
      * @return The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the
      *         CA's ARN by calling the ListCertificateAuthorities action.
+     * 
+     *         <pre>
+     * 
+     *         <code> &lt;/p&gt; </code>
      */
 
     public String getResourceArn() {
@@ -66,12 +83,19 @@ public class GetPolicyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the CA's ARN
      * by calling the ListCertificateAuthorities action.
-     * </p>
+     * 
+     * <pre>
+     * <code> &lt;/p&gt; </code>
+     * </pre>
      * 
      * @param resourceArn
      *        The Amazon Resource Number (ARN) of the private CA that will have its policy retrieved. You can find the
      *        CA's ARN by calling the ListCertificateAuthorities action.
-     * @return Returns a reference to this object so that method calls can be chained together.
+     * 
+     *        <pre>
+     * 
+     *        <code> &lt;/p&gt; </code> @return Returns a reference to this object so that method calls can be chained
+     *        together.
      */
 
     public GetPolicyRequest withResourceArn(String resourceArn) {

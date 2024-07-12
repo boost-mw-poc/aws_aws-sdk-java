@@ -93,18 +93,18 @@ public interface AWSACMPCA {
      * 
      * @param createCertificateAuthorityRequest
      * @return Result of the CreateCertificateAuthority operation returned by the service.
+     * @throws LimitExceededException
+     *         An Amazon Web Services Private CA quota has been exceeded. See the exception message returned to
+     *         determine the quota that was exceeded.
      * @throws InvalidArgsException
      *         One or more of the specified arguments was not valid.
+     * @throws InvalidTagException
+     *         The tag associated with the CA is not valid. The invalid argument is contained in the message field.
      * @throws InvalidPolicyException
      *         The resource policy is invalid or is missing a required statement. For general information about IAM
      *         policy and statement structure, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policies-json"
      *         >Overview of JSON Policies</a>.
-     * @throws InvalidTagException
-     *         The tag associated with the CA is not valid. The invalid argument is contained in the message field.
-     * @throws LimitExceededException
-     *         An Amazon Web Services Private CA quota has been exceeded. See the exception message returned to
-     *         determine the quota that was exceeded.
      * @sample AWSACMPCA.CreateCertificateAuthority
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/CreateCertificateAuthority"
      *      target="_top">AWS API Documentation</a>
@@ -143,18 +143,18 @@ public interface AWSACMPCA {
      * 
      * @param createCertificateAuthorityAuditReportRequest
      * @return Result of the CreateCertificateAuthorityAuditReport operation returned by the service.
-     * @throws RequestInProgressException
-     *         Your request is already in progress.
-     * @throws RequestFailedException
-     *         The request has failed for an unspecified reason.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
      * @throws InvalidArgsException
      *         One or more of the specified arguments was not valid.
+     * @throws RequestFailedException
+     *         The request has failed for an unspecified reason.
      * @throws InvalidStateException
      *         The state of the private CA does not allow this action to occur.
+     * @throws RequestInProgressException
+     *         Your request is already in progress.
      * @sample AWSACMPCA.CreateCertificateAuthorityAuditReport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/CreateCertificateAuthorityAuditReport"
      *      target="_top">AWS API Documentation</a>
@@ -204,19 +204,19 @@ public interface AWSACMPCA {
      * 
      * @param createPermissionRequest
      * @return Result of the CreatePermission operation returned by the service.
+     * @throws LimitExceededException
+     *         An Amazon Web Services Private CA quota has been exceeded. See the exception message returned to
+     *         determine the quota that was exceeded.
+     * @throws PermissionAlreadyExistsException
+     *         The designated permission has already been given to the user.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
-     * @throws PermissionAlreadyExistsException
-     *         The designated permission has already been given to the user.
-     * @throws LimitExceededException
-     *         An Amazon Web Services Private CA quota has been exceeded. See the exception message returned to
-     *         determine the quota that was exceeded.
-     * @throws InvalidStateException
-     *         The state of the private CA does not allow this action to occur.
      * @throws RequestFailedException
      *         The request has failed for an unspecified reason.
+     * @throws InvalidStateException
+     *         The state of the private CA does not allow this action to occur.
      * @sample AWSACMPCA.CreatePermission
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/CreatePermission" target="_top">AWS API
      *      Documentation</a>
@@ -263,14 +263,14 @@ public interface AWSACMPCA {
      * 
      * @param deleteCertificateAuthorityRequest
      * @return Result of the DeleteCertificateAuthority operation returned by the service.
-     * @throws ConcurrentModificationException
-     *         A previous update to your private CA is still ongoing.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
      * @throws InvalidStateException
      *         The state of the private CA does not allow this action to occur.
+     * @throws ConcurrentModificationException
+     *         A previous update to your private CA is still ongoing.
      * @sample AWSACMPCA.DeleteCertificateAuthority
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/DeleteCertificateAuthority"
      *      target="_top">AWS API Documentation</a>
@@ -327,10 +327,10 @@ public interface AWSACMPCA {
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
-     * @throws InvalidStateException
-     *         The state of the private CA does not allow this action to occur.
      * @throws RequestFailedException
      *         The request has failed for an unspecified reason.
+     * @throws InvalidStateException
+     *         The state of the private CA does not allow this action to occur.
      * @sample AWSACMPCA.DeletePermission
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/DeletePermission" target="_top">AWS API
      *      Documentation</a>
@@ -391,19 +391,19 @@ public interface AWSACMPCA {
      * 
      * @param deletePolicyRequest
      * @return Result of the DeletePolicy operation returned by the service.
-     * @throws ConcurrentModificationException
-     *         A previous update to your private CA is still ongoing.
-     * @throws InvalidArnException
-     *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
-     * @throws InvalidStateException
-     *         The state of the private CA does not allow this action to occur.
      * @throws LockoutPreventedException
      *         The current action was prevented because it would lock the caller out from performing subsequent actions.
      *         Verify that the specified parameters would not result in the caller being denied access to the resource.
-     * @throws RequestFailedException
-     *         The request has failed for an unspecified reason.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
+     * @throws InvalidArnException
+     *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws RequestFailedException
+     *         The request has failed for an unspecified reason.
+     * @throws InvalidStateException
+     *         The state of the private CA does not allow this action to occur.
+     * @throws ConcurrentModificationException
+     *         A previous update to your private CA is still ongoing.
      * @sample AWSACMPCA.DeletePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/DeletePolicy" target="_top">AWS API
      *      Documentation</a>
@@ -513,16 +513,16 @@ public interface AWSACMPCA {
      * 
      * @param getCertificateRequest
      * @return Result of the GetCertificate operation returned by the service.
-     * @throws RequestInProgressException
-     *         Your request is already in progress.
-     * @throws RequestFailedException
-     *         The request has failed for an unspecified reason.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws RequestFailedException
+     *         The request has failed for an unspecified reason.
      * @throws InvalidStateException
      *         The state of the private CA does not allow this action to occur.
+     * @throws RequestInProgressException
+     *         Your request is already in progress.
      * @sample AWSACMPCA.GetCertificate
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/GetCertificate" target="_top">AWS API
      *      Documentation</a>
@@ -540,10 +540,10 @@ public interface AWSACMPCA {
      * @return Result of the GetCertificateAuthorityCertificate operation returned by the service.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
-     * @throws InvalidStateException
-     *         The state of the private CA does not allow this action to occur.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws InvalidStateException
+     *         The state of the private CA does not allow this action to occur.
      * @sample AWSACMPCA.GetCertificateAuthorityCertificate
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/GetCertificateAuthorityCertificate"
      *      target="_top">AWS API Documentation</a>
@@ -565,16 +565,16 @@ public interface AWSACMPCA {
      * 
      * @param getCertificateAuthorityCsrRequest
      * @return Result of the GetCertificateAuthorityCsr operation returned by the service.
-     * @throws RequestInProgressException
-     *         Your request is already in progress.
-     * @throws RequestFailedException
-     *         The request has failed for an unspecified reason.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws RequestFailedException
+     *         The request has failed for an unspecified reason.
      * @throws InvalidStateException
      *         The state of the private CA does not allow this action to occur.
+     * @throws RequestInProgressException
+     *         Your request is already in progress.
      * @sample AWSACMPCA.GetCertificateAuthorityCsr
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/GetCertificateAuthorityCsr"
      *      target="_top">AWS API Documentation</a>
@@ -628,14 +628,14 @@ public interface AWSACMPCA {
      * 
      * @param getPolicyRequest
      * @return Result of the GetPolicy operation returned by the service.
-     * @throws InvalidArnException
-     *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
-     * @throws InvalidStateException
-     *         The state of the private CA does not allow this action to occur.
-     * @throws RequestFailedException
-     *         The request has failed for an unspecified reason.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
+     * @throws InvalidArnException
+     *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws RequestFailedException
+     *         The request has failed for an unspecified reason.
+     * @throws InvalidStateException
+     *         The state of the private CA does not allow this action to occur.
      * @sample AWSACMPCA.GetPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/GetPolicy" target="_top">AWS API
      *      Documentation</a>
@@ -746,32 +746,12 @@ public interface AWSACMPCA {
      * <ul>
      * <li>
      * <p>
-     * Authority key identifier
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Basic constraints (<i>must</i> be marked critical)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Certificate policies
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Extended key usage
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Inhibit anyPolicy
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Issuer alternative name
+     * Subject alternative names
      * </p>
      * </li>
      * <li>
@@ -781,22 +761,12 @@ public interface AWSACMPCA {
      * </li>
      * <li>
      * <p>
-     * Name constraints
+     * Extended key usage
      * </p>
      * </li>
      * <li>
      * <p>
-     * Policy mappings
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Subject alternative name
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Subject directory attributes
+     * Authority key identifier
      * </p>
      * </li>
      * <li>
@@ -806,7 +776,32 @@ public interface AWSACMPCA {
      * </li>
      * <li>
      * <p>
+     * Issuer alternative name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Subject directory attributes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Subject information access
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Certificate policies
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Policy mappings
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Inhibit anyPolicy
      * </p>
      * </li>
      * </ul>
@@ -817,7 +812,12 @@ public interface AWSACMPCA {
      * <ul>
      * <li>
      * <p>
-     * Authority information access
+     * Name constraints
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Policy constraints
      * </p>
      * </li>
      * <li>
@@ -827,41 +827,42 @@ public interface AWSACMPCA {
      * </li>
      * <li>
      * <p>
+     * Authority information access
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Freshest CRL
      * </p>
      * </li>
      * <li>
      * <p>
-     * Policy constraints
+     * Any other extension
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * Amazon Web Services Private Certificate Authority will also reject any other extension marked as critical not
-     * contained on the preceding list of allowed extensions.
-     * </p>
      * 
      * @param importCertificateAuthorityCertificateRequest
      * @return Result of the ImportCertificateAuthorityCertificate operation returned by the service.
-     * @throws ConcurrentModificationException
-     *         A previous update to your private CA is still ongoing.
-     * @throws RequestInProgressException
-     *         Your request is already in progress.
-     * @throws RequestFailedException
-     *         The request has failed for an unspecified reason.
+     * @throws CertificateMismatchException
+     *         The certificate authority certificate you are importing does not comply with conditions specified in the
+     *         certificate that signed it.
+     * @throws MalformedCertificateException
+     *         One or more fields in the certificate are invalid.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
      * @throws InvalidRequestException
      *         The request action cannot be performed or is prohibited.
+     * @throws RequestFailedException
+     *         The request has failed for an unspecified reason.
      * @throws InvalidStateException
      *         The state of the private CA does not allow this action to occur.
-     * @throws MalformedCertificateException
-     *         One or more fields in the certificate are invalid.
-     * @throws CertificateMismatchException
-     *         The certificate authority certificate you are importing does not comply with conditions specified in the
-     *         certificate that signed it.
+     * @throws ConcurrentModificationException
+     *         A previous update to your private CA is still ongoing.
+     * @throws RequestInProgressException
+     *         Your request is already in progress.
      * @sample AWSACMPCA.ImportCertificateAuthorityCertificate
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/ImportCertificateAuthorityCertificate"
      *      target="_top">AWS API Documentation</a>
@@ -891,12 +892,12 @@ public interface AWSACMPCA {
      *         determine the quota that was exceeded.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
-     * @throws InvalidStateException
-     *         The state of the private CA does not allow this action to occur.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
      * @throws InvalidArgsException
      *         One or more of the specified arguments was not valid.
+     * @throws InvalidStateException
+     *         The state of the private CA does not allow this action to occur.
      * @throws MalformedCSRException
      *         The certificate signing request is invalid.
      * @sample AWSACMPCA.IssueCertificate
@@ -974,15 +975,15 @@ public interface AWSACMPCA {
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws RequestFailedException
+     *         The request has failed for an unspecified reason.
+     * @throws InvalidStateException
+     *         The state of the private CA does not allow this action to occur.
      * @throws InvalidNextTokenException
      *         The token specified in the <code>NextToken</code> argument is not valid. Use the token returned from your
      *         previous call to <a
      *         href="https://docs.aws.amazon.com/privateca/latest/APIReference/API_ListCertificateAuthorities.html"
      *         >ListCertificateAuthorities</a>.
-     * @throws InvalidStateException
-     *         The state of the private CA does not allow this action to occur.
-     * @throws RequestFailedException
-     *         The request has failed for an unspecified reason.
      * @sample AWSACMPCA.ListPermissions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/ListPermissions" target="_top">AWS API
      *      Documentation</a>
@@ -1064,24 +1065,24 @@ public interface AWSACMPCA {
      * 
      * @param putPolicyRequest
      * @return Result of the PutPolicy operation returned by the service.
-     * @throws ConcurrentModificationException
-     *         A previous update to your private CA is still ongoing.
+     * @throws LockoutPreventedException
+     *         The current action was prevented because it would lock the caller out from performing subsequent actions.
+     *         Verify that the specified parameters would not result in the caller being denied access to the resource.
+     * @throws ResourceNotFoundException
+     *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws RequestFailedException
+     *         The request has failed for an unspecified reason.
      * @throws InvalidStateException
      *         The state of the private CA does not allow this action to occur.
+     * @throws ConcurrentModificationException
+     *         A previous update to your private CA is still ongoing.
      * @throws InvalidPolicyException
      *         The resource policy is invalid or is missing a required statement. For general information about IAM
      *         policy and statement structure, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policies-json"
      *         >Overview of JSON Policies</a>.
-     * @throws LockoutPreventedException
-     *         The current action was prevented because it would lock the caller out from performing subsequent actions.
-     *         Verify that the specified parameters would not result in the caller being denied access to the resource.
-     * @throws RequestFailedException
-     *         The request has failed for an unspecified reason.
-     * @throws ResourceNotFoundException
-     *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
      * @sample AWSACMPCA.PutPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/PutPolicy" target="_top">AWS API
      *      Documentation</a>
@@ -1114,10 +1115,10 @@ public interface AWSACMPCA {
      * @return Result of the RestoreCertificateAuthority operation returned by the service.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
-     * @throws InvalidStateException
-     *         The state of the private CA does not allow this action to occur.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws InvalidStateException
+     *         The state of the private CA does not allow this action to occur.
      * @sample AWSACMPCA.RestoreCertificateAuthority
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/RestoreCertificateAuthority"
      *      target="_top">AWS API Documentation</a>
@@ -1158,25 +1159,25 @@ public interface AWSACMPCA {
      * 
      * @param revokeCertificateRequest
      * @return Result of the RevokeCertificate operation returned by the service.
-     * @throws ConcurrentModificationException
-     *         A previous update to your private CA is still ongoing.
-     * @throws InvalidArnException
-     *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
-     * @throws InvalidRequestException
-     *         The request action cannot be performed or is prohibited.
-     * @throws InvalidStateException
-     *         The state of the private CA does not allow this action to occur.
+     * @throws RequestAlreadyProcessedException
+     *         Your request has already been completed.
      * @throws LimitExceededException
      *         An Amazon Web Services Private CA quota has been exceeded. See the exception message returned to
      *         determine the quota that was exceeded.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
-     * @throws RequestAlreadyProcessedException
-     *         Your request has already been completed.
-     * @throws RequestInProgressException
-     *         Your request is already in progress.
+     * @throws InvalidArnException
+     *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws InvalidRequestException
+     *         The request action cannot be performed or is prohibited.
      * @throws RequestFailedException
      *         The request has failed for an unspecified reason.
+     * @throws InvalidStateException
+     *         The state of the private CA does not allow this action to occur.
+     * @throws ConcurrentModificationException
+     *         A previous update to your private CA is still ongoing.
+     * @throws RequestInProgressException
+     *         Your request is already in progress.
      * @sample AWSACMPCA.RevokeCertificate
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/RevokeCertificate" target="_top">AWS API
      *      Documentation</a>
@@ -1269,16 +1270,16 @@ public interface AWSACMPCA {
      * 
      * @param updateCertificateAuthorityRequest
      * @return Result of the UpdateCertificateAuthority operation returned by the service.
-     * @throws ConcurrentModificationException
-     *         A previous update to your private CA is still ongoing.
      * @throws ResourceNotFoundException
      *         A resource such as a private CA, S3 bucket, certificate, audit report, or policy cannot be found.
-     * @throws InvalidArgsException
-     *         One or more of the specified arguments was not valid.
      * @throws InvalidArnException
      *         The requested Amazon Resource Name (ARN) does not refer to an existing resource.
+     * @throws InvalidArgsException
+     *         One or more of the specified arguments was not valid.
      * @throws InvalidStateException
      *         The state of the private CA does not allow this action to occur.
+     * @throws ConcurrentModificationException
+     *         A previous update to your private CA is still ongoing.
      * @throws InvalidPolicyException
      *         The resource policy is invalid or is missing a required statement. For general information about IAM
      *         policy and statement structure, see <a

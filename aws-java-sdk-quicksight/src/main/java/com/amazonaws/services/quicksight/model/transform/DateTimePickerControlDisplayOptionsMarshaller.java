@@ -33,6 +33,10 @@ public class DateTimePickerControlDisplayOptionsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DateTimeFormat").build();
     private static final MarshallingInfo<StructuredPojo> INFOICONLABELOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InfoIconLabelOptions").build();
+    private static final MarshallingInfo<String> HELPERTEXTVISIBILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HelperTextVisibility").build();
+    private static final MarshallingInfo<String> DATEICONVISIBILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DateIconVisibility").build();
 
     private static final DateTimePickerControlDisplayOptionsMarshaller instance = new DateTimePickerControlDisplayOptionsMarshaller();
 
@@ -53,6 +57,8 @@ public class DateTimePickerControlDisplayOptionsMarshaller {
             protocolMarshaller.marshall(dateTimePickerControlDisplayOptions.getTitleOptions(), TITLEOPTIONS_BINDING);
             protocolMarshaller.marshall(dateTimePickerControlDisplayOptions.getDateTimeFormat(), DATETIMEFORMAT_BINDING);
             protocolMarshaller.marshall(dateTimePickerControlDisplayOptions.getInfoIconLabelOptions(), INFOICONLABELOPTIONS_BINDING);
+            protocolMarshaller.marshall(dateTimePickerControlDisplayOptions.getHelperTextVisibility(), HELPERTEXTVISIBILITY_BINDING);
+            protocolMarshaller.marshall(dateTimePickerControlDisplayOptions.getDateIconVisibility(), DATEICONVISIBILITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

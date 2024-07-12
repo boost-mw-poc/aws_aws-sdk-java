@@ -79,6 +79,74 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<BatchCreateTopicReviewedAnswerResult> batchCreateTopicReviewedAnswerAsync(BatchCreateTopicReviewedAnswerRequest request) {
+
+        return batchCreateTopicReviewedAnswerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchCreateTopicReviewedAnswerResult> batchCreateTopicReviewedAnswerAsync(
+            final BatchCreateTopicReviewedAnswerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchCreateTopicReviewedAnswerRequest, BatchCreateTopicReviewedAnswerResult> asyncHandler) {
+        final BatchCreateTopicReviewedAnswerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchCreateTopicReviewedAnswerResult>() {
+            @Override
+            public BatchCreateTopicReviewedAnswerResult call() throws Exception {
+                BatchCreateTopicReviewedAnswerResult result = null;
+
+                try {
+                    result = executeBatchCreateTopicReviewedAnswer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteTopicReviewedAnswerResult> batchDeleteTopicReviewedAnswerAsync(BatchDeleteTopicReviewedAnswerRequest request) {
+
+        return batchDeleteTopicReviewedAnswerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteTopicReviewedAnswerResult> batchDeleteTopicReviewedAnswerAsync(
+            final BatchDeleteTopicReviewedAnswerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchDeleteTopicReviewedAnswerRequest, BatchDeleteTopicReviewedAnswerResult> asyncHandler) {
+        final BatchDeleteTopicReviewedAnswerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchDeleteTopicReviewedAnswerResult>() {
+            @Override
+            public BatchDeleteTopicReviewedAnswerResult call() throws Exception {
+                BatchDeleteTopicReviewedAnswerResult result = null;
+
+                try {
+                    result = executeBatchDeleteTopicReviewedAnswer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelIngestionResult> cancelIngestionAsync(CancelIngestionRequest request) {
 
         return cancelIngestionAsync(request, null);
@@ -4106,6 +4174,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
 
                 try {
                     result = executeListTopicRefreshSchedules(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTopicReviewedAnswersResult> listTopicReviewedAnswersAsync(ListTopicReviewedAnswersRequest request) {
+
+        return listTopicReviewedAnswersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTopicReviewedAnswersResult> listTopicReviewedAnswersAsync(final ListTopicReviewedAnswersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTopicReviewedAnswersRequest, ListTopicReviewedAnswersResult> asyncHandler) {
+        final ListTopicReviewedAnswersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTopicReviewedAnswersResult>() {
+            @Override
+            public ListTopicReviewedAnswersResult call() throws Exception {
+                ListTopicReviewedAnswersResult result = null;
+
+                try {
+                    result = executeListTopicReviewedAnswers(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

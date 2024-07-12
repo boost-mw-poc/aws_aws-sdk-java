@@ -1,3 +1,44 @@
+# __1.12.761__ __2024-07-12__
+## __AWS ARC - Zonal Shift__
+  - ### Features
+    - Adds the option to subscribe to get notifications when a zonal autoshift occurs in a region.
+
+## __AWS Certificate Manager Private Certificate Authority__
+  - ### Features
+    - Minor refactoring of C2J model for AWS Private CA
+
+## __AWS CodeBuild__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __AWS Global Accelerator__
+  - ### Features
+    - This feature adds exceptions to the Customer API to avoid throwing Internal Service errors
+
+## __Amazon DynamoDB__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Pinpoint__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon QuickSight__
+  - ### Features
+    - Vega ally control options and Support for Reviewed Answers in Topics
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Update path for CreateDBCluster resource identifier, and Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Simple Notification Service__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Auto Scaling__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
 # __1.12.760__ __2024-07-10__
 ## __AWS Batch__
   - ### Features

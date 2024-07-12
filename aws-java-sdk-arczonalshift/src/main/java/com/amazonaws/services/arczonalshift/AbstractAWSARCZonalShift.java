@@ -43,6 +43,11 @@ public class AbstractAWSARCZonalShift implements AWSARCZonalShift {
     }
 
     @Override
+    public GetAutoshiftObserverNotificationStatusResult getAutoshiftObserverNotificationStatus(GetAutoshiftObserverNotificationStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetManagedResourceResult getManagedResource(GetManagedResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -64,6 +69,11 @@ public class AbstractAWSARCZonalShift implements AWSARCZonalShift {
 
     @Override
     public StartZonalShiftResult startZonalShift(StartZonalShiftRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAutoshiftObserverNotificationStatusResult updateAutoshiftObserverNotificationStatus(UpdateAutoshiftObserverNotificationStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

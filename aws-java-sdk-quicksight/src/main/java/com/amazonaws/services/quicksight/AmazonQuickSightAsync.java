@@ -37,6 +37,76 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
+     * Creates new reviewed answers for a Q Topic.
+     * </p>
+     * 
+     * @param batchCreateTopicReviewedAnswerRequest
+     * @return A Java Future containing the result of the BatchCreateTopicReviewedAnswer operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsync.BatchCreateTopicReviewedAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/BatchCreateTopicReviewedAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchCreateTopicReviewedAnswerResult> batchCreateTopicReviewedAnswerAsync(
+            BatchCreateTopicReviewedAnswerRequest batchCreateTopicReviewedAnswerRequest);
+
+    /**
+     * <p>
+     * Creates new reviewed answers for a Q Topic.
+     * </p>
+     * 
+     * @param batchCreateTopicReviewedAnswerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchCreateTopicReviewedAnswer operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsyncHandler.BatchCreateTopicReviewedAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/BatchCreateTopicReviewedAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchCreateTopicReviewedAnswerResult> batchCreateTopicReviewedAnswerAsync(
+            BatchCreateTopicReviewedAnswerRequest batchCreateTopicReviewedAnswerRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchCreateTopicReviewedAnswerRequest, BatchCreateTopicReviewedAnswerResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes reviewed answers for Q Topic.
+     * </p>
+     * 
+     * @param batchDeleteTopicReviewedAnswerRequest
+     * @return A Java Future containing the result of the BatchDeleteTopicReviewedAnswer operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsync.BatchDeleteTopicReviewedAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/BatchDeleteTopicReviewedAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteTopicReviewedAnswerResult> batchDeleteTopicReviewedAnswerAsync(
+            BatchDeleteTopicReviewedAnswerRequest batchDeleteTopicReviewedAnswerRequest);
+
+    /**
+     * <p>
+     * Deletes reviewed answers for Q Topic.
+     * </p>
+     * 
+     * @param batchDeleteTopicReviewedAnswerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchDeleteTopicReviewedAnswer operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsyncHandler.BatchDeleteTopicReviewedAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/BatchDeleteTopicReviewedAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteTopicReviewedAnswerResult> batchDeleteTopicReviewedAnswerAsync(
+            BatchDeleteTopicReviewedAnswerRequest batchDeleteTopicReviewedAnswerRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchDeleteTopicReviewedAnswerRequest, BatchDeleteTopicReviewedAnswerResult> asyncHandler);
+
+    /**
+     * <p>
      * Cancels an ongoing ingestion of data into SPICE.
      * </p>
      * 
@@ -4750,6 +4820,37 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
     java.util.concurrent.Future<ListTopicRefreshSchedulesResult> listTopicRefreshSchedulesAsync(
             ListTopicRefreshSchedulesRequest listTopicRefreshSchedulesRequest,
             com.amazonaws.handlers.AsyncHandler<ListTopicRefreshSchedulesRequest, ListTopicRefreshSchedulesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all reviewed answers for a Q Topic.
+     * </p>
+     * 
+     * @param listTopicReviewedAnswersRequest
+     * @return A Java Future containing the result of the ListTopicReviewedAnswers operation returned by the service.
+     * @sample AmazonQuickSightAsync.ListTopicReviewedAnswers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListTopicReviewedAnswers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTopicReviewedAnswersResult> listTopicReviewedAnswersAsync(ListTopicReviewedAnswersRequest listTopicReviewedAnswersRequest);
+
+    /**
+     * <p>
+     * Lists all reviewed answers for a Q Topic.
+     * </p>
+     * 
+     * @param listTopicReviewedAnswersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTopicReviewedAnswers operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.ListTopicReviewedAnswers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListTopicReviewedAnswers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTopicReviewedAnswersResult> listTopicReviewedAnswersAsync(ListTopicReviewedAnswersRequest listTopicReviewedAnswersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTopicReviewedAnswersRequest, ListTopicReviewedAnswersResult> asyncHandler);
 
     /**
      * <p>

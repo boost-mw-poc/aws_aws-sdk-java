@@ -26,7 +26,8 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * Welcome to the Zonal Shift API Reference Guide for Amazon Route 53 Application Recovery Controller (Route 53 ARC).
+ * Welcome to the API Reference Guide for zonal shift and zonal autoshift in Amazon Route 53 Application Recovery
+ * Controller (Route 53 ARC).
  * </p>
  * <p>
  * You can start a zonal shift to move traffic for a load balancer resource away from an Availability Zone to help your
@@ -35,26 +36,37 @@ import java.util.concurrent.ExecutorService;
  * Zone.
  * </p>
  * <p>
- * You can also configure zonal autoshift for a load balancer resource. Zonal autoshift is a capability in Route 53 ARC
- * where Amazon Web Services shifts away application resource traffic from an Availability Zone, on your behalf, to help
- * reduce your time to recovery during events. Amazon Web Services shifts away traffic for resources that are enabled
- * for zonal autoshift whenever Amazon Web Services determines that there's an issue in the Availability Zone that could
- * potentially affect customers.
+ * You can also configure zonal autoshift for supported load balancer resources. Zonal autoshift is a capability in
+ * Route 53 ARC where you authorize Amazon Web Services to shift away application resource traffic from an Availability
+ * Zone during events, on your behalf, to help reduce your time to recovery. Amazon Web Services starts an autoshift
+ * when internal telemetry indicates that there is an Availability Zone impairment that could potentially impact
+ * customers.
  * </p>
  * <p>
- * To ensure that zonal autoshift is safe for your application, you must also configure practice runs when you enable
- * zonal autoshift for a resource. Practice runs start weekly zonal shifts for a resource, to shift traffic for the
- * resource out of an Availability Zone. Practice runs make sure, on a regular basis, that you have enough capacity in
- * all the Availability Zones in an Amazon Web Services Region for your application to continue to operate normally when
- * traffic for a resource is shifted away from one Availability Zone.
+ * To help make sure that zonal autoshift is safe for your application, you must also configure practice runs when you
+ * enable zonal autoshift for a resource. Practice runs start weekly zonal shifts for a resource, to shift traffic for
+ * the resource away from an Availability Zone. Practice runs help you to make sure, on a regular basis, that you have
+ * enough capacity in all the Availability Zones in an Amazon Web Services Region for your application to continue to
+ * operate normally when traffic for a resource is shifted away from one Availability Zone.
  * </p>
  * <important>
  * <p>
- * You must prescale resource capacity in all Availability Zones in the Region where your application is deployed,
- * before you configure practice runs or enable zonal autoshift for a resource. You should not rely on scaling on demand
- * when an autoshift or practice run starts.
+ * Before you configure practice runs or enable zonal autoshift, we strongly recommend that you prescale your
+ * application resource capacity in all Availability Zones in the Region where your application resources are deployed.
+ * You should not rely on scaling on demand when an autoshift or practice run starts. Zonal autoshift, including
+ * practice runs, works independently, and does not wait for auto scaling actions to complete. Relying on auto scaling,
+ * instead of pre-scaling, can result in loss of availability.
+ * </p>
+ * <p>
+ * If you use auto scaling to handle regular cycles of traffic, we strongly recommend that you configure the minimum
+ * capacity of your auto scaling to continue operating normally with the loss of an Availability Zone.
  * </p>
  * </important>
+ * <p>
+ * Be aware that Route 53 ARC does not inspect the health of individual resources. Amazon Web Services only starts an
+ * autoshift when Amazon Web Services telemetry detects that there is an Availability Zone impairment that could
+ * potentially impact customers. In some cases, resources might be shifted away that are not experiencing impact.
+ * </p>
  * <p>
  * For more information about using zonal shift and zonal autoshift, see the <a
  * href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route53-recovery.html">Amazon Route 53 Application
@@ -193,6 +205,41 @@ public class AWSARCZonalShiftAsyncClient extends AWSARCZonalShiftClient implemen
 
                 try {
                     result = executeDeletePracticeRunConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAutoshiftObserverNotificationStatusResult> getAutoshiftObserverNotificationStatusAsync(
+            GetAutoshiftObserverNotificationStatusRequest request) {
+
+        return getAutoshiftObserverNotificationStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAutoshiftObserverNotificationStatusResult> getAutoshiftObserverNotificationStatusAsync(
+            final GetAutoshiftObserverNotificationStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAutoshiftObserverNotificationStatusRequest, GetAutoshiftObserverNotificationStatusResult> asyncHandler) {
+        final GetAutoshiftObserverNotificationStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAutoshiftObserverNotificationStatusResult>() {
+            @Override
+            public GetAutoshiftObserverNotificationStatusResult call() throws Exception {
+                GetAutoshiftObserverNotificationStatusResult result = null;
+
+                try {
+                    result = executeGetAutoshiftObserverNotificationStatus(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -358,6 +405,41 @@ public class AWSARCZonalShiftAsyncClient extends AWSARCZonalShiftClient implemen
 
                 try {
                     result = executeStartZonalShift(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAutoshiftObserverNotificationStatusResult> updateAutoshiftObserverNotificationStatusAsync(
+            UpdateAutoshiftObserverNotificationStatusRequest request) {
+
+        return updateAutoshiftObserverNotificationStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAutoshiftObserverNotificationStatusResult> updateAutoshiftObserverNotificationStatusAsync(
+            final UpdateAutoshiftObserverNotificationStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAutoshiftObserverNotificationStatusRequest, UpdateAutoshiftObserverNotificationStatusResult> asyncHandler) {
+        final UpdateAutoshiftObserverNotificationStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAutoshiftObserverNotificationStatusResult>() {
+            @Override
+            public UpdateAutoshiftObserverNotificationStatusResult call() throws Exception {
+                UpdateAutoshiftObserverNotificationStatusResult result = null;
+
+                try {
+                    result = executeUpdateAutoshiftObserverNotificationStatus(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

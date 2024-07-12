@@ -67,6 +67,21 @@ public class AbstractAWSARCZonalShiftAsync extends AbstractAWSARCZonalShift impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetAutoshiftObserverNotificationStatusResult> getAutoshiftObserverNotificationStatusAsync(
+            GetAutoshiftObserverNotificationStatusRequest request) {
+
+        return getAutoshiftObserverNotificationStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAutoshiftObserverNotificationStatusResult> getAutoshiftObserverNotificationStatusAsync(
+            GetAutoshiftObserverNotificationStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAutoshiftObserverNotificationStatusRequest, GetAutoshiftObserverNotificationStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetManagedResourceResult> getManagedResourceAsync(GetManagedResourceRequest request) {
 
         return getManagedResourceAsync(request, null);
@@ -127,6 +142,21 @@ public class AbstractAWSARCZonalShiftAsync extends AbstractAWSARCZonalShift impl
     @Override
     public java.util.concurrent.Future<StartZonalShiftResult> startZonalShiftAsync(StartZonalShiftRequest request,
             com.amazonaws.handlers.AsyncHandler<StartZonalShiftRequest, StartZonalShiftResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAutoshiftObserverNotificationStatusResult> updateAutoshiftObserverNotificationStatusAsync(
+            UpdateAutoshiftObserverNotificationStatusRequest request) {
+
+        return updateAutoshiftObserverNotificationStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAutoshiftObserverNotificationStatusResult> updateAutoshiftObserverNotificationStatusAsync(
+            UpdateAutoshiftObserverNotificationStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateAutoshiftObserverNotificationStatusRequest, UpdateAutoshiftObserverNotificationStatusResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

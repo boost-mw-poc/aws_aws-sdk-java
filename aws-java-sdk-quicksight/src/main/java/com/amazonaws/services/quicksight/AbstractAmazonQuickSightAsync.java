@@ -28,6 +28,32 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     }
 
     @Override
+    public java.util.concurrent.Future<BatchCreateTopicReviewedAnswerResult> batchCreateTopicReviewedAnswerAsync(BatchCreateTopicReviewedAnswerRequest request) {
+
+        return batchCreateTopicReviewedAnswerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchCreateTopicReviewedAnswerResult> batchCreateTopicReviewedAnswerAsync(BatchCreateTopicReviewedAnswerRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchCreateTopicReviewedAnswerRequest, BatchCreateTopicReviewedAnswerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteTopicReviewedAnswerResult> batchDeleteTopicReviewedAnswerAsync(BatchDeleteTopicReviewedAnswerRequest request) {
+
+        return batchDeleteTopicReviewedAnswerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteTopicReviewedAnswerResult> batchDeleteTopicReviewedAnswerAsync(BatchDeleteTopicReviewedAnswerRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchDeleteTopicReviewedAnswerRequest, BatchDeleteTopicReviewedAnswerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelIngestionResult> cancelIngestionAsync(CancelIngestionRequest request) {
 
         return cancelIngestionAsync(request, null);
@@ -1623,6 +1649,19 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     @Override
     public java.util.concurrent.Future<ListTopicRefreshSchedulesResult> listTopicRefreshSchedulesAsync(ListTopicRefreshSchedulesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTopicRefreshSchedulesRequest, ListTopicRefreshSchedulesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTopicReviewedAnswersResult> listTopicReviewedAnswersAsync(ListTopicReviewedAnswersRequest request) {
+
+        return listTopicReviewedAnswersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTopicReviewedAnswersResult> listTopicReviewedAnswersAsync(ListTopicReviewedAnswersRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTopicReviewedAnswersRequest, ListTopicReviewedAnswersResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

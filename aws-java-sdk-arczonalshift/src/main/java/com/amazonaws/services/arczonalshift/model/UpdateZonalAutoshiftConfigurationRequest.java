@@ -34,7 +34,9 @@ public class UpdateZonalAutoshiftConfigurationRequest extends com.amazonaws.Amaz
     private String resourceIdentifier;
     /**
      * <p>
-     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for.
+     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for. Choose
+     * <code>ENABLED</code> to authorize Amazon Web Services to shift away resource traffic for an application from an
+     * Availability Zone during events, on your behalf, to help reduce time to recovery.
      * </p>
      */
     private String zonalAutoshiftStatus;
@@ -87,11 +89,15 @@ public class UpdateZonalAutoshiftConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for.
+     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for. Choose
+     * <code>ENABLED</code> to authorize Amazon Web Services to shift away resource traffic for an application from an
+     * Availability Zone during events, on your behalf, to help reduce time to recovery.
      * </p>
      * 
      * @param zonalAutoshiftStatus
      *        The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for.
+     *        Choose <code>ENABLED</code> to authorize Amazon Web Services to shift away resource traffic for an
+     *        application from an Availability Zone during events, on your behalf, to help reduce time to recovery.
      * @see ZonalAutoshiftStatus
      */
 
@@ -101,11 +107,14 @@ public class UpdateZonalAutoshiftConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for.
+     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for. Choose
+     * <code>ENABLED</code> to authorize Amazon Web Services to shift away resource traffic for an application from an
+     * Availability Zone during events, on your behalf, to help reduce time to recovery.
      * </p>
      * 
      * @return The zonal autoshift status for the resource that you want to update the zonal autoshift configuration
-     *         for.
+     *         for. Choose <code>ENABLED</code> to authorize Amazon Web Services to shift away resource traffic for an
+     *         application from an Availability Zone during events, on your behalf, to help reduce time to recovery.
      * @see ZonalAutoshiftStatus
      */
 
@@ -115,11 +124,15 @@ public class UpdateZonalAutoshiftConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for.
+     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for. Choose
+     * <code>ENABLED</code> to authorize Amazon Web Services to shift away resource traffic for an application from an
+     * Availability Zone during events, on your behalf, to help reduce time to recovery.
      * </p>
      * 
      * @param zonalAutoshiftStatus
      *        The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for.
+     *        Choose <code>ENABLED</code> to authorize Amazon Web Services to shift away resource traffic for an
+     *        application from an Availability Zone during events, on your behalf, to help reduce time to recovery.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ZonalAutoshiftStatus
      */
@@ -131,11 +144,15 @@ public class UpdateZonalAutoshiftConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for.
+     * The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for. Choose
+     * <code>ENABLED</code> to authorize Amazon Web Services to shift away resource traffic for an application from an
+     * Availability Zone during events, on your behalf, to help reduce time to recovery.
      * </p>
      * 
      * @param zonalAutoshiftStatus
      *        The zonal autoshift status for the resource that you want to update the zonal autoshift configuration for.
+     *        Choose <code>ENABLED</code> to authorize Amazon Web Services to shift away resource traffic for an
+     *        application from an Availability Zone during events, on your behalf, to help reduce time to recovery.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ZonalAutoshiftStatus
      */

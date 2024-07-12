@@ -48,15 +48,15 @@ public class ListPermissionsResultJsonUnmarshaller implements Unmarshaller<ListP
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("NextToken", targetDepth)) {
+                    context.nextToken();
+                    listPermissionsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Permissions", targetDepth)) {
                     context.nextToken();
                     listPermissionsResult.setPermissions(new ListUnmarshaller<Permission>(PermissionJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("NextToken", targetDepth)) {
-                    context.nextToken();
-                    listPermissionsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

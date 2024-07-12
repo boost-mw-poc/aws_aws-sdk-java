@@ -20,7 +20,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A practice run configuration for a resource includes the Amazon CloudWatch alarms that you've specified for a
- * practice run, as well as any blocked dates or blocked windows for the practice run.
+ * practice run, as well as any blocked dates or blocked windows for the practice run. When a resource has a practice
+ * run configuration, Route 53 ARC shifts traffic for the resource weekly for practice runs.
+ * </p>
+ * <p>
+ * Practice runs are required for zonal autoshift. The zonal shifts that Route 53 ARC starts for practice runs help you
+ * to ensure that shifting away traffic from an Availability Zone during an autoshift is safe for your application.
  * </p>
  * <p>
  * You can update or delete a practice run configuration. Before you delete a practice run configuration, you must

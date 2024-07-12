@@ -27,9 +27,9 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      */
     private String awayFrom;
@@ -75,8 +75,8 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
     private String expiresIn;
     /**
      * <p>
-     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
-     * the resource.
+     * The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     * Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
@@ -87,15 +87,15 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the Amazon Web Services Region.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *        when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *        instead moved to other Availability Zones in the Amazon Web Services Region.
      */
 
     public void setAwayFrom(String awayFrom) {
@@ -104,14 +104,14 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
-     * @return The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *         the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *         Zones in the Amazon Web Services Region.
+     * @return The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *         when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *         instead moved to other Availability Zones in the Amazon Web Services Region.
      */
 
     public String getAwayFrom() {
@@ -120,15 +120,15 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the Amazon Web Services Region.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *        when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *        instead moved to other Availability Zones in the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -384,8 +384,8 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
-     * the resource.
+     * The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     * Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
@@ -393,8 +393,8 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
-     *        (ARN) for the resource.</p>
+     *        The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     *        Resource Name (ARN) for the resource.</p>
      *        <p>
      *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
      *        cross-zone load balancing turned off.
@@ -406,16 +406,16 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
-     * the resource.
+     * The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     * Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
      * balancing turned off.
      * </p>
      * 
-     * @return The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
-     *         (ARN) for the resource.</p>
+     * @return The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     *         Resource Name (ARN) for the resource.</p>
      *         <p>
      *         At this time, supported resources are Network Load Balancers and Application Load Balancers with
      *         cross-zone load balancing turned off.
@@ -427,8 +427,8 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
-     * the resource.
+     * The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     * Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
@@ -436,8 +436,8 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
-     *        (ARN) for the resource.</p>
+     *        The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     *        Resource Name (ARN) for the resource.</p>
      *        <p>
      *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
      *        cross-zone load balancing turned off.

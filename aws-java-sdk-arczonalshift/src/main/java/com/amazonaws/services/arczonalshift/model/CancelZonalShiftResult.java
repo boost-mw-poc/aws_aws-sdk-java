@@ -25,9 +25,9 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      */
     private String awayFrom;
@@ -40,8 +40,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
     private String comment;
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -54,8 +54,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.Date expiryTime;
     /**
      * <p>
-     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
-     * the resource.
+     * The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     * Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
@@ -104,15 +104,15 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the Amazon Web Services Region.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *        when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *        instead moved to other Availability Zones in the Amazon Web Services Region.
      */
 
     public void setAwayFrom(String awayFrom) {
@@ -121,14 +121,14 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
-     * @return The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *         the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *         Zones in the Amazon Web Services Region.
+     * @return The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *         when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *         instead moved to other Availability Zones in the Amazon Web Services Region.
      */
 
     public String getAwayFrom() {
@@ -137,15 +137,15 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the Amazon Web Services Region.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *        when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *        instead moved to other Availability Zones in the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -202,8 +202,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -214,8 +214,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param expiryTime
-     *        The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
-     *        be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     *        The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and
+     *        must be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
      *        maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
      *        time. </p>
      *        <p>
@@ -231,8 +231,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -242,8 +242,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
      * time to expire in.
      * </p>
      * 
-     * @return The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
-     *         be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     * @return The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and
+     *         must be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
      *         maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
      *         time. </p>
      *         <p>
@@ -259,8 +259,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -271,8 +271,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param expiryTime
-     *        The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
-     *        be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     *        The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and
+     *        must be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
      *        maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
      *        time. </p>
      *        <p>
@@ -290,8 +290,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
-     * the resource.
+     * The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     * Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
@@ -299,8 +299,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
-     *        (ARN) for the resource.</p>
+     *        The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     *        Resource Name (ARN) for the resource.</p>
      *        <p>
      *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
      *        cross-zone load balancing turned off.
@@ -312,16 +312,16 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
-     * the resource.
+     * The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     * Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
      * balancing turned off.
      * </p>
      * 
-     * @return The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
-     *         (ARN) for the resource.</p>
+     * @return The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     *         Resource Name (ARN) for the resource.</p>
      *         <p>
      *         At this time, supported resources are Network Load Balancers and Application Load Balancers with
      *         cross-zone load balancing turned off.
@@ -333,8 +333,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
-     * the resource.
+     * The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     * Resource Name (ARN) for the resource.
      * </p>
      * <p>
      * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
@@ -342,8 +342,8 @@ public class CancelZonalShiftResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
-     *        (ARN) for the resource.</p>
+     *        The identifier for the resource that Amazon Web Services shifts traffic for. The identifier is the Amazon
+     *        Resource Name (ARN) for the resource.</p>
      *        <p>
      *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
      *        cross-zone load balancing turned off.

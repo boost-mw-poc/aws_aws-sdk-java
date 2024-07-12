@@ -33,7 +33,7 @@ public class UpdateZonalAutoshiftConfigurationResult extends com.amazonaws.Amazo
     private String resourceIdentifier;
     /**
      * <p>
-     * The zonal autoshift status for the resource that you updated the zonal autoshift configuration for.
+     * The updated zonal autoshift status for the resource.
      * </p>
      */
     private String zonalAutoshiftStatus;
@@ -86,11 +86,11 @@ public class UpdateZonalAutoshiftConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The zonal autoshift status for the resource that you updated the zonal autoshift configuration for.
+     * The updated zonal autoshift status for the resource.
      * </p>
      * 
      * @param zonalAutoshiftStatus
-     *        The zonal autoshift status for the resource that you updated the zonal autoshift configuration for.
+     *        The updated zonal autoshift status for the resource.
      * @see ZonalAutoshiftStatus
      */
 
@@ -100,10 +100,10 @@ public class UpdateZonalAutoshiftConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The zonal autoshift status for the resource that you updated the zonal autoshift configuration for.
+     * The updated zonal autoshift status for the resource.
      * </p>
      * 
-     * @return The zonal autoshift status for the resource that you updated the zonal autoshift configuration for.
+     * @return The updated zonal autoshift status for the resource.
      * @see ZonalAutoshiftStatus
      */
 
@@ -113,11 +113,11 @@ public class UpdateZonalAutoshiftConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The zonal autoshift status for the resource that you updated the zonal autoshift configuration for.
+     * The updated zonal autoshift status for the resource.
      * </p>
      * 
      * @param zonalAutoshiftStatus
-     *        The zonal autoshift status for the resource that you updated the zonal autoshift configuration for.
+     *        The updated zonal autoshift status for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ZonalAutoshiftStatus
      */
@@ -129,11 +129,11 @@ public class UpdateZonalAutoshiftConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The zonal autoshift status for the resource that you updated the zonal autoshift configuration for.
+     * The updated zonal autoshift status for the resource.
      * </p>
      * 
      * @param zonalAutoshiftStatus
-     *        The zonal autoshift status for the resource that you updated the zonal autoshift configuration for.
+     *        The updated zonal autoshift status for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ZonalAutoshiftStatus
      */

@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -327,6 +327,14 @@
         "exceptionName" : "LimitExceededException",
         "documentation" : "<p>Processing your request would cause you to exceed an Global Accelerator limit.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>You don't have access permission.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "TransactionInProgressException",
+        "documentation" : "<p>There's already a transaction in progress. Another transaction can't be processed.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -428,6 +436,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>You don't have access permission.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "TransactionInProgressException",
+        "documentation" : "<p>There's already a transaction in progress. Another transaction can't be processed.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -714,6 +726,10 @@
         "exceptionName" : "InvalidArgumentException",
         "documentation" : "<p>An argument that you specified is invalid.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "TransactionInProgressException",
+        "documentation" : "<p>There's already a transaction in progress. Another transaction can't be processed.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -819,6 +835,10 @@
       }, {
         "exceptionName" : "InvalidArgumentException",
         "documentation" : "<p>An argument that you specified is invalid.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "TransactionInProgressException",
+        "documentation" : "<p>There's already a transaction in progress. Another transaction can't be processed.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2133,6 +2153,18 @@
         "documentation" : "<p>The accelerator that you specified doesn't exist.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "AttachmentNotFoundException",
+        "documentation" : "<p>No cross-account attachment was found.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "EndpointGroupNotFoundException",
+        "documentation" : "<p>The endpoint group that you specified doesn't exist.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ListenerNotFoundException",
+        "documentation" : "<p>The listener that you specified doesn't exist.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "InternalServiceErrorException",
         "documentation" : "<p>There was an internal error for Global Accelerator.</p>",
         "httpStatusCode" : null
@@ -2442,6 +2474,14 @@
         "exceptionName" : "InvalidArgumentException",
         "documentation" : "<p>An argument that you specified is invalid.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "TransactionInProgressException",
+        "documentation" : "<p>There's already a transaction in progress. Another transaction can't be processed.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>You can't use both of those options.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -2490,6 +2530,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>You don't have access permission.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "TransactionInProgressException",
+        "documentation" : "<p>There's already a transaction in progress. Another transaction can't be processed.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2593,6 +2637,14 @@
         "exceptionName" : "InvalidArgumentException",
         "documentation" : "<p>An argument that you specified is invalid.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "TransactionInProgressException",
+        "documentation" : "<p>There's already a transaction in progress. Another transaction can't be processed.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>You can't use both of those options.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -2641,6 +2693,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>You don't have access permission.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "TransactionInProgressException",
+        "documentation" : "<p>There's already a transaction in progress. Another transaction can't be processed.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,

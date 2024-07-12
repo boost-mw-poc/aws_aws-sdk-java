@@ -45,10 +45,10 @@ public class CreatePracticeRunConfigurationResult extends com.amazonaws.AmazonWe
     private PracticeRunConfiguration practiceRunConfiguration;
     /**
      * <p>
-     * The status for zonal autoshift for a resource. When you specify the autoshift status as <code>ENABLED</code>,
+     * The status for zonal autoshift for a resource. When you specify <code>ENABLED</code> for the autoshift status,
      * Amazon Web Services shifts traffic away from shifts away application resource traffic from an Availability Zone,
-     * on your behalf, when Amazon Web Services determines that there's an issue in the Availability Zone that could
-     * potentially affect customers.
+     * on your behalf, when internal telemetry indicates that there is an Availability Zone impairment that could
+     * potentially impact customers.
      * </p>
      * <p>
      * When you enable zonal autoshift, you must also configure practice runs for the resource.
@@ -184,20 +184,20 @@ public class CreatePracticeRunConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The status for zonal autoshift for a resource. When you specify the autoshift status as <code>ENABLED</code>,
+     * The status for zonal autoshift for a resource. When you specify <code>ENABLED</code> for the autoshift status,
      * Amazon Web Services shifts traffic away from shifts away application resource traffic from an Availability Zone,
-     * on your behalf, when Amazon Web Services determines that there's an issue in the Availability Zone that could
-     * potentially affect customers.
+     * on your behalf, when internal telemetry indicates that there is an Availability Zone impairment that could
+     * potentially impact customers.
      * </p>
      * <p>
      * When you enable zonal autoshift, you must also configure practice runs for the resource.
      * </p>
      * 
      * @param zonalAutoshiftStatus
-     *        The status for zonal autoshift for a resource. When you specify the autoshift status as
-     *        <code>ENABLED</code>, Amazon Web Services shifts traffic away from shifts away application resource
-     *        traffic from an Availability Zone, on your behalf, when Amazon Web Services determines that there's an
-     *        issue in the Availability Zone that could potentially affect customers.</p>
+     *        The status for zonal autoshift for a resource. When you specify <code>ENABLED</code> for the autoshift
+     *        status, Amazon Web Services shifts traffic away from shifts away application resource traffic from an
+     *        Availability Zone, on your behalf, when internal telemetry indicates that there is an Availability Zone
+     *        impairment that could potentially impact customers.</p>
      *        <p>
      *        When you enable zonal autoshift, you must also configure practice runs for the resource.
      * @see ZonalAutoshiftStatus
@@ -209,19 +209,19 @@ public class CreatePracticeRunConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The status for zonal autoshift for a resource. When you specify the autoshift status as <code>ENABLED</code>,
+     * The status for zonal autoshift for a resource. When you specify <code>ENABLED</code> for the autoshift status,
      * Amazon Web Services shifts traffic away from shifts away application resource traffic from an Availability Zone,
-     * on your behalf, when Amazon Web Services determines that there's an issue in the Availability Zone that could
-     * potentially affect customers.
+     * on your behalf, when internal telemetry indicates that there is an Availability Zone impairment that could
+     * potentially impact customers.
      * </p>
      * <p>
      * When you enable zonal autoshift, you must also configure practice runs for the resource.
      * </p>
      * 
-     * @return The status for zonal autoshift for a resource. When you specify the autoshift status as
-     *         <code>ENABLED</code>, Amazon Web Services shifts traffic away from shifts away application resource
-     *         traffic from an Availability Zone, on your behalf, when Amazon Web Services determines that there's an
-     *         issue in the Availability Zone that could potentially affect customers.</p>
+     * @return The status for zonal autoshift for a resource. When you specify <code>ENABLED</code> for the autoshift
+     *         status, Amazon Web Services shifts traffic away from shifts away application resource traffic from an
+     *         Availability Zone, on your behalf, when internal telemetry indicates that there is an Availability Zone
+     *         impairment that could potentially impact customers.</p>
      *         <p>
      *         When you enable zonal autoshift, you must also configure practice runs for the resource.
      * @see ZonalAutoshiftStatus
@@ -233,20 +233,20 @@ public class CreatePracticeRunConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The status for zonal autoshift for a resource. When you specify the autoshift status as <code>ENABLED</code>,
+     * The status for zonal autoshift for a resource. When you specify <code>ENABLED</code> for the autoshift status,
      * Amazon Web Services shifts traffic away from shifts away application resource traffic from an Availability Zone,
-     * on your behalf, when Amazon Web Services determines that there's an issue in the Availability Zone that could
-     * potentially affect customers.
+     * on your behalf, when internal telemetry indicates that there is an Availability Zone impairment that could
+     * potentially impact customers.
      * </p>
      * <p>
      * When you enable zonal autoshift, you must also configure practice runs for the resource.
      * </p>
      * 
      * @param zonalAutoshiftStatus
-     *        The status for zonal autoshift for a resource. When you specify the autoshift status as
-     *        <code>ENABLED</code>, Amazon Web Services shifts traffic away from shifts away application resource
-     *        traffic from an Availability Zone, on your behalf, when Amazon Web Services determines that there's an
-     *        issue in the Availability Zone that could potentially affect customers.</p>
+     *        The status for zonal autoshift for a resource. When you specify <code>ENABLED</code> for the autoshift
+     *        status, Amazon Web Services shifts traffic away from shifts away application resource traffic from an
+     *        Availability Zone, on your behalf, when internal telemetry indicates that there is an Availability Zone
+     *        impairment that could potentially impact customers.</p>
      *        <p>
      *        When you enable zonal autoshift, you must also configure practice runs for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -260,20 +260,20 @@ public class CreatePracticeRunConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The status for zonal autoshift for a resource. When you specify the autoshift status as <code>ENABLED</code>,
+     * The status for zonal autoshift for a resource. When you specify <code>ENABLED</code> for the autoshift status,
      * Amazon Web Services shifts traffic away from shifts away application resource traffic from an Availability Zone,
-     * on your behalf, when Amazon Web Services determines that there's an issue in the Availability Zone that could
-     * potentially affect customers.
+     * on your behalf, when internal telemetry indicates that there is an Availability Zone impairment that could
+     * potentially impact customers.
      * </p>
      * <p>
      * When you enable zonal autoshift, you must also configure practice runs for the resource.
      * </p>
      * 
      * @param zonalAutoshiftStatus
-     *        The status for zonal autoshift for a resource. When you specify the autoshift status as
-     *        <code>ENABLED</code>, Amazon Web Services shifts traffic away from shifts away application resource
-     *        traffic from an Availability Zone, on your behalf, when Amazon Web Services determines that there's an
-     *        issue in the Availability Zone that could potentially affect customers.</p>
+     *        The status for zonal autoshift for a resource. When you specify <code>ENABLED</code> for the autoshift
+     *        status, Amazon Web Services shifts traffic away from shifts away application resource traffic from an
+     *        Availability Zone, on your behalf, when internal telemetry indicates that there is an Availability Zone
+     *        impairment that could potentially impact customers.</p>
      *        <p>
      *        When you enable zonal autoshift, you must also configure practice runs for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.

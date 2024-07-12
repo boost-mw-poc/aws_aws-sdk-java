@@ -188,6 +188,148 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Creates new reviewed answers for a Q Topic.
+     * </p>
+     * 
+     * @param batchCreateTopicReviewedAnswerRequest
+     * @return Result of the BatchCreateTopicReviewedAnswer operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.BatchCreateTopicReviewedAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/BatchCreateTopicReviewedAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchCreateTopicReviewedAnswerResult batchCreateTopicReviewedAnswer(BatchCreateTopicReviewedAnswerRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchCreateTopicReviewedAnswer(request);
+    }
+
+    @SdkInternalApi
+    final BatchCreateTopicReviewedAnswerResult executeBatchCreateTopicReviewedAnswer(BatchCreateTopicReviewedAnswerRequest batchCreateTopicReviewedAnswerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchCreateTopicReviewedAnswerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchCreateTopicReviewedAnswerRequest> request = null;
+        Response<BatchCreateTopicReviewedAnswerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchCreateTopicReviewedAnswerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchCreateTopicReviewedAnswerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchCreateTopicReviewedAnswer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchCreateTopicReviewedAnswerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchCreateTopicReviewedAnswerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes reviewed answers for Q Topic.
+     * </p>
+     * 
+     * @param batchDeleteTopicReviewedAnswerRequest
+     * @return Result of the BatchDeleteTopicReviewedAnswer operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.BatchDeleteTopicReviewedAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/BatchDeleteTopicReviewedAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchDeleteTopicReviewedAnswerResult batchDeleteTopicReviewedAnswer(BatchDeleteTopicReviewedAnswerRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchDeleteTopicReviewedAnswer(request);
+    }
+
+    @SdkInternalApi
+    final BatchDeleteTopicReviewedAnswerResult executeBatchDeleteTopicReviewedAnswer(BatchDeleteTopicReviewedAnswerRequest batchDeleteTopicReviewedAnswerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchDeleteTopicReviewedAnswerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchDeleteTopicReviewedAnswerRequest> request = null;
+        Response<BatchDeleteTopicReviewedAnswerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchDeleteTopicReviewedAnswerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchDeleteTopicReviewedAnswerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchDeleteTopicReviewedAnswer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchDeleteTopicReviewedAnswerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchDeleteTopicReviewedAnswerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Cancels an ongoing ingestion of data into SPICE.
      * </p>
      * 
@@ -9482,6 +9624,76 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<ListTopicRefreshSchedulesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListTopicRefreshSchedulesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all reviewed answers for a Q Topic.
+     * </p>
+     * 
+     * @param listTopicReviewedAnswersRequest
+     * @return Result of the ListTopicReviewedAnswers operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.ListTopicReviewedAnswers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListTopicReviewedAnswers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListTopicReviewedAnswersResult listTopicReviewedAnswers(ListTopicReviewedAnswersRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTopicReviewedAnswers(request);
+    }
+
+    @SdkInternalApi
+    final ListTopicReviewedAnswersResult executeListTopicReviewedAnswers(ListTopicReviewedAnswersRequest listTopicReviewedAnswersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTopicReviewedAnswersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTopicReviewedAnswersRequest> request = null;
+        Response<ListTopicReviewedAnswersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTopicReviewedAnswersRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listTopicReviewedAnswersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTopicReviewedAnswers");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTopicReviewedAnswersResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListTopicReviewedAnswersResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -22,7 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * A control condition is an alarm that you specify for a practice run. When you configure practice runs with zonal
  * autoshift for a resource, you specify Amazon CloudWatch alarms, which you create in CloudWatch to use with the
  * practice run. The alarms that you specify are an <i>outcome alarm</i>, to monitor application health during practice
- * runs and, optionally, a <i>blocking alarm</i>, to block practice runs from starting.
+ * runs and, optionally, a <i>blocking alarm</i>, to block practice runs from starting or to interrupt a practice run in
+ * progress.
  * </p>
  * <p>
  * Control condition alarms do not apply for autoshifts.
@@ -41,26 +42,27 @@ public class ControlCondition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the Amazon CloudWatch alarm that you specify as a control condition for a
+     * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control condition for a
      * practice run.
      * </p>
      */
     private String alarmIdentifier;
     /**
      * <p>
-     * The type of alarm specified for a practice run. The only valid value is <code>CLOUDWATCH</code>.
+     * The type of alarm specified for a practice run. You can only specify Amazon CloudWatch alarms for practice runs,
+     * so the only valid value is <code>CLOUDWATCH</code>.
      * </p>
      */
     private String type;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the Amazon CloudWatch alarm that you specify as a control condition for a
+     * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control condition for a
      * practice run.
      * </p>
      * 
      * @param alarmIdentifier
-     *        The Amazon Resource Name (ARN) for the Amazon CloudWatch alarm that you specify as a control condition for
+     *        The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control condition for
      *        a practice run.
      */
 
@@ -70,12 +72,12 @@ public class ControlCondition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the Amazon CloudWatch alarm that you specify as a control condition for a
+     * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control condition for a
      * practice run.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the Amazon CloudWatch alarm that you specify as a control condition
-     *         for a practice run.
+     * @return The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control condition for
+     *         a practice run.
      */
 
     public String getAlarmIdentifier() {
@@ -84,12 +86,12 @@ public class ControlCondition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the Amazon CloudWatch alarm that you specify as a control condition for a
+     * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control condition for a
      * practice run.
      * </p>
      * 
      * @param alarmIdentifier
-     *        The Amazon Resource Name (ARN) for the Amazon CloudWatch alarm that you specify as a control condition for
+     *        The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control condition for
      *        a practice run.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -101,11 +103,13 @@ public class ControlCondition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The type of alarm specified for a practice run. The only valid value is <code>CLOUDWATCH</code>.
+     * The type of alarm specified for a practice run. You can only specify Amazon CloudWatch alarms for practice runs,
+     * so the only valid value is <code>CLOUDWATCH</code>.
      * </p>
      * 
      * @param type
-     *        The type of alarm specified for a practice run. The only valid value is <code>CLOUDWATCH</code>.
+     *        The type of alarm specified for a practice run. You can only specify Amazon CloudWatch alarms for practice
+     *        runs, so the only valid value is <code>CLOUDWATCH</code>.
      * @see ControlConditionType
      */
 
@@ -115,10 +119,12 @@ public class ControlCondition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The type of alarm specified for a practice run. The only valid value is <code>CLOUDWATCH</code>.
+     * The type of alarm specified for a practice run. You can only specify Amazon CloudWatch alarms for practice runs,
+     * so the only valid value is <code>CLOUDWATCH</code>.
      * </p>
      * 
-     * @return The type of alarm specified for a practice run. The only valid value is <code>CLOUDWATCH</code>.
+     * @return The type of alarm specified for a practice run. You can only specify Amazon CloudWatch alarms for
+     *         practice runs, so the only valid value is <code>CLOUDWATCH</code>.
      * @see ControlConditionType
      */
 
@@ -128,11 +134,13 @@ public class ControlCondition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The type of alarm specified for a practice run. The only valid value is <code>CLOUDWATCH</code>.
+     * The type of alarm specified for a practice run. You can only specify Amazon CloudWatch alarms for practice runs,
+     * so the only valid value is <code>CLOUDWATCH</code>.
      * </p>
      * 
      * @param type
-     *        The type of alarm specified for a practice run. The only valid value is <code>CLOUDWATCH</code>.
+     *        The type of alarm specified for a practice run. You can only specify Amazon CloudWatch alarms for practice
+     *        runs, so the only valid value is <code>CLOUDWATCH</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlConditionType
      */
@@ -144,11 +152,13 @@ public class ControlCondition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The type of alarm specified for a practice run. The only valid value is <code>CLOUDWATCH</code>.
+     * The type of alarm specified for a practice run. You can only specify Amazon CloudWatch alarms for practice runs,
+     * so the only valid value is <code>CLOUDWATCH</code>.
      * </p>
      * 
      * @param type
-     *        The type of alarm specified for a practice run. The only valid value is <code>CLOUDWATCH</code>.
+     *        The type of alarm specified for a practice run. You can only specify Amazon CloudWatch alarms for practice
+     *        runs, so the only valid value is <code>CLOUDWATCH</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlConditionType
      */

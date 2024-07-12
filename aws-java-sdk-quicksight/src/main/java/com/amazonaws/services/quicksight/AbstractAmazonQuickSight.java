@@ -28,6 +28,16 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public BatchCreateTopicReviewedAnswerResult batchCreateTopicReviewedAnswer(BatchCreateTopicReviewedAnswerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public BatchDeleteTopicReviewedAnswerResult batchDeleteTopicReviewedAnswer(BatchDeleteTopicReviewedAnswerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CancelIngestionResult cancelIngestion(CancelIngestionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -634,6 +644,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
 
     @Override
     public ListTopicRefreshSchedulesResult listTopicRefreshSchedules(ListTopicRefreshSchedulesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTopicReviewedAnswersResult listTopicReviewedAnswers(ListTopicReviewedAnswersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

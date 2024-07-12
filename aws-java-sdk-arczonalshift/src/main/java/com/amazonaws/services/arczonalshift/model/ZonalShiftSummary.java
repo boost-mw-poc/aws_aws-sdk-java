@@ -23,9 +23,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * you start yourself and zonal shifts that Route 53 ARC starts on your behalf for practice runs with zonal autoshift.
  * </p>
  * <p>
- * Zonal shifts are temporary, including customer-started zonal shifts and the zonal autoshift practice run zonal shifts
- * that Route 53 ARC starts weekly, on your behalf. A zonal shift that a customer starts can be active for up to three
- * days (72 hours). A practice run zonal shift has a 30 minute duration.
+ * Zonal shifts are temporary, including customer-initiated zonal shifts and the zonal autoshift practice run zonal
+ * shifts that Route 53 ARC starts weekly, on your behalf. A zonal shift that a customer starts can be active for up to
+ * three days (72 hours). A practice run zonal shift has a 30 minute duration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/ZonalShiftSummary" target="_top">AWS
@@ -36,9 +36,9 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      */
     private String awayFrom;
@@ -51,8 +51,8 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
     private String comment;
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -152,15 +152,15 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the Amazon Web Services Region.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *        when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *        instead moved to other Availability Zones in the Amazon Web Services Region.
      */
 
     public void setAwayFrom(String awayFrom) {
@@ -169,14 +169,14 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
-     * @return The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *         the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *         Zones in the Amazon Web Services Region.
+     * @return The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *         when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *         instead moved to other Availability Zones in the Amazon Web Services Region.
      */
 
     public String getAwayFrom() {
@@ -185,15 +185,15 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
-     * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the Amazon Web Services Region.
+     * The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource when
+     * you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is instead
+     * moved to other Availability Zones in the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
-     *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
-     *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the Amazon Web Services Region.
+     *        The Availability Zone (for example, <code>use1-az1</code>) that traffic is moved away from for a resource
+     *        when you start a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource is
+     *        instead moved to other Availability Zones in the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -250,8 +250,8 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -262,8 +262,8 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param expiryTime
-     *        The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
-     *        be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     *        The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and
+     *        must be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
      *        maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
      *        time. </p>
      *        <p>
@@ -279,8 +279,8 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -290,8 +290,8 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
      * time to expire in.
      * </p>
      * 
-     * @return The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
-     *         be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     * @return The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and
+     *         must be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
      *         maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
      *         time. </p>
      *         <p>
@@ -307,8 +307,8 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
-     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and must be
+     * set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
      * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
@@ -319,8 +319,8 @@ public class ZonalShiftSummary implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param expiryTime
-     *        The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
-     *        be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     *        The expiry time (expiration time) for a customer-initiated zonal shift. A zonal shift is temporary and
+     *        must be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
      *        maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
      *        time. </p>
      *        <p>

@@ -46,6 +46,18 @@ public class DateTimePickerControlDisplayOptions implements Serializable, Clonea
      * </p>
      */
     private SheetControlInfoIconLabelOptions infoIconLabelOptions;
+    /**
+     * <p>
+     * The helper text visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     */
+    private String helperTextVisibility;
+    /**
+     * <p>
+     * The date icon visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     */
+    private String dateIconVisibility;
 
     /**
      * <p>
@@ -168,6 +180,124 @@ public class DateTimePickerControlDisplayOptions implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * The helper text visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     * 
+     * @param helperTextVisibility
+     *        The helper text visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * @see Visibility
+     */
+
+    public void setHelperTextVisibility(String helperTextVisibility) {
+        this.helperTextVisibility = helperTextVisibility;
+    }
+
+    /**
+     * <p>
+     * The helper text visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     * 
+     * @return The helper text visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * @see Visibility
+     */
+
+    public String getHelperTextVisibility() {
+        return this.helperTextVisibility;
+    }
+
+    /**
+     * <p>
+     * The helper text visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     * 
+     * @param helperTextVisibility
+     *        The helper text visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Visibility
+     */
+
+    public DateTimePickerControlDisplayOptions withHelperTextVisibility(String helperTextVisibility) {
+        setHelperTextVisibility(helperTextVisibility);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The helper text visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     * 
+     * @param helperTextVisibility
+     *        The helper text visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Visibility
+     */
+
+    public DateTimePickerControlDisplayOptions withHelperTextVisibility(Visibility helperTextVisibility) {
+        this.helperTextVisibility = helperTextVisibility.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date icon visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     * 
+     * @param dateIconVisibility
+     *        The date icon visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * @see Visibility
+     */
+
+    public void setDateIconVisibility(String dateIconVisibility) {
+        this.dateIconVisibility = dateIconVisibility;
+    }
+
+    /**
+     * <p>
+     * The date icon visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     * 
+     * @return The date icon visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * @see Visibility
+     */
+
+    public String getDateIconVisibility() {
+        return this.dateIconVisibility;
+    }
+
+    /**
+     * <p>
+     * The date icon visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     * 
+     * @param dateIconVisibility
+     *        The date icon visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Visibility
+     */
+
+    public DateTimePickerControlDisplayOptions withDateIconVisibility(String dateIconVisibility) {
+        setDateIconVisibility(dateIconVisibility);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date icon visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * </p>
+     * 
+     * @param dateIconVisibility
+     *        The date icon visibility of the <code>DateTimePickerControlDisplayOptions</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Visibility
+     */
+
+    public DateTimePickerControlDisplayOptions withDateIconVisibility(Visibility dateIconVisibility) {
+        this.dateIconVisibility = dateIconVisibility.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +314,11 @@ public class DateTimePickerControlDisplayOptions implements Serializable, Clonea
         if (getDateTimeFormat() != null)
             sb.append("DateTimeFormat: ").append(getDateTimeFormat()).append(",");
         if (getInfoIconLabelOptions() != null)
-            sb.append("InfoIconLabelOptions: ").append(getInfoIconLabelOptions());
+            sb.append("InfoIconLabelOptions: ").append(getInfoIconLabelOptions()).append(",");
+        if (getHelperTextVisibility() != null)
+            sb.append("HelperTextVisibility: ").append(getHelperTextVisibility()).append(",");
+        if (getDateIconVisibility() != null)
+            sb.append("DateIconVisibility: ").append(getDateIconVisibility());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +345,14 @@ public class DateTimePickerControlDisplayOptions implements Serializable, Clonea
             return false;
         if (other.getInfoIconLabelOptions() != null && other.getInfoIconLabelOptions().equals(this.getInfoIconLabelOptions()) == false)
             return false;
+        if (other.getHelperTextVisibility() == null ^ this.getHelperTextVisibility() == null)
+            return false;
+        if (other.getHelperTextVisibility() != null && other.getHelperTextVisibility().equals(this.getHelperTextVisibility()) == false)
+            return false;
+        if (other.getDateIconVisibility() == null ^ this.getDateIconVisibility() == null)
+            return false;
+        if (other.getDateIconVisibility() != null && other.getDateIconVisibility().equals(this.getDateIconVisibility()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +364,8 @@ public class DateTimePickerControlDisplayOptions implements Serializable, Clonea
         hashCode = prime * hashCode + ((getTitleOptions() == null) ? 0 : getTitleOptions().hashCode());
         hashCode = prime * hashCode + ((getDateTimeFormat() == null) ? 0 : getDateTimeFormat().hashCode());
         hashCode = prime * hashCode + ((getInfoIconLabelOptions() == null) ? 0 : getInfoIconLabelOptions().hashCode());
+        hashCode = prime * hashCode + ((getHelperTextVisibility() == null) ? 0 : getHelperTextVisibility().hashCode());
+        hashCode = prime * hashCode + ((getDateIconVisibility() == null) ? 0 : getDateIconVisibility().hashCode());
         return hashCode;
     }
 

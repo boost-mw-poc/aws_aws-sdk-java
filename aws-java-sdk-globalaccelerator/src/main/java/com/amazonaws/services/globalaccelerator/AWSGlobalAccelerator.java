@@ -287,6 +287,10 @@ public interface AWSGlobalAccelerator {
      *         An argument that you specified is invalid.
      * @throws LimitExceededException
      *         Processing your request would cause you to exceed an Global Accelerator limit.
+     * @throws AccessDeniedException
+     *         You don't have access permission.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
      * @sample AWSGlobalAccelerator.CreateAccelerator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CreateAccelerator"
      *      target="_top">AWS API Documentation</a>
@@ -368,6 +372,8 @@ public interface AWSGlobalAccelerator {
      *         Processing your request would cause you to exceed an Global Accelerator limit.
      * @throws AccessDeniedException
      *         You don't have access permission.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
      * @sample AWSGlobalAccelerator.CreateCustomRoutingAccelerator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CreateCustomRoutingAccelerator"
      *      target="_top">AWS API Documentation</a>
@@ -523,6 +529,8 @@ public interface AWSGlobalAccelerator {
      *         There was an internal error for Global Accelerator.
      * @throws InvalidArgumentException
      *         An argument that you specified is invalid.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
      * @sample AWSGlobalAccelerator.DeleteAccelerator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeleteAccelerator"
      *      target="_top">AWS API Documentation</a>
@@ -596,6 +604,8 @@ public interface AWSGlobalAccelerator {
      *         There was an internal error for Global Accelerator.
      * @throws InvalidArgumentException
      *         An argument that you specified is invalid.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
      * @sample AWSGlobalAccelerator.DeleteCustomRoutingAccelerator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeleteCustomRoutingAccelerator"
      *      target="_top">AWS API Documentation</a>
@@ -1215,6 +1225,12 @@ public interface AWSGlobalAccelerator {
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws AcceleratorNotFoundException
      *         The accelerator that you specified doesn't exist.
+     * @throws AttachmentNotFoundException
+     *         No cross-account attachment was found.
+     * @throws EndpointGroupNotFoundException
+     *         The endpoint group that you specified doesn't exist.
+     * @throws ListenerNotFoundException
+     *         The listener that you specified doesn't exist.
      * @throws InternalServiceErrorException
      *         There was an internal error for Global Accelerator.
      * @throws InvalidArgumentException
@@ -1427,6 +1443,10 @@ public interface AWSGlobalAccelerator {
      *         There was an internal error for Global Accelerator.
      * @throws InvalidArgumentException
      *         An argument that you specified is invalid.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
+     * @throws ConflictException
+     *         You can't use both of those options.
      * @sample AWSGlobalAccelerator.UpdateAccelerator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateAccelerator"
      *      target="_top">AWS API Documentation</a>
@@ -1448,6 +1468,8 @@ public interface AWSGlobalAccelerator {
      *         An argument that you specified is invalid.
      * @throws AccessDeniedException
      *         You don't have access permission.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
      * @sample AWSGlobalAccelerator.UpdateAcceleratorAttributes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateAcceleratorAttributes"
      *      target="_top">AWS API Documentation</a>
@@ -1500,6 +1522,10 @@ public interface AWSGlobalAccelerator {
      *         There was an internal error for Global Accelerator.
      * @throws InvalidArgumentException
      *         An argument that you specified is invalid.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
+     * @throws ConflictException
+     *         You can't use both of those options.
      * @sample AWSGlobalAccelerator.UpdateCustomRoutingAccelerator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateCustomRoutingAccelerator"
      *      target="_top">AWS API Documentation</a>
@@ -1521,6 +1547,8 @@ public interface AWSGlobalAccelerator {
      *         An argument that you specified is invalid.
      * @throws AccessDeniedException
      *         You don't have access permission.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
      * @sample AWSGlobalAccelerator.UpdateCustomRoutingAcceleratorAttributes
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateCustomRoutingAcceleratorAttributes"
