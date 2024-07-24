@@ -153,6 +153,34 @@ public class AbstractAWSCleanRoomsAsync extends AbstractAWSCleanRooms implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateConfiguredTableAssociationAnalysisRuleResult> createConfiguredTableAssociationAnalysisRuleAsync(
+            CreateConfiguredTableAssociationAnalysisRuleRequest request) {
+
+        return createConfiguredTableAssociationAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateConfiguredTableAssociationAnalysisRuleResult> createConfiguredTableAssociationAnalysisRuleAsync(
+            CreateConfiguredTableAssociationAnalysisRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateConfiguredTableAssociationAnalysisRuleRequest, CreateConfiguredTableAssociationAnalysisRuleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIdMappingTableResult> createIdMappingTableAsync(CreateIdMappingTableRequest request) {
+
+        return createIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIdMappingTableResult> createIdMappingTableAsync(CreateIdMappingTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateIdMappingTableRequest, CreateIdMappingTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateMembershipResult> createMembershipAsync(CreateMembershipRequest request) {
 
         return createMembershipAsync(request, null);
@@ -258,6 +286,47 @@ public class AbstractAWSCleanRoomsAsync extends AbstractAWSCleanRooms implements
     public java.util.concurrent.Future<DeleteConfiguredTableAssociationResult> deleteConfiguredTableAssociationAsync(
             DeleteConfiguredTableAssociationRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteConfiguredTableAssociationRequest, DeleteConfiguredTableAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteConfiguredTableAssociationAnalysisRuleResult> deleteConfiguredTableAssociationAnalysisRuleAsync(
+            DeleteConfiguredTableAssociationAnalysisRuleRequest request) {
+
+        return deleteConfiguredTableAssociationAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteConfiguredTableAssociationAnalysisRuleResult> deleteConfiguredTableAssociationAnalysisRuleAsync(
+            DeleteConfiguredTableAssociationAnalysisRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteConfiguredTableAssociationAnalysisRuleRequest, DeleteConfiguredTableAssociationAnalysisRuleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdMappingTableResult> deleteIdMappingTableAsync(DeleteIdMappingTableRequest request) {
+
+        return deleteIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdMappingTableResult> deleteIdMappingTableAsync(DeleteIdMappingTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteIdMappingTableRequest, DeleteIdMappingTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdNamespaceAssociationResult> deleteIdNamespaceAssociationAsync(DeleteIdNamespaceAssociationRequest request) {
+
+        return deleteIdNamespaceAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdNamespaceAssociationResult> deleteIdNamespaceAssociationAsync(DeleteIdNamespaceAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteIdNamespaceAssociationRequest, DeleteIdNamespaceAssociationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -427,6 +496,34 @@ public class AbstractAWSCleanRoomsAsync extends AbstractAWSCleanRooms implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetConfiguredTableAssociationAnalysisRuleResult> getConfiguredTableAssociationAnalysisRuleAsync(
+            GetConfiguredTableAssociationAnalysisRuleRequest request) {
+
+        return getConfiguredTableAssociationAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfiguredTableAssociationAnalysisRuleResult> getConfiguredTableAssociationAnalysisRuleAsync(
+            GetConfiguredTableAssociationAnalysisRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetConfiguredTableAssociationAnalysisRuleRequest, GetConfiguredTableAssociationAnalysisRuleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdMappingTableResult> getIdMappingTableAsync(GetIdMappingTableRequest request) {
+
+        return getIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdMappingTableResult> getIdMappingTableAsync(GetIdMappingTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetIdMappingTableRequest, GetIdMappingTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMembershipResult> getMembershipAsync(GetMembershipRequest request) {
 
         return getMembershipAsync(request, null);
@@ -535,6 +632,21 @@ public class AbstractAWSCleanRoomsAsync extends AbstractAWSCleanRooms implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListCollaborationIdNamespaceAssociationsResult> listCollaborationIdNamespaceAssociationsAsync(
+            ListCollaborationIdNamespaceAssociationsRequest request) {
+
+        return listCollaborationIdNamespaceAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCollaborationIdNamespaceAssociationsResult> listCollaborationIdNamespaceAssociationsAsync(
+            ListCollaborationIdNamespaceAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCollaborationIdNamespaceAssociationsRequest, ListCollaborationIdNamespaceAssociationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCollaborationPrivacyBudgetTemplatesResult> listCollaborationPrivacyBudgetTemplatesAsync(
             ListCollaborationPrivacyBudgetTemplatesRequest request) {
 
@@ -616,6 +728,32 @@ public class AbstractAWSCleanRoomsAsync extends AbstractAWSCleanRooms implements
     @Override
     public java.util.concurrent.Future<ListConfiguredTablesResult> listConfiguredTablesAsync(ListConfiguredTablesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListConfiguredTablesRequest, ListConfiguredTablesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdMappingTablesResult> listIdMappingTablesAsync(ListIdMappingTablesRequest request) {
+
+        return listIdMappingTablesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdMappingTablesResult> listIdMappingTablesAsync(ListIdMappingTablesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListIdMappingTablesRequest, ListIdMappingTablesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdNamespaceAssociationsResult> listIdNamespaceAssociationsAsync(ListIdNamespaceAssociationsRequest request) {
+
+        return listIdNamespaceAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdNamespaceAssociationsResult> listIdNamespaceAssociationsAsync(ListIdNamespaceAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListIdNamespaceAssociationsRequest, ListIdNamespaceAssociationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -707,6 +845,19 @@ public class AbstractAWSCleanRoomsAsync extends AbstractAWSCleanRooms implements
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PopulateIdMappingTableResult> populateIdMappingTableAsync(PopulateIdMappingTableRequest request) {
+
+        return populateIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PopulateIdMappingTableResult> populateIdMappingTableAsync(PopulateIdMappingTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<PopulateIdMappingTableRequest, PopulateIdMappingTableResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -843,6 +994,34 @@ public class AbstractAWSCleanRoomsAsync extends AbstractAWSCleanRooms implements
     public java.util.concurrent.Future<UpdateConfiguredTableAssociationResult> updateConfiguredTableAssociationAsync(
             UpdateConfiguredTableAssociationRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateConfiguredTableAssociationRequest, UpdateConfiguredTableAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConfiguredTableAssociationAnalysisRuleResult> updateConfiguredTableAssociationAnalysisRuleAsync(
+            UpdateConfiguredTableAssociationAnalysisRuleRequest request) {
+
+        return updateConfiguredTableAssociationAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConfiguredTableAssociationAnalysisRuleResult> updateConfiguredTableAssociationAnalysisRuleAsync(
+            UpdateConfiguredTableAssociationAnalysisRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateConfiguredTableAssociationAnalysisRuleRequest, UpdateConfiguredTableAssociationAnalysisRuleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdMappingTableResult> updateIdMappingTableAsync(UpdateIdMappingTableRequest request) {
+
+        return updateIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdMappingTableResult> updateIdMappingTableAsync(UpdateIdMappingTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateIdMappingTableRequest, UpdateIdMappingTableResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

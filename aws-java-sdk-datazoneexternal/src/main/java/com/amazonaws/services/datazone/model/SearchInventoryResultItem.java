@@ -36,13 +36,6 @@ public class SearchInventoryResultItem implements Serializable, Cloneable, Struc
     private AssetItem assetItem;
     /**
      * <p>
-     * The data product item included in the search results.
-     * </p>
-     */
-    @Deprecated
-    private DataProductSummary dataProductItem;
-    /**
-     * <p>
      * The glossary item included in the search results.
      * </p>
      */
@@ -91,46 +84,6 @@ public class SearchInventoryResultItem implements Serializable, Cloneable, Struc
 
     public SearchInventoryResultItem withAssetItem(AssetItem assetItem) {
         setAssetItem(assetItem);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The data product item included in the search results.
-     * </p>
-     * 
-     * @param dataProductItem
-     *        The data product item included in the search results.
-     */
-    @Deprecated
-    public void setDataProductItem(DataProductSummary dataProductItem) {
-        this.dataProductItem = dataProductItem;
-    }
-
-    /**
-     * <p>
-     * The data product item included in the search results.
-     * </p>
-     * 
-     * @return The data product item included in the search results.
-     */
-    @Deprecated
-    public DataProductSummary getDataProductItem() {
-        return this.dataProductItem;
-    }
-
-    /**
-     * <p>
-     * The data product item included in the search results.
-     * </p>
-     * 
-     * @param dataProductItem
-     *        The data product item included in the search results.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-    @Deprecated
-    public SearchInventoryResultItem withDataProductItem(DataProductSummary dataProductItem) {
-        setDataProductItem(dataProductItem);
         return this;
     }
 
@@ -228,8 +181,6 @@ public class SearchInventoryResultItem implements Serializable, Cloneable, Struc
         sb.append("{");
         if (getAssetItem() != null)
             sb.append("AssetItem: ").append(getAssetItem()).append(",");
-        if (getDataProductItem() != null)
-            sb.append("DataProductItem: ").append(getDataProductItem()).append(",");
         if (getGlossaryItem() != null)
             sb.append("GlossaryItem: ").append(getGlossaryItem()).append(",");
         if (getGlossaryTermItem() != null)
@@ -252,10 +203,6 @@ public class SearchInventoryResultItem implements Serializable, Cloneable, Struc
             return false;
         if (other.getAssetItem() != null && other.getAssetItem().equals(this.getAssetItem()) == false)
             return false;
-        if (other.getDataProductItem() == null ^ this.getDataProductItem() == null)
-            return false;
-        if (other.getDataProductItem() != null && other.getDataProductItem().equals(this.getDataProductItem()) == false)
-            return false;
         if (other.getGlossaryItem() == null ^ this.getGlossaryItem() == null)
             return false;
         if (other.getGlossaryItem() != null && other.getGlossaryItem().equals(this.getGlossaryItem()) == false)
@@ -273,7 +220,6 @@ public class SearchInventoryResultItem implements Serializable, Cloneable, Struc
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAssetItem() == null) ? 0 : getAssetItem().hashCode());
-        hashCode = prime * hashCode + ((getDataProductItem() == null) ? 0 : getDataProductItem().hashCode());
         hashCode = prime * hashCode + ((getGlossaryItem() == null) ? 0 : getGlossaryItem().hashCode());
         hashCode = prime * hashCode + ((getGlossaryTermItem() == null) ? 0 : getGlossaryTermItem().hashCode());
         return hashCode;

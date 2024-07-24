@@ -39,17 +39,17 @@ public class PutConfiguredAudienceModelPolicyRequest extends com.amazonaws.Amazo
     private String configuredAudienceModelPolicy;
     /**
      * <p>
-     * Use this to prevent unexpected concurrent modification of the policy.
-     * </p>
-     */
-    private String policyExistenceCondition;
-    /**
-     * <p>
      * A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of the
      * policy.
      * </p>
      */
     private String previousPolicyHash;
+    /**
+     * <p>
+     * Use this to prevent unexpected concurrent modification of the policy.
+     * </p>
+     */
+    private String policyExistenceCondition;
 
     /**
      * <p>
@@ -133,6 +133,52 @@ public class PutConfiguredAudienceModelPolicyRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
+     * A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of the
+     * policy.
+     * </p>
+     * 
+     * @param previousPolicyHash
+     *        A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of
+     *        the policy.
+     */
+
+    public void setPreviousPolicyHash(String previousPolicyHash) {
+        this.previousPolicyHash = previousPolicyHash;
+    }
+
+    /**
+     * <p>
+     * A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of the
+     * policy.
+     * </p>
+     * 
+     * @return A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of
+     *         the policy.
+     */
+
+    public String getPreviousPolicyHash() {
+        return this.previousPolicyHash;
+    }
+
+    /**
+     * <p>
+     * A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of the
+     * policy.
+     * </p>
+     * 
+     * @param previousPolicyHash
+     *        A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of
+     *        the policy.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutConfiguredAudienceModelPolicyRequest withPreviousPolicyHash(String previousPolicyHash) {
+        setPreviousPolicyHash(previousPolicyHash);
+        return this;
+    }
+
+    /**
+     * <p>
      * Use this to prevent unexpected concurrent modification of the policy.
      * </p>
      * 
@@ -191,52 +237,6 @@ public class PutConfiguredAudienceModelPolicyRequest extends com.amazonaws.Amazo
     }
 
     /**
-     * <p>
-     * A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of the
-     * policy.
-     * </p>
-     * 
-     * @param previousPolicyHash
-     *        A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of
-     *        the policy.
-     */
-
-    public void setPreviousPolicyHash(String previousPolicyHash) {
-        this.previousPolicyHash = previousPolicyHash;
-    }
-
-    /**
-     * <p>
-     * A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of the
-     * policy.
-     * </p>
-     * 
-     * @return A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of
-     *         the policy.
-     */
-
-    public String getPreviousPolicyHash() {
-        return this.previousPolicyHash;
-    }
-
-    /**
-     * <p>
-     * A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of the
-     * policy.
-     * </p>
-     * 
-     * @param previousPolicyHash
-     *        A cryptographic hash of the contents of the policy used to prevent unexpected concurrent modification of
-     *        the policy.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PutConfiguredAudienceModelPolicyRequest withPreviousPolicyHash(String previousPolicyHash) {
-        setPreviousPolicyHash(previousPolicyHash);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -252,10 +252,10 @@ public class PutConfiguredAudienceModelPolicyRequest extends com.amazonaws.Amazo
             sb.append("ConfiguredAudienceModelArn: ").append(getConfiguredAudienceModelArn()).append(",");
         if (getConfiguredAudienceModelPolicy() != null)
             sb.append("ConfiguredAudienceModelPolicy: ").append(getConfiguredAudienceModelPolicy()).append(",");
-        if (getPolicyExistenceCondition() != null)
-            sb.append("PolicyExistenceCondition: ").append(getPolicyExistenceCondition()).append(",");
         if (getPreviousPolicyHash() != null)
-            sb.append("PreviousPolicyHash: ").append(getPreviousPolicyHash());
+            sb.append("PreviousPolicyHash: ").append(getPreviousPolicyHash()).append(",");
+        if (getPolicyExistenceCondition() != null)
+            sb.append("PolicyExistenceCondition: ").append(getPolicyExistenceCondition());
         sb.append("}");
         return sb.toString();
     }
@@ -279,13 +279,13 @@ public class PutConfiguredAudienceModelPolicyRequest extends com.amazonaws.Amazo
         if (other.getConfiguredAudienceModelPolicy() != null
                 && other.getConfiguredAudienceModelPolicy().equals(this.getConfiguredAudienceModelPolicy()) == false)
             return false;
-        if (other.getPolicyExistenceCondition() == null ^ this.getPolicyExistenceCondition() == null)
-            return false;
-        if (other.getPolicyExistenceCondition() != null && other.getPolicyExistenceCondition().equals(this.getPolicyExistenceCondition()) == false)
-            return false;
         if (other.getPreviousPolicyHash() == null ^ this.getPreviousPolicyHash() == null)
             return false;
         if (other.getPreviousPolicyHash() != null && other.getPreviousPolicyHash().equals(this.getPreviousPolicyHash()) == false)
+            return false;
+        if (other.getPolicyExistenceCondition() == null ^ this.getPolicyExistenceCondition() == null)
+            return false;
+        if (other.getPolicyExistenceCondition() != null && other.getPolicyExistenceCondition().equals(this.getPolicyExistenceCondition()) == false)
             return false;
         return true;
     }
@@ -297,8 +297,8 @@ public class PutConfiguredAudienceModelPolicyRequest extends com.amazonaws.Amazo
 
         hashCode = prime * hashCode + ((getConfiguredAudienceModelArn() == null) ? 0 : getConfiguredAudienceModelArn().hashCode());
         hashCode = prime * hashCode + ((getConfiguredAudienceModelPolicy() == null) ? 0 : getConfiguredAudienceModelPolicy().hashCode());
-        hashCode = prime * hashCode + ((getPolicyExistenceCondition() == null) ? 0 : getPolicyExistenceCondition().hashCode());
         hashCode = prime * hashCode + ((getPreviousPolicyHash() == null) ? 0 : getPreviousPolicyHash().hashCode());
+        hashCode = prime * hashCode + ((getPolicyExistenceCondition() == null) ? 0 : getPolicyExistenceCondition().hashCode());
         return hashCode;
     }
 

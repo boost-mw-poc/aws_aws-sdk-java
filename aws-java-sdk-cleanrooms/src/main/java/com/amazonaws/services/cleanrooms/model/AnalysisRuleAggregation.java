@@ -74,6 +74,17 @@ public class AnalysisRuleAggregation implements Serializable, Cloneable, Structu
      * </p>
      */
     private java.util.List<AggregationConstraint> outputConstraints;
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * <p>
+     * The <code>additionalAnalyses</code> parameter is currently supported for the list analysis rule (
+     * <code>AnalysisRuleList</code>) and the custom analysis rule (<code>AnalysisRuleCustom</code>).
+     * </p>
+     */
+    private String additionalAnalyses;
 
     /**
      * <p>
@@ -650,6 +661,101 @@ public class AnalysisRuleAggregation implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * <p>
+     * The <code>additionalAnalyses</code> parameter is currently supported for the list analysis rule (
+     * <code>AnalysisRuleList</code>) and the custom analysis rule (<code>AnalysisRuleCustom</code>).
+     * </p>
+     * 
+     * @param additionalAnalyses
+     *        An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *        the direct query. </p>
+     *        <p>
+     *        The <code>additionalAnalyses</code> parameter is currently supported for the list analysis rule (
+     *        <code>AnalysisRuleList</code>) and the custom analysis rule (<code>AnalysisRuleCustom</code>).
+     * @see AdditionalAnalyses
+     */
+
+    public void setAdditionalAnalyses(String additionalAnalyses) {
+        this.additionalAnalyses = additionalAnalyses;
+    }
+
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * <p>
+     * The <code>additionalAnalyses</code> parameter is currently supported for the list analysis rule (
+     * <code>AnalysisRuleList</code>) and the custom analysis rule (<code>AnalysisRuleCustom</code>).
+     * </p>
+     * 
+     * @return An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *         the direct query. </p>
+     *         <p>
+     *         The <code>additionalAnalyses</code> parameter is currently supported for the list analysis rule (
+     *         <code>AnalysisRuleList</code>) and the custom analysis rule (<code>AnalysisRuleCustom</code>).
+     * @see AdditionalAnalyses
+     */
+
+    public String getAdditionalAnalyses() {
+        return this.additionalAnalyses;
+    }
+
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * <p>
+     * The <code>additionalAnalyses</code> parameter is currently supported for the list analysis rule (
+     * <code>AnalysisRuleList</code>) and the custom analysis rule (<code>AnalysisRuleCustom</code>).
+     * </p>
+     * 
+     * @param additionalAnalyses
+     *        An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *        the direct query. </p>
+     *        <p>
+     *        The <code>additionalAnalyses</code> parameter is currently supported for the list analysis rule (
+     *        <code>AnalysisRuleList</code>) and the custom analysis rule (<code>AnalysisRuleCustom</code>).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AdditionalAnalyses
+     */
+
+    public AnalysisRuleAggregation withAdditionalAnalyses(String additionalAnalyses) {
+        setAdditionalAnalyses(additionalAnalyses);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * <p>
+     * The <code>additionalAnalyses</code> parameter is currently supported for the list analysis rule (
+     * <code>AnalysisRuleList</code>) and the custom analysis rule (<code>AnalysisRuleCustom</code>).
+     * </p>
+     * 
+     * @param additionalAnalyses
+     *        An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *        the direct query. </p>
+     *        <p>
+     *        The <code>additionalAnalyses</code> parameter is currently supported for the list analysis rule (
+     *        <code>AnalysisRuleList</code>) and the custom analysis rule (<code>AnalysisRuleCustom</code>).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AdditionalAnalyses
+     */
+
+    public AnalysisRuleAggregation withAdditionalAnalyses(AdditionalAnalyses additionalAnalyses) {
+        this.additionalAnalyses = additionalAnalyses.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -674,7 +780,9 @@ public class AnalysisRuleAggregation implements Serializable, Cloneable, Structu
         if (getScalarFunctions() != null)
             sb.append("ScalarFunctions: ").append(getScalarFunctions()).append(",");
         if (getOutputConstraints() != null)
-            sb.append("OutputConstraints: ").append(getOutputConstraints());
+            sb.append("OutputConstraints: ").append(getOutputConstraints()).append(",");
+        if (getAdditionalAnalyses() != null)
+            sb.append("AdditionalAnalyses: ").append(getAdditionalAnalyses());
         sb.append("}");
         return sb.toString();
     }
@@ -717,6 +825,10 @@ public class AnalysisRuleAggregation implements Serializable, Cloneable, Structu
             return false;
         if (other.getOutputConstraints() != null && other.getOutputConstraints().equals(this.getOutputConstraints()) == false)
             return false;
+        if (other.getAdditionalAnalyses() == null ^ this.getAdditionalAnalyses() == null)
+            return false;
+        if (other.getAdditionalAnalyses() != null && other.getAdditionalAnalyses().equals(this.getAdditionalAnalyses()) == false)
+            return false;
         return true;
     }
 
@@ -732,6 +844,7 @@ public class AnalysisRuleAggregation implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getDimensionColumns() == null) ? 0 : getDimensionColumns().hashCode());
         hashCode = prime * hashCode + ((getScalarFunctions() == null) ? 0 : getScalarFunctions().hashCode());
         hashCode = prime * hashCode + ((getOutputConstraints() == null) ? 0 : getOutputConstraints().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalAnalyses() == null) ? 0 : getAdditionalAnalyses().hashCode());
         return hashCode;
     }
 

@@ -24,7 +24,8 @@ public enum RealTimeContactAnalysisSegmentType {
     Categories("Categories"),
     Issues("Issues"),
     Event("Event"),
-    Attachments("Attachments");
+    Attachments("Attachments"),
+    PostContactSummary("PostContactSummary");
 
     private String value;
 

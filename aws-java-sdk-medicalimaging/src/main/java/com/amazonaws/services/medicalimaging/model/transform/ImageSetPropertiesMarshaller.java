@@ -43,6 +43,8 @@ public class ImageSetPropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deletedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> MESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("message").build();
+    private static final MarshallingInfo<StructuredPojo> OVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("overrides").build();
 
     private static final ImageSetPropertiesMarshaller instance = new ImageSetPropertiesMarshaller();
 
@@ -68,6 +70,7 @@ public class ImageSetPropertiesMarshaller {
             protocolMarshaller.marshall(imageSetProperties.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(imageSetProperties.getDeletedAt(), DELETEDAT_BINDING);
             protocolMarshaller.marshall(imageSetProperties.getMessage(), MESSAGE_BINDING);
+            protocolMarshaller.marshall(imageSetProperties.getOverrides(), OVERRIDES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

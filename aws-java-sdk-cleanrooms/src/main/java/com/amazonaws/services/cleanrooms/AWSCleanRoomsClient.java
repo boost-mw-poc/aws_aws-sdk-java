@@ -784,6 +784,147 @@ public class AWSCleanRoomsClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Creates a new analysis rule for an associated configured table.
+     * </p>
+     * 
+     * @param createConfiguredTableAssociationAnalysisRuleRequest
+     * @return Result of the CreateConfiguredTableAssociationAnalysisRule operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.CreateConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateConfiguredTableAssociationAnalysisRuleResult createConfiguredTableAssociationAnalysisRule(
+            CreateConfiguredTableAssociationAnalysisRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateConfiguredTableAssociationAnalysisRule(request);
+    }
+
+    @SdkInternalApi
+    final CreateConfiguredTableAssociationAnalysisRuleResult executeCreateConfiguredTableAssociationAnalysisRule(
+            CreateConfiguredTableAssociationAnalysisRuleRequest createConfiguredTableAssociationAnalysisRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createConfiguredTableAssociationAnalysisRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateConfiguredTableAssociationAnalysisRuleRequest> request = null;
+        Response<CreateConfiguredTableAssociationAnalysisRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateConfiguredTableAssociationAnalysisRuleRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createConfiguredTableAssociationAnalysisRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateConfiguredTableAssociationAnalysisRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateConfiguredTableAssociationAnalysisRuleResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreateConfiguredTableAssociationAnalysisRuleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an ID mapping table.
+     * </p>
+     * 
+     * @param createIdMappingTableRequest
+     * @return Result of the CreateIdMappingTable operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         Request denied because service quota has been exceeded.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.CreateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateIdMappingTableResult createIdMappingTable(CreateIdMappingTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateIdMappingTable(request);
+    }
+
+    @SdkInternalApi
+    final CreateIdMappingTableResult executeCreateIdMappingTable(CreateIdMappingTableRequest createIdMappingTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createIdMappingTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateIdMappingTableRequest> request = null;
+        Response<CreateIdMappingTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateIdMappingTableRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createIdMappingTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateIdMappingTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateIdMappingTableResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateIdMappingTableResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a membership for a specific collaboration identifier and joins the collaboration.
      * </p>
      * 
@@ -1318,6 +1459,210 @@ public class AWSCleanRoomsClient extends AmazonWebServiceClient implements AWSCl
             HttpResponseHandler<AmazonWebServiceResponse<DeleteConfiguredTableAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeleteConfiguredTableAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param deleteConfiguredTableAssociationAnalysisRuleRequest
+     * @return Result of the DeleteConfiguredTableAssociationAnalysisRule operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.DeleteConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteConfiguredTableAssociationAnalysisRuleResult deleteConfiguredTableAssociationAnalysisRule(
+            DeleteConfiguredTableAssociationAnalysisRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteConfiguredTableAssociationAnalysisRule(request);
+    }
+
+    @SdkInternalApi
+    final DeleteConfiguredTableAssociationAnalysisRuleResult executeDeleteConfiguredTableAssociationAnalysisRule(
+            DeleteConfiguredTableAssociationAnalysisRuleRequest deleteConfiguredTableAssociationAnalysisRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteConfiguredTableAssociationAnalysisRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteConfiguredTableAssociationAnalysisRuleRequest> request = null;
+        Response<DeleteConfiguredTableAssociationAnalysisRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteConfiguredTableAssociationAnalysisRuleRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteConfiguredTableAssociationAnalysisRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteConfiguredTableAssociationAnalysisRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteConfiguredTableAssociationAnalysisRuleResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DeleteConfiguredTableAssociationAnalysisRuleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an ID mapping table.
+     * </p>
+     * 
+     * @param deleteIdMappingTableRequest
+     * @return Result of the DeleteIdMappingTable operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.DeleteIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteIdMappingTableResult deleteIdMappingTable(DeleteIdMappingTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIdMappingTable(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIdMappingTableResult executeDeleteIdMappingTable(DeleteIdMappingTableRequest deleteIdMappingTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIdMappingTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIdMappingTableRequest> request = null;
+        Response<DeleteIdMappingTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIdMappingTableRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteIdMappingTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIdMappingTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteIdMappingTableResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteIdMappingTableResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an ID namespace association.
+     * </p>
+     * 
+     * @param deleteIdNamespaceAssociationRequest
+     * @return Result of the DeleteIdNamespaceAssociation operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.DeleteIdNamespaceAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteIdNamespaceAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteIdNamespaceAssociationResult deleteIdNamespaceAssociation(DeleteIdNamespaceAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIdNamespaceAssociation(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIdNamespaceAssociationResult executeDeleteIdNamespaceAssociation(DeleteIdNamespaceAssociationRequest deleteIdNamespaceAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIdNamespaceAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIdNamespaceAssociationRequest> request = null;
+        Response<DeleteIdNamespaceAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIdNamespaceAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteIdNamespaceAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIdNamespaceAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteIdNamespaceAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteIdNamespaceAssociationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2134,6 +2479,140 @@ public class AWSCleanRoomsClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Retrieves the analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param getConfiguredTableAssociationAnalysisRuleRequest
+     * @return Result of the GetConfiguredTableAssociationAnalysisRule operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.GetConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetConfiguredTableAssociationAnalysisRuleResult getConfiguredTableAssociationAnalysisRule(GetConfiguredTableAssociationAnalysisRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetConfiguredTableAssociationAnalysisRule(request);
+    }
+
+    @SdkInternalApi
+    final GetConfiguredTableAssociationAnalysisRuleResult executeGetConfiguredTableAssociationAnalysisRule(
+            GetConfiguredTableAssociationAnalysisRuleRequest getConfiguredTableAssociationAnalysisRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getConfiguredTableAssociationAnalysisRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetConfiguredTableAssociationAnalysisRuleRequest> request = null;
+        Response<GetConfiguredTableAssociationAnalysisRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetConfiguredTableAssociationAnalysisRuleRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getConfiguredTableAssociationAnalysisRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetConfiguredTableAssociationAnalysisRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetConfiguredTableAssociationAnalysisRuleResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetConfiguredTableAssociationAnalysisRuleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves an ID mapping table.
+     * </p>
+     * 
+     * @param getIdMappingTableRequest
+     * @return Result of the GetIdMappingTable operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.GetIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetIdMappingTable" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetIdMappingTableResult getIdMappingTable(GetIdMappingTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIdMappingTable(request);
+    }
+
+    @SdkInternalApi
+    final GetIdMappingTableResult executeGetIdMappingTable(GetIdMappingTableRequest getIdMappingTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIdMappingTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIdMappingTableRequest> request = null;
+        Response<GetIdMappingTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIdMappingTableRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getIdMappingTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIdMappingTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetIdMappingTableResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetIdMappingTableResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves a specified membership for an identifier.
      * </p>
      * 
@@ -2666,6 +3145,75 @@ public class AWSCleanRoomsClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Returns a list of the ID namespace associations in a collaboration.
+     * </p>
+     * 
+     * @param listCollaborationIdNamespaceAssociationsRequest
+     * @return Result of the ListCollaborationIdNamespaceAssociations operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.ListCollaborationIdNamespaceAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListCollaborationIdNamespaceAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListCollaborationIdNamespaceAssociationsResult listCollaborationIdNamespaceAssociations(ListCollaborationIdNamespaceAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCollaborationIdNamespaceAssociations(request);
+    }
+
+    @SdkInternalApi
+    final ListCollaborationIdNamespaceAssociationsResult executeListCollaborationIdNamespaceAssociations(
+            ListCollaborationIdNamespaceAssociationsRequest listCollaborationIdNamespaceAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCollaborationIdNamespaceAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCollaborationIdNamespaceAssociationsRequest> request = null;
+        Response<ListCollaborationIdNamespaceAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCollaborationIdNamespaceAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listCollaborationIdNamespaceAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCollaborationIdNamespaceAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCollaborationIdNamespaceAssociationsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListCollaborationIdNamespaceAssociationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns an array that summarizes each privacy budget template in a specified collaboration.
      * </p>
      * 
@@ -3055,6 +3603,138 @@ public class AWSCleanRoomsClient extends AmazonWebServiceClient implements AWSCl
 
             HttpResponseHandler<AmazonWebServiceResponse<ListConfiguredTablesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListConfiguredTablesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of ID mapping tables.
+     * </p>
+     * 
+     * @param listIdMappingTablesRequest
+     * @return Result of the ListIdMappingTables operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.ListIdMappingTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListIdMappingTables" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListIdMappingTablesResult listIdMappingTables(ListIdMappingTablesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIdMappingTables(request);
+    }
+
+    @SdkInternalApi
+    final ListIdMappingTablesResult executeListIdMappingTables(ListIdMappingTablesRequest listIdMappingTablesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIdMappingTablesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIdMappingTablesRequest> request = null;
+        Response<ListIdMappingTablesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIdMappingTablesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listIdMappingTablesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIdMappingTables");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIdMappingTablesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListIdMappingTablesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of ID namespace associations.
+     * </p>
+     * 
+     * @param listIdNamespaceAssociationsRequest
+     * @return Result of the ListIdNamespaceAssociations operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.ListIdNamespaceAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListIdNamespaceAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListIdNamespaceAssociationsResult listIdNamespaceAssociations(ListIdNamespaceAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIdNamespaceAssociations(request);
+    }
+
+    @SdkInternalApi
+    final ListIdNamespaceAssociationsResult executeListIdNamespaceAssociations(ListIdNamespaceAssociationsRequest listIdNamespaceAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIdNamespaceAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIdNamespaceAssociationsRequest> request = null;
+        Response<ListIdNamespaceAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIdNamespaceAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listIdNamespaceAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIdNamespaceAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIdNamespaceAssociationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListIdNamespaceAssociationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3504,6 +4184,74 @@ public class AWSCleanRoomsClient extends AmazonWebServiceClient implements AWSCl
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Defines the information that's necessary to populate an ID mapping table.
+     * </p>
+     * 
+     * @param populateIdMappingTableRequest
+     * @return Result of the PopulateIdMappingTable operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.PopulateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/PopulateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PopulateIdMappingTableResult populateIdMappingTable(PopulateIdMappingTableRequest request) {
+        request = beforeClientExecution(request);
+        return executePopulateIdMappingTable(request);
+    }
+
+    @SdkInternalApi
+    final PopulateIdMappingTableResult executePopulateIdMappingTable(PopulateIdMappingTableRequest populateIdMappingTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(populateIdMappingTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PopulateIdMappingTableRequest> request = null;
+        Response<PopulateIdMappingTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PopulateIdMappingTableRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(populateIdMappingTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PopulateIdMappingTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PopulateIdMappingTableResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PopulateIdMappingTableResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4161,6 +4909,143 @@ public class AWSCleanRoomsClient extends AmazonWebServiceClient implements AWSCl
             HttpResponseHandler<AmazonWebServiceResponse<UpdateConfiguredTableAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateConfiguredTableAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param updateConfiguredTableAssociationAnalysisRuleRequest
+     * @return Result of the UpdateConfiguredTableAssociationAnalysisRule operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.UpdateConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateConfiguredTableAssociationAnalysisRuleResult updateConfiguredTableAssociationAnalysisRule(
+            UpdateConfiguredTableAssociationAnalysisRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateConfiguredTableAssociationAnalysisRule(request);
+    }
+
+    @SdkInternalApi
+    final UpdateConfiguredTableAssociationAnalysisRuleResult executeUpdateConfiguredTableAssociationAnalysisRule(
+            UpdateConfiguredTableAssociationAnalysisRuleRequest updateConfiguredTableAssociationAnalysisRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateConfiguredTableAssociationAnalysisRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateConfiguredTableAssociationAnalysisRuleRequest> request = null;
+        Response<UpdateConfiguredTableAssociationAnalysisRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateConfiguredTableAssociationAnalysisRuleRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateConfiguredTableAssociationAnalysisRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateConfiguredTableAssociationAnalysisRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateConfiguredTableAssociationAnalysisRuleResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateConfiguredTableAssociationAnalysisRuleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides the details that are necessary to update an ID mapping table.
+     * </p>
+     * 
+     * @param updateIdMappingTableRequest
+     * @return Result of the UpdateIdMappingTable operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.UpdateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateIdMappingTableResult updateIdMappingTable(UpdateIdMappingTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateIdMappingTable(request);
+    }
+
+    @SdkInternalApi
+    final UpdateIdMappingTableResult executeUpdateIdMappingTable(UpdateIdMappingTableRequest updateIdMappingTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateIdMappingTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateIdMappingTableRequest> request = null;
+        Response<UpdateIdMappingTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateIdMappingTableRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateIdMappingTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CleanRooms");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateIdMappingTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateIdMappingTableResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateIdMappingTableResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

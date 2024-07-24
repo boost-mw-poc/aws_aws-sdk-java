@@ -34,6 +34,13 @@ public class CopySourceImageSetInformation implements Serializable, Cloneable, S
      * </p>
      */
     private String latestVersionId;
+    /**
+     * <p>
+     * Contains <code>MetadataCopies</code> structure and wraps information related to specific copy use cases. For
+     * example, when copying subsets.
+     * </p>
+     */
+    private MetadataCopies dICOMCopies;
 
     /**
      * <p>
@@ -76,6 +83,52 @@ public class CopySourceImageSetInformation implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * Contains <code>MetadataCopies</code> structure and wraps information related to specific copy use cases. For
+     * example, when copying subsets.
+     * </p>
+     * 
+     * @param dICOMCopies
+     *        Contains <code>MetadataCopies</code> structure and wraps information related to specific copy use cases.
+     *        For example, when copying subsets.
+     */
+
+    public void setDICOMCopies(MetadataCopies dICOMCopies) {
+        this.dICOMCopies = dICOMCopies;
+    }
+
+    /**
+     * <p>
+     * Contains <code>MetadataCopies</code> structure and wraps information related to specific copy use cases. For
+     * example, when copying subsets.
+     * </p>
+     * 
+     * @return Contains <code>MetadataCopies</code> structure and wraps information related to specific copy use cases.
+     *         For example, when copying subsets.
+     */
+
+    public MetadataCopies getDICOMCopies() {
+        return this.dICOMCopies;
+    }
+
+    /**
+     * <p>
+     * Contains <code>MetadataCopies</code> structure and wraps information related to specific copy use cases. For
+     * example, when copying subsets.
+     * </p>
+     * 
+     * @param dICOMCopies
+     *        Contains <code>MetadataCopies</code> structure and wraps information related to specific copy use cases.
+     *        For example, when copying subsets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CopySourceImageSetInformation withDICOMCopies(MetadataCopies dICOMCopies) {
+        setDICOMCopies(dICOMCopies);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +141,9 @@ public class CopySourceImageSetInformation implements Serializable, Cloneable, S
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getLatestVersionId() != null)
-            sb.append("LatestVersionId: ").append(getLatestVersionId());
+            sb.append("LatestVersionId: ").append(getLatestVersionId()).append(",");
+        if (getDICOMCopies() != null)
+            sb.append("DICOMCopies: ").append(getDICOMCopies());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +162,10 @@ public class CopySourceImageSetInformation implements Serializable, Cloneable, S
             return false;
         if (other.getLatestVersionId() != null && other.getLatestVersionId().equals(this.getLatestVersionId()) == false)
             return false;
+        if (other.getDICOMCopies() == null ^ this.getDICOMCopies() == null)
+            return false;
+        if (other.getDICOMCopies() != null && other.getDICOMCopies().equals(this.getDICOMCopies()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +175,7 @@ public class CopySourceImageSetInformation implements Serializable, Cloneable, S
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getLatestVersionId() == null) ? 0 : getLatestVersionId().hashCode());
+        hashCode = prime * hashCode + ((getDICOMCopies() == null) ? 0 : getDICOMCopies().hashCode());
         return hashCode;
     }
 

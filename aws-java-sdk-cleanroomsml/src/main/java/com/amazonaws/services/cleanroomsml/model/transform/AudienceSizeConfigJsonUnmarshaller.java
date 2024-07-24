@@ -48,15 +48,15 @@ public class AudienceSizeConfigJsonUnmarshaller implements Unmarshaller<Audience
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("audienceSizeType", targetDepth)) {
+                    context.nextToken();
+                    audienceSizeConfig.setAudienceSizeType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("audienceSizeBins", targetDepth)) {
                     context.nextToken();
                     audienceSizeConfig.setAudienceSizeBins(new ListUnmarshaller<Integer>(context.getUnmarshaller(Integer.class))
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("audienceSizeType", targetDepth)) {
-                    context.nextToken();
-                    audienceSizeConfig.setAudienceSizeType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

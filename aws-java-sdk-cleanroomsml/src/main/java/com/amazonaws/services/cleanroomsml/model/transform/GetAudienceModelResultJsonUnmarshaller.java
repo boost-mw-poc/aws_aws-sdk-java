@@ -48,25 +48,33 @@ public class GetAudienceModelResultJsonUnmarshaller implements Unmarshaller<GetA
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("audienceModelArn", targetDepth)) {
-                    context.nextToken();
-                    getAudienceModelResult.setAudienceModelArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("createTime", targetDepth)) {
                     context.nextToken();
                     getAudienceModelResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("description", targetDepth)) {
+                if (context.testExpression("updateTime", targetDepth)) {
                     context.nextToken();
-                    getAudienceModelResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                    getAudienceModelResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("kmsKeyArn", targetDepth)) {
+                if (context.testExpression("trainingDataStartTime", targetDepth)) {
                     context.nextToken();
-                    getAudienceModelResult.setKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    getAudienceModelResult.setTrainingDataStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("trainingDataEndTime", targetDepth)) {
+                    context.nextToken();
+                    getAudienceModelResult.setTrainingDataEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("audienceModelArn", targetDepth)) {
+                    context.nextToken();
+                    getAudienceModelResult.setAudienceModelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     getAudienceModelResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("trainingDatasetArn", targetDepth)) {
+                    context.nextToken();
+                    getAudienceModelResult.setTrainingDatasetArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
@@ -76,26 +84,18 @@ public class GetAudienceModelResultJsonUnmarshaller implements Unmarshaller<GetA
                     context.nextToken();
                     getAudienceModelResult.setStatusDetails(StatusDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("kmsKeyArn", targetDepth)) {
+                    context.nextToken();
+                    getAudienceModelResult.setKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     getAudienceModelResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
-                if (context.testExpression("trainingDataEndTime", targetDepth)) {
+                if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
-                    getAudienceModelResult.setTrainingDataEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("trainingDataStartTime", targetDepth)) {
-                    context.nextToken();
-                    getAudienceModelResult.setTrainingDataStartTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("trainingDatasetArn", targetDepth)) {
-                    context.nextToken();
-                    getAudienceModelResult.setTrainingDatasetArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("updateTime", targetDepth)) {
-                    context.nextToken();
-                    getAudienceModelResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    getAudienceModelResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

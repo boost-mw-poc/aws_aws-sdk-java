@@ -48,41 +48,41 @@ public class AudienceGenerationJobSummaryJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("audienceGenerationJobArn", targetDepth)) {
-                    context.nextToken();
-                    audienceGenerationJobSummary.setAudienceGenerationJobArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("collaborationId", targetDepth)) {
-                    context.nextToken();
-                    audienceGenerationJobSummary.setCollaborationId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("configuredAudienceModelArn", targetDepth)) {
-                    context.nextToken();
-                    audienceGenerationJobSummary.setConfiguredAudienceModelArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("createTime", targetDepth)) {
                     context.nextToken();
                     audienceGenerationJobSummary.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("description", targetDepth)) {
+                if (context.testExpression("updateTime", targetDepth)) {
                     context.nextToken();
-                    audienceGenerationJobSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                    audienceGenerationJobSummary.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("audienceGenerationJobArn", targetDepth)) {
+                    context.nextToken();
+                    audienceGenerationJobSummary.setAudienceGenerationJobArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     audienceGenerationJobSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("startedBy", targetDepth)) {
+                if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
-                    audienceGenerationJobSummary.setStartedBy(context.getUnmarshaller(String.class).unmarshall(context));
+                    audienceGenerationJobSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     audienceGenerationJobSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("updateTime", targetDepth)) {
+                if (context.testExpression("configuredAudienceModelArn", targetDepth)) {
                     context.nextToken();
-                    audienceGenerationJobSummary.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    audienceGenerationJobSummary.setConfiguredAudienceModelArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("collaborationId", targetDepth)) {
+                    context.nextToken();
+                    audienceGenerationJobSummary.setCollaborationId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("startedBy", targetDepth)) {
+                    context.nextToken();
+                    audienceGenerationJobSummary.setStartedBy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

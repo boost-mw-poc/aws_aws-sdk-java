@@ -40,8 +40,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
     private String eventDestinationName;
     /**
      * <p>
-     * An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs every
-     * event type.
+     * An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging SMS and
+     * Voice logs every event type.
      * </p>
      * <note>
      * <p>
@@ -58,7 +58,7 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
     private CloudWatchLogsDestination cloudWatchLogsDestination;
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Amazon Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Amazon Data Firehose.
      * </p>
      */
     private KinesisFirehoseDestination kinesisFirehoseDestination;
@@ -165,8 +165,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs every
-     * event type.
+     * An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging SMS and
+     * Voice logs every event type.
      * </p>
      * <note>
      * <p>
@@ -174,8 +174,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * </note>
      * 
-     * @return An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs
-     *         every event type.</p> <note>
+     * @return An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging
+     *         SMS and Voice logs every event type.</p> <note>
      *         <p>
      *         The <code>TEXT_SENT</code> event type is not supported.
      *         </p>
@@ -188,8 +188,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs every
-     * event type.
+     * An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging SMS and
+     * Voice logs every event type.
      * </p>
      * <note>
      * <p>
@@ -198,8 +198,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
      * </note>
      * 
      * @param matchingEventTypes
-     *        An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs
-     *        every event type.</p> <note>
+     *        An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging
+     *        SMS and Voice logs every event type.</p> <note>
      *        <p>
      *        The <code>TEXT_SENT</code> event type is not supported.
      *        </p>
@@ -217,8 +217,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs every
-     * event type.
+     * An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging SMS and
+     * Voice logs every event type.
      * </p>
      * <note>
      * <p>
@@ -232,8 +232,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param matchingEventTypes
-     *        An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs
-     *        every event type.</p> <note>
+     *        An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging
+     *        SMS and Voice logs every event type.</p> <note>
      *        <p>
      *        The <code>TEXT_SENT</code> event type is not supported.
      *        </p>
@@ -253,8 +253,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs every
-     * event type.
+     * An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging SMS and
+     * Voice logs every event type.
      * </p>
      * <note>
      * <p>
@@ -263,8 +263,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
      * </note>
      * 
      * @param matchingEventTypes
-     *        An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs
-     *        every event type.</p> <note>
+     *        An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging
+     *        SMS and Voice logs every event type.</p> <note>
      *        <p>
      *        The <code>TEXT_SENT</code> event type is not supported.
      *        </p>
@@ -279,8 +279,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs every
-     * event type.
+     * An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging SMS and
+     * Voice logs every event type.
      * </p>
      * <note>
      * <p>
@@ -289,8 +289,8 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
      * </note>
      * 
      * @param matchingEventTypes
-     *        An array of event types that determine which events to log. If "ALL" is used, then Amazon Pinpoint logs
-     *        every event type.</p> <note>
+     *        An array of event types that determine which events to log. If "ALL" is used, then AWS End User Messaging
+     *        SMS and Voice logs every event type.</p> <note>
      *        <p>
      *        The <code>TEXT_SENT</code> event type is not supported.
      *        </p>
@@ -353,12 +353,11 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Amazon Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Amazon Data Firehose.
      * </p>
      * 
      * @param kinesisFirehoseDestination
-     *        An object that contains information about an event destination for logging to Amazon Kinesis Data
-     *        Firehose.
+     *        An object that contains information about an event destination for logging to Amazon Data Firehose.
      */
 
     public void setKinesisFirehoseDestination(KinesisFirehoseDestination kinesisFirehoseDestination) {
@@ -367,11 +366,10 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Amazon Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Amazon Data Firehose.
      * </p>
      * 
-     * @return An object that contains information about an event destination for logging to Amazon Kinesis Data
-     *         Firehose.
+     * @return An object that contains information about an event destination for logging to Amazon Data Firehose.
      */
 
     public KinesisFirehoseDestination getKinesisFirehoseDestination() {
@@ -380,12 +378,11 @@ public class CreateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Amazon Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Amazon Data Firehose.
      * </p>
      * 
      * @param kinesisFirehoseDestination
-     *        An object that contains information about an event destination for logging to Amazon Kinesis Data
-     *        Firehose.
+     *        An object that contains information about an event destination for logging to Amazon Data Firehose.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

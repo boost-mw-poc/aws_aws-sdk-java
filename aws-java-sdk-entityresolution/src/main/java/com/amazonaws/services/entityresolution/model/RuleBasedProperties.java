@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object which defines the list of matching rules to run and has a field <code>Rules</code>, which is a list of rule
- * objects.
+ * An object which defines the list of matching rules to run in a matching workflow. RuleBasedProperties contain a
+ * <code>Rules</code> field, which is a list of rule objects.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/RuleBasedProperties"
@@ -32,15 +32,33 @@ public class RuleBasedProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the
-     * AttributeMatchingModel. When choosing <code>MANY_TO_MANY</code>, the system can match attributes across the
-     * sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A and the
-     * value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the
-     * <code>Email</code> type. When choosing <code>ONE_TO_ONE</code> ,the system can only match if the sub-types are
-     * exact matches. For example, only when the value of the <code>Email</code> field of Profile A and the value of the
-     * <code>Email</code> field of Profile B matches, the two profiles are matched on the <code>Email</code> type.
+     * <code>attributeMatchingModel</code>.
+     * </p>
+     * <p>
+     * If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an attribute
+     * type. For example, if the value of the <code>Email</code> field of Profile A and the value of
+     * <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the <code>Email</code>
+     * attribute type.
+     * </p>
+     * <p>
+     * If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact match.
+     * For example, for the <code>Email</code> attribute type, the system will only consider it a match if the value of
+     * the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field of Profile B.
      * </p>
      */
     private String attributeMatchingModel;
+    /**
+     * <p>
+     * An indicator of whether to generate IDs and index the data or not.
+     * </p>
+     * <p>
+     * If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.
+     * </p>
+     * <p>
+     * If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.
+     * </p>
+     */
+    private String matchPurpose;
     /**
      * <p>
      * A list of <code>Rule</code> objects, each of which have fields <code>RuleName</code> and
@@ -52,23 +70,34 @@ public class RuleBasedProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the
-     * AttributeMatchingModel. When choosing <code>MANY_TO_MANY</code>, the system can match attributes across the
-     * sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A and the
-     * value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the
-     * <code>Email</code> type. When choosing <code>ONE_TO_ONE</code> ,the system can only match if the sub-types are
-     * exact matches. For example, only when the value of the <code>Email</code> field of Profile A and the value of the
-     * <code>Email</code> field of Profile B matches, the two profiles are matched on the <code>Email</code> type.
+     * <code>attributeMatchingModel</code>.
+     * </p>
+     * <p>
+     * If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an attribute
+     * type. For example, if the value of the <code>Email</code> field of Profile A and the value of
+     * <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the <code>Email</code>
+     * attribute type.
+     * </p>
+     * <p>
+     * If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact match.
+     * For example, for the <code>Email</code> attribute type, the system will only consider it a match if the value of
+     * the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field of Profile B.
      * </p>
      * 
      * @param attributeMatchingModel
      *        The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the
-     *        AttributeMatchingModel. When choosing <code>MANY_TO_MANY</code>, the system can match attributes across
-     *        the sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A
-     *        and the value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on
-     *        the <code>Email</code> type. When choosing <code>ONE_TO_ONE</code> ,the system can only match if the
-     *        sub-types are exact matches. For example, only when the value of the <code>Email</code> field of Profile A
-     *        and the value of the <code>Email</code> field of Profile B matches, the two profiles are matched on the
-     *        <code>Email</code> type.
+     *        <code>attributeMatchingModel</code>. </p>
+     *        <p>
+     *        If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an
+     *        attribute type. For example, if the value of the <code>Email</code> field of Profile A and the value of
+     *        <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the
+     *        <code>Email</code> attribute type.
+     *        </p>
+     *        <p>
+     *        If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact
+     *        match. For example, for the <code>Email</code> attribute type, the system will only consider it a match if
+     *        the value of the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field
+     *        of Profile B.
      * @see AttributeMatchingModel
      */
 
@@ -79,22 +108,33 @@ public class RuleBasedProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the
-     * AttributeMatchingModel. When choosing <code>MANY_TO_MANY</code>, the system can match attributes across the
-     * sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A and the
-     * value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the
-     * <code>Email</code> type. When choosing <code>ONE_TO_ONE</code> ,the system can only match if the sub-types are
-     * exact matches. For example, only when the value of the <code>Email</code> field of Profile A and the value of the
-     * <code>Email</code> field of Profile B matches, the two profiles are matched on the <code>Email</code> type.
+     * <code>attributeMatchingModel</code>.
+     * </p>
+     * <p>
+     * If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an attribute
+     * type. For example, if the value of the <code>Email</code> field of Profile A and the value of
+     * <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the <code>Email</code>
+     * attribute type.
+     * </p>
+     * <p>
+     * If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact match.
+     * For example, for the <code>Email</code> attribute type, the system will only consider it a match if the value of
+     * the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field of Profile B.
      * </p>
      * 
      * @return The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the
-     *         AttributeMatchingModel. When choosing <code>MANY_TO_MANY</code>, the system can match attributes across
-     *         the sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile
-     *         A and the value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on
-     *         the <code>Email</code> type. When choosing <code>ONE_TO_ONE</code> ,the system can only match if the
-     *         sub-types are exact matches. For example, only when the value of the <code>Email</code> field of Profile
-     *         A and the value of the <code>Email</code> field of Profile B matches, the two profiles are matched on the
-     *         <code>Email</code> type.
+     *         <code>attributeMatchingModel</code>. </p>
+     *         <p>
+     *         If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an
+     *         attribute type. For example, if the value of the <code>Email</code> field of Profile A and the value of
+     *         <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the
+     *         <code>Email</code> attribute type.
+     *         </p>
+     *         <p>
+     *         If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact
+     *         match. For example, for the <code>Email</code> attribute type, the system will only consider it a match
+     *         if the value of the <code>Email</code> field of Profile A matches the value of the <code>Email</code>
+     *         field of Profile B.
      * @see AttributeMatchingModel
      */
 
@@ -105,23 +145,34 @@ public class RuleBasedProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the
-     * AttributeMatchingModel. When choosing <code>MANY_TO_MANY</code>, the system can match attributes across the
-     * sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A and the
-     * value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the
-     * <code>Email</code> type. When choosing <code>ONE_TO_ONE</code> ,the system can only match if the sub-types are
-     * exact matches. For example, only when the value of the <code>Email</code> field of Profile A and the value of the
-     * <code>Email</code> field of Profile B matches, the two profiles are matched on the <code>Email</code> type.
+     * <code>attributeMatchingModel</code>.
+     * </p>
+     * <p>
+     * If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an attribute
+     * type. For example, if the value of the <code>Email</code> field of Profile A and the value of
+     * <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the <code>Email</code>
+     * attribute type.
+     * </p>
+     * <p>
+     * If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact match.
+     * For example, for the <code>Email</code> attribute type, the system will only consider it a match if the value of
+     * the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field of Profile B.
      * </p>
      * 
      * @param attributeMatchingModel
      *        The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the
-     *        AttributeMatchingModel. When choosing <code>MANY_TO_MANY</code>, the system can match attributes across
-     *        the sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A
-     *        and the value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on
-     *        the <code>Email</code> type. When choosing <code>ONE_TO_ONE</code> ,the system can only match if the
-     *        sub-types are exact matches. For example, only when the value of the <code>Email</code> field of Profile A
-     *        and the value of the <code>Email</code> field of Profile B matches, the two profiles are matched on the
-     *        <code>Email</code> type.
+     *        <code>attributeMatchingModel</code>. </p>
+     *        <p>
+     *        If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an
+     *        attribute type. For example, if the value of the <code>Email</code> field of Profile A and the value of
+     *        <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the
+     *        <code>Email</code> attribute type.
+     *        </p>
+     *        <p>
+     *        If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact
+     *        match. For example, for the <code>Email</code> attribute type, the system will only consider it a match if
+     *        the value of the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field
+     *        of Profile B.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AttributeMatchingModel
      */
@@ -134,29 +185,143 @@ public class RuleBasedProperties implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the
-     * AttributeMatchingModel. When choosing <code>MANY_TO_MANY</code>, the system can match attributes across the
-     * sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A and the
-     * value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the
-     * <code>Email</code> type. When choosing <code>ONE_TO_ONE</code> ,the system can only match if the sub-types are
-     * exact matches. For example, only when the value of the <code>Email</code> field of Profile A and the value of the
-     * <code>Email</code> field of Profile B matches, the two profiles are matched on the <code>Email</code> type.
+     * <code>attributeMatchingModel</code>.
+     * </p>
+     * <p>
+     * If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an attribute
+     * type. For example, if the value of the <code>Email</code> field of Profile A and the value of
+     * <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the <code>Email</code>
+     * attribute type.
+     * </p>
+     * <p>
+     * If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact match.
+     * For example, for the <code>Email</code> attribute type, the system will only consider it a match if the value of
+     * the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field of Profile B.
      * </p>
      * 
      * @param attributeMatchingModel
      *        The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the
-     *        AttributeMatchingModel. When choosing <code>MANY_TO_MANY</code>, the system can match attributes across
-     *        the sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A
-     *        and the value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on
-     *        the <code>Email</code> type. When choosing <code>ONE_TO_ONE</code> ,the system can only match if the
-     *        sub-types are exact matches. For example, only when the value of the <code>Email</code> field of Profile A
-     *        and the value of the <code>Email</code> field of Profile B matches, the two profiles are matched on the
-     *        <code>Email</code> type.
+     *        <code>attributeMatchingModel</code>. </p>
+     *        <p>
+     *        If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an
+     *        attribute type. For example, if the value of the <code>Email</code> field of Profile A and the value of
+     *        <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the
+     *        <code>Email</code> attribute type.
+     *        </p>
+     *        <p>
+     *        If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact
+     *        match. For example, for the <code>Email</code> attribute type, the system will only consider it a match if
+     *        the value of the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field
+     *        of Profile B.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AttributeMatchingModel
      */
 
     public RuleBasedProperties withAttributeMatchingModel(AttributeMatchingModel attributeMatchingModel) {
         this.attributeMatchingModel = attributeMatchingModel.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * An indicator of whether to generate IDs and index the data or not.
+     * </p>
+     * <p>
+     * If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.
+     * </p>
+     * <p>
+     * If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.
+     * </p>
+     * 
+     * @param matchPurpose
+     *        An indicator of whether to generate IDs and index the data or not.</p>
+     *        <p>
+     *        If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.
+     *        </p>
+     *        <p>
+     *        If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.
+     * @see MatchPurpose
+     */
+
+    public void setMatchPurpose(String matchPurpose) {
+        this.matchPurpose = matchPurpose;
+    }
+
+    /**
+     * <p>
+     * An indicator of whether to generate IDs and index the data or not.
+     * </p>
+     * <p>
+     * If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.
+     * </p>
+     * <p>
+     * If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.
+     * </p>
+     * 
+     * @return An indicator of whether to generate IDs and index the data or not.</p>
+     *         <p>
+     *         If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.
+     *         </p>
+     *         <p>
+     *         If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.
+     * @see MatchPurpose
+     */
+
+    public String getMatchPurpose() {
+        return this.matchPurpose;
+    }
+
+    /**
+     * <p>
+     * An indicator of whether to generate IDs and index the data or not.
+     * </p>
+     * <p>
+     * If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.
+     * </p>
+     * <p>
+     * If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.
+     * </p>
+     * 
+     * @param matchPurpose
+     *        An indicator of whether to generate IDs and index the data or not.</p>
+     *        <p>
+     *        If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.
+     *        </p>
+     *        <p>
+     *        If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MatchPurpose
+     */
+
+    public RuleBasedProperties withMatchPurpose(String matchPurpose) {
+        setMatchPurpose(matchPurpose);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An indicator of whether to generate IDs and index the data or not.
+     * </p>
+     * <p>
+     * If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.
+     * </p>
+     * <p>
+     * If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.
+     * </p>
+     * 
+     * @param matchPurpose
+     *        An indicator of whether to generate IDs and index the data or not.</p>
+     *        <p>
+     *        If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.
+     *        </p>
+     *        <p>
+     *        If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MatchPurpose
+     */
+
+    public RuleBasedProperties withMatchPurpose(MatchPurpose matchPurpose) {
+        this.matchPurpose = matchPurpose.toString();
         return this;
     }
 
@@ -252,6 +417,8 @@ public class RuleBasedProperties implements Serializable, Cloneable, StructuredP
         sb.append("{");
         if (getAttributeMatchingModel() != null)
             sb.append("AttributeMatchingModel: ").append(getAttributeMatchingModel()).append(",");
+        if (getMatchPurpose() != null)
+            sb.append("MatchPurpose: ").append(getMatchPurpose()).append(",");
         if (getRules() != null)
             sb.append("Rules: ").append(getRules());
         sb.append("}");
@@ -272,6 +439,10 @@ public class RuleBasedProperties implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getAttributeMatchingModel() != null && other.getAttributeMatchingModel().equals(this.getAttributeMatchingModel()) == false)
             return false;
+        if (other.getMatchPurpose() == null ^ this.getMatchPurpose() == null)
+            return false;
+        if (other.getMatchPurpose() != null && other.getMatchPurpose().equals(this.getMatchPurpose()) == false)
+            return false;
         if (other.getRules() == null ^ this.getRules() == null)
             return false;
         if (other.getRules() != null && other.getRules().equals(this.getRules()) == false)
@@ -285,6 +456,7 @@ public class RuleBasedProperties implements Serializable, Cloneable, StructuredP
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAttributeMatchingModel() == null) ? 0 : getAttributeMatchingModel().hashCode());
+        hashCode = prime * hashCode + ((getMatchPurpose() == null) ? 0 : getMatchPurpose().hashCode());
         hashCode = prime * hashCode + ((getRules() == null) ? 0 : getRules().hashCode());
         return hashCode;
     }

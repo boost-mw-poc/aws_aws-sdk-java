@@ -31,10 +31,10 @@ public class PutConfiguredAudienceModelPolicyRequestMarshaller {
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("configuredAudienceModelArn").build();
     private static final MarshallingInfo<String> CONFIGUREDAUDIENCEMODELPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuredAudienceModelPolicy").build();
-    private static final MarshallingInfo<String> POLICYEXISTENCECONDITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("policyExistenceCondition").build();
     private static final MarshallingInfo<String> PREVIOUSPOLICYHASH_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("previousPolicyHash").build();
+    private static final MarshallingInfo<String> POLICYEXISTENCECONDITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("policyExistenceCondition").build();
 
     private static final PutConfiguredAudienceModelPolicyRequestMarshaller instance = new PutConfiguredAudienceModelPolicyRequestMarshaller();
 
@@ -54,8 +54,8 @@ public class PutConfiguredAudienceModelPolicyRequestMarshaller {
         try {
             protocolMarshaller.marshall(putConfiguredAudienceModelPolicyRequest.getConfiguredAudienceModelArn(), CONFIGUREDAUDIENCEMODELARN_BINDING);
             protocolMarshaller.marshall(putConfiguredAudienceModelPolicyRequest.getConfiguredAudienceModelPolicy(), CONFIGUREDAUDIENCEMODELPOLICY_BINDING);
-            protocolMarshaller.marshall(putConfiguredAudienceModelPolicyRequest.getPolicyExistenceCondition(), POLICYEXISTENCECONDITION_BINDING);
             protocolMarshaller.marshall(putConfiguredAudienceModelPolicyRequest.getPreviousPolicyHash(), PREVIOUSPOLICYHASH_BINDING);
+            protocolMarshaller.marshall(putConfiguredAudienceModelPolicyRequest.getPolicyExistenceCondition(), POLICYEXISTENCECONDITION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -36,7 +36,7 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
-     * The identifier of the participant.
+     * The identifier of the participant. Valid values are CUSTOMER or AGENT.
      * </p>
      */
     private String participantId;
@@ -66,7 +66,7 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
     private Integer endOffsetMillis;
     /**
      * <p>
-     * The sentiment of the detected for this piece of transcript.
+     * The sentiment detected for this piece of transcript.
      * </p>
      */
     private String sentiment;
@@ -119,11 +119,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the participant.
+     * The identifier of the participant. Valid values are CUSTOMER or AGENT.
      * </p>
      * 
      * @param participantId
-     *        The identifier of the participant.
+     *        The identifier of the participant. Valid values are CUSTOMER or AGENT.
      */
 
     public void setParticipantId(String participantId) {
@@ -132,10 +132,10 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the participant.
+     * The identifier of the participant. Valid values are CUSTOMER or AGENT.
      * </p>
      * 
-     * @return The identifier of the participant.
+     * @return The identifier of the participant. Valid values are CUSTOMER or AGENT.
      */
 
     public String getParticipantId() {
@@ -144,11 +144,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the participant.
+     * The identifier of the participant. Valid values are CUSTOMER or AGENT.
      * </p>
      * 
      * @param participantId
-     *        The identifier of the participant.
+     *        The identifier of the participant. Valid values are CUSTOMER or AGENT.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -319,11 +319,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sentiment of the detected for this piece of transcript.
+     * The sentiment detected for this piece of transcript.
      * </p>
      * 
      * @param sentiment
-     *        The sentiment of the detected for this piece of transcript.
+     *        The sentiment detected for this piece of transcript.
      * @see SentimentValue
      */
 
@@ -333,10 +333,10 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sentiment of the detected for this piece of transcript.
+     * The sentiment detected for this piece of transcript.
      * </p>
      * 
-     * @return The sentiment of the detected for this piece of transcript.
+     * @return The sentiment detected for this piece of transcript.
      * @see SentimentValue
      */
 
@@ -346,11 +346,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sentiment of the detected for this piece of transcript.
+     * The sentiment detected for this piece of transcript.
      * </p>
      * 
      * @param sentiment
-     *        The sentiment of the detected for this piece of transcript.
+     *        The sentiment detected for this piece of transcript.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SentimentValue
      */
@@ -362,11 +362,11 @@ public class Transcript implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sentiment of the detected for this piece of transcript.
+     * The sentiment detected for this piece of transcript.
      * </p>
      * 
      * @param sentiment
-     *        The sentiment of the detected for this piece of transcript.
+     *        The sentiment detected for this piece of transcript.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SentimentValue
      */

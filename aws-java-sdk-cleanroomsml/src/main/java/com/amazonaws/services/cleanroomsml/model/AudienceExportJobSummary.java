@@ -30,24 +30,16 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job that was exported.
-     * </p>
-     */
-    private String audienceGenerationJobArn;
-
-    private AudienceSize audienceSize;
-    /**
-     * <p>
      * The time at which the audience export job was created.
      * </p>
      */
     private java.util.Date createTime;
     /**
      * <p>
-     * The description of the audience export job.
+     * The most recent time at which the audience export job was updated.
      * </p>
      */
-    private String description;
+    private java.util.Date updateTime;
     /**
      * <p>
      * The name of the audience export job.
@@ -56,10 +48,18 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
     private String name;
     /**
      * <p>
-     * The Amazon S3 bucket where the audience export is stored.
+     * The Amazon Resource Name (ARN) of the audience generation job that was exported.
      * </p>
      */
-    private String outputLocation;
+    private String audienceGenerationJobArn;
+
+    private AudienceSize audienceSize;
+    /**
+     * <p>
+     * The description of the audience export job.
+     * </p>
+     */
+    private String description;
     /**
      * <p>
      * The status of the audience export job.
@@ -70,10 +70,130 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
     private StatusDetails statusDetails;
     /**
      * <p>
-     * The most recent time at which the audience export job was updated.
+     * The Amazon S3 bucket where the audience export is stored.
      * </p>
      */
-    private java.util.Date updateTime;
+    private String outputLocation;
+
+    /**
+     * <p>
+     * The time at which the audience export job was created.
+     * </p>
+     * 
+     * @param createTime
+     *        The time at which the audience export job was created.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The time at which the audience export job was created.
+     * </p>
+     * 
+     * @return The time at which the audience export job was created.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The time at which the audience export job was created.
+     * </p>
+     * 
+     * @param createTime
+     *        The time at which the audience export job was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudienceExportJobSummary withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The most recent time at which the audience export job was updated.
+     * </p>
+     * 
+     * @param updateTime
+     *        The most recent time at which the audience export job was updated.
+     */
+
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    /**
+     * <p>
+     * The most recent time at which the audience export job was updated.
+     * </p>
+     * 
+     * @return The most recent time at which the audience export job was updated.
+     */
+
+    public java.util.Date getUpdateTime() {
+        return this.updateTime;
+    }
+
+    /**
+     * <p>
+     * The most recent time at which the audience export job was updated.
+     * </p>
+     * 
+     * @param updateTime
+     *        The most recent time at which the audience export job was updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudienceExportJobSummary withUpdateTime(java.util.Date updateTime) {
+        setUpdateTime(updateTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the audience export job.
+     * </p>
+     * 
+     * @param name
+     *        The name of the audience export job.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the audience export job.
+     * </p>
+     * 
+     * @return The name of the audience export job.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the audience export job.
+     * </p>
+     * 
+     * @param name
+     *        The name of the audience export job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudienceExportJobSummary withName(String name) {
+        setName(name);
+        return this;
+    }
 
     /**
      * <p>
@@ -143,46 +263,6 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The time at which the audience export job was created.
-     * </p>
-     * 
-     * @param createTime
-     *        The time at which the audience export job was created.
-     */
-
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * <p>
-     * The time at which the audience export job was created.
-     * </p>
-     * 
-     * @return The time at which the audience export job was created.
-     */
-
-    public java.util.Date getCreateTime() {
-        return this.createTime;
-    }
-
-    /**
-     * <p>
-     * The time at which the audience export job was created.
-     * </p>
-     * 
-     * @param createTime
-     *        The time at which the audience export job was created.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AudienceExportJobSummary withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
-        return this;
-    }
-
-    /**
-     * <p>
      * The description of the audience export job.
      * </p>
      * 
@@ -218,86 +298,6 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
 
     public AudienceExportJobSummary withDescription(String description) {
         setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the audience export job.
-     * </p>
-     * 
-     * @param name
-     *        The name of the audience export job.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * The name of the audience export job.
-     * </p>
-     * 
-     * @return The name of the audience export job.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The name of the audience export job.
-     * </p>
-     * 
-     * @param name
-     *        The name of the audience export job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AudienceExportJobSummary withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Amazon S3 bucket where the audience export is stored.
-     * </p>
-     * 
-     * @param outputLocation
-     *        The Amazon S3 bucket where the audience export is stored.
-     */
-
-    public void setOutputLocation(String outputLocation) {
-        this.outputLocation = outputLocation;
-    }
-
-    /**
-     * <p>
-     * The Amazon S3 bucket where the audience export is stored.
-     * </p>
-     * 
-     * @return The Amazon S3 bucket where the audience export is stored.
-     */
-
-    public String getOutputLocation() {
-        return this.outputLocation;
-    }
-
-    /**
-     * <p>
-     * The Amazon S3 bucket where the audience export is stored.
-     * </p>
-     * 
-     * @param outputLocation
-     *        The Amazon S3 bucket where the audience export is stored.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AudienceExportJobSummary withOutputLocation(String outputLocation) {
-        setOutputLocation(outputLocation);
         return this;
     }
 
@@ -388,41 +388,41 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The most recent time at which the audience export job was updated.
+     * The Amazon S3 bucket where the audience export is stored.
      * </p>
      * 
-     * @param updateTime
-     *        The most recent time at which the audience export job was updated.
+     * @param outputLocation
+     *        The Amazon S3 bucket where the audience export is stored.
      */
 
-    public void setUpdateTime(java.util.Date updateTime) {
-        this.updateTime = updateTime;
+    public void setOutputLocation(String outputLocation) {
+        this.outputLocation = outputLocation;
     }
 
     /**
      * <p>
-     * The most recent time at which the audience export job was updated.
+     * The Amazon S3 bucket where the audience export is stored.
      * </p>
      * 
-     * @return The most recent time at which the audience export job was updated.
+     * @return The Amazon S3 bucket where the audience export is stored.
      */
 
-    public java.util.Date getUpdateTime() {
-        return this.updateTime;
+    public String getOutputLocation() {
+        return this.outputLocation;
     }
 
     /**
      * <p>
-     * The most recent time at which the audience export job was updated.
+     * The Amazon S3 bucket where the audience export is stored.
      * </p>
      * 
-     * @param updateTime
-     *        The most recent time at which the audience export job was updated.
+     * @param outputLocation
+     *        The Amazon S3 bucket where the audience export is stored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public AudienceExportJobSummary withUpdateTime(java.util.Date updateTime) {
-        setUpdateTime(updateTime);
+    public AudienceExportJobSummary withOutputLocation(String outputLocation) {
+        setOutputLocation(outputLocation);
         return this;
     }
 
@@ -438,24 +438,24 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
+        if (getUpdateTime() != null)
+            sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getAudienceGenerationJobArn() != null)
             sb.append("AudienceGenerationJobArn: ").append(getAudienceGenerationJobArn()).append(",");
         if (getAudienceSize() != null)
             sb.append("AudienceSize: ").append(getAudienceSize()).append(",");
-        if (getCreateTime() != null)
-            sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getOutputLocation() != null)
-            sb.append("OutputLocation: ").append(getOutputLocation()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getStatusDetails() != null)
             sb.append("StatusDetails: ").append(getStatusDetails()).append(",");
-        if (getUpdateTime() != null)
-            sb.append("UpdateTime: ").append(getUpdateTime());
+        if (getOutputLocation() != null)
+            sb.append("OutputLocation: ").append(getOutputLocation());
         sb.append("}");
         return sb.toString();
     }
@@ -470,6 +470,18 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
         if (obj instanceof AudienceExportJobSummary == false)
             return false;
         AudienceExportJobSummary other = (AudienceExportJobSummary) obj;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+            return false;
+        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
+            return false;
+        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
         if (other.getAudienceGenerationJobArn() == null ^ this.getAudienceGenerationJobArn() == null)
             return false;
         if (other.getAudienceGenerationJobArn() != null && other.getAudienceGenerationJobArn().equals(this.getAudienceGenerationJobArn()) == false)
@@ -478,21 +490,9 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
             return false;
         if (other.getAudienceSize() != null && other.getAudienceSize().equals(this.getAudienceSize()) == false)
             return false;
-        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
-            return false;
-        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
-            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getOutputLocation() == null ^ this.getOutputLocation() == null)
-            return false;
-        if (other.getOutputLocation() != null && other.getOutputLocation().equals(this.getOutputLocation()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
@@ -502,9 +502,9 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
             return false;
         if (other.getStatusDetails() != null && other.getStatusDetails().equals(this.getStatusDetails()) == false)
             return false;
-        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
+        if (other.getOutputLocation() == null ^ this.getOutputLocation() == null)
             return false;
-        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+        if (other.getOutputLocation() != null && other.getOutputLocation().equals(this.getOutputLocation()) == false)
             return false;
         return true;
     }
@@ -514,15 +514,15 @@ public class AudienceExportJobSummary implements Serializable, Cloneable, Struct
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getAudienceGenerationJobArn() == null) ? 0 : getAudienceGenerationJobArn().hashCode());
         hashCode = prime * hashCode + ((getAudienceSize() == null) ? 0 : getAudienceSize().hashCode());
-        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getOutputLocation() == null) ? 0 : getOutputLocation().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getStatusDetails() == null) ? 0 : getStatusDetails().hashCode());
-        hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getOutputLocation() == null) ? 0 : getOutputLocation().hashCode());
         return hashCode;
     }
 

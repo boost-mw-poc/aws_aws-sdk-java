@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.cleanrooms.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -45,6 +46,8 @@ public class ConfiguredTableAssociationMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<List> ANALYSISRULETYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("analysisRuleTypes").build();
     private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -75,6 +78,7 @@ public class ConfiguredTableAssociationMarshaller {
             protocolMarshaller.marshall(configuredTableAssociation.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(configuredTableAssociation.getName(), NAME_BINDING);
             protocolMarshaller.marshall(configuredTableAssociation.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(configuredTableAssociation.getAnalysisRuleTypes(), ANALYSISRULETYPES_BINDING);
             protocolMarshaller.marshall(configuredTableAssociation.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(configuredTableAssociation.getUpdateTime(), UPDATETIME_BINDING);
         } catch (Exception e) {

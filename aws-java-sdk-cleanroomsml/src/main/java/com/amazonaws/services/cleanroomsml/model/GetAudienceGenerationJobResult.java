@@ -25,49 +25,22 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job.
-     * </p>
-     */
-    private String audienceGenerationJobArn;
-    /**
-     * <p>
-     * The identifier of the collaboration that this audience generation job is associated with.
-     * </p>
-     */
-    private String collaborationId;
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
-     * </p>
-     */
-    private String configuredAudienceModelArn;
-    /**
-     * <p>
      * The time at which the audience generation job was created.
      * </p>
      */
     private java.util.Date createTime;
     /**
      * <p>
-     * The description of the audience generation job.
+     * The most recent time at which the audience generation job was updated.
      * </p>
      */
-    private String description;
+    private java.util.Date updateTime;
     /**
      * <p>
-     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
-     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
-     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
-     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * The Amazon Resource Name (ARN) of the audience generation job.
      * </p>
      */
-    private Boolean includeSeedInOutput;
-    /**
-     * <p>
-     * The relevance scores for different audience sizes and the recall score of the generated audience.
-     * </p>
-     */
-    private AudienceQualityMetrics metrics;
+    private String audienceGenerationJobArn;
     /**
      * <p>
      * The name of the audience generation job.
@@ -76,17 +49,10 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
     private String name;
     /**
      * <p>
-     * The seed audience that was used for this audience generation job. This field will be null if the account calling
-     * the API is the account that started this audience generation job.
+     * The description of the audience generation job.
      * </p>
      */
-    private AudienceGenerationJobDataSource seedAudience;
-    /**
-     * <p>
-     * The AWS account that started this audience generation job.
-     * </p>
-     */
-    private String startedBy;
+    private String description;
     /**
      * <p>
      * The status of the audience generation job.
@@ -101,136 +67,56 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
     private StatusDetails statusDetails;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
+     * </p>
+     */
+    private String configuredAudienceModelArn;
+    /**
+     * <p>
+     * The seed audience that was used for this audience generation job. This field will be null if the account calling
+     * the API is the account that started this audience generation job.
+     * </p>
+     */
+    private AudienceGenerationJobDataSource seedAudience;
+    /**
+     * <p>
+     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
+     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
+     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
+     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * </p>
+     */
+    private Boolean includeSeedInOutput;
+    /**
+     * <p>
+     * The identifier of the collaboration that this audience generation job is associated with.
+     * </p>
+     */
+    private String collaborationId;
+    /**
+     * <p>
+     * The relevance scores for different audience sizes and the recall score of the generated audience.
+     * </p>
+     */
+    private AudienceQualityMetrics metrics;
+    /**
+     * <p>
+     * The AWS account that started this audience generation job.
+     * </p>
+     */
+    private String startedBy;
+    /**
+     * <p>
      * The tags that are associated to this audience generation job.
      * </p>
      */
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The most recent time at which the audience generation job was updated.
+     * The unique identifier of the protected query for this audience generation job.
      * </p>
      */
-    private java.util.Date updateTime;
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job.
-     * </p>
-     * 
-     * @param audienceGenerationJobArn
-     *        The Amazon Resource Name (ARN) of the audience generation job.
-     */
-
-    public void setAudienceGenerationJobArn(String audienceGenerationJobArn) {
-        this.audienceGenerationJobArn = audienceGenerationJobArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) of the audience generation job.
-     */
-
-    public String getAudienceGenerationJobArn() {
-        return this.audienceGenerationJobArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job.
-     * </p>
-     * 
-     * @param audienceGenerationJobArn
-     *        The Amazon Resource Name (ARN) of the audience generation job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetAudienceGenerationJobResult withAudienceGenerationJobArn(String audienceGenerationJobArn) {
-        setAudienceGenerationJobArn(audienceGenerationJobArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The identifier of the collaboration that this audience generation job is associated with.
-     * </p>
-     * 
-     * @param collaborationId
-     *        The identifier of the collaboration that this audience generation job is associated with.
-     */
-
-    public void setCollaborationId(String collaborationId) {
-        this.collaborationId = collaborationId;
-    }
-
-    /**
-     * <p>
-     * The identifier of the collaboration that this audience generation job is associated with.
-     * </p>
-     * 
-     * @return The identifier of the collaboration that this audience generation job is associated with.
-     */
-
-    public String getCollaborationId() {
-        return this.collaborationId;
-    }
-
-    /**
-     * <p>
-     * The identifier of the collaboration that this audience generation job is associated with.
-     * </p>
-     * 
-     * @param collaborationId
-     *        The identifier of the collaboration that this audience generation job is associated with.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetAudienceGenerationJobResult withCollaborationId(String collaborationId) {
-        setCollaborationId(collaborationId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
-     * </p>
-     * 
-     * @param configuredAudienceModelArn
-     *        The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
-     */
-
-    public void setConfiguredAudienceModelArn(String configuredAudienceModelArn) {
-        this.configuredAudienceModelArn = configuredAudienceModelArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
-     */
-
-    public String getConfiguredAudienceModelArn() {
-        return this.configuredAudienceModelArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
-     * </p>
-     * 
-     * @param configuredAudienceModelArn
-     *        The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetAudienceGenerationJobResult withConfiguredAudienceModelArn(String configuredAudienceModelArn) {
-        setConfiguredAudienceModelArn(configuredAudienceModelArn);
-        return this;
-    }
+    private String protectedQueryIdentifier;
 
     /**
      * <p>
@@ -274,159 +160,81 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The description of the audience generation job.
+     * The most recent time at which the audience generation job was updated.
      * </p>
      * 
-     * @param description
-     *        The description of the audience generation job.
+     * @param updateTime
+     *        The most recent time at which the audience generation job was updated.
      */
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
     }
 
     /**
      * <p>
-     * The description of the audience generation job.
+     * The most recent time at which the audience generation job was updated.
      * </p>
      * 
-     * @return The description of the audience generation job.
+     * @return The most recent time at which the audience generation job was updated.
      */
 
-    public String getDescription() {
-        return this.description;
+    public java.util.Date getUpdateTime() {
+        return this.updateTime;
     }
 
     /**
      * <p>
-     * The description of the audience generation job.
+     * The most recent time at which the audience generation job was updated.
      * </p>
      * 
-     * @param description
-     *        The description of the audience generation job.
+     * @param updateTime
+     *        The most recent time at which the audience generation job was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetAudienceGenerationJobResult withDescription(String description) {
-        setDescription(description);
+    public GetAudienceGenerationJobResult withUpdateTime(java.util.Date updateTime) {
+        setUpdateTime(updateTime);
         return this;
     }
 
     /**
      * <p>
-     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
-     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
-     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
-     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * The Amazon Resource Name (ARN) of the audience generation job.
      * </p>
      * 
-     * @param includeSeedInOutput
-     *        Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes
-     *        seed users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in
-     *        the output. Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of
-     *        the audience will know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * @param audienceGenerationJobArn
+     *        The Amazon Resource Name (ARN) of the audience generation job.
      */
 
-    public void setIncludeSeedInOutput(Boolean includeSeedInOutput) {
-        this.includeSeedInOutput = includeSeedInOutput;
+    public void setAudienceGenerationJobArn(String audienceGenerationJobArn) {
+        this.audienceGenerationJobArn = audienceGenerationJobArn;
     }
 
     /**
      * <p>
-     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
-     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
-     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
-     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * The Amazon Resource Name (ARN) of the audience generation job.
      * </p>
      * 
-     * @return Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes
-     *         seed users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first
-     *         in the output. Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the
-     *         recipient of the audience will know that the first <code>minimumSeedSize</code> count of users are from
-     *         the seed.
+     * @return The Amazon Resource Name (ARN) of the audience generation job.
      */
 
-    public Boolean getIncludeSeedInOutput() {
-        return this.includeSeedInOutput;
+    public String getAudienceGenerationJobArn() {
+        return this.audienceGenerationJobArn;
     }
 
     /**
      * <p>
-     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
-     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
-     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
-     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * The Amazon Resource Name (ARN) of the audience generation job.
      * </p>
      * 
-     * @param includeSeedInOutput
-     *        Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes
-     *        seed users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in
-     *        the output. Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of
-     *        the audience will know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * @param audienceGenerationJobArn
+     *        The Amazon Resource Name (ARN) of the audience generation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetAudienceGenerationJobResult withIncludeSeedInOutput(Boolean includeSeedInOutput) {
-        setIncludeSeedInOutput(includeSeedInOutput);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
-     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
-     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
-     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
-     * </p>
-     * 
-     * @return Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes
-     *         seed users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first
-     *         in the output. Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the
-     *         recipient of the audience will know that the first <code>minimumSeedSize</code> count of users are from
-     *         the seed.
-     */
-
-    public Boolean isIncludeSeedInOutput() {
-        return this.includeSeedInOutput;
-    }
-
-    /**
-     * <p>
-     * The relevance scores for different audience sizes and the recall score of the generated audience.
-     * </p>
-     * 
-     * @param metrics
-     *        The relevance scores for different audience sizes and the recall score of the generated audience.
-     */
-
-    public void setMetrics(AudienceQualityMetrics metrics) {
-        this.metrics = metrics;
-    }
-
-    /**
-     * <p>
-     * The relevance scores for different audience sizes and the recall score of the generated audience.
-     * </p>
-     * 
-     * @return The relevance scores for different audience sizes and the recall score of the generated audience.
-     */
-
-    public AudienceQualityMetrics getMetrics() {
-        return this.metrics;
-    }
-
-    /**
-     * <p>
-     * The relevance scores for different audience sizes and the recall score of the generated audience.
-     * </p>
-     * 
-     * @param metrics
-     *        The relevance scores for different audience sizes and the recall score of the generated audience.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetAudienceGenerationJobResult withMetrics(AudienceQualityMetrics metrics) {
-        setMetrics(metrics);
+    public GetAudienceGenerationJobResult withAudienceGenerationJobArn(String audienceGenerationJobArn) {
+        setAudienceGenerationJobArn(audienceGenerationJobArn);
         return this;
     }
 
@@ -472,87 +280,41 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The seed audience that was used for this audience generation job. This field will be null if the account calling
-     * the API is the account that started this audience generation job.
+     * The description of the audience generation job.
      * </p>
      * 
-     * @param seedAudience
-     *        The seed audience that was used for this audience generation job. This field will be null if the account
-     *        calling the API is the account that started this audience generation job.
+     * @param description
+     *        The description of the audience generation job.
      */
 
-    public void setSeedAudience(AudienceGenerationJobDataSource seedAudience) {
-        this.seedAudience = seedAudience;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
      * <p>
-     * The seed audience that was used for this audience generation job. This field will be null if the account calling
-     * the API is the account that started this audience generation job.
+     * The description of the audience generation job.
      * </p>
      * 
-     * @return The seed audience that was used for this audience generation job. This field will be null if the account
-     *         calling the API is the account that started this audience generation job.
+     * @return The description of the audience generation job.
      */
 
-    public AudienceGenerationJobDataSource getSeedAudience() {
-        return this.seedAudience;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
      * <p>
-     * The seed audience that was used for this audience generation job. This field will be null if the account calling
-     * the API is the account that started this audience generation job.
+     * The description of the audience generation job.
      * </p>
      * 
-     * @param seedAudience
-     *        The seed audience that was used for this audience generation job. This field will be null if the account
-     *        calling the API is the account that started this audience generation job.
+     * @param description
+     *        The description of the audience generation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetAudienceGenerationJobResult withSeedAudience(AudienceGenerationJobDataSource seedAudience) {
-        setSeedAudience(seedAudience);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The AWS account that started this audience generation job.
-     * </p>
-     * 
-     * @param startedBy
-     *        The AWS account that started this audience generation job.
-     */
-
-    public void setStartedBy(String startedBy) {
-        this.startedBy = startedBy;
-    }
-
-    /**
-     * <p>
-     * The AWS account that started this audience generation job.
-     * </p>
-     * 
-     * @return The AWS account that started this audience generation job.
-     */
-
-    public String getStartedBy() {
-        return this.startedBy;
-    }
-
-    /**
-     * <p>
-     * The AWS account that started this audience generation job.
-     * </p>
-     * 
-     * @param startedBy
-     *        The AWS account that started this audience generation job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetAudienceGenerationJobResult withStartedBy(String startedBy) {
-        setStartedBy(startedBy);
+    public GetAudienceGenerationJobResult withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -657,6 +419,290 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
+     * </p>
+     * 
+     * @param configuredAudienceModelArn
+     *        The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
+     */
+
+    public void setConfiguredAudienceModelArn(String configuredAudienceModelArn) {
+        this.configuredAudienceModelArn = configuredAudienceModelArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
+     */
+
+    public String getConfiguredAudienceModelArn() {
+        return this.configuredAudienceModelArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
+     * </p>
+     * 
+     * @param configuredAudienceModelArn
+     *        The Amazon Resource Name (ARN) of the configured audience model used for this audience generation job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAudienceGenerationJobResult withConfiguredAudienceModelArn(String configuredAudienceModelArn) {
+        setConfiguredAudienceModelArn(configuredAudienceModelArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The seed audience that was used for this audience generation job. This field will be null if the account calling
+     * the API is the account that started this audience generation job.
+     * </p>
+     * 
+     * @param seedAudience
+     *        The seed audience that was used for this audience generation job. This field will be null if the account
+     *        calling the API is the account that started this audience generation job.
+     */
+
+    public void setSeedAudience(AudienceGenerationJobDataSource seedAudience) {
+        this.seedAudience = seedAudience;
+    }
+
+    /**
+     * <p>
+     * The seed audience that was used for this audience generation job. This field will be null if the account calling
+     * the API is the account that started this audience generation job.
+     * </p>
+     * 
+     * @return The seed audience that was used for this audience generation job. This field will be null if the account
+     *         calling the API is the account that started this audience generation job.
+     */
+
+    public AudienceGenerationJobDataSource getSeedAudience() {
+        return this.seedAudience;
+    }
+
+    /**
+     * <p>
+     * The seed audience that was used for this audience generation job. This field will be null if the account calling
+     * the API is the account that started this audience generation job.
+     * </p>
+     * 
+     * @param seedAudience
+     *        The seed audience that was used for this audience generation job. This field will be null if the account
+     *        calling the API is the account that started this audience generation job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAudienceGenerationJobResult withSeedAudience(AudienceGenerationJobDataSource seedAudience) {
+        setSeedAudience(seedAudience);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
+     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
+     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
+     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * </p>
+     * 
+     * @param includeSeedInOutput
+     *        Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes
+     *        seed users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in
+     *        the output. Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of
+     *        the audience will know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     */
+
+    public void setIncludeSeedInOutput(Boolean includeSeedInOutput) {
+        this.includeSeedInOutput = includeSeedInOutput;
+    }
+
+    /**
+     * <p>
+     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
+     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
+     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
+     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * </p>
+     * 
+     * @return Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes
+     *         seed users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first
+     *         in the output. Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the
+     *         recipient of the audience will know that the first <code>minimumSeedSize</code> count of users are from
+     *         the seed.
+     */
+
+    public Boolean getIncludeSeedInOutput() {
+        return this.includeSeedInOutput;
+    }
+
+    /**
+     * <p>
+     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
+     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
+     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
+     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * </p>
+     * 
+     * @param includeSeedInOutput
+     *        Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes
+     *        seed users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in
+     *        the output. Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of
+     *        the audience will know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAudienceGenerationJobResult withIncludeSeedInOutput(Boolean includeSeedInOutput) {
+        setIncludeSeedInOutput(includeSeedInOutput);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes seed
+     * users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first in the output.
+     * Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the recipient of the audience will
+     * know that the first <code>minimumSeedSize</code> count of users are from the seed.
+     * </p>
+     * 
+     * @return Configure whether the seed users are included in the output audience. By default, Clean Rooms ML removes
+     *         seed users from the output audience. If you specify <code>TRUE</code>, the seed users will appear first
+     *         in the output. Clean Rooms ML does not explicitly reveal whether a user was in the seed, but the
+     *         recipient of the audience will know that the first <code>minimumSeedSize</code> count of users are from
+     *         the seed.
+     */
+
+    public Boolean isIncludeSeedInOutput() {
+        return this.includeSeedInOutput;
+    }
+
+    /**
+     * <p>
+     * The identifier of the collaboration that this audience generation job is associated with.
+     * </p>
+     * 
+     * @param collaborationId
+     *        The identifier of the collaboration that this audience generation job is associated with.
+     */
+
+    public void setCollaborationId(String collaborationId) {
+        this.collaborationId = collaborationId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the collaboration that this audience generation job is associated with.
+     * </p>
+     * 
+     * @return The identifier of the collaboration that this audience generation job is associated with.
+     */
+
+    public String getCollaborationId() {
+        return this.collaborationId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the collaboration that this audience generation job is associated with.
+     * </p>
+     * 
+     * @param collaborationId
+     *        The identifier of the collaboration that this audience generation job is associated with.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAudienceGenerationJobResult withCollaborationId(String collaborationId) {
+        setCollaborationId(collaborationId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The relevance scores for different audience sizes and the recall score of the generated audience.
+     * </p>
+     * 
+     * @param metrics
+     *        The relevance scores for different audience sizes and the recall score of the generated audience.
+     */
+
+    public void setMetrics(AudienceQualityMetrics metrics) {
+        this.metrics = metrics;
+    }
+
+    /**
+     * <p>
+     * The relevance scores for different audience sizes and the recall score of the generated audience.
+     * </p>
+     * 
+     * @return The relevance scores for different audience sizes and the recall score of the generated audience.
+     */
+
+    public AudienceQualityMetrics getMetrics() {
+        return this.metrics;
+    }
+
+    /**
+     * <p>
+     * The relevance scores for different audience sizes and the recall score of the generated audience.
+     * </p>
+     * 
+     * @param metrics
+     *        The relevance scores for different audience sizes and the recall score of the generated audience.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAudienceGenerationJobResult withMetrics(AudienceQualityMetrics metrics) {
+        setMetrics(metrics);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The AWS account that started this audience generation job.
+     * </p>
+     * 
+     * @param startedBy
+     *        The AWS account that started this audience generation job.
+     */
+
+    public void setStartedBy(String startedBy) {
+        this.startedBy = startedBy;
+    }
+
+    /**
+     * <p>
+     * The AWS account that started this audience generation job.
+     * </p>
+     * 
+     * @return The AWS account that started this audience generation job.
+     */
+
+    public String getStartedBy() {
+        return this.startedBy;
+    }
+
+    /**
+     * <p>
+     * The AWS account that started this audience generation job.
+     * </p>
+     * 
+     * @param startedBy
+     *        The AWS account that started this audience generation job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAudienceGenerationJobResult withStartedBy(String startedBy) {
+        setStartedBy(startedBy);
+        return this;
+    }
+
+    /**
+     * <p>
      * The tags that are associated to this audience generation job.
      * </p>
      * 
@@ -725,41 +771,41 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The most recent time at which the audience generation job was updated.
+     * The unique identifier of the protected query for this audience generation job.
      * </p>
      * 
-     * @param updateTime
-     *        The most recent time at which the audience generation job was updated.
+     * @param protectedQueryIdentifier
+     *        The unique identifier of the protected query for this audience generation job.
      */
 
-    public void setUpdateTime(java.util.Date updateTime) {
-        this.updateTime = updateTime;
+    public void setProtectedQueryIdentifier(String protectedQueryIdentifier) {
+        this.protectedQueryIdentifier = protectedQueryIdentifier;
     }
 
     /**
      * <p>
-     * The most recent time at which the audience generation job was updated.
+     * The unique identifier of the protected query for this audience generation job.
      * </p>
      * 
-     * @return The most recent time at which the audience generation job was updated.
+     * @return The unique identifier of the protected query for this audience generation job.
      */
 
-    public java.util.Date getUpdateTime() {
-        return this.updateTime;
+    public String getProtectedQueryIdentifier() {
+        return this.protectedQueryIdentifier;
     }
 
     /**
      * <p>
-     * The most recent time at which the audience generation job was updated.
+     * The unique identifier of the protected query for this audience generation job.
      * </p>
      * 
-     * @param updateTime
-     *        The most recent time at which the audience generation job was updated.
+     * @param protectedQueryIdentifier
+     *        The unique identifier of the protected query for this audience generation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetAudienceGenerationJobResult withUpdateTime(java.util.Date updateTime) {
-        setUpdateTime(updateTime);
+    public GetAudienceGenerationJobResult withProtectedQueryIdentifier(String protectedQueryIdentifier) {
+        setProtectedQueryIdentifier(protectedQueryIdentifier);
         return this;
     }
 
@@ -775,34 +821,36 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceGenerationJobArn() != null)
-            sb.append("AudienceGenerationJobArn: ").append(getAudienceGenerationJobArn()).append(",");
-        if (getCollaborationId() != null)
-            sb.append("CollaborationId: ").append(getCollaborationId()).append(",");
-        if (getConfiguredAudienceModelArn() != null)
-            sb.append("ConfiguredAudienceModelArn: ").append(getConfiguredAudienceModelArn()).append(",");
         if (getCreateTime() != null)
             sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getIncludeSeedInOutput() != null)
-            sb.append("IncludeSeedInOutput: ").append(getIncludeSeedInOutput()).append(",");
-        if (getMetrics() != null)
-            sb.append("Metrics: ").append(getMetrics()).append(",");
+        if (getUpdateTime() != null)
+            sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
+        if (getAudienceGenerationJobArn() != null)
+            sb.append("AudienceGenerationJobArn: ").append(getAudienceGenerationJobArn()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getSeedAudience() != null)
-            sb.append("SeedAudience: ").append(getSeedAudience()).append(",");
-        if (getStartedBy() != null)
-            sb.append("StartedBy: ").append(getStartedBy()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getStatusDetails() != null)
             sb.append("StatusDetails: ").append(getStatusDetails()).append(",");
+        if (getConfiguredAudienceModelArn() != null)
+            sb.append("ConfiguredAudienceModelArn: ").append(getConfiguredAudienceModelArn()).append(",");
+        if (getSeedAudience() != null)
+            sb.append("SeedAudience: ").append(getSeedAudience()).append(",");
+        if (getIncludeSeedInOutput() != null)
+            sb.append("IncludeSeedInOutput: ").append(getIncludeSeedInOutput()).append(",");
+        if (getCollaborationId() != null)
+            sb.append("CollaborationId: ").append(getCollaborationId()).append(",");
+        if (getMetrics() != null)
+            sb.append("Metrics: ").append(getMetrics()).append(",");
+        if (getStartedBy() != null)
+            sb.append("StartedBy: ").append(getStartedBy()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
-        if (getUpdateTime() != null)
-            sb.append("UpdateTime: ").append(getUpdateTime());
+        if (getProtectedQueryIdentifier() != null)
+            sb.append("ProtectedQueryIdentifier: ").append(getProtectedQueryIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -817,45 +865,25 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
         if (obj instanceof GetAudienceGenerationJobResult == false)
             return false;
         GetAudienceGenerationJobResult other = (GetAudienceGenerationJobResult) obj;
-        if (other.getAudienceGenerationJobArn() == null ^ this.getAudienceGenerationJobArn() == null)
-            return false;
-        if (other.getAudienceGenerationJobArn() != null && other.getAudienceGenerationJobArn().equals(this.getAudienceGenerationJobArn()) == false)
-            return false;
-        if (other.getCollaborationId() == null ^ this.getCollaborationId() == null)
-            return false;
-        if (other.getCollaborationId() != null && other.getCollaborationId().equals(this.getCollaborationId()) == false)
-            return false;
-        if (other.getConfiguredAudienceModelArn() == null ^ this.getConfiguredAudienceModelArn() == null)
-            return false;
-        if (other.getConfiguredAudienceModelArn() != null && other.getConfiguredAudienceModelArn().equals(this.getConfiguredAudienceModelArn()) == false)
-            return false;
         if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
         if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
+        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
             return false;
-        if (other.getIncludeSeedInOutput() == null ^ this.getIncludeSeedInOutput() == null)
+        if (other.getAudienceGenerationJobArn() == null ^ this.getAudienceGenerationJobArn() == null)
             return false;
-        if (other.getIncludeSeedInOutput() != null && other.getIncludeSeedInOutput().equals(this.getIncludeSeedInOutput()) == false)
-            return false;
-        if (other.getMetrics() == null ^ this.getMetrics() == null)
-            return false;
-        if (other.getMetrics() != null && other.getMetrics().equals(this.getMetrics()) == false)
+        if (other.getAudienceGenerationJobArn() != null && other.getAudienceGenerationJobArn().equals(this.getAudienceGenerationJobArn()) == false)
             return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
-        if (other.getSeedAudience() == null ^ this.getSeedAudience() == null)
+        if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
-        if (other.getSeedAudience() != null && other.getSeedAudience().equals(this.getSeedAudience()) == false)
-            return false;
-        if (other.getStartedBy() == null ^ this.getStartedBy() == null)
-            return false;
-        if (other.getStartedBy() != null && other.getStartedBy().equals(this.getStartedBy()) == false)
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
@@ -865,13 +893,37 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getStatusDetails() != null && other.getStatusDetails().equals(this.getStatusDetails()) == false)
             return false;
+        if (other.getConfiguredAudienceModelArn() == null ^ this.getConfiguredAudienceModelArn() == null)
+            return false;
+        if (other.getConfiguredAudienceModelArn() != null && other.getConfiguredAudienceModelArn().equals(this.getConfiguredAudienceModelArn()) == false)
+            return false;
+        if (other.getSeedAudience() == null ^ this.getSeedAudience() == null)
+            return false;
+        if (other.getSeedAudience() != null && other.getSeedAudience().equals(this.getSeedAudience()) == false)
+            return false;
+        if (other.getIncludeSeedInOutput() == null ^ this.getIncludeSeedInOutput() == null)
+            return false;
+        if (other.getIncludeSeedInOutput() != null && other.getIncludeSeedInOutput().equals(this.getIncludeSeedInOutput()) == false)
+            return false;
+        if (other.getCollaborationId() == null ^ this.getCollaborationId() == null)
+            return false;
+        if (other.getCollaborationId() != null && other.getCollaborationId().equals(this.getCollaborationId()) == false)
+            return false;
+        if (other.getMetrics() == null ^ this.getMetrics() == null)
+            return false;
+        if (other.getMetrics() != null && other.getMetrics().equals(this.getMetrics()) == false)
+            return false;
+        if (other.getStartedBy() == null ^ this.getStartedBy() == null)
+            return false;
+        if (other.getStartedBy() != null && other.getStartedBy().equals(this.getStartedBy()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
-        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
+        if (other.getProtectedQueryIdentifier() == null ^ this.getProtectedQueryIdentifier() == null)
             return false;
-        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+        if (other.getProtectedQueryIdentifier() != null && other.getProtectedQueryIdentifier().equals(this.getProtectedQueryIdentifier()) == false)
             return false;
         return true;
     }
@@ -881,20 +933,21 @@ public class GetAudienceGenerationJobResult extends com.amazonaws.AmazonWebServi
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceGenerationJobArn() == null) ? 0 : getAudienceGenerationJobArn().hashCode());
-        hashCode = prime * hashCode + ((getCollaborationId() == null) ? 0 : getCollaborationId().hashCode());
-        hashCode = prime * hashCode + ((getConfiguredAudienceModelArn() == null) ? 0 : getConfiguredAudienceModelArn().hashCode());
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getIncludeSeedInOutput() == null) ? 0 : getIncludeSeedInOutput().hashCode());
-        hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
+        hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getAudienceGenerationJobArn() == null) ? 0 : getAudienceGenerationJobArn().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getSeedAudience() == null) ? 0 : getSeedAudience().hashCode());
-        hashCode = prime * hashCode + ((getStartedBy() == null) ? 0 : getStartedBy().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getStatusDetails() == null) ? 0 : getStatusDetails().hashCode());
+        hashCode = prime * hashCode + ((getConfiguredAudienceModelArn() == null) ? 0 : getConfiguredAudienceModelArn().hashCode());
+        hashCode = prime * hashCode + ((getSeedAudience() == null) ? 0 : getSeedAudience().hashCode());
+        hashCode = prime * hashCode + ((getIncludeSeedInOutput() == null) ? 0 : getIncludeSeedInOutput().hashCode());
+        hashCode = prime * hashCode + ((getCollaborationId() == null) ? 0 : getCollaborationId().hashCode());
+        hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
+        hashCode = prime * hashCode + ((getStartedBy() == null) ? 0 : getStartedBy().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
-        hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getProtectedQueryIdentifier() == null) ? 0 : getProtectedQueryIdentifier().hashCode());
         return hashCode;
     }
 

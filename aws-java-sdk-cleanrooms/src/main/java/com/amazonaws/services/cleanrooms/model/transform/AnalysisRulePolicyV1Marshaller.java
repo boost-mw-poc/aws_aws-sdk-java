@@ -33,6 +33,8 @@ public class AnalysisRulePolicyV1Marshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("aggregation").build();
     private static final MarshallingInfo<StructuredPojo> CUSTOM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("custom").build();
+    private static final MarshallingInfo<StructuredPojo> IDMAPPINGTABLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idMappingTable").build();
 
     private static final AnalysisRulePolicyV1Marshaller instance = new AnalysisRulePolicyV1Marshaller();
 
@@ -53,6 +55,7 @@ public class AnalysisRulePolicyV1Marshaller {
             protocolMarshaller.marshall(analysisRulePolicyV1.getList(), LIST_BINDING);
             protocolMarshaller.marshall(analysisRulePolicyV1.getAggregation(), AGGREGATION_BINDING);
             protocolMarshaller.marshall(analysisRulePolicyV1.getCustom(), CUSTOM_BINDING);
+            protocolMarshaller.marshall(analysisRulePolicyV1.getIdMappingTable(), IDMAPPINGTABLE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

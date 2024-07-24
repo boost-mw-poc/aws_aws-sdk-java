@@ -86,9 +86,9 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      */
     private Boolean selfManagedOptOutsEnabled;
@@ -100,7 +100,8 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private String optOutListName;
     /**
      * <p>
-     * Indicates whether shared routes are enabled for the pool.
+     * Indicates whether shared routes are enabled for the pool. Set to false and only origination identities in this
+     * pool are used to send messages.
      * </p>
      */
     private Boolean sharedRoutesEnabled;
@@ -596,16 +597,16 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      * 
      * @param selfManagedOptOutsEnabled
      *        By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to
-     *        one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds
-     *        the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *        requests. You're also responsible for tracking and honoring opt-out requests.
+     *        one of your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a
+     *        customizable message and adds the end recipient to the OptOutList. When set to true you're responsible for
+     *        responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out requests.
      */
 
     public void setSelfManagedOptOutsEnabled(Boolean selfManagedOptOutsEnabled) {
@@ -615,15 +616,16 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      * 
      * @return By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to
-     *         one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds
-     *         the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *         requests. You're also responsible for tracking and honoring opt-out requests.
+     *         one of your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a
+     *         customizable message and adds the end recipient to the OptOutList. When set to true you're responsible
+     *         for responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out
+     *         requests.
      */
 
     public Boolean getSelfManagedOptOutsEnabled() {
@@ -633,16 +635,16 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      * 
      * @param selfManagedOptOutsEnabled
      *        By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to
-     *        one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds
-     *        the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *        requests. You're also responsible for tracking and honoring opt-out requests.
+     *        one of your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a
+     *        customizable message and adds the end recipient to the OptOutList. When set to true you're responsible for
+     *        responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -654,15 +656,16 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      * 
      * @return By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to
-     *         one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds
-     *         the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *         requests. You're also responsible for tracking and honoring opt-out requests.
+     *         one of your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a
+     *         customizable message and adds the end recipient to the OptOutList. When set to true you're responsible
+     *         for responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out
+     *         requests.
      */
 
     public Boolean isSelfManagedOptOutsEnabled() {
@@ -711,11 +714,13 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * Indicates whether shared routes are enabled for the pool.
+     * Indicates whether shared routes are enabled for the pool. Set to false and only origination identities in this
+     * pool are used to send messages.
      * </p>
      * 
      * @param sharedRoutesEnabled
-     *        Indicates whether shared routes are enabled for the pool.
+     *        Indicates whether shared routes are enabled for the pool. Set to false and only origination identities in
+     *        this pool are used to send messages.
      */
 
     public void setSharedRoutesEnabled(Boolean sharedRoutesEnabled) {
@@ -724,10 +729,12 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * Indicates whether shared routes are enabled for the pool.
+     * Indicates whether shared routes are enabled for the pool. Set to false and only origination identities in this
+     * pool are used to send messages.
      * </p>
      * 
-     * @return Indicates whether shared routes are enabled for the pool.
+     * @return Indicates whether shared routes are enabled for the pool. Set to false and only origination identities in
+     *         this pool are used to send messages.
      */
 
     public Boolean getSharedRoutesEnabled() {
@@ -736,11 +743,13 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * Indicates whether shared routes are enabled for the pool.
+     * Indicates whether shared routes are enabled for the pool. Set to false and only origination identities in this
+     * pool are used to send messages.
      * </p>
      * 
      * @param sharedRoutesEnabled
-     *        Indicates whether shared routes are enabled for the pool.
+     *        Indicates whether shared routes are enabled for the pool. Set to false and only origination identities in
+     *        this pool are used to send messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -751,10 +760,12 @@ public class CreatePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * Indicates whether shared routes are enabled for the pool.
+     * Indicates whether shared routes are enabled for the pool. Set to false and only origination identities in this
+     * pool are used to send messages.
      * </p>
      * 
-     * @return Indicates whether shared routes are enabled for the pool.
+     * @return Indicates whether shared routes are enabled for the pool. Set to false and only origination identities in
+     *         this pool are used to send messages.
      */
 
     public Boolean isSharedRoutesEnabled() {

@@ -98,7 +98,7 @@ public class PrivacyBudgetTemplate implements Serializable, Cloneable, Structure
     private String autoRefresh;
     /**
      * <p>
-     * Specifies the epislon and noise parameters for the privacy budget template.
+     * Specifies the epsilon and noise parameters for the privacy budget template.
      * </p>
      */
     private PrivacyBudgetTemplateParametersOutput parameters;
@@ -603,11 +603,11 @@ public class PrivacyBudgetTemplate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies the epislon and noise parameters for the privacy budget template.
+     * Specifies the epsilon and noise parameters for the privacy budget template.
      * </p>
      * 
      * @param parameters
-     *        Specifies the epislon and noise parameters for the privacy budget template.
+     *        Specifies the epsilon and noise parameters for the privacy budget template.
      */
 
     public void setParameters(PrivacyBudgetTemplateParametersOutput parameters) {
@@ -616,10 +616,10 @@ public class PrivacyBudgetTemplate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies the epislon and noise parameters for the privacy budget template.
+     * Specifies the epsilon and noise parameters for the privacy budget template.
      * </p>
      * 
-     * @return Specifies the epislon and noise parameters for the privacy budget template.
+     * @return Specifies the epsilon and noise parameters for the privacy budget template.
      */
 
     public PrivacyBudgetTemplateParametersOutput getParameters() {
@@ -628,11 +628,11 @@ public class PrivacyBudgetTemplate implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies the epislon and noise parameters for the privacy budget template.
+     * Specifies the epsilon and noise parameters for the privacy budget template.
      * </p>
      * 
      * @param parameters
-     *        Specifies the epislon and noise parameters for the privacy budget template.
+     *        Specifies the epsilon and noise parameters for the privacy budget template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

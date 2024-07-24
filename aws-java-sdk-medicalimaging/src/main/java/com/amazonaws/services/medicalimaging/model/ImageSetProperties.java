@@ -76,6 +76,13 @@ public class ImageSetProperties implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String message;
+    /**
+     * <p>
+     * Contains details on overrides used when creating the returned version of an image set. For example, if
+     * <code>forced</code> exists, the <code>forced</code> flag was used when creating the image set.
+     * </p>
+     */
+    private Overrides overrides;
 
     /**
      * <p>
@@ -436,6 +443,52 @@ public class ImageSetProperties implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Contains details on overrides used when creating the returned version of an image set. For example, if
+     * <code>forced</code> exists, the <code>forced</code> flag was used when creating the image set.
+     * </p>
+     * 
+     * @param overrides
+     *        Contains details on overrides used when creating the returned version of an image set. For example, if
+     *        <code>forced</code> exists, the <code>forced</code> flag was used when creating the image set.
+     */
+
+    public void setOverrides(Overrides overrides) {
+        this.overrides = overrides;
+    }
+
+    /**
+     * <p>
+     * Contains details on overrides used when creating the returned version of an image set. For example, if
+     * <code>forced</code> exists, the <code>forced</code> flag was used when creating the image set.
+     * </p>
+     * 
+     * @return Contains details on overrides used when creating the returned version of an image set. For example, if
+     *         <code>forced</code> exists, the <code>forced</code> flag was used when creating the image set.
+     */
+
+    public Overrides getOverrides() {
+        return this.overrides;
+    }
+
+    /**
+     * <p>
+     * Contains details on overrides used when creating the returned version of an image set. For example, if
+     * <code>forced</code> exists, the <code>forced</code> flag was used when creating the image set.
+     * </p>
+     * 
+     * @param overrides
+     *        Contains details on overrides used when creating the returned version of an image set. For example, if
+     *        <code>forced</code> exists, the <code>forced</code> flag was used when creating the image set.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImageSetProperties withOverrides(Overrides overrides) {
+        setOverrides(overrides);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -462,7 +515,9 @@ public class ImageSetProperties implements Serializable, Cloneable, StructuredPo
         if (getDeletedAt() != null)
             sb.append("DeletedAt: ").append(getDeletedAt()).append(",");
         if (getMessage() != null)
-            sb.append("Message: ").append(getMessage());
+            sb.append("Message: ").append(getMessage()).append(",");
+        if (getOverrides() != null)
+            sb.append("Overrides: ").append(getOverrides());
         sb.append("}");
         return sb.toString();
     }
@@ -509,6 +564,10 @@ public class ImageSetProperties implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getMessage() != null && other.getMessage().equals(this.getMessage()) == false)
             return false;
+        if (other.getOverrides() == null ^ this.getOverrides() == null)
+            return false;
+        if (other.getOverrides() != null && other.getOverrides().equals(this.getOverrides()) == false)
+            return false;
         return true;
     }
 
@@ -525,6 +584,7 @@ public class ImageSetProperties implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getDeletedAt() == null) ? 0 : getDeletedAt().hashCode());
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
+        hashCode = prime * hashCode + ((getOverrides() == null) ? 0 : getOverrides().hashCode());
         return hashCode;
     }
 

@@ -51,6 +51,13 @@ public class AddPolicyStatementRequest extends com.amazonaws.AmazonWebServiceReq
      * Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or denied (
      * <code>Deny</code>).
      * </p>
+     * <important>
+     * <p>
+     * If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the
+     * <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code> parameter in
+     * the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.
+     * </p>
+     * </important>
      */
     private String effect;
     /**
@@ -241,10 +248,22 @@ public class AddPolicyStatementRequest extends com.amazonaws.AmazonWebServiceReq
      * Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or denied (
      * <code>Deny</code>).
      * </p>
+     * <important>
+     * <p>
+     * If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the
+     * <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code> parameter in
+     * the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.
+     * </p>
+     * </important>
      * 
      * @param effect
      *        Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or
-     *        denied (<code>Deny</code>).
+     *        denied (<code>Deny</code>).</p> <important>
+     *        <p>
+     *        If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the
+     *        <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code>
+     *        parameter in the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.
+     *        </p>
      * @see StatementEffect
      */
 
@@ -257,9 +276,21 @@ public class AddPolicyStatementRequest extends com.amazonaws.AmazonWebServiceReq
      * Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or denied (
      * <code>Deny</code>).
      * </p>
+     * <important>
+     * <p>
+     * If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the
+     * <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code> parameter in
+     * the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.
+     * </p>
+     * </important>
      * 
      * @return Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or
-     *         denied (<code>Deny</code>).
+     *         denied (<code>Deny</code>).</p> <important>
+     *         <p>
+     *         If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the
+     *         <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code>
+     *         parameter in the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.
+     *         </p>
      * @see StatementEffect
      */
 
@@ -272,10 +303,22 @@ public class AddPolicyStatementRequest extends com.amazonaws.AmazonWebServiceReq
      * Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or denied (
      * <code>Deny</code>).
      * </p>
+     * <important>
+     * <p>
+     * If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the
+     * <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code> parameter in
+     * the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.
+     * </p>
+     * </important>
      * 
      * @param effect
      *        Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or
-     *        denied (<code>Deny</code>).
+     *        denied (<code>Deny</code>).</p> <important>
+     *        <p>
+     *        If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the
+     *        <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code>
+     *        parameter in the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StatementEffect
      */
@@ -290,10 +333,22 @@ public class AddPolicyStatementRequest extends com.amazonaws.AmazonWebServiceReq
      * Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or denied (
      * <code>Deny</code>).
      * </p>
+     * <important>
+     * <p>
+     * If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the
+     * <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code> parameter in
+     * the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.
+     * </p>
+     * </important>
      * 
      * @param effect
      *        Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or
-     *        denied (<code>Deny</code>).
+     *        denied (<code>Deny</code>).</p> <important>
+     *        <p>
+     *        If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the
+     *        <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code>
+     *        parameter in the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StatementEffect
      */

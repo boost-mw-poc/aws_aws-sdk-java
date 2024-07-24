@@ -23,7 +23,8 @@ public enum DrmSystem {
     CLEAR_KEY_AES_128("CLEAR_KEY_AES_128"),
     FAIRPLAY("FAIRPLAY"),
     PLAYREADY("PLAYREADY"),
-    WIDEVINE("WIDEVINE");
+    WIDEVINE("WIDEVINE"),
+    IRDETO("IRDETO");
 
     private String value;
 

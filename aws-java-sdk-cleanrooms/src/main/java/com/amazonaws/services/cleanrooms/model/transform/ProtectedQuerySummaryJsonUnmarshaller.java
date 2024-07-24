@@ -68,6 +68,13 @@ public class ProtectedQuerySummaryJsonUnmarshaller implements Unmarshaller<Prote
                     context.nextToken();
                     protectedQuerySummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("receiverConfigurations", targetDepth)) {
+                    context.nextToken();
+                    protectedQuerySummary.setReceiverConfigurations(new ListUnmarshaller<ReceiverConfiguration>(ReceiverConfigurationJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

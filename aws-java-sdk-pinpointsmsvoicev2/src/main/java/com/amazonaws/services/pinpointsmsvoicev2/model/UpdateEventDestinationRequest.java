@@ -63,7 +63,7 @@ public class UpdateEventDestinationRequest extends com.amazonaws.AmazonWebServic
     private CloudWatchLogsDestination cloudWatchLogsDestination;
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Firehose.
      * </p>
      */
     private KinesisFirehoseDestination kinesisFirehoseDestination;
@@ -392,11 +392,11 @@ public class UpdateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Firehose.
      * </p>
      * 
      * @param kinesisFirehoseDestination
-     *        An object that contains information about an event destination for logging to Kinesis Data Firehose.
+     *        An object that contains information about an event destination for logging to Firehose.
      */
 
     public void setKinesisFirehoseDestination(KinesisFirehoseDestination kinesisFirehoseDestination) {
@@ -405,10 +405,10 @@ public class UpdateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Firehose.
      * </p>
      * 
-     * @return An object that contains information about an event destination for logging to Kinesis Data Firehose.
+     * @return An object that contains information about an event destination for logging to Firehose.
      */
 
     public KinesisFirehoseDestination getKinesisFirehoseDestination() {
@@ -417,11 +417,11 @@ public class UpdateEventDestinationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Firehose.
      * </p>
      * 
      * @param kinesisFirehoseDestination
-     *        An object that contains information about an event destination for logging to Kinesis Data Firehose.
+     *        An object that contains information about an event destination for logging to Firehose.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

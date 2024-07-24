@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GlueDataSourceMarshaller {
 
-    private static final MarshallingInfo<String> CATALOGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("catalogId").build();
-    private static final MarshallingInfo<String> DATABASENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("databaseName").build();
     private static final MarshallingInfo<String> TABLENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tableName").build();
+    private static final MarshallingInfo<String> DATABASENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("databaseName").build();
+    private static final MarshallingInfo<String> CATALOGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("catalogId").build();
 
     private static final GlueDataSourceMarshaller instance = new GlueDataSourceMarshaller();
 
@@ -50,9 +50,9 @@ public class GlueDataSourceMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(glueDataSource.getCatalogId(), CATALOGID_BINDING);
-            protocolMarshaller.marshall(glueDataSource.getDatabaseName(), DATABASENAME_BINDING);
             protocolMarshaller.marshall(glueDataSource.getTableName(), TABLENAME_BINDING);
+            protocolMarshaller.marshall(glueDataSource.getDatabaseName(), DATABASENAME_BINDING);
+            protocolMarshaller.marshall(glueDataSource.getCatalogId(), CATALOGID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

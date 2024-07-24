@@ -30,18 +30,18 @@ public class ProtectedQueryStatistics implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The duration of the Protected Query, from creation until query completion.
+     * The duration of the protected query, from creation until query completion.
      * </p>
      */
     private Long totalDurationInMillis;
 
     /**
      * <p>
-     * The duration of the Protected Query, from creation until query completion.
+     * The duration of the protected query, from creation until query completion.
      * </p>
      * 
      * @param totalDurationInMillis
-     *        The duration of the Protected Query, from creation until query completion.
+     *        The duration of the protected query, from creation until query completion.
      */
 
     public void setTotalDurationInMillis(Long totalDurationInMillis) {
@@ -50,10 +50,10 @@ public class ProtectedQueryStatistics implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The duration of the Protected Query, from creation until query completion.
+     * The duration of the protected query, from creation until query completion.
      * </p>
      * 
-     * @return The duration of the Protected Query, from creation until query completion.
+     * @return The duration of the protected query, from creation until query completion.
      */
 
     public Long getTotalDurationInMillis() {
@@ -62,11 +62,11 @@ public class ProtectedQueryStatistics implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The duration of the Protected Query, from creation until query completion.
+     * The duration of the protected query, from creation until query completion.
      * </p>
      * 
      * @param totalDurationInMillis
-     *        The duration of the Protected Query, from creation until query completion.
+     *        The duration of the protected query, from creation until query completion.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,16 +25,56 @@ public class ListAudienceExportJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The audience export jobs that match the request.
-     * </p>
-     */
-    private java.util.List<AudienceExportJobSummary> audienceExportJobs;
-    /**
-     * <p>
      * The token value retrieved from a previous call to access the next page of results.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The audience export jobs that match the request.
+     * </p>
+     */
+    private java.util.List<AudienceExportJobSummary> audienceExportJobs;
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @return The token value retrieved from a previous call to access the next page of results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAudienceExportJobsResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
 
     /**
      * <p>
@@ -107,46 +147,6 @@ public class ListAudienceExportJobsResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @return The token value retrieved from a previous call to access the next page of results.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListAudienceExportJobsResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -158,10 +158,10 @@ public class ListAudienceExportJobsResult extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceExportJobs() != null)
-            sb.append("AudienceExportJobs: ").append(getAudienceExportJobs()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getAudienceExportJobs() != null)
+            sb.append("AudienceExportJobs: ").append(getAudienceExportJobs());
         sb.append("}");
         return sb.toString();
     }
@@ -176,13 +176,13 @@ public class ListAudienceExportJobsResult extends com.amazonaws.AmazonWebService
         if (obj instanceof ListAudienceExportJobsResult == false)
             return false;
         ListAudienceExportJobsResult other = (ListAudienceExportJobsResult) obj;
-        if (other.getAudienceExportJobs() == null ^ this.getAudienceExportJobs() == null)
-            return false;
-        if (other.getAudienceExportJobs() != null && other.getAudienceExportJobs().equals(this.getAudienceExportJobs()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getAudienceExportJobs() == null ^ this.getAudienceExportJobs() == null)
+            return false;
+        if (other.getAudienceExportJobs() != null && other.getAudienceExportJobs().equals(this.getAudienceExportJobs()) == false)
             return false;
         return true;
     }
@@ -192,8 +192,8 @@ public class ListAudienceExportJobsResult extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceExportJobs() == null) ? 0 : getAudienceExportJobs().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getAudienceExportJobs() == null) ? 0 : getAudienceExportJobs().hashCode());
         return hashCode;
     }
 

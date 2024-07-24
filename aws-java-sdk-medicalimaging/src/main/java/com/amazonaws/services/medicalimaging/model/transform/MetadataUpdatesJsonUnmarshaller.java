@@ -52,6 +52,10 @@ public class MetadataUpdatesJsonUnmarshaller implements Unmarshaller<MetadataUpd
                     context.nextToken();
                     metadataUpdates.setDICOMUpdates(DICOMUpdatesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("revertToVersionId", targetDepth)) {
+                    context.nextToken();
+                    metadataUpdates.setRevertToVersionId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

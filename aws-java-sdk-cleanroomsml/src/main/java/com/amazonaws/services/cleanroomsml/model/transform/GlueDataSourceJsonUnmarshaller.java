@@ -48,17 +48,17 @@ public class GlueDataSourceJsonUnmarshaller implements Unmarshaller<GlueDataSour
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("catalogId", targetDepth)) {
+                if (context.testExpression("tableName", targetDepth)) {
                     context.nextToken();
-                    glueDataSource.setCatalogId(context.getUnmarshaller(String.class).unmarshall(context));
+                    glueDataSource.setTableName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("databaseName", targetDepth)) {
                     context.nextToken();
                     glueDataSource.setDatabaseName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("tableName", targetDepth)) {
+                if (context.testExpression("catalogId", targetDepth)) {
                     context.nextToken();
-                    glueDataSource.setTableName(context.getUnmarshaller(String.class).unmarshall(context));
+                    glueDataSource.setCatalogId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

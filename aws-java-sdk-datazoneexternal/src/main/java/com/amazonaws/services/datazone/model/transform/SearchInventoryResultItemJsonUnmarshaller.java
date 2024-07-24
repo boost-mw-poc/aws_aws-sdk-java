@@ -52,10 +52,6 @@ public class SearchInventoryResultItemJsonUnmarshaller implements Unmarshaller<S
                     context.nextToken();
                     searchInventoryResultItem.setAssetItem(AssetItemJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("dataProductItem", targetDepth)) {
-                    context.nextToken();
-                    searchInventoryResultItem.setDataProductItem(DataProductSummaryJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("glossaryItem", targetDepth)) {
                     context.nextToken();
                     searchInventoryResultItem.setGlossaryItem(GlossaryItemJsonUnmarshaller.getInstance().unmarshall(context));

@@ -27,10 +27,10 @@ public class ListAudienceExportJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
+     * The token value retrieved from a previous call to access the next page of results.
      * </p>
      */
-    private String audienceGenerationJobArn;
+    private String nextToken;
     /**
      * <p>
      * The maximum size of the results that is returned per call.
@@ -39,48 +39,48 @@ public class ListAudienceExportJobsRequest extends com.amazonaws.AmazonWebServic
     private Integer maxResults;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
+     * </p>
+     */
+    private String audienceGenerationJobArn;
+
+    /**
+     * <p>
      * The token value retrieved from a previous call to access the next page of results.
      * </p>
-     */
-    private String nextToken;
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
-     * </p>
      * 
-     * @param audienceGenerationJobArn
-     *        The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
      */
 
-    public void setAudienceGenerationJobArn(String audienceGenerationJobArn) {
-        this.audienceGenerationJobArn = audienceGenerationJobArn;
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
+     * The token value retrieved from a previous call to access the next page of results.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
+     * @return The token value retrieved from a previous call to access the next page of results.
      */
 
-    public String getAudienceGenerationJobArn() {
-        return this.audienceGenerationJobArn;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
+     * The token value retrieved from a previous call to access the next page of results.
      * </p>
      * 
-     * @param audienceGenerationJobArn
-     *        The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListAudienceExportJobsRequest withAudienceGenerationJobArn(String audienceGenerationJobArn) {
-        setAudienceGenerationJobArn(audienceGenerationJobArn);
+    public ListAudienceExportJobsRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
         return this;
     }
 
@@ -126,41 +126,41 @@ public class ListAudienceExportJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The token value retrieved from a previous call to access the next page of results.
+     * The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
      * </p>
      * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
+     * @param audienceGenerationJobArn
+     *        The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
      */
 
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public void setAudienceGenerationJobArn(String audienceGenerationJobArn) {
+        this.audienceGenerationJobArn = audienceGenerationJobArn;
     }
 
     /**
      * <p>
-     * The token value retrieved from a previous call to access the next page of results.
+     * The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
      * </p>
      * 
-     * @return The token value retrieved from a previous call to access the next page of results.
+     * @return The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
      */
 
-    public String getNextToken() {
-        return this.nextToken;
+    public String getAudienceGenerationJobArn() {
+        return this.audienceGenerationJobArn;
     }
 
     /**
      * <p>
-     * The token value retrieved from a previous call to access the next page of results.
+     * The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
      * </p>
      * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
+     * @param audienceGenerationJobArn
+     *        The Amazon Resource Name (ARN) of the audience generation job that you are interested in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListAudienceExportJobsRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
+    public ListAudienceExportJobsRequest withAudienceGenerationJobArn(String audienceGenerationJobArn) {
+        setAudienceGenerationJobArn(audienceGenerationJobArn);
         return this;
     }
 
@@ -176,12 +176,12 @@ public class ListAudienceExportJobsRequest extends com.amazonaws.AmazonWebServic
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceGenerationJobArn() != null)
-            sb.append("AudienceGenerationJobArn: ").append(getAudienceGenerationJobArn()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+        if (getAudienceGenerationJobArn() != null)
+            sb.append("AudienceGenerationJobArn: ").append(getAudienceGenerationJobArn());
         sb.append("}");
         return sb.toString();
     }
@@ -196,17 +196,17 @@ public class ListAudienceExportJobsRequest extends com.amazonaws.AmazonWebServic
         if (obj instanceof ListAudienceExportJobsRequest == false)
             return false;
         ListAudienceExportJobsRequest other = (ListAudienceExportJobsRequest) obj;
-        if (other.getAudienceGenerationJobArn() == null ^ this.getAudienceGenerationJobArn() == null)
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
-        if (other.getAudienceGenerationJobArn() != null && other.getAudienceGenerationJobArn().equals(this.getAudienceGenerationJobArn()) == false)
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
+        if (other.getAudienceGenerationJobArn() == null ^ this.getAudienceGenerationJobArn() == null)
             return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+        if (other.getAudienceGenerationJobArn() != null && other.getAudienceGenerationJobArn().equals(this.getAudienceGenerationJobArn()) == false)
             return false;
         return true;
     }
@@ -216,9 +216,9 @@ public class ListAudienceExportJobsRequest extends com.amazonaws.AmazonWebServic
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceGenerationJobArn() == null) ? 0 : getAudienceGenerationJobArn().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getAudienceGenerationJobArn() == null) ? 0 : getAudienceGenerationJobArn().hashCode());
         return hashCode;
     }
 

@@ -48,41 +48,37 @@ public class GetConfiguredAudienceModelResultJsonUnmarshaller implements Unmarsh
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("audienceModelArn", targetDepth)) {
+                if (context.testExpression("createTime", targetDepth)) {
                     context.nextToken();
-                    getConfiguredAudienceModelResult.setAudienceModelArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    getConfiguredAudienceModelResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("audienceSizeConfig", targetDepth)) {
+                if (context.testExpression("updateTime", targetDepth)) {
                     context.nextToken();
-                    getConfiguredAudienceModelResult.setAudienceSizeConfig(AudienceSizeConfigJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("childResourceTagOnCreatePolicy", targetDepth)) {
-                    context.nextToken();
-                    getConfiguredAudienceModelResult.setChildResourceTagOnCreatePolicy(context.getUnmarshaller(String.class).unmarshall(context));
+                    getConfiguredAudienceModelResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("configuredAudienceModelArn", targetDepth)) {
                     context.nextToken();
                     getConfiguredAudienceModelResult.setConfiguredAudienceModelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("createTime", targetDepth)) {
+                if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
-                    getConfiguredAudienceModelResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    getConfiguredAudienceModelResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("audienceModelArn", targetDepth)) {
+                    context.nextToken();
+                    getConfiguredAudienceModelResult.setAudienceModelArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("outputConfig", targetDepth)) {
+                    context.nextToken();
+                    getConfiguredAudienceModelResult.setOutputConfig(ConfiguredAudienceModelOutputConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     getConfiguredAudienceModelResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("minMatchingSeedSize", targetDepth)) {
+                if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
-                    getConfiguredAudienceModelResult.setMinMatchingSeedSize(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("name", targetDepth)) {
-                    context.nextToken();
-                    getConfiguredAudienceModelResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("outputConfig", targetDepth)) {
-                    context.nextToken();
-                    getConfiguredAudienceModelResult.setOutputConfig(ConfiguredAudienceModelOutputConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                    getConfiguredAudienceModelResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("sharedAudienceMetrics", targetDepth)) {
                     context.nextToken();
@@ -90,18 +86,22 @@ public class GetConfiguredAudienceModelResultJsonUnmarshaller implements Unmarsh
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("status", targetDepth)) {
+                if (context.testExpression("minMatchingSeedSize", targetDepth)) {
                     context.nextToken();
-                    getConfiguredAudienceModelResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                    getConfiguredAudienceModelResult.setMinMatchingSeedSize(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("audienceSizeConfig", targetDepth)) {
+                    context.nextToken();
+                    getConfiguredAudienceModelResult.setAudienceSizeConfig(AudienceSizeConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     getConfiguredAudienceModelResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
-                if (context.testExpression("updateTime", targetDepth)) {
+                if (context.testExpression("childResourceTagOnCreatePolicy", targetDepth)) {
                     context.nextToken();
-                    getConfiguredAudienceModelResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    getConfiguredAudienceModelResult.setChildResourceTagOnCreatePolicy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

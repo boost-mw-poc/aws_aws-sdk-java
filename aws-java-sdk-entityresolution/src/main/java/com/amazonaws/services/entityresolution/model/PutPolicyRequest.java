@@ -35,6 +35,13 @@ public class PutPolicyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The resource-based policy.
      * </p>
+     * <important>
+     * <p>
+     * If you set the value of the <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code> for the
+     * <code>PutPolicy</code> operation, you must also set the value of the <code>effect</code> parameter to
+     * <code>Deny</code> for the <code>AddPolicyStatement</code> operation.
+     * </p>
+     * </important>
      */
     private String policy;
     /**
@@ -88,9 +95,21 @@ public class PutPolicyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The resource-based policy.
      * </p>
+     * <important>
+     * <p>
+     * If you set the value of the <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code> for the
+     * <code>PutPolicy</code> operation, you must also set the value of the <code>effect</code> parameter to
+     * <code>Deny</code> for the <code>AddPolicyStatement</code> operation.
+     * </p>
+     * </important>
      * 
      * @param policy
-     *        The resource-based policy.
+     *        The resource-based policy.</p> <important>
+     *        <p>
+     *        If you set the value of the <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code>
+     *        for the <code>PutPolicy</code> operation, you must also set the value of the <code>effect</code> parameter
+     *        to <code>Deny</code> for the <code>AddPolicyStatement</code> operation.
+     *        </p>
      */
 
     public void setPolicy(String policy) {
@@ -101,8 +120,20 @@ public class PutPolicyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The resource-based policy.
      * </p>
+     * <important>
+     * <p>
+     * If you set the value of the <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code> for the
+     * <code>PutPolicy</code> operation, you must also set the value of the <code>effect</code> parameter to
+     * <code>Deny</code> for the <code>AddPolicyStatement</code> operation.
+     * </p>
+     * </important>
      * 
-     * @return The resource-based policy.
+     * @return The resource-based policy.</p> <important>
+     *         <p>
+     *         If you set the value of the <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code>
+     *         for the <code>PutPolicy</code> operation, you must also set the value of the <code>effect</code>
+     *         parameter to <code>Deny</code> for the <code>AddPolicyStatement</code> operation.
+     *         </p>
      */
 
     public String getPolicy() {
@@ -113,9 +144,21 @@ public class PutPolicyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <p>
      * The resource-based policy.
      * </p>
+     * <important>
+     * <p>
+     * If you set the value of the <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code> for the
+     * <code>PutPolicy</code> operation, you must also set the value of the <code>effect</code> parameter to
+     * <code>Deny</code> for the <code>AddPolicyStatement</code> operation.
+     * </p>
+     * </important>
      * 
      * @param policy
-     *        The resource-based policy.
+     *        The resource-based policy.</p> <important>
+     *        <p>
+     *        If you set the value of the <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code>
+     *        for the <code>PutPolicy</code> operation, you must also set the value of the <code>effect</code> parameter
+     *        to <code>Deny</code> for the <code>AddPolicyStatement</code> operation.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -29,24 +29,24 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateConfiguredAudienceModelRequestMarshaller {
 
-    private static final MarshallingInfo<String> AUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceModelArn").build();
-    private static final MarshallingInfo<StructuredPojo> AUDIENCESIZECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceSizeConfig").build();
-    private static final MarshallingInfo<String> CHILDRESOURCETAGONCREATEPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("childResourceTagOnCreatePolicy").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<Integer> MINMATCHINGSEEDSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minMatchingSeedSize").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> AUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceModelArn").build();
     private static final MarshallingInfo<StructuredPojo> OUTPUTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outputConfig").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<List> SHAREDAUDIENCEMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sharedAudienceMetrics").build();
+    private static final MarshallingInfo<Integer> MINMATCHINGSEEDSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minMatchingSeedSize").build();
+    private static final MarshallingInfo<StructuredPojo> AUDIENCESIZECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceSizeConfig").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> CHILDRESOURCETAGONCREATEPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("childResourceTagOnCreatePolicy").build();
 
     private static final CreateConfiguredAudienceModelRequestMarshaller instance = new CreateConfiguredAudienceModelRequestMarshaller();
 
@@ -64,15 +64,15 @@ public class CreateConfiguredAudienceModelRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getAudienceModelArn(), AUDIENCEMODELARN_BINDING);
-            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getAudienceSizeConfig(), AUDIENCESIZECONFIG_BINDING);
-            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getChildResourceTagOnCreatePolicy(), CHILDRESOURCETAGONCREATEPOLICY_BINDING);
-            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getMinMatchingSeedSize(), MINMATCHINGSEEDSIZE_BINDING);
             protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getAudienceModelArn(), AUDIENCEMODELARN_BINDING);
             protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getOutputConfig(), OUTPUTCONFIG_BINDING);
+            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getSharedAudienceMetrics(), SHAREDAUDIENCEMETRICS_BINDING);
+            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getMinMatchingSeedSize(), MINMATCHINGSEEDSIZE_BINDING);
+            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getAudienceSizeConfig(), AUDIENCESIZECONFIG_BINDING);
             protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createConfiguredAudienceModelRequest.getChildResourceTagOnCreatePolicy(), CHILDRESOURCETAGONCREATEPOLICY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

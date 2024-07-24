@@ -30,10 +30,10 @@ public class GlueDataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Glue catalog that contains the training data.
+     * The Glue table that contains the training data.
      * </p>
      */
-    private String catalogId;
+    private String tableName;
     /**
      * <p>
      * The Glue database that contains the training data.
@@ -42,48 +42,48 @@ public class GlueDataSource implements Serializable, Cloneable, StructuredPojo {
     private String databaseName;
     /**
      * <p>
+     * The Glue catalog that contains the training data.
+     * </p>
+     */
+    private String catalogId;
+
+    /**
+     * <p>
      * The Glue table that contains the training data.
      * </p>
-     */
-    private String tableName;
-
-    /**
-     * <p>
-     * The Glue catalog that contains the training data.
-     * </p>
      * 
-     * @param catalogId
-     *        The Glue catalog that contains the training data.
+     * @param tableName
+     *        The Glue table that contains the training data.
      */
 
-    public void setCatalogId(String catalogId) {
-        this.catalogId = catalogId;
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
     }
 
     /**
      * <p>
-     * The Glue catalog that contains the training data.
+     * The Glue table that contains the training data.
      * </p>
      * 
-     * @return The Glue catalog that contains the training data.
+     * @return The Glue table that contains the training data.
      */
 
-    public String getCatalogId() {
-        return this.catalogId;
+    public String getTableName() {
+        return this.tableName;
     }
 
     /**
      * <p>
-     * The Glue catalog that contains the training data.
+     * The Glue table that contains the training data.
      * </p>
      * 
-     * @param catalogId
-     *        The Glue catalog that contains the training data.
+     * @param tableName
+     *        The Glue table that contains the training data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GlueDataSource withCatalogId(String catalogId) {
-        setCatalogId(catalogId);
+    public GlueDataSource withTableName(String tableName) {
+        setTableName(tableName);
         return this;
     }
 
@@ -129,41 +129,41 @@ public class GlueDataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Glue table that contains the training data.
+     * The Glue catalog that contains the training data.
      * </p>
      * 
-     * @param tableName
-     *        The Glue table that contains the training data.
+     * @param catalogId
+     *        The Glue catalog that contains the training data.
      */
 
-    public void setTableName(String tableName) {
-        this.tableName = tableName;
+    public void setCatalogId(String catalogId) {
+        this.catalogId = catalogId;
     }
 
     /**
      * <p>
-     * The Glue table that contains the training data.
+     * The Glue catalog that contains the training data.
      * </p>
      * 
-     * @return The Glue table that contains the training data.
+     * @return The Glue catalog that contains the training data.
      */
 
-    public String getTableName() {
-        return this.tableName;
+    public String getCatalogId() {
+        return this.catalogId;
     }
 
     /**
      * <p>
-     * The Glue table that contains the training data.
+     * The Glue catalog that contains the training data.
      * </p>
      * 
-     * @param tableName
-     *        The Glue table that contains the training data.
+     * @param catalogId
+     *        The Glue catalog that contains the training data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GlueDataSource withTableName(String tableName) {
-        setTableName(tableName);
+    public GlueDataSource withCatalogId(String catalogId) {
+        setCatalogId(catalogId);
         return this;
     }
 
@@ -179,12 +179,12 @@ public class GlueDataSource implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getCatalogId() != null)
-            sb.append("CatalogId: ").append(getCatalogId()).append(",");
+        if (getTableName() != null)
+            sb.append("TableName: ").append(getTableName()).append(",");
         if (getDatabaseName() != null)
             sb.append("DatabaseName: ").append(getDatabaseName()).append(",");
-        if (getTableName() != null)
-            sb.append("TableName: ").append(getTableName());
+        if (getCatalogId() != null)
+            sb.append("CatalogId: ").append(getCatalogId());
         sb.append("}");
         return sb.toString();
     }
@@ -199,17 +199,17 @@ public class GlueDataSource implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof GlueDataSource == false)
             return false;
         GlueDataSource other = (GlueDataSource) obj;
-        if (other.getCatalogId() == null ^ this.getCatalogId() == null)
+        if (other.getTableName() == null ^ this.getTableName() == null)
             return false;
-        if (other.getCatalogId() != null && other.getCatalogId().equals(this.getCatalogId()) == false)
+        if (other.getTableName() != null && other.getTableName().equals(this.getTableName()) == false)
             return false;
         if (other.getDatabaseName() == null ^ this.getDatabaseName() == null)
             return false;
         if (other.getDatabaseName() != null && other.getDatabaseName().equals(this.getDatabaseName()) == false)
             return false;
-        if (other.getTableName() == null ^ this.getTableName() == null)
+        if (other.getCatalogId() == null ^ this.getCatalogId() == null)
             return false;
-        if (other.getTableName() != null && other.getTableName().equals(this.getTableName()) == false)
+        if (other.getCatalogId() != null && other.getCatalogId().equals(this.getCatalogId()) == false)
             return false;
         return true;
     }
@@ -219,9 +219,9 @@ public class GlueDataSource implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getCatalogId() == null) ? 0 : getCatalogId().hashCode());
-        hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
         hashCode = prime * hashCode + ((getTableName() == null) ? 0 : getTableName().hashCode());
+        hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
+        hashCode = prime * hashCode + ((getCatalogId() == null) ? 0 : getCatalogId().hashCode());
         return hashCode;
     }
 

@@ -27,10 +27,28 @@ public class CreateAudienceModelRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The description of the audience model.
+     * The start date and time of the training window.
      * </p>
      */
-    private String description;
+    private java.util.Date trainingDataStartTime;
+    /**
+     * <p>
+     * The end date and time of the training window.
+     * </p>
+     */
+    private java.util.Date trainingDataEndTime;
+    /**
+     * <p>
+     * The name of the audience model resource.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the training dataset for this audience model.
+     * </p>
+     */
+    private String trainingDatasetArn;
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the KMS key. This key is used to encrypt and decrypt customer-owned data in the
@@ -38,12 +56,6 @@ public class CreateAudienceModelRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String kmsKeyArn;
-    /**
-     * <p>
-     * The name of the audience model resource.
-     * </p>
-     */
-    private String name;
     /**
      * <p>
      * The optional metadata that you apply to the resource to help you categorize and organize them. Each tag consists
@@ -98,60 +110,168 @@ public class CreateAudienceModelRequest extends com.amazonaws.AmazonWebServiceRe
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The end date and time of the training window.
+     * The description of the audience model.
      * </p>
      */
-    private java.util.Date trainingDataEndTime;
+    private String description;
+
     /**
      * <p>
      * The start date and time of the training window.
      * </p>
+     * 
+     * @param trainingDataStartTime
+     *        The start date and time of the training window.
      */
-    private java.util.Date trainingDataStartTime;
+
+    public void setTrainingDataStartTime(java.util.Date trainingDataStartTime) {
+        this.trainingDataStartTime = trainingDataStartTime;
+    }
+
+    /**
+     * <p>
+     * The start date and time of the training window.
+     * </p>
+     * 
+     * @return The start date and time of the training window.
+     */
+
+    public java.util.Date getTrainingDataStartTime() {
+        return this.trainingDataStartTime;
+    }
+
+    /**
+     * <p>
+     * The start date and time of the training window.
+     * </p>
+     * 
+     * @param trainingDataStartTime
+     *        The start date and time of the training window.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAudienceModelRequest withTrainingDataStartTime(java.util.Date trainingDataStartTime) {
+        setTrainingDataStartTime(trainingDataStartTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The end date and time of the training window.
+     * </p>
+     * 
+     * @param trainingDataEndTime
+     *        The end date and time of the training window.
+     */
+
+    public void setTrainingDataEndTime(java.util.Date trainingDataEndTime) {
+        this.trainingDataEndTime = trainingDataEndTime;
+    }
+
+    /**
+     * <p>
+     * The end date and time of the training window.
+     * </p>
+     * 
+     * @return The end date and time of the training window.
+     */
+
+    public java.util.Date getTrainingDataEndTime() {
+        return this.trainingDataEndTime;
+    }
+
+    /**
+     * <p>
+     * The end date and time of the training window.
+     * </p>
+     * 
+     * @param trainingDataEndTime
+     *        The end date and time of the training window.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAudienceModelRequest withTrainingDataEndTime(java.util.Date trainingDataEndTime) {
+        setTrainingDataEndTime(trainingDataEndTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the audience model resource.
+     * </p>
+     * 
+     * @param name
+     *        The name of the audience model resource.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the audience model resource.
+     * </p>
+     * 
+     * @return The name of the audience model resource.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the audience model resource.
+     * </p>
+     * 
+     * @param name
+     *        The name of the audience model resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAudienceModelRequest withName(String name) {
+        setName(name);
+        return this;
+    }
+
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the training dataset for this audience model.
      * </p>
-     */
-    private String trainingDatasetArn;
-
-    /**
-     * <p>
-     * The description of the audience model.
-     * </p>
      * 
-     * @param description
-     *        The description of the audience model.
+     * @param trainingDatasetArn
+     *        The Amazon Resource Name (ARN) of the training dataset for this audience model.
      */
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTrainingDatasetArn(String trainingDatasetArn) {
+        this.trainingDatasetArn = trainingDatasetArn;
     }
 
     /**
      * <p>
-     * The description of the audience model.
+     * The Amazon Resource Name (ARN) of the training dataset for this audience model.
      * </p>
      * 
-     * @return The description of the audience model.
+     * @return The Amazon Resource Name (ARN) of the training dataset for this audience model.
      */
 
-    public String getDescription() {
-        return this.description;
+    public String getTrainingDatasetArn() {
+        return this.trainingDatasetArn;
     }
 
     /**
      * <p>
-     * The description of the audience model.
+     * The Amazon Resource Name (ARN) of the training dataset for this audience model.
      * </p>
      * 
-     * @param description
-     *        The description of the audience model.
+     * @param trainingDatasetArn
+     *        The Amazon Resource Name (ARN) of the training dataset for this audience model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateAudienceModelRequest withDescription(String description) {
-        setDescription(description);
+    public CreateAudienceModelRequest withTrainingDatasetArn(String trainingDatasetArn) {
+        setTrainingDatasetArn(trainingDatasetArn);
         return this;
     }
 
@@ -198,46 +318,6 @@ public class CreateAudienceModelRequest extends com.amazonaws.AmazonWebServiceRe
 
     public CreateAudienceModelRequest withKmsKeyArn(String kmsKeyArn) {
         setKmsKeyArn(kmsKeyArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the audience model resource.
-     * </p>
-     * 
-     * @param name
-     *        The name of the audience model resource.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * The name of the audience model resource.
-     * </p>
-     * 
-     * @return The name of the audience model resource.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The name of the audience model resource.
-     * </p>
-     * 
-     * @param name
-     *        The name of the audience model resource.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAudienceModelRequest withName(String name) {
-        setName(name);
         return this;
     }
 
@@ -587,121 +667,41 @@ public class CreateAudienceModelRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The end date and time of the training window.
+     * The description of the audience model.
      * </p>
      * 
-     * @param trainingDataEndTime
-     *        The end date and time of the training window.
+     * @param description
+     *        The description of the audience model.
      */
 
-    public void setTrainingDataEndTime(java.util.Date trainingDataEndTime) {
-        this.trainingDataEndTime = trainingDataEndTime;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
      * <p>
-     * The end date and time of the training window.
+     * The description of the audience model.
      * </p>
      * 
-     * @return The end date and time of the training window.
+     * @return The description of the audience model.
      */
 
-    public java.util.Date getTrainingDataEndTime() {
-        return this.trainingDataEndTime;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
      * <p>
-     * The end date and time of the training window.
+     * The description of the audience model.
      * </p>
      * 
-     * @param trainingDataEndTime
-     *        The end date and time of the training window.
+     * @param description
+     *        The description of the audience model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateAudienceModelRequest withTrainingDataEndTime(java.util.Date trainingDataEndTime) {
-        setTrainingDataEndTime(trainingDataEndTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The start date and time of the training window.
-     * </p>
-     * 
-     * @param trainingDataStartTime
-     *        The start date and time of the training window.
-     */
-
-    public void setTrainingDataStartTime(java.util.Date trainingDataStartTime) {
-        this.trainingDataStartTime = trainingDataStartTime;
-    }
-
-    /**
-     * <p>
-     * The start date and time of the training window.
-     * </p>
-     * 
-     * @return The start date and time of the training window.
-     */
-
-    public java.util.Date getTrainingDataStartTime() {
-        return this.trainingDataStartTime;
-    }
-
-    /**
-     * <p>
-     * The start date and time of the training window.
-     * </p>
-     * 
-     * @param trainingDataStartTime
-     *        The start date and time of the training window.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAudienceModelRequest withTrainingDataStartTime(java.util.Date trainingDataStartTime) {
-        setTrainingDataStartTime(trainingDataStartTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the training dataset for this audience model.
-     * </p>
-     * 
-     * @param trainingDatasetArn
-     *        The Amazon Resource Name (ARN) of the training dataset for this audience model.
-     */
-
-    public void setTrainingDatasetArn(String trainingDatasetArn) {
-        this.trainingDatasetArn = trainingDatasetArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the training dataset for this audience model.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) of the training dataset for this audience model.
-     */
-
-    public String getTrainingDatasetArn() {
-        return this.trainingDatasetArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the training dataset for this audience model.
-     * </p>
-     * 
-     * @param trainingDatasetArn
-     *        The Amazon Resource Name (ARN) of the training dataset for this audience model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateAudienceModelRequest withTrainingDatasetArn(String trainingDatasetArn) {
-        setTrainingDatasetArn(trainingDatasetArn);
+    public CreateAudienceModelRequest withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -717,20 +717,20 @@ public class CreateAudienceModelRequest extends com.amazonaws.AmazonWebServiceRe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getKmsKeyArn() != null)
-            sb.append("KmsKeyArn: ").append(getKmsKeyArn()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
-        if (getTrainingDataEndTime() != null)
-            sb.append("TrainingDataEndTime: ").append(getTrainingDataEndTime()).append(",");
         if (getTrainingDataStartTime() != null)
             sb.append("TrainingDataStartTime: ").append(getTrainingDataStartTime()).append(",");
+        if (getTrainingDataEndTime() != null)
+            sb.append("TrainingDataEndTime: ").append(getTrainingDataEndTime()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getTrainingDatasetArn() != null)
-            sb.append("TrainingDatasetArn: ").append(getTrainingDatasetArn());
+            sb.append("TrainingDatasetArn: ").append(getTrainingDatasetArn()).append(",");
+        if (getKmsKeyArn() != null)
+            sb.append("KmsKeyArn: ").append(getKmsKeyArn()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -745,33 +745,33 @@ public class CreateAudienceModelRequest extends com.amazonaws.AmazonWebServiceRe
         if (obj instanceof CreateAudienceModelRequest == false)
             return false;
         CreateAudienceModelRequest other = (CreateAudienceModelRequest) obj;
-        if (other.getDescription() == null ^ this.getDescription() == null)
+        if (other.getTrainingDataStartTime() == null ^ this.getTrainingDataStartTime() == null)
             return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getKmsKeyArn() == null ^ this.getKmsKeyArn() == null)
-            return false;
-        if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
-            return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getTags() == null ^ this.getTags() == null)
-            return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+        if (other.getTrainingDataStartTime() != null && other.getTrainingDataStartTime().equals(this.getTrainingDataStartTime()) == false)
             return false;
         if (other.getTrainingDataEndTime() == null ^ this.getTrainingDataEndTime() == null)
             return false;
         if (other.getTrainingDataEndTime() != null && other.getTrainingDataEndTime().equals(this.getTrainingDataEndTime()) == false)
             return false;
-        if (other.getTrainingDataStartTime() == null ^ this.getTrainingDataStartTime() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getTrainingDataStartTime() != null && other.getTrainingDataStartTime().equals(this.getTrainingDataStartTime()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getTrainingDatasetArn() == null ^ this.getTrainingDatasetArn() == null)
             return false;
         if (other.getTrainingDatasetArn() != null && other.getTrainingDatasetArn().equals(this.getTrainingDatasetArn()) == false)
+            return false;
+        if (other.getKmsKeyArn() == null ^ this.getKmsKeyArn() == null)
+            return false;
+        if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         return true;
     }
@@ -781,13 +781,13 @@ public class CreateAudienceModelRequest extends com.amazonaws.AmazonWebServiceRe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
-        hashCode = prime * hashCode + ((getTrainingDataEndTime() == null) ? 0 : getTrainingDataEndTime().hashCode());
         hashCode = prime * hashCode + ((getTrainingDataStartTime() == null) ? 0 : getTrainingDataStartTime().hashCode());
+        hashCode = prime * hashCode + ((getTrainingDataEndTime() == null) ? 0 : getTrainingDataEndTime().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getTrainingDatasetArn() == null) ? 0 : getTrainingDatasetArn().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

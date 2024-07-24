@@ -28,20 +28,20 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateConfiguredAudienceModelRequestMarshaller {
 
-    private static final MarshallingInfo<String> AUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceModelArn").build();
-    private static final MarshallingInfo<StructuredPojo> AUDIENCESIZECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceSizeConfig").build();
     private static final MarshallingInfo<String> CONFIGUREDAUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("configuredAudienceModelArn").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<Integer> MINMATCHINGSEEDSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minMatchingSeedSize").build();
     private static final MarshallingInfo<StructuredPojo> OUTPUTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outputConfig").build();
+    private static final MarshallingInfo<String> AUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceModelArn").build();
     private static final MarshallingInfo<List> SHAREDAUDIENCEMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sharedAudienceMetrics").build();
+    private static final MarshallingInfo<Integer> MINMATCHINGSEEDSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minMatchingSeedSize").build();
+    private static final MarshallingInfo<StructuredPojo> AUDIENCESIZECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceSizeConfig").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
 
     private static final UpdateConfiguredAudienceModelRequestMarshaller instance = new UpdateConfiguredAudienceModelRequestMarshaller();
 
@@ -59,13 +59,13 @@ public class UpdateConfiguredAudienceModelRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getAudienceModelArn(), AUDIENCEMODELARN_BINDING);
-            protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getAudienceSizeConfig(), AUDIENCESIZECONFIG_BINDING);
             protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getConfiguredAudienceModelArn(), CONFIGUREDAUDIENCEMODELARN_BINDING);
-            protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getMinMatchingSeedSize(), MINMATCHINGSEEDSIZE_BINDING);
             protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getOutputConfig(), OUTPUTCONFIG_BINDING);
+            protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getAudienceModelArn(), AUDIENCEMODELARN_BINDING);
             protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getSharedAudienceMetrics(), SHAREDAUDIENCEMETRICS_BINDING);
+            protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getMinMatchingSeedSize(), MINMATCHINGSEEDSIZE_BINDING);
+            protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getAudienceSizeConfig(), AUDIENCESIZECONFIG_BINDING);
+            protocolMarshaller.marshall(updateConfiguredAudienceModelRequest.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

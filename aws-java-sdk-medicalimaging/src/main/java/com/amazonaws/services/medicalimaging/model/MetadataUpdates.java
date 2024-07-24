@@ -34,6 +34,18 @@ public class MetadataUpdates implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private DICOMUpdates dICOMUpdates;
+    /**
+     * <p>
+     * Specifies the previous image set version ID to revert the current image set back to.
+     * </p>
+     * <note>
+     * <p>
+     * You must provide either <code>revertToVersionId</code> or <code>DICOMUpdates</code> in your request. A
+     * <code>ValidationException</code> error is thrown if both parameters are provided at the same time.
+     * </p>
+     * </note>
+     */
+    private String revertToVersionId;
 
     /**
      * <p>
@@ -76,6 +88,76 @@ public class MetadataUpdates implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Specifies the previous image set version ID to revert the current image set back to.
+     * </p>
+     * <note>
+     * <p>
+     * You must provide either <code>revertToVersionId</code> or <code>DICOMUpdates</code> in your request. A
+     * <code>ValidationException</code> error is thrown if both parameters are provided at the same time.
+     * </p>
+     * </note>
+     * 
+     * @param revertToVersionId
+     *        Specifies the previous image set version ID to revert the current image set back to.</p> <note>
+     *        <p>
+     *        You must provide either <code>revertToVersionId</code> or <code>DICOMUpdates</code> in your request. A
+     *        <code>ValidationException</code> error is thrown if both parameters are provided at the same time.
+     *        </p>
+     */
+
+    public void setRevertToVersionId(String revertToVersionId) {
+        this.revertToVersionId = revertToVersionId;
+    }
+
+    /**
+     * <p>
+     * Specifies the previous image set version ID to revert the current image set back to.
+     * </p>
+     * <note>
+     * <p>
+     * You must provide either <code>revertToVersionId</code> or <code>DICOMUpdates</code> in your request. A
+     * <code>ValidationException</code> error is thrown if both parameters are provided at the same time.
+     * </p>
+     * </note>
+     * 
+     * @return Specifies the previous image set version ID to revert the current image set back to.</p> <note>
+     *         <p>
+     *         You must provide either <code>revertToVersionId</code> or <code>DICOMUpdates</code> in your request. A
+     *         <code>ValidationException</code> error is thrown if both parameters are provided at the same time.
+     *         </p>
+     */
+
+    public String getRevertToVersionId() {
+        return this.revertToVersionId;
+    }
+
+    /**
+     * <p>
+     * Specifies the previous image set version ID to revert the current image set back to.
+     * </p>
+     * <note>
+     * <p>
+     * You must provide either <code>revertToVersionId</code> or <code>DICOMUpdates</code> in your request. A
+     * <code>ValidationException</code> error is thrown if both parameters are provided at the same time.
+     * </p>
+     * </note>
+     * 
+     * @param revertToVersionId
+     *        Specifies the previous image set version ID to revert the current image set back to.</p> <note>
+     *        <p>
+     *        You must provide either <code>revertToVersionId</code> or <code>DICOMUpdates</code> in your request. A
+     *        <code>ValidationException</code> error is thrown if both parameters are provided at the same time.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MetadataUpdates withRevertToVersionId(String revertToVersionId) {
+        setRevertToVersionId(revertToVersionId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +170,9 @@ public class MetadataUpdates implements Serializable, Cloneable, StructuredPojo 
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDICOMUpdates() != null)
-            sb.append("DICOMUpdates: ").append(getDICOMUpdates());
+            sb.append("DICOMUpdates: ").append(getDICOMUpdates()).append(",");
+        if (getRevertToVersionId() != null)
+            sb.append("RevertToVersionId: ").append(getRevertToVersionId());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +191,10 @@ public class MetadataUpdates implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getDICOMUpdates() != null && other.getDICOMUpdates().equals(this.getDICOMUpdates()) == false)
             return false;
+        if (other.getRevertToVersionId() == null ^ this.getRevertToVersionId() == null)
+            return false;
+        if (other.getRevertToVersionId() != null && other.getRevertToVersionId().equals(this.getRevertToVersionId()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +204,7 @@ public class MetadataUpdates implements Serializable, Cloneable, StructuredPojo 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDICOMUpdates() == null) ? 0 : getDICOMUpdates().hashCode());
+        hashCode = prime * hashCode + ((getRevertToVersionId() == null) ? 0 : getRevertToVersionId().hashCode());
         return hashCode;
     }
 

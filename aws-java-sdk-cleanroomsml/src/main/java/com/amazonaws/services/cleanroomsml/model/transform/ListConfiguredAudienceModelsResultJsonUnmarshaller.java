@@ -48,16 +48,16 @@ public class ListConfiguredAudienceModelsResultJsonUnmarshaller implements Unmar
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("nextToken", targetDepth)) {
+                    context.nextToken();
+                    listConfiguredAudienceModelsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("configuredAudienceModels", targetDepth)) {
                     context.nextToken();
                     listConfiguredAudienceModelsResult.setConfiguredAudienceModels(new ListUnmarshaller<ConfiguredAudienceModelSummary>(
                             ConfiguredAudienceModelSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("nextToken", targetDepth)) {
-                    context.nextToken();
-                    listConfiguredAudienceModelsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

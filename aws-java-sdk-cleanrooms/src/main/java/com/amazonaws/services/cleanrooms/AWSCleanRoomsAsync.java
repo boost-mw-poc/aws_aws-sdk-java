@@ -350,6 +350,74 @@ public interface AWSCleanRoomsAsync extends AWSCleanRooms {
 
     /**
      * <p>
+     * Creates a new analysis rule for an associated configured table.
+     * </p>
+     * 
+     * @param createConfiguredTableAssociationAnalysisRuleRequest
+     * @return A Java Future containing the result of the CreateConfiguredTableAssociationAnalysisRule operation
+     *         returned by the service.
+     * @sample AWSCleanRoomsAsync.CreateConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfiguredTableAssociationAnalysisRuleResult> createConfiguredTableAssociationAnalysisRuleAsync(
+            CreateConfiguredTableAssociationAnalysisRuleRequest createConfiguredTableAssociationAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Creates a new analysis rule for an associated configured table.
+     * </p>
+     * 
+     * @param createConfiguredTableAssociationAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateConfiguredTableAssociationAnalysisRule operation
+     *         returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.CreateConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfiguredTableAssociationAnalysisRuleResult> createConfiguredTableAssociationAnalysisRuleAsync(
+            CreateConfiguredTableAssociationAnalysisRuleRequest createConfiguredTableAssociationAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateConfiguredTableAssociationAnalysisRuleRequest, CreateConfiguredTableAssociationAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an ID mapping table.
+     * </p>
+     * 
+     * @param createIdMappingTableRequest
+     * @return A Java Future containing the result of the CreateIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsync.CreateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIdMappingTableResult> createIdMappingTableAsync(CreateIdMappingTableRequest createIdMappingTableRequest);
+
+    /**
+     * <p>
+     * Creates an ID mapping table.
+     * </p>
+     * 
+     * @param createIdMappingTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.CreateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIdMappingTableResult> createIdMappingTableAsync(CreateIdMappingTableRequest createIdMappingTableRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIdMappingTableRequest, CreateIdMappingTableResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a membership for a specific collaboration identifier and joins the collaboration.
      * </p>
      * 
@@ -615,6 +683,109 @@ public interface AWSCleanRoomsAsync extends AWSCleanRooms {
     java.util.concurrent.Future<DeleteConfiguredTableAssociationResult> deleteConfiguredTableAssociationAsync(
             DeleteConfiguredTableAssociationRequest deleteConfiguredTableAssociationRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteConfiguredTableAssociationRequest, DeleteConfiguredTableAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param deleteConfiguredTableAssociationAnalysisRuleRequest
+     * @return A Java Future containing the result of the DeleteConfiguredTableAssociationAnalysisRule operation
+     *         returned by the service.
+     * @sample AWSCleanRoomsAsync.DeleteConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfiguredTableAssociationAnalysisRuleResult> deleteConfiguredTableAssociationAnalysisRuleAsync(
+            DeleteConfiguredTableAssociationAnalysisRuleRequest deleteConfiguredTableAssociationAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Deletes an analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param deleteConfiguredTableAssociationAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteConfiguredTableAssociationAnalysisRule operation
+     *         returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.DeleteConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfiguredTableAssociationAnalysisRuleResult> deleteConfiguredTableAssociationAnalysisRuleAsync(
+            DeleteConfiguredTableAssociationAnalysisRuleRequest deleteConfiguredTableAssociationAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteConfiguredTableAssociationAnalysisRuleRequest, DeleteConfiguredTableAssociationAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an ID mapping table.
+     * </p>
+     * 
+     * @param deleteIdMappingTableRequest
+     * @return A Java Future containing the result of the DeleteIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsync.DeleteIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdMappingTableResult> deleteIdMappingTableAsync(DeleteIdMappingTableRequest deleteIdMappingTableRequest);
+
+    /**
+     * <p>
+     * Deletes an ID mapping table.
+     * </p>
+     * 
+     * @param deleteIdMappingTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.DeleteIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdMappingTableResult> deleteIdMappingTableAsync(DeleteIdMappingTableRequest deleteIdMappingTableRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIdMappingTableRequest, DeleteIdMappingTableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an ID namespace association.
+     * </p>
+     * 
+     * @param deleteIdNamespaceAssociationRequest
+     * @return A Java Future containing the result of the DeleteIdNamespaceAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.DeleteIdNamespaceAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteIdNamespaceAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdNamespaceAssociationResult> deleteIdNamespaceAssociationAsync(
+            DeleteIdNamespaceAssociationRequest deleteIdNamespaceAssociationRequest);
+
+    /**
+     * <p>
+     * Deletes an ID namespace association.
+     * </p>
+     * 
+     * @param deleteIdNamespaceAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIdNamespaceAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.DeleteIdNamespaceAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteIdNamespaceAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdNamespaceAssociationResult> deleteIdNamespaceAssociationAsync(
+            DeleteIdNamespaceAssociationRequest deleteIdNamespaceAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIdNamespaceAssociationRequest, DeleteIdNamespaceAssociationResult> asyncHandler);
 
     /**
      * <p>
@@ -1022,6 +1193,74 @@ public interface AWSCleanRoomsAsync extends AWSCleanRooms {
 
     /**
      * <p>
+     * Retrieves the analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param getConfiguredTableAssociationAnalysisRuleRequest
+     * @return A Java Future containing the result of the GetConfiguredTableAssociationAnalysisRule operation returned
+     *         by the service.
+     * @sample AWSCleanRoomsAsync.GetConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfiguredTableAssociationAnalysisRuleResult> getConfiguredTableAssociationAnalysisRuleAsync(
+            GetConfiguredTableAssociationAnalysisRuleRequest getConfiguredTableAssociationAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Retrieves the analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param getConfiguredTableAssociationAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetConfiguredTableAssociationAnalysisRule operation returned
+     *         by the service.
+     * @sample AWSCleanRoomsAsyncHandler.GetConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfiguredTableAssociationAnalysisRuleResult> getConfiguredTableAssociationAnalysisRuleAsync(
+            GetConfiguredTableAssociationAnalysisRuleRequest getConfiguredTableAssociationAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<GetConfiguredTableAssociationAnalysisRuleRequest, GetConfiguredTableAssociationAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves an ID mapping table.
+     * </p>
+     * 
+     * @param getIdMappingTableRequest
+     * @return A Java Future containing the result of the GetIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsync.GetIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetIdMappingTable" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdMappingTableResult> getIdMappingTableAsync(GetIdMappingTableRequest getIdMappingTableRequest);
+
+    /**
+     * <p>
+     * Retrieves an ID mapping table.
+     * </p>
+     * 
+     * @param getIdMappingTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.GetIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetIdMappingTable" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdMappingTableResult> getIdMappingTableAsync(GetIdMappingTableRequest getIdMappingTableRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIdMappingTableRequest, GetIdMappingTableResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves a specified membership for an identifier.
      * </p>
      * 
@@ -1280,6 +1519,43 @@ public interface AWSCleanRoomsAsync extends AWSCleanRooms {
 
     /**
      * <p>
+     * Returns a list of the ID namespace associations in a collaboration.
+     * </p>
+     * 
+     * @param listCollaborationIdNamespaceAssociationsRequest
+     * @return A Java Future containing the result of the ListCollaborationIdNamespaceAssociations operation returned by
+     *         the service.
+     * @sample AWSCleanRoomsAsync.ListCollaborationIdNamespaceAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListCollaborationIdNamespaceAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCollaborationIdNamespaceAssociationsResult> listCollaborationIdNamespaceAssociationsAsync(
+            ListCollaborationIdNamespaceAssociationsRequest listCollaborationIdNamespaceAssociationsRequest);
+
+    /**
+     * <p>
+     * Returns a list of the ID namespace associations in a collaboration.
+     * </p>
+     * 
+     * @param listCollaborationIdNamespaceAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCollaborationIdNamespaceAssociations operation returned by
+     *         the service.
+     * @sample AWSCleanRoomsAsyncHandler.ListCollaborationIdNamespaceAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListCollaborationIdNamespaceAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCollaborationIdNamespaceAssociationsResult> listCollaborationIdNamespaceAssociationsAsync(
+            ListCollaborationIdNamespaceAssociationsRequest listCollaborationIdNamespaceAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCollaborationIdNamespaceAssociationsRequest, ListCollaborationIdNamespaceAssociationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns an array that summarizes each privacy budget template in a specified collaboration.
      * </p>
      * 
@@ -1485,6 +1761,70 @@ public interface AWSCleanRoomsAsync extends AWSCleanRooms {
      */
     java.util.concurrent.Future<ListConfiguredTablesResult> listConfiguredTablesAsync(ListConfiguredTablesRequest listConfiguredTablesRequest,
             com.amazonaws.handlers.AsyncHandler<ListConfiguredTablesRequest, ListConfiguredTablesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of ID mapping tables.
+     * </p>
+     * 
+     * @param listIdMappingTablesRequest
+     * @return A Java Future containing the result of the ListIdMappingTables operation returned by the service.
+     * @sample AWSCleanRoomsAsync.ListIdMappingTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListIdMappingTables" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdMappingTablesResult> listIdMappingTablesAsync(ListIdMappingTablesRequest listIdMappingTablesRequest);
+
+    /**
+     * <p>
+     * Returns a list of ID mapping tables.
+     * </p>
+     * 
+     * @param listIdMappingTablesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListIdMappingTables operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.ListIdMappingTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListIdMappingTables" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdMappingTablesResult> listIdMappingTablesAsync(ListIdMappingTablesRequest listIdMappingTablesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListIdMappingTablesRequest, ListIdMappingTablesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of ID namespace associations.
+     * </p>
+     * 
+     * @param listIdNamespaceAssociationsRequest
+     * @return A Java Future containing the result of the ListIdNamespaceAssociations operation returned by the service.
+     * @sample AWSCleanRoomsAsync.ListIdNamespaceAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListIdNamespaceAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdNamespaceAssociationsResult> listIdNamespaceAssociationsAsync(
+            ListIdNamespaceAssociationsRequest listIdNamespaceAssociationsRequest);
+
+    /**
+     * <p>
+     * Returns a list of ID namespace associations.
+     * </p>
+     * 
+     * @param listIdNamespaceAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListIdNamespaceAssociations operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.ListIdNamespaceAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListIdNamespaceAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdNamespaceAssociationsResult> listIdNamespaceAssociationsAsync(
+            ListIdNamespaceAssociationsRequest listIdNamespaceAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListIdNamespaceAssociationsRequest, ListIdNamespaceAssociationsResult> asyncHandler);
 
     /**
      * <p>
@@ -1704,6 +2044,37 @@ public interface AWSCleanRoomsAsync extends AWSCleanRooms {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Defines the information that's necessary to populate an ID mapping table.
+     * </p>
+     * 
+     * @param populateIdMappingTableRequest
+     * @return A Java Future containing the result of the PopulateIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsync.PopulateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/PopulateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PopulateIdMappingTableResult> populateIdMappingTableAsync(PopulateIdMappingTableRequest populateIdMappingTableRequest);
+
+    /**
+     * <p>
+     * Defines the information that's necessary to populate an ID mapping table.
+     * </p>
+     * 
+     * @param populateIdMappingTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PopulateIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.PopulateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/PopulateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PopulateIdMappingTableResult> populateIdMappingTableAsync(PopulateIdMappingTableRequest populateIdMappingTableRequest,
+            com.amazonaws.handlers.AsyncHandler<PopulateIdMappingTableRequest, PopulateIdMappingTableResult> asyncHandler);
 
     /**
      * <p>
@@ -2030,6 +2401,74 @@ public interface AWSCleanRoomsAsync extends AWSCleanRooms {
     java.util.concurrent.Future<UpdateConfiguredTableAssociationResult> updateConfiguredTableAssociationAsync(
             UpdateConfiguredTableAssociationRequest updateConfiguredTableAssociationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateConfiguredTableAssociationRequest, UpdateConfiguredTableAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param updateConfiguredTableAssociationAnalysisRuleRequest
+     * @return A Java Future containing the result of the UpdateConfiguredTableAssociationAnalysisRule operation
+     *         returned by the service.
+     * @sample AWSCleanRoomsAsync.UpdateConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfiguredTableAssociationAnalysisRuleResult> updateConfiguredTableAssociationAnalysisRuleAsync(
+            UpdateConfiguredTableAssociationAnalysisRuleRequest updateConfiguredTableAssociationAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Updates the analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param updateConfiguredTableAssociationAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateConfiguredTableAssociationAnalysisRule operation
+     *         returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.UpdateConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfiguredTableAssociationAnalysisRuleResult> updateConfiguredTableAssociationAnalysisRuleAsync(
+            UpdateConfiguredTableAssociationAnalysisRuleRequest updateConfiguredTableAssociationAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateConfiguredTableAssociationAnalysisRuleRequest, UpdateConfiguredTableAssociationAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides the details that are necessary to update an ID mapping table.
+     * </p>
+     * 
+     * @param updateIdMappingTableRequest
+     * @return A Java Future containing the result of the UpdateIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsync.UpdateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIdMappingTableResult> updateIdMappingTableAsync(UpdateIdMappingTableRequest updateIdMappingTableRequest);
+
+    /**
+     * <p>
+     * Provides the details that are necessary to update an ID mapping table.
+     * </p>
+     * 
+     * @param updateIdMappingTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateIdMappingTable operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.UpdateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIdMappingTableResult> updateIdMappingTableAsync(UpdateIdMappingTableRequest updateIdMappingTableRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateIdMappingTableRequest, UpdateIdMappingTableResult> asyncHandler);
 
     /**
      * <p>

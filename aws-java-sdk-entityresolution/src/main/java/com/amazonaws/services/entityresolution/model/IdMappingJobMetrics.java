@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object containing <code>InputRecords</code>, <code>TotalRecordsProcessed</code>, <code>MatchIDs</code>, and
- * <code>RecordsNotProcessed</code>.
+ * An object containing <code>InputRecords</code>, <code>RecordsNotProcessed</code>, <code>TotalRecordsProcessed</code>,
+ * <code>TotalMappedRecords</code>, <code>TotalMappedSourceRecords</code>, and <code>TotalMappedTargetRecords</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/IdMappingJobMetrics"
@@ -31,7 +31,7 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The total number of input records.
+     * The total number of records that were input for processing.
      * </p>
      */
     private Integer inputRecords;
@@ -43,18 +43,36 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
     private Integer recordsNotProcessed;
     /**
      * <p>
-     * The total number of records processed.
+     * The total number of records that were mapped.
+     * </p>
+     */
+    private Integer totalMappedRecords;
+    /**
+     * <p>
+     * The total number of mapped source records.
+     * </p>
+     */
+    private Integer totalMappedSourceRecords;
+    /**
+     * <p>
+     * The total number of distinct mapped target records.
+     * </p>
+     */
+    private Integer totalMappedTargetRecords;
+    /**
+     * <p>
+     * The total number of records that were processed.
      * </p>
      */
     private Integer totalRecordsProcessed;
 
     /**
      * <p>
-     * The total number of input records.
+     * The total number of records that were input for processing.
      * </p>
      * 
      * @param inputRecords
-     *        The total number of input records.
+     *        The total number of records that were input for processing.
      */
 
     public void setInputRecords(Integer inputRecords) {
@@ -63,10 +81,10 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The total number of input records.
+     * The total number of records that were input for processing.
      * </p>
      * 
-     * @return The total number of input records.
+     * @return The total number of records that were input for processing.
      */
 
     public Integer getInputRecords() {
@@ -75,11 +93,11 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The total number of input records.
+     * The total number of records that were input for processing.
      * </p>
      * 
      * @param inputRecords
-     *        The total number of input records.
+     *        The total number of records that were input for processing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,11 +148,131 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The total number of records processed.
+     * The total number of records that were mapped.
+     * </p>
+     * 
+     * @param totalMappedRecords
+     *        The total number of records that were mapped.
+     */
+
+    public void setTotalMappedRecords(Integer totalMappedRecords) {
+        this.totalMappedRecords = totalMappedRecords;
+    }
+
+    /**
+     * <p>
+     * The total number of records that were mapped.
+     * </p>
+     * 
+     * @return The total number of records that were mapped.
+     */
+
+    public Integer getTotalMappedRecords() {
+        return this.totalMappedRecords;
+    }
+
+    /**
+     * <p>
+     * The total number of records that were mapped.
+     * </p>
+     * 
+     * @param totalMappedRecords
+     *        The total number of records that were mapped.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdMappingJobMetrics withTotalMappedRecords(Integer totalMappedRecords) {
+        setTotalMappedRecords(totalMappedRecords);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total number of mapped source records.
+     * </p>
+     * 
+     * @param totalMappedSourceRecords
+     *        The total number of mapped source records.
+     */
+
+    public void setTotalMappedSourceRecords(Integer totalMappedSourceRecords) {
+        this.totalMappedSourceRecords = totalMappedSourceRecords;
+    }
+
+    /**
+     * <p>
+     * The total number of mapped source records.
+     * </p>
+     * 
+     * @return The total number of mapped source records.
+     */
+
+    public Integer getTotalMappedSourceRecords() {
+        return this.totalMappedSourceRecords;
+    }
+
+    /**
+     * <p>
+     * The total number of mapped source records.
+     * </p>
+     * 
+     * @param totalMappedSourceRecords
+     *        The total number of mapped source records.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdMappingJobMetrics withTotalMappedSourceRecords(Integer totalMappedSourceRecords) {
+        setTotalMappedSourceRecords(totalMappedSourceRecords);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total number of distinct mapped target records.
+     * </p>
+     * 
+     * @param totalMappedTargetRecords
+     *        The total number of distinct mapped target records.
+     */
+
+    public void setTotalMappedTargetRecords(Integer totalMappedTargetRecords) {
+        this.totalMappedTargetRecords = totalMappedTargetRecords;
+    }
+
+    /**
+     * <p>
+     * The total number of distinct mapped target records.
+     * </p>
+     * 
+     * @return The total number of distinct mapped target records.
+     */
+
+    public Integer getTotalMappedTargetRecords() {
+        return this.totalMappedTargetRecords;
+    }
+
+    /**
+     * <p>
+     * The total number of distinct mapped target records.
+     * </p>
+     * 
+     * @param totalMappedTargetRecords
+     *        The total number of distinct mapped target records.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdMappingJobMetrics withTotalMappedTargetRecords(Integer totalMappedTargetRecords) {
+        setTotalMappedTargetRecords(totalMappedTargetRecords);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total number of records that were processed.
      * </p>
      * 
      * @param totalRecordsProcessed
-     *        The total number of records processed.
+     *        The total number of records that were processed.
      */
 
     public void setTotalRecordsProcessed(Integer totalRecordsProcessed) {
@@ -143,10 +281,10 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The total number of records processed.
+     * The total number of records that were processed.
      * </p>
      * 
-     * @return The total number of records processed.
+     * @return The total number of records that were processed.
      */
 
     public Integer getTotalRecordsProcessed() {
@@ -155,11 +293,11 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The total number of records processed.
+     * The total number of records that were processed.
      * </p>
      * 
      * @param totalRecordsProcessed
-     *        The total number of records processed.
+     *        The total number of records that were processed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,6 +322,12 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
             sb.append("InputRecords: ").append(getInputRecords()).append(",");
         if (getRecordsNotProcessed() != null)
             sb.append("RecordsNotProcessed: ").append(getRecordsNotProcessed()).append(",");
+        if (getTotalMappedRecords() != null)
+            sb.append("TotalMappedRecords: ").append(getTotalMappedRecords()).append(",");
+        if (getTotalMappedSourceRecords() != null)
+            sb.append("TotalMappedSourceRecords: ").append(getTotalMappedSourceRecords()).append(",");
+        if (getTotalMappedTargetRecords() != null)
+            sb.append("TotalMappedTargetRecords: ").append(getTotalMappedTargetRecords()).append(",");
         if (getTotalRecordsProcessed() != null)
             sb.append("TotalRecordsProcessed: ").append(getTotalRecordsProcessed());
         sb.append("}");
@@ -208,6 +352,18 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getRecordsNotProcessed() != null && other.getRecordsNotProcessed().equals(this.getRecordsNotProcessed()) == false)
             return false;
+        if (other.getTotalMappedRecords() == null ^ this.getTotalMappedRecords() == null)
+            return false;
+        if (other.getTotalMappedRecords() != null && other.getTotalMappedRecords().equals(this.getTotalMappedRecords()) == false)
+            return false;
+        if (other.getTotalMappedSourceRecords() == null ^ this.getTotalMappedSourceRecords() == null)
+            return false;
+        if (other.getTotalMappedSourceRecords() != null && other.getTotalMappedSourceRecords().equals(this.getTotalMappedSourceRecords()) == false)
+            return false;
+        if (other.getTotalMappedTargetRecords() == null ^ this.getTotalMappedTargetRecords() == null)
+            return false;
+        if (other.getTotalMappedTargetRecords() != null && other.getTotalMappedTargetRecords().equals(this.getTotalMappedTargetRecords()) == false)
+            return false;
         if (other.getTotalRecordsProcessed() == null ^ this.getTotalRecordsProcessed() == null)
             return false;
         if (other.getTotalRecordsProcessed() != null && other.getTotalRecordsProcessed().equals(this.getTotalRecordsProcessed()) == false)
@@ -222,6 +378,9 @@ public class IdMappingJobMetrics implements Serializable, Cloneable, StructuredP
 
         hashCode = prime * hashCode + ((getInputRecords() == null) ? 0 : getInputRecords().hashCode());
         hashCode = prime * hashCode + ((getRecordsNotProcessed() == null) ? 0 : getRecordsNotProcessed().hashCode());
+        hashCode = prime * hashCode + ((getTotalMappedRecords() == null) ? 0 : getTotalMappedRecords().hashCode());
+        hashCode = prime * hashCode + ((getTotalMappedSourceRecords() == null) ? 0 : getTotalMappedSourceRecords().hashCode());
+        hashCode = prime * hashCode + ((getTotalMappedTargetRecords() == null) ? 0 : getTotalMappedTargetRecords().hashCode());
         hashCode = prime * hashCode + ((getTotalRecordsProcessed() == null) ? 0 : getTotalRecordsProcessed().hashCode());
         return hashCode;
     }

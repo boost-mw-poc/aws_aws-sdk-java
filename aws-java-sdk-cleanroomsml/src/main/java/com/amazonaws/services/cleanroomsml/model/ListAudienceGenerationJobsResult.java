@@ -25,16 +25,56 @@ public class ListAudienceGenerationJobsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The audience generation jobs that match the request.
-     * </p>
-     */
-    private java.util.List<AudienceGenerationJobSummary> audienceGenerationJobs;
-    /**
-     * <p>
      * The token value retrieved from a previous call to access the next page of results.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The audience generation jobs that match the request.
+     * </p>
+     */
+    private java.util.List<AudienceGenerationJobSummary> audienceGenerationJobs;
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @return The token value retrieved from a previous call to access the next page of results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAudienceGenerationJobsResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
 
     /**
      * <p>
@@ -107,46 +147,6 @@ public class ListAudienceGenerationJobsResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @return The token value retrieved from a previous call to access the next page of results.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListAudienceGenerationJobsResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -158,10 +158,10 @@ public class ListAudienceGenerationJobsResult extends com.amazonaws.AmazonWebSer
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceGenerationJobs() != null)
-            sb.append("AudienceGenerationJobs: ").append(getAudienceGenerationJobs()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getAudienceGenerationJobs() != null)
+            sb.append("AudienceGenerationJobs: ").append(getAudienceGenerationJobs());
         sb.append("}");
         return sb.toString();
     }
@@ -176,13 +176,13 @@ public class ListAudienceGenerationJobsResult extends com.amazonaws.AmazonWebSer
         if (obj instanceof ListAudienceGenerationJobsResult == false)
             return false;
         ListAudienceGenerationJobsResult other = (ListAudienceGenerationJobsResult) obj;
-        if (other.getAudienceGenerationJobs() == null ^ this.getAudienceGenerationJobs() == null)
-            return false;
-        if (other.getAudienceGenerationJobs() != null && other.getAudienceGenerationJobs().equals(this.getAudienceGenerationJobs()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getAudienceGenerationJobs() == null ^ this.getAudienceGenerationJobs() == null)
+            return false;
+        if (other.getAudienceGenerationJobs() != null && other.getAudienceGenerationJobs().equals(this.getAudienceGenerationJobs()) == false)
             return false;
         return true;
     }
@@ -192,8 +192,8 @@ public class ListAudienceGenerationJobsResult extends com.amazonaws.AmazonWebSer
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceGenerationJobs() == null) ? 0 : getAudienceGenerationJobs().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getAudienceGenerationJobs() == null) ? 0 : getAudienceGenerationJobs().hashCode());
         return hashCode;
     }
 

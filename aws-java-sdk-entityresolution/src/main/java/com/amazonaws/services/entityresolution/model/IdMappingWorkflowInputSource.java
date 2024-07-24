@@ -30,7 +30,7 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * An Glue table ARN for the input source table.
+     * An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * </p>
      */
     private String inputSourceARN;
@@ -49,19 +49,19 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      */
     private String type;
 
     /**
      * <p>
-     * An Glue table ARN for the input source table.
+     * An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * </p>
      * 
      * @param inputSourceARN
-     *        An Glue table ARN for the input source table.
+     *        An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      */
 
     public void setInputSourceARN(String inputSourceARN) {
@@ -70,10 +70,10 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * An Glue table ARN for the input source table.
+     * An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * </p>
      * 
-     * @return An Glue table ARN for the input source table.
+     * @return An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      */
 
     public String getInputSourceARN() {
@@ -82,11 +82,11 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * An Glue table ARN for the input source table.
+     * An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * </p>
      * 
      * @param inputSourceARN
-     *        An Glue table ARN for the input source table.
+     *        An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,8 +144,8 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      * 
      * @param type
@@ -155,8 +155,8 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      *        an ID mapping workflow.
      *        </p>
      *        <p>
-     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-     *        <code>sourceIds</code> will resolve to.
+     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code>
+     *        will resolve to.
      * @see IdNamespaceType
      */
 
@@ -173,8 +173,8 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      * 
      * @return The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>. </p>
@@ -183,7 +183,7 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      *         an ID mapping workflow.
      *         </p>
      *         <p>
-     *         The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
+     *         The <code>TARGET</code> contains a configuration of <code>targetId</code> which all
      *         <code>sourceIds</code> will resolve to.
      * @see IdNamespaceType
      */
@@ -201,8 +201,8 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      * 
      * @param type
@@ -212,8 +212,8 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      *        an ID mapping workflow.
      *        </p>
      *        <p>
-     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-     *        <code>sourceIds</code> will resolve to.
+     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code>
+     *        will resolve to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdNamespaceType
      */
@@ -232,8 +232,8 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      * 
      * @param type
@@ -243,8 +243,8 @@ public class IdMappingWorkflowInputSource implements Serializable, Cloneable, St
      *        an ID mapping workflow.
      *        </p>
      *        <p>
-     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-     *        <code>sourceIds</code> will resolve to.
+     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code>
+     *        will resolve to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdNamespaceType
      */

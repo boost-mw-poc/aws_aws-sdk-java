@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StatusDetailsMarshaller {
 
-    private static final MarshallingInfo<String> MESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("message").build();
     private static final MarshallingInfo<String> STATUSCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("statusCode").build();
+    private static final MarshallingInfo<String> MESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("message").build();
 
     private static final StatusDetailsMarshaller instance = new StatusDetailsMarshaller();
 
@@ -48,8 +48,8 @@ public class StatusDetailsMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(statusDetails.getMessage(), MESSAGE_BINDING);
             protocolMarshaller.marshall(statusDetails.getStatusCode(), STATUSCODE_BINDING);
+            protocolMarshaller.marshall(statusDetails.getMessage(), MESSAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

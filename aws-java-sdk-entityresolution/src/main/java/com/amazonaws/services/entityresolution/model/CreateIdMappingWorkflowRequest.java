@@ -33,7 +33,7 @@ public class CreateIdMappingWorkflowRequest extends com.amazonaws.AmazonWebServi
     private String description;
     /**
      * <p>
-     * An object which defines the <code>idMappingType</code> and the <code>providerProperties</code>.
+     * An object which defines the ID mapping technique and any additional configurations.
      * </p>
      */
     private IdMappingTechniques idMappingTechniques;
@@ -113,11 +113,11 @@ public class CreateIdMappingWorkflowRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * An object which defines the <code>idMappingType</code> and the <code>providerProperties</code>.
+     * An object which defines the ID mapping technique and any additional configurations.
      * </p>
      * 
      * @param idMappingTechniques
-     *        An object which defines the <code>idMappingType</code> and the <code>providerProperties</code>.
+     *        An object which defines the ID mapping technique and any additional configurations.
      */
 
     public void setIdMappingTechniques(IdMappingTechniques idMappingTechniques) {
@@ -126,10 +126,10 @@ public class CreateIdMappingWorkflowRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * An object which defines the <code>idMappingType</code> and the <code>providerProperties</code>.
+     * An object which defines the ID mapping technique and any additional configurations.
      * </p>
      * 
-     * @return An object which defines the <code>idMappingType</code> and the <code>providerProperties</code>.
+     * @return An object which defines the ID mapping technique and any additional configurations.
      */
 
     public IdMappingTechniques getIdMappingTechniques() {
@@ -138,11 +138,11 @@ public class CreateIdMappingWorkflowRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * An object which defines the <code>idMappingType</code> and the <code>providerProperties</code>.
+     * An object which defines the ID mapping technique and any additional configurations.
      * </p>
      * 
      * @param idMappingTechniques
-     *        An object which defines the <code>idMappingType</code> and the <code>providerProperties</code>.
+     *        An object which defines the ID mapping technique and any additional configurations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

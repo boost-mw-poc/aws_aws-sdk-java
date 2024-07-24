@@ -66,6 +66,10 @@ public class AnalysisRuleListJsonUnmarshaller implements Unmarshaller<AnalysisRu
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("additionalAnalyses", targetDepth)) {
+                    context.nextToken();
+                    analysisRuleList.setAdditionalAnalyses(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

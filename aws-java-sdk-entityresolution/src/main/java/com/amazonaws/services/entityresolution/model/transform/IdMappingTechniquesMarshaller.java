@@ -31,6 +31,8 @@ public class IdMappingTechniquesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idMappingType").build();
     private static final MarshallingInfo<StructuredPojo> PROVIDERPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("providerProperties").build();
+    private static final MarshallingInfo<StructuredPojo> RULEBASEDPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ruleBasedProperties").build();
 
     private static final IdMappingTechniquesMarshaller instance = new IdMappingTechniquesMarshaller();
 
@@ -50,6 +52,7 @@ public class IdMappingTechniquesMarshaller {
         try {
             protocolMarshaller.marshall(idMappingTechniques.getIdMappingType(), IDMAPPINGTYPE_BINDING);
             protocolMarshaller.marshall(idMappingTechniques.getProviderProperties(), PROVIDERPROPERTIES_BINDING);
+            protocolMarshaller.marshall(idMappingTechniques.getRuleBasedProperties(), RULEBASEDPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

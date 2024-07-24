@@ -33,6 +33,8 @@ public class UpdateImageSetMetadataRequestMarshaller {
             .marshallLocationName("imageSetId").build();
     private static final MarshallingInfo<String> LATESTVERSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("latestVersion").build();
+    private static final MarshallingInfo<Boolean> FORCE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("force").build();
     private static final MarshallingInfo<StructuredPojo> UPDATEIMAGESETMETADATAUPDATES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).isExplicitPayloadMember(true).build();
 
@@ -55,6 +57,7 @@ public class UpdateImageSetMetadataRequestMarshaller {
             protocolMarshaller.marshall(updateImageSetMetadataRequest.getDatastoreId(), DATASTOREID_BINDING);
             protocolMarshaller.marshall(updateImageSetMetadataRequest.getImageSetId(), IMAGESETID_BINDING);
             protocolMarshaller.marshall(updateImageSetMetadataRequest.getLatestVersionId(), LATESTVERSIONID_BINDING);
+            protocolMarshaller.marshall(updateImageSetMetadataRequest.getForce(), FORCE_BINDING);
             protocolMarshaller.marshall(updateImageSetMetadataRequest.getUpdateImageSetMetadataUpdates(), UPDATEIMAGESETMETADATAUPDATES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

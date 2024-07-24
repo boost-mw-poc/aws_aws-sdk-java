@@ -29,16 +29,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateTrainingDatasetRequestMarshaller {
 
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
-    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("tags").build();
     private static final MarshallingInfo<List> TRAININGDATA_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("trainingData").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
 
     private static final CreateTrainingDatasetRequestMarshaller instance = new CreateTrainingDatasetRequestMarshaller();
 
@@ -56,11 +56,11 @@ public class CreateTrainingDatasetRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(createTrainingDatasetRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createTrainingDatasetRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createTrainingDatasetRequest.getRoleArn(), ROLEARN_BINDING);
-            protocolMarshaller.marshall(createTrainingDatasetRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createTrainingDatasetRequest.getTrainingData(), TRAININGDATA_BINDING);
+            protocolMarshaller.marshall(createTrainingDatasetRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createTrainingDatasetRequest.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

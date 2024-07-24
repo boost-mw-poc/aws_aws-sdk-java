@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.entityresolution.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class IdNamespaceSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<List> IDMAPPINGWORKFLOWPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idMappingWorkflowProperties").build();
     private static final MarshallingInfo<String> IDNAMESPACEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("idNamespaceArn").build();
     private static final MarshallingInfo<String> IDNAMESPACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -58,6 +61,7 @@ public class IdNamespaceSummaryMarshaller {
         try {
             protocolMarshaller.marshall(idNamespaceSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(idNamespaceSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(idNamespaceSummary.getIdMappingWorkflowProperties(), IDMAPPINGWORKFLOWPROPERTIES_BINDING);
             protocolMarshaller.marshall(idNamespaceSummary.getIdNamespaceArn(), IDNAMESPACEARN_BINDING);
             protocolMarshaller.marshall(idNamespaceSummary.getIdNamespaceName(), IDNAMESPACENAME_BINDING);
             protocolMarshaller.marshall(idNamespaceSummary.getType(), TYPE_BINDING);

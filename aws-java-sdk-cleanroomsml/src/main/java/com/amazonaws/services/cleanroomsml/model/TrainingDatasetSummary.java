@@ -36,10 +36,16 @@ public class TrainingDatasetSummary implements Serializable, Cloneable, Structur
     private java.util.Date createTime;
     /**
      * <p>
-     * The description of the training dataset.
+     * The most recent time at which the training dataset was updated.
      * </p>
      */
-    private String description;
+    private java.util.Date updateTime;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the training dataset.
+     * </p>
+     */
+    private String trainingDatasetArn;
     /**
      * <p>
      * The name of the training dataset.
@@ -54,16 +60,10 @@ public class TrainingDatasetSummary implements Serializable, Cloneable, Structur
     private String status;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the training dataset.
+     * The description of the training dataset.
      * </p>
      */
-    private String trainingDatasetArn;
-    /**
-     * <p>
-     * The most recent time at which the training dataset was updated.
-     * </p>
-     */
-    private java.util.Date updateTime;
+    private String description;
 
     /**
      * <p>
@@ -107,41 +107,81 @@ public class TrainingDatasetSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The description of the training dataset.
+     * The most recent time at which the training dataset was updated.
      * </p>
      * 
-     * @param description
-     *        The description of the training dataset.
+     * @param updateTime
+     *        The most recent time at which the training dataset was updated.
      */
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
     }
 
     /**
      * <p>
-     * The description of the training dataset.
+     * The most recent time at which the training dataset was updated.
      * </p>
      * 
-     * @return The description of the training dataset.
+     * @return The most recent time at which the training dataset was updated.
      */
 
-    public String getDescription() {
-        return this.description;
+    public java.util.Date getUpdateTime() {
+        return this.updateTime;
     }
 
     /**
      * <p>
-     * The description of the training dataset.
+     * The most recent time at which the training dataset was updated.
      * </p>
      * 
-     * @param description
-     *        The description of the training dataset.
+     * @param updateTime
+     *        The most recent time at which the training dataset was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public TrainingDatasetSummary withDescription(String description) {
-        setDescription(description);
+    public TrainingDatasetSummary withUpdateTime(java.util.Date updateTime) {
+        setUpdateTime(updateTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the training dataset.
+     * </p>
+     * 
+     * @param trainingDatasetArn
+     *        The Amazon Resource Name (ARN) of the training dataset.
+     */
+
+    public void setTrainingDatasetArn(String trainingDatasetArn) {
+        this.trainingDatasetArn = trainingDatasetArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the training dataset.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the training dataset.
+     */
+
+    public String getTrainingDatasetArn() {
+        return this.trainingDatasetArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the training dataset.
+     * </p>
+     * 
+     * @param trainingDatasetArn
+     *        The Amazon Resource Name (ARN) of the training dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TrainingDatasetSummary withTrainingDatasetArn(String trainingDatasetArn) {
+        setTrainingDatasetArn(trainingDatasetArn);
         return this;
     }
 
@@ -246,81 +286,41 @@ public class TrainingDatasetSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the training dataset.
+     * The description of the training dataset.
      * </p>
      * 
-     * @param trainingDatasetArn
-     *        The Amazon Resource Name (ARN) of the training dataset.
+     * @param description
+     *        The description of the training dataset.
      */
 
-    public void setTrainingDatasetArn(String trainingDatasetArn) {
-        this.trainingDatasetArn = trainingDatasetArn;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the training dataset.
+     * The description of the training dataset.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the training dataset.
+     * @return The description of the training dataset.
      */
 
-    public String getTrainingDatasetArn() {
-        return this.trainingDatasetArn;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the training dataset.
+     * The description of the training dataset.
      * </p>
      * 
-     * @param trainingDatasetArn
-     *        The Amazon Resource Name (ARN) of the training dataset.
+     * @param description
+     *        The description of the training dataset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public TrainingDatasetSummary withTrainingDatasetArn(String trainingDatasetArn) {
-        setTrainingDatasetArn(trainingDatasetArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The most recent time at which the training dataset was updated.
-     * </p>
-     * 
-     * @param updateTime
-     *        The most recent time at which the training dataset was updated.
-     */
-
-    public void setUpdateTime(java.util.Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    /**
-     * <p>
-     * The most recent time at which the training dataset was updated.
-     * </p>
-     * 
-     * @return The most recent time at which the training dataset was updated.
-     */
-
-    public java.util.Date getUpdateTime() {
-        return this.updateTime;
-    }
-
-    /**
-     * <p>
-     * The most recent time at which the training dataset was updated.
-     * </p>
-     * 
-     * @param updateTime
-     *        The most recent time at which the training dataset was updated.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public TrainingDatasetSummary withUpdateTime(java.util.Date updateTime) {
-        setUpdateTime(updateTime);
+    public TrainingDatasetSummary withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -338,16 +338,16 @@ public class TrainingDatasetSummary implements Serializable, Cloneable, Structur
         sb.append("{");
         if (getCreateTime() != null)
             sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+        if (getUpdateTime() != null)
+            sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
+        if (getTrainingDatasetArn() != null)
+            sb.append("TrainingDatasetArn: ").append(getTrainingDatasetArn()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
-        if (getTrainingDatasetArn() != null)
-            sb.append("TrainingDatasetArn: ").append(getTrainingDatasetArn()).append(",");
-        if (getUpdateTime() != null)
-            sb.append("UpdateTime: ").append(getUpdateTime());
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -366,9 +366,13 @@ public class TrainingDatasetSummary implements Serializable, Cloneable, Structur
             return false;
         if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
+        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+            return false;
+        if (other.getTrainingDatasetArn() == null ^ this.getTrainingDatasetArn() == null)
+            return false;
+        if (other.getTrainingDatasetArn() != null && other.getTrainingDatasetArn().equals(this.getTrainingDatasetArn()) == false)
             return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
@@ -378,13 +382,9 @@ public class TrainingDatasetSummary implements Serializable, Cloneable, Structur
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
-        if (other.getTrainingDatasetArn() == null ^ this.getTrainingDatasetArn() == null)
+        if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
-        if (other.getTrainingDatasetArn() != null && other.getTrainingDatasetArn().equals(this.getTrainingDatasetArn()) == false)
-            return false;
-        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
-            return false;
-        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         return true;
     }
@@ -395,11 +395,11 @@ public class TrainingDatasetSummary implements Serializable, Cloneable, Structur
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getTrainingDatasetArn() == null) ? 0 : getTrainingDatasetArn().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
-        hashCode = prime * hashCode + ((getTrainingDatasetArn() == null) ? 0 : getTrainingDatasetArn().hashCode());
-        hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

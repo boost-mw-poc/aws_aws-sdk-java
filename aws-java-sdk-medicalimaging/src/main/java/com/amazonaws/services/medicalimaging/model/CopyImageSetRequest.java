@@ -43,6 +43,13 @@ public class CopyImageSetRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private CopyImageSetInformation copyImageSetInformation;
+    /**
+     * <p>
+     * Setting this flag will force the <code>CopyImageSet</code> operation, even if Patient, Study, or Series level
+     * metadata are mismatched across the <code>sourceImageSet</code> and <code>destinationImageSet</code>.
+     * </p>
+     */
+    private Boolean force;
 
     /**
      * <p>
@@ -165,6 +172,68 @@ public class CopyImageSetRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Setting this flag will force the <code>CopyImageSet</code> operation, even if Patient, Study, or Series level
+     * metadata are mismatched across the <code>sourceImageSet</code> and <code>destinationImageSet</code>.
+     * </p>
+     * 
+     * @param force
+     *        Setting this flag will force the <code>CopyImageSet</code> operation, even if Patient, Study, or Series
+     *        level metadata are mismatched across the <code>sourceImageSet</code> and <code>destinationImageSet</code>.
+     */
+
+    public void setForce(Boolean force) {
+        this.force = force;
+    }
+
+    /**
+     * <p>
+     * Setting this flag will force the <code>CopyImageSet</code> operation, even if Patient, Study, or Series level
+     * metadata are mismatched across the <code>sourceImageSet</code> and <code>destinationImageSet</code>.
+     * </p>
+     * 
+     * @return Setting this flag will force the <code>CopyImageSet</code> operation, even if Patient, Study, or Series
+     *         level metadata are mismatched across the <code>sourceImageSet</code> and <code>destinationImageSet</code>
+     *         .
+     */
+
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
+     * <p>
+     * Setting this flag will force the <code>CopyImageSet</code> operation, even if Patient, Study, or Series level
+     * metadata are mismatched across the <code>sourceImageSet</code> and <code>destinationImageSet</code>.
+     * </p>
+     * 
+     * @param force
+     *        Setting this flag will force the <code>CopyImageSet</code> operation, even if Patient, Study, or Series
+     *        level metadata are mismatched across the <code>sourceImageSet</code> and <code>destinationImageSet</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CopyImageSetRequest withForce(Boolean force) {
+        setForce(force);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Setting this flag will force the <code>CopyImageSet</code> operation, even if Patient, Study, or Series level
+     * metadata are mismatched across the <code>sourceImageSet</code> and <code>destinationImageSet</code>.
+     * </p>
+     * 
+     * @return Setting this flag will force the <code>CopyImageSet</code> operation, even if Patient, Study, or Series
+     *         level metadata are mismatched across the <code>sourceImageSet</code> and <code>destinationImageSet</code>
+     *         .
+     */
+
+    public Boolean isForce() {
+        return this.force;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +250,9 @@ public class CopyImageSetRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getSourceImageSetId() != null)
             sb.append("SourceImageSetId: ").append(getSourceImageSetId()).append(",");
         if (getCopyImageSetInformation() != null)
-            sb.append("CopyImageSetInformation: ").append(getCopyImageSetInformation());
+            sb.append("CopyImageSetInformation: ").append(getCopyImageSetInformation()).append(",");
+        if (getForce() != null)
+            sb.append("Force: ").append(getForce());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +279,10 @@ public class CopyImageSetRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getCopyImageSetInformation() != null && other.getCopyImageSetInformation().equals(this.getCopyImageSetInformation()) == false)
             return false;
+        if (other.getForce() == null ^ this.getForce() == null)
+            return false;
+        if (other.getForce() != null && other.getForce().equals(this.getForce()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +294,7 @@ public class CopyImageSetRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getDatastoreId() == null) ? 0 : getDatastoreId().hashCode());
         hashCode = prime * hashCode + ((getSourceImageSetId() == null) ? 0 : getSourceImageSetId().hashCode());
         hashCode = prime * hashCode + ((getCopyImageSetInformation() == null) ? 0 : getCopyImageSetInformation().hashCode());
+        hashCode = prime * hashCode + ((getForce() == null) ? 0 : getForce().hashCode());
         return hashCode;
     }
 

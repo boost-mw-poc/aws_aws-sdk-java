@@ -30,6 +30,8 @@ public class RuleBasedPropertiesMarshaller {
 
     private static final MarshallingInfo<String> ATTRIBUTEMATCHINGMODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("attributeMatchingModel").build();
+    private static final MarshallingInfo<String> MATCHPURPOSE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("matchPurpose").build();
     private static final MarshallingInfo<List> RULES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("rules").build();
 
@@ -50,6 +52,7 @@ public class RuleBasedPropertiesMarshaller {
 
         try {
             protocolMarshaller.marshall(ruleBasedProperties.getAttributeMatchingModel(), ATTRIBUTEMATCHINGMODEL_BINDING);
+            protocolMarshaller.marshall(ruleBasedProperties.getMatchPurpose(), MATCHPURPOSE_BINDING);
             protocolMarshaller.marshall(ruleBasedProperties.getRules(), RULES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

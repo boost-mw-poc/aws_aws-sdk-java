@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object which defines the ID mapping techniques and provider configurations.
+ * An object which defines the ID mapping technique and any additional configurations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/IdMappingTechniques"
@@ -40,6 +40,12 @@ public class IdMappingTechniques implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private ProviderProperties providerProperties;
+    /**
+     * <p>
+     * An object which defines any additional configurations required by rule-based matching.
+     * </p>
+     */
+    private IdMappingRuleBasedProperties ruleBasedProperties;
 
     /**
      * <p>
@@ -141,6 +147,46 @@ public class IdMappingTechniques implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * An object which defines any additional configurations required by rule-based matching.
+     * </p>
+     * 
+     * @param ruleBasedProperties
+     *        An object which defines any additional configurations required by rule-based matching.
+     */
+
+    public void setRuleBasedProperties(IdMappingRuleBasedProperties ruleBasedProperties) {
+        this.ruleBasedProperties = ruleBasedProperties;
+    }
+
+    /**
+     * <p>
+     * An object which defines any additional configurations required by rule-based matching.
+     * </p>
+     * 
+     * @return An object which defines any additional configurations required by rule-based matching.
+     */
+
+    public IdMappingRuleBasedProperties getRuleBasedProperties() {
+        return this.ruleBasedProperties;
+    }
+
+    /**
+     * <p>
+     * An object which defines any additional configurations required by rule-based matching.
+     * </p>
+     * 
+     * @param ruleBasedProperties
+     *        An object which defines any additional configurations required by rule-based matching.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdMappingTechniques withRuleBasedProperties(IdMappingRuleBasedProperties ruleBasedProperties) {
+        setRuleBasedProperties(ruleBasedProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -155,7 +201,9 @@ public class IdMappingTechniques implements Serializable, Cloneable, StructuredP
         if (getIdMappingType() != null)
             sb.append("IdMappingType: ").append(getIdMappingType()).append(",");
         if (getProviderProperties() != null)
-            sb.append("ProviderProperties: ").append(getProviderProperties());
+            sb.append("ProviderProperties: ").append(getProviderProperties()).append(",");
+        if (getRuleBasedProperties() != null)
+            sb.append("RuleBasedProperties: ").append(getRuleBasedProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -178,6 +226,10 @@ public class IdMappingTechniques implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getProviderProperties() != null && other.getProviderProperties().equals(this.getProviderProperties()) == false)
             return false;
+        if (other.getRuleBasedProperties() == null ^ this.getRuleBasedProperties() == null)
+            return false;
+        if (other.getRuleBasedProperties() != null && other.getRuleBasedProperties().equals(this.getRuleBasedProperties()) == false)
+            return false;
         return true;
     }
 
@@ -188,6 +240,7 @@ public class IdMappingTechniques implements Serializable, Cloneable, StructuredP
 
         hashCode = prime * hashCode + ((getIdMappingType() == null) ? 0 : getIdMappingType().hashCode());
         hashCode = prime * hashCode + ((getProviderProperties() == null) ? 0 : getProviderProperties().hashCode());
+        hashCode = prime * hashCode + ((getRuleBasedProperties() == null) ? 0 : getRuleBasedProperties().hashCode());
         return hashCode;
     }
 

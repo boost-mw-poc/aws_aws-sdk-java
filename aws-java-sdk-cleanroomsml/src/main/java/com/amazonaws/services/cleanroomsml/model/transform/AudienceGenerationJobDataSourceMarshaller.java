@@ -31,6 +31,8 @@ public class AudienceGenerationJobDataSourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataSource").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
+    private static final MarshallingInfo<StructuredPojo> SQLPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sqlParameters").build();
 
     private static final AudienceGenerationJobDataSourceMarshaller instance = new AudienceGenerationJobDataSourceMarshaller();
 
@@ -50,6 +52,7 @@ public class AudienceGenerationJobDataSourceMarshaller {
         try {
             protocolMarshaller.marshall(audienceGenerationJobDataSource.getDataSource(), DATASOURCE_BINDING);
             protocolMarshaller.marshall(audienceGenerationJobDataSource.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(audienceGenerationJobDataSource.getSqlParameters(), SQLPARAMETERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -40,6 +40,12 @@ public class GatewayPlatform implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private GreengrassV2 greengrassV2;
+    /**
+     * <p>
+     * A SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     * </p>
+     */
+    private SiemensIE siemensIE;
 
     /**
      * <p>
@@ -122,6 +128,46 @@ public class GatewayPlatform implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * A SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     * </p>
+     * 
+     * @param siemensIE
+     *        A SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     */
+
+    public void setSiemensIE(SiemensIE siemensIE) {
+        this.siemensIE = siemensIE;
+    }
+
+    /**
+     * <p>
+     * A SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     * </p>
+     * 
+     * @return A SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     */
+
+    public SiemensIE getSiemensIE() {
+        return this.siemensIE;
+    }
+
+    /**
+     * <p>
+     * A SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     * </p>
+     * 
+     * @param siemensIE
+     *        A SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GatewayPlatform withSiemensIE(SiemensIE siemensIE) {
+        setSiemensIE(siemensIE);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +182,9 @@ public class GatewayPlatform implements Serializable, Cloneable, StructuredPojo 
         if (getGreengrass() != null)
             sb.append("Greengrass: ").append(getGreengrass()).append(",");
         if (getGreengrassV2() != null)
-            sb.append("GreengrassV2: ").append(getGreengrassV2());
+            sb.append("GreengrassV2: ").append(getGreengrassV2()).append(",");
+        if (getSiemensIE() != null)
+            sb.append("SiemensIE: ").append(getSiemensIE());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +207,10 @@ public class GatewayPlatform implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getGreengrassV2() != null && other.getGreengrassV2().equals(this.getGreengrassV2()) == false)
             return false;
+        if (other.getSiemensIE() == null ^ this.getSiemensIE() == null)
+            return false;
+        if (other.getSiemensIE() != null && other.getSiemensIE().equals(this.getSiemensIE()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +221,7 @@ public class GatewayPlatform implements Serializable, Cloneable, StructuredPojo 
 
         hashCode = prime * hashCode + ((getGreengrass() == null) ? 0 : getGreengrass().hashCode());
         hashCode = prime * hashCode + ((getGreengrassV2() == null) ? 0 : getGreengrassV2().hashCode());
+        hashCode = prime * hashCode + ((getSiemensIE() == null) ? 0 : getSiemensIE().hashCode());
         return hashCode;
     }
 

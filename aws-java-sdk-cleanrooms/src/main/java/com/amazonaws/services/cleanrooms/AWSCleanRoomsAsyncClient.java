@@ -394,6 +394,74 @@ public class AWSCleanRoomsAsyncClient extends AWSCleanRoomsClient implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<CreateConfiguredTableAssociationAnalysisRuleResult> createConfiguredTableAssociationAnalysisRuleAsync(
+            CreateConfiguredTableAssociationAnalysisRuleRequest request) {
+
+        return createConfiguredTableAssociationAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateConfiguredTableAssociationAnalysisRuleResult> createConfiguredTableAssociationAnalysisRuleAsync(
+            final CreateConfiguredTableAssociationAnalysisRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateConfiguredTableAssociationAnalysisRuleRequest, CreateConfiguredTableAssociationAnalysisRuleResult> asyncHandler) {
+        final CreateConfiguredTableAssociationAnalysisRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateConfiguredTableAssociationAnalysisRuleResult>() {
+            @Override
+            public CreateConfiguredTableAssociationAnalysisRuleResult call() throws Exception {
+                CreateConfiguredTableAssociationAnalysisRuleResult result = null;
+
+                try {
+                    result = executeCreateConfiguredTableAssociationAnalysisRule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIdMappingTableResult> createIdMappingTableAsync(CreateIdMappingTableRequest request) {
+
+        return createIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIdMappingTableResult> createIdMappingTableAsync(final CreateIdMappingTableRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateIdMappingTableRequest, CreateIdMappingTableResult> asyncHandler) {
+        final CreateIdMappingTableRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateIdMappingTableResult>() {
+            @Override
+            public CreateIdMappingTableResult call() throws Exception {
+                CreateIdMappingTableResult result = null;
+
+                try {
+                    result = executeCreateIdMappingTable(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateMembershipResult> createMembershipAsync(CreateMembershipRequest request) {
 
         return createMembershipAsync(request, null);
@@ -648,6 +716,107 @@ public class AWSCleanRoomsAsyncClient extends AWSCleanRoomsClient implements AWS
 
                 try {
                     result = executeDeleteConfiguredTableAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteConfiguredTableAssociationAnalysisRuleResult> deleteConfiguredTableAssociationAnalysisRuleAsync(
+            DeleteConfiguredTableAssociationAnalysisRuleRequest request) {
+
+        return deleteConfiguredTableAssociationAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteConfiguredTableAssociationAnalysisRuleResult> deleteConfiguredTableAssociationAnalysisRuleAsync(
+            final DeleteConfiguredTableAssociationAnalysisRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteConfiguredTableAssociationAnalysisRuleRequest, DeleteConfiguredTableAssociationAnalysisRuleResult> asyncHandler) {
+        final DeleteConfiguredTableAssociationAnalysisRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteConfiguredTableAssociationAnalysisRuleResult>() {
+            @Override
+            public DeleteConfiguredTableAssociationAnalysisRuleResult call() throws Exception {
+                DeleteConfiguredTableAssociationAnalysisRuleResult result = null;
+
+                try {
+                    result = executeDeleteConfiguredTableAssociationAnalysisRule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdMappingTableResult> deleteIdMappingTableAsync(DeleteIdMappingTableRequest request) {
+
+        return deleteIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdMappingTableResult> deleteIdMappingTableAsync(final DeleteIdMappingTableRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteIdMappingTableRequest, DeleteIdMappingTableResult> asyncHandler) {
+        final DeleteIdMappingTableRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteIdMappingTableResult>() {
+            @Override
+            public DeleteIdMappingTableResult call() throws Exception {
+                DeleteIdMappingTableResult result = null;
+
+                try {
+                    result = executeDeleteIdMappingTable(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdNamespaceAssociationResult> deleteIdNamespaceAssociationAsync(DeleteIdNamespaceAssociationRequest request) {
+
+        return deleteIdNamespaceAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdNamespaceAssociationResult> deleteIdNamespaceAssociationAsync(final DeleteIdNamespaceAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteIdNamespaceAssociationRequest, DeleteIdNamespaceAssociationResult> asyncHandler) {
+        final DeleteIdNamespaceAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteIdNamespaceAssociationResult>() {
+            @Override
+            public DeleteIdNamespaceAssociationResult call() throws Exception {
+                DeleteIdNamespaceAssociationResult result = null;
+
+                try {
+                    result = executeDeleteIdNamespaceAssociation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1070,6 +1239,74 @@ public class AWSCleanRoomsAsyncClient extends AWSCleanRoomsClient implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<GetConfiguredTableAssociationAnalysisRuleResult> getConfiguredTableAssociationAnalysisRuleAsync(
+            GetConfiguredTableAssociationAnalysisRuleRequest request) {
+
+        return getConfiguredTableAssociationAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConfiguredTableAssociationAnalysisRuleResult> getConfiguredTableAssociationAnalysisRuleAsync(
+            final GetConfiguredTableAssociationAnalysisRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetConfiguredTableAssociationAnalysisRuleRequest, GetConfiguredTableAssociationAnalysisRuleResult> asyncHandler) {
+        final GetConfiguredTableAssociationAnalysisRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetConfiguredTableAssociationAnalysisRuleResult>() {
+            @Override
+            public GetConfiguredTableAssociationAnalysisRuleResult call() throws Exception {
+                GetConfiguredTableAssociationAnalysisRuleResult result = null;
+
+                try {
+                    result = executeGetConfiguredTableAssociationAnalysisRule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdMappingTableResult> getIdMappingTableAsync(GetIdMappingTableRequest request) {
+
+        return getIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdMappingTableResult> getIdMappingTableAsync(final GetIdMappingTableRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetIdMappingTableRequest, GetIdMappingTableResult> asyncHandler) {
+        final GetIdMappingTableRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetIdMappingTableResult>() {
+            @Override
+            public GetIdMappingTableResult call() throws Exception {
+                GetIdMappingTableResult result = null;
+
+                try {
+                    result = executeGetIdMappingTable(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMembershipResult> getMembershipAsync(GetMembershipRequest request) {
 
         return getMembershipAsync(request, null);
@@ -1338,6 +1575,41 @@ public class AWSCleanRoomsAsyncClient extends AWSCleanRoomsClient implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<ListCollaborationIdNamespaceAssociationsResult> listCollaborationIdNamespaceAssociationsAsync(
+            ListCollaborationIdNamespaceAssociationsRequest request) {
+
+        return listCollaborationIdNamespaceAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCollaborationIdNamespaceAssociationsResult> listCollaborationIdNamespaceAssociationsAsync(
+            final ListCollaborationIdNamespaceAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCollaborationIdNamespaceAssociationsRequest, ListCollaborationIdNamespaceAssociationsResult> asyncHandler) {
+        final ListCollaborationIdNamespaceAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCollaborationIdNamespaceAssociationsResult>() {
+            @Override
+            public ListCollaborationIdNamespaceAssociationsResult call() throws Exception {
+                ListCollaborationIdNamespaceAssociationsResult result = null;
+
+                try {
+                    result = executeListCollaborationIdNamespaceAssociations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCollaborationPrivacyBudgetTemplatesResult> listCollaborationPrivacyBudgetTemplatesAsync(
             ListCollaborationPrivacyBudgetTemplatesRequest request) {
 
@@ -1528,6 +1800,72 @@ public class AWSCleanRoomsAsyncClient extends AWSCleanRoomsClient implements AWS
 
                 try {
                     result = executeListConfiguredTables(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdMappingTablesResult> listIdMappingTablesAsync(ListIdMappingTablesRequest request) {
+
+        return listIdMappingTablesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdMappingTablesResult> listIdMappingTablesAsync(final ListIdMappingTablesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIdMappingTablesRequest, ListIdMappingTablesResult> asyncHandler) {
+        final ListIdMappingTablesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIdMappingTablesResult>() {
+            @Override
+            public ListIdMappingTablesResult call() throws Exception {
+                ListIdMappingTablesResult result = null;
+
+                try {
+                    result = executeListIdMappingTables(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdNamespaceAssociationsResult> listIdNamespaceAssociationsAsync(ListIdNamespaceAssociationsRequest request) {
+
+        return listIdNamespaceAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdNamespaceAssociationsResult> listIdNamespaceAssociationsAsync(final ListIdNamespaceAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIdNamespaceAssociationsRequest, ListIdNamespaceAssociationsResult> asyncHandler) {
+        final ListIdNamespaceAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIdNamespaceAssociationsResult>() {
+            @Override
+            public ListIdNamespaceAssociationsResult call() throws Exception {
+                ListIdNamespaceAssociationsResult result = null;
+
+                try {
+                    result = executeListIdNamespaceAssociations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1759,6 +2097,39 @@ public class AWSCleanRoomsAsyncClient extends AWSCleanRoomsClient implements AWS
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PopulateIdMappingTableResult> populateIdMappingTableAsync(PopulateIdMappingTableRequest request) {
+
+        return populateIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PopulateIdMappingTableResult> populateIdMappingTableAsync(final PopulateIdMappingTableRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PopulateIdMappingTableRequest, PopulateIdMappingTableResult> asyncHandler) {
+        final PopulateIdMappingTableRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PopulateIdMappingTableResult>() {
+            @Override
+            public PopulateIdMappingTableResult call() throws Exception {
+                PopulateIdMappingTableResult result = null;
+
+                try {
+                    result = executePopulateIdMappingTable(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2095,6 +2466,74 @@ public class AWSCleanRoomsAsyncClient extends AWSCleanRoomsClient implements AWS
 
                 try {
                     result = executeUpdateConfiguredTableAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConfiguredTableAssociationAnalysisRuleResult> updateConfiguredTableAssociationAnalysisRuleAsync(
+            UpdateConfiguredTableAssociationAnalysisRuleRequest request) {
+
+        return updateConfiguredTableAssociationAnalysisRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConfiguredTableAssociationAnalysisRuleResult> updateConfiguredTableAssociationAnalysisRuleAsync(
+            final UpdateConfiguredTableAssociationAnalysisRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateConfiguredTableAssociationAnalysisRuleRequest, UpdateConfiguredTableAssociationAnalysisRuleResult> asyncHandler) {
+        final UpdateConfiguredTableAssociationAnalysisRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateConfiguredTableAssociationAnalysisRuleResult>() {
+            @Override
+            public UpdateConfiguredTableAssociationAnalysisRuleResult call() throws Exception {
+                UpdateConfiguredTableAssociationAnalysisRuleResult result = null;
+
+                try {
+                    result = executeUpdateConfiguredTableAssociationAnalysisRule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdMappingTableResult> updateIdMappingTableAsync(UpdateIdMappingTableRequest request) {
+
+        return updateIdMappingTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdMappingTableResult> updateIdMappingTableAsync(final UpdateIdMappingTableRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateIdMappingTableRequest, UpdateIdMappingTableResult> asyncHandler) {
+        final UpdateIdMappingTableRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateIdMappingTableResult>() {
+            @Override
+            public UpdateIdMappingTableResult call() throws Exception {
+                UpdateIdMappingTableResult result = null;
+
+                try {
+                    result = executeUpdateIdMappingTable(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

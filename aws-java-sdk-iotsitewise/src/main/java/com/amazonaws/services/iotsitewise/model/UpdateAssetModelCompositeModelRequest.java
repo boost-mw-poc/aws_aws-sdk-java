@@ -52,7 +52,7 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
     private String assetModelCompositeModelDescription;
     /**
      * <p>
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      * </p>
      */
     private String assetModelCompositeModelName;
@@ -65,7 +65,9 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
     private String clientToken;
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -243,11 +245,11 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      * </p>
      * 
      * @param assetModelCompositeModelName
-     *        A unique, friendly name for the composite model.
+     *        A unique name for the composite model.
      */
 
     public void setAssetModelCompositeModelName(String assetModelCompositeModelName) {
@@ -256,10 +258,10 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      * </p>
      * 
-     * @return A unique, friendly name for the composite model.
+     * @return A unique name for the composite model.
      */
 
     public String getAssetModelCompositeModelName() {
@@ -268,11 +270,11 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      * </p>
      * 
      * @param assetModelCompositeModelName
-     *        A unique, friendly name for the composite model.
+     *        A unique name for the composite model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -329,7 +331,9 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -337,7 +341,9 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
      * User Guide</i>.
      * </p>
      * 
-     * @return The property definitions of the composite model. For more information, see &lt;LINK&gt;.</p>
+     * @return The property definitions of the composite model. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models"
+     *         > Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.</p>
      *         <p>
      *         You can specify up to 200 properties per composite model. For more information, see <a
      *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
@@ -350,7 +356,9 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -359,7 +367,9 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param assetModelCompositeModelProperties
-     *        The property definitions of the composite model. For more information, see &lt;LINK&gt;.</p>
+     *        The property definitions of the composite model. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models"
+     *        > Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.</p>
      *        <p>
      *        You can specify up to 200 properties per composite model. For more information, see <a
      *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
@@ -377,7 +387,9 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -392,7 +404,9 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param assetModelCompositeModelProperties
-     *        The property definitions of the composite model. For more information, see &lt;LINK&gt;.</p>
+     *        The property definitions of the composite model. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models"
+     *        > Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.</p>
      *        <p>
      *        You can specify up to 200 properties per composite model. For more information, see <a
      *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
@@ -412,7 +426,9 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -421,7 +437,9 @@ public class UpdateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param assetModelCompositeModelProperties
-     *        The property definitions of the composite model. For more information, see &lt;LINK&gt;.</p>
+     *        The property definitions of the composite model. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models"
+     *        > Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.</p>
      *        <p>
      *        You can specify up to 200 properties per composite model. For more information, see <a
      *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT

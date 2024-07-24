@@ -29,6 +29,8 @@ public class CopySourceImageSetInformationMarshaller {
 
     private static final MarshallingInfo<String> LATESTVERSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latestVersionId").build();
+    private static final MarshallingInfo<StructuredPojo> DICOMCOPIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMCopies").build();
 
     private static final CopySourceImageSetInformationMarshaller instance = new CopySourceImageSetInformationMarshaller();
 
@@ -47,6 +49,7 @@ public class CopySourceImageSetInformationMarshaller {
 
         try {
             protocolMarshaller.marshall(copySourceImageSetInformation.getLatestVersionId(), LATESTVERSIONID_BINDING);
+            protocolMarshaller.marshall(copySourceImageSetInformation.getDICOMCopies(), DICOMCOPIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

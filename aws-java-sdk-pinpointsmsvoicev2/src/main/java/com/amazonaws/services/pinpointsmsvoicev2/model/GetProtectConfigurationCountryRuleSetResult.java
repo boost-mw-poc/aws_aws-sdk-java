@@ -48,7 +48,7 @@ public class GetProtectConfigurationCountryRuleSetResult extends com.amazonaws.A
      * A map of ProtectConfigurationCountryRuleSetInformation objects that contain the details for the requested
      * NumberCapability. The Key is the two-letter ISO country code. For a list of supported ISO country codes, see <a
      * href="https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html">Supported
-     * countries and regions (SMS channel)</a> in the Amazon Pinpoint SMS user guide.
+     * countries and regions (SMS channel)</a> in the AWS End User Messaging SMS User Guide.
      * </p>
      */
     private java.util.Map<String, ProtectConfigurationCountryRuleSetInformation> countryRuleSet;
@@ -197,13 +197,13 @@ public class GetProtectConfigurationCountryRuleSetResult extends com.amazonaws.A
      * A map of ProtectConfigurationCountryRuleSetInformation objects that contain the details for the requested
      * NumberCapability. The Key is the two-letter ISO country code. For a list of supported ISO country codes, see <a
      * href="https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html">Supported
-     * countries and regions (SMS channel)</a> in the Amazon Pinpoint SMS user guide.
+     * countries and regions (SMS channel)</a> in the AWS End User Messaging SMS User Guide.
      * </p>
      * 
      * @return A map of ProtectConfigurationCountryRuleSetInformation objects that contain the details for the requested
      *         NumberCapability. The Key is the two-letter ISO country code. For a list of supported ISO country codes,
      *         see <a href="https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html">
-     *         Supported countries and regions (SMS channel)</a> in the Amazon Pinpoint SMS user guide.
+     *         Supported countries and regions (SMS channel)</a> in the AWS End User Messaging SMS User Guide.
      */
 
     public java.util.Map<String, ProtectConfigurationCountryRuleSetInformation> getCountryRuleSet() {
@@ -215,14 +215,14 @@ public class GetProtectConfigurationCountryRuleSetResult extends com.amazonaws.A
      * A map of ProtectConfigurationCountryRuleSetInformation objects that contain the details for the requested
      * NumberCapability. The Key is the two-letter ISO country code. For a list of supported ISO country codes, see <a
      * href="https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html">Supported
-     * countries and regions (SMS channel)</a> in the Amazon Pinpoint SMS user guide.
+     * countries and regions (SMS channel)</a> in the AWS End User Messaging SMS User Guide.
      * </p>
      * 
      * @param countryRuleSet
      *        A map of ProtectConfigurationCountryRuleSetInformation objects that contain the details for the requested
      *        NumberCapability. The Key is the two-letter ISO country code. For a list of supported ISO country codes,
      *        see <a href="https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html">
-     *        Supported countries and regions (SMS channel)</a> in the Amazon Pinpoint SMS user guide.
+     *        Supported countries and regions (SMS channel)</a> in the AWS End User Messaging SMS User Guide.
      */
 
     public void setCountryRuleSet(java.util.Map<String, ProtectConfigurationCountryRuleSetInformation> countryRuleSet) {
@@ -234,14 +234,14 @@ public class GetProtectConfigurationCountryRuleSetResult extends com.amazonaws.A
      * A map of ProtectConfigurationCountryRuleSetInformation objects that contain the details for the requested
      * NumberCapability. The Key is the two-letter ISO country code. For a list of supported ISO country codes, see <a
      * href="https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html">Supported
-     * countries and regions (SMS channel)</a> in the Amazon Pinpoint SMS user guide.
+     * countries and regions (SMS channel)</a> in the AWS End User Messaging SMS User Guide.
      * </p>
      * 
      * @param countryRuleSet
      *        A map of ProtectConfigurationCountryRuleSetInformation objects that contain the details for the requested
      *        NumberCapability. The Key is the two-letter ISO country code. For a list of supported ISO country codes,
      *        see <a href="https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html">
-     *        Supported countries and regions (SMS channel)</a> in the Amazon Pinpoint SMS user guide.
+     *        Supported countries and regions (SMS channel)</a> in the AWS End User Messaging SMS User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

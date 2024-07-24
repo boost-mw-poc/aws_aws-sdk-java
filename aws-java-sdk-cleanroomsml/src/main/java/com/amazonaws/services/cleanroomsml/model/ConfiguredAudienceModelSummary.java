@@ -30,28 +30,16 @@ public class ConfiguredAudienceModelSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the audience model that was used to create the configured audience model.
-     * </p>
-     */
-    private String audienceModelArn;
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
-     * </p>
-     */
-    private String configuredAudienceModelArn;
-    /**
-     * <p>
      * The time at which the configured audience model was created.
      * </p>
      */
     private java.util.Date createTime;
     /**
      * <p>
-     * The description of the configured audience model.
+     * The most recent time at which the configured audience model was updated.
      * </p>
      */
-    private String description;
+    private java.util.Date updateTime;
     /**
      * <p>
      * The name of the configured audience model.
@@ -60,22 +48,154 @@ public class ConfiguredAudienceModelSummary implements Serializable, Cloneable, 
     private String name;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the audience model that was used to create the configured audience model.
+     * </p>
+     */
+    private String audienceModelArn;
+    /**
+     * <p>
      * The output configuration of the configured audience model.
      * </p>
      */
     private ConfiguredAudienceModelOutputConfig outputConfig;
     /**
      * <p>
+     * The description of the configured audience model.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
+     * </p>
+     */
+    private String configuredAudienceModelArn;
+    /**
+     * <p>
      * The status of the configured audience model.
      * </p>
      */
     private String status;
+
+    /**
+     * <p>
+     * The time at which the configured audience model was created.
+     * </p>
+     * 
+     * @param createTime
+     *        The time at which the configured audience model was created.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The time at which the configured audience model was created.
+     * </p>
+     * 
+     * @return The time at which the configured audience model was created.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The time at which the configured audience model was created.
+     * </p>
+     * 
+     * @param createTime
+     *        The time at which the configured audience model was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConfiguredAudienceModelSummary withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
+        return this;
+    }
+
     /**
      * <p>
      * The most recent time at which the configured audience model was updated.
      * </p>
+     * 
+     * @param updateTime
+     *        The most recent time at which the configured audience model was updated.
      */
-    private java.util.Date updateTime;
+
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    /**
+     * <p>
+     * The most recent time at which the configured audience model was updated.
+     * </p>
+     * 
+     * @return The most recent time at which the configured audience model was updated.
+     */
+
+    public java.util.Date getUpdateTime() {
+        return this.updateTime;
+    }
+
+    /**
+     * <p>
+     * The most recent time at which the configured audience model was updated.
+     * </p>
+     * 
+     * @param updateTime
+     *        The most recent time at which the configured audience model was updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConfiguredAudienceModelSummary withUpdateTime(java.util.Date updateTime) {
+        setUpdateTime(updateTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the configured audience model.
+     * </p>
+     * 
+     * @param name
+     *        The name of the configured audience model.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the configured audience model.
+     * </p>
+     * 
+     * @return The name of the configured audience model.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the configured audience model.
+     * </p>
+     * 
+     * @param name
+     *        The name of the configured audience model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConfiguredAudienceModelSummary withName(String name) {
+        setName(name);
+        return this;
+    }
 
     /**
      * <p>
@@ -122,81 +242,41 @@ public class ConfiguredAudienceModelSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
+     * The output configuration of the configured audience model.
      * </p>
      * 
-     * @param configuredAudienceModelArn
-     *        The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
+     * @param outputConfig
+     *        The output configuration of the configured audience model.
      */
 
-    public void setConfiguredAudienceModelArn(String configuredAudienceModelArn) {
-        this.configuredAudienceModelArn = configuredAudienceModelArn;
+    public void setOutputConfig(ConfiguredAudienceModelOutputConfig outputConfig) {
+        this.outputConfig = outputConfig;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
+     * The output configuration of the configured audience model.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
+     * @return The output configuration of the configured audience model.
      */
 
-    public String getConfiguredAudienceModelArn() {
-        return this.configuredAudienceModelArn;
+    public ConfiguredAudienceModelOutputConfig getOutputConfig() {
+        return this.outputConfig;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
+     * The output configuration of the configured audience model.
      * </p>
      * 
-     * @param configuredAudienceModelArn
-     *        The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
+     * @param outputConfig
+     *        The output configuration of the configured audience model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ConfiguredAudienceModelSummary withConfiguredAudienceModelArn(String configuredAudienceModelArn) {
-        setConfiguredAudienceModelArn(configuredAudienceModelArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The time at which the configured audience model was created.
-     * </p>
-     * 
-     * @param createTime
-     *        The time at which the configured audience model was created.
-     */
-
-    public void setCreateTime(java.util.Date createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * <p>
-     * The time at which the configured audience model was created.
-     * </p>
-     * 
-     * @return The time at which the configured audience model was created.
-     */
-
-    public java.util.Date getCreateTime() {
-        return this.createTime;
-    }
-
-    /**
-     * <p>
-     * The time at which the configured audience model was created.
-     * </p>
-     * 
-     * @param createTime
-     *        The time at which the configured audience model was created.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ConfiguredAudienceModelSummary withCreateTime(java.util.Date createTime) {
-        setCreateTime(createTime);
+    public ConfiguredAudienceModelSummary withOutputConfig(ConfiguredAudienceModelOutputConfig outputConfig) {
+        setOutputConfig(outputConfig);
         return this;
     }
 
@@ -242,81 +322,41 @@ public class ConfiguredAudienceModelSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the configured audience model.
+     * The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
      * </p>
      * 
-     * @param name
-     *        The name of the configured audience model.
+     * @param configuredAudienceModelArn
+     *        The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
      */
 
-    public void setName(String name) {
-        this.name = name;
+    public void setConfiguredAudienceModelArn(String configuredAudienceModelArn) {
+        this.configuredAudienceModelArn = configuredAudienceModelArn;
     }
 
     /**
      * <p>
-     * The name of the configured audience model.
+     * The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
      * </p>
      * 
-     * @return The name of the configured audience model.
+     * @return The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
      */
 
-    public String getName() {
-        return this.name;
+    public String getConfiguredAudienceModelArn() {
+        return this.configuredAudienceModelArn;
     }
 
     /**
      * <p>
-     * The name of the configured audience model.
+     * The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
      * </p>
      * 
-     * @param name
-     *        The name of the configured audience model.
+     * @param configuredAudienceModelArn
+     *        The Amazon Resource Name (ARN) of the configured audience model that you are interested in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ConfiguredAudienceModelSummary withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The output configuration of the configured audience model.
-     * </p>
-     * 
-     * @param outputConfig
-     *        The output configuration of the configured audience model.
-     */
-
-    public void setOutputConfig(ConfiguredAudienceModelOutputConfig outputConfig) {
-        this.outputConfig = outputConfig;
-    }
-
-    /**
-     * <p>
-     * The output configuration of the configured audience model.
-     * </p>
-     * 
-     * @return The output configuration of the configured audience model.
-     */
-
-    public ConfiguredAudienceModelOutputConfig getOutputConfig() {
-        return this.outputConfig;
-    }
-
-    /**
-     * <p>
-     * The output configuration of the configured audience model.
-     * </p>
-     * 
-     * @param outputConfig
-     *        The output configuration of the configured audience model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ConfiguredAudienceModelSummary withOutputConfig(ConfiguredAudienceModelOutputConfig outputConfig) {
-        setOutputConfig(outputConfig);
+    public ConfiguredAudienceModelSummary withConfiguredAudienceModelArn(String configuredAudienceModelArn) {
+        setConfiguredAudienceModelArn(configuredAudienceModelArn);
         return this;
     }
 
@@ -380,46 +420,6 @@ public class ConfiguredAudienceModelSummary implements Serializable, Cloneable, 
     }
 
     /**
-     * <p>
-     * The most recent time at which the configured audience model was updated.
-     * </p>
-     * 
-     * @param updateTime
-     *        The most recent time at which the configured audience model was updated.
-     */
-
-    public void setUpdateTime(java.util.Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    /**
-     * <p>
-     * The most recent time at which the configured audience model was updated.
-     * </p>
-     * 
-     * @return The most recent time at which the configured audience model was updated.
-     */
-
-    public java.util.Date getUpdateTime() {
-        return this.updateTime;
-    }
-
-    /**
-     * <p>
-     * The most recent time at which the configured audience model was updated.
-     * </p>
-     * 
-     * @param updateTime
-     *        The most recent time at which the configured audience model was updated.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ConfiguredAudienceModelSummary withUpdateTime(java.util.Date updateTime) {
-        setUpdateTime(updateTime);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -431,22 +431,22 @@ public class ConfiguredAudienceModelSummary implements Serializable, Cloneable, 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceModelArn() != null)
-            sb.append("AudienceModelArn: ").append(getAudienceModelArn()).append(",");
-        if (getConfiguredAudienceModelArn() != null)
-            sb.append("ConfiguredAudienceModelArn: ").append(getConfiguredAudienceModelArn()).append(",");
         if (getCreateTime() != null)
             sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+        if (getUpdateTime() != null)
+            sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getAudienceModelArn() != null)
+            sb.append("AudienceModelArn: ").append(getAudienceModelArn()).append(",");
         if (getOutputConfig() != null)
             sb.append("OutputConfig: ").append(getOutputConfig()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
+        if (getConfiguredAudienceModelArn() != null)
+            sb.append("ConfiguredAudienceModelArn: ").append(getConfiguredAudienceModelArn()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus()).append(",");
-        if (getUpdateTime() != null)
-            sb.append("UpdateTime: ").append(getUpdateTime());
+            sb.append("Status: ").append(getStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -461,37 +461,37 @@ public class ConfiguredAudienceModelSummary implements Serializable, Cloneable, 
         if (obj instanceof ConfiguredAudienceModelSummary == false)
             return false;
         ConfiguredAudienceModelSummary other = (ConfiguredAudienceModelSummary) obj;
-        if (other.getAudienceModelArn() == null ^ this.getAudienceModelArn() == null)
-            return false;
-        if (other.getAudienceModelArn() != null && other.getAudienceModelArn().equals(this.getAudienceModelArn()) == false)
-            return false;
-        if (other.getConfiguredAudienceModelArn() == null ^ this.getConfiguredAudienceModelArn() == null)
-            return false;
-        if (other.getConfiguredAudienceModelArn() != null && other.getConfiguredAudienceModelArn().equals(this.getConfiguredAudienceModelArn()) == false)
-            return false;
         if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
         if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
+        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
             return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getAudienceModelArn() == null ^ this.getAudienceModelArn() == null)
+            return false;
+        if (other.getAudienceModelArn() != null && other.getAudienceModelArn().equals(this.getAudienceModelArn()) == false)
+            return false;
         if (other.getOutputConfig() == null ^ this.getOutputConfig() == null)
             return false;
         if (other.getOutputConfig() != null && other.getOutputConfig().equals(this.getOutputConfig()) == false)
             return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
+        if (other.getConfiguredAudienceModelArn() == null ^ this.getConfiguredAudienceModelArn() == null)
+            return false;
+        if (other.getConfiguredAudienceModelArn() != null && other.getConfiguredAudienceModelArn().equals(this.getConfiguredAudienceModelArn()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
-            return false;
-        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
-            return false;
-        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
             return false;
         return true;
     }
@@ -501,14 +501,14 @@ public class ConfiguredAudienceModelSummary implements Serializable, Cloneable, 
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceModelArn() == null) ? 0 : getAudienceModelArn().hashCode());
-        hashCode = prime * hashCode + ((getConfiguredAudienceModelArn() == null) ? 0 : getConfiguredAudienceModelArn().hashCode());
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getOutputConfig() == null) ? 0 : getOutputConfig().hashCode());
-        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getAudienceModelArn() == null) ? 0 : getAudienceModelArn().hashCode());
+        hashCode = prime * hashCode + ((getOutputConfig() == null) ? 0 : getOutputConfig().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getConfiguredAudienceModelArn() == null) ? 0 : getConfiguredAudienceModelArn().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }
 

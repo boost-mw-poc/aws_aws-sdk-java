@@ -56,6 +56,10 @@ public class RealtimeContactAnalysisSegmentJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     realtimeContactAnalysisSegment.setCategories(CategoriesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("PostContactSummary", targetDepth)) {
+                    context.nextToken();
+                    realtimeContactAnalysisSegment.setPostContactSummary(PostContactSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

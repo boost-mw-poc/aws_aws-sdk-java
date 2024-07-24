@@ -27,6 +27,12 @@ public class StartAudienceExportJobRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * The name of the audience export job.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the audience generation job that you want to export.
      * </p>
      */
@@ -39,12 +45,46 @@ public class StartAudienceExportJobRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String description;
+
     /**
      * <p>
      * The name of the audience export job.
      * </p>
+     * 
+     * @param name
+     *        The name of the audience export job.
      */
-    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the audience export job.
+     * </p>
+     * 
+     * @return The name of the audience export job.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the audience export job.
+     * </p>
+     * 
+     * @param name
+     *        The name of the audience export job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartAudienceExportJobRequest withName(String name) {
+        setName(name);
+        return this;
+    }
 
     /**
      * <p>
@@ -153,46 +193,6 @@ public class StartAudienceExportJobRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * <p>
-     * The name of the audience export job.
-     * </p>
-     * 
-     * @param name
-     *        The name of the audience export job.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * The name of the audience export job.
-     * </p>
-     * 
-     * @return The name of the audience export job.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * The name of the audience export job.
-     * </p>
-     * 
-     * @param name
-     *        The name of the audience export job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StartAudienceExportJobRequest withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -204,14 +204,14 @@ public class StartAudienceExportJobRequest extends com.amazonaws.AmazonWebServic
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getAudienceGenerationJobArn() != null)
             sb.append("AudienceGenerationJobArn: ").append(getAudienceGenerationJobArn()).append(",");
         if (getAudienceSize() != null)
             sb.append("AudienceSize: ").append(getAudienceSize()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -226,6 +226,10 @@ public class StartAudienceExportJobRequest extends com.amazonaws.AmazonWebServic
         if (obj instanceof StartAudienceExportJobRequest == false)
             return false;
         StartAudienceExportJobRequest other = (StartAudienceExportJobRequest) obj;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
         if (other.getAudienceGenerationJobArn() == null ^ this.getAudienceGenerationJobArn() == null)
             return false;
         if (other.getAudienceGenerationJobArn() != null && other.getAudienceGenerationJobArn().equals(this.getAudienceGenerationJobArn()) == false)
@@ -238,10 +242,6 @@ public class StartAudienceExportJobRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
         return true;
     }
 
@@ -250,10 +250,10 @@ public class StartAudienceExportJobRequest extends com.amazonaws.AmazonWebServic
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getAudienceGenerationJobArn() == null) ? 0 : getAudienceGenerationJobArn().hashCode());
         hashCode = prime * hashCode + ((getAudienceSize() == null) ? 0 : getAudienceSize().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         return hashCode;
     }
 

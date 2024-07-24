@@ -286,6 +286,60 @@ public interface AWSCleanRooms {
 
     /**
      * <p>
+     * Creates a new analysis rule for an associated configured table.
+     * </p>
+     * 
+     * @param createConfiguredTableAssociationAnalysisRuleRequest
+     * @return Result of the CreateConfiguredTableAssociationAnalysisRule operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.CreateConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateConfiguredTableAssociationAnalysisRuleResult createConfiguredTableAssociationAnalysisRule(
+            CreateConfiguredTableAssociationAnalysisRuleRequest createConfiguredTableAssociationAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Creates an ID mapping table.
+     * </p>
+     * 
+     * @param createIdMappingTableRequest
+     * @return Result of the CreateIdMappingTable operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         Request denied because service quota has been exceeded.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.CreateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateIdMappingTableResult createIdMappingTable(CreateIdMappingTableRequest createIdMappingTableRequest);
+
+    /**
+     * <p>
      * Creates a membership for a specific collaboration identifier and joins the collaboration.
      * </p>
      * 
@@ -481,6 +535,79 @@ public interface AWSCleanRooms {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteConfiguredTableAssociationResult deleteConfiguredTableAssociation(DeleteConfiguredTableAssociationRequest deleteConfiguredTableAssociationRequest);
+
+    /**
+     * <p>
+     * Deletes an analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param deleteConfiguredTableAssociationAnalysisRuleRequest
+     * @return Result of the DeleteConfiguredTableAssociationAnalysisRule operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.DeleteConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteConfiguredTableAssociationAnalysisRuleResult deleteConfiguredTableAssociationAnalysisRule(
+            DeleteConfiguredTableAssociationAnalysisRuleRequest deleteConfiguredTableAssociationAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Deletes an ID mapping table.
+     * </p>
+     * 
+     * @param deleteIdMappingTableRequest
+     * @return Result of the DeleteIdMappingTable operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.DeleteIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteIdMappingTableResult deleteIdMappingTable(DeleteIdMappingTableRequest deleteIdMappingTableRequest);
+
+    /**
+     * <p>
+     * Deletes an ID namespace association.
+     * </p>
+     * 
+     * @param deleteIdNamespaceAssociationRequest
+     * @return Result of the DeleteIdNamespaceAssociation operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.DeleteIdNamespaceAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteIdNamespaceAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteIdNamespaceAssociationResult deleteIdNamespaceAssociation(DeleteIdNamespaceAssociationRequest deleteIdNamespaceAssociationRequest);
 
     /**
      * <p>
@@ -768,6 +895,54 @@ public interface AWSCleanRooms {
 
     /**
      * <p>
+     * Retrieves the analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param getConfiguredTableAssociationAnalysisRuleRequest
+     * @return Result of the GetConfiguredTableAssociationAnalysisRule operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.GetConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetConfiguredTableAssociationAnalysisRuleResult getConfiguredTableAssociationAnalysisRule(
+            GetConfiguredTableAssociationAnalysisRuleRequest getConfiguredTableAssociationAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Retrieves an ID mapping table.
+     * </p>
+     * 
+     * @param getIdMappingTableRequest
+     * @return Result of the GetIdMappingTable operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.GetIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetIdMappingTable" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetIdMappingTableResult getIdMappingTable(GetIdMappingTableRequest getIdMappingTableRequest);
+
+    /**
+     * <p>
      * Retrieves a specified membership for an identifier.
      * </p>
      * 
@@ -955,6 +1130,31 @@ public interface AWSCleanRooms {
 
     /**
      * <p>
+     * Returns a list of the ID namespace associations in a collaboration.
+     * </p>
+     * 
+     * @param listCollaborationIdNamespaceAssociationsRequest
+     * @return Result of the ListCollaborationIdNamespaceAssociations operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.ListCollaborationIdNamespaceAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListCollaborationIdNamespaceAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListCollaborationIdNamespaceAssociationsResult listCollaborationIdNamespaceAssociations(
+            ListCollaborationIdNamespaceAssociationsRequest listCollaborationIdNamespaceAssociationsRequest);
+
+    /**
+     * <p>
      * Returns an array that summarizes each privacy budget template in a specified collaboration.
      * </p>
      * 
@@ -1091,6 +1291,52 @@ public interface AWSCleanRooms {
      *      target="_top">AWS API Documentation</a>
      */
     ListConfiguredTablesResult listConfiguredTables(ListConfiguredTablesRequest listConfiguredTablesRequest);
+
+    /**
+     * <p>
+     * Returns a list of ID mapping tables.
+     * </p>
+     * 
+     * @param listIdMappingTablesRequest
+     * @return Result of the ListIdMappingTables operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.ListIdMappingTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListIdMappingTables" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListIdMappingTablesResult listIdMappingTables(ListIdMappingTablesRequest listIdMappingTablesRequest);
+
+    /**
+     * <p>
+     * Returns a list of ID namespace associations.
+     * </p>
+     * 
+     * @param listIdNamespaceAssociationsRequest
+     * @return Result of the ListIdNamespaceAssociations operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.ListIdNamespaceAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListIdNamespaceAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListIdNamespaceAssociationsResult listIdNamespaceAssociations(ListIdNamespaceAssociationsRequest listIdNamespaceAssociationsRequest);
 
     /**
      * <p>
@@ -1244,6 +1490,31 @@ public interface AWSCleanRooms {
      *      API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Defines the information that's necessary to populate an ID mapping table.
+     * </p>
+     * 
+     * @param populateIdMappingTableRequest
+     * @return Result of the PopulateIdMappingTable operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.PopulateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/PopulateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PopulateIdMappingTableResult populateIdMappingTable(PopulateIdMappingTableRequest populateIdMappingTableRequest);
 
     /**
      * <p>
@@ -1471,6 +1742,56 @@ public interface AWSCleanRooms {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateConfiguredTableAssociationResult updateConfiguredTableAssociation(UpdateConfiguredTableAssociationRequest updateConfiguredTableAssociationRequest);
+
+    /**
+     * <p>
+     * Updates the analysis rule for a configured table association.
+     * </p>
+     * 
+     * @param updateConfiguredTableAssociationAnalysisRuleRequest
+     * @return Result of the UpdateConfiguredTableAssociationAnalysisRule operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.UpdateConfiguredTableAssociationAnalysisRule
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTableAssociationAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateConfiguredTableAssociationAnalysisRuleResult updateConfiguredTableAssociationAnalysisRule(
+            UpdateConfiguredTableAssociationAnalysisRuleRequest updateConfiguredTableAssociationAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Provides the details that are necessary to update an ID mapping table.
+     * </p>
+     * 
+     * @param updateIdMappingTableRequest
+     * @return Result of the UpdateIdMappingTable operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ValidationException
+     *         The input fails to satisfy the specified constraints.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         Caller does not have sufficient access to perform this action.
+     * @sample AWSCleanRooms.UpdateIdMappingTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateIdMappingTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateIdMappingTableResult updateIdMappingTable(UpdateIdMappingTableRequest updateIdMappingTableRequest);
 
     /**
      * <p>

@@ -23,7 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * Event destinations are associated with configuration sets, which enable you to publish message sending events to
- * CloudWatch, Kinesis Data Firehose, or Amazon SNS.
+ * CloudWatch, Firehose, or Amazon SNS.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pinpoint-sms-voice-v2-2022-03-31/EventDestination"
@@ -64,7 +64,7 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
     private CloudWatchLogsDestination cloudWatchLogsDestination;
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Amazon Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Amazon Data Firehose.
      * </p>
      */
     private KinesisFirehoseDestination kinesisFirehoseDestination;
@@ -353,12 +353,11 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Amazon Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Amazon Data Firehose.
      * </p>
      * 
      * @param kinesisFirehoseDestination
-     *        An object that contains information about an event destination for logging to Amazon Kinesis Data
-     *        Firehose.
+     *        An object that contains information about an event destination for logging to Amazon Data Firehose.
      */
 
     public void setKinesisFirehoseDestination(KinesisFirehoseDestination kinesisFirehoseDestination) {
@@ -367,11 +366,10 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Amazon Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Amazon Data Firehose.
      * </p>
      * 
-     * @return An object that contains information about an event destination for logging to Amazon Kinesis Data
-     *         Firehose.
+     * @return An object that contains information about an event destination for logging to Amazon Data Firehose.
      */
 
     public KinesisFirehoseDestination getKinesisFirehoseDestination() {
@@ -380,12 +378,11 @@ public class EventDestination implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An object that contains information about an event destination for logging to Amazon Kinesis Data Firehose.
+     * An object that contains information about an event destination for logging to Amazon Data Firehose.
      * </p>
      * 
      * @param kinesisFirehoseDestination
-     *        An object that contains information about an event destination for logging to Amazon Kinesis Data
-     *        Firehose.
+     *        An object that contains information about an event destination for logging to Amazon Data Firehose.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

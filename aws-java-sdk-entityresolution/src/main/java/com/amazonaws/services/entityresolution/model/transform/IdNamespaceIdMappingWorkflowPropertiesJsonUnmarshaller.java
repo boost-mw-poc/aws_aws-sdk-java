@@ -56,6 +56,11 @@ public class IdNamespaceIdMappingWorkflowPropertiesJsonUnmarshaller implements U
                     context.nextToken();
                     idNamespaceIdMappingWorkflowProperties.setProviderProperties(NamespaceProviderPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ruleBasedProperties", targetDepth)) {
+                    context.nextToken();
+                    idNamespaceIdMappingWorkflowProperties.setRuleBasedProperties(NamespaceRuleBasedPropertiesJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

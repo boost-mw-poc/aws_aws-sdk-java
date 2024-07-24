@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListAudienceExportJobsRequestMarshaller {
 
-    private static final MarshallingInfo<String> AUDIENCEGENERATIONJOBARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("audienceGenerationJobArn").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<String> AUDIENCEGENERATIONJOBARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("audienceGenerationJobArn").build();
 
     private static final ListAudienceExportJobsRequestMarshaller instance = new ListAudienceExportJobsRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class ListAudienceExportJobsRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listAudienceExportJobsRequest.getAudienceGenerationJobArn(), AUDIENCEGENERATIONJOBARN_BINDING);
-            protocolMarshaller.marshall(listAudienceExportJobsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listAudienceExportJobsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listAudienceExportJobsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listAudienceExportJobsRequest.getAudienceGenerationJobArn(), AUDIENCEGENERATIONJOBARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

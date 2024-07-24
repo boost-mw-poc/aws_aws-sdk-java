@@ -52,6 +52,10 @@ public class CopySourceImageSetInformationJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     copySourceImageSetInformation.setLatestVersionId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DICOMCopies", targetDepth)) {
+                    context.nextToken();
+                    copySourceImageSetInformation.setDICOMCopies(MetadataCopiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

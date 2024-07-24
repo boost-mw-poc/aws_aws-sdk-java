@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object containing <code>IdMappingType</code> and <code>ProviderProperties</code>.
+ * An object containing <code>IdMappingType</code>, <code>ProviderProperties</code>, and
+ * <code>RuleBasedProperties</code>.
  * </p>
  * 
  * @see <a
@@ -41,6 +42,12 @@ public class IdNamespaceIdMappingWorkflowProperties implements Serializable, Clo
      * </p>
      */
     private NamespaceProviderProperties providerProperties;
+    /**
+     * <p>
+     * An object which defines any additional configurations required by rule-based matching.
+     * </p>
+     */
+    private NamespaceRuleBasedProperties ruleBasedProperties;
 
     /**
      * <p>
@@ -142,6 +149,46 @@ public class IdNamespaceIdMappingWorkflowProperties implements Serializable, Clo
     }
 
     /**
+     * <p>
+     * An object which defines any additional configurations required by rule-based matching.
+     * </p>
+     * 
+     * @param ruleBasedProperties
+     *        An object which defines any additional configurations required by rule-based matching.
+     */
+
+    public void setRuleBasedProperties(NamespaceRuleBasedProperties ruleBasedProperties) {
+        this.ruleBasedProperties = ruleBasedProperties;
+    }
+
+    /**
+     * <p>
+     * An object which defines any additional configurations required by rule-based matching.
+     * </p>
+     * 
+     * @return An object which defines any additional configurations required by rule-based matching.
+     */
+
+    public NamespaceRuleBasedProperties getRuleBasedProperties() {
+        return this.ruleBasedProperties;
+    }
+
+    /**
+     * <p>
+     * An object which defines any additional configurations required by rule-based matching.
+     * </p>
+     * 
+     * @param ruleBasedProperties
+     *        An object which defines any additional configurations required by rule-based matching.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdNamespaceIdMappingWorkflowProperties withRuleBasedProperties(NamespaceRuleBasedProperties ruleBasedProperties) {
+        setRuleBasedProperties(ruleBasedProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -156,7 +203,9 @@ public class IdNamespaceIdMappingWorkflowProperties implements Serializable, Clo
         if (getIdMappingType() != null)
             sb.append("IdMappingType: ").append(getIdMappingType()).append(",");
         if (getProviderProperties() != null)
-            sb.append("ProviderProperties: ").append(getProviderProperties());
+            sb.append("ProviderProperties: ").append(getProviderProperties()).append(",");
+        if (getRuleBasedProperties() != null)
+            sb.append("RuleBasedProperties: ").append(getRuleBasedProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -179,6 +228,10 @@ public class IdNamespaceIdMappingWorkflowProperties implements Serializable, Clo
             return false;
         if (other.getProviderProperties() != null && other.getProviderProperties().equals(this.getProviderProperties()) == false)
             return false;
+        if (other.getRuleBasedProperties() == null ^ this.getRuleBasedProperties() == null)
+            return false;
+        if (other.getRuleBasedProperties() != null && other.getRuleBasedProperties().equals(this.getRuleBasedProperties()) == false)
+            return false;
         return true;
     }
 
@@ -189,6 +242,7 @@ public class IdNamespaceIdMappingWorkflowProperties implements Serializable, Clo
 
         hashCode = prime * hashCode + ((getIdMappingType() == null) ? 0 : getIdMappingType().hashCode());
         hashCode = prime * hashCode + ((getProviderProperties() == null) ? 0 : getProviderProperties().hashCode());
+        hashCode = prime * hashCode + ((getRuleBasedProperties() == null) ? 0 : getRuleBasedProperties().hashCode());
         return hashCode;
     }
 

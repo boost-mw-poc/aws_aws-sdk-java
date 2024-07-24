@@ -85,6 +85,12 @@ public class ConfiguredTableAssociation implements Serializable, Cloneable, Stru
     private String description;
     /**
      * <p>
+     * The analysis rule types for the configured table association.
+     * </p>
+     */
+    private java.util.List<String> analysisRuleTypes;
+    /**
+     * <p>
      * The time the configured table association was created.
      * </p>
      */
@@ -464,6 +470,104 @@ public class ConfiguredTableAssociation implements Serializable, Cloneable, Stru
 
     /**
      * <p>
+     * The analysis rule types for the configured table association.
+     * </p>
+     * 
+     * @return The analysis rule types for the configured table association.
+     * @see ConfiguredTableAssociationAnalysisRuleType
+     */
+
+    public java.util.List<String> getAnalysisRuleTypes() {
+        return analysisRuleTypes;
+    }
+
+    /**
+     * <p>
+     * The analysis rule types for the configured table association.
+     * </p>
+     * 
+     * @param analysisRuleTypes
+     *        The analysis rule types for the configured table association.
+     * @see ConfiguredTableAssociationAnalysisRuleType
+     */
+
+    public void setAnalysisRuleTypes(java.util.Collection<String> analysisRuleTypes) {
+        if (analysisRuleTypes == null) {
+            this.analysisRuleTypes = null;
+            return;
+        }
+
+        this.analysisRuleTypes = new java.util.ArrayList<String>(analysisRuleTypes);
+    }
+
+    /**
+     * <p>
+     * The analysis rule types for the configured table association.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAnalysisRuleTypes(java.util.Collection)} or {@link #withAnalysisRuleTypes(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param analysisRuleTypes
+     *        The analysis rule types for the configured table association.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfiguredTableAssociationAnalysisRuleType
+     */
+
+    public ConfiguredTableAssociation withAnalysisRuleTypes(String... analysisRuleTypes) {
+        if (this.analysisRuleTypes == null) {
+            setAnalysisRuleTypes(new java.util.ArrayList<String>(analysisRuleTypes.length));
+        }
+        for (String ele : analysisRuleTypes) {
+            this.analysisRuleTypes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The analysis rule types for the configured table association.
+     * </p>
+     * 
+     * @param analysisRuleTypes
+     *        The analysis rule types for the configured table association.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfiguredTableAssociationAnalysisRuleType
+     */
+
+    public ConfiguredTableAssociation withAnalysisRuleTypes(java.util.Collection<String> analysisRuleTypes) {
+        setAnalysisRuleTypes(analysisRuleTypes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The analysis rule types for the configured table association.
+     * </p>
+     * 
+     * @param analysisRuleTypes
+     *        The analysis rule types for the configured table association.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfiguredTableAssociationAnalysisRuleType
+     */
+
+    public ConfiguredTableAssociation withAnalysisRuleTypes(ConfiguredTableAssociationAnalysisRuleType... analysisRuleTypes) {
+        java.util.ArrayList<String> analysisRuleTypesCopy = new java.util.ArrayList<String>(analysisRuleTypes.length);
+        for (ConfiguredTableAssociationAnalysisRuleType value : analysisRuleTypes) {
+            analysisRuleTypesCopy.add(value.toString());
+        }
+        if (getAnalysisRuleTypes() == null) {
+            setAnalysisRuleTypes(analysisRuleTypesCopy);
+        } else {
+            getAnalysisRuleTypes().addAll(analysisRuleTypesCopy);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
      * The time the configured table association was created.
      * </p>
      * 
@@ -572,6 +676,8 @@ public class ConfiguredTableAssociation implements Serializable, Cloneable, Stru
             sb.append("Name: ").append(getName()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getAnalysisRuleTypes() != null)
+            sb.append("AnalysisRuleTypes: ").append(getAnalysisRuleTypes()).append(",");
         if (getCreateTime() != null)
             sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getUpdateTime() != null)
@@ -626,6 +732,10 @@ public class ConfiguredTableAssociation implements Serializable, Cloneable, Stru
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getAnalysisRuleTypes() == null ^ this.getAnalysisRuleTypes() == null)
+            return false;
+        if (other.getAnalysisRuleTypes() != null && other.getAnalysisRuleTypes().equals(this.getAnalysisRuleTypes()) == false)
+            return false;
         if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
         if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
@@ -651,6 +761,7 @@ public class ConfiguredTableAssociation implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getAnalysisRuleTypes() == null) ? 0 : getAnalysisRuleTypes().hashCode());
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         return hashCode;

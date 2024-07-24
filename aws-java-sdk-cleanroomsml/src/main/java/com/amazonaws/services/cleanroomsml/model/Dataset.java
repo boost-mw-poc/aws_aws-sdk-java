@@ -30,56 +30,16 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A DatasetInputConfig object that defines the data source and schema mapping.
-     * </p>
-     */
-    private DatasetInputConfig inputConfig;
-    /**
-     * <p>
      * What type of information is found in the dataset.
      * </p>
      */
     private String type;
-
     /**
      * <p>
      * A DatasetInputConfig object that defines the data source and schema mapping.
      * </p>
-     * 
-     * @param inputConfig
-     *        A DatasetInputConfig object that defines the data source and schema mapping.
      */
-
-    public void setInputConfig(DatasetInputConfig inputConfig) {
-        this.inputConfig = inputConfig;
-    }
-
-    /**
-     * <p>
-     * A DatasetInputConfig object that defines the data source and schema mapping.
-     * </p>
-     * 
-     * @return A DatasetInputConfig object that defines the data source and schema mapping.
-     */
-
-    public DatasetInputConfig getInputConfig() {
-        return this.inputConfig;
-    }
-
-    /**
-     * <p>
-     * A DatasetInputConfig object that defines the data source and schema mapping.
-     * </p>
-     * 
-     * @param inputConfig
-     *        A DatasetInputConfig object that defines the data source and schema mapping.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Dataset withInputConfig(DatasetInputConfig inputConfig) {
-        setInputConfig(inputConfig);
-        return this;
-    }
+    private DatasetInputConfig inputConfig;
 
     /**
      * <p>
@@ -141,6 +101,46 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A DatasetInputConfig object that defines the data source and schema mapping.
+     * </p>
+     * 
+     * @param inputConfig
+     *        A DatasetInputConfig object that defines the data source and schema mapping.
+     */
+
+    public void setInputConfig(DatasetInputConfig inputConfig) {
+        this.inputConfig = inputConfig;
+    }
+
+    /**
+     * <p>
+     * A DatasetInputConfig object that defines the data source and schema mapping.
+     * </p>
+     * 
+     * @return A DatasetInputConfig object that defines the data source and schema mapping.
+     */
+
+    public DatasetInputConfig getInputConfig() {
+        return this.inputConfig;
+    }
+
+    /**
+     * <p>
+     * A DatasetInputConfig object that defines the data source and schema mapping.
+     * </p>
+     * 
+     * @param inputConfig
+     *        A DatasetInputConfig object that defines the data source and schema mapping.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Dataset withInputConfig(DatasetInputConfig inputConfig) {
+        setInputConfig(inputConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -152,10 +152,10 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getInputConfig() != null)
-            sb.append("InputConfig: ").append(getInputConfig()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getInputConfig() != null)
+            sb.append("InputConfig: ").append(getInputConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -170,13 +170,13 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Dataset == false)
             return false;
         Dataset other = (Dataset) obj;
-        if (other.getInputConfig() == null ^ this.getInputConfig() == null)
-            return false;
-        if (other.getInputConfig() != null && other.getInputConfig().equals(this.getInputConfig()) == false)
-            return false;
         if (other.getType() == null ^ this.getType() == null)
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
+        if (other.getInputConfig() == null ^ this.getInputConfig() == null)
+            return false;
+        if (other.getInputConfig() != null && other.getInputConfig().equals(this.getInputConfig()) == false)
             return false;
         return true;
     }
@@ -186,8 +186,8 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getInputConfig() == null) ? 0 : getInputConfig().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getInputConfig() == null) ? 0 : getInputConfig().hashCode());
         return hashCode;
     }
 

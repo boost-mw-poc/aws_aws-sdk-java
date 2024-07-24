@@ -30,64 +30,18 @@ public class StatusDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The error message that was returned. The message is intended for human consumption and can change at any time.
-     * Use the <code>statusCode</code> for programmatic error handling.
-     * </p>
-     */
-    private String message;
-    /**
-     * <p>
      * The status code that was returned. The status code is intended for programmatic error handling. Clean Rooms ML
      * will not change the status code for existing error conditions.
      * </p>
      */
     private String statusCode;
-
     /**
      * <p>
      * The error message that was returned. The message is intended for human consumption and can change at any time.
      * Use the <code>statusCode</code> for programmatic error handling.
      * </p>
-     * 
-     * @param message
-     *        The error message that was returned. The message is intended for human consumption and can change at any
-     *        time. Use the <code>statusCode</code> for programmatic error handling.
      */
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    /**
-     * <p>
-     * The error message that was returned. The message is intended for human consumption and can change at any time.
-     * Use the <code>statusCode</code> for programmatic error handling.
-     * </p>
-     * 
-     * @return The error message that was returned. The message is intended for human consumption and can change at any
-     *         time. Use the <code>statusCode</code> for programmatic error handling.
-     */
-
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
-     * <p>
-     * The error message that was returned. The message is intended for human consumption and can change at any time.
-     * Use the <code>statusCode</code> for programmatic error handling.
-     * </p>
-     * 
-     * @param message
-     *        The error message that was returned. The message is intended for human consumption and can change at any
-     *        time. Use the <code>statusCode</code> for programmatic error handling.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StatusDetails withMessage(String message) {
-        setMessage(message);
-        return this;
-    }
+    private String message;
 
     /**
      * <p>
@@ -136,6 +90,52 @@ public class StatusDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The error message that was returned. The message is intended for human consumption and can change at any time.
+     * Use the <code>statusCode</code> for programmatic error handling.
+     * </p>
+     * 
+     * @param message
+     *        The error message that was returned. The message is intended for human consumption and can change at any
+     *        time. Use the <code>statusCode</code> for programmatic error handling.
+     */
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    /**
+     * <p>
+     * The error message that was returned. The message is intended for human consumption and can change at any time.
+     * Use the <code>statusCode</code> for programmatic error handling.
+     * </p>
+     * 
+     * @return The error message that was returned. The message is intended for human consumption and can change at any
+     *         time. Use the <code>statusCode</code> for programmatic error handling.
+     */
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * <p>
+     * The error message that was returned. The message is intended for human consumption and can change at any time.
+     * Use the <code>statusCode</code> for programmatic error handling.
+     * </p>
+     * 
+     * @param message
+     *        The error message that was returned. The message is intended for human consumption and can change at any
+     *        time. Use the <code>statusCode</code> for programmatic error handling.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StatusDetails withMessage(String message) {
+        setMessage(message);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -147,10 +147,10 @@ public class StatusDetails implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getMessage() != null)
-            sb.append("Message: ").append(getMessage()).append(",");
         if (getStatusCode() != null)
-            sb.append("StatusCode: ").append(getStatusCode());
+            sb.append("StatusCode: ").append(getStatusCode()).append(",");
+        if (getMessage() != null)
+            sb.append("Message: ").append(getMessage());
         sb.append("}");
         return sb.toString();
     }
@@ -165,13 +165,13 @@ public class StatusDetails implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof StatusDetails == false)
             return false;
         StatusDetails other = (StatusDetails) obj;
-        if (other.getMessage() == null ^ this.getMessage() == null)
-            return false;
-        if (other.getMessage() != null && other.getMessage().equals(this.getMessage()) == false)
-            return false;
         if (other.getStatusCode() == null ^ this.getStatusCode() == null)
             return false;
         if (other.getStatusCode() != null && other.getStatusCode().equals(this.getStatusCode()) == false)
+            return false;
+        if (other.getMessage() == null ^ this.getMessage() == null)
+            return false;
+        if (other.getMessage() != null && other.getMessage().equals(this.getMessage()) == false)
             return false;
         return true;
     }
@@ -181,8 +181,8 @@ public class StatusDetails implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         hashCode = prime * hashCode + ((getStatusCode() == null) ? 0 : getStatusCode().hashCode());
+        hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         return hashCode;
     }
 

@@ -52,26 +52,17 @@ public class GetTrainingDatasetResultJsonUnmarshaller implements Unmarshaller<Ge
                     context.nextToken();
                     getTrainingDatasetResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("description", targetDepth)) {
+                if (context.testExpression("updateTime", targetDepth)) {
                     context.nextToken();
-                    getTrainingDatasetResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                    getTrainingDatasetResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("trainingDatasetArn", targetDepth)) {
+                    context.nextToken();
+                    getTrainingDatasetResult.setTrainingDatasetArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     getTrainingDatasetResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("roleArn", targetDepth)) {
-                    context.nextToken();
-                    getTrainingDatasetResult.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("status", targetDepth)) {
-                    context.nextToken();
-                    getTrainingDatasetResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("tags", targetDepth)) {
-                    context.nextToken();
-                    getTrainingDatasetResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
-                            .getUnmarshaller(String.class)).unmarshall(context));
                 }
                 if (context.testExpression("trainingData", targetDepth)) {
                     context.nextToken();
@@ -79,13 +70,22 @@ public class GetTrainingDatasetResultJsonUnmarshaller implements Unmarshaller<Ge
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("trainingDatasetArn", targetDepth)) {
+                if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
-                    getTrainingDatasetResult.setTrainingDatasetArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    getTrainingDatasetResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("updateTime", targetDepth)) {
+                if (context.testExpression("roleArn", targetDepth)) {
                     context.nextToken();
-                    getTrainingDatasetResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    getTrainingDatasetResult.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("tags", targetDepth)) {
+                    context.nextToken();
+                    getTrainingDatasetResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
+                if (context.testExpression("description", targetDepth)) {
+                    context.nextToken();
+                    getTrainingDatasetResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

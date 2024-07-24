@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The resource could not be found. <code>HTTP Status Code: 404</code>
+ * The resource could not be found.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

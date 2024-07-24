@@ -23,7 +23,8 @@ public enum CapabilitySyncStatus {
     IN_SYNC("IN_SYNC"),
     OUT_OF_SYNC("OUT_OF_SYNC"),
     SYNC_FAILED("SYNC_FAILED"),
-    UNKNOWN("UNKNOWN");
+    UNKNOWN("UNKNOWN"),
+    NOT_APPLICABLE("NOT_APPLICABLE");
 
     private String value;
 

@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The request could not be processed because of conflict in the current state of the resource. Example: Workflow
- * already exists, Schema already exists, Workflow is currently running, etc. <code>HTTP Status Code: 400</code>
+ * already exists, Schema already exists, Workflow is currently running, etc.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

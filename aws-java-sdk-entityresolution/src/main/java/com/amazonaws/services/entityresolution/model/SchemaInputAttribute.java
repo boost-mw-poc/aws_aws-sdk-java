@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object containing <code>FieldName</code>, <code>Type</code>, <code>GroupName</code>, <code>MatchKey</code>, and
- * <code>SubType</code>.
+ * An object containing <code>FieldName</code>, <code>Type</code>, <code>GroupName</code>, <code>MatchKey</code>,
+ * <code>Hashing</code>, and <code>SubType</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/SchemaInputAttribute"
@@ -49,12 +49,24 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
     private String groupName;
     /**
      * <p>
-     * A key that allows grouping of multiple input attributes into a unified matching group. For example, consider a
-     * scenario where the source table contains various addresses, such as <code>business_address</code> and
-     * <code>shipping_address</code>. By assigning a <code>matchKey</code> called <code>address</code> to both
-     * attributes, Entity Resolution will match records across these fields to create a consolidated matching group. If
-     * no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
-     * included in the output table.
+     * Indicates if the column values are hashed in the schema input. If the value is set to <code>TRUE</code>, the
+     * column values are hashed. If the value is set to <code>FALSE</code>, the column values are cleartext.
+     * </p>
+     */
+    private Boolean hashed;
+    /**
+     * <p>
+     * A key that allows grouping of multiple input attributes into a unified matching group.
+     * </p>
+     * <p>
+     * For example, consider a scenario where the source table contains various addresses, such as
+     * <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code> called
+     * <code>address</code> to both attributes, Entity Resolution will match records across these fields to create a
+     * consolidated matching group.
+     * </p>
+     * <p>
+     * If no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still
+     * be included in the output table.
      * </p>
      */
     private String matchKey;
@@ -186,21 +198,90 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A key that allows grouping of multiple input attributes into a unified matching group. For example, consider a
-     * scenario where the source table contains various addresses, such as <code>business_address</code> and
-     * <code>shipping_address</code>. By assigning a <code>matchKey</code> called <code>address</code> to both
-     * attributes, Entity Resolution will match records across these fields to create a consolidated matching group. If
-     * no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
-     * included in the output table.
+     * Indicates if the column values are hashed in the schema input. If the value is set to <code>TRUE</code>, the
+     * column values are hashed. If the value is set to <code>FALSE</code>, the column values are cleartext.
+     * </p>
+     * 
+     * @param hashed
+     *        Indicates if the column values are hashed in the schema input. If the value is set to <code>TRUE</code>,
+     *        the column values are hashed. If the value is set to <code>FALSE</code>, the column values are cleartext.
+     */
+
+    public void setHashed(Boolean hashed) {
+        this.hashed = hashed;
+    }
+
+    /**
+     * <p>
+     * Indicates if the column values are hashed in the schema input. If the value is set to <code>TRUE</code>, the
+     * column values are hashed. If the value is set to <code>FALSE</code>, the column values are cleartext.
+     * </p>
+     * 
+     * @return Indicates if the column values are hashed in the schema input. If the value is set to <code>TRUE</code>,
+     *         the column values are hashed. If the value is set to <code>FALSE</code>, the column values are cleartext.
+     */
+
+    public Boolean getHashed() {
+        return this.hashed;
+    }
+
+    /**
+     * <p>
+     * Indicates if the column values are hashed in the schema input. If the value is set to <code>TRUE</code>, the
+     * column values are hashed. If the value is set to <code>FALSE</code>, the column values are cleartext.
+     * </p>
+     * 
+     * @param hashed
+     *        Indicates if the column values are hashed in the schema input. If the value is set to <code>TRUE</code>,
+     *        the column values are hashed. If the value is set to <code>FALSE</code>, the column values are cleartext.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SchemaInputAttribute withHashed(Boolean hashed) {
+        setHashed(hashed);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates if the column values are hashed in the schema input. If the value is set to <code>TRUE</code>, the
+     * column values are hashed. If the value is set to <code>FALSE</code>, the column values are cleartext.
+     * </p>
+     * 
+     * @return Indicates if the column values are hashed in the schema input. If the value is set to <code>TRUE</code>,
+     *         the column values are hashed. If the value is set to <code>FALSE</code>, the column values are cleartext.
+     */
+
+    public Boolean isHashed() {
+        return this.hashed;
+    }
+
+    /**
+     * <p>
+     * A key that allows grouping of multiple input attributes into a unified matching group.
+     * </p>
+     * <p>
+     * For example, consider a scenario where the source table contains various addresses, such as
+     * <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code> called
+     * <code>address</code> to both attributes, Entity Resolution will match records across these fields to create a
+     * consolidated matching group.
+     * </p>
+     * <p>
+     * If no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still
+     * be included in the output table.
      * </p>
      * 
      * @param matchKey
-     *        A key that allows grouping of multiple input attributes into a unified matching group. For example,
-     *        consider a scenario where the source table contains various addresses, such as
+     *        A key that allows grouping of multiple input attributes into a unified matching group. </p>
+     *        <p>
+     *        For example, consider a scenario where the source table contains various addresses, such as
      *        <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code>
      *        called <code>address</code> to both attributes, Entity Resolution will match records across these fields
-     *        to create a consolidated matching group. If no <code>matchKey</code> is specified for a column, it won't
-     *        be utilized for matching purposes but will still be included in the output table.
+     *        to create a consolidated matching group.
+     *        </p>
+     *        <p>
+     *        If no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will
+     *        still be included in the output table.
      */
 
     public void setMatchKey(String matchKey) {
@@ -209,20 +290,29 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A key that allows grouping of multiple input attributes into a unified matching group. For example, consider a
-     * scenario where the source table contains various addresses, such as <code>business_address</code> and
-     * <code>shipping_address</code>. By assigning a <code>matchKey</code> called <code>address</code> to both
-     * attributes, Entity Resolution will match records across these fields to create a consolidated matching group. If
-     * no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
-     * included in the output table.
+     * A key that allows grouping of multiple input attributes into a unified matching group.
+     * </p>
+     * <p>
+     * For example, consider a scenario where the source table contains various addresses, such as
+     * <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code> called
+     * <code>address</code> to both attributes, Entity Resolution will match records across these fields to create a
+     * consolidated matching group.
+     * </p>
+     * <p>
+     * If no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still
+     * be included in the output table.
      * </p>
      * 
-     * @return A key that allows grouping of multiple input attributes into a unified matching group. For example,
-     *         consider a scenario where the source table contains various addresses, such as
+     * @return A key that allows grouping of multiple input attributes into a unified matching group. </p>
+     *         <p>
+     *         For example, consider a scenario where the source table contains various addresses, such as
      *         <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code>
      *         called <code>address</code> to both attributes, Entity Resolution will match records across these fields
-     *         to create a consolidated matching group. If no <code>matchKey</code> is specified for a column, it won't
-     *         be utilized for matching purposes but will still be included in the output table.
+     *         to create a consolidated matching group.
+     *         </p>
+     *         <p>
+     *         If no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but
+     *         will still be included in the output table.
      */
 
     public String getMatchKey() {
@@ -231,21 +321,30 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A key that allows grouping of multiple input attributes into a unified matching group. For example, consider a
-     * scenario where the source table contains various addresses, such as <code>business_address</code> and
-     * <code>shipping_address</code>. By assigning a <code>matchKey</code> called <code>address</code> to both
-     * attributes, Entity Resolution will match records across these fields to create a consolidated matching group. If
-     * no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be
-     * included in the output table.
+     * A key that allows grouping of multiple input attributes into a unified matching group.
+     * </p>
+     * <p>
+     * For example, consider a scenario where the source table contains various addresses, such as
+     * <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code> called
+     * <code>address</code> to both attributes, Entity Resolution will match records across these fields to create a
+     * consolidated matching group.
+     * </p>
+     * <p>
+     * If no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still
+     * be included in the output table.
      * </p>
      * 
      * @param matchKey
-     *        A key that allows grouping of multiple input attributes into a unified matching group. For example,
-     *        consider a scenario where the source table contains various addresses, such as
+     *        A key that allows grouping of multiple input attributes into a unified matching group. </p>
+     *        <p>
+     *        For example, consider a scenario where the source table contains various addresses, such as
      *        <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code>
      *        called <code>address</code> to both attributes, Entity Resolution will match records across these fields
-     *        to create a consolidated matching group. If no <code>matchKey</code> is specified for a column, it won't
-     *        be utilized for matching purposes but will still be included in the output table.
+     *        to create a consolidated matching group.
+     *        </p>
+     *        <p>
+     *        If no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will
+     *        still be included in the output table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -369,6 +468,8 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
             sb.append("FieldName: ").append(getFieldName()).append(",");
         if (getGroupName() != null)
             sb.append("GroupName: ").append(getGroupName()).append(",");
+        if (getHashed() != null)
+            sb.append("Hashed: ").append(getHashed()).append(",");
         if (getMatchKey() != null)
             sb.append("MatchKey: ").append(getMatchKey()).append(",");
         if (getSubType() != null)
@@ -397,6 +498,10 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
             return false;
         if (other.getGroupName() != null && other.getGroupName().equals(this.getGroupName()) == false)
             return false;
+        if (other.getHashed() == null ^ this.getHashed() == null)
+            return false;
+        if (other.getHashed() != null && other.getHashed().equals(this.getHashed()) == false)
+            return false;
         if (other.getMatchKey() == null ^ this.getMatchKey() == null)
             return false;
         if (other.getMatchKey() != null && other.getMatchKey().equals(this.getMatchKey()) == false)
@@ -419,6 +524,7 @@ public class SchemaInputAttribute implements Serializable, Cloneable, Structured
 
         hashCode = prime * hashCode + ((getFieldName() == null) ? 0 : getFieldName().hashCode());
         hashCode = prime * hashCode + ((getGroupName() == null) ? 0 : getGroupName().hashCode());
+        hashCode = prime * hashCode + ((getHashed() == null) ? 0 : getHashed().hashCode());
         hashCode = prime * hashCode + ((getMatchKey() == null) ? 0 : getMatchKey().hashCode());
         hashCode = prime * hashCode + ((getSubType() == null) ? 0 : getSubType().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());

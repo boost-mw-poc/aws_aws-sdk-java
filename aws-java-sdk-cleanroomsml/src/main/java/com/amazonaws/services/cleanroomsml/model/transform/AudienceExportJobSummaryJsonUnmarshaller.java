@@ -48,6 +48,18 @@ public class AudienceExportJobSummaryJsonUnmarshaller implements Unmarshaller<Au
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("createTime", targetDepth)) {
+                    context.nextToken();
+                    audienceExportJobSummary.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("updateTime", targetDepth)) {
+                    context.nextToken();
+                    audienceExportJobSummary.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("name", targetDepth)) {
+                    context.nextToken();
+                    audienceExportJobSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("audienceGenerationJobArn", targetDepth)) {
                     context.nextToken();
                     audienceExportJobSummary.setAudienceGenerationJobArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -56,21 +68,9 @@ public class AudienceExportJobSummaryJsonUnmarshaller implements Unmarshaller<Au
                     context.nextToken();
                     audienceExportJobSummary.setAudienceSize(AudienceSizeJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("createTime", targetDepth)) {
-                    context.nextToken();
-                    audienceExportJobSummary.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     audienceExportJobSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("name", targetDepth)) {
-                    context.nextToken();
-                    audienceExportJobSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("outputLocation", targetDepth)) {
-                    context.nextToken();
-                    audienceExportJobSummary.setOutputLocation(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
@@ -80,9 +80,9 @@ public class AudienceExportJobSummaryJsonUnmarshaller implements Unmarshaller<Au
                     context.nextToken();
                     audienceExportJobSummary.setStatusDetails(StatusDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("updateTime", targetDepth)) {
+                if (context.testExpression("outputLocation", targetDepth)) {
                     context.nextToken();
-                    audienceExportJobSummary.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    audienceExportJobSummary.setOutputLocation(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -44,6 +44,19 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
     private java.util.List<String> allowedAnalysisProviders;
     /**
      * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     */
+    private String additionalAnalyses;
+    /**
+     * <p>
+     * A list of columns that aren't allowed to be shown in the query output.
+     * </p>
+     */
+    private java.util.List<String> disallowedOutputColumns;
+    /**
+     * <p>
      * The differential privacy configuration.
      * </p>
      */
@@ -199,6 +212,143 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * 
+     * @param additionalAnalyses
+     *        An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *        the direct query.
+     * @see AdditionalAnalyses
+     */
+
+    public void setAdditionalAnalyses(String additionalAnalyses) {
+        this.additionalAnalyses = additionalAnalyses;
+    }
+
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * 
+     * @return An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *         the direct query.
+     * @see AdditionalAnalyses
+     */
+
+    public String getAdditionalAnalyses() {
+        return this.additionalAnalyses;
+    }
+
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * 
+     * @param additionalAnalyses
+     *        An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *        the direct query.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AdditionalAnalyses
+     */
+
+    public AnalysisRuleCustom withAdditionalAnalyses(String additionalAnalyses) {
+        setAdditionalAnalyses(additionalAnalyses);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * 
+     * @param additionalAnalyses
+     *        An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *        the direct query.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AdditionalAnalyses
+     */
+
+    public AnalysisRuleCustom withAdditionalAnalyses(AdditionalAnalyses additionalAnalyses) {
+        this.additionalAnalyses = additionalAnalyses.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of columns that aren't allowed to be shown in the query output.
+     * </p>
+     * 
+     * @return A list of columns that aren't allowed to be shown in the query output.
+     */
+
+    public java.util.List<String> getDisallowedOutputColumns() {
+        return disallowedOutputColumns;
+    }
+
+    /**
+     * <p>
+     * A list of columns that aren't allowed to be shown in the query output.
+     * </p>
+     * 
+     * @param disallowedOutputColumns
+     *        A list of columns that aren't allowed to be shown in the query output.
+     */
+
+    public void setDisallowedOutputColumns(java.util.Collection<String> disallowedOutputColumns) {
+        if (disallowedOutputColumns == null) {
+            this.disallowedOutputColumns = null;
+            return;
+        }
+
+        this.disallowedOutputColumns = new java.util.ArrayList<String>(disallowedOutputColumns);
+    }
+
+    /**
+     * <p>
+     * A list of columns that aren't allowed to be shown in the query output.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDisallowedOutputColumns(java.util.Collection)} or
+     * {@link #withDisallowedOutputColumns(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param disallowedOutputColumns
+     *        A list of columns that aren't allowed to be shown in the query output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnalysisRuleCustom withDisallowedOutputColumns(String... disallowedOutputColumns) {
+        if (this.disallowedOutputColumns == null) {
+            setDisallowedOutputColumns(new java.util.ArrayList<String>(disallowedOutputColumns.length));
+        }
+        for (String ele : disallowedOutputColumns) {
+            this.disallowedOutputColumns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of columns that aren't allowed to be shown in the query output.
+     * </p>
+     * 
+     * @param disallowedOutputColumns
+     *        A list of columns that aren't allowed to be shown in the query output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnalysisRuleCustom withDisallowedOutputColumns(java.util.Collection<String> disallowedOutputColumns) {
+        setDisallowedOutputColumns(disallowedOutputColumns);
+        return this;
+    }
+
+    /**
+     * <p>
      * The differential privacy configuration.
      * </p>
      * 
@@ -253,6 +403,10 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
             sb.append("AllowedAnalyses: ").append(getAllowedAnalyses()).append(",");
         if (getAllowedAnalysisProviders() != null)
             sb.append("AllowedAnalysisProviders: ").append(getAllowedAnalysisProviders()).append(",");
+        if (getAdditionalAnalyses() != null)
+            sb.append("AdditionalAnalyses: ").append(getAdditionalAnalyses()).append(",");
+        if (getDisallowedOutputColumns() != null)
+            sb.append("DisallowedOutputColumns: ").append(getDisallowedOutputColumns()).append(",");
         if (getDifferentialPrivacy() != null)
             sb.append("DifferentialPrivacy: ").append(getDifferentialPrivacy());
         sb.append("}");
@@ -277,6 +431,14 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getAllowedAnalysisProviders() != null && other.getAllowedAnalysisProviders().equals(this.getAllowedAnalysisProviders()) == false)
             return false;
+        if (other.getAdditionalAnalyses() == null ^ this.getAdditionalAnalyses() == null)
+            return false;
+        if (other.getAdditionalAnalyses() != null && other.getAdditionalAnalyses().equals(this.getAdditionalAnalyses()) == false)
+            return false;
+        if (other.getDisallowedOutputColumns() == null ^ this.getDisallowedOutputColumns() == null)
+            return false;
+        if (other.getDisallowedOutputColumns() != null && other.getDisallowedOutputColumns().equals(this.getDisallowedOutputColumns()) == false)
+            return false;
         if (other.getDifferentialPrivacy() == null ^ this.getDifferentialPrivacy() == null)
             return false;
         if (other.getDifferentialPrivacy() != null && other.getDifferentialPrivacy().equals(this.getDifferentialPrivacy()) == false)
@@ -291,6 +453,8 @@ public class AnalysisRuleCustom implements Serializable, Cloneable, StructuredPo
 
         hashCode = prime * hashCode + ((getAllowedAnalyses() == null) ? 0 : getAllowedAnalyses().hashCode());
         hashCode = prime * hashCode + ((getAllowedAnalysisProviders() == null) ? 0 : getAllowedAnalysisProviders().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalAnalyses() == null) ? 0 : getAdditionalAnalyses().hashCode());
+        hashCode = prime * hashCode + ((getDisallowedOutputColumns() == null) ? 0 : getDisallowedOutputColumns().hashCode());
         hashCode = prime * hashCode + ((getDifferentialPrivacy() == null) ? 0 : getDifferentialPrivacy().hashCode());
         return hashCode;
     }

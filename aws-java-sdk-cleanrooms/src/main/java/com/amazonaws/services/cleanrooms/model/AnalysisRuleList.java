@@ -47,6 +47,13 @@ public class AnalysisRuleList implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private java.util.List<String> listColumns;
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     */
+    private String additionalAnalyses;
 
     /**
      * <p>
@@ -300,6 +307,73 @@ public class AnalysisRuleList implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * 
+     * @param additionalAnalyses
+     *        An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *        the direct query.
+     * @see AdditionalAnalyses
+     */
+
+    public void setAdditionalAnalyses(String additionalAnalyses) {
+        this.additionalAnalyses = additionalAnalyses;
+    }
+
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * 
+     * @return An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *         the direct query.
+     * @see AdditionalAnalyses
+     */
+
+    public String getAdditionalAnalyses() {
+        return this.additionalAnalyses;
+    }
+
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * 
+     * @param additionalAnalyses
+     *        An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *        the direct query.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AdditionalAnalyses
+     */
+
+    public AnalysisRuleList withAdditionalAnalyses(String additionalAnalyses) {
+        setAdditionalAnalyses(additionalAnalyses);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the
+     * direct query.
+     * </p>
+     * 
+     * @param additionalAnalyses
+     *        An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of
+     *        the direct query.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AdditionalAnalyses
+     */
+
+    public AnalysisRuleList withAdditionalAnalyses(AdditionalAnalyses additionalAnalyses) {
+        this.additionalAnalyses = additionalAnalyses.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -316,7 +390,9 @@ public class AnalysisRuleList implements Serializable, Cloneable, StructuredPojo
         if (getAllowedJoinOperators() != null)
             sb.append("AllowedJoinOperators: ").append(getAllowedJoinOperators()).append(",");
         if (getListColumns() != null)
-            sb.append("ListColumns: ").append(getListColumns());
+            sb.append("ListColumns: ").append(getListColumns()).append(",");
+        if (getAdditionalAnalyses() != null)
+            sb.append("AdditionalAnalyses: ").append(getAdditionalAnalyses());
         sb.append("}");
         return sb.toString();
     }
@@ -343,6 +419,10 @@ public class AnalysisRuleList implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getListColumns() != null && other.getListColumns().equals(this.getListColumns()) == false)
             return false;
+        if (other.getAdditionalAnalyses() == null ^ this.getAdditionalAnalyses() == null)
+            return false;
+        if (other.getAdditionalAnalyses() != null && other.getAdditionalAnalyses().equals(this.getAdditionalAnalyses()) == false)
+            return false;
         return true;
     }
 
@@ -354,6 +434,7 @@ public class AnalysisRuleList implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getJoinColumns() == null) ? 0 : getJoinColumns().hashCode());
         hashCode = prime * hashCode + ((getAllowedJoinOperators() == null) ? 0 : getAllowedJoinOperators().hashCode());
         hashCode = prime * hashCode + ((getListColumns() == null) ? 0 : getListColumns().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalAnalyses() == null) ? 0 : getAdditionalAnalyses().hashCode());
         return hashCode;
     }
 

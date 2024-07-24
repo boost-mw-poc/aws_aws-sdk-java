@@ -56,6 +56,18 @@ public class IdMappingJobMetricsJsonUnmarshaller implements Unmarshaller<IdMappi
                     context.nextToken();
                     idMappingJobMetrics.setRecordsNotProcessed(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("totalMappedRecords", targetDepth)) {
+                    context.nextToken();
+                    idMappingJobMetrics.setTotalMappedRecords(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("totalMappedSourceRecords", targetDepth)) {
+                    context.nextToken();
+                    idMappingJobMetrics.setTotalMappedSourceRecords(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("totalMappedTargetRecords", targetDepth)) {
+                    context.nextToken();
+                    idMappingJobMetrics.setTotalMappedTargetRecords(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("totalRecordsProcessed", targetDepth)) {
                     context.nextToken();
                     idMappingJobMetrics.setTotalRecordsProcessed(context.getUnmarshaller(Integer.class).unmarshall(context));

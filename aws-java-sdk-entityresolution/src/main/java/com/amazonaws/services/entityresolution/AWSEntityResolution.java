@@ -66,21 +66,18 @@ public interface AWSEntityResolution {
      * @param addPolicyStatementRequest
      * @return Result of the AddPolicyStatement operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.AddPolicyStatement
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/AddPolicyStatement"
      *      target="_top">AWS API Documentation</a>
@@ -96,12 +93,10 @@ public interface AWSEntityResolution {
      * @return Result of the BatchDeleteUniqueId operation returned by the service.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.BatchDeleteUniqueId
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/BatchDeleteUniqueId"
      *      target="_top">AWS API Documentation</a>
@@ -118,22 +113,19 @@ public interface AWSEntityResolution {
      * @param createIdMappingWorkflowRequest
      * @return Result of the CreateIdMappingWorkflow operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ExceedsLimitException
      *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
-     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     *         account limits. The error message describes the limit exceeded.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.CreateIdMappingWorkflow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateIdMappingWorkflow"
      *      target="_top">AWS API Documentation</a>
@@ -150,22 +142,19 @@ public interface AWSEntityResolution {
      * @param createIdNamespaceRequest
      * @return Result of the CreateIdNamespace operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ExceedsLimitException
      *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
-     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     *         account limits. The error message describes the limit exceeded.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.CreateIdNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateIdNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -182,22 +171,19 @@ public interface AWSEntityResolution {
      * @param createMatchingWorkflowRequest
      * @return Result of the CreateMatchingWorkflow operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ExceedsLimitException
      *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
-     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     *         account limits. The error message describes the limit exceeded.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.CreateMatchingWorkflow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateMatchingWorkflow"
      *      target="_top">AWS API Documentation</a>
@@ -214,22 +200,19 @@ public interface AWSEntityResolution {
      * @param createSchemaMappingRequest
      * @return Result of the CreateSchemaMapping operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ExceedsLimitException
      *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
-     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     *         account limits. The error message describes the limit exceeded.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.CreateSchemaMapping
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/CreateSchemaMapping"
      *      target="_top">AWS API Documentation</a>
@@ -245,19 +228,16 @@ public interface AWSEntityResolution {
      * @param deleteIdMappingWorkflowRequest
      * @return Result of the DeleteIdMappingWorkflow operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.DeleteIdMappingWorkflow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteIdMappingWorkflow"
      *      target="_top">AWS API Documentation</a>
@@ -272,15 +252,13 @@ public interface AWSEntityResolution {
      * @param deleteIdNamespaceRequest
      * @return Result of the DeleteIdNamespace operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.DeleteIdNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteIdNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -296,19 +274,16 @@ public interface AWSEntityResolution {
      * @param deleteMatchingWorkflowRequest
      * @return Result of the DeleteMatchingWorkflow operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.DeleteMatchingWorkflow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteMatchingWorkflow"
      *      target="_top">AWS API Documentation</a>
@@ -323,21 +298,18 @@ public interface AWSEntityResolution {
      * @param deletePolicyStatementRequest
      * @return Result of the DeletePolicyStatement operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.DeletePolicyStatement
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeletePolicyStatement"
      *      target="_top">AWS API Documentation</a>
@@ -354,19 +326,16 @@ public interface AWSEntityResolution {
      * @param deleteSchemaMappingRequest
      * @return Result of the DeleteSchemaMapping operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.DeleteSchemaMapping
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/DeleteSchemaMapping"
      *      target="_top">AWS API Documentation</a>
@@ -381,17 +350,15 @@ public interface AWSEntityResolution {
      * @param getIdMappingJobRequest
      * @return Result of the GetIdMappingJob operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.GetIdMappingJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingJob"
      *      target="_top">AWS API Documentation</a>
@@ -406,17 +373,15 @@ public interface AWSEntityResolution {
      * @param getIdMappingWorkflowRequest
      * @return Result of the GetIdMappingWorkflow operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.GetIdMappingWorkflow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdMappingWorkflow"
      *      target="_top">AWS API Documentation</a>
@@ -431,17 +396,15 @@ public interface AWSEntityResolution {
      * @param getIdNamespaceRequest
      * @return Result of the GetIdNamespace operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.GetIdNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetIdNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -456,17 +419,15 @@ public interface AWSEntityResolution {
      * @param getMatchIdRequest
      * @return Result of the GetMatchId operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.GetMatchId
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetMatchId" target="_top">AWS
      *      API Documentation</a>
@@ -481,17 +442,15 @@ public interface AWSEntityResolution {
      * @param getMatchingJobRequest
      * @return Result of the GetMatchingJob operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.GetMatchingJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetMatchingJob"
      *      target="_top">AWS API Documentation</a>
@@ -506,17 +465,15 @@ public interface AWSEntityResolution {
      * @param getMatchingWorkflowRequest
      * @return Result of the GetMatchingWorkflow operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.GetMatchingWorkflow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetMatchingWorkflow"
      *      target="_top">AWS API Documentation</a>
@@ -531,17 +488,15 @@ public interface AWSEntityResolution {
      * @param getPolicyRequest
      * @return Result of the GetPolicy operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.GetPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetPolicy" target="_top">AWS API
      *      Documentation</a>
@@ -556,17 +511,15 @@ public interface AWSEntityResolution {
      * @param getSchemaMappingRequest
      * @return Result of the GetSchemaMapping operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.GetSchemaMapping
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/GetSchemaMapping"
      *      target="_top">AWS API Documentation</a>
@@ -581,17 +534,15 @@ public interface AWSEntityResolution {
      * @param listIdMappingJobsRequest
      * @return Result of the ListIdMappingJobs operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.ListIdMappingJobs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingJobs"
      *      target="_top">AWS API Documentation</a>
@@ -607,15 +558,13 @@ public interface AWSEntityResolution {
      * @param listIdMappingWorkflowsRequest
      * @return Result of the ListIdMappingWorkflows operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.ListIdMappingWorkflows
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdMappingWorkflows"
      *      target="_top">AWS API Documentation</a>
@@ -630,15 +579,13 @@ public interface AWSEntityResolution {
      * @param listIdNamespacesRequest
      * @return Result of the ListIdNamespaces operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.ListIdNamespaces
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListIdNamespaces"
      *      target="_top">AWS API Documentation</a>
@@ -653,17 +600,15 @@ public interface AWSEntityResolution {
      * @param listMatchingJobsRequest
      * @return Result of the ListMatchingJobs operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.ListMatchingJobs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListMatchingJobs"
      *      target="_top">AWS API Documentation</a>
@@ -679,15 +624,13 @@ public interface AWSEntityResolution {
      * @param listMatchingWorkflowsRequest
      * @return Result of the ListMatchingWorkflows operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.ListMatchingWorkflows
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListMatchingWorkflows"
      *      target="_top">AWS API Documentation</a>
@@ -702,15 +645,13 @@ public interface AWSEntityResolution {
      * @param listProviderServicesRequest
      * @return Result of the ListProviderServices operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.ListProviderServices
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListProviderServices"
      *      target="_top">AWS API Documentation</a>
@@ -725,15 +666,13 @@ public interface AWSEntityResolution {
      * @param listSchemaMappingsRequest
      * @return Result of the ListSchemaMappings operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.ListSchemaMappings
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListSchemaMappings"
      *      target="_top">AWS API Documentation</a>
@@ -750,12 +689,10 @@ public interface AWSEntityResolution {
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -770,21 +707,18 @@ public interface AWSEntityResolution {
      * @param putPolicyRequest
      * @return Result of the PutPolicy operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.PutPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/PutPolicy" target="_top">AWS API
      *      Documentation</a>
@@ -800,24 +734,21 @@ public interface AWSEntityResolution {
      * @param startIdMappingJobRequest
      * @return Result of the StartIdMappingJob operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ExceedsLimitException
      *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
-     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     *         account limits. The error message describes the limit exceeded.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.StartIdMappingJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/StartIdMappingJob"
      *      target="_top">AWS API Documentation</a>
@@ -833,24 +764,21 @@ public interface AWSEntityResolution {
      * @param startMatchingJobRequest
      * @return Result of the StartMatchingJob operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ExceedsLimitException
      *         The request was rejected because it attempted to create resources beyond the current Entity Resolution
-     *         account limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+     *         account limits. The error message describes the limit exceeded.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.StartMatchingJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/StartMatchingJob"
      *      target="_top">AWS API Documentation</a>
@@ -873,12 +801,10 @@ public interface AWSEntityResolution {
      * @return Result of the TagResource operation returned by the service.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/TagResource" target="_top">AWS
      *      API Documentation</a>
@@ -895,9 +821,8 @@ public interface AWSEntityResolution {
      * @return Result of the UntagResource operation returned by the service.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @sample AWSEntityResolution.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UntagResource" target="_top">AWS
      *      API Documentation</a>
@@ -914,17 +839,15 @@ public interface AWSEntityResolution {
      * @param updateIdMappingWorkflowRequest
      * @return Result of the UpdateIdMappingWorkflow operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.UpdateIdMappingWorkflow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateIdMappingWorkflow"
      *      target="_top">AWS API Documentation</a>
@@ -939,17 +862,15 @@ public interface AWSEntityResolution {
      * @param updateIdNamespaceRequest
      * @return Result of the UpdateIdNamespace operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.UpdateIdNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateIdNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -966,17 +887,15 @@ public interface AWSEntityResolution {
      * @param updateMatchingWorkflowRequest
      * @return Result of the UpdateMatchingWorkflow operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.UpdateMatchingWorkflow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateMatchingWorkflow"
      *      target="_top">AWS API Documentation</a>
@@ -997,21 +916,18 @@ public interface AWSEntityResolution {
      * @param updateSchemaMappingRequest
      * @return Result of the UpdateSchemaMapping operation returned by the service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+     *         The request was denied due to request throttling.
      * @throws InternalServerException
      *         This exception occurs when there is an internal failure in the Entity Resolution service.
-     *         <code>HTTP Status Code: 500</code>
      * @throws ResourceNotFoundException
-     *         The resource could not be found. <code>HTTP Status Code: 404</code>
+     *         The resource could not be found.
      * @throws AccessDeniedException
-     *         You do not have sufficient access to perform this action. <code>HTTP Status Code: 403</code>
+     *         You do not have sufficient access to perform this action.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource. Example:
      *         Workflow already exists, Schema already exists, Workflow is currently running, etc.
-     *         <code>HTTP Status Code: 400</code>
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by Entity Resolution.
-     *         <code>HTTP Status Code: 400</code>
      * @sample AWSEntityResolution.UpdateSchemaMapping
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/entityresolution-2018-05-10/UpdateSchemaMapping"
      *      target="_top">AWS API Documentation</a>

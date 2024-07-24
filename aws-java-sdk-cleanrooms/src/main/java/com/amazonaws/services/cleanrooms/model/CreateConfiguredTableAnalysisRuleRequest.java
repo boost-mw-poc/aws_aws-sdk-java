@@ -40,7 +40,7 @@ public class CreateConfiguredTableAnalysisRuleRequest extends com.amazonaws.Amaz
     private String analysisRuleType;
     /**
      * <p>
-     * The entire created configured table analysis rule object.
+     * The analysis rule policy that was created for the configured table.
      * </p>
      */
     private ConfiguredTableAnalysisRulePolicy analysisRulePolicy;
@@ -152,11 +152,11 @@ public class CreateConfiguredTableAnalysisRuleRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The entire created configured table analysis rule object.
+     * The analysis rule policy that was created for the configured table.
      * </p>
      * 
      * @param analysisRulePolicy
-     *        The entire created configured table analysis rule object.
+     *        The analysis rule policy that was created for the configured table.
      */
 
     public void setAnalysisRulePolicy(ConfiguredTableAnalysisRulePolicy analysisRulePolicy) {
@@ -165,10 +165,10 @@ public class CreateConfiguredTableAnalysisRuleRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The entire created configured table analysis rule object.
+     * The analysis rule policy that was created for the configured table.
      * </p>
      * 
-     * @return The entire created configured table analysis rule object.
+     * @return The analysis rule policy that was created for the configured table.
      */
 
     public ConfiguredTableAnalysisRulePolicy getAnalysisRulePolicy() {
@@ -177,11 +177,11 @@ public class CreateConfiguredTableAnalysisRuleRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The entire created configured table analysis rule object.
+     * The analysis rule policy that was created for the configured table.
      * </p>
      * 
      * @param analysisRulePolicy
-     *        The entire created configured table analysis rule object.
+     *        The analysis rule policy that was created for the configured table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

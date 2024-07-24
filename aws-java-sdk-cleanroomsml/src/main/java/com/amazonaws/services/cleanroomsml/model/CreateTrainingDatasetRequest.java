@@ -27,12 +27,6 @@ public class CreateTrainingDatasetRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The description of the training dataset.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
      * The name of the training dataset. This name must be unique in your account and region.
      * </p>
      */
@@ -48,6 +42,13 @@ public class CreateTrainingDatasetRequest extends com.amazonaws.AmazonWebService
      * </p>
      */
     private String roleArn;
+    /**
+     * <p>
+     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
+     * location and schema. You must provide a role that has read access to these tables.
+     * </p>
+     */
+    private java.util.List<Dataset> trainingData;
     /**
      * <p>
      * The optional metadata that you apply to the resource to help you categorize and organize them. Each tag consists
@@ -102,51 +103,10 @@ public class CreateTrainingDatasetRequest extends com.amazonaws.AmazonWebService
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
-     * location and schema. You must provide a role that has read access to these tables.
-     * </p>
-     */
-    private java.util.List<Dataset> trainingData;
-
-    /**
-     * <p>
      * The description of the training dataset.
      * </p>
-     * 
-     * @param description
-     *        The description of the training dataset.
      */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The description of the training dataset.
-     * </p>
-     * 
-     * @return The description of the training dataset.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The description of the training dataset.
-     * </p>
-     * 
-     * @param description
-     *        The description of the training dataset.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateTrainingDatasetRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
+    private String description;
 
     /**
      * <p>
@@ -252,6 +212,84 @@ public class CreateTrainingDatasetRequest extends com.amazonaws.AmazonWebService
 
     public CreateTrainingDatasetRequest withRoleArn(String roleArn) {
         setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
+     * location and schema. You must provide a role that has read access to these tables.
+     * </p>
+     * 
+     * @return An array of information that lists the Dataset objects, which specifies the dataset type and details on
+     *         its location and schema. You must provide a role that has read access to these tables.
+     */
+
+    public java.util.List<Dataset> getTrainingData() {
+        return trainingData;
+    }
+
+    /**
+     * <p>
+     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
+     * location and schema. You must provide a role that has read access to these tables.
+     * </p>
+     * 
+     * @param trainingData
+     *        An array of information that lists the Dataset objects, which specifies the dataset type and details on
+     *        its location and schema. You must provide a role that has read access to these tables.
+     */
+
+    public void setTrainingData(java.util.Collection<Dataset> trainingData) {
+        if (trainingData == null) {
+            this.trainingData = null;
+            return;
+        }
+
+        this.trainingData = new java.util.ArrayList<Dataset>(trainingData);
+    }
+
+    /**
+     * <p>
+     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
+     * location and schema. You must provide a role that has read access to these tables.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTrainingData(java.util.Collection)} or {@link #withTrainingData(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param trainingData
+     *        An array of information that lists the Dataset objects, which specifies the dataset type and details on
+     *        its location and schema. You must provide a role that has read access to these tables.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTrainingDatasetRequest withTrainingData(Dataset... trainingData) {
+        if (this.trainingData == null) {
+            setTrainingData(new java.util.ArrayList<Dataset>(trainingData.length));
+        }
+        for (Dataset ele : trainingData) {
+            this.trainingData.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
+     * location and schema. You must provide a role that has read access to these tables.
+     * </p>
+     * 
+     * @param trainingData
+     *        An array of information that lists the Dataset objects, which specifies the dataset type and details on
+     *        its location and schema. You must provide a role that has read access to these tables.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTrainingDatasetRequest withTrainingData(java.util.Collection<Dataset> trainingData) {
+        setTrainingData(trainingData);
         return this;
     }
 
@@ -601,79 +639,41 @@ public class CreateTrainingDatasetRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
-     * location and schema. You must provide a role that has read access to these tables.
+     * The description of the training dataset.
      * </p>
      * 
-     * @return An array of information that lists the Dataset objects, which specifies the dataset type and details on
-     *         its location and schema. You must provide a role that has read access to these tables.
+     * @param description
+     *        The description of the training dataset.
      */
 
-    public java.util.List<Dataset> getTrainingData() {
-        return trainingData;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
      * <p>
-     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
-     * location and schema. You must provide a role that has read access to these tables.
+     * The description of the training dataset.
      * </p>
      * 
-     * @param trainingData
-     *        An array of information that lists the Dataset objects, which specifies the dataset type and details on
-     *        its location and schema. You must provide a role that has read access to these tables.
+     * @return The description of the training dataset.
      */
 
-    public void setTrainingData(java.util.Collection<Dataset> trainingData) {
-        if (trainingData == null) {
-            this.trainingData = null;
-            return;
-        }
-
-        this.trainingData = new java.util.ArrayList<Dataset>(trainingData);
+    public String getDescription() {
+        return this.description;
     }
 
     /**
      * <p>
-     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
-     * location and schema. You must provide a role that has read access to these tables.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setTrainingData(java.util.Collection)} or {@link #withTrainingData(java.util.Collection)} if you want to
-     * override the existing values.
+     * The description of the training dataset.
      * </p>
      * 
-     * @param trainingData
-     *        An array of information that lists the Dataset objects, which specifies the dataset type and details on
-     *        its location and schema. You must provide a role that has read access to these tables.
+     * @param description
+     *        The description of the training dataset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateTrainingDatasetRequest withTrainingData(Dataset... trainingData) {
-        if (this.trainingData == null) {
-            setTrainingData(new java.util.ArrayList<Dataset>(trainingData.length));
-        }
-        for (Dataset ele : trainingData) {
-            this.trainingData.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * An array of information that lists the Dataset objects, which specifies the dataset type and details on its
-     * location and schema. You must provide a role that has read access to these tables.
-     * </p>
-     * 
-     * @param trainingData
-     *        An array of information that lists the Dataset objects, which specifies the dataset type and details on
-     *        its location and schema. You must provide a role that has read access to these tables.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateTrainingDatasetRequest withTrainingData(java.util.Collection<Dataset> trainingData) {
-        setTrainingData(trainingData);
+    public CreateTrainingDatasetRequest withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -689,16 +689,16 @@ public class CreateTrainingDatasetRequest extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getTrainingData() != null)
+            sb.append("TrainingData: ").append(getTrainingData()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
-        if (getTrainingData() != null)
-            sb.append("TrainingData: ").append(getTrainingData());
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -713,10 +713,6 @@ public class CreateTrainingDatasetRequest extends com.amazonaws.AmazonWebService
         if (obj instanceof CreateTrainingDatasetRequest == false)
             return false;
         CreateTrainingDatasetRequest other = (CreateTrainingDatasetRequest) obj;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
@@ -725,13 +721,17 @@ public class CreateTrainingDatasetRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
+        if (other.getTrainingData() == null ^ this.getTrainingData() == null)
+            return false;
+        if (other.getTrainingData() != null && other.getTrainingData().equals(this.getTrainingData()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
-        if (other.getTrainingData() == null ^ this.getTrainingData() == null)
+        if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
-        if (other.getTrainingData() != null && other.getTrainingData().equals(this.getTrainingData()) == false)
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         return true;
     }
@@ -741,11 +741,11 @@ public class CreateTrainingDatasetRequest extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getTrainingData() == null) ? 0 : getTrainingData().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

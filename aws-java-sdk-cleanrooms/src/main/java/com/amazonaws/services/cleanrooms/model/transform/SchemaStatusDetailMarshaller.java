@@ -36,6 +36,8 @@ public class SchemaStatusDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("analysisRuleType").build();
     private static final MarshallingInfo<List> CONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configurations").build();
+    private static final MarshallingInfo<String> ANALYSISTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("analysisType").build();
 
     private static final SchemaStatusDetailMarshaller instance = new SchemaStatusDetailMarshaller();
 
@@ -57,6 +59,7 @@ public class SchemaStatusDetailMarshaller {
             protocolMarshaller.marshall(schemaStatusDetail.getReasons(), REASONS_BINDING);
             protocolMarshaller.marshall(schemaStatusDetail.getAnalysisRuleType(), ANALYSISRULETYPE_BINDING);
             protocolMarshaller.marshall(schemaStatusDetail.getConfigurations(), CONFIGURATIONS_BINDING);
+            protocolMarshaller.marshall(schemaStatusDetail.getAnalysisType(), ANALYSISTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

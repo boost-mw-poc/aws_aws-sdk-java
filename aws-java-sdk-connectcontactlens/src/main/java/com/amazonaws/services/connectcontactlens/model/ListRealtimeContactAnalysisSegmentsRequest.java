@@ -40,7 +40,7 @@ public class ListRealtimeContactAnalysisSegmentsRequest extends com.amazonaws.Am
     private String contactId;
     /**
      * <p>
-     * The maximimum number of results to return per page.
+     * The maximum number of results to return per page.
      * </p>
      */
     private Integer maxResults;
@@ -134,11 +134,11 @@ public class ListRealtimeContactAnalysisSegmentsRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The maximimum number of results to return per page.
+     * The maximum number of results to return per page.
      * </p>
      * 
      * @param maxResults
-     *        The maximimum number of results to return per page.
+     *        The maximum number of results to return per page.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -147,10 +147,10 @@ public class ListRealtimeContactAnalysisSegmentsRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The maximimum number of results to return per page.
+     * The maximum number of results to return per page.
      * </p>
      * 
-     * @return The maximimum number of results to return per page.
+     * @return The maximum number of results to return per page.
      */
 
     public Integer getMaxResults() {
@@ -159,11 +159,11 @@ public class ListRealtimeContactAnalysisSegmentsRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The maximimum number of results to return per page.
+     * The maximum number of results to return per page.
      * </p>
      * 
      * @param maxResults
-     *        The maximimum number of results to return per page.
+     *        The maximum number of results to return per page.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

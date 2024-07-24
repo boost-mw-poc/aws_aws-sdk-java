@@ -31,6 +31,8 @@ public class RealtimeContactAnalysisSegmentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Transcript").build();
     private static final MarshallingInfo<StructuredPojo> CATEGORIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Categories").build();
+    private static final MarshallingInfo<StructuredPojo> POSTCONTACTSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PostContactSummary").build();
 
     private static final RealtimeContactAnalysisSegmentMarshaller instance = new RealtimeContactAnalysisSegmentMarshaller();
 
@@ -50,6 +52,7 @@ public class RealtimeContactAnalysisSegmentMarshaller {
         try {
             protocolMarshaller.marshall(realtimeContactAnalysisSegment.getTranscript(), TRANSCRIPT_BINDING);
             protocolMarshaller.marshall(realtimeContactAnalysisSegment.getCategories(), CATEGORIES_BINDING);
+            protocolMarshaller.marshall(realtimeContactAnalysisSegment.getPostContactSummary(), POSTCONTACTSUMMARY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

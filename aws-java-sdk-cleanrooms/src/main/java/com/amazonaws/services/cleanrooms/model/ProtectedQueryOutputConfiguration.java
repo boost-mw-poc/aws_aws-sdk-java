@@ -30,18 +30,24 @@ public class ProtectedQueryOutputConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Required configuration for a protected query with an `S3` output type.
+     * Required configuration for a protected query with an <code>s3</code> output type.
      * </p>
      */
     private ProtectedQueryS3OutputConfiguration s3;
+    /**
+     * <p>
+     * Required configuration for a protected query with a <code>member</code> output type.
+     * </p>
+     */
+    private ProtectedQueryMemberOutputConfiguration member;
 
     /**
      * <p>
-     * Required configuration for a protected query with an `S3` output type.
+     * Required configuration for a protected query with an <code>s3</code> output type.
      * </p>
      * 
      * @param s3
-     *        Required configuration for a protected query with an `S3` output type.
+     *        Required configuration for a protected query with an <code>s3</code> output type.
      */
 
     public void setS3(ProtectedQueryS3OutputConfiguration s3) {
@@ -50,10 +56,10 @@ public class ProtectedQueryOutputConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Required configuration for a protected query with an `S3` output type.
+     * Required configuration for a protected query with an <code>s3</code> output type.
      * </p>
      * 
-     * @return Required configuration for a protected query with an `S3` output type.
+     * @return Required configuration for a protected query with an <code>s3</code> output type.
      */
 
     public ProtectedQueryS3OutputConfiguration getS3() {
@@ -62,16 +68,56 @@ public class ProtectedQueryOutputConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * Required configuration for a protected query with an `S3` output type.
+     * Required configuration for a protected query with an <code>s3</code> output type.
      * </p>
      * 
      * @param s3
-     *        Required configuration for a protected query with an `S3` output type.
+     *        Required configuration for a protected query with an <code>s3</code> output type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ProtectedQueryOutputConfiguration withS3(ProtectedQueryS3OutputConfiguration s3) {
         setS3(s3);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Required configuration for a protected query with a <code>member</code> output type.
+     * </p>
+     * 
+     * @param member
+     *        Required configuration for a protected query with a <code>member</code> output type.
+     */
+
+    public void setMember(ProtectedQueryMemberOutputConfiguration member) {
+        this.member = member;
+    }
+
+    /**
+     * <p>
+     * Required configuration for a protected query with a <code>member</code> output type.
+     * </p>
+     * 
+     * @return Required configuration for a protected query with a <code>member</code> output type.
+     */
+
+    public ProtectedQueryMemberOutputConfiguration getMember() {
+        return this.member;
+    }
+
+    /**
+     * <p>
+     * Required configuration for a protected query with a <code>member</code> output type.
+     * </p>
+     * 
+     * @param member
+     *        Required configuration for a protected query with a <code>member</code> output type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProtectedQueryOutputConfiguration withMember(ProtectedQueryMemberOutputConfiguration member) {
+        setMember(member);
         return this;
     }
 
@@ -88,7 +134,9 @@ public class ProtectedQueryOutputConfiguration implements Serializable, Cloneabl
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getS3() != null)
-            sb.append("S3: ").append(getS3());
+            sb.append("S3: ").append(getS3()).append(",");
+        if (getMember() != null)
+            sb.append("Member: ").append(getMember());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +155,10 @@ public class ProtectedQueryOutputConfiguration implements Serializable, Cloneabl
             return false;
         if (other.getS3() != null && other.getS3().equals(this.getS3()) == false)
             return false;
+        if (other.getMember() == null ^ this.getMember() == null)
+            return false;
+        if (other.getMember() != null && other.getMember().equals(this.getMember()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +168,7 @@ public class ProtectedQueryOutputConfiguration implements Serializable, Cloneabl
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getS3() == null) ? 0 : getS3().hashCode());
+        hashCode = prime * hashCode + ((getMember() == null) ? 0 : getMember().hashCode());
         return hashCode;
     }
 

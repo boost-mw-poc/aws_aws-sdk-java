@@ -52,6 +52,10 @@ public class RuleBasedPropertiesJsonUnmarshaller implements Unmarshaller<RuleBas
                     context.nextToken();
                     ruleBasedProperties.setAttributeMatchingModel(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("matchPurpose", targetDepth)) {
+                    context.nextToken();
+                    ruleBasedProperties.setMatchPurpose(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("rules", targetDepth)) {
                     context.nextToken();
                     ruleBasedProperties.setRules(new ListUnmarshaller<Rule>(RuleJsonUnmarshaller.getInstance())

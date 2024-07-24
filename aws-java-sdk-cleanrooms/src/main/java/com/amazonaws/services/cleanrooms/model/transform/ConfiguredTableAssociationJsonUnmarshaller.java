@@ -84,6 +84,12 @@ public class ConfiguredTableAssociationJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     configuredTableAssociation.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("analysisRuleTypes", targetDepth)) {
+                    context.nextToken();
+                    configuredTableAssociation.setAnalysisRuleTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("createTime", targetDepth)) {
                     context.nextToken();
                     configuredTableAssociation.setCreateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

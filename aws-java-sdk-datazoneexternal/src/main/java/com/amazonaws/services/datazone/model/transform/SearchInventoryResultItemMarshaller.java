@@ -29,8 +29,6 @@ public class SearchInventoryResultItemMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> ASSETITEM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("assetItem").build();
-    private static final MarshallingInfo<StructuredPojo> DATAPRODUCTITEM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataProductItem").build();
     private static final MarshallingInfo<StructuredPojo> GLOSSARYITEM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("glossaryItem").build();
     private static final MarshallingInfo<StructuredPojo> GLOSSARYTERMITEM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -53,7 +51,6 @@ public class SearchInventoryResultItemMarshaller {
 
         try {
             protocolMarshaller.marshall(searchInventoryResultItem.getAssetItem(), ASSETITEM_BINDING);
-            protocolMarshaller.marshall(searchInventoryResultItem.getDataProductItem(), DATAPRODUCTITEM_BINDING);
             protocolMarshaller.marshall(searchInventoryResultItem.getGlossaryItem(), GLOSSARYITEM_BINDING);
             protocolMarshaller.marshall(searchInventoryResultItem.getGlossaryTermItem(), GLOSSARYTERMITEM_BINDING);
         } catch (Exception e) {

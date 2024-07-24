@@ -26,18 +26,18 @@ public class CreateConfiguredTableAnalysisRuleResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      * </p>
      */
     private ConfiguredTableAnalysisRule analysisRule;
 
     /**
      * <p>
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      * </p>
      * 
      * @param analysisRule
-     *        The entire created analysis rule.
+     *        The analysis rule that was created for the configured table.
      */
 
     public void setAnalysisRule(ConfiguredTableAnalysisRule analysisRule) {
@@ -46,10 +46,10 @@ public class CreateConfiguredTableAnalysisRuleResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      * </p>
      * 
-     * @return The entire created analysis rule.
+     * @return The analysis rule that was created for the configured table.
      */
 
     public ConfiguredTableAnalysisRule getAnalysisRule() {
@@ -58,11 +58,11 @@ public class CreateConfiguredTableAnalysisRuleResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      * </p>
      * 
      * @param analysisRule
-     *        The entire created analysis rule.
+     *        The analysis rule that was created for the configured table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

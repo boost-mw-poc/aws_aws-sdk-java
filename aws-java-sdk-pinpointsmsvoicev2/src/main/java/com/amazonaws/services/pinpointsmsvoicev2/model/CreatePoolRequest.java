@@ -31,6 +31,11 @@ public class CreatePoolRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <a>DescribePhoneNumbers</a> to find the values for PhoneNumberId and PhoneNumberArn while
      * <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.
      * </p>
+     * <p>
+     * After the pool is created you can add more origination identities to the pool by using <a href=
+     * "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_AssociateOriginationIdentity.html"
+     * >AssociateOriginationIdentity</a>.
+     * </p>
      */
     private String originationIdentity;
     /**
@@ -42,7 +47,8 @@ public class CreatePoolRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and
-     * PROMOTIONAL for messages that aren't critical or time-sensitive.
+     * PROMOTIONAL for messages that aren't critical or time-sensitive. After the pool is created the MessageType can't
+     * be changed.
      * </p>
      */
     private String messageType;
@@ -73,11 +79,20 @@ public class CreatePoolRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <a>DescribePhoneNumbers</a> to find the values for PhoneNumberId and PhoneNumberArn while
      * <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.
      * </p>
+     * <p>
+     * After the pool is created you can add more origination identities to the pool by using <a href=
+     * "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_AssociateOriginationIdentity.html"
+     * >AssociateOriginationIdentity</a>.
+     * </p>
      * 
      * @param originationIdentity
      *        The origination identity to use such as a PhoneNumberId, PhoneNumberArn, SenderId or SenderIdArn. You can
      *        use <a>DescribePhoneNumbers</a> to find the values for PhoneNumberId and PhoneNumberArn while
-     *        <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.
+     *        <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.</p>
+     *        <p>
+     *        After the pool is created you can add more origination identities to the pool by using <a href=
+     *        "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_AssociateOriginationIdentity.html"
+     *        >AssociateOriginationIdentity</a>.
      */
 
     public void setOriginationIdentity(String originationIdentity) {
@@ -90,10 +105,19 @@ public class CreatePoolRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <a>DescribePhoneNumbers</a> to find the values for PhoneNumberId and PhoneNumberArn while
      * <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.
      * </p>
+     * <p>
+     * After the pool is created you can add more origination identities to the pool by using <a href=
+     * "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_AssociateOriginationIdentity.html"
+     * >AssociateOriginationIdentity</a>.
+     * </p>
      * 
      * @return The origination identity to use such as a PhoneNumberId, PhoneNumberArn, SenderId or SenderIdArn. You can
      *         use <a>DescribePhoneNumbers</a> to find the values for PhoneNumberId and PhoneNumberArn while
-     *         <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.
+     *         <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.</p>
+     *         <p>
+     *         After the pool is created you can add more origination identities to the pool by using <a href=
+     *         "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_AssociateOriginationIdentity.html"
+     *         >AssociateOriginationIdentity</a>.
      */
 
     public String getOriginationIdentity() {
@@ -106,11 +130,20 @@ public class CreatePoolRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <a>DescribePhoneNumbers</a> to find the values for PhoneNumberId and PhoneNumberArn while
      * <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.
      * </p>
+     * <p>
+     * After the pool is created you can add more origination identities to the pool by using <a href=
+     * "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_AssociateOriginationIdentity.html"
+     * >AssociateOriginationIdentity</a>.
+     * </p>
      * 
      * @param originationIdentity
      *        The origination identity to use such as a PhoneNumberId, PhoneNumberArn, SenderId or SenderIdArn. You can
      *        use <a>DescribePhoneNumbers</a> to find the values for PhoneNumberId and PhoneNumberArn while
-     *        <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.
+     *        <a>DescribeSenderIds</a> can be used to get the values for SenderId and SenderIdArn.</p>
+     *        <p>
+     *        After the pool is created you can add more origination identities to the pool by using <a href=
+     *        "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_AssociateOriginationIdentity.html"
+     *        >AssociateOriginationIdentity</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -162,12 +195,14 @@ public class CreatePoolRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and
-     * PROMOTIONAL for messages that aren't critical or time-sensitive.
+     * PROMOTIONAL for messages that aren't critical or time-sensitive. After the pool is created the MessageType can't
+     * be changed.
      * </p>
      * 
      * @param messageType
      *        The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and
-     *        PROMOTIONAL for messages that aren't critical or time-sensitive.
+     *        PROMOTIONAL for messages that aren't critical or time-sensitive. After the pool is created the MessageType
+     *        can't be changed.
      * @see MessageType
      */
 
@@ -178,11 +213,13 @@ public class CreatePoolRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and
-     * PROMOTIONAL for messages that aren't critical or time-sensitive.
+     * PROMOTIONAL for messages that aren't critical or time-sensitive. After the pool is created the MessageType can't
+     * be changed.
      * </p>
      * 
      * @return The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and
-     *         PROMOTIONAL for messages that aren't critical or time-sensitive.
+     *         PROMOTIONAL for messages that aren't critical or time-sensitive. After the pool is created the
+     *         MessageType can't be changed.
      * @see MessageType
      */
 
@@ -193,12 +230,14 @@ public class CreatePoolRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and
-     * PROMOTIONAL for messages that aren't critical or time-sensitive.
+     * PROMOTIONAL for messages that aren't critical or time-sensitive. After the pool is created the MessageType can't
+     * be changed.
      * </p>
      * 
      * @param messageType
      *        The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and
-     *        PROMOTIONAL for messages that aren't critical or time-sensitive.
+     *        PROMOTIONAL for messages that aren't critical or time-sensitive. After the pool is created the MessageType
+     *        can't be changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MessageType
      */
@@ -211,12 +250,14 @@ public class CreatePoolRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and
-     * PROMOTIONAL for messages that aren't critical or time-sensitive.
+     * PROMOTIONAL for messages that aren't critical or time-sensitive. After the pool is created the MessageType can't
+     * be changed.
      * </p>
      * 
      * @param messageType
      *        The type of message. Valid values are TRANSACTIONAL for messages that are critical or time-sensitive and
-     *        PROMOTIONAL for messages that aren't critical or time-sensitive.
+     *        PROMOTIONAL for messages that aren't critical or time-sensitive. After the pool is created the MessageType
+     *        can't be changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MessageType
      */

@@ -33,6 +33,8 @@ public class CopyImageSetRequestMarshaller {
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("sourceImageSetId").build();
     private static final MarshallingInfo<StructuredPojo> COPYIMAGESETINFORMATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).isExplicitPayloadMember(true).build();
+    private static final MarshallingInfo<Boolean> FORCE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("force").build();
 
     private static final CopyImageSetRequestMarshaller instance = new CopyImageSetRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class CopyImageSetRequestMarshaller {
             protocolMarshaller.marshall(copyImageSetRequest.getDatastoreId(), DATASTOREID_BINDING);
             protocolMarshaller.marshall(copyImageSetRequest.getSourceImageSetId(), SOURCEIMAGESETID_BINDING);
             protocolMarshaller.marshall(copyImageSetRequest.getCopyImageSetInformation(), COPYIMAGESETINFORMATION_BINDING);
+            protocolMarshaller.marshall(copyImageSetRequest.getForce(), FORCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

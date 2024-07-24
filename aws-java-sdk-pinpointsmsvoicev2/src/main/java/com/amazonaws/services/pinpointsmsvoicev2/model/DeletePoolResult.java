@@ -86,9 +86,9 @@ public class DeletePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      */
     private Boolean selfManagedOptOutsEnabled;
@@ -584,16 +584,16 @@ public class DeletePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      * 
      * @param selfManagedOptOutsEnabled
      *        By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to
-     *        one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds
-     *        the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *        requests. You're also responsible for tracking and honoring opt-out requests.
+     *        one of your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a
+     *        customizable message and adds the end recipient to the OptOutList. When set to true you're responsible for
+     *        responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out requests.
      */
 
     public void setSelfManagedOptOutsEnabled(Boolean selfManagedOptOutsEnabled) {
@@ -603,15 +603,16 @@ public class DeletePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      * 
      * @return By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to
-     *         one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds
-     *         the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *         requests. You're also responsible for tracking and honoring opt-out requests.
+     *         one of your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a
+     *         customizable message and adds the end recipient to the OptOutList. When set to true you're responsible
+     *         for responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out
+     *         requests.
      */
 
     public Boolean getSelfManagedOptOutsEnabled() {
@@ -621,16 +622,16 @@ public class DeletePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      * 
      * @param selfManagedOptOutsEnabled
      *        By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to
-     *        one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds
-     *        the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *        requests. You're also responsible for tracking and honoring opt-out requests.
+     *        one of your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a
+     *        customizable message and adds the end recipient to the OptOutList. When set to true you're responsible for
+     *        responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -642,15 +643,16 @@ public class DeletePoolResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to one of
-     * your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
-     * also responsible for tracking and honoring opt-out requests.
+     * your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     * and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     * requests. You're also responsible for tracking and honoring opt-out requests.
      * </p>
      * 
      * @return By default this is set to false. When an end recipient sends a message that begins with HELP or STOP to
-     *         one of your dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds
-     *         the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *         requests. You're also responsible for tracking and honoring opt-out requests.
+     *         one of your dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a
+     *         customizable message and adds the end recipient to the OptOutList. When set to true you're responsible
+     *         for responding to HELP and STOP requests. You're also responsible for tracking and honoring opt-out
+     *         requests.
      */
 
     public Boolean isSelfManagedOptOutsEnabled() {

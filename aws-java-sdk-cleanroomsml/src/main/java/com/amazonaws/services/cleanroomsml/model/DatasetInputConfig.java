@@ -30,56 +30,16 @@ public class DatasetInputConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A DataSource object that specifies the Glue data source for the training data.
-     * </p>
-     */
-    private DataSource dataSource;
-    /**
-     * <p>
      * The schema information for the training data.
      * </p>
      */
     private java.util.List<ColumnSchema> schema;
-
     /**
      * <p>
      * A DataSource object that specifies the Glue data source for the training data.
      * </p>
-     * 
-     * @param dataSource
-     *        A DataSource object that specifies the Glue data source for the training data.
      */
-
-    public void setDataSource(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
-
-    /**
-     * <p>
-     * A DataSource object that specifies the Glue data source for the training data.
-     * </p>
-     * 
-     * @return A DataSource object that specifies the Glue data source for the training data.
-     */
-
-    public DataSource getDataSource() {
-        return this.dataSource;
-    }
-
-    /**
-     * <p>
-     * A DataSource object that specifies the Glue data source for the training data.
-     * </p>
-     * 
-     * @param dataSource
-     *        A DataSource object that specifies the Glue data source for the training data.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DatasetInputConfig withDataSource(DataSource dataSource) {
-        setDataSource(dataSource);
-        return this;
-    }
+    private DataSource dataSource;
 
     /**
      * <p>
@@ -152,6 +112,46 @@ public class DatasetInputConfig implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A DataSource object that specifies the Glue data source for the training data.
+     * </p>
+     * 
+     * @param dataSource
+     *        A DataSource object that specifies the Glue data source for the training data.
+     */
+
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    /**
+     * <p>
+     * A DataSource object that specifies the Glue data source for the training data.
+     * </p>
+     * 
+     * @return A DataSource object that specifies the Glue data source for the training data.
+     */
+
+    public DataSource getDataSource() {
+        return this.dataSource;
+    }
+
+    /**
+     * <p>
+     * A DataSource object that specifies the Glue data source for the training data.
+     * </p>
+     * 
+     * @param dataSource
+     *        A DataSource object that specifies the Glue data source for the training data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DatasetInputConfig withDataSource(DataSource dataSource) {
+        setDataSource(dataSource);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -163,10 +163,10 @@ public class DatasetInputConfig implements Serializable, Cloneable, StructuredPo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getDataSource() != null)
-            sb.append("DataSource: ").append(getDataSource()).append(",");
         if (getSchema() != null)
-            sb.append("Schema: ").append(getSchema());
+            sb.append("Schema: ").append(getSchema()).append(",");
+        if (getDataSource() != null)
+            sb.append("DataSource: ").append(getDataSource());
         sb.append("}");
         return sb.toString();
     }
@@ -181,13 +181,13 @@ public class DatasetInputConfig implements Serializable, Cloneable, StructuredPo
         if (obj instanceof DatasetInputConfig == false)
             return false;
         DatasetInputConfig other = (DatasetInputConfig) obj;
-        if (other.getDataSource() == null ^ this.getDataSource() == null)
-            return false;
-        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
-            return false;
         if (other.getSchema() == null ^ this.getSchema() == null)
             return false;
         if (other.getSchema() != null && other.getSchema().equals(this.getSchema()) == false)
+            return false;
+        if (other.getDataSource() == null ^ this.getDataSource() == null)
+            return false;
+        if (other.getDataSource() != null && other.getDataSource().equals(this.getDataSource()) == false)
             return false;
         return true;
     }
@@ -197,8 +197,8 @@ public class DatasetInputConfig implements Serializable, Cloneable, StructuredPo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         hashCode = prime * hashCode + ((getSchema() == null) ? 0 : getSchema().hashCode());
+        hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         return hashCode;
     }
 

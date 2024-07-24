@@ -22,7 +22,8 @@ public enum AnalysisRuleType {
 
     AGGREGATION("AGGREGATION"),
     LIST("LIST"),
-    CUSTOM("CUSTOM");
+    CUSTOM("CUSTOM"),
+    ID_MAPPING_TABLE("ID_MAPPING_TABLE");
 
     private String value;
 

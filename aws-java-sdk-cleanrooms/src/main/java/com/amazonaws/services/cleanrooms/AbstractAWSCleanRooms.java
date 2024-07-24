@@ -73,6 +73,17 @@ public class AbstractAWSCleanRooms implements AWSCleanRooms {
     }
 
     @Override
+    public CreateConfiguredTableAssociationAnalysisRuleResult createConfiguredTableAssociationAnalysisRule(
+            CreateConfiguredTableAssociationAnalysisRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateIdMappingTableResult createIdMappingTable(CreateIdMappingTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateMembershipResult createMembership(CreateMembershipRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -109,6 +120,22 @@ public class AbstractAWSCleanRooms implements AWSCleanRooms {
 
     @Override
     public DeleteConfiguredTableAssociationResult deleteConfiguredTableAssociation(DeleteConfiguredTableAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteConfiguredTableAssociationAnalysisRuleResult deleteConfiguredTableAssociationAnalysisRule(
+            DeleteConfiguredTableAssociationAnalysisRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteIdMappingTableResult deleteIdMappingTable(DeleteIdMappingTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteIdNamespaceAssociationResult deleteIdNamespaceAssociation(DeleteIdNamespaceAssociationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -174,6 +201,16 @@ public class AbstractAWSCleanRooms implements AWSCleanRooms {
     }
 
     @Override
+    public GetConfiguredTableAssociationAnalysisRuleResult getConfiguredTableAssociationAnalysisRule(GetConfiguredTableAssociationAnalysisRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetIdMappingTableResult getIdMappingTable(GetIdMappingTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetMembershipResult getMembership(GetMembershipRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -215,6 +252,11 @@ public class AbstractAWSCleanRooms implements AWSCleanRooms {
     }
 
     @Override
+    public ListCollaborationIdNamespaceAssociationsResult listCollaborationIdNamespaceAssociations(ListCollaborationIdNamespaceAssociationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListCollaborationPrivacyBudgetTemplatesResult listCollaborationPrivacyBudgetTemplates(ListCollaborationPrivacyBudgetTemplatesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -241,6 +283,16 @@ public class AbstractAWSCleanRooms implements AWSCleanRooms {
 
     @Override
     public ListConfiguredTablesResult listConfiguredTables(ListConfiguredTablesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListIdMappingTablesResult listIdMappingTables(ListIdMappingTablesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListIdNamespaceAssociationsResult listIdNamespaceAssociations(ListIdNamespaceAssociationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -276,6 +328,11 @@ public class AbstractAWSCleanRooms implements AWSCleanRooms {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PopulateIdMappingTableResult populateIdMappingTable(PopulateIdMappingTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -326,6 +383,17 @@ public class AbstractAWSCleanRooms implements AWSCleanRooms {
 
     @Override
     public UpdateConfiguredTableAssociationResult updateConfiguredTableAssociation(UpdateConfiguredTableAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateConfiguredTableAssociationAnalysisRuleResult updateConfiguredTableAssociationAnalysisRule(
+            UpdateConfiguredTableAssociationAnalysisRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateIdMappingTableResult updateIdMappingTable(UpdateIdMappingTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

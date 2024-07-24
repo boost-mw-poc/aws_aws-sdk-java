@@ -28,10 +28,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AudienceSizeConfigMarshaller {
 
-    private static final MarshallingInfo<List> AUDIENCESIZEBINS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceSizeBins").build();
     private static final MarshallingInfo<String> AUDIENCESIZETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceSizeType").build();
+    private static final MarshallingInfo<List> AUDIENCESIZEBINS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceSizeBins").build();
 
     private static final AudienceSizeConfigMarshaller instance = new AudienceSizeConfigMarshaller();
 
@@ -49,8 +49,8 @@ public class AudienceSizeConfigMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(audienceSizeConfig.getAudienceSizeBins(), AUDIENCESIZEBINS_BINDING);
             protocolMarshaller.marshall(audienceSizeConfig.getAudienceSizeType(), AUDIENCESIZETYPE_BINDING);
+            protocolMarshaller.marshall(audienceSizeConfig.getAudienceSizeBins(), AUDIENCESIZEBINS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

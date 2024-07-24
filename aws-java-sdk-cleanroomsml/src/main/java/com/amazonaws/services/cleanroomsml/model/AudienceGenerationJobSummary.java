@@ -30,34 +30,22 @@ public class AudienceGenerationJobSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job.
-     * </p>
-     */
-    private String audienceGenerationJobArn;
-    /**
-     * <p>
-     * The identifier of the collaboration that contains this audience generation job.
-     * </p>
-     */
-    private String collaborationId;
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation job.
-     * </p>
-     */
-    private String configuredAudienceModelArn;
-    /**
-     * <p>
      * The time at which the audience generation job was created.
      * </p>
      */
     private java.util.Date createTime;
     /**
      * <p>
-     * The description of the audience generation job.
+     * The most recent time at which the audience generation job was updated.
      * </p>
      */
-    private String description;
+    private java.util.Date updateTime;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the audience generation job.
+     * </p>
+     */
+    private String audienceGenerationJobArn;
     /**
      * <p>
      * The name of the audience generation job.
@@ -66,10 +54,10 @@ public class AudienceGenerationJobSummary implements Serializable, Cloneable, St
     private String name;
     /**
      * <p>
-     * The AWS Account that submitted the job.
+     * The description of the audience generation job.
      * </p>
      */
-    private String startedBy;
+    private String description;
     /**
      * <p>
      * The status of the audience generation job.
@@ -78,133 +66,22 @@ public class AudienceGenerationJobSummary implements Serializable, Cloneable, St
     private String status;
     /**
      * <p>
-     * The most recent time at which the audience generation job was updated.
+     * The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation job.
      * </p>
      */
-    private java.util.Date updateTime;
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job.
-     * </p>
-     * 
-     * @param audienceGenerationJobArn
-     *        The Amazon Resource Name (ARN) of the audience generation job.
-     */
-
-    public void setAudienceGenerationJobArn(String audienceGenerationJobArn) {
-        this.audienceGenerationJobArn = audienceGenerationJobArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) of the audience generation job.
-     */
-
-    public String getAudienceGenerationJobArn() {
-        return this.audienceGenerationJobArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience generation job.
-     * </p>
-     * 
-     * @param audienceGenerationJobArn
-     *        The Amazon Resource Name (ARN) of the audience generation job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AudienceGenerationJobSummary withAudienceGenerationJobArn(String audienceGenerationJobArn) {
-        setAudienceGenerationJobArn(audienceGenerationJobArn);
-        return this;
-    }
-
+    private String configuredAudienceModelArn;
     /**
      * <p>
      * The identifier of the collaboration that contains this audience generation job.
      * </p>
-     * 
-     * @param collaborationId
-     *        The identifier of the collaboration that contains this audience generation job.
      */
-
-    public void setCollaborationId(String collaborationId) {
-        this.collaborationId = collaborationId;
-    }
-
+    private String collaborationId;
     /**
      * <p>
-     * The identifier of the collaboration that contains this audience generation job.
+     * The AWS Account that submitted the job.
      * </p>
-     * 
-     * @return The identifier of the collaboration that contains this audience generation job.
      */
-
-    public String getCollaborationId() {
-        return this.collaborationId;
-    }
-
-    /**
-     * <p>
-     * The identifier of the collaboration that contains this audience generation job.
-     * </p>
-     * 
-     * @param collaborationId
-     *        The identifier of the collaboration that contains this audience generation job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AudienceGenerationJobSummary withCollaborationId(String collaborationId) {
-        setCollaborationId(collaborationId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation job.
-     * </p>
-     * 
-     * @param configuredAudienceModelArn
-     *        The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation
-     *        job.
-     */
-
-    public void setConfiguredAudienceModelArn(String configuredAudienceModelArn) {
-        this.configuredAudienceModelArn = configuredAudienceModelArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation job.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) of the configured audience model that was used for this audience
-     *         generation job.
-     */
-
-    public String getConfiguredAudienceModelArn() {
-        return this.configuredAudienceModelArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation job.
-     * </p>
-     * 
-     * @param configuredAudienceModelArn
-     *        The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation
-     *        job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public AudienceGenerationJobSummary withConfiguredAudienceModelArn(String configuredAudienceModelArn) {
-        setConfiguredAudienceModelArn(configuredAudienceModelArn);
-        return this;
-    }
+    private String startedBy;
 
     /**
      * <p>
@@ -248,41 +125,81 @@ public class AudienceGenerationJobSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The description of the audience generation job.
+     * The most recent time at which the audience generation job was updated.
      * </p>
      * 
-     * @param description
-     *        The description of the audience generation job.
+     * @param updateTime
+     *        The most recent time at which the audience generation job was updated.
      */
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
     }
 
     /**
      * <p>
-     * The description of the audience generation job.
+     * The most recent time at which the audience generation job was updated.
      * </p>
      * 
-     * @return The description of the audience generation job.
+     * @return The most recent time at which the audience generation job was updated.
      */
 
-    public String getDescription() {
-        return this.description;
+    public java.util.Date getUpdateTime() {
+        return this.updateTime;
     }
 
     /**
      * <p>
-     * The description of the audience generation job.
+     * The most recent time at which the audience generation job was updated.
      * </p>
      * 
-     * @param description
-     *        The description of the audience generation job.
+     * @param updateTime
+     *        The most recent time at which the audience generation job was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public AudienceGenerationJobSummary withDescription(String description) {
-        setDescription(description);
+    public AudienceGenerationJobSummary withUpdateTime(java.util.Date updateTime) {
+        setUpdateTime(updateTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the audience generation job.
+     * </p>
+     * 
+     * @param audienceGenerationJobArn
+     *        The Amazon Resource Name (ARN) of the audience generation job.
+     */
+
+    public void setAudienceGenerationJobArn(String audienceGenerationJobArn) {
+        this.audienceGenerationJobArn = audienceGenerationJobArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the audience generation job.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the audience generation job.
+     */
+
+    public String getAudienceGenerationJobArn() {
+        return this.audienceGenerationJobArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the audience generation job.
+     * </p>
+     * 
+     * @param audienceGenerationJobArn
+     *        The Amazon Resource Name (ARN) of the audience generation job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudienceGenerationJobSummary withAudienceGenerationJobArn(String audienceGenerationJobArn) {
+        setAudienceGenerationJobArn(audienceGenerationJobArn);
         return this;
     }
 
@@ -328,41 +245,41 @@ public class AudienceGenerationJobSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The AWS Account that submitted the job.
+     * The description of the audience generation job.
      * </p>
      * 
-     * @param startedBy
-     *        The AWS Account that submitted the job.
+     * @param description
+     *        The description of the audience generation job.
      */
 
-    public void setStartedBy(String startedBy) {
-        this.startedBy = startedBy;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
      * <p>
-     * The AWS Account that submitted the job.
+     * The description of the audience generation job.
      * </p>
      * 
-     * @return The AWS Account that submitted the job.
+     * @return The description of the audience generation job.
      */
 
-    public String getStartedBy() {
-        return this.startedBy;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
      * <p>
-     * The AWS Account that submitted the job.
+     * The description of the audience generation job.
      * </p>
      * 
-     * @param startedBy
-     *        The AWS Account that submitted the job.
+     * @param description
+     *        The description of the audience generation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public AudienceGenerationJobSummary withStartedBy(String startedBy) {
-        setStartedBy(startedBy);
+    public AudienceGenerationJobSummary withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -427,41 +344,124 @@ public class AudienceGenerationJobSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The most recent time at which the audience generation job was updated.
+     * The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation job.
      * </p>
      * 
-     * @param updateTime
-     *        The most recent time at which the audience generation job was updated.
+     * @param configuredAudienceModelArn
+     *        The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation
+     *        job.
      */
 
-    public void setUpdateTime(java.util.Date updateTime) {
-        this.updateTime = updateTime;
+    public void setConfiguredAudienceModelArn(String configuredAudienceModelArn) {
+        this.configuredAudienceModelArn = configuredAudienceModelArn;
     }
 
     /**
      * <p>
-     * The most recent time at which the audience generation job was updated.
+     * The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation job.
      * </p>
      * 
-     * @return The most recent time at which the audience generation job was updated.
+     * @return The Amazon Resource Name (ARN) of the configured audience model that was used for this audience
+     *         generation job.
      */
 
-    public java.util.Date getUpdateTime() {
-        return this.updateTime;
+    public String getConfiguredAudienceModelArn() {
+        return this.configuredAudienceModelArn;
     }
 
     /**
      * <p>
-     * The most recent time at which the audience generation job was updated.
+     * The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation job.
      * </p>
      * 
-     * @param updateTime
-     *        The most recent time at which the audience generation job was updated.
+     * @param configuredAudienceModelArn
+     *        The Amazon Resource Name (ARN) of the configured audience model that was used for this audience generation
+     *        job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public AudienceGenerationJobSummary withUpdateTime(java.util.Date updateTime) {
-        setUpdateTime(updateTime);
+    public AudienceGenerationJobSummary withConfiguredAudienceModelArn(String configuredAudienceModelArn) {
+        setConfiguredAudienceModelArn(configuredAudienceModelArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The identifier of the collaboration that contains this audience generation job.
+     * </p>
+     * 
+     * @param collaborationId
+     *        The identifier of the collaboration that contains this audience generation job.
+     */
+
+    public void setCollaborationId(String collaborationId) {
+        this.collaborationId = collaborationId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the collaboration that contains this audience generation job.
+     * </p>
+     * 
+     * @return The identifier of the collaboration that contains this audience generation job.
+     */
+
+    public String getCollaborationId() {
+        return this.collaborationId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the collaboration that contains this audience generation job.
+     * </p>
+     * 
+     * @param collaborationId
+     *        The identifier of the collaboration that contains this audience generation job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudienceGenerationJobSummary withCollaborationId(String collaborationId) {
+        setCollaborationId(collaborationId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The AWS Account that submitted the job.
+     * </p>
+     * 
+     * @param startedBy
+     *        The AWS Account that submitted the job.
+     */
+
+    public void setStartedBy(String startedBy) {
+        this.startedBy = startedBy;
+    }
+
+    /**
+     * <p>
+     * The AWS Account that submitted the job.
+     * </p>
+     * 
+     * @return The AWS Account that submitted the job.
+     */
+
+    public String getStartedBy() {
+        return this.startedBy;
+    }
+
+    /**
+     * <p>
+     * The AWS Account that submitted the job.
+     * </p>
+     * 
+     * @param startedBy
+     *        The AWS Account that submitted the job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudienceGenerationJobSummary withStartedBy(String startedBy) {
+        setStartedBy(startedBy);
         return this;
     }
 
@@ -477,24 +477,24 @@ public class AudienceGenerationJobSummary implements Serializable, Cloneable, St
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceGenerationJobArn() != null)
-            sb.append("AudienceGenerationJobArn: ").append(getAudienceGenerationJobArn()).append(",");
-        if (getCollaborationId() != null)
-            sb.append("CollaborationId: ").append(getCollaborationId()).append(",");
-        if (getConfiguredAudienceModelArn() != null)
-            sb.append("ConfiguredAudienceModelArn: ").append(getConfiguredAudienceModelArn()).append(",");
         if (getCreateTime() != null)
             sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+        if (getUpdateTime() != null)
+            sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
+        if (getAudienceGenerationJobArn() != null)
+            sb.append("AudienceGenerationJobArn: ").append(getAudienceGenerationJobArn()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
-        if (getStartedBy() != null)
-            sb.append("StartedBy: ").append(getStartedBy()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
-        if (getUpdateTime() != null)
-            sb.append("UpdateTime: ").append(getUpdateTime());
+        if (getConfiguredAudienceModelArn() != null)
+            sb.append("ConfiguredAudienceModelArn: ").append(getConfiguredAudienceModelArn()).append(",");
+        if (getCollaborationId() != null)
+            sb.append("CollaborationId: ").append(getCollaborationId()).append(",");
+        if (getStartedBy() != null)
+            sb.append("StartedBy: ").append(getStartedBy());
         sb.append("}");
         return sb.toString();
     }
@@ -509,41 +509,41 @@ public class AudienceGenerationJobSummary implements Serializable, Cloneable, St
         if (obj instanceof AudienceGenerationJobSummary == false)
             return false;
         AudienceGenerationJobSummary other = (AudienceGenerationJobSummary) obj;
-        if (other.getAudienceGenerationJobArn() == null ^ this.getAudienceGenerationJobArn() == null)
-            return false;
-        if (other.getAudienceGenerationJobArn() != null && other.getAudienceGenerationJobArn().equals(this.getAudienceGenerationJobArn()) == false)
-            return false;
-        if (other.getCollaborationId() == null ^ this.getCollaborationId() == null)
-            return false;
-        if (other.getCollaborationId() != null && other.getCollaborationId().equals(this.getCollaborationId()) == false)
-            return false;
-        if (other.getConfiguredAudienceModelArn() == null ^ this.getConfiguredAudienceModelArn() == null)
-            return false;
-        if (other.getConfiguredAudienceModelArn() != null && other.getConfiguredAudienceModelArn().equals(this.getConfiguredAudienceModelArn()) == false)
-            return false;
         if (other.getCreateTime() == null ^ this.getCreateTime() == null)
             return false;
         if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
+        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+            return false;
+        if (other.getAudienceGenerationJobArn() == null ^ this.getAudienceGenerationJobArn() == null)
+            return false;
+        if (other.getAudienceGenerationJobArn() != null && other.getAudienceGenerationJobArn().equals(this.getAudienceGenerationJobArn()) == false)
             return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
-        if (other.getStartedBy() == null ^ this.getStartedBy() == null)
+        if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
-        if (other.getStartedBy() != null && other.getStartedBy().equals(this.getStartedBy()) == false)
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
-        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
+        if (other.getConfiguredAudienceModelArn() == null ^ this.getConfiguredAudienceModelArn() == null)
             return false;
-        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+        if (other.getConfiguredAudienceModelArn() != null && other.getConfiguredAudienceModelArn().equals(this.getConfiguredAudienceModelArn()) == false)
+            return false;
+        if (other.getCollaborationId() == null ^ this.getCollaborationId() == null)
+            return false;
+        if (other.getCollaborationId() != null && other.getCollaborationId().equals(this.getCollaborationId()) == false)
+            return false;
+        if (other.getStartedBy() == null ^ this.getStartedBy() == null)
+            return false;
+        if (other.getStartedBy() != null && other.getStartedBy().equals(this.getStartedBy()) == false)
             return false;
         return true;
     }
@@ -553,15 +553,15 @@ public class AudienceGenerationJobSummary implements Serializable, Cloneable, St
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceGenerationJobArn() == null) ? 0 : getAudienceGenerationJobArn().hashCode());
-        hashCode = prime * hashCode + ((getCollaborationId() == null) ? 0 : getCollaborationId().hashCode());
-        hashCode = prime * hashCode + ((getConfiguredAudienceModelArn() == null) ? 0 : getConfiguredAudienceModelArn().hashCode());
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getStartedBy() == null) ? 0 : getStartedBy().hashCode());
-        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getAudienceGenerationJobArn() == null) ? 0 : getAudienceGenerationJobArn().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getConfiguredAudienceModelArn() == null) ? 0 : getConfiguredAudienceModelArn().hashCode());
+        hashCode = prime * hashCode + ((getCollaborationId() == null) ? 0 : getCollaborationId().hashCode());
+        hashCode = prime * hashCode + ((getStartedBy() == null) ? 0 : getStartedBy().hashCode());
         return hashCode;
     }
 

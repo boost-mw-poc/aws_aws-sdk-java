@@ -34,7 +34,7 @@ public class SchemaStatusDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The status of the schema.
+     * The status of the schema, indicating if it is ready to query.
      * </p>
      */
     private String status;
@@ -56,14 +56,24 @@ public class SchemaStatusDetail implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private java.util.List<String> configurations;
+    /**
+     * <p>
+     * The type of analysis that can be performed on the schema.
+     * </p>
+     * <p>
+     * A schema can have an <code>analysisType</code> of <code>DIRECT_ANALYSIS</code>,
+     * <code>ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION</code>, or both.
+     * </p>
+     */
+    private String analysisType;
 
     /**
      * <p>
-     * The status of the schema.
+     * The status of the schema, indicating if it is ready to query.
      * </p>
      * 
      * @param status
-     *        The status of the schema.
+     *        The status of the schema, indicating if it is ready to query.
      * @see SchemaStatus
      */
 
@@ -73,10 +83,10 @@ public class SchemaStatusDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The status of the schema.
+     * The status of the schema, indicating if it is ready to query.
      * </p>
      * 
-     * @return The status of the schema.
+     * @return The status of the schema, indicating if it is ready to query.
      * @see SchemaStatus
      */
 
@@ -86,11 +96,11 @@ public class SchemaStatusDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The status of the schema.
+     * The status of the schema, indicating if it is ready to query.
      * </p>
      * 
      * @param status
-     *        The status of the schema.
+     *        The status of the schema, indicating if it is ready to query.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SchemaStatus
      */
@@ -102,11 +112,11 @@ public class SchemaStatusDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The status of the schema.
+     * The status of the schema, indicating if it is ready to query.
      * </p>
      * 
      * @param status
-     *        The status of the schema.
+     *        The status of the schema, indicating if it is ready to query.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SchemaStatus
      */
@@ -344,6 +354,93 @@ public class SchemaStatusDetail implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The type of analysis that can be performed on the schema.
+     * </p>
+     * <p>
+     * A schema can have an <code>analysisType</code> of <code>DIRECT_ANALYSIS</code>,
+     * <code>ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION</code>, or both.
+     * </p>
+     * 
+     * @param analysisType
+     *        The type of analysis that can be performed on the schema.</p>
+     *        <p>
+     *        A schema can have an <code>analysisType</code> of <code>DIRECT_ANALYSIS</code>,
+     *        <code>ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION</code>, or both.
+     * @see AnalysisType
+     */
+
+    public void setAnalysisType(String analysisType) {
+        this.analysisType = analysisType;
+    }
+
+    /**
+     * <p>
+     * The type of analysis that can be performed on the schema.
+     * </p>
+     * <p>
+     * A schema can have an <code>analysisType</code> of <code>DIRECT_ANALYSIS</code>,
+     * <code>ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION</code>, or both.
+     * </p>
+     * 
+     * @return The type of analysis that can be performed on the schema.</p>
+     *         <p>
+     *         A schema can have an <code>analysisType</code> of <code>DIRECT_ANALYSIS</code>,
+     *         <code>ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION</code>, or both.
+     * @see AnalysisType
+     */
+
+    public String getAnalysisType() {
+        return this.analysisType;
+    }
+
+    /**
+     * <p>
+     * The type of analysis that can be performed on the schema.
+     * </p>
+     * <p>
+     * A schema can have an <code>analysisType</code> of <code>DIRECT_ANALYSIS</code>,
+     * <code>ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION</code>, or both.
+     * </p>
+     * 
+     * @param analysisType
+     *        The type of analysis that can be performed on the schema.</p>
+     *        <p>
+     *        A schema can have an <code>analysisType</code> of <code>DIRECT_ANALYSIS</code>,
+     *        <code>ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION</code>, or both.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnalysisType
+     */
+
+    public SchemaStatusDetail withAnalysisType(String analysisType) {
+        setAnalysisType(analysisType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of analysis that can be performed on the schema.
+     * </p>
+     * <p>
+     * A schema can have an <code>analysisType</code> of <code>DIRECT_ANALYSIS</code>,
+     * <code>ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION</code>, or both.
+     * </p>
+     * 
+     * @param analysisType
+     *        The type of analysis that can be performed on the schema.</p>
+     *        <p>
+     *        A schema can have an <code>analysisType</code> of <code>DIRECT_ANALYSIS</code>,
+     *        <code>ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION</code>, or both.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnalysisType
+     */
+
+    public SchemaStatusDetail withAnalysisType(AnalysisType analysisType) {
+        this.analysisType = analysisType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -362,7 +459,9 @@ public class SchemaStatusDetail implements Serializable, Cloneable, StructuredPo
         if (getAnalysisRuleType() != null)
             sb.append("AnalysisRuleType: ").append(getAnalysisRuleType()).append(",");
         if (getConfigurations() != null)
-            sb.append("Configurations: ").append(getConfigurations());
+            sb.append("Configurations: ").append(getConfigurations()).append(",");
+        if (getAnalysisType() != null)
+            sb.append("AnalysisType: ").append(getAnalysisType());
         sb.append("}");
         return sb.toString();
     }
@@ -393,6 +492,10 @@ public class SchemaStatusDetail implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getConfigurations() != null && other.getConfigurations().equals(this.getConfigurations()) == false)
             return false;
+        if (other.getAnalysisType() == null ^ this.getAnalysisType() == null)
+            return false;
+        if (other.getAnalysisType() != null && other.getAnalysisType().equals(this.getAnalysisType()) == false)
+            return false;
         return true;
     }
 
@@ -405,6 +508,7 @@ public class SchemaStatusDetail implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getReasons() == null) ? 0 : getReasons().hashCode());
         hashCode = prime * hashCode + ((getAnalysisRuleType() == null) ? 0 : getAnalysisRuleType().hashCode());
         hashCode = prime * hashCode + ((getConfigurations() == null) ? 0 : getConfigurations().hashCode());
+        hashCode = prime * hashCode + ((getAnalysisType() == null) ? 0 : getAnalysisType().hashCode());
         return hashCode;
     }
 

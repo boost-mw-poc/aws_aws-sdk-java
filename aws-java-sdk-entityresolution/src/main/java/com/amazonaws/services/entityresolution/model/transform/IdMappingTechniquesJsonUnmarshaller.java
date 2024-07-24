@@ -56,6 +56,10 @@ public class IdMappingTechniquesJsonUnmarshaller implements Unmarshaller<IdMappi
                     context.nextToken();
                     idMappingTechniques.setProviderProperties(ProviderPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ruleBasedProperties", targetDepth)) {
+                    context.nextToken();
+                    idMappingTechniques.setRuleBasedProperties(IdMappingRuleBasedPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

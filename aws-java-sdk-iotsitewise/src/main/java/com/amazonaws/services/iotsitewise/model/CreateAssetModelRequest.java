@@ -27,7 +27,7 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique, friendly name for the asset model.
+     * A unique name for the asset model.
      * </p>
      */
     private String assetModelName;
@@ -75,7 +75,9 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * When creating custom composite models, you need to use <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html"
-     * >CreateAssetModelCompositeModel</a>. For more information, see &lt;LINK&gt;.
+     * >CreateAssetModelCompositeModel</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html">Creating
+     * custom composite models (Components)</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * </note>
      */
@@ -135,11 +137,11 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique, friendly name for the asset model.
+     * A unique name for the asset model.
      * </p>
      * 
      * @param assetModelName
-     *        A unique, friendly name for the asset model.
+     *        A unique name for the asset model.
      */
 
     public void setAssetModelName(String assetModelName) {
@@ -148,10 +150,10 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique, friendly name for the asset model.
+     * A unique name for the asset model.
      * </p>
      * 
-     * @return A unique, friendly name for the asset model.
+     * @return A unique name for the asset model.
      */
 
     public String getAssetModelName() {
@@ -160,11 +162,11 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique, friendly name for the asset model.
+     * A unique name for the asset model.
      * </p>
      * 
      * @param assetModelName
-     *        A unique, friendly name for the asset model.
+     *        A unique name for the asset model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -476,7 +478,9 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * When creating custom composite models, you need to use <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html"
-     * >CreateAssetModelCompositeModel</a>. For more information, see &lt;LINK&gt;.
+     * >CreateAssetModelCompositeModel</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html">Creating
+     * custom composite models (Components)</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * </note>
      * 
@@ -487,7 +491,9 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         When creating custom composite models, you need to use <a href=
      *         "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html"
-     *         >CreateAssetModelCompositeModel</a>. For more information, see &lt;LINK&gt;.
+     *         >CreateAssetModelCompositeModel</a>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html"
+     *         >Creating custom composite models (Components)</a> in the <i>IoT SiteWise User Guide</i>.
      *         </p>
      */
 
@@ -506,7 +512,9 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * When creating custom composite models, you need to use <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html"
-     * >CreateAssetModelCompositeModel</a>. For more information, see &lt;LINK&gt;.
+     * >CreateAssetModelCompositeModel</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html">Creating
+     * custom composite models (Components)</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * </note>
      * 
@@ -518,7 +526,9 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        When creating custom composite models, you need to use <a href=
      *        "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html"
-     *        >CreateAssetModelCompositeModel</a>. For more information, see &lt;LINK&gt;.
+     *        >CreateAssetModelCompositeModel</a>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html"
+     *        >Creating custom composite models (Components)</a> in the <i>IoT SiteWise User Guide</i>.
      *        </p>
      */
 
@@ -542,7 +552,9 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * When creating custom composite models, you need to use <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html"
-     * >CreateAssetModelCompositeModel</a>. For more information, see &lt;LINK&gt;.
+     * >CreateAssetModelCompositeModel</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html">Creating
+     * custom composite models (Components)</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -559,7 +571,9 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        When creating custom composite models, you need to use <a href=
      *        "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html"
-     *        >CreateAssetModelCompositeModel</a>. For more information, see &lt;LINK&gt;.
+     *        >CreateAssetModelCompositeModel</a>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html"
+     *        >Creating custom composite models (Components)</a> in the <i>IoT SiteWise User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -585,7 +599,9 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * When creating custom composite models, you need to use <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html"
-     * >CreateAssetModelCompositeModel</a>. For more information, see &lt;LINK&gt;.
+     * >CreateAssetModelCompositeModel</a>. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html">Creating
+     * custom composite models (Components)</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * </note>
      * 
@@ -597,7 +613,9 @@ public class CreateAssetModelRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        When creating custom composite models, you need to use <a href=
      *        "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAssetModelCompositeModel.html"
-     *        >CreateAssetModelCompositeModel</a>. For more information, see &lt;LINK&gt;.
+     *        >CreateAssetModelCompositeModel</a>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-custom-composite-models.html"
+     *        >Creating custom composite models (Components)</a> in the <i>IoT SiteWise User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

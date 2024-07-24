@@ -29,6 +29,8 @@ public class MetadataUpdatesMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> DICOMUPDATES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DICOMUpdates").build();
+    private static final MarshallingInfo<String> REVERTTOVERSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("revertToVersionId").build();
 
     private static final MetadataUpdatesMarshaller instance = new MetadataUpdatesMarshaller();
 
@@ -47,6 +49,7 @@ public class MetadataUpdatesMarshaller {
 
         try {
             protocolMarshaller.marshall(metadataUpdates.getDICOMUpdates(), DICOMUPDATES_BINDING);
+            protocolMarshaller.marshall(metadataUpdates.getRevertToVersionId(), REVERTTOVERSIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

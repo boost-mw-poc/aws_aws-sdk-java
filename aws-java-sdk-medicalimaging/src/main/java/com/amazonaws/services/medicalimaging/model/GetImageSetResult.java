@@ -83,6 +83,14 @@ public class GetImageSetResult extends com.amazonaws.AmazonWebServiceResult<com.
      * </p>
      */
     private String imageSetArn;
+    /**
+     * <p>
+     * This object contains the details of any overrides used while creating a specific image set version. If an image
+     * set was copied or updated using the <code>force</code> flag, this object will contain the <code>forced</code>
+     * flag.
+     * </p>
+     */
+    private Overrides overrides;
 
     /**
      * <p>
@@ -523,6 +531,58 @@ public class GetImageSetResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * This object contains the details of any overrides used while creating a specific image set version. If an image
+     * set was copied or updated using the <code>force</code> flag, this object will contain the <code>forced</code>
+     * flag.
+     * </p>
+     * 
+     * @param overrides
+     *        This object contains the details of any overrides used while creating a specific image set version. If an
+     *        image set was copied or updated using the <code>force</code> flag, this object will contain the
+     *        <code>forced</code> flag.
+     */
+
+    public void setOverrides(Overrides overrides) {
+        this.overrides = overrides;
+    }
+
+    /**
+     * <p>
+     * This object contains the details of any overrides used while creating a specific image set version. If an image
+     * set was copied or updated using the <code>force</code> flag, this object will contain the <code>forced</code>
+     * flag.
+     * </p>
+     * 
+     * @return This object contains the details of any overrides used while creating a specific image set version. If an
+     *         image set was copied or updated using the <code>force</code> flag, this object will contain the
+     *         <code>forced</code> flag.
+     */
+
+    public Overrides getOverrides() {
+        return this.overrides;
+    }
+
+    /**
+     * <p>
+     * This object contains the details of any overrides used while creating a specific image set version. If an image
+     * set was copied or updated using the <code>force</code> flag, this object will contain the <code>forced</code>
+     * flag.
+     * </p>
+     * 
+     * @param overrides
+     *        This object contains the details of any overrides used while creating a specific image set version. If an
+     *        image set was copied or updated using the <code>force</code> flag, this object will contain the
+     *        <code>forced</code> flag.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetImageSetResult withOverrides(Overrides overrides) {
+        setOverrides(overrides);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -553,7 +613,9 @@ public class GetImageSetResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (getMessage() != null)
             sb.append("Message: ").append(getMessage()).append(",");
         if (getImageSetArn() != null)
-            sb.append("ImageSetArn: ").append(getImageSetArn());
+            sb.append("ImageSetArn: ").append(getImageSetArn()).append(",");
+        if (getOverrides() != null)
+            sb.append("Overrides: ").append(getOverrides());
         sb.append("}");
         return sb.toString();
     }
@@ -608,6 +670,10 @@ public class GetImageSetResult extends com.amazonaws.AmazonWebServiceResult<com.
             return false;
         if (other.getImageSetArn() != null && other.getImageSetArn().equals(this.getImageSetArn()) == false)
             return false;
+        if (other.getOverrides() == null ^ this.getOverrides() == null)
+            return false;
+        if (other.getOverrides() != null && other.getOverrides().equals(this.getOverrides()) == false)
+            return false;
         return true;
     }
 
@@ -626,6 +692,7 @@ public class GetImageSetResult extends com.amazonaws.AmazonWebServiceResult<com.
         hashCode = prime * hashCode + ((getDeletedAt() == null) ? 0 : getDeletedAt().hashCode());
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         hashCode = prime * hashCode + ((getImageSetArn() == null) ? 0 : getImageSetArn().hashCode());
+        hashCode = prime * hashCode + ((getOverrides() == null) ? 0 : getOverrides().hashCode());
         return hashCode;
     }
 

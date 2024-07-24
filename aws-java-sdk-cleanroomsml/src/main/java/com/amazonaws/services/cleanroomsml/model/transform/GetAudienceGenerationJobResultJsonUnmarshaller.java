@@ -48,45 +48,25 @@ public class GetAudienceGenerationJobResultJsonUnmarshaller implements Unmarshal
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("audienceGenerationJobArn", targetDepth)) {
-                    context.nextToken();
-                    getAudienceGenerationJobResult.setAudienceGenerationJobArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("collaborationId", targetDepth)) {
-                    context.nextToken();
-                    getAudienceGenerationJobResult.setCollaborationId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("configuredAudienceModelArn", targetDepth)) {
-                    context.nextToken();
-                    getAudienceGenerationJobResult.setConfiguredAudienceModelArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("createTime", targetDepth)) {
                     context.nextToken();
                     getAudienceGenerationJobResult.setCreateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("description", targetDepth)) {
+                if (context.testExpression("updateTime", targetDepth)) {
                     context.nextToken();
-                    getAudienceGenerationJobResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                    getAudienceGenerationJobResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
-                if (context.testExpression("includeSeedInOutput", targetDepth)) {
+                if (context.testExpression("audienceGenerationJobArn", targetDepth)) {
                     context.nextToken();
-                    getAudienceGenerationJobResult.setIncludeSeedInOutput(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("metrics", targetDepth)) {
-                    context.nextToken();
-                    getAudienceGenerationJobResult.setMetrics(AudienceQualityMetricsJsonUnmarshaller.getInstance().unmarshall(context));
+                    getAudienceGenerationJobResult.setAudienceGenerationJobArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     getAudienceGenerationJobResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("seedAudience", targetDepth)) {
+                if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
-                    getAudienceGenerationJobResult.setSeedAudience(AudienceGenerationJobDataSourceJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("startedBy", targetDepth)) {
-                    context.nextToken();
-                    getAudienceGenerationJobResult.setStartedBy(context.getUnmarshaller(String.class).unmarshall(context));
+                    getAudienceGenerationJobResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
@@ -96,14 +76,38 @@ public class GetAudienceGenerationJobResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     getAudienceGenerationJobResult.setStatusDetails(StatusDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("configuredAudienceModelArn", targetDepth)) {
+                    context.nextToken();
+                    getAudienceGenerationJobResult.setConfiguredAudienceModelArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("seedAudience", targetDepth)) {
+                    context.nextToken();
+                    getAudienceGenerationJobResult.setSeedAudience(AudienceGenerationJobDataSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("includeSeedInOutput", targetDepth)) {
+                    context.nextToken();
+                    getAudienceGenerationJobResult.setIncludeSeedInOutput(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("collaborationId", targetDepth)) {
+                    context.nextToken();
+                    getAudienceGenerationJobResult.setCollaborationId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("metrics", targetDepth)) {
+                    context.nextToken();
+                    getAudienceGenerationJobResult.setMetrics(AudienceQualityMetricsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("startedBy", targetDepth)) {
+                    context.nextToken();
+                    getAudienceGenerationJobResult.setStartedBy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     getAudienceGenerationJobResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
-                if (context.testExpression("updateTime", targetDepth)) {
+                if (context.testExpression("protectedQueryIdentifier", targetDepth)) {
                     context.nextToken();
-                    getAudienceGenerationJobResult.setUpdateTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    getAudienceGenerationJobResult.setProtectedQueryIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

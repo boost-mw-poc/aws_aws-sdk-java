@@ -27,28 +27,28 @@ public class UpdateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the new audience model that you want to use.
-     * </p>
-     */
-    private String audienceModelArn;
-    /**
-     * <p>
-     * The new audience size configuration.
-     * </p>
-     */
-    private AudienceSizeConfig audienceSizeConfig;
-    /**
-     * <p>
      * The Amazon Resource Name (ARN) of the configured audience model that you want to update.
      * </p>
      */
     private String configuredAudienceModelArn;
     /**
      * <p>
-     * The new description of the configured audience model.
+     * The new output configuration.
      * </p>
      */
-    private String description;
+    private ConfiguredAudienceModelOutputConfig outputConfig;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the new audience model that you want to use.
+     * </p>
+     */
+    private String audienceModelArn;
+    /**
+     * <p>
+     * The new value for whether to share audience metrics.
+     * </p>
+     */
+    private java.util.List<String> sharedAudienceMetrics;
     /**
      * <p>
      * The minimum number of users from the seed audience that must match with users in the training data of the
@@ -58,96 +58,16 @@ public class UpdateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     private Integer minMatchingSeedSize;
     /**
      * <p>
-     * The new output configuration.
-     * </p>
-     */
-    private ConfiguredAudienceModelOutputConfig outputConfig;
-    /**
-     * <p>
-     * The new value for whether to share audience metrics.
-     * </p>
-     */
-    private java.util.List<String> sharedAudienceMetrics;
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the new audience model that you want to use.
-     * </p>
-     * 
-     * @param audienceModelArn
-     *        The Amazon Resource Name (ARN) of the new audience model that you want to use.
-     */
-
-    public void setAudienceModelArn(String audienceModelArn) {
-        this.audienceModelArn = audienceModelArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the new audience model that you want to use.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) of the new audience model that you want to use.
-     */
-
-    public String getAudienceModelArn() {
-        return this.audienceModelArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the new audience model that you want to use.
-     * </p>
-     * 
-     * @param audienceModelArn
-     *        The Amazon Resource Name (ARN) of the new audience model that you want to use.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateConfiguredAudienceModelRequest withAudienceModelArn(String audienceModelArn) {
-        setAudienceModelArn(audienceModelArn);
-        return this;
-    }
-
-    /**
-     * <p>
      * The new audience size configuration.
      * </p>
-     * 
-     * @param audienceSizeConfig
-     *        The new audience size configuration.
      */
-
-    public void setAudienceSizeConfig(AudienceSizeConfig audienceSizeConfig) {
-        this.audienceSizeConfig = audienceSizeConfig;
-    }
-
+    private AudienceSizeConfig audienceSizeConfig;
     /**
      * <p>
-     * The new audience size configuration.
+     * The new description of the configured audience model.
      * </p>
-     * 
-     * @return The new audience size configuration.
      */
-
-    public AudienceSizeConfig getAudienceSizeConfig() {
-        return this.audienceSizeConfig;
-    }
-
-    /**
-     * <p>
-     * The new audience size configuration.
-     * </p>
-     * 
-     * @param audienceSizeConfig
-     *        The new audience size configuration.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateConfiguredAudienceModelRequest withAudienceSizeConfig(AudienceSizeConfig audienceSizeConfig) {
-        setAudienceSizeConfig(audienceSizeConfig);
-        return this;
-    }
+    private String description;
 
     /**
      * <p>
@@ -191,92 +111,6 @@ public class UpdateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The new description of the configured audience model.
-     * </p>
-     * 
-     * @param description
-     *        The new description of the configured audience model.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The new description of the configured audience model.
-     * </p>
-     * 
-     * @return The new description of the configured audience model.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The new description of the configured audience model.
-     * </p>
-     * 
-     * @param description
-     *        The new description of the configured audience model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateConfiguredAudienceModelRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model.
-     * </p>
-     * 
-     * @param minMatchingSeedSize
-     *        The minimum number of users from the seed audience that must match with users in the training data of the
-     *        audience model.
-     */
-
-    public void setMinMatchingSeedSize(Integer minMatchingSeedSize) {
-        this.minMatchingSeedSize = minMatchingSeedSize;
-    }
-
-    /**
-     * <p>
-     * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model.
-     * </p>
-     * 
-     * @return The minimum number of users from the seed audience that must match with users in the training data of the
-     *         audience model.
-     */
-
-    public Integer getMinMatchingSeedSize() {
-        return this.minMatchingSeedSize;
-    }
-
-    /**
-     * <p>
-     * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model.
-     * </p>
-     * 
-     * @param minMatchingSeedSize
-     *        The minimum number of users from the seed audience that must match with users in the training data of the
-     *        audience model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateConfiguredAudienceModelRequest withMinMatchingSeedSize(Integer minMatchingSeedSize) {
-        setMinMatchingSeedSize(minMatchingSeedSize);
-        return this;
-    }
-
-    /**
-     * <p>
      * The new output configuration.
      * </p>
      * 
@@ -312,6 +146,46 @@ public class UpdateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
 
     public UpdateConfiguredAudienceModelRequest withOutputConfig(ConfiguredAudienceModelOutputConfig outputConfig) {
         setOutputConfig(outputConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the new audience model that you want to use.
+     * </p>
+     * 
+     * @param audienceModelArn
+     *        The Amazon Resource Name (ARN) of the new audience model that you want to use.
+     */
+
+    public void setAudienceModelArn(String audienceModelArn) {
+        this.audienceModelArn = audienceModelArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the new audience model that you want to use.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the new audience model that you want to use.
+     */
+
+    public String getAudienceModelArn() {
+        return this.audienceModelArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the new audience model that you want to use.
+     * </p>
+     * 
+     * @param audienceModelArn
+     *        The Amazon Resource Name (ARN) of the new audience model that you want to use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateConfiguredAudienceModelRequest withAudienceModelArn(String audienceModelArn) {
+        setAudienceModelArn(audienceModelArn);
         return this;
     }
 
@@ -414,6 +288,132 @@ public class UpdateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The minimum number of users from the seed audience that must match with users in the training data of the
+     * audience model.
+     * </p>
+     * 
+     * @param minMatchingSeedSize
+     *        The minimum number of users from the seed audience that must match with users in the training data of the
+     *        audience model.
+     */
+
+    public void setMinMatchingSeedSize(Integer minMatchingSeedSize) {
+        this.minMatchingSeedSize = minMatchingSeedSize;
+    }
+
+    /**
+     * <p>
+     * The minimum number of users from the seed audience that must match with users in the training data of the
+     * audience model.
+     * </p>
+     * 
+     * @return The minimum number of users from the seed audience that must match with users in the training data of the
+     *         audience model.
+     */
+
+    public Integer getMinMatchingSeedSize() {
+        return this.minMatchingSeedSize;
+    }
+
+    /**
+     * <p>
+     * The minimum number of users from the seed audience that must match with users in the training data of the
+     * audience model.
+     * </p>
+     * 
+     * @param minMatchingSeedSize
+     *        The minimum number of users from the seed audience that must match with users in the training data of the
+     *        audience model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateConfiguredAudienceModelRequest withMinMatchingSeedSize(Integer minMatchingSeedSize) {
+        setMinMatchingSeedSize(minMatchingSeedSize);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The new audience size configuration.
+     * </p>
+     * 
+     * @param audienceSizeConfig
+     *        The new audience size configuration.
+     */
+
+    public void setAudienceSizeConfig(AudienceSizeConfig audienceSizeConfig) {
+        this.audienceSizeConfig = audienceSizeConfig;
+    }
+
+    /**
+     * <p>
+     * The new audience size configuration.
+     * </p>
+     * 
+     * @return The new audience size configuration.
+     */
+
+    public AudienceSizeConfig getAudienceSizeConfig() {
+        return this.audienceSizeConfig;
+    }
+
+    /**
+     * <p>
+     * The new audience size configuration.
+     * </p>
+     * 
+     * @param audienceSizeConfig
+     *        The new audience size configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateConfiguredAudienceModelRequest withAudienceSizeConfig(AudienceSizeConfig audienceSizeConfig) {
+        setAudienceSizeConfig(audienceSizeConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The new description of the configured audience model.
+     * </p>
+     * 
+     * @param description
+     *        The new description of the configured audience model.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The new description of the configured audience model.
+     * </p>
+     * 
+     * @return The new description of the configured audience model.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The new description of the configured audience model.
+     * </p>
+     * 
+     * @param description
+     *        The new description of the configured audience model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateConfiguredAudienceModelRequest withDescription(String description) {
+        setDescription(description);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -425,20 +425,20 @@ public class UpdateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceModelArn() != null)
-            sb.append("AudienceModelArn: ").append(getAudienceModelArn()).append(",");
-        if (getAudienceSizeConfig() != null)
-            sb.append("AudienceSizeConfig: ").append(getAudienceSizeConfig()).append(",");
         if (getConfiguredAudienceModelArn() != null)
             sb.append("ConfiguredAudienceModelArn: ").append(getConfiguredAudienceModelArn()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getMinMatchingSeedSize() != null)
-            sb.append("MinMatchingSeedSize: ").append(getMinMatchingSeedSize()).append(",");
         if (getOutputConfig() != null)
             sb.append("OutputConfig: ").append(getOutputConfig()).append(",");
+        if (getAudienceModelArn() != null)
+            sb.append("AudienceModelArn: ").append(getAudienceModelArn()).append(",");
         if (getSharedAudienceMetrics() != null)
-            sb.append("SharedAudienceMetrics: ").append(getSharedAudienceMetrics());
+            sb.append("SharedAudienceMetrics: ").append(getSharedAudienceMetrics()).append(",");
+        if (getMinMatchingSeedSize() != null)
+            sb.append("MinMatchingSeedSize: ").append(getMinMatchingSeedSize()).append(",");
+        if (getAudienceSizeConfig() != null)
+            sb.append("AudienceSizeConfig: ").append(getAudienceSizeConfig()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -453,33 +453,33 @@ public class UpdateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
         if (obj instanceof UpdateConfiguredAudienceModelRequest == false)
             return false;
         UpdateConfiguredAudienceModelRequest other = (UpdateConfiguredAudienceModelRequest) obj;
-        if (other.getAudienceModelArn() == null ^ this.getAudienceModelArn() == null)
-            return false;
-        if (other.getAudienceModelArn() != null && other.getAudienceModelArn().equals(this.getAudienceModelArn()) == false)
-            return false;
-        if (other.getAudienceSizeConfig() == null ^ this.getAudienceSizeConfig() == null)
-            return false;
-        if (other.getAudienceSizeConfig() != null && other.getAudienceSizeConfig().equals(this.getAudienceSizeConfig()) == false)
-            return false;
         if (other.getConfiguredAudienceModelArn() == null ^ this.getConfiguredAudienceModelArn() == null)
             return false;
         if (other.getConfiguredAudienceModelArn() != null && other.getConfiguredAudienceModelArn().equals(this.getConfiguredAudienceModelArn()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getMinMatchingSeedSize() == null ^ this.getMinMatchingSeedSize() == null)
-            return false;
-        if (other.getMinMatchingSeedSize() != null && other.getMinMatchingSeedSize().equals(this.getMinMatchingSeedSize()) == false)
             return false;
         if (other.getOutputConfig() == null ^ this.getOutputConfig() == null)
             return false;
         if (other.getOutputConfig() != null && other.getOutputConfig().equals(this.getOutputConfig()) == false)
             return false;
+        if (other.getAudienceModelArn() == null ^ this.getAudienceModelArn() == null)
+            return false;
+        if (other.getAudienceModelArn() != null && other.getAudienceModelArn().equals(this.getAudienceModelArn()) == false)
+            return false;
         if (other.getSharedAudienceMetrics() == null ^ this.getSharedAudienceMetrics() == null)
             return false;
         if (other.getSharedAudienceMetrics() != null && other.getSharedAudienceMetrics().equals(this.getSharedAudienceMetrics()) == false)
+            return false;
+        if (other.getMinMatchingSeedSize() == null ^ this.getMinMatchingSeedSize() == null)
+            return false;
+        if (other.getMinMatchingSeedSize() != null && other.getMinMatchingSeedSize().equals(this.getMinMatchingSeedSize()) == false)
+            return false;
+        if (other.getAudienceSizeConfig() == null ^ this.getAudienceSizeConfig() == null)
+            return false;
+        if (other.getAudienceSizeConfig() != null && other.getAudienceSizeConfig().equals(this.getAudienceSizeConfig()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         return true;
     }
@@ -489,13 +489,13 @@ public class UpdateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceModelArn() == null) ? 0 : getAudienceModelArn().hashCode());
-        hashCode = prime * hashCode + ((getAudienceSizeConfig() == null) ? 0 : getAudienceSizeConfig().hashCode());
         hashCode = prime * hashCode + ((getConfiguredAudienceModelArn() == null) ? 0 : getConfiguredAudienceModelArn().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getMinMatchingSeedSize() == null) ? 0 : getMinMatchingSeedSize().hashCode());
         hashCode = prime * hashCode + ((getOutputConfig() == null) ? 0 : getOutputConfig().hashCode());
+        hashCode = prime * hashCode + ((getAudienceModelArn() == null) ? 0 : getAudienceModelArn().hashCode());
         hashCode = prime * hashCode + ((getSharedAudienceMetrics() == null) ? 0 : getSharedAudienceMetrics().hashCode());
+        hashCode = prime * hashCode + ((getMinMatchingSeedSize() == null) ? 0 : getMinMatchingSeedSize().hashCode());
+        hashCode = prime * hashCode + ((getAudienceSizeConfig() == null) ? 0 : getAudienceSizeConfig().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

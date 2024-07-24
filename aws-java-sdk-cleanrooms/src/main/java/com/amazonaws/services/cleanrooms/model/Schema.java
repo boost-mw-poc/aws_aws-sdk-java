@@ -106,6 +106,12 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<SchemaStatusDetail> schemaStatusDetails;
+    /**
+     * <p>
+     * The schema type properties.
+     * </p>
+     */
+    private SchemaTypeProperties schemaTypeProperties;
 
     /**
      * <p>
@@ -814,6 +820,46 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The schema type properties.
+     * </p>
+     * 
+     * @param schemaTypeProperties
+     *        The schema type properties.
+     */
+
+    public void setSchemaTypeProperties(SchemaTypeProperties schemaTypeProperties) {
+        this.schemaTypeProperties = schemaTypeProperties;
+    }
+
+    /**
+     * <p>
+     * The schema type properties.
+     * </p>
+     * 
+     * @return The schema type properties.
+     */
+
+    public SchemaTypeProperties getSchemaTypeProperties() {
+        return this.schemaTypeProperties;
+    }
+
+    /**
+     * <p>
+     * The schema type properties.
+     * </p>
+     * 
+     * @param schemaTypeProperties
+     *        The schema type properties.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Schema withSchemaTypeProperties(SchemaTypeProperties schemaTypeProperties) {
+        setSchemaTypeProperties(schemaTypeProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -850,7 +896,9 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getSchemaStatusDetails() != null)
-            sb.append("SchemaStatusDetails: ").append(getSchemaStatusDetails());
+            sb.append("SchemaStatusDetails: ").append(getSchemaStatusDetails()).append(",");
+        if (getSchemaTypeProperties() != null)
+            sb.append("SchemaTypeProperties: ").append(getSchemaTypeProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -917,6 +965,10 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSchemaStatusDetails() != null && other.getSchemaStatusDetails().equals(this.getSchemaStatusDetails()) == false)
             return false;
+        if (other.getSchemaTypeProperties() == null ^ this.getSchemaTypeProperties() == null)
+            return false;
+        if (other.getSchemaTypeProperties() != null && other.getSchemaTypeProperties().equals(this.getSchemaTypeProperties()) == false)
+            return false;
         return true;
     }
 
@@ -938,6 +990,7 @@ public class Schema implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getSchemaStatusDetails() == null) ? 0 : getSchemaStatusDetails().hashCode());
+        hashCode = prime * hashCode + ((getSchemaTypeProperties() == null) ? 0 : getSchemaTypeProperties().hashCode());
         return hashCode;
     }
 

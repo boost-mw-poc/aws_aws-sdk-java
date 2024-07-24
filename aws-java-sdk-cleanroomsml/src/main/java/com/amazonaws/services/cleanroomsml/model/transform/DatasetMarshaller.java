@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DatasetMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> INPUTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inputConfig").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<StructuredPojo> INPUTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inputConfig").build();
 
     private static final DatasetMarshaller instance = new DatasetMarshaller();
 
@@ -48,8 +48,8 @@ public class DatasetMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(dataset.getInputConfig(), INPUTCONFIG_BINDING);
             protocolMarshaller.marshall(dataset.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(dataset.getInputConfig(), INPUTCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

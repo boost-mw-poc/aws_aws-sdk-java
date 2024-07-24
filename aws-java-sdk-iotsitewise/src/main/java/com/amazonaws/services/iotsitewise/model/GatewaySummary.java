@@ -36,7 +36,7 @@ public class GatewaySummary implements Serializable, Cloneable, StructuredPojo {
     private String gatewayId;
     /**
      * <p>
-     * The name of the asset.
+     * The name of the gateway.
      * </p>
      */
     private String gatewayName;
@@ -106,11 +106,11 @@ public class GatewaySummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the asset.
+     * The name of the gateway.
      * </p>
      * 
      * @param gatewayName
-     *        The name of the asset.
+     *        The name of the gateway.
      */
 
     public void setGatewayName(String gatewayName) {
@@ -119,10 +119,10 @@ public class GatewaySummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the asset.
+     * The name of the gateway.
      * </p>
      * 
-     * @return The name of the asset.
+     * @return The name of the gateway.
      */
 
     public String getGatewayName() {
@@ -131,11 +131,11 @@ public class GatewaySummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the asset.
+     * The name of the gateway.
      * </p>
      * 
      * @param gatewayName
-     *        The name of the asset.
+     *        The name of the gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

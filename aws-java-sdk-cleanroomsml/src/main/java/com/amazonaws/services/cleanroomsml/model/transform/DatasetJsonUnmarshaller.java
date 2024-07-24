@@ -48,13 +48,13 @@ public class DatasetJsonUnmarshaller implements Unmarshaller<Dataset, JsonUnmars
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("inputConfig", targetDepth)) {
-                    context.nextToken();
-                    dataset.setInputConfig(DatasetInputConfigJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
                     dataset.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("inputConfig", targetDepth)) {
+                    context.nextToken();
+                    dataset.setInputConfig(DatasetInputConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

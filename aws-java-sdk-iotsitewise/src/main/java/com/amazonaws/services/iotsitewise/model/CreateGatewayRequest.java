@@ -27,7 +27,7 @@ public class CreateGatewayRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A unique, friendly name for the gateway.
+     * A unique name for the gateway.
      * </p>
      */
     private String gatewayName;
@@ -48,11 +48,11 @@ public class CreateGatewayRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A unique, friendly name for the gateway.
+     * A unique name for the gateway.
      * </p>
      * 
      * @param gatewayName
-     *        A unique, friendly name for the gateway.
+     *        A unique name for the gateway.
      */
 
     public void setGatewayName(String gatewayName) {
@@ -61,10 +61,10 @@ public class CreateGatewayRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A unique, friendly name for the gateway.
+     * A unique name for the gateway.
      * </p>
      * 
-     * @return A unique, friendly name for the gateway.
+     * @return A unique name for the gateway.
      */
 
     public String getGatewayName() {
@@ -73,11 +73,11 @@ public class CreateGatewayRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A unique, friendly name for the gateway.
+     * A unique name for the gateway.
      * </p>
      * 
      * @param gatewayName
-     *        A unique, friendly name for the gateway.
+     *        A unique name for the gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

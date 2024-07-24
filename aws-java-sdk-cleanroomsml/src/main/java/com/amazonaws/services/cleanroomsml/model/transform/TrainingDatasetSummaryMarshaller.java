@@ -29,16 +29,16 @@ public class TrainingDatasetSummaryMarshaller {
 
     private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> TRAININGDATASETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingDatasetArn").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
-    private static final MarshallingInfo<String> TRAININGDATASETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingDatasetArn").build();
-    private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
 
     private static final TrainingDatasetSummaryMarshaller instance = new TrainingDatasetSummaryMarshaller();
 
@@ -57,11 +57,11 @@ public class TrainingDatasetSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(trainingDatasetSummary.getCreateTime(), CREATETIME_BINDING);
-            protocolMarshaller.marshall(trainingDatasetSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(trainingDatasetSummary.getUpdateTime(), UPDATETIME_BINDING);
+            protocolMarshaller.marshall(trainingDatasetSummary.getTrainingDatasetArn(), TRAININGDATASETARN_BINDING);
             protocolMarshaller.marshall(trainingDatasetSummary.getName(), NAME_BINDING);
             protocolMarshaller.marshall(trainingDatasetSummary.getStatus(), STATUS_BINDING);
-            protocolMarshaller.marshall(trainingDatasetSummary.getTrainingDatasetArn(), TRAININGDATASETARN_BINDING);
-            protocolMarshaller.marshall(trainingDatasetSummary.getUpdateTime(), UPDATETIME_BINDING);
+            protocolMarshaller.marshall(trainingDatasetSummary.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

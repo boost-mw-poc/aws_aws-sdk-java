@@ -89,6 +89,10 @@ public class AnalysisRuleAggregationJsonUnmarshaller implements Unmarshaller<Ana
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("additionalAnalyses", targetDepth)) {
+                    context.nextToken();
+                    analysisRuleAggregation.setAdditionalAnalyses(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

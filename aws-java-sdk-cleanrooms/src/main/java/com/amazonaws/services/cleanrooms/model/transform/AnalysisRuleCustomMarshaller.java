@@ -32,6 +32,10 @@ public class AnalysisRuleCustomMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("allowedAnalyses").build();
     private static final MarshallingInfo<List> ALLOWEDANALYSISPROVIDERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("allowedAnalysisProviders").build();
+    private static final MarshallingInfo<String> ADDITIONALANALYSES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("additionalAnalyses").build();
+    private static final MarshallingInfo<List> DISALLOWEDOUTPUTCOLUMNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("disallowedOutputColumns").build();
     private static final MarshallingInfo<StructuredPojo> DIFFERENTIALPRIVACY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("differentialPrivacy").build();
 
@@ -53,6 +57,8 @@ public class AnalysisRuleCustomMarshaller {
         try {
             protocolMarshaller.marshall(analysisRuleCustom.getAllowedAnalyses(), ALLOWEDANALYSES_BINDING);
             protocolMarshaller.marshall(analysisRuleCustom.getAllowedAnalysisProviders(), ALLOWEDANALYSISPROVIDERS_BINDING);
+            protocolMarshaller.marshall(analysisRuleCustom.getAdditionalAnalyses(), ADDITIONALANALYSES_BINDING);
+            protocolMarshaller.marshall(analysisRuleCustom.getDisallowedOutputColumns(), DISALLOWEDOUTPUTCOLUMNS_BINDING);
             protocolMarshaller.marshall(analysisRuleCustom.getDifferentialPrivacy(), DIFFERENTIALPRIVACY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

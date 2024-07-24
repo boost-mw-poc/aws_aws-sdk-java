@@ -25,16 +25,56 @@ public class ListAudienceModelsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The audience models that match the request.
-     * </p>
-     */
-    private java.util.List<AudienceModelSummary> audienceModels;
-    /**
-     * <p>
      * The token value retrieved from a previous call to access the next page of results.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The audience models that match the request.
+     * </p>
+     */
+    private java.util.List<AudienceModelSummary> audienceModels;
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @return The token value retrieved from a previous call to access the next page of results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAudienceModelsResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
 
     /**
      * <p>
@@ -107,46 +147,6 @@ public class ListAudienceModelsResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @return The token value retrieved from a previous call to access the next page of results.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListAudienceModelsResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -158,10 +158,10 @@ public class ListAudienceModelsResult extends com.amazonaws.AmazonWebServiceResu
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceModels() != null)
-            sb.append("AudienceModels: ").append(getAudienceModels()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getAudienceModels() != null)
+            sb.append("AudienceModels: ").append(getAudienceModels());
         sb.append("}");
         return sb.toString();
     }
@@ -176,13 +176,13 @@ public class ListAudienceModelsResult extends com.amazonaws.AmazonWebServiceResu
         if (obj instanceof ListAudienceModelsResult == false)
             return false;
         ListAudienceModelsResult other = (ListAudienceModelsResult) obj;
-        if (other.getAudienceModels() == null ^ this.getAudienceModels() == null)
-            return false;
-        if (other.getAudienceModels() != null && other.getAudienceModels().equals(this.getAudienceModels()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getAudienceModels() == null ^ this.getAudienceModels() == null)
+            return false;
+        if (other.getAudienceModels() != null && other.getAudienceModels().equals(this.getAudienceModels()) == false)
             return false;
         return true;
     }
@@ -192,8 +192,8 @@ public class ListAudienceModelsResult extends com.amazonaws.AmazonWebServiceResu
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceModels() == null) ? 0 : getAudienceModels().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getAudienceModels() == null) ? 0 : getAudienceModels().hashCode());
         return hashCode;
     }
 

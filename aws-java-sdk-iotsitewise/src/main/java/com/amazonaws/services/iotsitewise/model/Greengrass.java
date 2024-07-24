@@ -36,9 +36,9 @@ public class Greengrass implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
      * Greengrass group. For more information about how to find a group's ARN, see <a
-     * href="https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html">ListGroups</a> and <a
-     * href="https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
-     * Greengrass API Reference</i>.
+     * href="https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html">ListGroups</a> and <a
+     * href="https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
+     * Greengrass V1 API Reference</i>.
      * </p>
      */
     private String groupArn;
@@ -47,17 +47,17 @@ public class Greengrass implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
      * Greengrass group. For more information about how to find a group's ARN, see <a
-     * href="https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html">ListGroups</a> and <a
-     * href="https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
-     * Greengrass API Reference</i>.
+     * href="https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html">ListGroups</a> and <a
+     * href="https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
+     * Greengrass V1 API Reference</i>.
      * </p>
      * 
      * @param groupArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
      *        Greengrass group. For more information about how to find a group's ARN, see <a
-     *        href="https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html">ListGroups</a> and
-     *        <a href="https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html">GetGroup</a> in the
-     *        <i>IoT Greengrass API Reference</i>.
+     *        href="https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html">ListGroups</a> and <a
+     *        href="https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
+     *        Greengrass V1 API Reference</i>.
      */
 
     public void setGroupArn(String groupArn) {
@@ -68,16 +68,16 @@ public class Greengrass implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
      * Greengrass group. For more information about how to find a group's ARN, see <a
-     * href="https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html">ListGroups</a> and <a
-     * href="https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
-     * Greengrass API Reference</i>.
+     * href="https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html">ListGroups</a> and <a
+     * href="https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
+     * Greengrass V1 API Reference</i>.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
      *         Greengrass group. For more information about how to find a group's ARN, see <a
-     *         href="https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html">ListGroups</a> and
-     *         <a href="https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html">GetGroup</a> in
-     *         the <i>IoT Greengrass API Reference</i>.
+     *         href="https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html">ListGroups</a> and <a
+     *         href="https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html">GetGroup</a> in the
+     *         <i>IoT Greengrass V1 API Reference</i>.
      */
 
     public String getGroupArn() {
@@ -88,17 +88,17 @@ public class Greengrass implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
      * Greengrass group. For more information about how to find a group's ARN, see <a
-     * href="https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html">ListGroups</a> and <a
-     * href="https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
-     * Greengrass API Reference</i>.
+     * href="https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html">ListGroups</a> and <a
+     * href="https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
+     * Greengrass V1 API Reference</i>.
      * </p>
      * 
      * @param groupArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
      *        Greengrass group. For more information about how to find a group's ARN, see <a
-     *        href="https://docs.aws.amazon.com/greengrass/latest/apireference/listgroups-get.html">ListGroups</a> and
-     *        <a href="https://docs.aws.amazon.com/greengrass/latest/apireference/getgroup-get.html">GetGroup</a> in the
-     *        <i>IoT Greengrass API Reference</i>.
+     *        href="https://docs.aws.amazon.com/greengrass/v1/apireference/listgroups-get.html">ListGroups</a> and <a
+     *        href="https://docs.aws.amazon.com/greengrass/v1/apireference/getgroup-get.html">GetGroup</a> in the <i>IoT
+     *        Greengrass V1 API Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

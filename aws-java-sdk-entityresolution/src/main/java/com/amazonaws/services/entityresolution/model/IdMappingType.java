@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum IdMappingType {
 
-    PROVIDER("PROVIDER");
+    PROVIDER("PROVIDER"),
+    RULE_BASED("RULE_BASED");
 
     private String value;
 

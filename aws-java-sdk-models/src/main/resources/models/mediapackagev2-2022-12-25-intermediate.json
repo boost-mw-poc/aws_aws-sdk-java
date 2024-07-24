@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -20027,6 +20027,9 @@
       }, {
         "name" : "WIDEVINE",
         "value" : "WIDEVINE"
+      }, {
+        "name" : "IRDETO",
+        "value" : "IRDETO"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.mediapackagev2.enum.DrmSystem",

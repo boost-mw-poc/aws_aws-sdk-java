@@ -56,6 +56,13 @@ public class IdNamespaceSummaryJsonUnmarshaller implements Unmarshaller<IdNamesp
                     context.nextToken();
                     idNamespaceSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("idMappingWorkflowProperties", targetDepth)) {
+                    context.nextToken();
+                    idNamespaceSummary.setIdMappingWorkflowProperties(new ListUnmarshaller<IdNamespaceIdMappingWorkflowMetadata>(
+                            IdNamespaceIdMappingWorkflowMetadataJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("idNamespaceArn", targetDepth)) {
                     context.nextToken();
                     idNamespaceSummary.setIdNamespaceArn(context.getUnmarshaller(String.class).unmarshall(context));

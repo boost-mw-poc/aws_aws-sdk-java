@@ -30,7 +30,7 @@ public class ThresholdV2 implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of comparison. Only "less than" (LT) comparisons are supported.
+     * The type of comparison. Only "less than" (LT) and "greater than" (GT) comparisons are supported.
      * </p>
      */
     private String comparison;
@@ -43,11 +43,11 @@ public class ThresholdV2 implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of comparison. Only "less than" (LT) comparisons are supported.
+     * The type of comparison. Only "less than" (LT) and "greater than" (GT) comparisons are supported.
      * </p>
      * 
      * @param comparison
-     *        The type of comparison. Only "less than" (LT) comparisons are supported.
+     *        The type of comparison. Only "less than" (LT) and "greater than" (GT) comparisons are supported.
      */
 
     public void setComparison(String comparison) {
@@ -56,10 +56,10 @@ public class ThresholdV2 implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of comparison. Only "less than" (LT) comparisons are supported.
+     * The type of comparison. Only "less than" (LT) and "greater than" (GT) comparisons are supported.
      * </p>
      * 
-     * @return The type of comparison. Only "less than" (LT) comparisons are supported.
+     * @return The type of comparison. Only "less than" (LT) and "greater than" (GT) comparisons are supported.
      */
 
     public String getComparison() {
@@ -68,11 +68,11 @@ public class ThresholdV2 implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of comparison. Only "less than" (LT) comparisons are supported.
+     * The type of comparison. Only "less than" (LT) and "greater than" (GT) comparisons are supported.
      * </p>
      * 
      * @param comparison
-     *        The type of comparison. Only "less than" (LT) comparisons are supported.
+     *        The type of comparison. Only "less than" (LT) and "greater than" (GT) comparisons are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

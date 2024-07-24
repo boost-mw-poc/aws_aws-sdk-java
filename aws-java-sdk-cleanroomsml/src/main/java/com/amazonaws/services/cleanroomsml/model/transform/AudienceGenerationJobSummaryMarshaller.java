@@ -27,24 +27,24 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AudienceGenerationJobSummaryMarshaller {
 
-    private static final MarshallingInfo<String> AUDIENCEGENERATIONJOBARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceGenerationJobArn").build();
-    private static final MarshallingInfo<String> COLLABORATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("collaborationId").build();
-    private static final MarshallingInfo<String> CONFIGUREDAUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuredAudienceModelArn").build();
     private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> STARTEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("startedBy").build();
-    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("status").build();
     private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> AUDIENCEGENERATIONJOBARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceGenerationJobArn").build();
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("status").build();
+    private static final MarshallingInfo<String> CONFIGUREDAUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuredAudienceModelArn").build();
+    private static final MarshallingInfo<String> COLLABORATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("collaborationId").build();
+    private static final MarshallingInfo<String> STARTEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("startedBy").build();
 
     private static final AudienceGenerationJobSummaryMarshaller instance = new AudienceGenerationJobSummaryMarshaller();
 
@@ -62,15 +62,15 @@ public class AudienceGenerationJobSummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(audienceGenerationJobSummary.getAudienceGenerationJobArn(), AUDIENCEGENERATIONJOBARN_BINDING);
-            protocolMarshaller.marshall(audienceGenerationJobSummary.getCollaborationId(), COLLABORATIONID_BINDING);
-            protocolMarshaller.marshall(audienceGenerationJobSummary.getConfiguredAudienceModelArn(), CONFIGUREDAUDIENCEMODELARN_BINDING);
             protocolMarshaller.marshall(audienceGenerationJobSummary.getCreateTime(), CREATETIME_BINDING);
-            protocolMarshaller.marshall(audienceGenerationJobSummary.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(audienceGenerationJobSummary.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(audienceGenerationJobSummary.getStartedBy(), STARTEDBY_BINDING);
-            protocolMarshaller.marshall(audienceGenerationJobSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(audienceGenerationJobSummary.getUpdateTime(), UPDATETIME_BINDING);
+            protocolMarshaller.marshall(audienceGenerationJobSummary.getAudienceGenerationJobArn(), AUDIENCEGENERATIONJOBARN_BINDING);
+            protocolMarshaller.marshall(audienceGenerationJobSummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(audienceGenerationJobSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(audienceGenerationJobSummary.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(audienceGenerationJobSummary.getConfiguredAudienceModelArn(), CONFIGUREDAUDIENCEMODELARN_BINDING);
+            protocolMarshaller.marshall(audienceGenerationJobSummary.getCollaborationId(), COLLABORATIONID_BINDING);
+            protocolMarshaller.marshall(audienceGenerationJobSummary.getStartedBy(), STARTEDBY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

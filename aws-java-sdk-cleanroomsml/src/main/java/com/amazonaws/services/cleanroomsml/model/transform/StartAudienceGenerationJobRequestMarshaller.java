@@ -29,18 +29,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StartAudienceGenerationJobRequestMarshaller {
 
-    private static final MarshallingInfo<String> COLLABORATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("collaborationId").build();
-    private static final MarshallingInfo<String> CONFIGUREDAUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuredAudienceModelArn").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<Boolean> INCLUDESEEDINOUTPUT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeSeedInOutput").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> CONFIGUREDAUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuredAudienceModelArn").build();
     private static final MarshallingInfo<StructuredPojo> SEEDAUDIENCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("seedAudience").build();
+    private static final MarshallingInfo<Boolean> INCLUDESEEDINOUTPUT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeSeedInOutput").build();
+    private static final MarshallingInfo<String> COLLABORATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("collaborationId").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -60,12 +60,12 @@ public class StartAudienceGenerationJobRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(startAudienceGenerationJobRequest.getCollaborationId(), COLLABORATIONID_BINDING);
-            protocolMarshaller.marshall(startAudienceGenerationJobRequest.getConfiguredAudienceModelArn(), CONFIGUREDAUDIENCEMODELARN_BINDING);
-            protocolMarshaller.marshall(startAudienceGenerationJobRequest.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(startAudienceGenerationJobRequest.getIncludeSeedInOutput(), INCLUDESEEDINOUTPUT_BINDING);
             protocolMarshaller.marshall(startAudienceGenerationJobRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(startAudienceGenerationJobRequest.getConfiguredAudienceModelArn(), CONFIGUREDAUDIENCEMODELARN_BINDING);
             protocolMarshaller.marshall(startAudienceGenerationJobRequest.getSeedAudience(), SEEDAUDIENCE_BINDING);
+            protocolMarshaller.marshall(startAudienceGenerationJobRequest.getIncludeSeedInOutput(), INCLUDESEEDINOUTPUT_BINDING);
+            protocolMarshaller.marshall(startAudienceGenerationJobRequest.getCollaborationId(), COLLABORATIONID_BINDING);
+            protocolMarshaller.marshall(startAudienceGenerationJobRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(startAudienceGenerationJobRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

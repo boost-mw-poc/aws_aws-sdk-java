@@ -108,6 +108,10 @@ public class SchemaJsonUnmarshaller implements Unmarshaller<Schema, JsonUnmarsha
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("schemaTypeProperties", targetDepth)) {
+                    context.nextToken();
+                    schema.setSchemaTypeProperties(SchemaTypePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

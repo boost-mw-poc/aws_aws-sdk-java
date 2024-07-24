@@ -30,7 +30,7 @@ public class IdNamespaceInputSource implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An Glue table ARN for the input source table.
+     * An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * </p>
      */
     private String inputSourceARN;
@@ -43,11 +43,11 @@ public class IdNamespaceInputSource implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An Glue table ARN for the input source table.
+     * An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * </p>
      * 
      * @param inputSourceARN
-     *        An Glue table ARN for the input source table.
+     *        An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      */
 
     public void setInputSourceARN(String inputSourceARN) {
@@ -56,10 +56,10 @@ public class IdNamespaceInputSource implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An Glue table ARN for the input source table.
+     * An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * </p>
      * 
-     * @return An Glue table ARN for the input source table.
+     * @return An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      */
 
     public String getInputSourceARN() {
@@ -68,11 +68,11 @@ public class IdNamespaceInputSource implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An Glue table ARN for the input source table.
+     * An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * </p>
      * 
      * @param inputSourceARN
-     *        An Glue table ARN for the input source table.
+     *        An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

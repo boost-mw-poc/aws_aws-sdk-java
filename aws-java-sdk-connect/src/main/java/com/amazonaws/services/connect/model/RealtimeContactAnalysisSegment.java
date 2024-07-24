@@ -41,6 +41,12 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
      * </p>
      */
     private RealTimeContactAnalysisSegmentAttachments attachments;
+    /**
+     * <p>
+     * Information about the post-contact summary.
+     * </p>
+     */
+    private RealTimeContactAnalysisSegmentPostContactSummary postContactSummary;
 
     /**
      * @param transcript
@@ -187,6 +193,46 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * Information about the post-contact summary.
+     * </p>
+     * 
+     * @param postContactSummary
+     *        Information about the post-contact summary.
+     */
+
+    public void setPostContactSummary(RealTimeContactAnalysisSegmentPostContactSummary postContactSummary) {
+        this.postContactSummary = postContactSummary;
+    }
+
+    /**
+     * <p>
+     * Information about the post-contact summary.
+     * </p>
+     * 
+     * @return Information about the post-contact summary.
+     */
+
+    public RealTimeContactAnalysisSegmentPostContactSummary getPostContactSummary() {
+        return this.postContactSummary;
+    }
+
+    /**
+     * <p>
+     * Information about the post-contact summary.
+     * </p>
+     * 
+     * @param postContactSummary
+     *        Information about the post-contact summary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RealtimeContactAnalysisSegment withPostContactSummary(RealTimeContactAnalysisSegmentPostContactSummary postContactSummary) {
+        setPostContactSummary(postContactSummary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -207,7 +253,9 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
         if (getEvent() != null)
             sb.append("Event: ").append(getEvent()).append(",");
         if (getAttachments() != null)
-            sb.append("Attachments: ").append(getAttachments());
+            sb.append("Attachments: ").append(getAttachments()).append(",");
+        if (getPostContactSummary() != null)
+            sb.append("PostContactSummary: ").append(getPostContactSummary());
         sb.append("}");
         return sb.toString();
     }
@@ -242,6 +290,10 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
             return false;
         if (other.getAttachments() != null && other.getAttachments().equals(this.getAttachments()) == false)
             return false;
+        if (other.getPostContactSummary() == null ^ this.getPostContactSummary() == null)
+            return false;
+        if (other.getPostContactSummary() != null && other.getPostContactSummary().equals(this.getPostContactSummary()) == false)
+            return false;
         return true;
     }
 
@@ -255,6 +307,7 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getIssues() == null) ? 0 : getIssues().hashCode());
         hashCode = prime * hashCode + ((getEvent() == null) ? 0 : getEvent().hashCode());
         hashCode = prime * hashCode + ((getAttachments() == null) ? 0 : getAttachments().hashCode());
+        hashCode = prime * hashCode + ((getPostContactSummary() == null) ? 0 : getPostContactSummary().hashCode());
         return hashCode;
     }
 

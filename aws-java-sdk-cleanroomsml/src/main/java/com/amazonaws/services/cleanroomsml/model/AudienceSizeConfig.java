@@ -19,10 +19,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configure the list of audience output sizes that can be created. A request to <a>StartAudienceGenerationJob</a> that
- * uses this configured audience model must have an <code>audienceSize</code> selected from this list. You can use the
- * <code>ABSOLUTE</code> <a>AudienceSize</a> to configure out audience sizes using the count of identifiers in the
- * output. You can use the <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
+ * Returns the relevance scores at these audience sizes when used in the <a>GetAudienceGenerationJob</a> for a specified
+ * audience generation job and configured audience model.
+ * </p>
+ * <p>
+ * Specifies the list of allowed <code>audienceSize</code> values when used in the <a>StartAudienceExportJob</a> for an
+ * audience generation job. You can use the <code>ABSOLUTE</code> <a>AudienceSize</a> to configure out audience sizes
+ * using the count of identifiers in the output. You can use the <code>Percentage</code> <a>AudienceSize</a> to
+ * configure sizes in the range 1-100 percent.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanroomsml-2023-09-06/AudienceSizeConfig" target="_top">AWS
@@ -33,16 +37,75 @@ public class AudienceSizeConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * An array of the different audience output sizes.
-     * </p>
-     */
-    private java.util.List<Integer> audienceSizeBins;
-    /**
-     * <p>
      * Whether the audience output sizes are defined as an absolute number or a percentage.
      * </p>
      */
     private String audienceSizeType;
+    /**
+     * <p>
+     * An array of the different audience output sizes.
+     * </p>
+     */
+    private java.util.List<Integer> audienceSizeBins;
+
+    /**
+     * <p>
+     * Whether the audience output sizes are defined as an absolute number or a percentage.
+     * </p>
+     * 
+     * @param audienceSizeType
+     *        Whether the audience output sizes are defined as an absolute number or a percentage.
+     * @see AudienceSizeType
+     */
+
+    public void setAudienceSizeType(String audienceSizeType) {
+        this.audienceSizeType = audienceSizeType;
+    }
+
+    /**
+     * <p>
+     * Whether the audience output sizes are defined as an absolute number or a percentage.
+     * </p>
+     * 
+     * @return Whether the audience output sizes are defined as an absolute number or a percentage.
+     * @see AudienceSizeType
+     */
+
+    public String getAudienceSizeType() {
+        return this.audienceSizeType;
+    }
+
+    /**
+     * <p>
+     * Whether the audience output sizes are defined as an absolute number or a percentage.
+     * </p>
+     * 
+     * @param audienceSizeType
+     *        Whether the audience output sizes are defined as an absolute number or a percentage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AudienceSizeType
+     */
+
+    public AudienceSizeConfig withAudienceSizeType(String audienceSizeType) {
+        setAudienceSizeType(audienceSizeType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the audience output sizes are defined as an absolute number or a percentage.
+     * </p>
+     * 
+     * @param audienceSizeType
+     *        Whether the audience output sizes are defined as an absolute number or a percentage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AudienceSizeType
+     */
+
+    public AudienceSizeConfig withAudienceSizeType(AudienceSizeType audienceSizeType) {
+        this.audienceSizeType = audienceSizeType.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -115,65 +178,6 @@ public class AudienceSizeConfig implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * <p>
-     * Whether the audience output sizes are defined as an absolute number or a percentage.
-     * </p>
-     * 
-     * @param audienceSizeType
-     *        Whether the audience output sizes are defined as an absolute number or a percentage.
-     * @see AudienceSizeType
-     */
-
-    public void setAudienceSizeType(String audienceSizeType) {
-        this.audienceSizeType = audienceSizeType;
-    }
-
-    /**
-     * <p>
-     * Whether the audience output sizes are defined as an absolute number or a percentage.
-     * </p>
-     * 
-     * @return Whether the audience output sizes are defined as an absolute number or a percentage.
-     * @see AudienceSizeType
-     */
-
-    public String getAudienceSizeType() {
-        return this.audienceSizeType;
-    }
-
-    /**
-     * <p>
-     * Whether the audience output sizes are defined as an absolute number or a percentage.
-     * </p>
-     * 
-     * @param audienceSizeType
-     *        Whether the audience output sizes are defined as an absolute number or a percentage.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see AudienceSizeType
-     */
-
-    public AudienceSizeConfig withAudienceSizeType(String audienceSizeType) {
-        setAudienceSizeType(audienceSizeType);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Whether the audience output sizes are defined as an absolute number or a percentage.
-     * </p>
-     * 
-     * @param audienceSizeType
-     *        Whether the audience output sizes are defined as an absolute number or a percentage.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see AudienceSizeType
-     */
-
-    public AudienceSizeConfig withAudienceSizeType(AudienceSizeType audienceSizeType) {
-        this.audienceSizeType = audienceSizeType.toString();
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -185,10 +189,10 @@ public class AudienceSizeConfig implements Serializable, Cloneable, StructuredPo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceSizeBins() != null)
-            sb.append("AudienceSizeBins: ").append(getAudienceSizeBins()).append(",");
         if (getAudienceSizeType() != null)
-            sb.append("AudienceSizeType: ").append(getAudienceSizeType());
+            sb.append("AudienceSizeType: ").append(getAudienceSizeType()).append(",");
+        if (getAudienceSizeBins() != null)
+            sb.append("AudienceSizeBins: ").append(getAudienceSizeBins());
         sb.append("}");
         return sb.toString();
     }
@@ -203,13 +207,13 @@ public class AudienceSizeConfig implements Serializable, Cloneable, StructuredPo
         if (obj instanceof AudienceSizeConfig == false)
             return false;
         AudienceSizeConfig other = (AudienceSizeConfig) obj;
-        if (other.getAudienceSizeBins() == null ^ this.getAudienceSizeBins() == null)
-            return false;
-        if (other.getAudienceSizeBins() != null && other.getAudienceSizeBins().equals(this.getAudienceSizeBins()) == false)
-            return false;
         if (other.getAudienceSizeType() == null ^ this.getAudienceSizeType() == null)
             return false;
         if (other.getAudienceSizeType() != null && other.getAudienceSizeType().equals(this.getAudienceSizeType()) == false)
+            return false;
+        if (other.getAudienceSizeBins() == null ^ this.getAudienceSizeBins() == null)
+            return false;
+        if (other.getAudienceSizeBins() != null && other.getAudienceSizeBins().equals(this.getAudienceSizeBins()) == false)
             return false;
         return true;
     }
@@ -219,8 +223,8 @@ public class AudienceSizeConfig implements Serializable, Cloneable, StructuredPo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceSizeBins() == null) ? 0 : getAudienceSizeBins().hashCode());
         hashCode = prime * hashCode + ((getAudienceSizeType() == null) ? 0 : getAudienceSizeType().hashCode());
+        hashCode = prime * hashCode + ((getAudienceSizeBins() == null) ? 0 : getAudienceSizeBins().hashCode());
         return hashCode;
     }
 

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.cleanrooms.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -37,6 +38,8 @@ public class ProtectedQuerySummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<List> RECEIVERCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("receiverConfigurations").build();
 
     private static final ProtectedQuerySummaryMarshaller instance = new ProtectedQuerySummaryMarshaller();
 
@@ -59,6 +62,7 @@ public class ProtectedQuerySummaryMarshaller {
             protocolMarshaller.marshall(protectedQuerySummary.getMembershipArn(), MEMBERSHIPARN_BINDING);
             protocolMarshaller.marshall(protectedQuerySummary.getCreateTime(), CREATETIME_BINDING);
             protocolMarshaller.marshall(protectedQuerySummary.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(protectedQuerySummary.getReceiverConfigurations(), RECEIVERCONFIGURATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

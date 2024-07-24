@@ -29,6 +29,8 @@ public class ProtectedQueryOutputConfigurationMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> S3_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3").build();
+    private static final MarshallingInfo<StructuredPojo> MEMBER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("member").build();
 
     private static final ProtectedQueryOutputConfigurationMarshaller instance = new ProtectedQueryOutputConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class ProtectedQueryOutputConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(protectedQueryOutputConfiguration.getS3(), S3_BINDING);
+            protocolMarshaller.marshall(protectedQueryOutputConfiguration.getMember(), MEMBER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

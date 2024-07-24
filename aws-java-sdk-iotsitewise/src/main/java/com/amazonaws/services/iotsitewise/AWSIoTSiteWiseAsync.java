@@ -3206,17 +3206,25 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
      * </p>
      * <important>
      * <p>
-     * This operation overwrites the existing model with the provided model. To avoid deleting your asset model's
-     * properties or hierarchies, you must include their IDs and definitions in the updated asset model payload. For
-     * more information, see <a
-     * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetModel.html"
-     * >DescribeAssetModel</a>.
+     * If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. You can’t
+     * change the type or data type of an existing property.
      * </p>
      * <p>
-     * If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. If you
-     * remove a hierarchy definition from an asset model, IoT SiteWise disassociates every asset associated with that
-     * hierarchy. You can't change the type or data type of an existing property.
+     * To replace an existing asset model property with a new one with the same <code>name</code>, do the following:
      * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Submit an <code>UpdateAssetModel</code> request with the entire existing property removed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Submit a second <code>UpdateAssetModel</code> request that includes the new property. The new asset property will
+     * have the same <code>name</code> as the previous one and IoT SiteWise will generate a new unique <code>id</code>.
+     * </p>
+     * </li>
+     * </ol>
      * </important>
      * 
      * @param updateAssetModelRequest
@@ -3236,17 +3244,25 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
      * </p>
      * <important>
      * <p>
-     * This operation overwrites the existing model with the provided model. To avoid deleting your asset model's
-     * properties or hierarchies, you must include their IDs and definitions in the updated asset model payload. For
-     * more information, see <a
-     * href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetModel.html"
-     * >DescribeAssetModel</a>.
+     * If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. You can’t
+     * change the type or data type of an existing property.
      * </p>
      * <p>
-     * If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. If you
-     * remove a hierarchy definition from an asset model, IoT SiteWise disassociates every asset associated with that
-     * hierarchy. You can't change the type or data type of an existing property.
+     * To replace an existing asset model property with a new one with the same <code>name</code>, do the following:
      * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Submit an <code>UpdateAssetModel</code> request with the entire existing property removed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Submit a second <code>UpdateAssetModel</code> request that includes the new property. The new asset property will
+     * have the same <code>name</code> as the previous one and IoT SiteWise will generate a new unique <code>id</code>.
+     * </p>
+     * </li>
+     * </ol>
      * </important>
      * 
      * @param updateAssetModelRequest

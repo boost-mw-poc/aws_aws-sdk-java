@@ -17,7 +17,6 @@ import javax.annotation.Generated;
 /**
  * <p>
  * This exception occurs when there is an internal failure in the Entity Resolution service.
- * <code>HTTP Status Code: 500</code>
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -27,53 +27,16 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
-     * </p>
-     */
-    private String audienceModelArn;
-    /**
-     * <p>
-     * Configure the list of output sizes of audiences that can be created using this configured audience model. A
-     * request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
-     * <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code> <a>AudienceSize</a> to
-     * configure out audience sizes using the count of identifiers in the output. You can use the
-     * <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
-     * </p>
-     */
-    private AudienceSizeConfig audienceSizeConfig;
-    /**
-     * <p>
-     * Configure how the service tags audience generation jobs created using this configured audience model. If you
-     * specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the tags of the
-     * audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience generation job inherits
-     * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
-     * override the default.
-     * </p>
-     * <p>
-     * When the client is in a different account than the configured audience model, the tags from the client are never
-     * applied to a resource in the caller's account.
-     * </p>
-     */
-    private String childResourceTagOnCreatePolicy;
-    /**
-     * <p>
-     * The description of the configured audience model.
-     * </p>
-     */
-    private String description;
-    /**
-     * <p>
-     * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model. The default value is 500.
-     * </p>
-     */
-    private Integer minMatchingSeedSize;
-    /**
-     * <p>
      * The name of the configured audience model.
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
+     * </p>
+     */
+    private String audienceModelArn;
     /**
      * <p>
      * Configure the Amazon S3 location and IAM Role for audiences created using this configured audience model. Each
@@ -85,10 +48,33 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     private ConfiguredAudienceModelOutputConfig outputConfig;
     /**
      * <p>
+     * The description of the configured audience model.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
      * Whether audience metrics are shared.
      * </p>
      */
     private java.util.List<String> sharedAudienceMetrics;
+    /**
+     * <p>
+     * The minimum number of users from the seed audience that must match with users in the training data of the
+     * audience model. The default value is 500.
+     * </p>
+     */
+    private Integer minMatchingSeedSize;
+    /**
+     * <p>
+     * Configure the list of output sizes of audiences that can be created using this configured audience model. A
+     * request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
+     * <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code> <a>AudienceSize</a> to
+     * configure out audience sizes using the count of identifiers in the output. You can use the
+     * <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
+     * </p>
+     */
+    private AudienceSizeConfig audienceSizeConfig;
     /**
      * <p>
      * The optional metadata that you apply to the resource to help you categorize and organize them. Each tag consists
@@ -141,111 +127,6 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * </ul>
      */
     private java.util.Map<String, String> tags;
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
-     * </p>
-     * 
-     * @param audienceModelArn
-     *        The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
-     */
-
-    public void setAudienceModelArn(String audienceModelArn) {
-        this.audienceModelArn = audienceModelArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
-     */
-
-    public String getAudienceModelArn() {
-        return this.audienceModelArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
-     * </p>
-     * 
-     * @param audienceModelArn
-     *        The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateConfiguredAudienceModelRequest withAudienceModelArn(String audienceModelArn) {
-        setAudienceModelArn(audienceModelArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Configure the list of output sizes of audiences that can be created using this configured audience model. A
-     * request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
-     * <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code> <a>AudienceSize</a> to
-     * configure out audience sizes using the count of identifiers in the output. You can use the
-     * <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
-     * </p>
-     * 
-     * @param audienceSizeConfig
-     *        Configure the list of output sizes of audiences that can be created using this configured audience model.
-     *        A request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
-     *        <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code>
-     *        <a>AudienceSize</a> to configure out audience sizes using the count of identifiers in the output. You can
-     *        use the <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
-     */
-
-    public void setAudienceSizeConfig(AudienceSizeConfig audienceSizeConfig) {
-        this.audienceSizeConfig = audienceSizeConfig;
-    }
-
-    /**
-     * <p>
-     * Configure the list of output sizes of audiences that can be created using this configured audience model. A
-     * request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
-     * <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code> <a>AudienceSize</a> to
-     * configure out audience sizes using the count of identifiers in the output. You can use the
-     * <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
-     * </p>
-     * 
-     * @return Configure the list of output sizes of audiences that can be created using this configured audience model.
-     *         A request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
-     *         <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code>
-     *         <a>AudienceSize</a> to configure out audience sizes using the count of identifiers in the output. You can
-     *         use the <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
-     */
-
-    public AudienceSizeConfig getAudienceSizeConfig() {
-        return this.audienceSizeConfig;
-    }
-
-    /**
-     * <p>
-     * Configure the list of output sizes of audiences that can be created using this configured audience model. A
-     * request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
-     * <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code> <a>AudienceSize</a> to
-     * configure out audience sizes using the count of identifiers in the output. You can use the
-     * <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
-     * </p>
-     * 
-     * @param audienceSizeConfig
-     *        Configure the list of output sizes of audiences that can be created using this configured audience model.
-     *        A request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
-     *        <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code>
-     *        <a>AudienceSize</a> to configure out audience sizes using the count of identifiers in the output. You can
-     *        use the <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateConfiguredAudienceModelRequest withAudienceSizeConfig(AudienceSizeConfig audienceSizeConfig) {
-        setAudienceSizeConfig(audienceSizeConfig);
-        return this;
-    }
-
     /**
      * <p>
      * Configure how the service tags audience generation jobs created using this configured audience model. If you
@@ -258,198 +139,8 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
      * When the client is in a different account than the configured audience model, the tags from the client are never
      * applied to a resource in the caller's account.
      * </p>
-     * 
-     * @param childResourceTagOnCreatePolicy
-     *        Configure how the service tags audience generation jobs created using this configured audience model. If
-     *        you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
-     *        tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
-     *        generation job inherits the tags from the configured audience model, by default. Tags in the
-     *        <a>StartAudienceGenerationJob</a> will override the default.</p>
-     *        <p>
-     *        When the client is in a different account than the configured audience model, the tags from the client are
-     *        never applied to a resource in the caller's account.
-     * @see TagOnCreatePolicy
      */
-
-    public void setChildResourceTagOnCreatePolicy(String childResourceTagOnCreatePolicy) {
-        this.childResourceTagOnCreatePolicy = childResourceTagOnCreatePolicy;
-    }
-
-    /**
-     * <p>
-     * Configure how the service tags audience generation jobs created using this configured audience model. If you
-     * specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the tags of the
-     * audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience generation job inherits
-     * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
-     * override the default.
-     * </p>
-     * <p>
-     * When the client is in a different account than the configured audience model, the tags from the client are never
-     * applied to a resource in the caller's account.
-     * </p>
-     * 
-     * @return Configure how the service tags audience generation jobs created using this configured audience model. If
-     *         you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
-     *         tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
-     *         generation job inherits the tags from the configured audience model, by default. Tags in the
-     *         <a>StartAudienceGenerationJob</a> will override the default.</p>
-     *         <p>
-     *         When the client is in a different account than the configured audience model, the tags from the client
-     *         are never applied to a resource in the caller's account.
-     * @see TagOnCreatePolicy
-     */
-
-    public String getChildResourceTagOnCreatePolicy() {
-        return this.childResourceTagOnCreatePolicy;
-    }
-
-    /**
-     * <p>
-     * Configure how the service tags audience generation jobs created using this configured audience model. If you
-     * specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the tags of the
-     * audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience generation job inherits
-     * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
-     * override the default.
-     * </p>
-     * <p>
-     * When the client is in a different account than the configured audience model, the tags from the client are never
-     * applied to a resource in the caller's account.
-     * </p>
-     * 
-     * @param childResourceTagOnCreatePolicy
-     *        Configure how the service tags audience generation jobs created using this configured audience model. If
-     *        you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
-     *        tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
-     *        generation job inherits the tags from the configured audience model, by default. Tags in the
-     *        <a>StartAudienceGenerationJob</a> will override the default.</p>
-     *        <p>
-     *        When the client is in a different account than the configured audience model, the tags from the client are
-     *        never applied to a resource in the caller's account.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see TagOnCreatePolicy
-     */
-
-    public CreateConfiguredAudienceModelRequest withChildResourceTagOnCreatePolicy(String childResourceTagOnCreatePolicy) {
-        setChildResourceTagOnCreatePolicy(childResourceTagOnCreatePolicy);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Configure how the service tags audience generation jobs created using this configured audience model. If you
-     * specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the tags of the
-     * audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience generation job inherits
-     * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
-     * override the default.
-     * </p>
-     * <p>
-     * When the client is in a different account than the configured audience model, the tags from the client are never
-     * applied to a resource in the caller's account.
-     * </p>
-     * 
-     * @param childResourceTagOnCreatePolicy
-     *        Configure how the service tags audience generation jobs created using this configured audience model. If
-     *        you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
-     *        tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
-     *        generation job inherits the tags from the configured audience model, by default. Tags in the
-     *        <a>StartAudienceGenerationJob</a> will override the default.</p>
-     *        <p>
-     *        When the client is in a different account than the configured audience model, the tags from the client are
-     *        never applied to a resource in the caller's account.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see TagOnCreatePolicy
-     */
-
-    public CreateConfiguredAudienceModelRequest withChildResourceTagOnCreatePolicy(TagOnCreatePolicy childResourceTagOnCreatePolicy) {
-        this.childResourceTagOnCreatePolicy = childResourceTagOnCreatePolicy.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * The description of the configured audience model.
-     * </p>
-     * 
-     * @param description
-     *        The description of the configured audience model.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The description of the configured audience model.
-     * </p>
-     * 
-     * @return The description of the configured audience model.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The description of the configured audience model.
-     * </p>
-     * 
-     * @param description
-     *        The description of the configured audience model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateConfiguredAudienceModelRequest withDescription(String description) {
-        setDescription(description);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model. The default value is 500.
-     * </p>
-     * 
-     * @param minMatchingSeedSize
-     *        The minimum number of users from the seed audience that must match with users in the training data of the
-     *        audience model. The default value is 500.
-     */
-
-    public void setMinMatchingSeedSize(Integer minMatchingSeedSize) {
-        this.minMatchingSeedSize = minMatchingSeedSize;
-    }
-
-    /**
-     * <p>
-     * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model. The default value is 500.
-     * </p>
-     * 
-     * @return The minimum number of users from the seed audience that must match with users in the training data of the
-     *         audience model. The default value is 500.
-     */
-
-    public Integer getMinMatchingSeedSize() {
-        return this.minMatchingSeedSize;
-    }
-
-    /**
-     * <p>
-     * The minimum number of users from the seed audience that must match with users in the training data of the
-     * audience model. The default value is 500.
-     * </p>
-     * 
-     * @param minMatchingSeedSize
-     *        The minimum number of users from the seed audience that must match with users in the training data of the
-     *        audience model. The default value is 500.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateConfiguredAudienceModelRequest withMinMatchingSeedSize(Integer minMatchingSeedSize) {
-        setMinMatchingSeedSize(minMatchingSeedSize);
-        return this;
-    }
+    private String childResourceTagOnCreatePolicy;
 
     /**
      * <p>
@@ -488,6 +179,46 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
 
     public CreateConfiguredAudienceModelRequest withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
+     * </p>
+     * 
+     * @param audienceModelArn
+     *        The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
+     */
+
+    public void setAudienceModelArn(String audienceModelArn) {
+        this.audienceModelArn = audienceModelArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
+     */
+
+    public String getAudienceModelArn() {
+        return this.audienceModelArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
+     * </p>
+     * 
+     * @param audienceModelArn
+     *        The Amazon Resource Name (ARN) of the audience model to use for the configured audience model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateConfiguredAudienceModelRequest withAudienceModelArn(String audienceModelArn) {
+        setAudienceModelArn(audienceModelArn);
         return this;
     }
 
@@ -546,6 +277,46 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
 
     public CreateConfiguredAudienceModelRequest withOutputConfig(ConfiguredAudienceModelOutputConfig outputConfig) {
         setOutputConfig(outputConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The description of the configured audience model.
+     * </p>
+     * 
+     * @param description
+     *        The description of the configured audience model.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The description of the configured audience model.
+     * </p>
+     * 
+     * @return The description of the configured audience model.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The description of the configured audience model.
+     * </p>
+     * 
+     * @param description
+     *        The description of the configured audience model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateConfiguredAudienceModelRequest withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -644,6 +415,116 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
         } else {
             getSharedAudienceMetrics().addAll(sharedAudienceMetricsCopy);
         }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The minimum number of users from the seed audience that must match with users in the training data of the
+     * audience model. The default value is 500.
+     * </p>
+     * 
+     * @param minMatchingSeedSize
+     *        The minimum number of users from the seed audience that must match with users in the training data of the
+     *        audience model. The default value is 500.
+     */
+
+    public void setMinMatchingSeedSize(Integer minMatchingSeedSize) {
+        this.minMatchingSeedSize = minMatchingSeedSize;
+    }
+
+    /**
+     * <p>
+     * The minimum number of users from the seed audience that must match with users in the training data of the
+     * audience model. The default value is 500.
+     * </p>
+     * 
+     * @return The minimum number of users from the seed audience that must match with users in the training data of the
+     *         audience model. The default value is 500.
+     */
+
+    public Integer getMinMatchingSeedSize() {
+        return this.minMatchingSeedSize;
+    }
+
+    /**
+     * <p>
+     * The minimum number of users from the seed audience that must match with users in the training data of the
+     * audience model. The default value is 500.
+     * </p>
+     * 
+     * @param minMatchingSeedSize
+     *        The minimum number of users from the seed audience that must match with users in the training data of the
+     *        audience model. The default value is 500.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateConfiguredAudienceModelRequest withMinMatchingSeedSize(Integer minMatchingSeedSize) {
+        setMinMatchingSeedSize(minMatchingSeedSize);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configure the list of output sizes of audiences that can be created using this configured audience model. A
+     * request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
+     * <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code> <a>AudienceSize</a> to
+     * configure out audience sizes using the count of identifiers in the output. You can use the
+     * <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
+     * </p>
+     * 
+     * @param audienceSizeConfig
+     *        Configure the list of output sizes of audiences that can be created using this configured audience model.
+     *        A request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
+     *        <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code>
+     *        <a>AudienceSize</a> to configure out audience sizes using the count of identifiers in the output. You can
+     *        use the <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
+     */
+
+    public void setAudienceSizeConfig(AudienceSizeConfig audienceSizeConfig) {
+        this.audienceSizeConfig = audienceSizeConfig;
+    }
+
+    /**
+     * <p>
+     * Configure the list of output sizes of audiences that can be created using this configured audience model. A
+     * request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
+     * <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code> <a>AudienceSize</a> to
+     * configure out audience sizes using the count of identifiers in the output. You can use the
+     * <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
+     * </p>
+     * 
+     * @return Configure the list of output sizes of audiences that can be created using this configured audience model.
+     *         A request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
+     *         <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code>
+     *         <a>AudienceSize</a> to configure out audience sizes using the count of identifiers in the output. You can
+     *         use the <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
+     */
+
+    public AudienceSizeConfig getAudienceSizeConfig() {
+        return this.audienceSizeConfig;
+    }
+
+    /**
+     * <p>
+     * Configure the list of output sizes of audiences that can be created using this configured audience model. A
+     * request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
+     * <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code> <a>AudienceSize</a> to
+     * configure out audience sizes using the count of identifiers in the output. You can use the
+     * <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
+     * </p>
+     * 
+     * @param audienceSizeConfig
+     *        Configure the list of output sizes of audiences that can be created using this configured audience model.
+     *        A request to <a>StartAudienceGenerationJob</a> that uses this configured audience model must have an
+     *        <code>audienceSize</code> selected from this list. You can use the <code>ABSOLUTE</code>
+     *        <a>AudienceSize</a> to configure out audience sizes using the count of identifiers in the output. You can
+     *        use the <code>Percentage</code> <a>AudienceSize</a> to configure sizes in the range 1-100 percent.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateConfiguredAudienceModelRequest withAudienceSizeConfig(AudienceSizeConfig audienceSizeConfig) {
+        setAudienceSizeConfig(audienceSizeConfig);
         return this;
     }
 
@@ -992,6 +873,125 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * Configure how the service tags audience generation jobs created using this configured audience model. If you
+     * specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the tags of the
+     * audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience generation job inherits
+     * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
+     * override the default.
+     * </p>
+     * <p>
+     * When the client is in a different account than the configured audience model, the tags from the client are never
+     * applied to a resource in the caller's account.
+     * </p>
+     * 
+     * @param childResourceTagOnCreatePolicy
+     *        Configure how the service tags audience generation jobs created using this configured audience model. If
+     *        you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
+     *        tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
+     *        generation job inherits the tags from the configured audience model, by default. Tags in the
+     *        <a>StartAudienceGenerationJob</a> will override the default.</p>
+     *        <p>
+     *        When the client is in a different account than the configured audience model, the tags from the client are
+     *        never applied to a resource in the caller's account.
+     * @see TagOnCreatePolicy
+     */
+
+    public void setChildResourceTagOnCreatePolicy(String childResourceTagOnCreatePolicy) {
+        this.childResourceTagOnCreatePolicy = childResourceTagOnCreatePolicy;
+    }
+
+    /**
+     * <p>
+     * Configure how the service tags audience generation jobs created using this configured audience model. If you
+     * specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the tags of the
+     * audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience generation job inherits
+     * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
+     * override the default.
+     * </p>
+     * <p>
+     * When the client is in a different account than the configured audience model, the tags from the client are never
+     * applied to a resource in the caller's account.
+     * </p>
+     * 
+     * @return Configure how the service tags audience generation jobs created using this configured audience model. If
+     *         you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
+     *         tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
+     *         generation job inherits the tags from the configured audience model, by default. Tags in the
+     *         <a>StartAudienceGenerationJob</a> will override the default.</p>
+     *         <p>
+     *         When the client is in a different account than the configured audience model, the tags from the client
+     *         are never applied to a resource in the caller's account.
+     * @see TagOnCreatePolicy
+     */
+
+    public String getChildResourceTagOnCreatePolicy() {
+        return this.childResourceTagOnCreatePolicy;
+    }
+
+    /**
+     * <p>
+     * Configure how the service tags audience generation jobs created using this configured audience model. If you
+     * specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the tags of the
+     * audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience generation job inherits
+     * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
+     * override the default.
+     * </p>
+     * <p>
+     * When the client is in a different account than the configured audience model, the tags from the client are never
+     * applied to a resource in the caller's account.
+     * </p>
+     * 
+     * @param childResourceTagOnCreatePolicy
+     *        Configure how the service tags audience generation jobs created using this configured audience model. If
+     *        you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
+     *        tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
+     *        generation job inherits the tags from the configured audience model, by default. Tags in the
+     *        <a>StartAudienceGenerationJob</a> will override the default.</p>
+     *        <p>
+     *        When the client is in a different account than the configured audience model, the tags from the client are
+     *        never applied to a resource in the caller's account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TagOnCreatePolicy
+     */
+
+    public CreateConfiguredAudienceModelRequest withChildResourceTagOnCreatePolicy(String childResourceTagOnCreatePolicy) {
+        setChildResourceTagOnCreatePolicy(childResourceTagOnCreatePolicy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configure how the service tags audience generation jobs created using this configured audience model. If you
+     * specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the tags of the
+     * audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience generation job inherits
+     * the tags from the configured audience model, by default. Tags in the <a>StartAudienceGenerationJob</a> will
+     * override the default.
+     * </p>
+     * <p>
+     * When the client is in a different account than the configured audience model, the tags from the client are never
+     * applied to a resource in the caller's account.
+     * </p>
+     * 
+     * @param childResourceTagOnCreatePolicy
+     *        Configure how the service tags audience generation jobs created using this configured audience model. If
+     *        you specify <code>NONE</code>, the tags from the <a>StartAudienceGenerationJob</a> request determine the
+     *        tags of the audience generation job. If you specify <code>FROM_PARENT_RESOURCE</code>, the audience
+     *        generation job inherits the tags from the configured audience model, by default. Tags in the
+     *        <a>StartAudienceGenerationJob</a> will override the default.</p>
+     *        <p>
+     *        When the client is in a different account than the configured audience model, the tags from the client are
+     *        never applied to a resource in the caller's account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TagOnCreatePolicy
+     */
+
+    public CreateConfiguredAudienceModelRequest withChildResourceTagOnCreatePolicy(TagOnCreatePolicy childResourceTagOnCreatePolicy) {
+        this.childResourceTagOnCreatePolicy = childResourceTagOnCreatePolicy.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1003,24 +1003,24 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getAudienceModelArn() != null)
-            sb.append("AudienceModelArn: ").append(getAudienceModelArn()).append(",");
-        if (getAudienceSizeConfig() != null)
-            sb.append("AudienceSizeConfig: ").append(getAudienceSizeConfig()).append(",");
-        if (getChildResourceTagOnCreatePolicy() != null)
-            sb.append("ChildResourceTagOnCreatePolicy: ").append(getChildResourceTagOnCreatePolicy()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getMinMatchingSeedSize() != null)
-            sb.append("MinMatchingSeedSize: ").append(getMinMatchingSeedSize()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getAudienceModelArn() != null)
+            sb.append("AudienceModelArn: ").append(getAudienceModelArn()).append(",");
         if (getOutputConfig() != null)
             sb.append("OutputConfig: ").append(getOutputConfig()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription()).append(",");
         if (getSharedAudienceMetrics() != null)
             sb.append("SharedAudienceMetrics: ").append(getSharedAudienceMetrics()).append(",");
+        if (getMinMatchingSeedSize() != null)
+            sb.append("MinMatchingSeedSize: ").append(getMinMatchingSeedSize()).append(",");
+        if (getAudienceSizeConfig() != null)
+            sb.append("AudienceSizeConfig: ").append(getAudienceSizeConfig()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getChildResourceTagOnCreatePolicy() != null)
+            sb.append("ChildResourceTagOnCreatePolicy: ").append(getChildResourceTagOnCreatePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -1035,42 +1035,42 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
         if (obj instanceof CreateConfiguredAudienceModelRequest == false)
             return false;
         CreateConfiguredAudienceModelRequest other = (CreateConfiguredAudienceModelRequest) obj;
-        if (other.getAudienceModelArn() == null ^ this.getAudienceModelArn() == null)
-            return false;
-        if (other.getAudienceModelArn() != null && other.getAudienceModelArn().equals(this.getAudienceModelArn()) == false)
-            return false;
-        if (other.getAudienceSizeConfig() == null ^ this.getAudienceSizeConfig() == null)
-            return false;
-        if (other.getAudienceSizeConfig() != null && other.getAudienceSizeConfig().equals(this.getAudienceSizeConfig()) == false)
-            return false;
-        if (other.getChildResourceTagOnCreatePolicy() == null ^ this.getChildResourceTagOnCreatePolicy() == null)
-            return false;
-        if (other.getChildResourceTagOnCreatePolicy() != null
-                && other.getChildResourceTagOnCreatePolicy().equals(this.getChildResourceTagOnCreatePolicy()) == false)
-            return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getMinMatchingSeedSize() == null ^ this.getMinMatchingSeedSize() == null)
-            return false;
-        if (other.getMinMatchingSeedSize() != null && other.getMinMatchingSeedSize().equals(this.getMinMatchingSeedSize()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getAudienceModelArn() == null ^ this.getAudienceModelArn() == null)
+            return false;
+        if (other.getAudienceModelArn() != null && other.getAudienceModelArn().equals(this.getAudienceModelArn()) == false)
             return false;
         if (other.getOutputConfig() == null ^ this.getOutputConfig() == null)
             return false;
         if (other.getOutputConfig() != null && other.getOutputConfig().equals(this.getOutputConfig()) == false)
             return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
         if (other.getSharedAudienceMetrics() == null ^ this.getSharedAudienceMetrics() == null)
             return false;
         if (other.getSharedAudienceMetrics() != null && other.getSharedAudienceMetrics().equals(this.getSharedAudienceMetrics()) == false)
             return false;
+        if (other.getMinMatchingSeedSize() == null ^ this.getMinMatchingSeedSize() == null)
+            return false;
+        if (other.getMinMatchingSeedSize() != null && other.getMinMatchingSeedSize().equals(this.getMinMatchingSeedSize()) == false)
+            return false;
+        if (other.getAudienceSizeConfig() == null ^ this.getAudienceSizeConfig() == null)
+            return false;
+        if (other.getAudienceSizeConfig() != null && other.getAudienceSizeConfig().equals(this.getAudienceSizeConfig()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getChildResourceTagOnCreatePolicy() == null ^ this.getChildResourceTagOnCreatePolicy() == null)
+            return false;
+        if (other.getChildResourceTagOnCreatePolicy() != null
+                && other.getChildResourceTagOnCreatePolicy().equals(this.getChildResourceTagOnCreatePolicy()) == false)
             return false;
         return true;
     }
@@ -1080,15 +1080,15 @@ public class CreateConfiguredAudienceModelRequest extends com.amazonaws.AmazonWe
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getAudienceModelArn() == null) ? 0 : getAudienceModelArn().hashCode());
-        hashCode = prime * hashCode + ((getAudienceSizeConfig() == null) ? 0 : getAudienceSizeConfig().hashCode());
-        hashCode = prime * hashCode + ((getChildResourceTagOnCreatePolicy() == null) ? 0 : getChildResourceTagOnCreatePolicy().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getMinMatchingSeedSize() == null) ? 0 : getMinMatchingSeedSize().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getAudienceModelArn() == null) ? 0 : getAudienceModelArn().hashCode());
         hashCode = prime * hashCode + ((getOutputConfig() == null) ? 0 : getOutputConfig().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getSharedAudienceMetrics() == null) ? 0 : getSharedAudienceMetrics().hashCode());
+        hashCode = prime * hashCode + ((getMinMatchingSeedSize() == null) ? 0 : getMinMatchingSeedSize().hashCode());
+        hashCode = prime * hashCode + ((getAudienceSizeConfig() == null) ? 0 : getAudienceSizeConfig().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getChildResourceTagOnCreatePolicy() == null) ? 0 : getChildResourceTagOnCreatePolicy().hashCode());
         return hashCode;
     }
 

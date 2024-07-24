@@ -46,6 +46,12 @@ public class AnalysisRulePolicyV1 implements Serializable, Cloneable, Structured
      * </p>
      */
     private AnalysisRuleCustom custom;
+    /**
+     * <p>
+     * The ID mapping table.
+     * </p>
+     */
+    private AnalysisRuleIdMappingTable idMappingTable;
 
     /**
      * <p>
@@ -168,6 +174,46 @@ public class AnalysisRulePolicyV1 implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The ID mapping table.
+     * </p>
+     * 
+     * @param idMappingTable
+     *        The ID mapping table.
+     */
+
+    public void setIdMappingTable(AnalysisRuleIdMappingTable idMappingTable) {
+        this.idMappingTable = idMappingTable;
+    }
+
+    /**
+     * <p>
+     * The ID mapping table.
+     * </p>
+     * 
+     * @return The ID mapping table.
+     */
+
+    public AnalysisRuleIdMappingTable getIdMappingTable() {
+        return this.idMappingTable;
+    }
+
+    /**
+     * <p>
+     * The ID mapping table.
+     * </p>
+     * 
+     * @param idMappingTable
+     *        The ID mapping table.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnalysisRulePolicyV1 withIdMappingTable(AnalysisRuleIdMappingTable idMappingTable) {
+        setIdMappingTable(idMappingTable);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +230,9 @@ public class AnalysisRulePolicyV1 implements Serializable, Cloneable, Structured
         if (getAggregation() != null)
             sb.append("Aggregation: ").append(getAggregation()).append(",");
         if (getCustom() != null)
-            sb.append("Custom: ").append(getCustom());
+            sb.append("Custom: ").append(getCustom()).append(",");
+        if (getIdMappingTable() != null)
+            sb.append("IdMappingTable: ").append(getIdMappingTable());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +259,10 @@ public class AnalysisRulePolicyV1 implements Serializable, Cloneable, Structured
             return false;
         if (other.getCustom() != null && other.getCustom().equals(this.getCustom()) == false)
             return false;
+        if (other.getIdMappingTable() == null ^ this.getIdMappingTable() == null)
+            return false;
+        if (other.getIdMappingTable() != null && other.getIdMappingTable().equals(this.getIdMappingTable()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +274,7 @@ public class AnalysisRulePolicyV1 implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getList() == null) ? 0 : getList().hashCode());
         hashCode = prime * hashCode + ((getAggregation() == null) ? 0 : getAggregation().hashCode());
         hashCode = prime * hashCode + ((getCustom() == null) ? 0 : getCustom().hashCode());
+        hashCode = prime * hashCode + ((getIdMappingTable() == null) ? 0 : getIdMappingTable().hashCode());
         return hashCode;
     }
 

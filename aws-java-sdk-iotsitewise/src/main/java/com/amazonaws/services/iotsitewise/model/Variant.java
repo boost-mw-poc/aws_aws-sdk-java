@@ -36,7 +36,7 @@ public class Variant implements Serializable, Cloneable, StructuredPojo {
     private String stringValue;
     /**
      * <p>
-     * Asset property data of type integer (number that's greater than or equal to zero).
+     * Asset property data of type integer (whole number).
      * </p>
      */
     private Integer integerValue;
@@ -95,11 +95,11 @@ public class Variant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Asset property data of type integer (number that's greater than or equal to zero).
+     * Asset property data of type integer (whole number).
      * </p>
      * 
      * @param integerValue
-     *        Asset property data of type integer (number that's greater than or equal to zero).
+     *        Asset property data of type integer (whole number).
      */
 
     public void setIntegerValue(Integer integerValue) {
@@ -108,10 +108,10 @@ public class Variant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Asset property data of type integer (number that's greater than or equal to zero).
+     * Asset property data of type integer (whole number).
      * </p>
      * 
-     * @return Asset property data of type integer (number that's greater than or equal to zero).
+     * @return Asset property data of type integer (whole number).
      */
 
     public Integer getIntegerValue() {
@@ -120,11 +120,11 @@ public class Variant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Asset property data of type integer (number that's greater than or equal to zero).
+     * Asset property data of type integer (whole number).
      * </p>
      * 
      * @param integerValue
-     *        Asset property data of type integer (number that's greater than or equal to zero).
+     *        Asset property data of type integer (whole number).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

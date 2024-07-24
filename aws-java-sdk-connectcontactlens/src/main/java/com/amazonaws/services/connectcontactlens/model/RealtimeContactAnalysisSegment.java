@@ -40,6 +40,12 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
      * </p>
      */
     private Categories categories;
+    /**
+     * <p>
+     * Information about the post-contact summary.
+     * </p>
+     */
+    private PostContactSummary postContactSummary;
 
     /**
      * <p>
@@ -122,6 +128,46 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * Information about the post-contact summary.
+     * </p>
+     * 
+     * @param postContactSummary
+     *        Information about the post-contact summary.
+     */
+
+    public void setPostContactSummary(PostContactSummary postContactSummary) {
+        this.postContactSummary = postContactSummary;
+    }
+
+    /**
+     * <p>
+     * Information about the post-contact summary.
+     * </p>
+     * 
+     * @return Information about the post-contact summary.
+     */
+
+    public PostContactSummary getPostContactSummary() {
+        return this.postContactSummary;
+    }
+
+    /**
+     * <p>
+     * Information about the post-contact summary.
+     * </p>
+     * 
+     * @param postContactSummary
+     *        Information about the post-contact summary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RealtimeContactAnalysisSegment withPostContactSummary(PostContactSummary postContactSummary) {
+        setPostContactSummary(postContactSummary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +182,9 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
         if (getTranscript() != null)
             sb.append("Transcript: ").append(getTranscript()).append(",");
         if (getCategories() != null)
-            sb.append("Categories: ").append(getCategories());
+            sb.append("Categories: ").append(getCategories()).append(",");
+        if (getPostContactSummary() != null)
+            sb.append("PostContactSummary: ").append(getPostContactSummary());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +207,10 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
             return false;
         if (other.getCategories() != null && other.getCategories().equals(this.getCategories()) == false)
             return false;
+        if (other.getPostContactSummary() == null ^ this.getPostContactSummary() == null)
+            return false;
+        if (other.getPostContactSummary() != null && other.getPostContactSummary().equals(this.getPostContactSummary()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +221,7 @@ public class RealtimeContactAnalysisSegment implements Serializable, Cloneable, 
 
         hashCode = prime * hashCode + ((getTranscript() == null) ? 0 : getTranscript().hashCode());
         hashCode = prime * hashCode + ((getCategories() == null) ? 0 : getCategories().hashCode());
+        hashCode = prime * hashCode + ((getPostContactSummary() == null) ? 0 : getPostContactSummary().hashCode());
         return hashCode;
     }
 

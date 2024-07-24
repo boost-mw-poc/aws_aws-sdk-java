@@ -74,9 +74,9 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * When set to false, an end recipient sends a message that begins with HELP or STOP to one of your dedicated
-     * numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the
-     * OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible
-     * for tracking and honoring opt-out requests. For more information see <a href=
+     * numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message and adds the end
+     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
+     * also responsible for tracking and honoring opt-out requests. For more information see <a href=
      * "https://docs.aws.amazon.com/pinpoint/latest/userguide/settings-sms-managing.html#settings-account-sms-self-managed-opt-out"
      * >Self-managed opt-outs</a>
      * </p>
@@ -94,9 +94,9 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * By default, this is set to <code>False</code>. If you set this value to <code>True</code>, your messages are sent
-     * using phone numbers or sender IDs (depending on the country) that are shared with other Amazon Pinpoint users. In
-     * some countries, such as the United States, senders aren't allowed to use shared routes and must use a dedicated
-     * phone number or short code.
+     * using phone numbers or sender IDs (depending on the country) that are shared with other users. In some countries,
+     * such as the United States, senders aren't allowed to use shared routes and must use a dedicated phone number or
+     * short code.
      * </p>
      */
     private Boolean sharedRoutesEnabled;
@@ -458,18 +458,19 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * When set to false, an end recipient sends a message that begins with HELP or STOP to one of your dedicated
-     * numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the
-     * OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible
-     * for tracking and honoring opt-out requests. For more information see <a href=
+     * numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message and adds the end
+     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
+     * also responsible for tracking and honoring opt-out requests. For more information see <a href=
      * "https://docs.aws.amazon.com/pinpoint/latest/userguide/settings-sms-managing.html#settings-account-sms-self-managed-opt-out"
      * >Self-managed opt-outs</a>
      * </p>
      * 
      * @param selfManagedOptOutsEnabled
      *        When set to false, an end recipient sends a message that begins with HELP or STOP to one of your dedicated
-     *        numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to
-     *        the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also
-     *        responsible for tracking and honoring opt-out requests. For more information see <a href=
+     *        numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message and adds
+     *        the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     *        requests. You're also responsible for tracking and honoring opt-out requests. For more information see <a
+     *        href=
      *        "https://docs.aws.amazon.com/pinpoint/latest/userguide/settings-sms-managing.html#settings-account-sms-self-managed-opt-out"
      *        >Self-managed opt-outs</a>
      */
@@ -481,18 +482,18 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * When set to false, an end recipient sends a message that begins with HELP or STOP to one of your dedicated
-     * numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the
-     * OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible
-     * for tracking and honoring opt-out requests. For more information see <a href=
+     * numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message and adds the end
+     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
+     * also responsible for tracking and honoring opt-out requests. For more information see <a href=
      * "https://docs.aws.amazon.com/pinpoint/latest/userguide/settings-sms-managing.html#settings-account-sms-self-managed-opt-out"
      * >Self-managed opt-outs</a>
      * </p>
      * 
      * @return When set to false, an end recipient sends a message that begins with HELP or STOP to one of your
-     *         dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     *         recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *         requests. You're also responsible for tracking and honoring opt-out requests. For more information see <a
-     *         href=
+     *         dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     *         and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP
+     *         and STOP requests. You're also responsible for tracking and honoring opt-out requests. For more
+     *         information see <a href=
      *         "https://docs.aws.amazon.com/pinpoint/latest/userguide/settings-sms-managing.html#settings-account-sms-self-managed-opt-out"
      *         >Self-managed opt-outs</a>
      */
@@ -504,18 +505,19 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * When set to false, an end recipient sends a message that begins with HELP or STOP to one of your dedicated
-     * numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the
-     * OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible
-     * for tracking and honoring opt-out requests. For more information see <a href=
+     * numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message and adds the end
+     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
+     * also responsible for tracking and honoring opt-out requests. For more information see <a href=
      * "https://docs.aws.amazon.com/pinpoint/latest/userguide/settings-sms-managing.html#settings-account-sms-self-managed-opt-out"
      * >Self-managed opt-outs</a>
      * </p>
      * 
      * @param selfManagedOptOutsEnabled
      *        When set to false, an end recipient sends a message that begins with HELP or STOP to one of your dedicated
-     *        numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to
-     *        the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also
-     *        responsible for tracking and honoring opt-out requests. For more information see <a href=
+     *        numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message and adds
+     *        the end recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
+     *        requests. You're also responsible for tracking and honoring opt-out requests. For more information see <a
+     *        href=
      *        "https://docs.aws.amazon.com/pinpoint/latest/userguide/settings-sms-managing.html#settings-account-sms-self-managed-opt-out"
      *        >Self-managed opt-outs</a>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -529,18 +531,18 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * When set to false, an end recipient sends a message that begins with HELP or STOP to one of your dedicated
-     * numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end recipient to the
-     * OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're also responsible
-     * for tracking and honoring opt-out requests. For more information see <a href=
+     * numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message and adds the end
+     * recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP requests. You're
+     * also responsible for tracking and honoring opt-out requests. For more information see <a href=
      * "https://docs.aws.amazon.com/pinpoint/latest/userguide/settings-sms-managing.html#settings-account-sms-self-managed-opt-out"
      * >Self-managed opt-outs</a>
      * </p>
      * 
      * @return When set to false, an end recipient sends a message that begins with HELP or STOP to one of your
-     *         dedicated numbers, Amazon Pinpoint automatically replies with a customizable message and adds the end
-     *         recipient to the OptOutList. When set to true you're responsible for responding to HELP and STOP
-     *         requests. You're also responsible for tracking and honoring opt-out requests. For more information see <a
-     *         href=
+     *         dedicated numbers, AWS End User Messaging SMS and Voice automatically replies with a customizable message
+     *         and adds the end recipient to the OptOutList. When set to true you're responsible for responding to HELP
+     *         and STOP requests. You're also responsible for tracking and honoring opt-out requests. For more
+     *         information see <a href=
      *         "https://docs.aws.amazon.com/pinpoint/latest/userguide/settings-sms-managing.html#settings-account-sms-self-managed-opt-out"
      *         >Self-managed opt-outs</a>
      */
@@ -595,18 +597,18 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * By default, this is set to <code>False</code>. If you set this value to <code>True</code>, your messages are sent
-     * using phone numbers or sender IDs (depending on the country) that are shared with other Amazon Pinpoint users. In
-     * some countries, such as the United States, senders aren't allowed to use shared routes and must use a dedicated
-     * phone number or short code.
+     * using phone numbers or sender IDs (depending on the country) that are shared with other users. In some countries,
+     * such as the United States, senders aren't allowed to use shared routes and must use a dedicated phone number or
+     * short code.
      * </p>
      * 
      * @param sharedRoutesEnabled
      *        Allows you to enable shared routes on your pool.</p>
      *        <p>
      *        By default, this is set to <code>False</code>. If you set this value to <code>True</code>, your messages
-     *        are sent using phone numbers or sender IDs (depending on the country) that are shared with other Amazon
-     *        Pinpoint users. In some countries, such as the United States, senders aren't allowed to use shared routes
-     *        and must use a dedicated phone number or short code.
+     *        are sent using phone numbers or sender IDs (depending on the country) that are shared with other users. In
+     *        some countries, such as the United States, senders aren't allowed to use shared routes and must use a
+     *        dedicated phone number or short code.
      */
 
     public void setSharedRoutesEnabled(Boolean sharedRoutesEnabled) {
@@ -619,17 +621,17 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * By default, this is set to <code>False</code>. If you set this value to <code>True</code>, your messages are sent
-     * using phone numbers or sender IDs (depending on the country) that are shared with other Amazon Pinpoint users. In
-     * some countries, such as the United States, senders aren't allowed to use shared routes and must use a dedicated
-     * phone number or short code.
+     * using phone numbers or sender IDs (depending on the country) that are shared with other users. In some countries,
+     * such as the United States, senders aren't allowed to use shared routes and must use a dedicated phone number or
+     * short code.
      * </p>
      * 
      * @return Allows you to enable shared routes on your pool.</p>
      *         <p>
      *         By default, this is set to <code>False</code>. If you set this value to <code>True</code>, your messages
-     *         are sent using phone numbers or sender IDs (depending on the country) that are shared with other Amazon
-     *         Pinpoint users. In some countries, such as the United States, senders aren't allowed to use shared routes
-     *         and must use a dedicated phone number or short code.
+     *         are sent using phone numbers or sender IDs (depending on the country) that are shared with other users.
+     *         In some countries, such as the United States, senders aren't allowed to use shared routes and must use a
+     *         dedicated phone number or short code.
      */
 
     public Boolean getSharedRoutesEnabled() {
@@ -642,18 +644,18 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * By default, this is set to <code>False</code>. If you set this value to <code>True</code>, your messages are sent
-     * using phone numbers or sender IDs (depending on the country) that are shared with other Amazon Pinpoint users. In
-     * some countries, such as the United States, senders aren't allowed to use shared routes and must use a dedicated
-     * phone number or short code.
+     * using phone numbers or sender IDs (depending on the country) that are shared with other users. In some countries,
+     * such as the United States, senders aren't allowed to use shared routes and must use a dedicated phone number or
+     * short code.
      * </p>
      * 
      * @param sharedRoutesEnabled
      *        Allows you to enable shared routes on your pool.</p>
      *        <p>
      *        By default, this is set to <code>False</code>. If you set this value to <code>True</code>, your messages
-     *        are sent using phone numbers or sender IDs (depending on the country) that are shared with other Amazon
-     *        Pinpoint users. In some countries, such as the United States, senders aren't allowed to use shared routes
-     *        and must use a dedicated phone number or short code.
+     *        are sent using phone numbers or sender IDs (depending on the country) that are shared with other users. In
+     *        some countries, such as the United States, senders aren't allowed to use shared routes and must use a
+     *        dedicated phone number or short code.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -668,17 +670,17 @@ public class PoolInformation implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * By default, this is set to <code>False</code>. If you set this value to <code>True</code>, your messages are sent
-     * using phone numbers or sender IDs (depending on the country) that are shared with other Amazon Pinpoint users. In
-     * some countries, such as the United States, senders aren't allowed to use shared routes and must use a dedicated
-     * phone number or short code.
+     * using phone numbers or sender IDs (depending on the country) that are shared with other users. In some countries,
+     * such as the United States, senders aren't allowed to use shared routes and must use a dedicated phone number or
+     * short code.
      * </p>
      * 
      * @return Allows you to enable shared routes on your pool.</p>
      *         <p>
      *         By default, this is set to <code>False</code>. If you set this value to <code>True</code>, your messages
-     *         are sent using phone numbers or sender IDs (depending on the country) that are shared with other Amazon
-     *         Pinpoint users. In some countries, such as the United States, senders aren't allowed to use shared routes
-     *         and must use a dedicated phone number or short code.
+     *         are sent using phone numbers or sender IDs (depending on the country) that are shared with other users.
+     *         In some countries, such as the United States, senders aren't allowed to use shared routes and must use a
+     *         dedicated phone number or short code.
      */
 
     public Boolean isSharedRoutesEnabled() {

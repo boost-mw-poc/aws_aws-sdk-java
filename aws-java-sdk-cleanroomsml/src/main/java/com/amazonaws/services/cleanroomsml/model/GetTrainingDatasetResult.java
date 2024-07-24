@@ -31,40 +31,10 @@ public class GetTrainingDatasetResult extends com.amazonaws.AmazonWebServiceResu
     private java.util.Date createTime;
     /**
      * <p>
-     * The description of the training dataset.
+     * The most recent time at which the training dataset was updated.
      * </p>
      */
-    private String description;
-    /**
-     * <p>
-     * The name of the training dataset.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
-     * The IAM role used to read the training data.
-     * </p>
-     */
-    private String roleArn;
-    /**
-     * <p>
-     * The status of the training dataset.
-     * </p>
-     */
-    private String status;
-    /**
-     * <p>
-     * The tags that are assigned to this training dataset.
-     * </p>
-     */
-    private java.util.Map<String, String> tags;
-    /**
-     * <p>
-     * Metadata about the requested training data.
-     * </p>
-     */
-    private java.util.List<Dataset> trainingData;
+    private java.util.Date updateTime;
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the training dataset.
@@ -73,10 +43,40 @@ public class GetTrainingDatasetResult extends com.amazonaws.AmazonWebServiceResu
     private String trainingDatasetArn;
     /**
      * <p>
-     * The most recent time at which the training dataset was updated.
+     * The name of the training dataset.
      * </p>
      */
-    private java.util.Date updateTime;
+    private String name;
+    /**
+     * <p>
+     * Metadata about the requested training data.
+     * </p>
+     */
+    private java.util.List<Dataset> trainingData;
+    /**
+     * <p>
+     * The status of the training dataset.
+     * </p>
+     */
+    private String status;
+    /**
+     * <p>
+     * The IAM role used to read the training data.
+     * </p>
+     */
+    private String roleArn;
+    /**
+     * <p>
+     * The tags that are assigned to this training dataset.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The description of the training dataset.
+     * </p>
+     */
+    private String description;
 
     /**
      * <p>
@@ -120,41 +120,81 @@ public class GetTrainingDatasetResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The description of the training dataset.
+     * The most recent time at which the training dataset was updated.
      * </p>
      * 
-     * @param description
-     *        The description of the training dataset.
+     * @param updateTime
+     *        The most recent time at which the training dataset was updated.
      */
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setUpdateTime(java.util.Date updateTime) {
+        this.updateTime = updateTime;
     }
 
     /**
      * <p>
-     * The description of the training dataset.
+     * The most recent time at which the training dataset was updated.
      * </p>
      * 
-     * @return The description of the training dataset.
+     * @return The most recent time at which the training dataset was updated.
      */
 
-    public String getDescription() {
-        return this.description;
+    public java.util.Date getUpdateTime() {
+        return this.updateTime;
     }
 
     /**
      * <p>
-     * The description of the training dataset.
+     * The most recent time at which the training dataset was updated.
      * </p>
      * 
-     * @param description
-     *        The description of the training dataset.
+     * @param updateTime
+     *        The most recent time at which the training dataset was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetTrainingDatasetResult withDescription(String description) {
-        setDescription(description);
+    public GetTrainingDatasetResult withUpdateTime(java.util.Date updateTime) {
+        setUpdateTime(updateTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the training dataset.
+     * </p>
+     * 
+     * @param trainingDatasetArn
+     *        The Amazon Resource Name (ARN) of the training dataset.
+     */
+
+    public void setTrainingDatasetArn(String trainingDatasetArn) {
+        this.trainingDatasetArn = trainingDatasetArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the training dataset.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the training dataset.
+     */
+
+    public String getTrainingDatasetArn() {
+        return this.trainingDatasetArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the training dataset.
+     * </p>
+     * 
+     * @param trainingDatasetArn
+     *        The Amazon Resource Name (ARN) of the training dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetTrainingDatasetResult withTrainingDatasetArn(String trainingDatasetArn) {
+        setTrainingDatasetArn(trainingDatasetArn);
         return this;
     }
 
@@ -195,173 +235,6 @@ public class GetTrainingDatasetResult extends com.amazonaws.AmazonWebServiceResu
 
     public GetTrainingDatasetResult withName(String name) {
         setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The IAM role used to read the training data.
-     * </p>
-     * 
-     * @param roleArn
-     *        The IAM role used to read the training data.
-     */
-
-    public void setRoleArn(String roleArn) {
-        this.roleArn = roleArn;
-    }
-
-    /**
-     * <p>
-     * The IAM role used to read the training data.
-     * </p>
-     * 
-     * @return The IAM role used to read the training data.
-     */
-
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
-    /**
-     * <p>
-     * The IAM role used to read the training data.
-     * </p>
-     * 
-     * @param roleArn
-     *        The IAM role used to read the training data.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetTrainingDatasetResult withRoleArn(String roleArn) {
-        setRoleArn(roleArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The status of the training dataset.
-     * </p>
-     * 
-     * @param status
-     *        The status of the training dataset.
-     * @see TrainingDatasetStatus
-     */
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    /**
-     * <p>
-     * The status of the training dataset.
-     * </p>
-     * 
-     * @return The status of the training dataset.
-     * @see TrainingDatasetStatus
-     */
-
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
-     * <p>
-     * The status of the training dataset.
-     * </p>
-     * 
-     * @param status
-     *        The status of the training dataset.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see TrainingDatasetStatus
-     */
-
-    public GetTrainingDatasetResult withStatus(String status) {
-        setStatus(status);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The status of the training dataset.
-     * </p>
-     * 
-     * @param status
-     *        The status of the training dataset.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see TrainingDatasetStatus
-     */
-
-    public GetTrainingDatasetResult withStatus(TrainingDatasetStatus status) {
-        this.status = status.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * The tags that are assigned to this training dataset.
-     * </p>
-     * 
-     * @return The tags that are assigned to this training dataset.
-     */
-
-    public java.util.Map<String, String> getTags() {
-        return tags;
-    }
-
-    /**
-     * <p>
-     * The tags that are assigned to this training dataset.
-     * </p>
-     * 
-     * @param tags
-     *        The tags that are assigned to this training dataset.
-     */
-
-    public void setTags(java.util.Map<String, String> tags) {
-        this.tags = tags;
-    }
-
-    /**
-     * <p>
-     * The tags that are assigned to this training dataset.
-     * </p>
-     * 
-     * @param tags
-     *        The tags that are assigned to this training dataset.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetTrainingDatasetResult withTags(java.util.Map<String, String> tags) {
-        setTags(tags);
-        return this;
-    }
-
-    /**
-     * Add a single Tags entry
-     *
-     * @see GetTrainingDatasetResult#withTags
-     * @returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetTrainingDatasetResult addTagsEntry(String key, String value) {
-        if (null == this.tags) {
-            this.tags = new java.util.HashMap<String, String>();
-        }
-        if (this.tags.containsKey(key))
-            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
-        this.tags.put(key, value);
-        return this;
-    }
-
-    /**
-     * Removes all the entries added into Tags.
-     *
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetTrainingDatasetResult clearTagsEntries() {
-        this.tags = null;
         return this;
     }
 
@@ -437,81 +310,208 @@ public class GetTrainingDatasetResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the training dataset.
+     * The status of the training dataset.
      * </p>
      * 
-     * @param trainingDatasetArn
-     *        The Amazon Resource Name (ARN) of the training dataset.
+     * @param status
+     *        The status of the training dataset.
+     * @see TrainingDatasetStatus
      */
 
-    public void setTrainingDatasetArn(String trainingDatasetArn) {
-        this.trainingDatasetArn = trainingDatasetArn;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the training dataset.
+     * The status of the training dataset.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the training dataset.
+     * @return The status of the training dataset.
+     * @see TrainingDatasetStatus
      */
 
-    public String getTrainingDatasetArn() {
-        return this.trainingDatasetArn;
+    public String getStatus() {
+        return this.status;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the training dataset.
+     * The status of the training dataset.
      * </p>
      * 
-     * @param trainingDatasetArn
-     *        The Amazon Resource Name (ARN) of the training dataset.
+     * @param status
+     *        The status of the training dataset.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TrainingDatasetStatus
      */
 
-    public GetTrainingDatasetResult withTrainingDatasetArn(String trainingDatasetArn) {
-        setTrainingDatasetArn(trainingDatasetArn);
+    public GetTrainingDatasetResult withStatus(String status) {
+        setStatus(status);
         return this;
     }
 
     /**
      * <p>
-     * The most recent time at which the training dataset was updated.
+     * The status of the training dataset.
      * </p>
      * 
-     * @param updateTime
-     *        The most recent time at which the training dataset was updated.
+     * @param status
+     *        The status of the training dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TrainingDatasetStatus
      */
 
-    public void setUpdateTime(java.util.Date updateTime) {
-        this.updateTime = updateTime;
+    public GetTrainingDatasetResult withStatus(TrainingDatasetStatus status) {
+        this.status = status.toString();
+        return this;
     }
 
     /**
      * <p>
-     * The most recent time at which the training dataset was updated.
+     * The IAM role used to read the training data.
      * </p>
      * 
-     * @return The most recent time at which the training dataset was updated.
+     * @param roleArn
+     *        The IAM role used to read the training data.
      */
 
-    public java.util.Date getUpdateTime() {
-        return this.updateTime;
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
     }
 
     /**
      * <p>
-     * The most recent time at which the training dataset was updated.
+     * The IAM role used to read the training data.
      * </p>
      * 
-     * @param updateTime
-     *        The most recent time at which the training dataset was updated.
+     * @return The IAM role used to read the training data.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * The IAM role used to read the training data.
+     * </p>
+     * 
+     * @param roleArn
+     *        The IAM role used to read the training data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetTrainingDatasetResult withUpdateTime(java.util.Date updateTime) {
-        setUpdateTime(updateTime);
+    public GetTrainingDatasetResult withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The tags that are assigned to this training dataset.
+     * </p>
+     * 
+     * @return The tags that are assigned to this training dataset.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * The tags that are assigned to this training dataset.
+     * </p>
+     * 
+     * @param tags
+     *        The tags that are assigned to this training dataset.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * The tags that are assigned to this training dataset.
+     * </p>
+     * 
+     * @param tags
+     *        The tags that are assigned to this training dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetTrainingDatasetResult withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see GetTrainingDatasetResult#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetTrainingDatasetResult addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetTrainingDatasetResult clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
+     * <p>
+     * The description of the training dataset.
+     * </p>
+     * 
+     * @param description
+     *        The description of the training dataset.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The description of the training dataset.
+     * </p>
+     * 
+     * @return The description of the training dataset.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The description of the training dataset.
+     * </p>
+     * 
+     * @param description
+     *        The description of the training dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetTrainingDatasetResult withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -529,22 +529,22 @@ public class GetTrainingDatasetResult extends com.amazonaws.AmazonWebServiceResu
         sb.append("{");
         if (getCreateTime() != null)
             sb.append("CreateTime: ").append(getCreateTime()).append(",");
-        if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn()).append(",");
-        if (getStatus() != null)
-            sb.append("Status: ").append(getStatus()).append(",");
-        if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
-        if (getTrainingData() != null)
-            sb.append("TrainingData: ").append(getTrainingData()).append(",");
+        if (getUpdateTime() != null)
+            sb.append("UpdateTime: ").append(getUpdateTime()).append(",");
         if (getTrainingDatasetArn() != null)
             sb.append("TrainingDatasetArn: ").append(getTrainingDatasetArn()).append(",");
-        if (getUpdateTime() != null)
-            sb.append("UpdateTime: ").append(getUpdateTime());
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
+        if (getTrainingData() != null)
+            sb.append("TrainingData: ").append(getTrainingData()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getRoleArn() != null)
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getDescription() != null)
+            sb.append("Description: ").append(getDescription());
         sb.append("}");
         return sb.toString();
     }
@@ -563,37 +563,37 @@ public class GetTrainingDatasetResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
+        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
             return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
-            return false;
-        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
-            return false;
-        if (other.getStatus() == null ^ this.getStatus() == null)
-            return false;
-        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
-            return false;
-        if (other.getTags() == null ^ this.getTags() == null)
-            return false;
-        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
-            return false;
-        if (other.getTrainingData() == null ^ this.getTrainingData() == null)
-            return false;
-        if (other.getTrainingData() != null && other.getTrainingData().equals(this.getTrainingData()) == false)
+        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
             return false;
         if (other.getTrainingDatasetArn() == null ^ this.getTrainingDatasetArn() == null)
             return false;
         if (other.getTrainingDatasetArn() != null && other.getTrainingDatasetArn().equals(this.getTrainingDatasetArn()) == false)
             return false;
-        if (other.getUpdateTime() == null ^ this.getUpdateTime() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getUpdateTime() != null && other.getUpdateTime().equals(this.getUpdateTime()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getTrainingData() == null ^ this.getTrainingData() == null)
+            return false;
+        if (other.getTrainingData() != null && other.getTrainingData().equals(this.getTrainingData()) == false)
+            return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
+        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
+            return false;
+        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
+            return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
         return true;
     }
@@ -604,14 +604,14 @@ public class GetTrainingDatasetResult extends com.amazonaws.AmazonWebServiceResu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
-        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
-        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
-        hashCode = prime * hashCode + ((getTrainingData() == null) ? 0 : getTrainingData().hashCode());
-        hashCode = prime * hashCode + ((getTrainingDatasetArn() == null) ? 0 : getTrainingDatasetArn().hashCode());
         hashCode = prime * hashCode + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getTrainingDatasetArn() == null) ? 0 : getTrainingDatasetArn().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getTrainingData() == null) ? 0 : getTrainingData().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         return hashCode;
     }
 

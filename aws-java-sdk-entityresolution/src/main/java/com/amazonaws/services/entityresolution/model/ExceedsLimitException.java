@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The request was rejected because it attempted to create resources beyond the current Entity Resolution account
- * limits. The error message describes the limit exceeded. <code>HTTP Status Code: 402</code>
+ * limits. The error message describes the limit exceeded.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -31,6 +31,8 @@ public class GatewayPlatformMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("greengrass").build();
     private static final MarshallingInfo<StructuredPojo> GREENGRASSV2_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("greengrassV2").build();
+    private static final MarshallingInfo<StructuredPojo> SIEMENSIE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("siemensIE").build();
 
     private static final GatewayPlatformMarshaller instance = new GatewayPlatformMarshaller();
 
@@ -50,6 +52,7 @@ public class GatewayPlatformMarshaller {
         try {
             protocolMarshaller.marshall(gatewayPlatform.getGreengrass(), GREENGRASS_BINDING);
             protocolMarshaller.marshall(gatewayPlatform.getGreengrassV2(), GREENGRASSV2_BINDING);
+            protocolMarshaller.marshall(gatewayPlatform.getSiemensIE(), SIEMENSIE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

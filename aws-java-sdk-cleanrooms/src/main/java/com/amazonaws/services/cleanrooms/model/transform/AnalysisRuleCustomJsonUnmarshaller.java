@@ -60,6 +60,16 @@ public class AnalysisRuleCustomJsonUnmarshaller implements Unmarshaller<Analysis
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("additionalAnalyses", targetDepth)) {
+                    context.nextToken();
+                    analysisRuleCustom.setAdditionalAnalyses(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("disallowedOutputColumns", targetDepth)) {
+                    context.nextToken();
+                    analysisRuleCustom.setDisallowedOutputColumns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("differentialPrivacy", targetDepth)) {
                     context.nextToken();
                     analysisRuleCustom.setDifferentialPrivacy(DifferentialPrivacyConfigurationJsonUnmarshaller.getInstance().unmarshall(context));

@@ -27,20 +27,20 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AudienceModelSummaryMarshaller {
 
-    private static final MarshallingInfo<String> AUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceModelArn").build();
     private static final MarshallingInfo<java.util.Date> CREATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createTime").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
-    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("name").build();
-    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("status").build();
-    private static final MarshallingInfo<String> TRAININGDATASETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingDatasetArn").build();
     private static final MarshallingInfo<java.util.Date> UPDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> AUDIENCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audienceModelArn").build();
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> TRAININGDATASETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingDatasetArn").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("status").build();
+    private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
 
     private static final AudienceModelSummaryMarshaller instance = new AudienceModelSummaryMarshaller();
 
@@ -58,13 +58,13 @@ public class AudienceModelSummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(audienceModelSummary.getAudienceModelArn(), AUDIENCEMODELARN_BINDING);
             protocolMarshaller.marshall(audienceModelSummary.getCreateTime(), CREATETIME_BINDING);
-            protocolMarshaller.marshall(audienceModelSummary.getDescription(), DESCRIPTION_BINDING);
-            protocolMarshaller.marshall(audienceModelSummary.getName(), NAME_BINDING);
-            protocolMarshaller.marshall(audienceModelSummary.getStatus(), STATUS_BINDING);
-            protocolMarshaller.marshall(audienceModelSummary.getTrainingDatasetArn(), TRAININGDATASETARN_BINDING);
             protocolMarshaller.marshall(audienceModelSummary.getUpdateTime(), UPDATETIME_BINDING);
+            protocolMarshaller.marshall(audienceModelSummary.getAudienceModelArn(), AUDIENCEMODELARN_BINDING);
+            protocolMarshaller.marshall(audienceModelSummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(audienceModelSummary.getTrainingDatasetArn(), TRAININGDATASETARN_BINDING);
+            protocolMarshaller.marshall(audienceModelSummary.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(audienceModelSummary.getDescription(), DESCRIPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

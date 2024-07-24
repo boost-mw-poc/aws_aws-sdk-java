@@ -42,6 +42,12 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
     private String description;
     /**
      * <p>
+     * An object which defines any additional configurations required by the ID mapping workflow.
+     * </p>
+     */
+    private java.util.List<IdNamespaceIdMappingWorkflowMetadata> idMappingWorkflowProperties;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the ID namespace.
      * </p>
      */
@@ -61,8 +67,8 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      */
     private String type;
@@ -155,6 +161,76 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * An object which defines any additional configurations required by the ID mapping workflow.
+     * </p>
+     * 
+     * @return An object which defines any additional configurations required by the ID mapping workflow.
+     */
+
+    public java.util.List<IdNamespaceIdMappingWorkflowMetadata> getIdMappingWorkflowProperties() {
+        return idMappingWorkflowProperties;
+    }
+
+    /**
+     * <p>
+     * An object which defines any additional configurations required by the ID mapping workflow.
+     * </p>
+     * 
+     * @param idMappingWorkflowProperties
+     *        An object which defines any additional configurations required by the ID mapping workflow.
+     */
+
+    public void setIdMappingWorkflowProperties(java.util.Collection<IdNamespaceIdMappingWorkflowMetadata> idMappingWorkflowProperties) {
+        if (idMappingWorkflowProperties == null) {
+            this.idMappingWorkflowProperties = null;
+            return;
+        }
+
+        this.idMappingWorkflowProperties = new java.util.ArrayList<IdNamespaceIdMappingWorkflowMetadata>(idMappingWorkflowProperties);
+    }
+
+    /**
+     * <p>
+     * An object which defines any additional configurations required by the ID mapping workflow.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setIdMappingWorkflowProperties(java.util.Collection)} or
+     * {@link #withIdMappingWorkflowProperties(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param idMappingWorkflowProperties
+     *        An object which defines any additional configurations required by the ID mapping workflow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdNamespaceSummary withIdMappingWorkflowProperties(IdNamespaceIdMappingWorkflowMetadata... idMappingWorkflowProperties) {
+        if (this.idMappingWorkflowProperties == null) {
+            setIdMappingWorkflowProperties(new java.util.ArrayList<IdNamespaceIdMappingWorkflowMetadata>(idMappingWorkflowProperties.length));
+        }
+        for (IdNamespaceIdMappingWorkflowMetadata ele : idMappingWorkflowProperties) {
+            this.idMappingWorkflowProperties.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An object which defines any additional configurations required by the ID mapping workflow.
+     * </p>
+     * 
+     * @param idMappingWorkflowProperties
+     *        An object which defines any additional configurations required by the ID mapping workflow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdNamespaceSummary withIdMappingWorkflowProperties(java.util.Collection<IdNamespaceIdMappingWorkflowMetadata> idMappingWorkflowProperties) {
+        setIdMappingWorkflowProperties(idMappingWorkflowProperties);
+        return this;
+    }
+
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the ID namespace.
      * </p>
      * 
@@ -242,8 +318,8 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      * 
      * @param type
@@ -253,8 +329,8 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
      *        an ID mapping workflow.
      *        </p>
      *        <p>
-     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-     *        <code>sourceIds</code> will resolve to.
+     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code>
+     *        will resolve to.
      * @see IdNamespaceType
      */
 
@@ -271,8 +347,8 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      * 
      * @return The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.</p>
@@ -281,7 +357,7 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
      *         an ID mapping workflow.
      *         </p>
      *         <p>
-     *         The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
+     *         The <code>TARGET</code> contains a configuration of <code>targetId</code> which all
      *         <code>sourceIds</code> will resolve to.
      * @see IdNamespaceType
      */
@@ -299,8 +375,8 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      * 
      * @param type
@@ -310,8 +386,8 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
      *        an ID mapping workflow.
      *        </p>
      *        <p>
-     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-     *        <code>sourceIds</code> will resolve to.
+     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code>
+     *        will resolve to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdNamespaceType
      */
@@ -330,8 +406,8 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
      * mapping workflow.
      * </p>
      * <p>
-     * The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code>
-     * will resolve to.
+     * The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will
+     * resolve to.
      * </p>
      * 
      * @param type
@@ -341,8 +417,8 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
      *        an ID mapping workflow.
      *        </p>
      *        <p>
-     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-     *        <code>sourceIds</code> will resolve to.
+     *        The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code>
+     *        will resolve to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdNamespaceType
      */
@@ -408,6 +484,8 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getIdMappingWorkflowProperties() != null)
+            sb.append("IdMappingWorkflowProperties: ").append(getIdMappingWorkflowProperties()).append(",");
         if (getIdNamespaceArn() != null)
             sb.append("IdNamespaceArn: ").append(getIdNamespaceArn()).append(",");
         if (getIdNamespaceName() != null)
@@ -438,6 +516,10 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getIdMappingWorkflowProperties() == null ^ this.getIdMappingWorkflowProperties() == null)
+            return false;
+        if (other.getIdMappingWorkflowProperties() != null && other.getIdMappingWorkflowProperties().equals(this.getIdMappingWorkflowProperties()) == false)
+            return false;
         if (other.getIdNamespaceArn() == null ^ this.getIdNamespaceArn() == null)
             return false;
         if (other.getIdNamespaceArn() != null && other.getIdNamespaceArn().equals(this.getIdNamespaceArn()) == false)
@@ -464,6 +546,7 @@ public class IdNamespaceSummary implements Serializable, Cloneable, StructuredPo
 
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getIdMappingWorkflowProperties() == null) ? 0 : getIdMappingWorkflowProperties().hashCode());
         hashCode = prime * hashCode + ((getIdNamespaceArn() == null) ? 0 : getIdNamespaceArn().hashCode());
         hashCode = prime * hashCode + ((getIdNamespaceName() == null) ? 0 : getIdNamespaceName().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());

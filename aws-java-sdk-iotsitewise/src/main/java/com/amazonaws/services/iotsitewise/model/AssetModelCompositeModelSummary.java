@@ -30,7 +30,7 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ID of the the composite model that this summary describes..
+     * The ID of the composite model that this summary describes..
      * </p>
      */
     private String id;
@@ -44,33 +44,20 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
     private String externalId;
     /**
      * <p>
-     * The name of the the composite model that this summary describes..
+     * The name of the composite model that this summary describes..
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The type of asset model.
+     * The composite model type. Valid values are <code>AWS/ALARM</code>, <code>CUSTOM</code>, or
+     * <code> AWS/L4E_ANOMALY</code>.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <b>ASSET_MODEL</b> – (default) An asset model that you can use to create assets. Can't be included as a component
-     * in another asset model.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <b>COMPONENT_MODEL</b> – A reusable component that you can include in the composite models of other asset models.
-     * You can't create assets directly from this type of asset model.
-     * </p>
-     * </li>
-     * </ul>
      */
     private String type;
     /**
      * <p>
-     * The description of the the composite model that this summary describes..
+     * The description of the composite model that this summary describes..
      * </p>
      */
     private String description;
@@ -83,11 +70,11 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ID of the the composite model that this summary describes..
+     * The ID of the composite model that this summary describes..
      * </p>
      * 
      * @param id
-     *        The ID of the the composite model that this summary describes..
+     *        The ID of the composite model that this summary describes..
      */
 
     public void setId(String id) {
@@ -96,10 +83,10 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ID of the the composite model that this summary describes..
+     * The ID of the composite model that this summary describes..
      * </p>
      * 
-     * @return The ID of the the composite model that this summary describes..
+     * @return The ID of the composite model that this summary describes..
      */
 
     public String getId() {
@@ -108,11 +95,11 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ID of the the composite model that this summary describes..
+     * The ID of the composite model that this summary describes..
      * </p>
      * 
      * @param id
-     *        The ID of the the composite model that this summary describes..
+     *        The ID of the composite model that this summary describes..
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +162,11 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The name of the the composite model that this summary describes..
+     * The name of the composite model that this summary describes..
      * </p>
      * 
      * @param name
-     *        The name of the the composite model that this summary describes..
+     *        The name of the composite model that this summary describes..
      */
 
     public void setName(String name) {
@@ -188,10 +175,10 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The name of the the composite model that this summary describes..
+     * The name of the composite model that this summary describes..
      * </p>
      * 
-     * @return The name of the the composite model that this summary describes..
+     * @return The name of the composite model that this summary describes..
      */
 
     public String getName() {
@@ -200,11 +187,11 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The name of the the composite model that this summary describes..
+     * The name of the composite model that this summary describes..
      * </p>
      * 
      * @param name
-     *        The name of the the composite model that this summary describes..
+     *        The name of the composite model that this summary describes..
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,38 +202,13 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The type of asset model.
+     * The composite model type. Valid values are <code>AWS/ALARM</code>, <code>CUSTOM</code>, or
+     * <code> AWS/L4E_ANOMALY</code>.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <b>ASSET_MODEL</b> – (default) An asset model that you can use to create assets. Can't be included as a component
-     * in another asset model.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <b>COMPONENT_MODEL</b> – A reusable component that you can include in the composite models of other asset models.
-     * You can't create assets directly from this type of asset model.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param type
-     *        The type of asset model.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <b>ASSET_MODEL</b> – (default) An asset model that you can use to create assets. Can't be included as a
-     *        component in another asset model.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <b>COMPONENT_MODEL</b> – A reusable component that you can include in the composite models of other asset
-     *        models. You can't create assets directly from this type of asset model.
-     *        </p>
-     *        </li>
+     *        The composite model type. Valid values are <code>AWS/ALARM</code>, <code>CUSTOM</code>, or
+     *        <code> AWS/L4E_ANOMALY</code>.
      */
 
     public void setType(String type) {
@@ -255,37 +217,12 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The type of asset model.
+     * The composite model type. Valid values are <code>AWS/ALARM</code>, <code>CUSTOM</code>, or
+     * <code> AWS/L4E_ANOMALY</code>.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <b>ASSET_MODEL</b> – (default) An asset model that you can use to create assets. Can't be included as a component
-     * in another asset model.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <b>COMPONENT_MODEL</b> – A reusable component that you can include in the composite models of other asset models.
-     * You can't create assets directly from this type of asset model.
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return The type of asset model.</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <b>ASSET_MODEL</b> – (default) An asset model that you can use to create assets. Can't be included as a
-     *         component in another asset model.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <b>COMPONENT_MODEL</b> – A reusable component that you can include in the composite models of other asset
-     *         models. You can't create assets directly from this type of asset model.
-     *         </p>
-     *         </li>
+     * @return The composite model type. Valid values are <code>AWS/ALARM</code>, <code>CUSTOM</code>, or
+     *         <code> AWS/L4E_ANOMALY</code>.
      */
 
     public String getType() {
@@ -294,38 +231,13 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The type of asset model.
+     * The composite model type. Valid values are <code>AWS/ALARM</code>, <code>CUSTOM</code>, or
+     * <code> AWS/L4E_ANOMALY</code>.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <b>ASSET_MODEL</b> – (default) An asset model that you can use to create assets. Can't be included as a component
-     * in another asset model.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <b>COMPONENT_MODEL</b> – A reusable component that you can include in the composite models of other asset models.
-     * You can't create assets directly from this type of asset model.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param type
-     *        The type of asset model.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <b>ASSET_MODEL</b> – (default) An asset model that you can use to create assets. Can't be included as a
-     *        component in another asset model.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <b>COMPONENT_MODEL</b> – A reusable component that you can include in the composite models of other asset
-     *        models. You can't create assets directly from this type of asset model.
-     *        </p>
-     *        </li>
+     *        The composite model type. Valid values are <code>AWS/ALARM</code>, <code>CUSTOM</code>, or
+     *        <code> AWS/L4E_ANOMALY</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -336,11 +248,11 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The description of the the composite model that this summary describes..
+     * The description of the composite model that this summary describes..
      * </p>
      * 
      * @param description
-     *        The description of the the composite model that this summary describes..
+     *        The description of the composite model that this summary describes..
      */
 
     public void setDescription(String description) {
@@ -349,10 +261,10 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The description of the the composite model that this summary describes..
+     * The description of the composite model that this summary describes..
      * </p>
      * 
-     * @return The description of the the composite model that this summary describes..
+     * @return The description of the composite model that this summary describes..
      */
 
     public String getDescription() {
@@ -361,11 +273,11 @@ public class AssetModelCompositeModelSummary implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The description of the the composite model that this summary describes..
+     * The description of the composite model that this summary describes..
      * </p>
      * 
      * @param description
-     *        The description of the the composite model that this summary describes..
+     *        The description of the composite model that this summary describes..
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

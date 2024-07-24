@@ -48,15 +48,15 @@ public class DatasetInputConfigJsonUnmarshaller implements Unmarshaller<DatasetI
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("dataSource", targetDepth)) {
-                    context.nextToken();
-                    datasetInputConfig.setDataSource(DataSourceJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("schema", targetDepth)) {
                     context.nextToken();
                     datasetInputConfig.setSchema(new ListUnmarshaller<ColumnSchema>(ColumnSchemaJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("dataSource", targetDepth)) {
+                    context.nextToken();
+                    datasetInputConfig.setDataSource(DataSourceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

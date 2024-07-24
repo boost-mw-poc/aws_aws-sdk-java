@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was denied due to request throttling. <code>HTTP Status Code: 429</code>
+ * The request was denied due to request throttling.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

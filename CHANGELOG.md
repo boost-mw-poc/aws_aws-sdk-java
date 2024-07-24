@@ -1,3 +1,53 @@
+# __1.12.764__ __2024-07-24__
+## __AWS AppSync__
+  - ### Features
+    - Adding support for paginators in AppSync list APIs
+
+## __AWS Clean Rooms ML__
+  - ### Features
+    - Adds SQL query as the source of seed audience for audience generation job.
+
+## __AWS Clean Rooms Service__
+  - ### Features
+    - This release adds AWS Entity Resolution integration to associate ID namespaces & ID mapping workflow resources as part of ID namespace association and  ID mapping table  in AWS Clean Rooms. It also introduces a new ID_MAPPING_TABLE analysis rule to manage the protection on ID mapping table.
+    - Three enhancements to the AWS Clean Rooms: Disallowed Output Columns, Flexible Result Receivers, SQL as a Seed
+
+## __AWS Elemental MediaPackage v2__
+  - ### Features
+    - This release adds support for Irdeto DRM encryption in DASH manifests.
+
+## __AWS EntityResolution__
+  - ### Features
+    - Support First Party ID Mapping
+
+## __AWS Health Imaging__
+  - ### Features
+    - CopyImageSet API adds copying selected instances between image sets, and overriding inconsistent metadata with a force parameter. UpdateImageSetMetadata API enables reverting to prior versions; updates to Study, Series, and SOP Instance UIDs; and updates to private elements, with a force parameter.
+
+## __AWS IoT SiteWise__
+  - ### Features
+    - Adds support for creating SiteWise Edge gateways that run on a Siemens Industrial Edge Device.
+
+## __Amazon Connect Contact Lens__
+  - ### Features
+    - Added PostContactSummary segment type on ListRealTimeContactAnalysisSegments API
+
+## __Amazon Connect Service__
+  - ### Features
+    - Added PostContactSummary segment type on ListRealTimeContactAnalysisSegmentsV2 API
+
+## __Amazon DataZone__
+  - ### Features
+    - This release removes the deprecated dataProductItem field from Search API output.
+
+## __Amazon DynamoDB__
+  - ### Features
+    - DynamoDB doc only update for July
+
+## __Amazon Pinpoint SMS Voice V2__
+  - ### Features
+    - Update for rebrand to AWS End User Messaging SMS and Voice.
+
 # __1.12.763__ __2024-07-22__
 ## __Amazon DataZone__
   - ### Features

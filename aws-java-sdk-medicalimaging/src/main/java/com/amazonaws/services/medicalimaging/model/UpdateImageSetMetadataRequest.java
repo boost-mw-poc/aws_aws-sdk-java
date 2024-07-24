@@ -45,6 +45,25 @@ public class UpdateImageSetMetadataRequest extends com.amazonaws.AmazonWebServic
     private String latestVersionId;
     /**
      * <p>
+     * Setting this flag will force the <code>UpdateImageSetMetadata</code> operation for the following attributes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Tag.StudyInstanceUID</code>, <code>Tag.SeriesInstanceUID</code>, <code>Tag.SOPInstanceUID</code>, and
+     * <code>Tag.StudyID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Adding, removing, or updating private tags for an individual SOP Instance
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private Boolean force;
+    /**
+     * <p>
      * Update image set metadata updates.
      * </p>
      */
@@ -172,6 +191,162 @@ public class UpdateImageSetMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * Setting this flag will force the <code>UpdateImageSetMetadata</code> operation for the following attributes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Tag.StudyInstanceUID</code>, <code>Tag.SeriesInstanceUID</code>, <code>Tag.SOPInstanceUID</code>, and
+     * <code>Tag.StudyID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Adding, removing, or updating private tags for an individual SOP Instance
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param force
+     *        Setting this flag will force the <code>UpdateImageSetMetadata</code> operation for the following
+     *        attributes:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Tag.StudyInstanceUID</code>, <code>Tag.SeriesInstanceUID</code>, <code>Tag.SOPInstanceUID</code>,
+     *        and <code>Tag.StudyID</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Adding, removing, or updating private tags for an individual SOP Instance
+     *        </p>
+     *        </li>
+     */
+
+    public void setForce(Boolean force) {
+        this.force = force;
+    }
+
+    /**
+     * <p>
+     * Setting this flag will force the <code>UpdateImageSetMetadata</code> operation for the following attributes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Tag.StudyInstanceUID</code>, <code>Tag.SeriesInstanceUID</code>, <code>Tag.SOPInstanceUID</code>, and
+     * <code>Tag.StudyID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Adding, removing, or updating private tags for an individual SOP Instance
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Setting this flag will force the <code>UpdateImageSetMetadata</code> operation for the following
+     *         attributes:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Tag.StudyInstanceUID</code>, <code>Tag.SeriesInstanceUID</code>, <code>Tag.SOPInstanceUID</code>,
+     *         and <code>Tag.StudyID</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Adding, removing, or updating private tags for an individual SOP Instance
+     *         </p>
+     *         </li>
+     */
+
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
+     * <p>
+     * Setting this flag will force the <code>UpdateImageSetMetadata</code> operation for the following attributes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Tag.StudyInstanceUID</code>, <code>Tag.SeriesInstanceUID</code>, <code>Tag.SOPInstanceUID</code>, and
+     * <code>Tag.StudyID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Adding, removing, or updating private tags for an individual SOP Instance
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param force
+     *        Setting this flag will force the <code>UpdateImageSetMetadata</code> operation for the following
+     *        attributes:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Tag.StudyInstanceUID</code>, <code>Tag.SeriesInstanceUID</code>, <code>Tag.SOPInstanceUID</code>,
+     *        and <code>Tag.StudyID</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Adding, removing, or updating private tags for an individual SOP Instance
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateImageSetMetadataRequest withForce(Boolean force) {
+        setForce(force);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Setting this flag will force the <code>UpdateImageSetMetadata</code> operation for the following attributes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Tag.StudyInstanceUID</code>, <code>Tag.SeriesInstanceUID</code>, <code>Tag.SOPInstanceUID</code>, and
+     * <code>Tag.StudyID</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Adding, removing, or updating private tags for an individual SOP Instance
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Setting this flag will force the <code>UpdateImageSetMetadata</code> operation for the following
+     *         attributes:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Tag.StudyInstanceUID</code>, <code>Tag.SeriesInstanceUID</code>, <code>Tag.SOPInstanceUID</code>,
+     *         and <code>Tag.StudyID</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Adding, removing, or updating private tags for an individual SOP Instance
+     *         </p>
+     *         </li>
+     */
+
+    public Boolean isForce() {
+        return this.force;
+    }
+
+    /**
+     * <p>
      * Update image set metadata updates.
      * </p>
      * 
@@ -228,6 +403,8 @@ public class UpdateImageSetMetadataRequest extends com.amazonaws.AmazonWebServic
             sb.append("ImageSetId: ").append(getImageSetId()).append(",");
         if (getLatestVersionId() != null)
             sb.append("LatestVersionId: ").append(getLatestVersionId()).append(",");
+        if (getForce() != null)
+            sb.append("Force: ").append(getForce()).append(",");
         if (getUpdateImageSetMetadataUpdates() != null)
             sb.append("UpdateImageSetMetadataUpdates: ").append(getUpdateImageSetMetadataUpdates());
         sb.append("}");
@@ -256,6 +433,10 @@ public class UpdateImageSetMetadataRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getLatestVersionId() != null && other.getLatestVersionId().equals(this.getLatestVersionId()) == false)
             return false;
+        if (other.getForce() == null ^ this.getForce() == null)
+            return false;
+        if (other.getForce() != null && other.getForce().equals(this.getForce()) == false)
+            return false;
         if (other.getUpdateImageSetMetadataUpdates() == null ^ this.getUpdateImageSetMetadataUpdates() == null)
             return false;
         if (other.getUpdateImageSetMetadataUpdates() != null
@@ -272,6 +453,7 @@ public class UpdateImageSetMetadataRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getDatastoreId() == null) ? 0 : getDatastoreId().hashCode());
         hashCode = prime * hashCode + ((getImageSetId() == null) ? 0 : getImageSetId().hashCode());
         hashCode = prime * hashCode + ((getLatestVersionId() == null) ? 0 : getLatestVersionId().hashCode());
+        hashCode = prime * hashCode + ((getForce() == null) ? 0 : getForce().hashCode());
         hashCode = prime * hashCode + ((getUpdateImageSetMetadataUpdates() == null) ? 0 : getUpdateImageSetMetadataUpdates().hashCode());
         return hashCode;
     }

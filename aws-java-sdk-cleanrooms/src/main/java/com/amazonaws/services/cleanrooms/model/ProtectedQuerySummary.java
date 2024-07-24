@@ -59,6 +59,12 @@ public class ProtectedQuerySummary implements Serializable, Cloneable, Structure
      * </p>
      */
     private String status;
+    /**
+     * <p>
+     * The receiver configuration.
+     * </p>
+     */
+    private java.util.List<ReceiverConfiguration> receiverConfigurations;
 
     /**
      * <p>
@@ -288,6 +294,76 @@ public class ProtectedQuerySummary implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The receiver configuration.
+     * </p>
+     * 
+     * @return The receiver configuration.
+     */
+
+    public java.util.List<ReceiverConfiguration> getReceiverConfigurations() {
+        return receiverConfigurations;
+    }
+
+    /**
+     * <p>
+     * The receiver configuration.
+     * </p>
+     * 
+     * @param receiverConfigurations
+     *        The receiver configuration.
+     */
+
+    public void setReceiverConfigurations(java.util.Collection<ReceiverConfiguration> receiverConfigurations) {
+        if (receiverConfigurations == null) {
+            this.receiverConfigurations = null;
+            return;
+        }
+
+        this.receiverConfigurations = new java.util.ArrayList<ReceiverConfiguration>(receiverConfigurations);
+    }
+
+    /**
+     * <p>
+     * The receiver configuration.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setReceiverConfigurations(java.util.Collection)} or
+     * {@link #withReceiverConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param receiverConfigurations
+     *        The receiver configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProtectedQuerySummary withReceiverConfigurations(ReceiverConfiguration... receiverConfigurations) {
+        if (this.receiverConfigurations == null) {
+            setReceiverConfigurations(new java.util.ArrayList<ReceiverConfiguration>(receiverConfigurations.length));
+        }
+        for (ReceiverConfiguration ele : receiverConfigurations) {
+            this.receiverConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The receiver configuration.
+     * </p>
+     * 
+     * @param receiverConfigurations
+     *        The receiver configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProtectedQuerySummary withReceiverConfigurations(java.util.Collection<ReceiverConfiguration> receiverConfigurations) {
+        setReceiverConfigurations(receiverConfigurations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -308,7 +384,9 @@ public class ProtectedQuerySummary implements Serializable, Cloneable, Structure
         if (getCreateTime() != null)
             sb.append("CreateTime: ").append(getCreateTime()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getReceiverConfigurations() != null)
+            sb.append("ReceiverConfigurations: ").append(getReceiverConfigurations());
         sb.append("}");
         return sb.toString();
     }
@@ -343,6 +421,10 @@ public class ProtectedQuerySummary implements Serializable, Cloneable, Structure
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getReceiverConfigurations() == null ^ this.getReceiverConfigurations() == null)
+            return false;
+        if (other.getReceiverConfigurations() != null && other.getReceiverConfigurations().equals(this.getReceiverConfigurations()) == false)
+            return false;
         return true;
     }
 
@@ -356,6 +438,7 @@ public class ProtectedQuerySummary implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getMembershipArn() == null) ? 0 : getMembershipArn().hashCode());
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getReceiverConfigurations() == null) ? 0 : getReceiverConfigurations().hashCode());
         return hashCode;
     }
 

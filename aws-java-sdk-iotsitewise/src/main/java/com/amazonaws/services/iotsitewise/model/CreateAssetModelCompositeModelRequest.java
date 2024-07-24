@@ -64,7 +64,7 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
     private String assetModelCompositeModelDescription;
     /**
      * <p>
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      * </p>
      */
     private String assetModelCompositeModelName;
@@ -84,13 +84,15 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
     private String clientToken;
     /**
      * <p>
-     * The ID of a composite model on this asset.
+     * The ID of a component model which is reused to create this composite model.
      * </p>
      */
     private String composedAssetModelId;
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -341,11 +343,11 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      * </p>
      * 
      * @param assetModelCompositeModelName
-     *        A unique, friendly name for the composite model.
+     *        A unique name for the composite model.
      */
 
     public void setAssetModelCompositeModelName(String assetModelCompositeModelName) {
@@ -354,10 +356,10 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      * </p>
      * 
-     * @return A unique, friendly name for the composite model.
+     * @return A unique name for the composite model.
      */
 
     public String getAssetModelCompositeModelName() {
@@ -366,11 +368,11 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      * </p>
      * 
      * @param assetModelCompositeModelName
-     *        A unique, friendly name for the composite model.
+     *        A unique name for the composite model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -473,11 +475,11 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of a composite model on this asset.
+     * The ID of a component model which is reused to create this composite model.
      * </p>
      * 
      * @param composedAssetModelId
-     *        The ID of a composite model on this asset.
+     *        The ID of a component model which is reused to create this composite model.
      */
 
     public void setComposedAssetModelId(String composedAssetModelId) {
@@ -486,10 +488,10 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of a composite model on this asset.
+     * The ID of a component model which is reused to create this composite model.
      * </p>
      * 
-     * @return The ID of a composite model on this asset.
+     * @return The ID of a component model which is reused to create this composite model.
      */
 
     public String getComposedAssetModelId() {
@@ -498,11 +500,11 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The ID of a composite model on this asset.
+     * The ID of a component model which is reused to create this composite model.
      * </p>
      * 
      * @param composedAssetModelId
-     *        The ID of a composite model on this asset.
+     *        The ID of a component model which is reused to create this composite model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -513,7 +515,9 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -521,7 +525,9 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
      * User Guide</i>.
      * </p>
      * 
-     * @return The property definitions of the composite model. For more information, see &lt;LINK&gt;.</p>
+     * @return The property definitions of the composite model. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models"
+     *         > Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.</p>
      *         <p>
      *         You can specify up to 200 properties per composite model. For more information, see <a
      *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
@@ -534,7 +540,9 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -543,7 +551,9 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param assetModelCompositeModelProperties
-     *        The property definitions of the composite model. For more information, see &lt;LINK&gt;.</p>
+     *        The property definitions of the composite model. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models"
+     *        > Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.</p>
      *        <p>
      *        You can specify up to 200 properties per composite model. For more information, see <a
      *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
@@ -561,7 +571,9 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -576,7 +588,9 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param assetModelCompositeModelProperties
-     *        The property definitions of the composite model. For more information, see &lt;LINK&gt;.</p>
+     *        The property definitions of the composite model. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models"
+     *        > Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.</p>
      *        <p>
      *        You can specify up to 200 properties per composite model. For more information, see <a
      *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
@@ -596,7 +610,9 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;.
+     * The property definitions of the composite model. For more information, see <a href=
+     * "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models">
+     * Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * <p>
      * You can specify up to 200 properties per composite model. For more information, see <a
@@ -605,7 +621,9 @@ public class CreateAssetModelCompositeModelRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param assetModelCompositeModelProperties
-     *        The property definitions of the composite model. For more information, see &lt;LINK&gt;.</p>
+     *        The property definitions of the composite model. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/custom-composite-models.html#inline-composite-models"
+     *        > Inline custom composite models</a> in the <i>IoT SiteWise User Guide</i>.</p>
      *        <p>
      *        You can specify up to 200 properties per composite model. For more information, see <a
      *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT

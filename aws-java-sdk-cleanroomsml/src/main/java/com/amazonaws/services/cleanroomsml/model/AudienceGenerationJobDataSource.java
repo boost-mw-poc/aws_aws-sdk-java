@@ -46,10 +46,16 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
     private S3ConfigMap dataSource;
     /**
      * <p>
-     * The ARN of the IAM role that can read the Amazon S3 bucket where the training data is stored.
+     * The ARN of the IAM role that can read the Amazon S3 bucket where the seed audience is stored.
      * </p>
      */
     private String roleArn;
+    /**
+     * <p>
+     * The protected SQL query parameters.
+     * </p>
+     */
+    private ProtectedQuerySQLParameters sqlParameters;
 
     /**
      * <p>
@@ -150,11 +156,11 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ARN of the IAM role that can read the Amazon S3 bucket where the training data is stored.
+     * The ARN of the IAM role that can read the Amazon S3 bucket where the seed audience is stored.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that can read the Amazon S3 bucket where the training data is stored.
+     *        The ARN of the IAM role that can read the Amazon S3 bucket where the seed audience is stored.
      */
 
     public void setRoleArn(String roleArn) {
@@ -163,10 +169,10 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ARN of the IAM role that can read the Amazon S3 bucket where the training data is stored.
+     * The ARN of the IAM role that can read the Amazon S3 bucket where the seed audience is stored.
      * </p>
      * 
-     * @return The ARN of the IAM role that can read the Amazon S3 bucket where the training data is stored.
+     * @return The ARN of the IAM role that can read the Amazon S3 bucket where the seed audience is stored.
      */
 
     public String getRoleArn() {
@@ -175,16 +181,56 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The ARN of the IAM role that can read the Amazon S3 bucket where the training data is stored.
+     * The ARN of the IAM role that can read the Amazon S3 bucket where the seed audience is stored.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that can read the Amazon S3 bucket where the training data is stored.
+     *        The ARN of the IAM role that can read the Amazon S3 bucket where the seed audience is stored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AudienceGenerationJobDataSource withRoleArn(String roleArn) {
         setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The protected SQL query parameters.
+     * </p>
+     * 
+     * @param sqlParameters
+     *        The protected SQL query parameters.
+     */
+
+    public void setSqlParameters(ProtectedQuerySQLParameters sqlParameters) {
+        this.sqlParameters = sqlParameters;
+    }
+
+    /**
+     * <p>
+     * The protected SQL query parameters.
+     * </p>
+     * 
+     * @return The protected SQL query parameters.
+     */
+
+    public ProtectedQuerySQLParameters getSqlParameters() {
+        return this.sqlParameters;
+    }
+
+    /**
+     * <p>
+     * The protected SQL query parameters.
+     * </p>
+     * 
+     * @param sqlParameters
+     *        The protected SQL query parameters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudienceGenerationJobDataSource withSqlParameters(ProtectedQuerySQLParameters sqlParameters) {
+        setSqlParameters(sqlParameters);
         return this;
     }
 
@@ -203,7 +249,9 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
         if (getDataSource() != null)
             sb.append("DataSource: ").append(getDataSource()).append(",");
         if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn());
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getSqlParameters() != null)
+            sb.append("SqlParameters: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -226,6 +274,10 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
+        if (other.getSqlParameters() == null ^ this.getSqlParameters() == null)
+            return false;
+        if (other.getSqlParameters() != null && other.getSqlParameters().equals(this.getSqlParameters()) == false)
+            return false;
         return true;
     }
 
@@ -236,6 +288,7 @@ public class AudienceGenerationJobDataSource implements Serializable, Cloneable,
 
         hashCode = prime * hashCode + ((getDataSource() == null) ? 0 : getDataSource().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getSqlParameters() == null) ? 0 : getSqlParameters().hashCode());
         return hashCode;
     }
 

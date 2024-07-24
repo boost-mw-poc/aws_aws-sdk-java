@@ -42,6 +42,8 @@ public class AnalysisRuleAggregationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scalarFunctions").build();
     private static final MarshallingInfo<List> OUTPUTCONSTRAINTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outputConstraints").build();
+    private static final MarshallingInfo<String> ADDITIONALANALYSES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("additionalAnalyses").build();
 
     private static final AnalysisRuleAggregationMarshaller instance = new AnalysisRuleAggregationMarshaller();
 
@@ -66,6 +68,7 @@ public class AnalysisRuleAggregationMarshaller {
             protocolMarshaller.marshall(analysisRuleAggregation.getDimensionColumns(), DIMENSIONCOLUMNS_BINDING);
             protocolMarshaller.marshall(analysisRuleAggregation.getScalarFunctions(), SCALARFUNCTIONS_BINDING);
             protocolMarshaller.marshall(analysisRuleAggregation.getOutputConstraints(), OUTPUTCONSTRAINTS_BINDING);
+            protocolMarshaller.marshall(analysisRuleAggregation.getAdditionalAnalyses(), ADDITIONALANALYSES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

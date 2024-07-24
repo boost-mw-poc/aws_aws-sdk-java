@@ -26,18 +26,18 @@ public class CreateConfiguredTableAssociationResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The entire configured table association object.
+     * The configured table association.
      * </p>
      */
     private ConfiguredTableAssociation configuredTableAssociation;
 
     /**
      * <p>
-     * The entire configured table association object.
+     * The configured table association.
      * </p>
      * 
      * @param configuredTableAssociation
-     *        The entire configured table association object.
+     *        The configured table association.
      */
 
     public void setConfiguredTableAssociation(ConfiguredTableAssociation configuredTableAssociation) {
@@ -46,10 +46,10 @@ public class CreateConfiguredTableAssociationResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The entire configured table association object.
+     * The configured table association.
      * </p>
      * 
-     * @return The entire configured table association object.
+     * @return The configured table association.
      */
 
     public ConfiguredTableAssociation getConfiguredTableAssociation() {
@@ -58,11 +58,11 @@ public class CreateConfiguredTableAssociationResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The entire configured table association object.
+     * The configured table association.
      * </p>
      * 
      * @param configuredTableAssociation
-     *        The entire configured table association object.
+     *        The configured table association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

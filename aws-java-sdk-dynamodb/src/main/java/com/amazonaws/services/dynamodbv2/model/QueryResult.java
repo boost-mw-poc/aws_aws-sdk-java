@@ -52,7 +52,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
      * The number of items evaluated, before any <code>QueryFilter</code> is applied. A high <code>ScannedCount</code>
      * value with few, or no, <code>Count</code> results indicates an inefficient <code>Query</code> operation. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Count">Count and
      * ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * <p>
@@ -259,7 +259,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
      * The number of items evaluated, before any <code>QueryFilter</code> is applied. A high <code>ScannedCount</code>
      * value with few, or no, <code>Count</code> results indicates an inefficient <code>Query</code> operation. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Count">Count and
      * ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * <p>
@@ -270,7 +270,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
      *        The number of items evaluated, before any <code>QueryFilter</code> is applied. A high
      *        <code>ScannedCount</code> value with few, or no, <code>Count</code> results indicates an inefficient
      *        <code>Query</code> operation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Count">Count and
      *        ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
      *        <p>
      *        If you did not use a filter in the request, then <code>ScannedCount</code> is the same as
@@ -286,7 +286,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
      * The number of items evaluated, before any <code>QueryFilter</code> is applied. A high <code>ScannedCount</code>
      * value with few, or no, <code>Count</code> results indicates an inefficient <code>Query</code> operation. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Count">Count and
      * ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * <p>
@@ -296,7 +296,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
      * @return The number of items evaluated, before any <code>QueryFilter</code> is applied. A high
      *         <code>ScannedCount</code> value with few, or no, <code>Count</code> results indicates an inefficient
      *         <code>Query</code> operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and
+     *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Count">Count and
      *         ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
      *         <p>
      *         If you did not use a filter in the request, then <code>ScannedCount</code> is the same as
@@ -312,7 +312,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
      * The number of items evaluated, before any <code>QueryFilter</code> is applied. A high <code>ScannedCount</code>
      * value with few, or no, <code>Count</code> results indicates an inefficient <code>Query</code> operation. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Count">Count and
      * ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * <p>
@@ -323,7 +323,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
      *        The number of items evaluated, before any <code>QueryFilter</code> is applied. A high
      *        <code>ScannedCount</code> value with few, or no, <code>Count</code> results indicates an inefficient
      *        <code>Query</code> operation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/QueryAndScan.html#Count">Count and
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Count">Count and
      *        ScannedCount</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
      *        <p>
      *        If you did not use a filter in the request, then <code>ScannedCount</code> is the same as

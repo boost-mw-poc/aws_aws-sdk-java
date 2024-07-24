@@ -31,6 +31,12 @@ public class IdMappingJobMetricsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inputRecords").build();
     private static final MarshallingInfo<Integer> RECORDSNOTPROCESSED_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordsNotProcessed").build();
+    private static final MarshallingInfo<Integer> TOTALMAPPEDRECORDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("totalMappedRecords").build();
+    private static final MarshallingInfo<Integer> TOTALMAPPEDSOURCERECORDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("totalMappedSourceRecords").build();
+    private static final MarshallingInfo<Integer> TOTALMAPPEDTARGETRECORDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("totalMappedTargetRecords").build();
     private static final MarshallingInfo<Integer> TOTALRECORDSPROCESSED_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("totalRecordsProcessed").build();
 
@@ -52,6 +58,9 @@ public class IdMappingJobMetricsMarshaller {
         try {
             protocolMarshaller.marshall(idMappingJobMetrics.getInputRecords(), INPUTRECORDS_BINDING);
             protocolMarshaller.marshall(idMappingJobMetrics.getRecordsNotProcessed(), RECORDSNOTPROCESSED_BINDING);
+            protocolMarshaller.marshall(idMappingJobMetrics.getTotalMappedRecords(), TOTALMAPPEDRECORDS_BINDING);
+            protocolMarshaller.marshall(idMappingJobMetrics.getTotalMappedSourceRecords(), TOTALMAPPEDSOURCERECORDS_BINDING);
+            protocolMarshaller.marshall(idMappingJobMetrics.getTotalMappedTargetRecords(), TOTALMAPPEDTARGETRECORDS_BINDING);
             protocolMarshaller.marshall(idMappingJobMetrics.getTotalRecordsProcessed(), TOTALRECORDSPROCESSED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -25,18 +25,18 @@ public class CreateCollaborationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The entire created collaboration object.
+     * The collaboration.
      * </p>
      */
     private Collaboration collaboration;
 
     /**
      * <p>
-     * The entire created collaboration object.
+     * The collaboration.
      * </p>
      * 
      * @param collaboration
-     *        The entire created collaboration object.
+     *        The collaboration.
      */
 
     public void setCollaboration(Collaboration collaboration) {
@@ -45,10 +45,10 @@ public class CreateCollaborationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The entire created collaboration object.
+     * The collaboration.
      * </p>
      * 
-     * @return The entire created collaboration object.
+     * @return The collaboration.
      */
 
     public Collaboration getCollaboration() {
@@ -57,11 +57,11 @@ public class CreateCollaborationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The entire created collaboration object.
+     * The collaboration.
      * </p>
      * 
      * @param collaboration
-     *        The entire created collaboration object.
+     *        The collaboration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

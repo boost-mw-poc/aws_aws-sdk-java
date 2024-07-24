@@ -66,14 +66,15 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
     private String configurationSetName;
     /**
      * <p>
-     * The maximum amount that you want to spend, in US dollars, per each text message part. A text message can contain
-     * multiple parts.
+     * The maximum amount that you want to spend, in US dollars, per each text message. If the calculated amount to send
+     * the text message is greater than <code>MaxPrice</code>, the message is not sent and an error is returned.
      * </p>
      */
     private String maxPrice;
     /**
      * <p>
-     * How long the text message is valid for. By default this is 72 hours.
+     * How long the text message is valid for, in seconds. By default this is 72 hours. If the messages isn't handed off
+     * before the TTL expires we stop attempting to hand off the message and return <code>TTL_EXPIRED</code> event.
      * </p>
      */
     private Integer timeToLive;
@@ -90,11 +91,38 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-senderid-india.html">Special
      * requirements for sending SMS messages to recipients in India</a>.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>IN_ENTITY_ID</code> The entity ID or Principal Entity (PE) ID that you received after completing the sender
+     * ID registration process.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IN_TEMPLATE_ID</code> The template ID that you received after completing the sender ID registration
+     * process.
+     * </p>
+     * <important>
+     * <p>
+     * Make sure that the Template ID that you specify matches your message template exactly. If your message doesn't
+     * match the template that you provided during the registration process, the mobile carriers might reject your
+     * message.
+     * </p>
+     * </important></li>
+     * </ul>
      */
     private java.util.Map<String, String> destinationCountryParameters;
     /**
      * <p>
-     * When set to true, the message is checked and validated, but isn't sent to the end recipient.
+     * When set to true, the message is checked and validated, but isn't sent to the end recipient. You are not charged
+     * for using <code>DryRun</code>.
+     * </p>
+     * <p>
+     * The Message Parts per Second (MPS) limit when using <code>DryRun</code> is five. If your origination identity has
+     * a lower MPS limit then the lower MPS limit is used. For more information about MPS limits, see <a
+     * href="https://docs.aws.amazon.com/sms-voice/latest/userguide/sms-limitations-mps.html">Message Parts per Second
+     * (MPS) limits</a> in the <i>AWS End User Messaging SMS User Guide</i>..
      * </p>
      */
     private Boolean dryRun;
@@ -389,13 +417,14 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The maximum amount that you want to spend, in US dollars, per each text message part. A text message can contain
-     * multiple parts.
+     * The maximum amount that you want to spend, in US dollars, per each text message. If the calculated amount to send
+     * the text message is greater than <code>MaxPrice</code>, the message is not sent and an error is returned.
      * </p>
      * 
      * @param maxPrice
-     *        The maximum amount that you want to spend, in US dollars, per each text message part. A text message can
-     *        contain multiple parts.
+     *        The maximum amount that you want to spend, in US dollars, per each text message. If the calculated amount
+     *        to send the text message is greater than <code>MaxPrice</code>, the message is not sent and an error is
+     *        returned.
      */
 
     public void setMaxPrice(String maxPrice) {
@@ -404,12 +433,13 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The maximum amount that you want to spend, in US dollars, per each text message part. A text message can contain
-     * multiple parts.
+     * The maximum amount that you want to spend, in US dollars, per each text message. If the calculated amount to send
+     * the text message is greater than <code>MaxPrice</code>, the message is not sent and an error is returned.
      * </p>
      * 
-     * @return The maximum amount that you want to spend, in US dollars, per each text message part. A text message can
-     *         contain multiple parts.
+     * @return The maximum amount that you want to spend, in US dollars, per each text message. If the calculated amount
+     *         to send the text message is greater than <code>MaxPrice</code>, the message is not sent and an error is
+     *         returned.
      */
 
     public String getMaxPrice() {
@@ -418,13 +448,14 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The maximum amount that you want to spend, in US dollars, per each text message part. A text message can contain
-     * multiple parts.
+     * The maximum amount that you want to spend, in US dollars, per each text message. If the calculated amount to send
+     * the text message is greater than <code>MaxPrice</code>, the message is not sent and an error is returned.
      * </p>
      * 
      * @param maxPrice
-     *        The maximum amount that you want to spend, in US dollars, per each text message part. A text message can
-     *        contain multiple parts.
+     *        The maximum amount that you want to spend, in US dollars, per each text message. If the calculated amount
+     *        to send the text message is greater than <code>MaxPrice</code>, the message is not sent and an error is
+     *        returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -435,11 +466,14 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * How long the text message is valid for. By default this is 72 hours.
+     * How long the text message is valid for, in seconds. By default this is 72 hours. If the messages isn't handed off
+     * before the TTL expires we stop attempting to hand off the message and return <code>TTL_EXPIRED</code> event.
      * </p>
      * 
      * @param timeToLive
-     *        How long the text message is valid for. By default this is 72 hours.
+     *        How long the text message is valid for, in seconds. By default this is 72 hours. If the messages isn't
+     *        handed off before the TTL expires we stop attempting to hand off the message and return
+     *        <code>TTL_EXPIRED</code> event.
      */
 
     public void setTimeToLive(Integer timeToLive) {
@@ -448,10 +482,13 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * How long the text message is valid for. By default this is 72 hours.
+     * How long the text message is valid for, in seconds. By default this is 72 hours. If the messages isn't handed off
+     * before the TTL expires we stop attempting to hand off the message and return <code>TTL_EXPIRED</code> event.
      * </p>
      * 
-     * @return How long the text message is valid for. By default this is 72 hours.
+     * @return How long the text message is valid for, in seconds. By default this is 72 hours. If the messages isn't
+     *         handed off before the TTL expires we stop attempting to hand off the message and return
+     *         <code>TTL_EXPIRED</code> event.
      */
 
     public Integer getTimeToLive() {
@@ -460,11 +497,14 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * How long the text message is valid for. By default this is 72 hours.
+     * How long the text message is valid for, in seconds. By default this is 72 hours. If the messages isn't handed off
+     * before the TTL expires we stop attempting to hand off the message and return <code>TTL_EXPIRED</code> event.
      * </p>
      * 
      * @param timeToLive
-     *        How long the text message is valid for. By default this is 72 hours.
+     *        How long the text message is valid for, in seconds. By default this is 72 hours. If the messages isn't
+     *        handed off before the TTL expires we stop attempting to hand off the message and return
+     *        <code>TTL_EXPIRED</code> event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -548,11 +588,50 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-senderid-india.html">Special
      * requirements for sending SMS messages to recipients in India</a>.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>IN_ENTITY_ID</code> The entity ID or Principal Entity (PE) ID that you received after completing the sender
+     * ID registration process.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IN_TEMPLATE_ID</code> The template ID that you received after completing the sender ID registration
+     * process.
+     * </p>
+     * <important>
+     * <p>
+     * Make sure that the Template ID that you specify matches your message template exactly. If your message doesn't
+     * match the template that you provided during the registration process, the mobile carriers might reject your
+     * message.
+     * </p>
+     * </important></li>
+     * </ul>
      * 
      * @return This field is used for any country-specific registration requirements. Currently, this setting is only
      *         used when you send messages to recipients in India using a sender ID. For more information see <a
      *         href="https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-senderid-india.html">Special
-     *         requirements for sending SMS messages to recipients in India</a>.
+     *         requirements for sending SMS messages to recipients in India</a>. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>IN_ENTITY_ID</code> The entity ID or Principal Entity (PE) ID that you received after completing
+     *         the sender ID registration process.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>IN_TEMPLATE_ID</code> The template ID that you received after completing the sender ID registration
+     *         process.
+     *         </p>
+     *         <important>
+     *         <p>
+     *         Make sure that the Template ID that you specify matches your message template exactly. If your message
+     *         doesn't match the template that you provided during the registration process, the mobile carriers might
+     *         reject your message.
+     *         </p>
+     *         </important></li>
      */
 
     public java.util.Map<String, String> getDestinationCountryParameters() {
@@ -566,12 +645,51 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-senderid-india.html">Special
      * requirements for sending SMS messages to recipients in India</a>.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>IN_ENTITY_ID</code> The entity ID or Principal Entity (PE) ID that you received after completing the sender
+     * ID registration process.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IN_TEMPLATE_ID</code> The template ID that you received after completing the sender ID registration
+     * process.
+     * </p>
+     * <important>
+     * <p>
+     * Make sure that the Template ID that you specify matches your message template exactly. If your message doesn't
+     * match the template that you provided during the registration process, the mobile carriers might reject your
+     * message.
+     * </p>
+     * </important></li>
+     * </ul>
      * 
      * @param destinationCountryParameters
      *        This field is used for any country-specific registration requirements. Currently, this setting is only
      *        used when you send messages to recipients in India using a sender ID. For more information see <a
      *        href="https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-senderid-india.html">Special
-     *        requirements for sending SMS messages to recipients in India</a>.
+     *        requirements for sending SMS messages to recipients in India</a>. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>IN_ENTITY_ID</code> The entity ID or Principal Entity (PE) ID that you received after completing the
+     *        sender ID registration process.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>IN_TEMPLATE_ID</code> The template ID that you received after completing the sender ID registration
+     *        process.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        Make sure that the Template ID that you specify matches your message template exactly. If your message
+     *        doesn't match the template that you provided during the registration process, the mobile carriers might
+     *        reject your message.
+     *        </p>
+     *        </important></li>
      */
 
     public void setDestinationCountryParameters(java.util.Map<String, String> destinationCountryParameters) {
@@ -585,12 +703,51 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-senderid-india.html">Special
      * requirements for sending SMS messages to recipients in India</a>.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>IN_ENTITY_ID</code> The entity ID or Principal Entity (PE) ID that you received after completing the sender
+     * ID registration process.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IN_TEMPLATE_ID</code> The template ID that you received after completing the sender ID registration
+     * process.
+     * </p>
+     * <important>
+     * <p>
+     * Make sure that the Template ID that you specify matches your message template exactly. If your message doesn't
+     * match the template that you provided during the registration process, the mobile carriers might reject your
+     * message.
+     * </p>
+     * </important></li>
+     * </ul>
      * 
      * @param destinationCountryParameters
      *        This field is used for any country-specific registration requirements. Currently, this setting is only
      *        used when you send messages to recipients in India using a sender ID. For more information see <a
      *        href="https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-senderid-india.html">Special
-     *        requirements for sending SMS messages to recipients in India</a>.
+     *        requirements for sending SMS messages to recipients in India</a>. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>IN_ENTITY_ID</code> The entity ID or Principal Entity (PE) ID that you received after completing the
+     *        sender ID registration process.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>IN_TEMPLATE_ID</code> The template ID that you received after completing the sender ID registration
+     *        process.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        Make sure that the Template ID that you specify matches your message template exactly. If your message
+     *        doesn't match the template that you provided during the registration process, the mobile carriers might
+     *        reject your message.
+     *        </p>
+     *        </important></li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -629,11 +786,24 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * When set to true, the message is checked and validated, but isn't sent to the end recipient.
+     * When set to true, the message is checked and validated, but isn't sent to the end recipient. You are not charged
+     * for using <code>DryRun</code>.
+     * </p>
+     * <p>
+     * The Message Parts per Second (MPS) limit when using <code>DryRun</code> is five. If your origination identity has
+     * a lower MPS limit then the lower MPS limit is used. For more information about MPS limits, see <a
+     * href="https://docs.aws.amazon.com/sms-voice/latest/userguide/sms-limitations-mps.html">Message Parts per Second
+     * (MPS) limits</a> in the <i>AWS End User Messaging SMS User Guide</i>..
      * </p>
      * 
      * @param dryRun
-     *        When set to true, the message is checked and validated, but isn't sent to the end recipient.
+     *        When set to true, the message is checked and validated, but isn't sent to the end recipient. You are not
+     *        charged for using <code>DryRun</code>.</p>
+     *        <p>
+     *        The Message Parts per Second (MPS) limit when using <code>DryRun</code> is five. If your origination
+     *        identity has a lower MPS limit then the lower MPS limit is used. For more information about MPS limits,
+     *        see <a href="https://docs.aws.amazon.com/sms-voice/latest/userguide/sms-limitations-mps.html">Message
+     *        Parts per Second (MPS) limits</a> in the <i>AWS End User Messaging SMS User Guide</i>..
      */
 
     public void setDryRun(Boolean dryRun) {
@@ -642,10 +812,23 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * When set to true, the message is checked and validated, but isn't sent to the end recipient.
+     * When set to true, the message is checked and validated, but isn't sent to the end recipient. You are not charged
+     * for using <code>DryRun</code>.
+     * </p>
+     * <p>
+     * The Message Parts per Second (MPS) limit when using <code>DryRun</code> is five. If your origination identity has
+     * a lower MPS limit then the lower MPS limit is used. For more information about MPS limits, see <a
+     * href="https://docs.aws.amazon.com/sms-voice/latest/userguide/sms-limitations-mps.html">Message Parts per Second
+     * (MPS) limits</a> in the <i>AWS End User Messaging SMS User Guide</i>..
      * </p>
      * 
-     * @return When set to true, the message is checked and validated, but isn't sent to the end recipient.
+     * @return When set to true, the message is checked and validated, but isn't sent to the end recipient. You are not
+     *         charged for using <code>DryRun</code>.</p>
+     *         <p>
+     *         The Message Parts per Second (MPS) limit when using <code>DryRun</code> is five. If your origination
+     *         identity has a lower MPS limit then the lower MPS limit is used. For more information about MPS limits,
+     *         see <a href="https://docs.aws.amazon.com/sms-voice/latest/userguide/sms-limitations-mps.html">Message
+     *         Parts per Second (MPS) limits</a> in the <i>AWS End User Messaging SMS User Guide</i>..
      */
 
     public Boolean getDryRun() {
@@ -654,11 +837,24 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * When set to true, the message is checked and validated, but isn't sent to the end recipient.
+     * When set to true, the message is checked and validated, but isn't sent to the end recipient. You are not charged
+     * for using <code>DryRun</code>.
+     * </p>
+     * <p>
+     * The Message Parts per Second (MPS) limit when using <code>DryRun</code> is five. If your origination identity has
+     * a lower MPS limit then the lower MPS limit is used. For more information about MPS limits, see <a
+     * href="https://docs.aws.amazon.com/sms-voice/latest/userguide/sms-limitations-mps.html">Message Parts per Second
+     * (MPS) limits</a> in the <i>AWS End User Messaging SMS User Guide</i>..
      * </p>
      * 
      * @param dryRun
-     *        When set to true, the message is checked and validated, but isn't sent to the end recipient.
+     *        When set to true, the message is checked and validated, but isn't sent to the end recipient. You are not
+     *        charged for using <code>DryRun</code>.</p>
+     *        <p>
+     *        The Message Parts per Second (MPS) limit when using <code>DryRun</code> is five. If your origination
+     *        identity has a lower MPS limit then the lower MPS limit is used. For more information about MPS limits,
+     *        see <a href="https://docs.aws.amazon.com/sms-voice/latest/userguide/sms-limitations-mps.html">Message
+     *        Parts per Second (MPS) limits</a> in the <i>AWS End User Messaging SMS User Guide</i>..
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -669,10 +865,23 @@ public class SendTextMessageRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * When set to true, the message is checked and validated, but isn't sent to the end recipient.
+     * When set to true, the message is checked and validated, but isn't sent to the end recipient. You are not charged
+     * for using <code>DryRun</code>.
+     * </p>
+     * <p>
+     * The Message Parts per Second (MPS) limit when using <code>DryRun</code> is five. If your origination identity has
+     * a lower MPS limit then the lower MPS limit is used. For more information about MPS limits, see <a
+     * href="https://docs.aws.amazon.com/sms-voice/latest/userguide/sms-limitations-mps.html">Message Parts per Second
+     * (MPS) limits</a> in the <i>AWS End User Messaging SMS User Guide</i>..
      * </p>
      * 
-     * @return When set to true, the message is checked and validated, but isn't sent to the end recipient.
+     * @return When set to true, the message is checked and validated, but isn't sent to the end recipient. You are not
+     *         charged for using <code>DryRun</code>.</p>
+     *         <p>
+     *         The Message Parts per Second (MPS) limit when using <code>DryRun</code> is five. If your origination
+     *         identity has a lower MPS limit then the lower MPS limit is used. For more information about MPS limits,
+     *         see <a href="https://docs.aws.amazon.com/sms-voice/latest/userguide/sms-limitations-mps.html">Message
+     *         Parts per Second (MPS) limits</a> in the <i>AWS End User Messaging SMS User Guide</i>..
      */
 
     public Boolean isDryRun() {

@@ -48,16 +48,16 @@ public class ListAudienceExportJobsResultJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("nextToken", targetDepth)) {
+                    context.nextToken();
+                    listAudienceExportJobsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("audienceExportJobs", targetDepth)) {
                     context.nextToken();
                     listAudienceExportJobsResult.setAudienceExportJobs(new ListUnmarshaller<AudienceExportJobSummary>(AudienceExportJobSummaryJsonUnmarshaller
                             .getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("nextToken", targetDepth)) {
-                    context.nextToken();
-                    listAudienceExportJobsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -31,6 +31,8 @@ public class SchemaInputAttributeMarshaller {
             .marshallLocationName("fieldName").build();
     private static final MarshallingInfo<String> GROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("groupName").build();
+    private static final MarshallingInfo<Boolean> HASHED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("hashed").build();
     private static final MarshallingInfo<String> MATCHKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("matchKey").build();
     private static final MarshallingInfo<String> SUBTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -56,6 +58,7 @@ public class SchemaInputAttributeMarshaller {
         try {
             protocolMarshaller.marshall(schemaInputAttribute.getFieldName(), FIELDNAME_BINDING);
             protocolMarshaller.marshall(schemaInputAttribute.getGroupName(), GROUPNAME_BINDING);
+            protocolMarshaller.marshall(schemaInputAttribute.getHashed(), HASHED_BINDING);
             protocolMarshaller.marshall(schemaInputAttribute.getMatchKey(), MATCHKEY_BINDING);
             protocolMarshaller.marshall(schemaInputAttribute.getSubType(), SUBTYPE_BINDING);
             protocolMarshaller.marshall(schemaInputAttribute.getType(), TYPE_BINDING);

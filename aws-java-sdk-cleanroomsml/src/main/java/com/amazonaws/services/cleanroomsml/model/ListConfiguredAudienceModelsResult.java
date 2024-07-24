@@ -25,16 +25,56 @@ public class ListConfiguredAudienceModelsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The configured audience models.
-     * </p>
-     */
-    private java.util.List<ConfiguredAudienceModelSummary> configuredAudienceModels;
-    /**
-     * <p>
      * The token value retrieved from a previous call to access the next page of results.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The configured audience models.
+     * </p>
+     */
+    private java.util.List<ConfiguredAudienceModelSummary> configuredAudienceModels;
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @return The token value retrieved from a previous call to access the next page of results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * The token value retrieved from a previous call to access the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token value retrieved from a previous call to access the next page of results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListConfiguredAudienceModelsResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
 
     /**
      * <p>
@@ -107,46 +147,6 @@ public class ListConfiguredAudienceModelsResult extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @return The token value retrieved from a previous call to access the next page of results.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * The token value retrieved from a previous call to access the next page of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        The token value retrieved from a previous call to access the next page of results.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListConfiguredAudienceModelsResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -158,10 +158,10 @@ public class ListConfiguredAudienceModelsResult extends com.amazonaws.AmazonWebS
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getConfiguredAudienceModels() != null)
-            sb.append("ConfiguredAudienceModels: ").append(getConfiguredAudienceModels()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getConfiguredAudienceModels() != null)
+            sb.append("ConfiguredAudienceModels: ").append(getConfiguredAudienceModels());
         sb.append("}");
         return sb.toString();
     }
@@ -176,13 +176,13 @@ public class ListConfiguredAudienceModelsResult extends com.amazonaws.AmazonWebS
         if (obj instanceof ListConfiguredAudienceModelsResult == false)
             return false;
         ListConfiguredAudienceModelsResult other = (ListConfiguredAudienceModelsResult) obj;
-        if (other.getConfiguredAudienceModels() == null ^ this.getConfiguredAudienceModels() == null)
-            return false;
-        if (other.getConfiguredAudienceModels() != null && other.getConfiguredAudienceModels().equals(this.getConfiguredAudienceModels()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getConfiguredAudienceModels() == null ^ this.getConfiguredAudienceModels() == null)
+            return false;
+        if (other.getConfiguredAudienceModels() != null && other.getConfiguredAudienceModels().equals(this.getConfiguredAudienceModels()) == false)
             return false;
         return true;
     }
@@ -192,8 +192,8 @@ public class ListConfiguredAudienceModelsResult extends com.amazonaws.AmazonWebS
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getConfiguredAudienceModels() == null) ? 0 : getConfiguredAudienceModels().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getConfiguredAudienceModels() == null) ? 0 : getConfiguredAudienceModels().hashCode());
         return hashCode;
     }
 
