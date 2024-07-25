@@ -168,6 +168,30 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<MetricReference> metricReferences;
+    /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private java.util.List<java.util.Map<String, String>> logGroupReferences;
 
     /**
      * <p>
@@ -1301,6 +1325,216 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return An array of string-to-string maps that each contain information about one log group associated with this
+     *         service. Each string-to-string map includes the following fields:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>"Type": "AWS::Resource"</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     *         </p>
+     *         </li>
+     */
+
+    public java.util.List<java.util.Map<String, String>> getLogGroupReferences() {
+        return logGroupReferences;
+    }
+
+    /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param logGroupReferences
+     *        An array of string-to-string maps that each contain information about one log group associated with this
+     *        service. Each string-to-string map includes the following fields:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>"Type": "AWS::Resource"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     *        </p>
+     *        </li>
+     */
+
+    public void setLogGroupReferences(java.util.Collection<java.util.Map<String, String>> logGroupReferences) {
+        if (logGroupReferences == null) {
+            this.logGroupReferences = null;
+            return;
+        }
+
+        this.logGroupReferences = new java.util.ArrayList<java.util.Map<String, String>>(logGroupReferences);
+    }
+
+    /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLogGroupReferences(java.util.Collection)} or {@link #withLogGroupReferences(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param logGroupReferences
+     *        An array of string-to-string maps that each contain information about one log group associated with this
+     *        service. Each string-to-string map includes the following fields:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>"Type": "AWS::Resource"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Service withLogGroupReferences(java.util.Map<String, String>... logGroupReferences) {
+        if (this.logGroupReferences == null) {
+            setLogGroupReferences(new java.util.ArrayList<java.util.Map<String, String>>(logGroupReferences.length));
+        }
+        for (java.util.Map<String, String> ele : logGroupReferences) {
+            this.logGroupReferences.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param logGroupReferences
+     *        An array of string-to-string maps that each contain information about one log group associated with this
+     *        service. Each string-to-string map includes the following fields:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>"Type": "AWS::Resource"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Service withLogGroupReferences(java.util.Collection<java.util.Map<String, String>> logGroupReferences) {
+        setLogGroupReferences(logGroupReferences);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1317,7 +1551,9 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         if (getAttributeMaps() != null)
             sb.append("AttributeMaps: ").append(getAttributeMaps()).append(",");
         if (getMetricReferences() != null)
-            sb.append("MetricReferences: ").append(getMetricReferences());
+            sb.append("MetricReferences: ").append(getMetricReferences()).append(",");
+        if (getLogGroupReferences() != null)
+            sb.append("LogGroupReferences: ").append(getLogGroupReferences());
         sb.append("}");
         return sb.toString();
     }
@@ -1344,6 +1580,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMetricReferences() != null && other.getMetricReferences().equals(this.getMetricReferences()) == false)
             return false;
+        if (other.getLogGroupReferences() == null ^ this.getLogGroupReferences() == null)
+            return false;
+        if (other.getLogGroupReferences() != null && other.getLogGroupReferences().equals(this.getLogGroupReferences()) == false)
+            return false;
         return true;
     }
 
@@ -1355,6 +1595,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getKeyAttributes() == null) ? 0 : getKeyAttributes().hashCode());
         hashCode = prime * hashCode + ((getAttributeMaps() == null) ? 0 : getAttributeMaps().hashCode());
         hashCode = prime * hashCode + ((getMetricReferences() == null) ? 0 : getMetricReferences().hashCode());
+        hashCode = prime * hashCode + ((getLogGroupReferences() == null) ? 0 : getLogGroupReferences().hashCode());
         return hashCode;
     }
 

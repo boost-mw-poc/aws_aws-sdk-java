@@ -990,6 +990,9 @@ public class AWSCodeCommitClient extends AmazonWebServiceClient implements AWSCo
                             new JsonErrorShapeMetadata().withErrorCode("RepositoryTriggerNameRequiredException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codecommit.model.transform.RepositoryTriggerNameRequiredExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("OperationNotAllowedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.codecommit.model.transform.OperationNotAllowedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ApprovalStateRequiredException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codecommit.model.transform.ApprovalStateRequiredExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -2454,6 +2457,8 @@ public class AWSCodeCommitClient extends AmazonWebServiceClient implements AWSCo
      *         The specified repository description is not valid.
      * @throws RepositoryLimitExceededException
      *         A repository resource limit was exceeded.
+     * @throws OperationNotAllowedException
+     *         The requested action is not allowed.
      * @throws EncryptionIntegrityChecksFailedException
      *         An encryption integrity check failed.
      * @throws EncryptionKeyAccessDeniedException

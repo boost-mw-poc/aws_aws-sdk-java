@@ -499,6 +499,41 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
     }
 
     @Override
+    public java.util.concurrent.Future<CreateRepositoryCreationTemplateResult> createRepositoryCreationTemplateAsync(
+            CreateRepositoryCreationTemplateRequest request) {
+
+        return createRepositoryCreationTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRepositoryCreationTemplateResult> createRepositoryCreationTemplateAsync(
+            final CreateRepositoryCreationTemplateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateRepositoryCreationTemplateRequest, CreateRepositoryCreationTemplateResult> asyncHandler) {
+        final CreateRepositoryCreationTemplateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateRepositoryCreationTemplateResult>() {
+            @Override
+            public CreateRepositoryCreationTemplateResult call() throws Exception {
+                CreateRepositoryCreationTemplateResult result = null;
+
+                try {
+                    result = executeCreateRepositoryCreationTemplate(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteLifecyclePolicyResult> deleteLifecyclePolicyAsync(DeleteLifecyclePolicyRequest request) {
 
         return deleteLifecyclePolicyAsync(request, null);
@@ -615,6 +650,41 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
 
                 try {
                     result = executeDeleteRepository(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRepositoryCreationTemplateResult> deleteRepositoryCreationTemplateAsync(
+            DeleteRepositoryCreationTemplateRequest request) {
+
+        return deleteRepositoryCreationTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRepositoryCreationTemplateResult> deleteRepositoryCreationTemplateAsync(
+            final DeleteRepositoryCreationTemplateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteRepositoryCreationTemplateRequest, DeleteRepositoryCreationTemplateResult> asyncHandler) {
+        final DeleteRepositoryCreationTemplateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteRepositoryCreationTemplateResult>() {
+            @Override
+            public DeleteRepositoryCreationTemplateResult call() throws Exception {
+                DeleteRepositoryCreationTemplateResult result = null;
+
+                try {
+                    result = executeDeleteRepositoryCreationTemplate(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -848,6 +918,41 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
 
                 try {
                     result = executeDescribeRepositories(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRepositoryCreationTemplatesResult> describeRepositoryCreationTemplatesAsync(
+            DescribeRepositoryCreationTemplatesRequest request) {
+
+        return describeRepositoryCreationTemplatesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRepositoryCreationTemplatesResult> describeRepositoryCreationTemplatesAsync(
+            final DescribeRepositoryCreationTemplatesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeRepositoryCreationTemplatesRequest, DescribeRepositoryCreationTemplatesResult> asyncHandler) {
+        final DescribeRepositoryCreationTemplatesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeRepositoryCreationTemplatesResult>() {
+            @Override
+            public DescribeRepositoryCreationTemplatesResult call() throws Exception {
+                DescribeRepositoryCreationTemplatesResult result = null;
+
+                try {
+                    result = executeDescribeRepositoryCreationTemplates(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1612,6 +1717,41 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
 
                 try {
                     result = executeUpdatePullThroughCacheRule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRepositoryCreationTemplateResult> updateRepositoryCreationTemplateAsync(
+            UpdateRepositoryCreationTemplateRequest request) {
+
+        return updateRepositoryCreationTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRepositoryCreationTemplateResult> updateRepositoryCreationTemplateAsync(
+            final UpdateRepositoryCreationTemplateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateRepositoryCreationTemplateRequest, UpdateRepositoryCreationTemplateResult> asyncHandler) {
+        final UpdateRepositoryCreationTemplateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateRepositoryCreationTemplateResult>() {
+            @Override
+            public UpdateRepositoryCreationTemplateResult call() throws Exception {
+                UpdateRepositoryCreationTemplateResult result = null;
+
+                try {
+                    result = executeUpdateRepositoryCreationTemplate(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

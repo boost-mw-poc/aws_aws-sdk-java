@@ -85,6 +85,9 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon States
      * Language</a>.
      * </p>
+     * <p>
+     * If called with <code>includedData = METADATA_ONLY</code>, the returned definition will be <code>{}</code>.
+     * </p>
      */
     private String definition;
     /**
@@ -140,6 +143,12 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String description;
+    /**
+     * <p>
+     * Settings to configure server-side encryption.
+     * </p>
+     */
+    private EncryptionConfiguration encryptionConfiguration;
 
     /**
      * <p>
@@ -522,11 +531,16 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon States
      * Language</a>.
      * </p>
+     * <p>
+     * If called with <code>includedData = METADATA_ONLY</code>, the returned definition will be <code>{}</code>.
+     * </p>
      * 
      * @param definition
      *        The Amazon States Language definition of the state machine. See <a
      *        href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon
-     *        States Language</a>.
+     *        States Language</a>.</p>
+     *        <p>
+     *        If called with <code>includedData = METADATA_ONLY</code>, the returned definition will be <code>{}</code>.
      */
 
     public void setDefinition(String definition) {
@@ -539,10 +553,15 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon States
      * Language</a>.
      * </p>
+     * <p>
+     * If called with <code>includedData = METADATA_ONLY</code>, the returned definition will be <code>{}</code>.
+     * </p>
      * 
      * @return The Amazon States Language definition of the state machine. See <a
      *         href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon
-     *         States Language</a>.
+     *         States Language</a>.</p>
+     *         <p>
+     *         If called with <code>includedData = METADATA_ONLY</code>, the returned definition will be <code>{}</code>.
      */
 
     public String getDefinition() {
@@ -555,11 +574,16 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon States
      * Language</a>.
      * </p>
+     * <p>
+     * If called with <code>includedData = METADATA_ONLY</code>, the returned definition will be <code>{}</code>.
+     * </p>
      * 
      * @param definition
      *        The Amazon States Language definition of the state machine. See <a
      *        href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon
-     *        States Language</a>.
+     *        States Language</a>.</p>
+     *        <p>
+     *        If called with <code>includedData = METADATA_ONLY</code>, the returned definition will be <code>{}</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -959,6 +983,46 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Settings to configure server-side encryption.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        Settings to configure server-side encryption.
+     */
+
+    public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings to configure server-side encryption.
+     * </p>
+     * 
+     * @return Settings to configure server-side encryption.
+     */
+
+    public EncryptionConfiguration getEncryptionConfiguration() {
+        return this.encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings to configure server-side encryption.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        Settings to configure server-side encryption.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeStateMachineResult withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -993,7 +1057,9 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
         if (getRevisionId() != null)
             sb.append("RevisionId: ").append(getRevisionId()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append("***Sensitive Data Redacted***");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
+        if (getEncryptionConfiguration() != null)
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1056,6 +1122,10 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getEncryptionConfiguration() == null ^ this.getEncryptionConfiguration() == null)
+            return false;
+        if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1076,6 +1146,7 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getLabel() == null) ? 0 : getLabel().hashCode());
         hashCode = prime * hashCode + ((getRevisionId() == null) ? 0 : getRevisionId().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         return hashCode;
     }
 

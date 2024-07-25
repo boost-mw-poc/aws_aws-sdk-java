@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.applicationsignals.model.transform;
 
+import java.util.Map;
 import java.math.*;
 
 import javax.annotation.Generated;
@@ -59,6 +60,13 @@ public class GetServiceResultJsonUnmarshaller implements Unmarshaller<GetService
                 if (context.testExpression("EndTime", targetDepth)) {
                     context.nextToken();
                     getServiceResult.setEndTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("LogGroupReferences", targetDepth)) {
+                    context.nextToken();
+                    getServiceResult.setLogGroupReferences(new ListUnmarshaller<java.util.Map<String, String>>(new MapUnmarshaller<String, String>(context
+                            .getUnmarshaller(String.class), context.getUnmarshaller(String.class)))
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

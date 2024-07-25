@@ -44,7 +44,9 @@ public enum MetricType {
     SageMakerVariantProvisionedConcurrencyUtilization("SageMakerVariantProvisionedConcurrencyUtilization"),
     ElastiCacheDatabaseCapacityUsageCountedForEvictPercentage("ElastiCacheDatabaseCapacityUsageCountedForEvictPercentage"),
     SageMakerInferenceComponentInvocationsPerCopy("SageMakerInferenceComponentInvocationsPerCopy"),
-    WorkSpacesAverageUserSessionsCapacityUtilization("WorkSpacesAverageUserSessionsCapacityUtilization");
+    WorkSpacesAverageUserSessionsCapacityUtilization("WorkSpacesAverageUserSessionsCapacityUtilization"),
+    SageMakerInferenceComponentConcurrentRequestsPerCopyHighResolution("SageMakerInferenceComponentConcurrentRequestsPerCopyHighResolution"),
+    SageMakerVariantConcurrentRequestsPerModelHighResolution("SageMakerVariantConcurrentRequestsPerModelHighResolution");
 
     private String value;
 

@@ -90,6 +90,12 @@ public class DescribeStateMachineForExecutionResult extends com.amazonaws.Amazon
      * </p>
      */
     private String revisionId;
+    /**
+     * <p>
+     * Settings to configure server-side encryption.
+     * </p>
+     */
+    private EncryptionConfiguration encryptionConfiguration;
 
     /**
      * <p>
@@ -544,6 +550,46 @@ public class DescribeStateMachineForExecutionResult extends com.amazonaws.Amazon
     }
 
     /**
+     * <p>
+     * Settings to configure server-side encryption.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        Settings to configure server-side encryption.
+     */
+
+    public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings to configure server-side encryption.
+     * </p>
+     * 
+     * @return Settings to configure server-side encryption.
+     */
+
+    public EncryptionConfiguration getEncryptionConfiguration() {
+        return this.encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings to configure server-side encryption.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        Settings to configure server-side encryption.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeStateMachineForExecutionResult withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -574,7 +620,9 @@ public class DescribeStateMachineForExecutionResult extends com.amazonaws.Amazon
         if (getLabel() != null)
             sb.append("Label: ").append(getLabel()).append(",");
         if (getRevisionId() != null)
-            sb.append("RevisionId: ").append(getRevisionId());
+            sb.append("RevisionId: ").append(getRevisionId()).append(",");
+        if (getEncryptionConfiguration() != null)
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -629,6 +677,10 @@ public class DescribeStateMachineForExecutionResult extends com.amazonaws.Amazon
             return false;
         if (other.getRevisionId() != null && other.getRevisionId().equals(this.getRevisionId()) == false)
             return false;
+        if (other.getEncryptionConfiguration() == null ^ this.getEncryptionConfiguration() == null)
+            return false;
+        if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -647,6 +699,7 @@ public class DescribeStateMachineForExecutionResult extends com.amazonaws.Amazon
         hashCode = prime * hashCode + ((getMapRunArn() == null) ? 0 : getMapRunArn().hashCode());
         hashCode = prime * hashCode + ((getLabel() == null) ? 0 : getLabel().hashCode());
         hashCode = prime * hashCode + ((getRevisionId() == null) ? 0 : getRevisionId().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         return hashCode;
     }
 

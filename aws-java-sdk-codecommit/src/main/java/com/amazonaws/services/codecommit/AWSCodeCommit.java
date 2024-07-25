@@ -1218,6 +1218,8 @@ public interface AWSCodeCommit {
      *         The specified repository description is not valid.
      * @throws RepositoryLimitExceededException
      *         A repository resource limit was exceeded.
+     * @throws OperationNotAllowedException
+     *         The requested action is not allowed.
      * @throws EncryptionIntegrityChecksFailedException
      *         An encryption integrity check failed.
      * @throws EncryptionKeyAccessDeniedException

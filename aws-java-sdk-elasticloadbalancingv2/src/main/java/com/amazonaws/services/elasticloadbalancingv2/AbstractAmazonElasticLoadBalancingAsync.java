@@ -171,6 +171,21 @@ public class AbstractAmazonElasticLoadBalancingAsync extends AbstractAmazonElast
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteSharedTrustStoreAssociationResult> deleteSharedTrustStoreAssociationAsync(
+            DeleteSharedTrustStoreAssociationRequest request) {
+
+        return deleteSharedTrustStoreAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSharedTrustStoreAssociationResult> deleteSharedTrustStoreAssociationAsync(
+            DeleteSharedTrustStoreAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteSharedTrustStoreAssociationRequest, DeleteSharedTrustStoreAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteTargetGroupResult> deleteTargetGroupAsync(DeleteTargetGroupRequest request) {
 
         return deleteTargetGroupAsync(request, null);
@@ -387,6 +402,19 @@ public class AbstractAmazonElasticLoadBalancingAsync extends AbstractAmazonElast
     @Override
     public java.util.concurrent.Future<DescribeTrustStoresResult> describeTrustStoresAsync(DescribeTrustStoresRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeTrustStoresRequest, DescribeTrustStoresResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest request) {
+
+        return getResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetResourcePolicyRequest, GetResourcePolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

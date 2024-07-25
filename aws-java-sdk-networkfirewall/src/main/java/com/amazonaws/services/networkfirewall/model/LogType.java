@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum LogType {
 
     ALERT("ALERT"),
-    FLOW("FLOW");
+    FLOW("FLOW"),
+    TLS("TLS");
 
     private String value;
 

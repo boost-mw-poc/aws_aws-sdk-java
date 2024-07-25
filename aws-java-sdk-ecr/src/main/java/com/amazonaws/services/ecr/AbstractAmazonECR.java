@@ -74,6 +74,11 @@ public class AbstractAmazonECR implements AmazonECR {
     }
 
     @Override
+    public CreateRepositoryCreationTemplateResult createRepositoryCreationTemplate(CreateRepositoryCreationTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteLifecyclePolicyResult deleteLifecyclePolicy(DeleteLifecyclePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -90,6 +95,11 @@ public class AbstractAmazonECR implements AmazonECR {
 
     @Override
     public DeleteRepositoryResult deleteRepository(DeleteRepositoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteRepositoryCreationTemplateResult deleteRepositoryCreationTemplate(DeleteRepositoryCreationTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -125,6 +135,11 @@ public class AbstractAmazonECR implements AmazonECR {
 
     @Override
     public DescribeRepositoriesResult describeRepositories(DescribeRepositoriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeRepositoryCreationTemplatesResult describeRepositoryCreationTemplates(DescribeRepositoryCreationTemplatesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -240,6 +255,11 @@ public class AbstractAmazonECR implements AmazonECR {
 
     @Override
     public UpdatePullThroughCacheRuleResult updatePullThroughCacheRule(UpdatePullThroughCacheRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateRepositoryCreationTemplateResult updateRepositoryCreationTemplate(UpdateRepositoryCreationTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

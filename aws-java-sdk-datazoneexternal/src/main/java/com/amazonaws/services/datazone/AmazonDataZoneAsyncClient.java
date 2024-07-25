@@ -1896,6 +1896,39 @@ public class AmazonDataZoneAsyncClient extends AmazonDataZoneClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetEnvironmentCredentialsResult> getEnvironmentCredentialsAsync(GetEnvironmentCredentialsRequest request) {
+
+        return getEnvironmentCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnvironmentCredentialsResult> getEnvironmentCredentialsAsync(final GetEnvironmentCredentialsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEnvironmentCredentialsRequest, GetEnvironmentCredentialsResult> asyncHandler) {
+        final GetEnvironmentCredentialsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEnvironmentCredentialsResult>() {
+            @Override
+            public GetEnvironmentCredentialsResult call() throws Exception {
+                GetEnvironmentCredentialsResult result = null;
+
+                try {
+                    result = executeGetEnvironmentCredentials(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEnvironmentProfileResult> getEnvironmentProfileAsync(GetEnvironmentProfileRequest request) {
 
         return getEnvironmentProfileAsync(request, null);

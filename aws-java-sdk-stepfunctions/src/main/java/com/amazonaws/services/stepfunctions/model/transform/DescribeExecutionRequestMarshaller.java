@@ -29,6 +29,8 @@ public class DescribeExecutionRequestMarshaller {
 
     private static final MarshallingInfo<String> EXECUTIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("executionArn").build();
+    private static final MarshallingInfo<String> INCLUDEDDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includedData").build();
 
     private static final DescribeExecutionRequestMarshaller instance = new DescribeExecutionRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class DescribeExecutionRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(describeExecutionRequest.getExecutionArn(), EXECUTIONARN_BINDING);
+            protocolMarshaller.marshall(describeExecutionRequest.getIncludedData(), INCLUDEDDATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

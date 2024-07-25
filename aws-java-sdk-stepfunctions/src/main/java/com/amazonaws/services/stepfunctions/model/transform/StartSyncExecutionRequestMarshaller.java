@@ -35,6 +35,8 @@ public class StartSyncExecutionRequestMarshaller {
             .marshallLocationName("input").build();
     private static final MarshallingInfo<String> TRACEHEADER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("traceHeader").build();
+    private static final MarshallingInfo<String> INCLUDEDDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includedData").build();
 
     private static final StartSyncExecutionRequestMarshaller instance = new StartSyncExecutionRequestMarshaller();
 
@@ -56,6 +58,7 @@ public class StartSyncExecutionRequestMarshaller {
             protocolMarshaller.marshall(startSyncExecutionRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(startSyncExecutionRequest.getInput(), INPUT_BINDING);
             protocolMarshaller.marshall(startSyncExecutionRequest.getTraceHeader(), TRACEHEADER_BINDING);
+            protocolMarshaller.marshall(startSyncExecutionRequest.getIncludedData(), INCLUDEDDATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

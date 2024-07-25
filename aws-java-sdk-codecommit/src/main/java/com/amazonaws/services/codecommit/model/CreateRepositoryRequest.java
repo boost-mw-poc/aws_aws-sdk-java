@@ -67,8 +67,8 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
      * programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see <a
-     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
-     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a>
+     * in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      * </p>
      * <p>
      * If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
@@ -318,8 +318,8 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
      * programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see <a
-     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
-     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a>
+     * in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      * </p>
      * <p>
      * If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
@@ -328,8 +328,8 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * @param kmsKeyId
      *        The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS
      *        APIs to programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see
-     *        <a href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in
-     *        the Decrypt API description in the <i>Key Management Service API Reference</i>.</p>
+     *        <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">
+     *        KeyId</a> in the Decrypt API description in the <i>Key Management Service API Reference</i>.</p>
      *        <p>
      *        If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
      */
@@ -342,8 +342,8 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
      * programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see <a
-     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
-     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a>
+     * in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      * </p>
      * <p>
      * If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
@@ -352,8 +352,8 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * @return The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS
      *         APIs to programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID,
      *         see <a
-     *         href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in
-     *         the Decrypt API description in the <i>Key Management Service API Reference</i>.</p>
+     *         href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId"
+     *         >KeyId</a> in the Decrypt API description in the <i>Key Management Service API Reference</i>.</p>
      *         <p>
      *         If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
      */
@@ -366,8 +366,8 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
      * programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see <a
-     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
-     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a>
+     * in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      * </p>
      * <p>
      * If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
@@ -376,8 +376,8 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * @param kmsKeyId
      *        The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS
      *        APIs to programmatically retrieve a key ID. For more information about acceptable values for kmsKeyID, see
-     *        <a href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in
-     *        the Decrypt API description in the <i>Key Management Service API Reference</i>.</p>
+     *        <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">
+     *        KeyId</a> in the Decrypt API description in the <i>Key Management Service API Reference</i>.</p>
      *        <p>
      *        If no key is specified, the default <code>aws/codecommit</code> Amazon Web Services managed key is used.
      * @return Returns a reference to this object so that method calls can be chained together.

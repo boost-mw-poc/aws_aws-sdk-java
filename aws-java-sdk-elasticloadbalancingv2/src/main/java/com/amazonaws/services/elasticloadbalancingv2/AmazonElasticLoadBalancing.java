@@ -558,6 +558,26 @@ public interface AmazonElasticLoadBalancing {
 
     /**
      * <p>
+     * Deletes a shared trust store association.
+     * </p>
+     * 
+     * @param deleteSharedTrustStoreAssociationRequest
+     * @return Result of the DeleteSharedTrustStoreAssociation operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws DeleteAssociationSameAccountException
+     *         The specified association cannot be within the same account.
+     * @throws TrustStoreAssociationNotFoundException
+     *         The specified association does not exist.
+     * @sample AmazonElasticLoadBalancing.DeleteSharedTrustStoreAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteSharedTrustStoreAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteSharedTrustStoreAssociationResult deleteSharedTrustStoreAssociation(DeleteSharedTrustStoreAssociationRequest deleteSharedTrustStoreAssociationRequest);
+
+    /**
+     * <p>
      * Deletes the specified target group.
      * </p>
      * <p>
@@ -952,7 +972,7 @@ public interface AmazonElasticLoadBalancing {
 
     /**
      * <p>
-     * Describes the revocation files in use by the specified trust store arn, or revocation ID.
+     * Describes the revocation files in use by the specified trust store or revocation files.
      * </p>
      * 
      * @param describeTrustStoreRevocationsRequest
@@ -970,7 +990,7 @@ public interface AmazonElasticLoadBalancing {
 
     /**
      * <p>
-     * Describes all trust stores for a given account by trust store arn’s or name.
+     * Describes all trust stores for the specified account.
      * </p>
      * 
      * @param describeTrustStoresRequest
@@ -982,6 +1002,21 @@ public interface AmazonElasticLoadBalancing {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeTrustStoresResult describeTrustStores(DescribeTrustStoresRequest describeTrustStoresRequest);
+
+    /**
+     * <p>
+     * Retrieves the resource policy for a specified resource.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @return Result of the GetResourcePolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonElasticLoadBalancing.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/GetResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest getResourcePolicyRequest);
 
     /**
      * <p>
@@ -1185,7 +1220,7 @@ public interface AmazonElasticLoadBalancing {
 
     /**
      * <p>
-     * Update the ca certificate bundle for a given trust store.
+     * Update the ca certificate bundle for the specified trust store.
      * </p>
      * 
      * @param modifyTrustStoreRequest

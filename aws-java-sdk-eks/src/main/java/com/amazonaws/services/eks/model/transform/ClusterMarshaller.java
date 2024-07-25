@@ -71,6 +71,8 @@ public class ClusterMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outpostConfig").build();
     private static final MarshallingInfo<StructuredPojo> ACCESSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accessConfig").build();
+    private static final MarshallingInfo<StructuredPojo> UPGRADEPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("upgradePolicy").build();
 
     private static final ClusterMarshaller instance = new ClusterMarshaller();
 
@@ -109,6 +111,7 @@ public class ClusterMarshaller {
             protocolMarshaller.marshall(cluster.getHealth(), HEALTH_BINDING);
             protocolMarshaller.marshall(cluster.getOutpostConfig(), OUTPOSTCONFIG_BINDING);
             protocolMarshaller.marshall(cluster.getAccessConfig(), ACCESSCONFIG_BINDING);
+            protocolMarshaller.marshall(cluster.getUpgradePolicy(), UPGRADEPOLICY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

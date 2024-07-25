@@ -418,6 +418,11 @@ public class CreateListenerRequestMarshaller implements Marshaller<Request<Creat
                     request.addParameter("MutualAuthentication.IgnoreClientCertificateExpiry",
                             StringUtils.fromBoolean(mutualAuthentication.getIgnoreClientCertificateExpiry()));
                 }
+
+                if (mutualAuthentication.getTrustStoreAssociationStatus() != null) {
+                    request.addParameter("MutualAuthentication.TrustStoreAssociationStatus",
+                            StringUtils.fromString(mutualAuthentication.getTrustStoreAssociationStatus()));
+                }
             }
         }
 

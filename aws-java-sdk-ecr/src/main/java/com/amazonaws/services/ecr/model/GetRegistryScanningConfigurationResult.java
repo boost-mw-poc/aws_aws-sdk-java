@@ -26,7 +26,7 @@ public class GetRegistryScanningConfigurationResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the registry.
+     * The registry ID associated with the request.
      * </p>
      */
     private String registryId;
@@ -39,11 +39,11 @@ public class GetRegistryScanningConfigurationResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the registry.
+     * The registry ID associated with the request.
      * </p>
      * 
      * @param registryId
-     *        The ID of the registry.
+     *        The registry ID associated with the request.
      */
 
     public void setRegistryId(String registryId) {
@@ -52,10 +52,10 @@ public class GetRegistryScanningConfigurationResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the registry.
+     * The registry ID associated with the request.
      * </p>
      * 
-     * @return The ID of the registry.
+     * @return The registry ID associated with the request.
      */
 
     public String getRegistryId() {
@@ -64,11 +64,11 @@ public class GetRegistryScanningConfigurationResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the registry.
+     * The registry ID associated with the request.
      * </p>
      * 
      * @param registryId
-     *        The ID of the registry.
+     *        The registry ID associated with the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

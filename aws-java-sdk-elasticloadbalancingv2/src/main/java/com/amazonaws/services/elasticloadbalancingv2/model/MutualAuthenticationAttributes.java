@@ -46,6 +46,12 @@ public class MutualAuthenticationAttributes implements Serializable, Cloneable {
      * </p>
      */
     private Boolean ignoreClientCertificateExpiry;
+    /**
+     * <p>
+     * Indicates a shared trust stores association status.
+     * </p>
+     */
+    private String trustStoreAssociationStatus;
 
     /**
      * <p>
@@ -186,6 +192,65 @@ public class MutualAuthenticationAttributes implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates a shared trust stores association status.
+     * </p>
+     * 
+     * @param trustStoreAssociationStatus
+     *        Indicates a shared trust stores association status.
+     * @see TrustStoreAssociationStatusEnum
+     */
+
+    public void setTrustStoreAssociationStatus(String trustStoreAssociationStatus) {
+        this.trustStoreAssociationStatus = trustStoreAssociationStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates a shared trust stores association status.
+     * </p>
+     * 
+     * @return Indicates a shared trust stores association status.
+     * @see TrustStoreAssociationStatusEnum
+     */
+
+    public String getTrustStoreAssociationStatus() {
+        return this.trustStoreAssociationStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates a shared trust stores association status.
+     * </p>
+     * 
+     * @param trustStoreAssociationStatus
+     *        Indicates a shared trust stores association status.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TrustStoreAssociationStatusEnum
+     */
+
+    public MutualAuthenticationAttributes withTrustStoreAssociationStatus(String trustStoreAssociationStatus) {
+        setTrustStoreAssociationStatus(trustStoreAssociationStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates a shared trust stores association status.
+     * </p>
+     * 
+     * @param trustStoreAssociationStatus
+     *        Indicates a shared trust stores association status.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TrustStoreAssociationStatusEnum
+     */
+
+    public MutualAuthenticationAttributes withTrustStoreAssociationStatus(TrustStoreAssociationStatusEnum trustStoreAssociationStatus) {
+        this.trustStoreAssociationStatus = trustStoreAssociationStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -202,7 +267,9 @@ public class MutualAuthenticationAttributes implements Serializable, Cloneable {
         if (getTrustStoreArn() != null)
             sb.append("TrustStoreArn: ").append(getTrustStoreArn()).append(",");
         if (getIgnoreClientCertificateExpiry() != null)
-            sb.append("IgnoreClientCertificateExpiry: ").append(getIgnoreClientCertificateExpiry());
+            sb.append("IgnoreClientCertificateExpiry: ").append(getIgnoreClientCertificateExpiry()).append(",");
+        if (getTrustStoreAssociationStatus() != null)
+            sb.append("TrustStoreAssociationStatus: ").append(getTrustStoreAssociationStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -230,6 +297,10 @@ public class MutualAuthenticationAttributes implements Serializable, Cloneable {
         if (other.getIgnoreClientCertificateExpiry() != null
                 && other.getIgnoreClientCertificateExpiry().equals(this.getIgnoreClientCertificateExpiry()) == false)
             return false;
+        if (other.getTrustStoreAssociationStatus() == null ^ this.getTrustStoreAssociationStatus() == null)
+            return false;
+        if (other.getTrustStoreAssociationStatus() != null && other.getTrustStoreAssociationStatus().equals(this.getTrustStoreAssociationStatus()) == false)
+            return false;
         return true;
     }
 
@@ -241,6 +312,7 @@ public class MutualAuthenticationAttributes implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         hashCode = prime * hashCode + ((getTrustStoreArn() == null) ? 0 : getTrustStoreArn().hashCode());
         hashCode = prime * hashCode + ((getIgnoreClientCertificateExpiry() == null) ? 0 : getIgnoreClientCertificateExpiry().hashCode());
+        hashCode = prime * hashCode + ((getTrustStoreAssociationStatus() == null) ? 0 : getTrustStoreAssociationStatus().hashCode());
         return hashCode;
     }
 

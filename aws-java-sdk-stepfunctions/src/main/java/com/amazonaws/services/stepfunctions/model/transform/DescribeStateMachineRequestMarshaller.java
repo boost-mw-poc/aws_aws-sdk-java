@@ -29,6 +29,8 @@ public class DescribeStateMachineRequestMarshaller {
 
     private static final MarshallingInfo<String> STATEMACHINEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stateMachineArn").build();
+    private static final MarshallingInfo<String> INCLUDEDDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includedData").build();
 
     private static final DescribeStateMachineRequestMarshaller instance = new DescribeStateMachineRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class DescribeStateMachineRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(describeStateMachineRequest.getStateMachineArn(), STATEMACHINEARN_BINDING);
+            protocolMarshaller.marshall(describeStateMachineRequest.getIncludedData(), INCLUDEDDATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

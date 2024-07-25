@@ -29,6 +29,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class InstanceTypeItem implements Serializable, Cloneable, StructuredPojo {
 
     private String instanceType;
+    /**
+     * <p>
+     * The number of default VCPUs in an instance type.
+     * </p>
+     */
+    private Integer vCPUs;
 
     /**
      * @param instanceType
@@ -57,6 +63,46 @@ public class InstanceTypeItem implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The number of default VCPUs in an instance type.
+     * </p>
+     * 
+     * @param vCPUs
+     *        The number of default VCPUs in an instance type.
+     */
+
+    public void setVCPUs(Integer vCPUs) {
+        this.vCPUs = vCPUs;
+    }
+
+    /**
+     * <p>
+     * The number of default VCPUs in an instance type.
+     * </p>
+     * 
+     * @return The number of default VCPUs in an instance type.
+     */
+
+    public Integer getVCPUs() {
+        return this.vCPUs;
+    }
+
+    /**
+     * <p>
+     * The number of default VCPUs in an instance type.
+     * </p>
+     * 
+     * @param vCPUs
+     *        The number of default VCPUs in an instance type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceTypeItem withVCPUs(Integer vCPUs) {
+        setVCPUs(vCPUs);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -69,7 +115,9 @@ public class InstanceTypeItem implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getInstanceType() != null)
-            sb.append("InstanceType: ").append(getInstanceType());
+            sb.append("InstanceType: ").append(getInstanceType()).append(",");
+        if (getVCPUs() != null)
+            sb.append("VCPUs: ").append(getVCPUs());
         sb.append("}");
         return sb.toString();
     }
@@ -88,6 +136,10 @@ public class InstanceTypeItem implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getInstanceType() != null && other.getInstanceType().equals(this.getInstanceType()) == false)
             return false;
+        if (other.getVCPUs() == null ^ this.getVCPUs() == null)
+            return false;
+        if (other.getVCPUs() != null && other.getVCPUs().equals(this.getVCPUs()) == false)
+            return false;
         return true;
     }
 
@@ -97,6 +149,7 @@ public class InstanceTypeItem implements Serializable, Cloneable, StructuredPojo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
+        hashCode = prime * hashCode + ((getVCPUs() == null) ? 0 : getVCPUs().hashCode());
         return hashCode;
     }
 

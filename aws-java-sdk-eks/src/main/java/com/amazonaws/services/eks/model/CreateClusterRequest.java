@@ -134,6 +134,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private Boolean bootstrapSelfManagedAddons;
+    /**
+     * <p>
+     * New clusters, by default, have extended support enabled. You can disable extended support when creating a cluster
+     * by setting this value to <code>STANDARD</code>.
+     * </p>
+     */
+    private UpgradePolicyRequest upgradePolicy;
 
     /**
      * <p>
@@ -908,6 +915,52 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * New clusters, by default, have extended support enabled. You can disable extended support when creating a cluster
+     * by setting this value to <code>STANDARD</code>.
+     * </p>
+     * 
+     * @param upgradePolicy
+     *        New clusters, by default, have extended support enabled. You can disable extended support when creating a
+     *        cluster by setting this value to <code>STANDARD</code>.
+     */
+
+    public void setUpgradePolicy(UpgradePolicyRequest upgradePolicy) {
+        this.upgradePolicy = upgradePolicy;
+    }
+
+    /**
+     * <p>
+     * New clusters, by default, have extended support enabled. You can disable extended support when creating a cluster
+     * by setting this value to <code>STANDARD</code>.
+     * </p>
+     * 
+     * @return New clusters, by default, have extended support enabled. You can disable extended support when creating a
+     *         cluster by setting this value to <code>STANDARD</code>.
+     */
+
+    public UpgradePolicyRequest getUpgradePolicy() {
+        return this.upgradePolicy;
+    }
+
+    /**
+     * <p>
+     * New clusters, by default, have extended support enabled. You can disable extended support when creating a cluster
+     * by setting this value to <code>STANDARD</code>.
+     * </p>
+     * 
+     * @param upgradePolicy
+     *        New clusters, by default, have extended support enabled. You can disable extended support when creating a
+     *        cluster by setting this value to <code>STANDARD</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateClusterRequest withUpgradePolicy(UpgradePolicyRequest upgradePolicy) {
+        setUpgradePolicy(upgradePolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -942,7 +995,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getAccessConfig() != null)
             sb.append("AccessConfig: ").append(getAccessConfig()).append(",");
         if (getBootstrapSelfManagedAddons() != null)
-            sb.append("BootstrapSelfManagedAddons: ").append(getBootstrapSelfManagedAddons());
+            sb.append("BootstrapSelfManagedAddons: ").append(getBootstrapSelfManagedAddons()).append(",");
+        if (getUpgradePolicy() != null)
+            sb.append("UpgradePolicy: ").append(getUpgradePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -1005,6 +1060,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getBootstrapSelfManagedAddons() != null && other.getBootstrapSelfManagedAddons().equals(this.getBootstrapSelfManagedAddons()) == false)
             return false;
+        if (other.getUpgradePolicy() == null ^ this.getUpgradePolicy() == null)
+            return false;
+        if (other.getUpgradePolicy() != null && other.getUpgradePolicy().equals(this.getUpgradePolicy()) == false)
+            return false;
         return true;
     }
 
@@ -1025,6 +1084,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getOutpostConfig() == null) ? 0 : getOutpostConfig().hashCode());
         hashCode = prime * hashCode + ((getAccessConfig() == null) ? 0 : getAccessConfig().hashCode());
         hashCode = prime * hashCode + ((getBootstrapSelfManagedAddons() == null) ? 0 : getBootstrapSelfManagedAddons().hashCode());
+        hashCode = prime * hashCode + ((getUpgradePolicy() == null) ? 0 : getUpgradePolicy().hashCode());
         return hashCode;
     }
 

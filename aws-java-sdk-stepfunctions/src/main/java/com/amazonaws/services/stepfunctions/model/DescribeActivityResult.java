@@ -74,6 +74,12 @@ public class DescribeActivityResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      */
     private java.util.Date creationDate;
+    /**
+     * <p>
+     * Settings for configured server-side encryption.
+     * </p>
+     */
+    private EncryptionConfiguration encryptionConfiguration;
 
     /**
      * <p>
@@ -391,6 +397,46 @@ public class DescribeActivityResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * Settings for configured server-side encryption.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        Settings for configured server-side encryption.
+     */
+
+    public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for configured server-side encryption.
+     * </p>
+     * 
+     * @return Settings for configured server-side encryption.
+     */
+
+    public EncryptionConfiguration getEncryptionConfiguration() {
+        return this.encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Settings for configured server-side encryption.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        Settings for configured server-side encryption.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeActivityResult withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -407,7 +453,9 @@ public class DescribeActivityResult extends com.amazonaws.AmazonWebServiceResult
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getCreationDate() != null)
-            sb.append("CreationDate: ").append(getCreationDate());
+            sb.append("CreationDate: ").append(getCreationDate()).append(",");
+        if (getEncryptionConfiguration() != null)
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -434,6 +482,10 @@ public class DescribeActivityResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getCreationDate() != null && other.getCreationDate().equals(this.getCreationDate()) == false)
             return false;
+        if (other.getEncryptionConfiguration() == null ^ this.getEncryptionConfiguration() == null)
+            return false;
+        if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -445,6 +497,7 @@ public class DescribeActivityResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getActivityArn() == null) ? 0 : getActivityArn().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         return hashCode;
     }
 

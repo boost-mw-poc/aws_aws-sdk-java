@@ -15,7 +15,9 @@ package com.amazonaws.services.stepfunctions.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * State machine type is not supported.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StateMachineTypeNotSupportedException extends com.amazonaws.services.stepfunctions.model.AWSStepFunctionsException {

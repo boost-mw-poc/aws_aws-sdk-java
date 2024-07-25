@@ -36,8 +36,8 @@ public class UpdateRepositoryEncryptionKeyRequest extends com.amazonaws.AmazonWe
      * <p>
      * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
      * programmatically retrieve a key ID. For more information about acceptable values for keyID, see <a
-     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
-     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a>
+     * in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      * </p>
      */
     private String kmsKeyId;
@@ -92,15 +92,16 @@ public class UpdateRepositoryEncryptionKeyRequest extends com.amazonaws.AmazonWe
      * <p>
      * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
      * programmatically retrieve a key ID. For more information about acceptable values for keyID, see <a
-     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
-     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a>
+     * in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      * </p>
      * 
      * @param kmsKeyId
      *        The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS
      *        APIs to programmatically retrieve a key ID. For more information about acceptable values for keyID, see <a
-     *        href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in
-     *        the Decrypt API description in the <i>Key Management Service API Reference</i>.
+     *        href
+     *        ="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId
+     *        </a> in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -111,14 +112,14 @@ public class UpdateRepositoryEncryptionKeyRequest extends com.amazonaws.AmazonWe
      * <p>
      * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
      * programmatically retrieve a key ID. For more information about acceptable values for keyID, see <a
-     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
-     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a>
+     * in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      * </p>
      * 
      * @return The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS
      *         APIs to programmatically retrieve a key ID. For more information about acceptable values for keyID, see
-     *         <a href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a>
-     *         in the Decrypt API description in the <i>Key Management Service API Reference</i>.
+     *         <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">
+     *         KeyId</a> in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      */
 
     public String getKmsKeyId() {
@@ -129,15 +130,16 @@ public class UpdateRepositoryEncryptionKeyRequest extends com.amazonaws.AmazonWe
      * <p>
      * The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS APIs to
      * programmatically retrieve a key ID. For more information about acceptable values for keyID, see <a
-     * href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in the
-     * Decrypt API description in the <i>Key Management Service API Reference</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a>
+     * in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      * </p>
      * 
      * @param kmsKeyId
      *        The ID of the encryption key. You can view the ID of an encryption key in the KMS console, or use the KMS
      *        APIs to programmatically retrieve a key ID. For more information about acceptable values for keyID, see <a
-     *        href="https://docs.aws.amazon.com/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId</a> in
-     *        the Decrypt API description in the <i>Key Management Service API Reference</i>.
+     *        href
+     *        ="https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html#KMS-Decrypt-request-KeyId">KeyId
+     *        </a> in the Decrypt API description in the <i>Key Management Service API Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

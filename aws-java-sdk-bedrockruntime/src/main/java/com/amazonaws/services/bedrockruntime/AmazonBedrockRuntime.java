@@ -53,13 +53,18 @@ public interface AmazonBedrockRuntime {
      * @throws ResourceNotFoundException
      *         The specified resource ARN was not found. Check the ARN and try your request again.
      * @throws ThrottlingException
-     *         The number of requests exceeds the limit. Resubmit your request later.
+     *         Your request was throttled because of service-wide limitations. Resubmit your request later or in a
+     *         different region. You can also purchase <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-throughput.html">Provisioned
+     *         Throughput</a> to increase the rate or number of tokens you can process.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ValidationException
      *         Input validation failed. Check your request parameters and retry the request.
      * @throws ServiceQuotaExceededException
-     *         The number of requests exceeds the service quota. Resubmit your request later.
+     *         Your request exceeds the service quota for your account. You can view your quotas at <a
+     *         href="https://docs.aws.amazon.com/servicequotas/latest/userguide/gs-request-quota.html">Viewing service
+     *         quotas</a>. You can resubmit your request later.
      * @sample AmazonBedrockRuntime.ApplyGuardrail
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-runtime-2023-09-30/ApplyGuardrail" target="_top">AWS
      *      API Documentation</a>
@@ -70,7 +75,11 @@ public interface AmazonBedrockRuntime {
      * <p>
      * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
      * works with all models that support messages. This allows you to write code once and use it with different models.
-     * Should a model have unique inference parameters, you can also pass those unique parameters to the model.
+     * If a model has unique inference parameters, you can also pass those unique parameters to the model.
+     * </p>
+     * <p>
+     * Amazon Bedrock doesn't store any text, images, or documents that you provide as content. The data is only used to
+     * generate the response.
      * </p>
      * <p>
      * For information about the Converse API, see <i>Use the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
@@ -91,11 +100,16 @@ public interface AmazonBedrockRuntime {
      * @throws ResourceNotFoundException
      *         The specified resource ARN was not found. Check the ARN and try your request again.
      * @throws ThrottlingException
-     *         The number of requests exceeds the limit. Resubmit your request later.
+     *         Your request was throttled because of service-wide limitations. Resubmit your request later or in a
+     *         different region. You can also purchase <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-throughput.html">Provisioned
+     *         Throughput</a> to increase the rate or number of tokens you can process.
      * @throws ModelTimeoutException
      *         The request took too long to process. Processing time exceeded the model timeout length.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
+     * @throws ServiceUnavailableException
+     *         The service isn't currently available. Try again later.
      * @throws ValidationException
      *         Input validation failed. Check your request parameters and retry the request.
      * @throws ModelNotReadyException
@@ -127,17 +141,24 @@ public interface AmazonBedrockRuntime {
      * @throws ResourceNotFoundException
      *         The specified resource ARN was not found. Check the ARN and try your request again.
      * @throws ThrottlingException
-     *         The number of requests exceeds the limit. Resubmit your request later.
+     *         Your request was throttled because of service-wide limitations. Resubmit your request later or in a
+     *         different region. You can also purchase <a
+     *         href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-throughput.html">Provisioned
+     *         Throughput</a> to increase the rate or number of tokens you can process.
      * @throws ModelTimeoutException
      *         The request took too long to process. Processing time exceeded the model timeout length.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
+     * @throws ServiceUnavailableException
+     *         The service isn't currently available. Try again later.
      * @throws ValidationException
      *         Input validation failed. Check your request parameters and retry the request.
      * @throws ModelNotReadyException
      *         The model specified in the request is not ready to serve inference requests.
      * @throws ServiceQuotaExceededException
-     *         The number of requests exceeds the service quota. Resubmit your request later.
+     *         Your request exceeds the service quota for your account. You can view your quotas at <a
+     *         href="https://docs.aws.amazon.com/servicequotas/latest/userguide/gs-request-quota.html">Viewing service
+     *         quotas</a>. You can resubmit your request later.
      * @throws ModelErrorException
      *         The request failed due to an error while processing the model.
      * @sample AmazonBedrockRuntime.InvokeModel

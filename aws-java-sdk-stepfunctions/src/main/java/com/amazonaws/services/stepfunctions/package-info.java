@@ -14,8 +14,7 @@
 /**
  * <fullname>Step Functions</fullname>
  * <p>
- * Step Functions is a service that lets you coordinate the components of distributed applications and microservices
- * using visual workflows.
+ * Step Functions coordinates the components of distributed applications and microservices using visual workflows.
  * </p>
  * <p>
  * You can use Step Functions to build applications from individual components, each of which performs a discrete

@@ -166,6 +166,16 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private AccessConfigResponse accessConfig;
+    /**
+     * <p>
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     * </p>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html">Learn more about EKS
+     * Extended Support in the EKS User Guide.</a>
+     * </p>
+     */
+    private UpgradePolicyResponse upgradePolicy;
 
     /**
      * <p>
@@ -1166,6 +1176,67 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     * </p>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html">Learn more about EKS
+     * Extended Support in the EKS User Guide.</a>
+     * </p>
+     * 
+     * @param upgradePolicy
+     *        This value indicates if extended support is enabled or disabled for the cluster.</p>
+     *        <p>
+     *        <a href="https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html">Learn more about
+     *        EKS Extended Support in the EKS User Guide.</a>
+     */
+
+    public void setUpgradePolicy(UpgradePolicyResponse upgradePolicy) {
+        this.upgradePolicy = upgradePolicy;
+    }
+
+    /**
+     * <p>
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     * </p>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html">Learn more about EKS
+     * Extended Support in the EKS User Guide.</a>
+     * </p>
+     * 
+     * @return This value indicates if extended support is enabled or disabled for the cluster.</p>
+     *         <p>
+     *         <a href="https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html">Learn more about
+     *         EKS Extended Support in the EKS User Guide.</a>
+     */
+
+    public UpgradePolicyResponse getUpgradePolicy() {
+        return this.upgradePolicy;
+    }
+
+    /**
+     * <p>
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     * </p>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html">Learn more about EKS
+     * Extended Support in the EKS User Guide.</a>
+     * </p>
+     * 
+     * @param upgradePolicy
+     *        This value indicates if extended support is enabled or disabled for the cluster.</p>
+     *        <p>
+     *        <a href="https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html">Learn more about
+     *        EKS Extended Support in the EKS User Guide.</a>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withUpgradePolicy(UpgradePolicyResponse upgradePolicy) {
+        setUpgradePolicy(upgradePolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1218,7 +1289,9 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
         if (getOutpostConfig() != null)
             sb.append("OutpostConfig: ").append(getOutpostConfig()).append(",");
         if (getAccessConfig() != null)
-            sb.append("AccessConfig: ").append(getAccessConfig());
+            sb.append("AccessConfig: ").append(getAccessConfig()).append(",");
+        if (getUpgradePolicy() != null)
+            sb.append("UpgradePolicy: ").append(getUpgradePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -1317,6 +1390,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAccessConfig() != null && other.getAccessConfig().equals(this.getAccessConfig()) == false)
             return false;
+        if (other.getUpgradePolicy() == null ^ this.getUpgradePolicy() == null)
+            return false;
+        if (other.getUpgradePolicy() != null && other.getUpgradePolicy().equals(this.getUpgradePolicy()) == false)
+            return false;
         return true;
     }
 
@@ -1346,6 +1423,7 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getHealth() == null) ? 0 : getHealth().hashCode());
         hashCode = prime * hashCode + ((getOutpostConfig() == null) ? 0 : getOutpostConfig().hashCode());
         hashCode = prime * hashCode + ((getAccessConfig() == null) ? 0 : getAccessConfig().hashCode());
+        hashCode = prime * hashCode + ((getUpgradePolicy() == null) ? 0 : getUpgradePolicy().hashCode());
         return hashCode;
     }
 

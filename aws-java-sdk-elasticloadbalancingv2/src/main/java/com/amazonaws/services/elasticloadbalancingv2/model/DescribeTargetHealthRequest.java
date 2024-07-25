@@ -39,7 +39,7 @@ public class DescribeTargetHealthRequest extends com.amazonaws.AmazonWebServiceR
     private java.util.List<TargetDescription> targets;
     /**
      * <p>
-     * Used to inclue anomaly detection information.
+     * Used to include anomaly detection information.
      * </p>
      */
     private java.util.List<String> include;
@@ -156,10 +156,10 @@ public class DescribeTargetHealthRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Used to inclue anomaly detection information.
+     * Used to include anomaly detection information.
      * </p>
      * 
-     * @return Used to inclue anomaly detection information.
+     * @return Used to include anomaly detection information.
      * @see DescribeTargetHealthInputIncludeEnum
      */
 
@@ -169,11 +169,11 @@ public class DescribeTargetHealthRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Used to inclue anomaly detection information.
+     * Used to include anomaly detection information.
      * </p>
      * 
      * @param include
-     *        Used to inclue anomaly detection information.
+     *        Used to include anomaly detection information.
      * @see DescribeTargetHealthInputIncludeEnum
      */
 
@@ -188,7 +188,7 @@ public class DescribeTargetHealthRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Used to inclue anomaly detection information.
+     * Used to include anomaly detection information.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -197,7 +197,7 @@ public class DescribeTargetHealthRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param include
-     *        Used to inclue anomaly detection information.
+     *        Used to include anomaly detection information.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DescribeTargetHealthInputIncludeEnum
      */
@@ -214,11 +214,11 @@ public class DescribeTargetHealthRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Used to inclue anomaly detection information.
+     * Used to include anomaly detection information.
      * </p>
      * 
      * @param include
-     *        Used to inclue anomaly detection information.
+     *        Used to include anomaly detection information.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DescribeTargetHealthInputIncludeEnum
      */
@@ -230,11 +230,11 @@ public class DescribeTargetHealthRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Used to inclue anomaly detection information.
+     * Used to include anomaly detection information.
      * </p>
      * 
      * @param include
-     *        Used to inclue anomaly detection information.
+     *        Used to include anomaly detection information.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DescribeTargetHealthInputIncludeEnum
      */

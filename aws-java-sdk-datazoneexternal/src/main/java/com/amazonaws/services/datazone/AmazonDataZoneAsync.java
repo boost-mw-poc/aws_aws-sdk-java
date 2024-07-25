@@ -1766,6 +1766,39 @@ public interface AmazonDataZoneAsync extends AmazonDataZone {
 
     /**
      * <p>
+     * Gets the credentials of an environment in Amazon DataZone.
+     * </p>
+     * 
+     * @param getEnvironmentCredentialsRequest
+     * @return A Java Future containing the result of the GetEnvironmentCredentials operation returned by the service.
+     * @sample AmazonDataZoneAsync.GetEnvironmentCredentials
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetEnvironmentCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEnvironmentCredentialsResult> getEnvironmentCredentialsAsync(
+            GetEnvironmentCredentialsRequest getEnvironmentCredentialsRequest);
+
+    /**
+     * <p>
+     * Gets the credentials of an environment in Amazon DataZone.
+     * </p>
+     * 
+     * @param getEnvironmentCredentialsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEnvironmentCredentials operation returned by the service.
+     * @sample AmazonDataZoneAsyncHandler.GetEnvironmentCredentials
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetEnvironmentCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEnvironmentCredentialsResult> getEnvironmentCredentialsAsync(
+            GetEnvironmentCredentialsRequest getEnvironmentCredentialsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEnvironmentCredentialsRequest, GetEnvironmentCredentialsResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets an evinronment profile in Amazon DataZone.
      * </p>
      * 

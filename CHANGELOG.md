@@ -1,3 +1,52 @@
+# __1.12.765__ __2024-07-25__
+## __AWS CodeCommit__
+  - ### Features
+    - CreateRepository API now throws OperationNotAllowedException when the account has been restricted from creating a repository.
+
+## __AWS Network Firewall__
+  - ### Features
+    - You can now log events that are related to TLS inspection, in addition to the existing alert and flow logging.
+
+## __AWS Outposts__
+  - ### Features
+    - Adding default vCPU information to GetOutpostSupportedInstanceTypes and GetOutpostInstanceTypes responses
+
+## __AWS Step Functions__
+  - ### Features
+    - This release adds support to customer managed KMS key encryption in AWS Step Functions.
+
+## __Amazon Bedrock Runtime__
+  - ### Features
+    - Provides ServiceUnavailableException error message
+
+## __Amazon CloudWatch Application Signals__
+  - ### Features
+    - CloudWatch Application Signals now supports application logs correlation with traces and operational health metrics of applications running on EC2 instances. Users can view the most relevant telemetry to troubleshoot application health anomalies such as spikes in latency, errors, and availability.
+
+## __Amazon DataZone__
+  - ### Features
+    - Introduces GetEnvironmentCredentials operation to SDK
+
+## __Amazon EC2 Container Registry__
+  - ### Features
+    - API and documentation updates for Amazon ECR, adding support for creating, updating, describing and deleting ECR Repository Creation Template.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - EC2 Fleet now supports using custom identifiers to reference Amazon Machine Images (AMI) in launch requests that are configured to choose from a diversified list of instance types.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - This release adds support for EKS cluster to manage extended support.
+
+## __Application Auto Scaling__
+  - ### Features
+    - Application Auto Scaling is now more responsive to the changes in demand of your SageMaker Inference endpoints. To get started, create or update a Target Tracking policy based on High Resolution CloudWatch metrics.
+
+## __Elastic Load Balancing__
+  - ### Features
+    - This release adds support for sharing trust stores across accounts and organizations through integration with AWS Resource Access Manager.
+
 # __1.12.764__ __2024-07-24__
 ## __AWS AppSync__
   - ### Features

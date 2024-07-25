@@ -60,6 +60,13 @@ public class UpdateClusterConfigRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private UpdateAccessConfigRequest accessConfig;
+    /**
+     * <p>
+     * You can enable or disable extended support for clusters currently on standard support. You cannot disable
+     * extended support once it starts. You must enable extended support before your cluster exits standard support.
+     * </p>
+     */
+    private UpgradePolicyRequest upgradePolicy;
 
     /**
      * <p>
@@ -296,6 +303,55 @@ public class UpdateClusterConfigRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * You can enable or disable extended support for clusters currently on standard support. You cannot disable
+     * extended support once it starts. You must enable extended support before your cluster exits standard support.
+     * </p>
+     * 
+     * @param upgradePolicy
+     *        You can enable or disable extended support for clusters currently on standard support. You cannot disable
+     *        extended support once it starts. You must enable extended support before your cluster exits standard
+     *        support.
+     */
+
+    public void setUpgradePolicy(UpgradePolicyRequest upgradePolicy) {
+        this.upgradePolicy = upgradePolicy;
+    }
+
+    /**
+     * <p>
+     * You can enable or disable extended support for clusters currently on standard support. You cannot disable
+     * extended support once it starts. You must enable extended support before your cluster exits standard support.
+     * </p>
+     * 
+     * @return You can enable or disable extended support for clusters currently on standard support. You cannot disable
+     *         extended support once it starts. You must enable extended support before your cluster exits standard
+     *         support.
+     */
+
+    public UpgradePolicyRequest getUpgradePolicy() {
+        return this.upgradePolicy;
+    }
+
+    /**
+     * <p>
+     * You can enable or disable extended support for clusters currently on standard support. You cannot disable
+     * extended support once it starts. You must enable extended support before your cluster exits standard support.
+     * </p>
+     * 
+     * @param upgradePolicy
+     *        You can enable or disable extended support for clusters currently on standard support. You cannot disable
+     *        extended support once it starts. You must enable extended support before your cluster exits standard
+     *        support.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateClusterConfigRequest withUpgradePolicy(UpgradePolicyRequest upgradePolicy) {
+        setUpgradePolicy(upgradePolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -316,7 +372,9 @@ public class UpdateClusterConfigRequest extends com.amazonaws.AmazonWebServiceRe
         if (getClientRequestToken() != null)
             sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
         if (getAccessConfig() != null)
-            sb.append("AccessConfig: ").append(getAccessConfig());
+            sb.append("AccessConfig: ").append(getAccessConfig()).append(",");
+        if (getUpgradePolicy() != null)
+            sb.append("UpgradePolicy: ").append(getUpgradePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -351,6 +409,10 @@ public class UpdateClusterConfigRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getAccessConfig() != null && other.getAccessConfig().equals(this.getAccessConfig()) == false)
             return false;
+        if (other.getUpgradePolicy() == null ^ this.getUpgradePolicy() == null)
+            return false;
+        if (other.getUpgradePolicy() != null && other.getUpgradePolicy().equals(this.getUpgradePolicy()) == false)
+            return false;
         return true;
     }
 
@@ -364,6 +426,7 @@ public class UpdateClusterConfigRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getLogging() == null) ? 0 : getLogging().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getAccessConfig() == null) ? 0 : getAccessConfig().hashCode());
+        hashCode = prime * hashCode + ((getUpgradePolicy() == null) ? 0 : getUpgradePolicy().hashCode());
         return hashCode;
     }
 

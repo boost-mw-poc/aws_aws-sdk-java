@@ -747,6 +747,19 @@ public class AbstractAmazonDataZoneAsync extends AbstractAmazonDataZone implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetEnvironmentCredentialsResult> getEnvironmentCredentialsAsync(GetEnvironmentCredentialsRequest request) {
+
+        return getEnvironmentCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEnvironmentCredentialsResult> getEnvironmentCredentialsAsync(GetEnvironmentCredentialsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEnvironmentCredentialsRequest, GetEnvironmentCredentialsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEnvironmentProfileResult> getEnvironmentProfileAsync(GetEnvironmentProfileRequest request) {
 
         return getEnvironmentProfileAsync(request, null);

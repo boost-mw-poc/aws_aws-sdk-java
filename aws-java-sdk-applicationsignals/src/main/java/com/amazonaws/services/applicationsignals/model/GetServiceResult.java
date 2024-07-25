@@ -34,6 +34,10 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * The start time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch time in
      * seconds. For example: <code>1698778057</code>.
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      */
     private java.util.Date startTime;
     /**
@@ -41,8 +45,36 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * The end time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch time in
      * seconds. For example: <code>1698778057</code>.
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      */
     private java.util.Date endTime;
+    /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private java.util.List<java.util.Map<String, String>> logGroupReferences;
 
     /**
      * <p>
@@ -89,10 +121,17 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * The start time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch time in
      * seconds. For example: <code>1698778057</code>.
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @param startTime
      *        The start time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch
-     *        time in seconds. For example: <code>1698778057</code>.
+     *        time in seconds. For example: <code>1698778057</code>.</p>
+     *        <p>
+     *        This displays the time that Application Signals used for the request. It might not match your request
+     *        exactly, because it was rounded to the nearest hour.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -104,9 +143,16 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * The start time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch time in
      * seconds. For example: <code>1698778057</code>.
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @return The start time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch
-     *         time in seconds. For example: <code>1698778057</code>.
+     *         time in seconds. For example: <code>1698778057</code>.</p>
+     *         <p>
+     *         This displays the time that Application Signals used for the request. It might not match your request
+     *         exactly, because it was rounded to the nearest hour.
      */
 
     public java.util.Date getStartTime() {
@@ -118,10 +164,17 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * The start time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch time in
      * seconds. For example: <code>1698778057</code>.
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @param startTime
      *        The start time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch
-     *        time in seconds. For example: <code>1698778057</code>.
+     *        time in seconds. For example: <code>1698778057</code>.</p>
+     *        <p>
+     *        This displays the time that Application Signals used for the request. It might not match your request
+     *        exactly, because it was rounded to the nearest hour.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,10 +188,17 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * The end time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch time in
      * seconds. For example: <code>1698778057</code>.
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @param endTime
      *        The end time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch
-     *        time in seconds. For example: <code>1698778057</code>.
+     *        time in seconds. For example: <code>1698778057</code>.</p>
+     *        <p>
+     *        This displays the time that Application Signals used for the request. It might not match your request
+     *        exactly, because it was rounded to the nearest hour.
      */
 
     public void setEndTime(java.util.Date endTime) {
@@ -150,9 +210,16 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * The end time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch time in
      * seconds. For example: <code>1698778057</code>.
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @return The end time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch
-     *         time in seconds. For example: <code>1698778057</code>.
+     *         time in seconds. For example: <code>1698778057</code>.</p>
+     *         <p>
+     *         This displays the time that Application Signals used for the request. It might not match your request
+     *         exactly, because it was rounded to the nearest hour.
      */
 
     public java.util.Date getEndTime() {
@@ -164,15 +231,232 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * The end time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch time in
      * seconds. For example: <code>1698778057</code>.
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @param endTime
      *        The end time of the data included in the response. In a raw HTTP Query API, it is formatted as be epoch
-     *        time in seconds. For example: <code>1698778057</code>.
+     *        time in seconds. For example: <code>1698778057</code>.</p>
+     *        <p>
+     *        This displays the time that Application Signals used for the request. It might not match your request
+     *        exactly, because it was rounded to the nearest hour.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public GetServiceResult withEndTime(java.util.Date endTime) {
         setEndTime(endTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return An array of string-to-string maps that each contain information about one log group associated with this
+     *         service. Each string-to-string map includes the following fields:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>"Type": "AWS::Resource"</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     *         </p>
+     *         </li>
+     */
+
+    public java.util.List<java.util.Map<String, String>> getLogGroupReferences() {
+        return logGroupReferences;
+    }
+
+    /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param logGroupReferences
+     *        An array of string-to-string maps that each contain information about one log group associated with this
+     *        service. Each string-to-string map includes the following fields:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>"Type": "AWS::Resource"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     *        </p>
+     *        </li>
+     */
+
+    public void setLogGroupReferences(java.util.Collection<java.util.Map<String, String>> logGroupReferences) {
+        if (logGroupReferences == null) {
+            this.logGroupReferences = null;
+            return;
+        }
+
+        this.logGroupReferences = new java.util.ArrayList<java.util.Map<String, String>>(logGroupReferences);
+    }
+
+    /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLogGroupReferences(java.util.Collection)} or {@link #withLogGroupReferences(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param logGroupReferences
+     *        An array of string-to-string maps that each contain information about one log group associated with this
+     *        service. Each string-to-string map includes the following fields:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>"Type": "AWS::Resource"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetServiceResult withLogGroupReferences(java.util.Map<String, String>... logGroupReferences) {
+        if (this.logGroupReferences == null) {
+            setLogGroupReferences(new java.util.ArrayList<java.util.Map<String, String>>(logGroupReferences.length));
+        }
+        for (java.util.Map<String, String> ele : logGroupReferences) {
+            this.logGroupReferences.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of string-to-string maps that each contain information about one log group associated with this service.
+     * Each string-to-string map includes the following fields:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>"Type": "AWS::Resource"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param logGroupReferences
+     *        An array of string-to-string maps that each contain information about one log group associated with this
+     *        service. Each string-to-string map includes the following fields:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>"Type": "AWS::Resource"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"ResourceType": "AWS::Logs::LogGroup"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>"Identifier": "<i>name-of-log-group</i>"</code>
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetServiceResult withLogGroupReferences(java.util.Collection<java.util.Map<String, String>> logGroupReferences) {
+        setLogGroupReferences(logGroupReferences);
         return this;
     }
 
@@ -193,7 +477,9 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
         if (getStartTime() != null)
             sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getEndTime() != null)
-            sb.append("EndTime: ").append(getEndTime());
+            sb.append("EndTime: ").append(getEndTime()).append(",");
+        if (getLogGroupReferences() != null)
+            sb.append("LogGroupReferences: ").append(getLogGroupReferences());
         sb.append("}");
         return sb.toString();
     }
@@ -220,6 +506,10 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
             return false;
         if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
             return false;
+        if (other.getLogGroupReferences() == null ^ this.getLogGroupReferences() == null)
+            return false;
+        if (other.getLogGroupReferences() != null && other.getLogGroupReferences().equals(this.getLogGroupReferences()) == false)
+            return false;
         return true;
     }
 
@@ -231,6 +521,7 @@ public class GetServiceResult extends com.amazonaws.AmazonWebServiceResult<com.a
         hashCode = prime * hashCode + ((getService() == null) ? 0 : getService().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
+        hashCode = prime * hashCode + ((getLogGroupReferences() == null) ? 0 : getLogGroupReferences().hashCode());
         return hashCode;
     }
 

@@ -30,12 +30,18 @@ public class ListServiceOperationsRequest extends com.amazonaws.AmazonWebService
      * The start of the time period to retrieve information about. When used in a raw HTTP Query API, it is formatted as
      * be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * Your requested start time will be rounded to the nearest hour.
+     * </p>
      */
     private java.util.Date startTime;
     /**
      * <p>
      * The end of the time period to retrieve information about. When used in a raw HTTP Query API, it is formatted as
      * be epoch time in seconds. For example: <code>1698778057</code>
+     * </p>
+     * <p>
+     * Your requested end time will be rounded to the nearest hour.
      * </p>
      */
     private java.util.Date endTime;
@@ -97,10 +103,15 @@ public class ListServiceOperationsRequest extends com.amazonaws.AmazonWebService
      * The start of the time period to retrieve information about. When used in a raw HTTP Query API, it is formatted as
      * be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * Your requested start time will be rounded to the nearest hour.
+     * </p>
      * 
      * @param startTime
      *        The start of the time period to retrieve information about. When used in a raw HTTP Query API, it is
-     *        formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *        formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *        <p>
+     *        Your requested start time will be rounded to the nearest hour.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -112,9 +123,14 @@ public class ListServiceOperationsRequest extends com.amazonaws.AmazonWebService
      * The start of the time period to retrieve information about. When used in a raw HTTP Query API, it is formatted as
      * be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * Your requested start time will be rounded to the nearest hour.
+     * </p>
      * 
      * @return The start of the time period to retrieve information about. When used in a raw HTTP Query API, it is
-     *         formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *         formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *         <p>
+     *         Your requested start time will be rounded to the nearest hour.
      */
 
     public java.util.Date getStartTime() {
@@ -126,10 +142,15 @@ public class ListServiceOperationsRequest extends com.amazonaws.AmazonWebService
      * The start of the time period to retrieve information about. When used in a raw HTTP Query API, it is formatted as
      * be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * Your requested start time will be rounded to the nearest hour.
+     * </p>
      * 
      * @param startTime
      *        The start of the time period to retrieve information about. When used in a raw HTTP Query API, it is
-     *        formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *        formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *        <p>
+     *        Your requested start time will be rounded to the nearest hour.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,10 +164,15 @@ public class ListServiceOperationsRequest extends com.amazonaws.AmazonWebService
      * The end of the time period to retrieve information about. When used in a raw HTTP Query API, it is formatted as
      * be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * Your requested end time will be rounded to the nearest hour.
+     * </p>
      * 
      * @param endTime
      *        The end of the time period to retrieve information about. When used in a raw HTTP Query API, it is
-     *        formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *        formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *        <p>
+     *        Your requested end time will be rounded to the nearest hour.
      */
 
     public void setEndTime(java.util.Date endTime) {
@@ -158,9 +184,14 @@ public class ListServiceOperationsRequest extends com.amazonaws.AmazonWebService
      * The end of the time period to retrieve information about. When used in a raw HTTP Query API, it is formatted as
      * be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * Your requested end time will be rounded to the nearest hour.
+     * </p>
      * 
      * @return The end of the time period to retrieve information about. When used in a raw HTTP Query API, it is
-     *         formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *         formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *         <p>
+     *         Your requested end time will be rounded to the nearest hour.
      */
 
     public java.util.Date getEndTime() {
@@ -172,10 +203,15 @@ public class ListServiceOperationsRequest extends com.amazonaws.AmazonWebService
      * The end of the time period to retrieve information about. When used in a raw HTTP Query API, it is formatted as
      * be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * Your requested end time will be rounded to the nearest hour.
+     * </p>
      * 
      * @param endTime
      *        The end of the time period to retrieve information about. When used in a raw HTTP Query API, it is
-     *        formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *        formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *        <p>
+     *        Your requested end time will be rounded to the nearest hour.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

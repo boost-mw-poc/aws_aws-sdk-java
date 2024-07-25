@@ -15,7 +15,9 @@ package com.amazonaws.services.stepfunctions.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * Configuration is not valid.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class InvalidLoggingConfigurationException extends com.amazonaws.services.stepfunctions.model.AWSStepFunctionsException {

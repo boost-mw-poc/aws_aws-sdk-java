@@ -31,7 +31,7 @@ public class ResourceNotFoundException extends com.amazonaws.services.applicatio
     private String resourceType;
     /**
      * <p>
-     * Cannot find the resource id.
+     * Can't find the resource id.
      * </p>
      */
     private String resourceId;
@@ -90,11 +90,11 @@ public class ResourceNotFoundException extends com.amazonaws.services.applicatio
 
     /**
      * <p>
-     * Cannot find the resource id.
+     * Can't find the resource id.
      * </p>
      * 
      * @param resourceId
-     *        Cannot find the resource id.
+     *        Can't find the resource id.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
@@ -104,10 +104,10 @@ public class ResourceNotFoundException extends com.amazonaws.services.applicatio
 
     /**
      * <p>
-     * Cannot find the resource id.
+     * Can't find the resource id.
      * </p>
      * 
-     * @return Cannot find the resource id.
+     * @return Can't find the resource id.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
@@ -117,11 +117,11 @@ public class ResourceNotFoundException extends com.amazonaws.services.applicatio
 
     /**
      * <p>
-     * Cannot find the resource id.
+     * Can't find the resource id.
      * </p>
      * 
      * @param resourceId
-     *        Cannot find the resource id.
+     *        Can't find the resource id.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

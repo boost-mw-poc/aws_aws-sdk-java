@@ -11258,6 +11258,12 @@
       }, {
         "name" : "WorkSpacesAverageUserSessionsCapacityUtilization",
         "value" : "WorkSpacesAverageUserSessionsCapacityUtilization"
+      }, {
+        "name" : "SageMakerInferenceComponentConcurrentRequestsPerCopyHighResolution",
+        "value" : "SageMakerInferenceComponentConcurrentRequestsPerCopyHighResolution"
+      }, {
+        "name" : "SageMakerVariantConcurrentRequestsPerModelHighResolution",
+        "value" : "SageMakerVariantConcurrentRequestsPerModelHighResolution"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.applicationautoscaling.enum.MetricType",

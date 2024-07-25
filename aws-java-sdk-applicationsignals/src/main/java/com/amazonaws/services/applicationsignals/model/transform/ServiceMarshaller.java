@@ -35,6 +35,8 @@ public class ServiceMarshaller {
             .marshallLocationName("AttributeMaps").build();
     private static final MarshallingInfo<List> METRICREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetricReferences").build();
+    private static final MarshallingInfo<List> LOGGROUPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogGroupReferences").build();
 
     private static final ServiceMarshaller instance = new ServiceMarshaller();
 
@@ -55,6 +57,7 @@ public class ServiceMarshaller {
             protocolMarshaller.marshall(service.getKeyAttributes(), KEYATTRIBUTES_BINDING);
             protocolMarshaller.marshall(service.getAttributeMaps(), ATTRIBUTEMAPS_BINDING);
             protocolMarshaller.marshall(service.getMetricReferences(), METRICREFERENCES_BINDING);
+            protocolMarshaller.marshall(service.getLogGroupReferences(), LOGGROUPREFERENCES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

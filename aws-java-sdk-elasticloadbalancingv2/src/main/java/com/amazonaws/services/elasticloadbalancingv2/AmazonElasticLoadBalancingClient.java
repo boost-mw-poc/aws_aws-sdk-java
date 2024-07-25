@@ -381,6 +381,10 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
             exceptionUnmarshallersMap.put("ListenerNotFound", new ListenerNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new ListenerNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ResourceNotFound") == null) {
+            exceptionUnmarshallersMap.put("ResourceNotFound", new ResourceNotFoundExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new ResourceNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("PriorityInUse") == null) {
             exceptionUnmarshallersMap.put("PriorityInUse", new PriorityInUseExceptionUnmarshaller());
         }
@@ -413,6 +417,10 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
             exceptionUnmarshallersMap.put("TooManyUniqueTargetGroupsPerLoadBalancer", new TooManyUniqueTargetGroupsPerLoadBalancerExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new TooManyUniqueTargetGroupsPerLoadBalancerExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("AssociationNotFound") == null) {
+            exceptionUnmarshallersMap.put("AssociationNotFound", new TrustStoreAssociationNotFoundExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new TrustStoreAssociationNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("ResourceInUse") == null) {
             exceptionUnmarshallersMap.put("ResourceInUse", new ResourceInUseExceptionUnmarshaller());
         }
@@ -505,6 +513,10 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
             exceptionUnmarshallersMap.put("RuleNotFound", new RuleNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new RuleNotFoundExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("DeleteAssociationSameAccount") == null) {
+            exceptionUnmarshallersMap.put("DeleteAssociationSameAccount", new DeleteAssociationSameAccountExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new DeleteAssociationSameAccountExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("HealthUnavailable") == null) {
             exceptionUnmarshallersMap.put("HealthUnavailable", new HealthUnavailableExceptionUnmarshaller());
         }
@@ -1406,6 +1418,70 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
             }
 
             StaxResponseHandler<DeleteRuleResult> responseHandler = new StaxResponseHandler<DeleteRuleResult>(new DeleteRuleResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a shared trust store association.
+     * </p>
+     * 
+     * @param deleteSharedTrustStoreAssociationRequest
+     * @return Result of the DeleteSharedTrustStoreAssociation operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws DeleteAssociationSameAccountException
+     *         The specified association cannot be within the same account.
+     * @throws TrustStoreAssociationNotFoundException
+     *         The specified association does not exist.
+     * @sample AmazonElasticLoadBalancing.DeleteSharedTrustStoreAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteSharedTrustStoreAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteSharedTrustStoreAssociationResult deleteSharedTrustStoreAssociation(DeleteSharedTrustStoreAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteSharedTrustStoreAssociation(request);
+    }
+
+    @SdkInternalApi
+    final DeleteSharedTrustStoreAssociationResult executeDeleteSharedTrustStoreAssociation(
+            DeleteSharedTrustStoreAssociationRequest deleteSharedTrustStoreAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteSharedTrustStoreAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteSharedTrustStoreAssociationRequest> request = null;
+        Response<DeleteSharedTrustStoreAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteSharedTrustStoreAssociationRequestMarshaller().marshall(super.beforeMarshalling(deleteSharedTrustStoreAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Elastic Load Balancing v2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteSharedTrustStoreAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteSharedTrustStoreAssociationResult> responseHandler = new StaxResponseHandler<DeleteSharedTrustStoreAssociationResult>(
+                    new DeleteSharedTrustStoreAssociationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -2456,7 +2532,7 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Describes the revocation files in use by the specified trust store arn, or revocation ID.
+     * Describes the revocation files in use by the specified trust store or revocation files.
      * </p>
      * 
      * @param describeTrustStoreRevocationsRequest
@@ -2517,7 +2593,7 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Describes all trust stores for a given account by trust store arn’s or name.
+     * Describes all trust stores for the specified account.
      * </p>
      * 
      * @param describeTrustStoresRequest
@@ -2562,6 +2638,64 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
 
             StaxResponseHandler<DescribeTrustStoresResult> responseHandler = new StaxResponseHandler<DescribeTrustStoresResult>(
                     new DescribeTrustStoresResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the resource policy for a specified resource.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @return Result of the GetResourcePolicy operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonElasticLoadBalancing.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/GetResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetResourcePolicyResult executeGetResourcePolicy(GetResourcePolicyRequest getResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetResourcePolicyRequest> request = null;
+        Response<GetResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetResourcePolicyRequestMarshaller().marshall(super.beforeMarshalling(getResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Elastic Load Balancing v2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetResourcePolicyResult> responseHandler = new StaxResponseHandler<GetResourcePolicyResult>(
+                    new GetResourcePolicyResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -3076,7 +3210,7 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Update the ca certificate bundle for a given trust store.
+     * Update the ca certificate bundle for the specified trust store.
      * </p>
      * 
      * @param modifyTrustStoreRequest

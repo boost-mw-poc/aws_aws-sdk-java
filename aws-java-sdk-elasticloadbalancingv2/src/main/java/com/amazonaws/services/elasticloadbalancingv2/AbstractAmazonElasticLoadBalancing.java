@@ -94,6 +94,11 @@ public class AbstractAmazonElasticLoadBalancing implements AmazonElasticLoadBala
     }
 
     @Override
+    public DeleteSharedTrustStoreAssociationResult deleteSharedTrustStoreAssociation(DeleteSharedTrustStoreAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteTargetGroupResult deleteTargetGroup(DeleteTargetGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -175,6 +180,11 @@ public class AbstractAmazonElasticLoadBalancing implements AmazonElasticLoadBala
 
     @Override
     public DescribeTrustStoresResult describeTrustStores(DescribeTrustStoresRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

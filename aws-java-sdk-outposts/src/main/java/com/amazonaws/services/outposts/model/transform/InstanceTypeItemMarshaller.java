@@ -29,6 +29,8 @@ public class InstanceTypeItemMarshaller {
 
     private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceType").build();
+    private static final MarshallingInfo<Integer> VCPUS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("VCPUs").build();
 
     private static final InstanceTypeItemMarshaller instance = new InstanceTypeItemMarshaller();
 
@@ -47,6 +49,7 @@ public class InstanceTypeItemMarshaller {
 
         try {
             protocolMarshaller.marshall(instanceTypeItem.getInstanceType(), INSTANCETYPE_BINDING);
+            protocolMarshaller.marshall(instanceTypeItem.getVCPUs(), VCPUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -1523,6 +1523,31 @@ public interface AmazonDataZone {
 
     /**
      * <p>
+     * Gets the credentials of an environment in Amazon DataZone.
+     * </p>
+     * 
+     * @param getEnvironmentCredentialsRequest
+     * @return Result of the GetEnvironmentCredentials operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed because of an unknown error, exception or failure.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the Amazon Web Services service.
+     * @throws UnauthorizedException
+     *         You do not have permission to perform this action.
+     * @sample AmazonDataZone.GetEnvironmentCredentials
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datazone-2018-05-10/GetEnvironmentCredentials"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetEnvironmentCredentialsResult getEnvironmentCredentials(GetEnvironmentCredentialsRequest getEnvironmentCredentialsRequest);
+
+    /**
+     * <p>
      * Gets an evinronment profile in Amazon DataZone.
      * </p>
      * 

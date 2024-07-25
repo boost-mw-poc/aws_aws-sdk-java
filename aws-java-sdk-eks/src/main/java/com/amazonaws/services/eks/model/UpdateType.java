@@ -29,7 +29,8 @@ public enum UpdateType {
     AssociateEncryptionConfig("AssociateEncryptionConfig"),
     AddonUpdate("AddonUpdate"),
     VpcConfigUpdate("VpcConfigUpdate"),
-    AccessConfigUpdate("AccessConfigUpdate");
+    AccessConfigUpdate("AccessConfigUpdate"),
+    UpgradePolicyUpdate("UpgradePolicyUpdate");
 
     private String value;
 

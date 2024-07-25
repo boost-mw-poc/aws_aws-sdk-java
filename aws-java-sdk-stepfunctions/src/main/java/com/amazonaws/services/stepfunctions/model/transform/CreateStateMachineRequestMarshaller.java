@@ -46,6 +46,8 @@ public class CreateStateMachineRequestMarshaller {
             .marshallLocationName("publish").build();
     private static final MarshallingInfo<String> VERSIONDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("versionDescription").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("encryptionConfiguration").build();
 
     private static final CreateStateMachineRequestMarshaller instance = new CreateStateMachineRequestMarshaller();
 
@@ -72,6 +74,7 @@ public class CreateStateMachineRequestMarshaller {
             protocolMarshaller.marshall(createStateMachineRequest.getTracingConfiguration(), TRACINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createStateMachineRequest.getPublish(), PUBLISH_BINDING);
             protocolMarshaller.marshall(createStateMachineRequest.getVersionDescription(), VERSIONDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(createStateMachineRequest.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -659,6 +659,41 @@ public class AmazonElasticLoadBalancingAsyncClient extends AmazonElasticLoadBala
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteSharedTrustStoreAssociationResult> deleteSharedTrustStoreAssociationAsync(
+            DeleteSharedTrustStoreAssociationRequest request) {
+
+        return deleteSharedTrustStoreAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSharedTrustStoreAssociationResult> deleteSharedTrustStoreAssociationAsync(
+            final DeleteSharedTrustStoreAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteSharedTrustStoreAssociationRequest, DeleteSharedTrustStoreAssociationResult> asyncHandler) {
+        final DeleteSharedTrustStoreAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteSharedTrustStoreAssociationResult>() {
+            @Override
+            public DeleteSharedTrustStoreAssociationResult call() throws Exception {
+                DeleteSharedTrustStoreAssociationResult result = null;
+
+                try {
+                    result = executeDeleteSharedTrustStoreAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteTargetGroupResult> deleteTargetGroupAsync(DeleteTargetGroupRequest request) {
 
         return deleteTargetGroupAsync(request, null);
@@ -1208,6 +1243,39 @@ public class AmazonElasticLoadBalancingAsyncClient extends AmazonElasticLoadBala
 
                 try {
                     result = executeDescribeTrustStores(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest request) {
+
+        return getResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(final GetResourcePolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetResourcePolicyRequest, GetResourcePolicyResult> asyncHandler) {
+        final GetResourcePolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetResourcePolicyResult>() {
+            @Override
+            public GetResourcePolicyResult call() throws Exception {
+                GetResourcePolicyResult result = null;
+
+                try {
+                    result = executeGetResourcePolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

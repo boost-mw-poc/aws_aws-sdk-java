@@ -28,12 +28,20 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
      * The start of the time period that the returned information applies to. When used in a raw HTTP Query API, it is
      * formatted as be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      */
     private java.util.Date startTime;
     /**
      * <p>
      * The end of the time period that the returned information applies to. When used in a raw HTTP Query API, it is
      * formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
      * </p>
      */
     private java.util.Date endTime;
@@ -57,10 +65,17 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
      * The start of the time period that the returned information applies to. When used in a raw HTTP Query API, it is
      * formatted as be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @param startTime
      *        The start of the time period that the returned information applies to. When used in a raw HTTP Query API,
-     *        it is formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *        it is formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *        <p>
+     *        This displays the time that Application Signals used for the request. It might not match your request
+     *        exactly, because it was rounded to the nearest hour.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -72,9 +87,16 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
      * The start of the time period that the returned information applies to. When used in a raw HTTP Query API, it is
      * formatted as be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @return The start of the time period that the returned information applies to. When used in a raw HTTP Query API,
-     *         it is formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *         it is formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *         <p>
+     *         This displays the time that Application Signals used for the request. It might not match your request
+     *         exactly, because it was rounded to the nearest hour.
      */
 
     public java.util.Date getStartTime() {
@@ -86,10 +108,17 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
      * The start of the time period that the returned information applies to. When used in a raw HTTP Query API, it is
      * formatted as be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @param startTime
      *        The start of the time period that the returned information applies to. When used in a raw HTTP Query API,
-     *        it is formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *        it is formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *        <p>
+     *        This displays the time that Application Signals used for the request. It might not match your request
+     *        exactly, because it was rounded to the nearest hour.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,10 +132,17 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
      * The end of the time period that the returned information applies to. When used in a raw HTTP Query API, it is
      * formatted as be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @param endTime
      *        The end of the time period that the returned information applies to. When used in a raw HTTP Query API, it
-     *        is formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *        is formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *        <p>
+     *        This displays the time that Application Signals used for the request. It might not match your request
+     *        exactly, because it was rounded to the nearest hour.
      */
 
     public void setEndTime(java.util.Date endTime) {
@@ -118,9 +154,16 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
      * The end of the time period that the returned information applies to. When used in a raw HTTP Query API, it is
      * formatted as be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @return The end of the time period that the returned information applies to. When used in a raw HTTP Query API,
-     *         it is formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *         it is formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *         <p>
+     *         This displays the time that Application Signals used for the request. It might not match your request
+     *         exactly, because it was rounded to the nearest hour.
      */
 
     public java.util.Date getEndTime() {
@@ -132,10 +175,17 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
      * The end of the time period that the returned information applies to. When used in a raw HTTP Query API, it is
      * formatted as be epoch time in seconds. For example: <code>1698778057</code>
      * </p>
+     * <p>
+     * This displays the time that Application Signals used for the request. It might not match your request exactly,
+     * because it was rounded to the nearest hour.
+     * </p>
      * 
      * @param endTime
      *        The end of the time period that the returned information applies to. When used in a raw HTTP Query API, it
-     *        is formatted as be epoch time in seconds. For example: <code>1698778057</code>
+     *        is formatted as be epoch time in seconds. For example: <code>1698778057</code> </p>
+     *        <p>
+     *        This displays the time that Application Signals used for the request. It might not match your request
+     *        exactly, because it was rounded to the nearest hour.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

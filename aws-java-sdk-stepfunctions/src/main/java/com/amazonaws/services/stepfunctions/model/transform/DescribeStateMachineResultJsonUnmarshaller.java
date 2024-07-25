@@ -96,6 +96,10 @@ public class DescribeStateMachineResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     describeStateMachineResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("encryptionConfiguration", targetDepth)) {
+                    context.nextToken();
+                    describeStateMachineResult.setEncryptionConfiguration(EncryptionConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

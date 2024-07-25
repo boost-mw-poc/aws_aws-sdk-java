@@ -67,7 +67,11 @@ public interface AmazonBedrockRuntimeAsync extends AmazonBedrockRuntime {
      * <p>
      * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
      * works with all models that support messages. This allows you to write code once and use it with different models.
-     * Should a model have unique inference parameters, you can also pass those unique parameters to the model.
+     * If a model has unique inference parameters, you can also pass those unique parameters to the model.
+     * </p>
+     * <p>
+     * Amazon Bedrock doesn't store any text, images, or documents that you provide as content. The data is only used to
+     * generate the response.
      * </p>
      * <p>
      * For information about the Converse API, see <i>Use the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
@@ -93,7 +97,11 @@ public interface AmazonBedrockRuntimeAsync extends AmazonBedrockRuntime {
      * <p>
      * Sends messages to the specified Amazon Bedrock model. <code>Converse</code> provides a consistent interface that
      * works with all models that support messages. This allows you to write code once and use it with different models.
-     * Should a model have unique inference parameters, you can also pass those unique parameters to the model.
+     * If a model has unique inference parameters, you can also pass those unique parameters to the model.
+     * </p>
+     * <p>
+     * Amazon Bedrock doesn't store any text, images, or documents that you provide as content. The data is only used to
+     * generate the response.
      * </p>
      * <p>
      * For information about the Converse API, see <i>Use the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.

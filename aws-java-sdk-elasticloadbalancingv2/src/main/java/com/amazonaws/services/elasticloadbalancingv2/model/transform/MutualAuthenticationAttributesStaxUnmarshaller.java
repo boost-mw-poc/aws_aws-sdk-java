@@ -57,6 +57,11 @@ public class MutualAuthenticationAttributesStaxUnmarshaller implements Unmarshal
                     mutualAuthenticationAttributes.setIgnoreClientCertificateExpiry(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("TrustStoreAssociationStatus", targetDepth)) {
+                    mutualAuthenticationAttributes.setTrustStoreAssociationStatus(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return mutualAuthenticationAttributes;

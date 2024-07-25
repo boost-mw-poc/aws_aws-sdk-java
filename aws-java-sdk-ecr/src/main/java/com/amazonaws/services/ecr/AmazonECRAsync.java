@@ -351,6 +351,49 @@ public interface AmazonECRAsync extends AmazonECR {
 
     /**
      * <p>
+     * Creates a repository creation template. This template is used to define the settings for repositories created by
+     * Amazon ECR on your behalf. For example, repositories created through pull through cache actions. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-creation-templates.html">Private
+     * repository creation templates</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * </p>
+     * 
+     * @param createRepositoryCreationTemplateRequest
+     * @return A Java Future containing the result of the CreateRepositoryCreationTemplate operation returned by the
+     *         service.
+     * @sample AmazonECRAsync.CreateRepositoryCreationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/CreateRepositoryCreationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRepositoryCreationTemplateResult> createRepositoryCreationTemplateAsync(
+            CreateRepositoryCreationTemplateRequest createRepositoryCreationTemplateRequest);
+
+    /**
+     * <p>
+     * Creates a repository creation template. This template is used to define the settings for repositories created by
+     * Amazon ECR on your behalf. For example, repositories created through pull through cache actions. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-creation-templates.html">Private
+     * repository creation templates</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * </p>
+     * 
+     * @param createRepositoryCreationTemplateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateRepositoryCreationTemplate operation returned by the
+     *         service.
+     * @sample AmazonECRAsyncHandler.CreateRepositoryCreationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/CreateRepositoryCreationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRepositoryCreationTemplateResult> createRepositoryCreationTemplateAsync(
+            CreateRepositoryCreationTemplateRequest createRepositoryCreationTemplateRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateRepositoryCreationTemplateRequest, CreateRepositoryCreationTemplateResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the lifecycle policy associated with the specified repository.
      * </p>
      * 
@@ -478,6 +521,41 @@ public interface AmazonECRAsync extends AmazonECR {
      */
     java.util.concurrent.Future<DeleteRepositoryResult> deleteRepositoryAsync(DeleteRepositoryRequest deleteRepositoryRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteRepositoryRequest, DeleteRepositoryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a repository creation template.
+     * </p>
+     * 
+     * @param deleteRepositoryCreationTemplateRequest
+     * @return A Java Future containing the result of the DeleteRepositoryCreationTemplate operation returned by the
+     *         service.
+     * @sample AmazonECRAsync.DeleteRepositoryCreationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeleteRepositoryCreationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRepositoryCreationTemplateResult> deleteRepositoryCreationTemplateAsync(
+            DeleteRepositoryCreationTemplateRequest deleteRepositoryCreationTemplateRequest);
+
+    /**
+     * <p>
+     * Deletes a repository creation template.
+     * </p>
+     * 
+     * @param deleteRepositoryCreationTemplateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteRepositoryCreationTemplate operation returned by the
+     *         service.
+     * @sample AmazonECRAsyncHandler.DeleteRepositoryCreationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeleteRepositoryCreationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRepositoryCreationTemplateResult> deleteRepositoryCreationTemplateAsync(
+            DeleteRepositoryCreationTemplateRequest deleteRepositoryCreationTemplateRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteRepositoryCreationTemplateRequest, DeleteRepositoryCreationTemplateResult> asyncHandler);
 
     /**
      * <p>
@@ -721,6 +799,43 @@ public interface AmazonECRAsync extends AmazonECR {
      */
     java.util.concurrent.Future<DescribeRepositoriesResult> describeRepositoriesAsync(DescribeRepositoriesRequest describeRepositoriesRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeRepositoriesRequest, DescribeRepositoriesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns details about the repository creation templates in a registry. The <code>prefixes</code> request
+     * parameter can be used to return the details for a specific repository creation template.
+     * </p>
+     * 
+     * @param describeRepositoryCreationTemplatesRequest
+     * @return A Java Future containing the result of the DescribeRepositoryCreationTemplates operation returned by the
+     *         service.
+     * @sample AmazonECRAsync.DescribeRepositoryCreationTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeRepositoryCreationTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRepositoryCreationTemplatesResult> describeRepositoryCreationTemplatesAsync(
+            DescribeRepositoryCreationTemplatesRequest describeRepositoryCreationTemplatesRequest);
+
+    /**
+     * <p>
+     * Returns details about the repository creation templates in a registry. The <code>prefixes</code> request
+     * parameter can be used to return the details for a specific repository creation template.
+     * </p>
+     * 
+     * @param describeRepositoryCreationTemplatesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeRepositoryCreationTemplates operation returned by the
+     *         service.
+     * @sample AmazonECRAsyncHandler.DescribeRepositoryCreationTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeRepositoryCreationTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRepositoryCreationTemplatesResult> describeRepositoryCreationTemplatesAsync(
+            DescribeRepositoryCreationTemplatesRequest describeRepositoryCreationTemplatesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeRepositoryCreationTemplatesRequest, DescribeRepositoryCreationTemplatesResult> asyncHandler);
 
     /**
      * <p>
@@ -1367,7 +1482,10 @@ public interface AmazonECRAsync extends AmazonECR {
      * PutReplicationConfiguration API is called, a service-linked IAM role is created in your account for the
      * replication process. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/using-service-linked-roles.html">Using
-     * service-linked roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * service-linked roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>. For more
+     * information on the custom role for replication, see <a href=
+     * "https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication-creation-templates.html#roles-creatingrole-user-console"
+     * >Creating an IAM role for replication</a>.
      * </p>
      * <note>
      * <p>
@@ -1393,7 +1511,10 @@ public interface AmazonECRAsync extends AmazonECR {
      * PutReplicationConfiguration API is called, a service-linked IAM role is created in your account for the
      * replication process. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/using-service-linked-roles.html">Using
-     * service-linked roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * service-linked roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>. For more
+     * information on the custom role for replication, see <a href=
+     * "https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication-creation-templates.html#roles-creatingrole-user-console"
+     * >Creating an IAM role for replication</a>.
      * </p>
      * <note>
      * <p>
@@ -1620,6 +1741,41 @@ public interface AmazonECRAsync extends AmazonECR {
     java.util.concurrent.Future<UpdatePullThroughCacheRuleResult> updatePullThroughCacheRuleAsync(
             UpdatePullThroughCacheRuleRequest updatePullThroughCacheRuleRequest,
             com.amazonaws.handlers.AsyncHandler<UpdatePullThroughCacheRuleRequest, UpdatePullThroughCacheRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an existing repository creation template.
+     * </p>
+     * 
+     * @param updateRepositoryCreationTemplateRequest
+     * @return A Java Future containing the result of the UpdateRepositoryCreationTemplate operation returned by the
+     *         service.
+     * @sample AmazonECRAsync.UpdateRepositoryCreationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/UpdateRepositoryCreationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRepositoryCreationTemplateResult> updateRepositoryCreationTemplateAsync(
+            UpdateRepositoryCreationTemplateRequest updateRepositoryCreationTemplateRequest);
+
+    /**
+     * <p>
+     * Updates an existing repository creation template.
+     * </p>
+     * 
+     * @param updateRepositoryCreationTemplateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateRepositoryCreationTemplate operation returned by the
+     *         service.
+     * @sample AmazonECRAsyncHandler.UpdateRepositoryCreationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/UpdateRepositoryCreationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRepositoryCreationTemplateResult> updateRepositoryCreationTemplateAsync(
+            UpdateRepositoryCreationTemplateRequest updateRepositoryCreationTemplateRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateRepositoryCreationTemplateRequest, UpdateRepositoryCreationTemplateResult> asyncHandler);
 
     /**
      * <p>

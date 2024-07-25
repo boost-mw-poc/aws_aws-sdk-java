@@ -120,6 +120,21 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<CreateRepositoryCreationTemplateResult> createRepositoryCreationTemplateAsync(
+            CreateRepositoryCreationTemplateRequest request) {
+
+        return createRepositoryCreationTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRepositoryCreationTemplateResult> createRepositoryCreationTemplateAsync(
+            CreateRepositoryCreationTemplateRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateRepositoryCreationTemplateRequest, CreateRepositoryCreationTemplateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteLifecyclePolicyResult> deleteLifecyclePolicyAsync(DeleteLifecyclePolicyRequest request) {
 
         return deleteLifecyclePolicyAsync(request, null);
@@ -167,6 +182,21 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     @Override
     public java.util.concurrent.Future<DeleteRepositoryResult> deleteRepositoryAsync(DeleteRepositoryRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteRepositoryRequest, DeleteRepositoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRepositoryCreationTemplateResult> deleteRepositoryCreationTemplateAsync(
+            DeleteRepositoryCreationTemplateRequest request) {
+
+        return deleteRepositoryCreationTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRepositoryCreationTemplateResult> deleteRepositoryCreationTemplateAsync(
+            DeleteRepositoryCreationTemplateRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteRepositoryCreationTemplateRequest, DeleteRepositoryCreationTemplateResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -258,6 +288,21 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     @Override
     public java.util.concurrent.Future<DescribeRepositoriesResult> describeRepositoriesAsync(DescribeRepositoriesRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeRepositoriesRequest, DescribeRepositoriesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRepositoryCreationTemplatesResult> describeRepositoryCreationTemplatesAsync(
+            DescribeRepositoryCreationTemplatesRequest request) {
+
+        return describeRepositoryCreationTemplatesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRepositoryCreationTemplatesResult> describeRepositoryCreationTemplatesAsync(
+            DescribeRepositoryCreationTemplatesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeRepositoryCreationTemplatesRequest, DescribeRepositoryCreationTemplatesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -561,6 +606,21 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     @Override
     public java.util.concurrent.Future<UpdatePullThroughCacheRuleResult> updatePullThroughCacheRuleAsync(UpdatePullThroughCacheRuleRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdatePullThroughCacheRuleRequest, UpdatePullThroughCacheRuleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRepositoryCreationTemplateResult> updateRepositoryCreationTemplateAsync(
+            UpdateRepositoryCreationTemplateRequest request) {
+
+        return updateRepositoryCreationTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRepositoryCreationTemplateResult> updateRepositoryCreationTemplateAsync(
+            UpdateRepositoryCreationTemplateRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateRepositoryCreationTemplateRequest, UpdateRepositoryCreationTemplateResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-pom</artifactId>
-  <version>1.12.765-SNAPSHOT</version>
+  <version>1.12.765</version>
   <packaging>pom</packaging>
   <name>AWS SDK for Java</name>
   <description>The Amazon Web Services SDK for Java provides Java APIs
@@ -309,7 +309,6 @@
     <module>aws-java-sdk-mediapackage</module>
     <module>aws-java-sdk-costexplorer</module>
     <module>aws-java-sdk-pricing</module>
-    <module>aws-java-sdk-mobile</module>
     <module>aws-java-sdk-cloudhsmv2</module>
     <module>aws-java-sdk-glue</module>
     <module>aws-java-sdk-migrationhub</module>

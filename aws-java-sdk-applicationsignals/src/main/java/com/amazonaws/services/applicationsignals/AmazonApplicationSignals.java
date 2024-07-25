@@ -26,12 +26,6 @@ import com.amazonaws.services.applicationsignals.model.*;
  * {@link com.amazonaws.services.applicationsignals.AbstractAmazonApplicationSignals} instead.
  * </p>
  * <p>
- * <important>
- * <p>
- * This is a Preview release of the Application Signals API Reference. Operations and parameters are subject to change
- * before the general availability release.
- * </p>
- * </important>
  * <p>
  * Use CloudWatch Application Signals for comprehensive observability of your cloud-based applications. It enables
  * real-time service health dashboards and helps you track long-term performance trends against your business goals. The
@@ -61,6 +55,11 @@ import com.amazonaws.services.applicationsignals.model.*;
  * </p>
  * </li>
  * </ul>
+ * <p>
+ * Application Signals works with CloudWatch RUM, CloudWatch Synthetics canaries, and Amazon Web Services Service
+ * Catalog AppRegistry, to display your client pages, Synthetics canaries, and application names within dashboards and
+ * maps.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonApplicationSignals {

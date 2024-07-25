@@ -47,7 +47,8 @@ public enum UpdateParamType {
     SecurityGroups("SecurityGroups"),
     Subnets("Subnets"),
     AuthenticationMode("AuthenticationMode"),
-    PodIdentityAssociations("PodIdentityAssociations");
+    PodIdentityAssociations("PodIdentityAssociations"),
+    UpgradePolicy("UpgradePolicy");
 
     private String value;
 

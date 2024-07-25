@@ -32,6 +32,8 @@ public class CreateActivityRequestMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("encryptionConfiguration").build();
 
     private static final CreateActivityRequestMarshaller instance = new CreateActivityRequestMarshaller();
 
@@ -51,6 +53,7 @@ public class CreateActivityRequestMarshaller {
         try {
             protocolMarshaller.marshall(createActivityRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createActivityRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createActivityRequest.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

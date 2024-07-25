@@ -41,6 +41,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
      * </p>
      * <p>
+     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     * Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete the
+     * authentication process, resulting in HTTP 500 errors.
+     * </p>
+     * <p>
      * [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4 addresses)
      * and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t specify <code>dualstack</code> for a load
      * balancer with a UDP or TCP_UDP listener.
@@ -102,6 +107,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
      * </p>
      * <p>
+     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     * Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete the
+     * authentication process, resulting in HTTP 500 errors.
+     * </p>
+     * <p>
      * [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4 addresses)
      * and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t specify <code>dualstack</code> for a load
      * balancer with a UDP or TCP_UDP listener.
@@ -118,6 +128,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      *        addresses), <code>dualstack</code> (for IPv4 and IPv6 addresses), and
      *        <code>dualstack-without-public-ipv4</code> (for IPv6 only public addresses, with private IPv4 and IPv6
      *        addresses).
+     *        </p>
+     *        <p>
+     *        Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     *        Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete
+     *        the authentication process, resulting in HTTP 500 errors.
      *        </p>
      *        <p>
      *        [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4
@@ -144,6 +159,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
      * </p>
      * <p>
+     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     * Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete the
+     * authentication process, resulting in HTTP 500 errors.
+     * </p>
+     * <p>
      * [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4 addresses)
      * and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t specify <code>dualstack</code> for a load
      * balancer with a UDP or TCP_UDP listener.
@@ -159,6 +179,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      *         IPv4 addresses), <code>dualstack</code> (for IPv4 and IPv6 addresses), and
      *         <code>dualstack-without-public-ipv4</code> (for IPv6 only public addresses, with private IPv4 and IPv6
      *         addresses).
+     *         </p>
+     *         <p>
+     *         Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an
+     *         Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer
+     *         cannot complete the authentication process, resulting in HTTP 500 errors.
      *         </p>
      *         <p>
      *         [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4
@@ -185,6 +210,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
      * </p>
      * <p>
+     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     * Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete the
+     * authentication process, resulting in HTTP 500 errors.
+     * </p>
+     * <p>
      * [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4 addresses)
      * and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t specify <code>dualstack</code> for a load
      * balancer with a UDP or TCP_UDP listener.
@@ -201,6 +231,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      *        addresses), <code>dualstack</code> (for IPv4 and IPv6 addresses), and
      *        <code>dualstack-without-public-ipv4</code> (for IPv6 only public addresses, with private IPv4 and IPv6
      *        addresses).
+     *        </p>
+     *        <p>
+     *        Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     *        Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete
+     *        the authentication process, resulting in HTTP 500 errors.
      *        </p>
      *        <p>
      *        [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4
@@ -229,6 +264,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
      * </p>
      * <p>
+     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     * Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete the
+     * authentication process, resulting in HTTP 500 errors.
+     * </p>
+     * <p>
      * [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4 addresses)
      * and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t specify <code>dualstack</code> for a load
      * balancer with a UDP or TCP_UDP listener.
@@ -245,6 +285,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      *        addresses), <code>dualstack</code> (for IPv4 and IPv6 addresses), and
      *        <code>dualstack-without-public-ipv4</code> (for IPv6 only public addresses, with private IPv4 and IPv6
      *        addresses).
+     *        </p>
+     *        <p>
+     *        Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     *        Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete
+     *        the authentication process, resulting in HTTP 500 errors.
      *        </p>
      *        <p>
      *        [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4
@@ -271,6 +316,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
      * </p>
      * <p>
+     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     * Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete the
+     * authentication process, resulting in HTTP 500 errors.
+     * </p>
+     * <p>
      * [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4 addresses)
      * and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t specify <code>dualstack</code> for a load
      * balancer with a UDP or TCP_UDP listener.
@@ -287,6 +337,11 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      *        addresses), <code>dualstack</code> (for IPv4 and IPv6 addresses), and
      *        <code>dualstack-without-public-ipv4</code> (for IPv6 only public addresses, with private IPv4 and IPv6
      *        addresses).
+     *        </p>
+     *        <p>
+     *        Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity
+     *        Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete
+     *        the authentication process, resulting in HTTP 500 errors.
      *        </p>
      *        <p>
      *        [Network Load Balancers] The IP address type. The possible values are <code>ipv4</code> (for only IPv4

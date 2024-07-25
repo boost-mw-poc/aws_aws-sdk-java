@@ -654,6 +654,43 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
 
     /**
      * <p>
+     * Deletes a shared trust store association.
+     * </p>
+     * 
+     * @param deleteSharedTrustStoreAssociationRequest
+     * @return A Java Future containing the result of the DeleteSharedTrustStoreAssociation operation returned by the
+     *         service.
+     * @sample AmazonElasticLoadBalancingAsync.DeleteSharedTrustStoreAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteSharedTrustStoreAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSharedTrustStoreAssociationResult> deleteSharedTrustStoreAssociationAsync(
+            DeleteSharedTrustStoreAssociationRequest deleteSharedTrustStoreAssociationRequest);
+
+    /**
+     * <p>
+     * Deletes a shared trust store association.
+     * </p>
+     * 
+     * @param deleteSharedTrustStoreAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteSharedTrustStoreAssociation operation returned by the
+     *         service.
+     * @sample AmazonElasticLoadBalancingAsyncHandler.DeleteSharedTrustStoreAssociation
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteSharedTrustStoreAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSharedTrustStoreAssociationResult> deleteSharedTrustStoreAssociationAsync(
+            DeleteSharedTrustStoreAssociationRequest deleteSharedTrustStoreAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteSharedTrustStoreAssociationRequest, DeleteSharedTrustStoreAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified target group.
      * </p>
      * <p>
@@ -1421,7 +1458,7 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
 
     /**
      * <p>
-     * Describes the revocation files in use by the specified trust store arn, or revocation ID.
+     * Describes the revocation files in use by the specified trust store or revocation files.
      * </p>
      * 
      * @param describeTrustStoreRevocationsRequest
@@ -1437,7 +1474,7 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
 
     /**
      * <p>
-     * Describes the revocation files in use by the specified trust store arn, or revocation ID.
+     * Describes the revocation files in use by the specified trust store or revocation files.
      * </p>
      * 
      * @param describeTrustStoreRevocationsRequest
@@ -1458,7 +1495,7 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
 
     /**
      * <p>
-     * Describes all trust stores for a given account by trust store arn’s or name.
+     * Describes all trust stores for the specified account.
      * </p>
      * 
      * @param describeTrustStoresRequest
@@ -1471,7 +1508,7 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
 
     /**
      * <p>
-     * Describes all trust stores for a given account by trust store arn’s or name.
+     * Describes all trust stores for the specified account.
      * </p>
      * 
      * @param describeTrustStoresRequest
@@ -1486,6 +1523,37 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
      */
     java.util.concurrent.Future<DescribeTrustStoresResult> describeTrustStoresAsync(DescribeTrustStoresRequest describeTrustStoresRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeTrustStoresRequest, DescribeTrustStoresResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the resource policy for a specified resource.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @return A Java Future containing the result of the GetResourcePolicy operation returned by the service.
+     * @sample AmazonElasticLoadBalancingAsync.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/GetResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest getResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Retrieves the resource policy for a specified resource.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetResourcePolicy operation returned by the service.
+     * @sample AmazonElasticLoadBalancingAsyncHandler.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/GetResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest getResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetResourcePolicyRequest, GetResourcePolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -1778,7 +1846,7 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
 
     /**
      * <p>
-     * Update the ca certificate bundle for a given trust store.
+     * Update the ca certificate bundle for the specified trust store.
      * </p>
      * 
      * @param modifyTrustStoreRequest
@@ -1791,7 +1859,7 @@ public interface AmazonElasticLoadBalancingAsync extends AmazonElasticLoadBalanc
 
     /**
      * <p>
-     * Update the ca certificate bundle for a given trust store.
+     * Update the ca certificate bundle for the specified trust store.
      * </p>
      * 
      * @param modifyTrustStoreRequest

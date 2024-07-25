@@ -25,7 +25,7 @@ public class PutRegistryPolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The registry ID.
+     * The registry ID associated with the request.
      * </p>
      */
     private String registryId;
@@ -38,11 +38,11 @@ public class PutRegistryPolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The registry ID.
+     * The registry ID associated with the request.
      * </p>
      * 
      * @param registryId
-     *        The registry ID.
+     *        The registry ID associated with the request.
      */
 
     public void setRegistryId(String registryId) {
@@ -51,10 +51,10 @@ public class PutRegistryPolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The registry ID.
+     * The registry ID associated with the request.
      * </p>
      * 
-     * @return The registry ID.
+     * @return The registry ID associated with the request.
      */
 
     public String getRegistryId() {
@@ -63,11 +63,11 @@ public class PutRegistryPolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The registry ID.
+     * The registry ID associated with the request.
      * </p>
      * 
      * @param registryId
-     *        The registry ID.
+     *        The registry ID associated with the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

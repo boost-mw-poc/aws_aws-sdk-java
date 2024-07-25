@@ -337,6 +337,36 @@ public interface AmazonECR {
 
     /**
      * <p>
+     * Creates a repository creation template. This template is used to define the settings for repositories created by
+     * Amazon ECR on your behalf. For example, repositories created through pull through cache actions. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-creation-templates.html">Private
+     * repository creation templates</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * </p>
+     * 
+     * @param createRepositoryCreationTemplateRequest
+     * @return Result of the CreateRepositoryCreationTemplate operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws LimitExceededException
+     *         The operation did not succeed because it would have exceeded a service limit for your account. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/service-quotas.html">Amazon ECR service
+     *         quotas</a> in the Amazon Elastic Container Registry User Guide.
+     * @throws TemplateAlreadyExistsException
+     *         The repository creation template already exists. Specify a unique prefix and try again.
+     * @sample AmazonECR.CreateRepositoryCreationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/CreateRepositoryCreationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateRepositoryCreationTemplateResult createRepositoryCreationTemplate(CreateRepositoryCreationTemplateRequest createRepositoryCreationTemplateRequest);
+
+    /**
+     * <p>
      * Deletes the lifecycle policy associated with the specified repository.
      * </p>
      * 
@@ -427,6 +457,28 @@ public interface AmazonECR {
      *      Documentation</a>
      */
     DeleteRepositoryResult deleteRepository(DeleteRepositoryRequest deleteRepositoryRequest);
+
+    /**
+     * <p>
+     * Deletes a repository creation template.
+     * </p>
+     * 
+     * @param deleteRepositoryCreationTemplateRequest
+     * @return Result of the DeleteRepositoryCreationTemplate operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws TemplateNotFoundException
+     *         The specified repository creation template can't be found. Verify the registry ID and prefix and try
+     *         again.
+     * @sample AmazonECR.DeleteRepositoryCreationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeleteRepositoryCreationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteRepositoryCreationTemplateResult deleteRepositoryCreationTemplate(DeleteRepositoryCreationTemplateRequest deleteRepositoryCreationTemplateRequest);
 
     /**
      * <p>
@@ -590,6 +642,27 @@ public interface AmazonECR {
      *      Documentation</a>
      */
     DescribeRepositoriesResult describeRepositories(DescribeRepositoriesRequest describeRepositoriesRequest);
+
+    /**
+     * <p>
+     * Returns details about the repository creation templates in a registry. The <code>prefixes</code> request
+     * parameter can be used to return the details for a specific repository creation template.
+     * </p>
+     * 
+     * @param describeRepositoryCreationTemplatesRequest
+     * @return Result of the DescribeRepositoryCreationTemplates operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonECR.DescribeRepositoryCreationTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeRepositoryCreationTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeRepositoryCreationTemplatesResult describeRepositoryCreationTemplates(
+            DescribeRepositoryCreationTemplatesRequest describeRepositoryCreationTemplatesRequest);
 
     /**
      * <p>
@@ -1019,7 +1092,10 @@ public interface AmazonECR {
      * PutReplicationConfiguration API is called, a service-linked IAM role is created in your account for the
      * replication process. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/using-service-linked-roles.html">Using
-     * service-linked roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * service-linked roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>. For more
+     * information on the custom role for replication, see <a href=
+     * "https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication-creation-templates.html#roles-creatingrole-user-console"
+     * >Creating an IAM role for replication</a>.
      * </p>
      * <note>
      * <p>
@@ -1206,6 +1282,28 @@ public interface AmazonECR {
      *      API Documentation</a>
      */
     UpdatePullThroughCacheRuleResult updatePullThroughCacheRule(UpdatePullThroughCacheRuleRequest updatePullThroughCacheRuleRequest);
+
+    /**
+     * <p>
+     * Updates an existing repository creation template.
+     * </p>
+     * 
+     * @param updateRepositoryCreationTemplateRequest
+     * @return Result of the UpdateRepositoryCreationTemplate operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws TemplateNotFoundException
+     *         The specified repository creation template can't be found. Verify the registry ID and prefix and try
+     *         again.
+     * @sample AmazonECR.UpdateRepositoryCreationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/UpdateRepositoryCreationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateRepositoryCreationTemplateResult updateRepositoryCreationTemplate(UpdateRepositoryCreationTemplateRequest updateRepositoryCreationTemplateRequest);
 
     /**
      * <p>

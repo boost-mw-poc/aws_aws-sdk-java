@@ -303,6 +303,11 @@ public class AbstractAmazonDataZone implements AmazonDataZone {
     }
 
     @Override
+    public GetEnvironmentCredentialsResult getEnvironmentCredentials(GetEnvironmentCredentialsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetEnvironmentProfileResult getEnvironmentProfile(GetEnvironmentProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
