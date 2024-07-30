@@ -27,6 +27,12 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     */
+    private Boolean acceptRoleSessionName;
+    /**
+     * <p>
      * Used to determine how long sessions vended using this profile are valid for. See the <code>Expiration</code>
      * section of the <a href=
      * "https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-create-session.html#credentials-object"
@@ -65,6 +71,58 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String sessionPolicy;
+
+    /**
+     * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     * 
+     * @param acceptRoleSessionName
+     *        Used to determine if a custom role session name will be accepted in a temporary credential request.
+     */
+
+    public void setAcceptRoleSessionName(Boolean acceptRoleSessionName) {
+        this.acceptRoleSessionName = acceptRoleSessionName;
+    }
+
+    /**
+     * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     * 
+     * @return Used to determine if a custom role session name will be accepted in a temporary credential request.
+     */
+
+    public Boolean getAcceptRoleSessionName() {
+        return this.acceptRoleSessionName;
+    }
+
+    /**
+     * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     * 
+     * @param acceptRoleSessionName
+     *        Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateProfileRequest withAcceptRoleSessionName(Boolean acceptRoleSessionName) {
+        setAcceptRoleSessionName(acceptRoleSessionName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     * 
+     * @return Used to determine if a custom role session name will be accepted in a temporary credential request.
+     */
+
+    public Boolean isAcceptRoleSessionName() {
+        return this.acceptRoleSessionName;
+    }
 
     /**
      * <p>
@@ -402,6 +460,8 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAcceptRoleSessionName() != null)
+            sb.append("AcceptRoleSessionName: ").append(getAcceptRoleSessionName()).append(",");
         if (getDurationSeconds() != null)
             sb.append("DurationSeconds: ").append(getDurationSeconds()).append(",");
         if (getManagedPolicyArns() != null)
@@ -428,6 +488,10 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (obj instanceof UpdateProfileRequest == false)
             return false;
         UpdateProfileRequest other = (UpdateProfileRequest) obj;
+        if (other.getAcceptRoleSessionName() == null ^ this.getAcceptRoleSessionName() == null)
+            return false;
+        if (other.getAcceptRoleSessionName() != null && other.getAcceptRoleSessionName().equals(this.getAcceptRoleSessionName()) == false)
+            return false;
         if (other.getDurationSeconds() == null ^ this.getDurationSeconds() == null)
             return false;
         if (other.getDurationSeconds() != null && other.getDurationSeconds().equals(this.getDurationSeconds()) == false)
@@ -460,6 +524,7 @@ public class UpdateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAcceptRoleSessionName() == null) ? 0 : getAcceptRoleSessionName().hashCode());
         hashCode = prime * hashCode + ((getDurationSeconds() == null) ? 0 : getDurationSeconds().hashCode());
         hashCode = prime * hashCode + ((getManagedPolicyArns() == null) ? 0 : getManagedPolicyArns().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());

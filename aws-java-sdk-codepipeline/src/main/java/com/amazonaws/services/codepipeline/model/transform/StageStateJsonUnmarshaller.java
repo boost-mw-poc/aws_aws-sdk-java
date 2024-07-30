@@ -76,6 +76,18 @@ public class StageStateJsonUnmarshaller implements Unmarshaller<StageState, Json
                     context.nextToken();
                     stageState.setLatestExecution(StageExecutionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("beforeEntryConditionState", targetDepth)) {
+                    context.nextToken();
+                    stageState.setBeforeEntryConditionState(StageConditionStateJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("onSuccessConditionState", targetDepth)) {
+                    context.nextToken();
+                    stageState.setOnSuccessConditionState(StageConditionStateJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("onFailureConditionState", targetDepth)) {
+                    context.nextToken();
+                    stageState.setOnFailureConditionState(StageConditionStateJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

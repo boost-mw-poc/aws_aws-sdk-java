@@ -30,6 +30,12 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     */
+    private Boolean acceptRoleSessionName;
+    /**
+     * <p>
      * A mapping applied to the authenticating end-entity certificate.
      * </p>
      */
@@ -110,6 +116,58 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date updatedAt;
+
+    /**
+     * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     * 
+     * @param acceptRoleSessionName
+     *        Used to determine if a custom role session name will be accepted in a temporary credential request.
+     */
+
+    public void setAcceptRoleSessionName(Boolean acceptRoleSessionName) {
+        this.acceptRoleSessionName = acceptRoleSessionName;
+    }
+
+    /**
+     * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     * 
+     * @return Used to determine if a custom role session name will be accepted in a temporary credential request.
+     */
+
+    public Boolean getAcceptRoleSessionName() {
+        return this.acceptRoleSessionName;
+    }
+
+    /**
+     * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     * 
+     * @param acceptRoleSessionName
+     *        Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProfileDetail withAcceptRoleSessionName(Boolean acceptRoleSessionName) {
+        setAcceptRoleSessionName(acceptRoleSessionName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Used to determine if a custom role session name will be accepted in a temporary credential request.
+     * </p>
+     * 
+     * @return Used to determine if a custom role session name will be accepted in a temporary credential request.
+     */
+
+    public Boolean isAcceptRoleSessionName() {
+        return this.acceptRoleSessionName;
+    }
 
     /**
      * <p>
@@ -781,6 +839,8 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAcceptRoleSessionName() != null)
+            sb.append("AcceptRoleSessionName: ").append(getAcceptRoleSessionName()).append(",");
         if (getAttributeMappings() != null)
             sb.append("AttributeMappings: ").append(getAttributeMappings()).append(",");
         if (getCreatedAt() != null)
@@ -821,6 +881,10 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof ProfileDetail == false)
             return false;
         ProfileDetail other = (ProfileDetail) obj;
+        if (other.getAcceptRoleSessionName() == null ^ this.getAcceptRoleSessionName() == null)
+            return false;
+        if (other.getAcceptRoleSessionName() != null && other.getAcceptRoleSessionName().equals(this.getAcceptRoleSessionName()) == false)
+            return false;
         if (other.getAttributeMappings() == null ^ this.getAttributeMappings() == null)
             return false;
         if (other.getAttributeMappings() != null && other.getAttributeMappings().equals(this.getAttributeMappings()) == false)
@@ -881,6 +945,7 @@ public class ProfileDetail implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAcceptRoleSessionName() == null) ? 0 : getAcceptRoleSessionName().hashCode());
         hashCode = prime * hashCode + ((getAttributeMappings() == null) ? 0 : getAttributeMappings().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());

@@ -68,6 +68,14 @@ public class StageDeclarationJsonUnmarshaller implements Unmarshaller<StageDecla
                     context.nextToken();
                     stageDeclaration.setOnFailure(FailureConditionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("onSuccess", targetDepth)) {
+                    context.nextToken();
+                    stageDeclaration.setOnSuccess(SuccessConditionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("beforeEntry", targetDepth)) {
+                    context.nextToken();
+                    stageDeclaration.setBeforeEntry(BeforeEntryConditionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

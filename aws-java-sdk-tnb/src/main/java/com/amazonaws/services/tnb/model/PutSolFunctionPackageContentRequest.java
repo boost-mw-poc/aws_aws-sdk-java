@@ -225,7 +225,7 @@ public class PutSolFunctionPackageContentRequest extends com.amazonaws.AmazonWeb
         if (getContentType() != null)
             sb.append("ContentType: ").append(getContentType()).append(",");
         if (getFile() != null)
-            sb.append("File: ").append(getFile()).append(",");
+            sb.append("File: ").append("***Sensitive Data Redacted***").append(",");
         if (getVnfPkgId() != null)
             sb.append("VnfPkgId: ").append(getVnfPkgId());
         sb.append("}");

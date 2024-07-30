@@ -60,6 +60,24 @@ public class StageState implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private StageExecution latestExecution;
+    /**
+     * <p>
+     * The state of the entry conditions for a stage.
+     * </p>
+     */
+    private StageConditionState beforeEntryConditionState;
+    /**
+     * <p>
+     * The state of the success conditions for a stage.
+     * </p>
+     */
+    private StageConditionState onSuccessConditionState;
+    /**
+     * <p>
+     * The state of the failure conditions for a stage.
+     * </p>
+     */
+    private StageConditionState onFailureConditionState;
 
     /**
      * <p>
@@ -348,6 +366,126 @@ public class StageState implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The state of the entry conditions for a stage.
+     * </p>
+     * 
+     * @param beforeEntryConditionState
+     *        The state of the entry conditions for a stage.
+     */
+
+    public void setBeforeEntryConditionState(StageConditionState beforeEntryConditionState) {
+        this.beforeEntryConditionState = beforeEntryConditionState;
+    }
+
+    /**
+     * <p>
+     * The state of the entry conditions for a stage.
+     * </p>
+     * 
+     * @return The state of the entry conditions for a stage.
+     */
+
+    public StageConditionState getBeforeEntryConditionState() {
+        return this.beforeEntryConditionState;
+    }
+
+    /**
+     * <p>
+     * The state of the entry conditions for a stage.
+     * </p>
+     * 
+     * @param beforeEntryConditionState
+     *        The state of the entry conditions for a stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StageState withBeforeEntryConditionState(StageConditionState beforeEntryConditionState) {
+        setBeforeEntryConditionState(beforeEntryConditionState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state of the success conditions for a stage.
+     * </p>
+     * 
+     * @param onSuccessConditionState
+     *        The state of the success conditions for a stage.
+     */
+
+    public void setOnSuccessConditionState(StageConditionState onSuccessConditionState) {
+        this.onSuccessConditionState = onSuccessConditionState;
+    }
+
+    /**
+     * <p>
+     * The state of the success conditions for a stage.
+     * </p>
+     * 
+     * @return The state of the success conditions for a stage.
+     */
+
+    public StageConditionState getOnSuccessConditionState() {
+        return this.onSuccessConditionState;
+    }
+
+    /**
+     * <p>
+     * The state of the success conditions for a stage.
+     * </p>
+     * 
+     * @param onSuccessConditionState
+     *        The state of the success conditions for a stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StageState withOnSuccessConditionState(StageConditionState onSuccessConditionState) {
+        setOnSuccessConditionState(onSuccessConditionState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state of the failure conditions for a stage.
+     * </p>
+     * 
+     * @param onFailureConditionState
+     *        The state of the failure conditions for a stage.
+     */
+
+    public void setOnFailureConditionState(StageConditionState onFailureConditionState) {
+        this.onFailureConditionState = onFailureConditionState;
+    }
+
+    /**
+     * <p>
+     * The state of the failure conditions for a stage.
+     * </p>
+     * 
+     * @return The state of the failure conditions for a stage.
+     */
+
+    public StageConditionState getOnFailureConditionState() {
+        return this.onFailureConditionState;
+    }
+
+    /**
+     * <p>
+     * The state of the failure conditions for a stage.
+     * </p>
+     * 
+     * @param onFailureConditionState
+     *        The state of the failure conditions for a stage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StageState withOnFailureConditionState(StageConditionState onFailureConditionState) {
+        setOnFailureConditionState(onFailureConditionState);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -370,7 +508,13 @@ public class StageState implements Serializable, Cloneable, StructuredPojo {
         if (getActionStates() != null)
             sb.append("ActionStates: ").append(getActionStates()).append(",");
         if (getLatestExecution() != null)
-            sb.append("LatestExecution: ").append(getLatestExecution());
+            sb.append("LatestExecution: ").append(getLatestExecution()).append(",");
+        if (getBeforeEntryConditionState() != null)
+            sb.append("BeforeEntryConditionState: ").append(getBeforeEntryConditionState()).append(",");
+        if (getOnSuccessConditionState() != null)
+            sb.append("OnSuccessConditionState: ").append(getOnSuccessConditionState()).append(",");
+        if (getOnFailureConditionState() != null)
+            sb.append("OnFailureConditionState: ").append(getOnFailureConditionState());
         sb.append("}");
         return sb.toString();
     }
@@ -409,6 +553,18 @@ public class StageState implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLatestExecution() != null && other.getLatestExecution().equals(this.getLatestExecution()) == false)
             return false;
+        if (other.getBeforeEntryConditionState() == null ^ this.getBeforeEntryConditionState() == null)
+            return false;
+        if (other.getBeforeEntryConditionState() != null && other.getBeforeEntryConditionState().equals(this.getBeforeEntryConditionState()) == false)
+            return false;
+        if (other.getOnSuccessConditionState() == null ^ this.getOnSuccessConditionState() == null)
+            return false;
+        if (other.getOnSuccessConditionState() != null && other.getOnSuccessConditionState().equals(this.getOnSuccessConditionState()) == false)
+            return false;
+        if (other.getOnFailureConditionState() == null ^ this.getOnFailureConditionState() == null)
+            return false;
+        if (other.getOnFailureConditionState() != null && other.getOnFailureConditionState().equals(this.getOnFailureConditionState()) == false)
+            return false;
         return true;
     }
 
@@ -423,6 +579,9 @@ public class StageState implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getInboundTransitionState() == null) ? 0 : getInboundTransitionState().hashCode());
         hashCode = prime * hashCode + ((getActionStates() == null) ? 0 : getActionStates().hashCode());
         hashCode = prime * hashCode + ((getLatestExecution() == null) ? 0 : getLatestExecution().hashCode());
+        hashCode = prime * hashCode + ((getBeforeEntryConditionState() == null) ? 0 : getBeforeEntryConditionState().hashCode());
+        hashCode = prime * hashCode + ((getOnSuccessConditionState() == null) ? 0 : getOnSuccessConditionState().hashCode());
+        hashCode = prime * hashCode + ((getOnFailureConditionState() == null) ? 0 : getOnFailureConditionState().hashCode());
         return hashCode;
     }
 

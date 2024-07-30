@@ -41,6 +41,8 @@ public class ListSolNetworkOperationsInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("nsInstanceId").build();
     private static final MarshallingInfo<String> OPERATIONSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("operationState").build();
+    private static final MarshallingInfo<String> UPDATETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateType").build();
 
     private static final ListSolNetworkOperationsInfoMarshaller instance = new ListSolNetworkOperationsInfoMarshaller();
 
@@ -65,6 +67,7 @@ public class ListSolNetworkOperationsInfoMarshaller {
             protocolMarshaller.marshall(listSolNetworkOperationsInfo.getMetadata(), METADATA_BINDING);
             protocolMarshaller.marshall(listSolNetworkOperationsInfo.getNsInstanceId(), NSINSTANCEID_BINDING);
             protocolMarshaller.marshall(listSolNetworkOperationsInfo.getOperationState(), OPERATIONSTATE_BINDING);
+            protocolMarshaller.marshall(listSolNetworkOperationsInfo.getUpdateType(), UPDATETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

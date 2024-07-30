@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum UpdateSolNetworkType {
 
-    MODIFY_VNF_INFORMATION("MODIFY_VNF_INFORMATION");
+    MODIFY_VNF_INFORMATION("MODIFY_VNF_INFORMATION"),
+    UPDATE_NS("UPDATE_NS");
 
     private String value;
 

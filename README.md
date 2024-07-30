@@ -1,15 +1,27 @@
 # AWS SDK for Java
 
 The **AWS SDK for Java** enables Java developers to easily work with [Amazon Web Services][aws] and
-build scalable solutions with Amazon S3, Amazon DynamoDB, Amazon Glacier, and more. You can get
-started in minutes using ***Maven*** or by downloading a [single zip file][install-jar].
+build scalable solutions with Amazon S3, Amazon DynamoDB, Amazon Glacier, and more. 
 
-## End-of-Support Announcement ##
+See the [AWS SDK for Java 2.x][aws-sdk-for-java-2x] for how to get started.
 
-We [announced][deprecation-announcement-post] the upcoming end-of-support for AWS SDK for Java (v1). We recommend that you migrate to 
-[AWS SDK for Java v2][sdk-v2-dev-guide]. For dates, additional details, and information on how to migrate, please refer 
-to the linked announcement. 
+## In Maintenance Mode as of July 31, 2024 ##
 
+[The AWS SDK for Java 1.x is in maintenance mode][maintenance-mode-post]. The AWS SDK for Java 1.x entered maintenance 
+mode on July 31, 2024 and will reaching end-of-support on December 31, 2025. During maintenance mode, AWS will limit 
+SDK releases to address critical bug fixes and security issues only. The SDK will not receive API updates for new or 
+existing services, or be updated to support new regions. 
+
+We recommend that you [migrate to the AWS SDK for Java 2.x][migration-guide]. The AWS SDK for Java 2.x provides 
+improved features, enhanced performance, and continued support from AWS. By adopting the latest version of the SDK, 
+developers can ensure the security, compatibility, and stability of their solutions on AWS. Updating also allows you to 
+leverage the latest services and innovations from AWS.
+
+## End-of-Support on December 31, 2025 ##
+
+[The AWS SDK for Java 1.x will reach end-of-support on December 31, 2025][deprecation-announcement-post]. After end-of-
+support, AWS will no longer receive updates or releases. Previously published releases will continue to be available 
+via public package managers and the code will remain on GitHub.
 
 ## Release Notes ##
 Changes to the SDK beginning with version 1.12.1 (June 2021) are tracked in [CHANGELOG.md][changes-file].
@@ -17,34 +29,28 @@ Changes to the SDK beginning with version 1.12.1 (June 2021) are tracked in [CHA
 Changes in the _retired_ 1.11.x series of the SDK, beginning with version 1.11.82, 
 are listed in the [CHANGELOG-1.11.x.md](./changelogs/CHANGELOG-1.11.x.md) file.
 
-## Getting Started
+## Getting Started with AWS
 
-* [SDK Homepage][sdk-website]
-* [API Docs][docs-api]
-* [Developer Guide][docs-guide]
-* [Issues][sdk-issues]
-* [SDK Blog][blog]
-* [Getting Help](#getting-help)
+Use [the AWS SDK for Java 2.x to get started][sdk-v2-getting-started].
 
-#### Sign up for AWS ####
+## Using the AWS SDK for Java 1.x
 
-Before you begin, you need an AWS account. Please see the [Sign Up for AWS][docs-signup] section of
-the developer guide for information about how to create an AWS account and retrieve your AWS
-credentials.
+The AWS SDK for Java 1.x is in [maintenance mode][maintenance-mode-post], so we recommend that you use the 
+[AWS SDK for Java 2.x][aws-sdk-for-java-2x].
 
 #### Minimum requirements ####
 
-To run the SDK you will need **Java 1.7+**. For more information about the requirements and optimum
+To run the AWS SDK for Java 1.x, you will need **Java 1.7+**. For more information about the requirements and optimum
 settings for the SDK, please see the [Installing a Java Development Environment][docs-java-env]
 section of the developer guide.
 
-#### Install the SDK ####
+#### Install the 1.x SDK ####
 
-The recommended way to use the AWS SDK for Java in your project is to consume it from Maven. Import
+You can use the AWS SDK for Java 1.x in your project by consuming it from Maven. Import
 the [aws-java-sdk-bom][] and specify the SDK Maven modules that your project needs in the
 dependencies.
 
-##### Importing the BOM #####
+##### Importing the 1.x BOM #####
 
 ```xml
 <dependencyManagement>
@@ -52,7 +58,7 @@ dependencies.
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-bom</artifactId>
-      <version>1.12.766</version>
+      <version>1.12.767</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
@@ -60,7 +66,7 @@ dependencies.
 </dependencyManagement>
 ```
 
-##### Using the SDK Maven modules #####
+##### Using the 1.x SDK Maven modules #####
 
 ```xml
 <dependencies>
@@ -79,30 +85,8 @@ dependencies.
 </dependencies>
 ```
 
-See the [Set up the AWS SDK for Java][docs-setup] section of the developer guide for more
-information about installing the SDK through other means.
-
-## Features
-
-* Provides easy-to-use HTTP clients for all supported AWS services, regions, and authentication
-    protocols.
-
-* Client-Side Data Encryption for Amazon S3 - Helps improve the security of storing application data
-    in Amazon S3.
-
-* Amazon DynamoDB Object Mapper - Uses Plain Old Java Object (POJOs) to store and retrieve Amazon
-    DynamoDB data.
-
-* Amazon S3 Transfer Manager - With a simple API, achieve enhanced the throughput, performance, and
-    reliability by using multi-threaded Amazon S3 multipart calls.
-
-* Amazon SQS Client-Side Buffering - Collect and send SQS requests in asynchronous batches,
-    improving application and network performance.
-
-* Automatically uses [IAM Instance Profile Credentials][aws-iam-credentials] on configured Amazon
-    EC2 instances.
-
-* And more!
+See the [Set up the AWS SDK for Java 1.x][docs-setup] section of the developer guide for more
+information about installing the 1.x SDK through other means.
 
 ## Building From Source
 
@@ -123,6 +107,7 @@ GitHub [issues][sdk-issues] is the preferred channel to interact with our team. 
 * If it turns out that you may have found a bug, please open an [issue][sdk-issues]
 
 ## Maintenance and Support for SDK Major Versions
+
 For information about maintenance and support for SDK major versions and their underlying dependencies, see the following in the AWS SDKs and Tools Reference Guide:
 
 * [AWS SDKs and Tools Maintenance Policy][maintenance-policy]
@@ -130,18 +115,19 @@ For information about maintenance and support for SDK major versions and their u
 
 ## Supported Minor Versions
 
-* **1.12.x** - Recommended.
+* **1.12.x** - In [maintenance mode][maintenance-mode-post]. We recommend migrating to the [AWS SDK for Java 2.x][aws-sdk-for-java-2x].
 
 * **1.11.x** - No longer supported, but migration to 1.12.x should require no code changes.
 
 ## AWS SDK for Java 2.x
+
 A version 2.x of the SDK is generally available. It is a major rewrite of the 1.x code base, built on top of Java 8+ and adds several frequently requested features. These include support for non-blocking I/O, improved start-up performance, automatic iteration over paginated responses and the ability to plug in a different HTTP implementation at run time.
 
 For more information see the [AWS SDK for Java 2.x Developer Guide][sdk-v2-dev-guide] or check the project repository in https://github.com/aws/aws-sdk-java-v2.
 
 ## Maintenance and Support for Java Versions
 
-The AWS Java SDK version 1 (v1) supports Java versions from 7 to 17, but may not be updated to support future Java versions. To ensure long-term compatibility with the latest JDK versions, we recommend that you migrate to
+The AWS SDK for Java 1.x supports Java versions from 7 to 17, but may not be updated to support future Java versions. To ensure long-term compatibility with the latest JDK versions, we recommend that you migrate to the
 [AWS SDK for Java 2.x][aws-sdk-for-java-2x]. 
 
 [aws-iam-credentials]: https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html
@@ -170,3 +156,6 @@ The AWS Java SDK version 1 (v1) supports Java versions from 7 to 17, but may not
 [version-matrix]: https://docs.aws.amazon.com/credref/latest/refdocs/version-support-matrix.html
 [aws-sdk-for-java-2x]: https://github.com/aws/aws-sdk-java-v2
 [deprecation-announcement-post]: https://aws.amazon.com/blogs/developer/announcing-end-of-support-for-aws-sdk-for-java-v1-x-on-december-31-2025
+[maintenance-mode-post]: https://aws.amazon.com/blogs/developer/the-aws-sdk-for-java-1-x-is-in-maintenance-mode-effective-july-31-2024/
+[migration-guide]: https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/migration.html
+[sdk-v2-getting-started]: https://github.com/aws/aws-sdk-java-v2/?tab=readme-ov-file#getting-started

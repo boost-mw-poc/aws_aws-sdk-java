@@ -380,6 +380,9 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
                             new JsonErrorShapeMetadata().withErrorCode("ApprovalAlreadyCompletedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codepipeline.model.transform.ApprovalAlreadyCompletedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConditionNotOverridableException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.codepipeline.model.transform.ConditionNotOverridableExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("PipelineNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codepipeline.model.transform.PipelineNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -1934,6 +1937,131 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Lists the rule executions that have occurred in a pipeline configured for conditions with rules.
+     * </p>
+     * 
+     * @param listRuleExecutionsRequest
+     * @return Result of the ListRuleExecutions operation returned by the service.
+     * @throws ValidationException
+     *         The validation was specified in an invalid format.
+     * @throws PipelineNotFoundException
+     *         The pipeline was specified in an invalid format or cannot be found.
+     * @throws InvalidNextTokenException
+     *         The next token was specified in an invalid format. Make sure that the next token you provide is the token
+     *         returned by a previous call.
+     * @throws PipelineExecutionNotFoundException
+     *         The pipeline execution was specified in an invalid format or cannot be found, or an execution ID does not
+     *         belong to the specified pipeline.
+     * @sample AWSCodePipeline.ListRuleExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListRuleExecutions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListRuleExecutionsResult listRuleExecutions(ListRuleExecutionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListRuleExecutions(request);
+    }
+
+    @SdkInternalApi
+    final ListRuleExecutionsResult executeListRuleExecutions(ListRuleExecutionsRequest listRuleExecutionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listRuleExecutionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRuleExecutionsRequest> request = null;
+        Response<ListRuleExecutionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRuleExecutionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listRuleExecutionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CodePipeline");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRuleExecutions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRuleExecutionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListRuleExecutionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the rules for the condition.
+     * </p>
+     * 
+     * @param listRuleTypesRequest
+     * @return Result of the ListRuleTypes operation returned by the service.
+     * @throws ValidationException
+     *         The validation was specified in an invalid format.
+     * @throws InvalidNextTokenException
+     *         The next token was specified in an invalid format. Make sure that the next token you provide is the token
+     *         returned by a previous call.
+     * @sample AWSCodePipeline.ListRuleTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListRuleTypes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListRuleTypesResult listRuleTypes(ListRuleTypesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListRuleTypes(request);
+    }
+
+    @SdkInternalApi
+    final ListRuleTypesResult executeListRuleTypes(ListRuleTypesRequest listRuleTypesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listRuleTypesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRuleTypesRequest> request = null;
+        Response<ListRuleTypesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRuleTypesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listRuleTypesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CodePipeline");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRuleTypes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRuleTypesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListRuleTypesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets the set of key-value pairs (metadata) that are used to manage the resource.
      * </p>
      * 
@@ -2047,6 +2175,77 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<ListWebhooksResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListWebhooksResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Used to override a stage condition.
+     * </p>
+     * 
+     * @param overrideStageConditionRequest
+     * @return Result of the OverrideStageCondition operation returned by the service.
+     * @throws ValidationException
+     *         The validation was specified in an invalid format.
+     * @throws ConflictException
+     *         Your request cannot be handled because the pipeline is busy handling ongoing activities. Try again later.
+     * @throws PipelineNotFoundException
+     *         The pipeline was specified in an invalid format or cannot be found.
+     * @throws StageNotFoundException
+     *         The stage was specified in an invalid format or cannot be found.
+     * @throws ConditionNotOverridableException
+     *         Unable to override because the condition does not allow overrides.
+     * @throws NotLatestPipelineExecutionException
+     *         The stage has failed in a later run of the pipeline and the <code>pipelineExecutionId</code> associated
+     *         with the request is out of date.
+     * @throws ConcurrentPipelineExecutionsLimitExceededException
+     *         The pipeline has reached the limit for concurrent pipeline executions.
+     * @sample AWSCodePipeline.OverrideStageCondition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/OverrideStageCondition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public OverrideStageConditionResult overrideStageCondition(OverrideStageConditionRequest request) {
+        request = beforeClientExecution(request);
+        return executeOverrideStageCondition(request);
+    }
+
+    @SdkInternalApi
+    final OverrideStageConditionResult executeOverrideStageCondition(OverrideStageConditionRequest overrideStageConditionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(overrideStageConditionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<OverrideStageConditionRequest> request = null;
+        Response<OverrideStageConditionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new OverrideStageConditionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(overrideStageConditionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CodePipeline");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "OverrideStageCondition");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<OverrideStageConditionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new OverrideStageConditionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2209,6 +2408,8 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
      *         The specified action cannot be found.
      * @throws ValidationException
      *         The validation was specified in an invalid format.
+     * @throws ConcurrentPipelineExecutionsLimitExceededException
+     *         The pipeline has reached the limit for concurrent pipeline executions.
      * @sample AWSCodePipeline.PutActionRevision
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PutActionRevision" target="_top">AWS
      *      API Documentation</a>
@@ -2751,6 +2952,8 @@ public class AWSCodePipelineClient extends AmazonWebServiceClient implements AWS
      * @throws NotLatestPipelineExecutionException
      *         The stage has failed in a later run of the pipeline and the <code>pipelineExecutionId</code> associated
      *         with the request is out of date.
+     * @throws ConcurrentPipelineExecutionsLimitExceededException
+     *         The pipeline has reached the limit for concurrent pipeline executions.
      * @sample AWSCodePipeline.RetryStageExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/RetryStageExecution"
      *      target="_top">AWS API Documentation</a>

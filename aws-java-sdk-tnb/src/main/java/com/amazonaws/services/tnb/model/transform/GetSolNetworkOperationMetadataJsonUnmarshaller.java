@@ -52,9 +52,17 @@ public class GetSolNetworkOperationMetadataJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     getSolNetworkOperationMetadata.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("instantiateMetadata", targetDepth)) {
+                    context.nextToken();
+                    getSolNetworkOperationMetadata.setInstantiateMetadata(InstantiateMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("lastModified", targetDepth)) {
                     context.nextToken();
                     getSolNetworkOperationMetadata.setLastModified(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("updateNsMetadata", targetDepth)) {
+                    context.nextToken();
+                    getSolNetworkOperationMetadata.setUpdateNsMetadata(UpdateNsMetadataJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

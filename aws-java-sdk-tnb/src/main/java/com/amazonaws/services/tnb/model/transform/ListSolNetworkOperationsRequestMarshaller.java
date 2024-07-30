@@ -31,6 +31,8 @@ public class ListSolNetworkOperationsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("max_results").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextpage_opaque_marker").build();
+    private static final MarshallingInfo<String> NSINSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nsInstanceId").build();
 
     private static final ListSolNetworkOperationsRequestMarshaller instance = new ListSolNetworkOperationsRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class ListSolNetworkOperationsRequestMarshaller {
         try {
             protocolMarshaller.marshall(listSolNetworkOperationsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listSolNetworkOperationsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listSolNetworkOperationsRequest.getNsInstanceId(), NSINSTANCEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

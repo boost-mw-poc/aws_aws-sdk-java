@@ -70,6 +70,12 @@ public class ListSolNetworkOperationsInfo implements Serializable, Cloneable, St
      * </p>
      */
     private String operationState;
+    /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     */
+    private String updateType;
 
     /**
      * <p>
@@ -390,6 +396,65 @@ public class ListSolNetworkOperationsInfo implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     * 
+     * @param updateType
+     *        Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * @see UpdateSolNetworkType
+     */
+
+    public void setUpdateType(String updateType) {
+        this.updateType = updateType;
+    }
+
+    /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     * 
+     * @return Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * @see UpdateSolNetworkType
+     */
+
+    public String getUpdateType() {
+        return this.updateType;
+    }
+
+    /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     * 
+     * @param updateType
+     *        Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UpdateSolNetworkType
+     */
+
+    public ListSolNetworkOperationsInfo withUpdateType(String updateType) {
+        setUpdateType(updateType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     * 
+     * @param updateType
+     *        Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UpdateSolNetworkType
+     */
+
+    public ListSolNetworkOperationsInfo withUpdateType(UpdateSolNetworkType updateType) {
+        this.updateType = updateType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -414,7 +479,9 @@ public class ListSolNetworkOperationsInfo implements Serializable, Cloneable, St
         if (getNsInstanceId() != null)
             sb.append("NsInstanceId: ").append(getNsInstanceId()).append(",");
         if (getOperationState() != null)
-            sb.append("OperationState: ").append(getOperationState());
+            sb.append("OperationState: ").append(getOperationState()).append(",");
+        if (getUpdateType() != null)
+            sb.append("UpdateType: ").append(getUpdateType());
         sb.append("}");
         return sb.toString();
     }
@@ -457,6 +524,10 @@ public class ListSolNetworkOperationsInfo implements Serializable, Cloneable, St
             return false;
         if (other.getOperationState() != null && other.getOperationState().equals(this.getOperationState()) == false)
             return false;
+        if (other.getUpdateType() == null ^ this.getUpdateType() == null)
+            return false;
+        if (other.getUpdateType() != null && other.getUpdateType().equals(this.getUpdateType()) == false)
+            return false;
         return true;
     }
 
@@ -472,6 +543,7 @@ public class ListSolNetworkOperationsInfo implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getMetadata() == null) ? 0 : getMetadata().hashCode());
         hashCode = prime * hashCode + ((getNsInstanceId() == null) ? 0 : getNsInstanceId().hashCode());
         hashCode = prime * hashCode + ((getOperationState() == null) ? 0 : getOperationState().hashCode());
+        hashCode = prime * hashCode + ((getUpdateType() == null) ? 0 : getUpdateType().hashCode());
         return hashCode;
     }
 

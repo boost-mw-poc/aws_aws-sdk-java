@@ -696,7 +696,7 @@ public class AWSTnbClient extends AmazonWebServiceClient implements AWSTnb {
 
     /**
      * <p>
-     * Gets the details of a network function instance, including the instantation state and metadata from the function
+     * Gets the details of a network function instance, including the instantiation state and metadata from the function
      * package descriptor in the network function package.
      * </p>
      * <p>
@@ -2261,6 +2261,9 @@ public class AWSTnbClient extends AmazonWebServiceClient implements AWSTnb {
      * <p>
      * A network instance is a single network created in Amazon Web Services TNB that can be deployed and on which
      * life-cycle operations (like terminate, update, and delete) can be performed.
+     * </p>
+     * <p>
+     * Choose the <i>updateType</i> parameter to target the necessary update of the network instance.
      * </p>
      * 
      * @param updateSolNetworkInstanceRequest

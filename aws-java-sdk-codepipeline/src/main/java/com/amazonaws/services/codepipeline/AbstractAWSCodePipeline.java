@@ -138,12 +138,27 @@ public class AbstractAWSCodePipeline implements AWSCodePipeline {
     }
 
     @Override
+    public ListRuleExecutionsResult listRuleExecutions(ListRuleExecutionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRuleTypesResult listRuleTypes(ListRuleTypesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListWebhooksResult listWebhooks(ListWebhooksRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public OverrideStageConditionResult overrideStageCondition(OverrideStageConditionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

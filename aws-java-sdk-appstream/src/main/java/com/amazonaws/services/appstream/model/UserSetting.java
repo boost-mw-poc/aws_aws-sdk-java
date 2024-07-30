@@ -54,9 +54,6 @@ public class UserSetting implements Serializable, Cloneable, StructuredPojo {
      * specified when the permission is <code>DISABLED</code>.
      * </p>
      * <p>
-     * This can only be specified for AlwaysOn and OnDemand fleets. The attribute is not supported on Elastic fleets.
-     * </p>
-     * <p>
      * The value can be between 1 and 20,971,520 (20 MB).
      * </p>
      */
@@ -194,9 +191,6 @@ public class UserSetting implements Serializable, Cloneable, StructuredPojo {
      * specified when the permission is <code>DISABLED</code>.
      * </p>
      * <p>
-     * This can only be specified for AlwaysOn and OnDemand fleets. The attribute is not supported on Elastic fleets.
-     * </p>
-     * <p>
      * The value can be between 1 and 20,971,520 (20 MB).
      * </p>
      * 
@@ -210,10 +204,6 @@ public class UserSetting implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        This defaults to 20,971,520 (20 MB) when unspecified and the permission is <code>ENABLED</code>. This
      *        can't be specified when the permission is <code>DISABLED</code>.
-     *        </p>
-     *        <p>
-     *        This can only be specified for AlwaysOn and OnDemand fleets. The attribute is not supported on Elastic
-     *        fleets.
      *        </p>
      *        <p>
      *        The value can be between 1 and 20,971,520 (20 MB).
@@ -237,9 +227,6 @@ public class UserSetting implements Serializable, Cloneable, StructuredPojo {
      * specified when the permission is <code>DISABLED</code>.
      * </p>
      * <p>
-     * This can only be specified for AlwaysOn and OnDemand fleets. The attribute is not supported on Elastic fleets.
-     * </p>
-     * <p>
      * The value can be between 1 and 20,971,520 (20 MB).
      * </p>
      * 
@@ -252,10 +239,6 @@ public class UserSetting implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         This defaults to 20,971,520 (20 MB) when unspecified and the permission is <code>ENABLED</code>. This
      *         can't be specified when the permission is <code>DISABLED</code>.
-     *         </p>
-     *         <p>
-     *         This can only be specified for AlwaysOn and OnDemand fleets. The attribute is not supported on Elastic
-     *         fleets.
      *         </p>
      *         <p>
      *         The value can be between 1 and 20,971,520 (20 MB).
@@ -279,9 +262,6 @@ public class UserSetting implements Serializable, Cloneable, StructuredPojo {
      * specified when the permission is <code>DISABLED</code>.
      * </p>
      * <p>
-     * This can only be specified for AlwaysOn and OnDemand fleets. The attribute is not supported on Elastic fleets.
-     * </p>
-     * <p>
      * The value can be between 1 and 20,971,520 (20 MB).
      * </p>
      * 
@@ -295,10 +275,6 @@ public class UserSetting implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        This defaults to 20,971,520 (20 MB) when unspecified and the permission is <code>ENABLED</code>. This
      *        can't be specified when the permission is <code>DISABLED</code>.
-     *        </p>
-     *        <p>
-     *        This can only be specified for AlwaysOn and OnDemand fleets. The attribute is not supported on Elastic
-     *        fleets.
      *        </p>
      *        <p>
      *        The value can be between 1 and 20,971,520 (20 MB).

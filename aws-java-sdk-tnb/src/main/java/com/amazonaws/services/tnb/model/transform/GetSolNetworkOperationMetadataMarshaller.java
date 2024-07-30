@@ -29,8 +29,12 @@ public class GetSolNetworkOperationMetadataMarshaller {
 
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<StructuredPojo> INSTANTIATEMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instantiateMetadata").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFIED_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastModified").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<StructuredPojo> UPDATENSMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateNsMetadata").build();
 
     private static final GetSolNetworkOperationMetadataMarshaller instance = new GetSolNetworkOperationMetadataMarshaller();
 
@@ -49,7 +53,9 @@ public class GetSolNetworkOperationMetadataMarshaller {
 
         try {
             protocolMarshaller.marshall(getSolNetworkOperationMetadata.getCreatedAt(), CREATEDAT_BINDING);
+            protocolMarshaller.marshall(getSolNetworkOperationMetadata.getInstantiateMetadata(), INSTANTIATEMETADATA_BINDING);
             protocolMarshaller.marshall(getSolNetworkOperationMetadata.getLastModified(), LASTMODIFIED_BINDING);
+            protocolMarshaller.marshall(getSolNetworkOperationMetadata.getUpdateNsMetadata(), UPDATENSMETADATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

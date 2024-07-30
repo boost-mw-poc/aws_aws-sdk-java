@@ -52,6 +52,15 @@ public class BedrockKnowledgeStoreConfigurationJsonUnmarshaller implements Unmar
                     context.nextToken();
                     bedrockKnowledgeStoreConfiguration.setBedrockKnowledgeBaseArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("exactResponse", targetDepth)) {
+                    context.nextToken();
+                    bedrockKnowledgeStoreConfiguration.setExactResponse(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("exactResponseFields", targetDepth)) {
+                    context.nextToken();
+                    bedrockKnowledgeStoreConfiguration.setExactResponseFields(BedrockKnowledgeStoreExactResponseFieldsJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

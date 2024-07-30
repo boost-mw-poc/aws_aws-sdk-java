@@ -48,6 +48,10 @@ public class ProfileDetailJsonUnmarshaller implements Unmarshaller<ProfileDetail
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("acceptRoleSessionName", targetDepth)) {
+                    context.nextToken();
+                    profileDetail.setAcceptRoleSessionName(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("attributeMappings", targetDepth)) {
                     context.nextToken();
                     profileDetail.setAttributeMappings(new ListUnmarshaller<AttributeMapping>(AttributeMappingJsonUnmarshaller.getInstance())

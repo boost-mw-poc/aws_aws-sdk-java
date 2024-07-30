@@ -1047,6 +1047,10 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * <p>
      * You can't create a resource policy statement that allows cross-account access.
      * </p>
+     * <p>
+     * You need to add the <code>CreateResourcePolicy</code> or <code>UpdateResourcePolicy</code> action to the bot role
+     * in order to call the API.
+     * </p>
      * 
      * @param createResourcePolicyStatementRequest
      * @return Result of the CreateResourcePolicyStatement operation returned by the service.
@@ -2103,6 +2107,10 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * Deletes a policy statement from a resource policy. If you delete the last statement from a policy, the policy is
      * deleted. If you specify a statement ID that doesn't exist in the policy, or if the bot or bot alias doesn't have
      * a policy attached, Amazon Lex returns an exception.
+     * </p>
+     * <p>
+     * You need to add the <code>DeleteResourcePolicy</code> or <code>UpdateResourcePolicy</code> action to the bot role
+     * in order to call the API.
      * </p>
      * 
      * @param deleteResourcePolicyStatementRequest

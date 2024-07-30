@@ -29,6 +29,10 @@ public class BedrockKnowledgeStoreConfigurationMarshaller {
 
     private static final MarshallingInfo<String> BEDROCKKNOWLEDGEBASEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bedrockKnowledgeBaseArn").build();
+    private static final MarshallingInfo<Boolean> EXACTRESPONSE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("exactResponse").build();
+    private static final MarshallingInfo<StructuredPojo> EXACTRESPONSEFIELDS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("exactResponseFields").build();
 
     private static final BedrockKnowledgeStoreConfigurationMarshaller instance = new BedrockKnowledgeStoreConfigurationMarshaller();
 
@@ -47,6 +51,8 @@ public class BedrockKnowledgeStoreConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(bedrockKnowledgeStoreConfiguration.getBedrockKnowledgeBaseArn(), BEDROCKKNOWLEDGEBASEARN_BINDING);
+            protocolMarshaller.marshall(bedrockKnowledgeStoreConfiguration.getExactResponse(), EXACTRESPONSE_BINDING);
+            protocolMarshaller.marshall(bedrockKnowledgeStoreConfiguration.getExactResponseFields(), EXACTRESPONSEFIELDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

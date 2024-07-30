@@ -30,7 +30,10 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of user sessions currently being used for pool sessions. This only applies to multi-session pools.
+     * The number of user sessions currently available for streaming from your pool.
+     * </p>
+     * <p>
+     * AvailableUserSessions = ActualUserSessions - ActiveUserSessions
      * </p>
      */
     private Integer availableUserSessions;
@@ -43,25 +46,32 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
     private Integer desiredUserSessions;
     /**
      * <p>
-     * The total number of session slots that are available for a pool of WorkSpaces.
+     * The total number of user sessions that are available for streaming or are currently streaming in your pool.
+     * </p>
+     * <p>
+     * ActualUserSessions = AvailableUserSessions + ActiveUserSessions
      * </p>
      */
     private Integer actualUserSessions;
     /**
      * <p>
-     * The number of user sessions currently being used for pool sessions. This only applies to multi-session pools.
+     * The number of user sessions currently being used for your pool.
      * </p>
      */
     private Integer activeUserSessions;
 
     /**
      * <p>
-     * The number of user sessions currently being used for pool sessions. This only applies to multi-session pools.
+     * The number of user sessions currently available for streaming from your pool.
+     * </p>
+     * <p>
+     * AvailableUserSessions = ActualUserSessions - ActiveUserSessions
      * </p>
      * 
      * @param availableUserSessions
-     *        The number of user sessions currently being used for pool sessions. This only applies to multi-session
-     *        pools.
+     *        The number of user sessions currently available for streaming from your pool.</p>
+     *        <p>
+     *        AvailableUserSessions = ActualUserSessions - ActiveUserSessions
      */
 
     public void setAvailableUserSessions(Integer availableUserSessions) {
@@ -70,11 +80,15 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of user sessions currently being used for pool sessions. This only applies to multi-session pools.
+     * The number of user sessions currently available for streaming from your pool.
+     * </p>
+     * <p>
+     * AvailableUserSessions = ActualUserSessions - ActiveUserSessions
      * </p>
      * 
-     * @return The number of user sessions currently being used for pool sessions. This only applies to multi-session
-     *         pools.
+     * @return The number of user sessions currently available for streaming from your pool.</p>
+     *         <p>
+     *         AvailableUserSessions = ActualUserSessions - ActiveUserSessions
      */
 
     public Integer getAvailableUserSessions() {
@@ -83,12 +97,16 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of user sessions currently being used for pool sessions. This only applies to multi-session pools.
+     * The number of user sessions currently available for streaming from your pool.
+     * </p>
+     * <p>
+     * AvailableUserSessions = ActualUserSessions - ActiveUserSessions
      * </p>
      * 
      * @param availableUserSessions
-     *        The number of user sessions currently being used for pool sessions. This only applies to multi-session
-     *        pools.
+     *        The number of user sessions currently available for streaming from your pool.</p>
+     *        <p>
+     *        AvailableUserSessions = ActualUserSessions - ActiveUserSessions
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,11 +163,17 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The total number of session slots that are available for a pool of WorkSpaces.
+     * The total number of user sessions that are available for streaming or are currently streaming in your pool.
+     * </p>
+     * <p>
+     * ActualUserSessions = AvailableUserSessions + ActiveUserSessions
      * </p>
      * 
      * @param actualUserSessions
-     *        The total number of session slots that are available for a pool of WorkSpaces.
+     *        The total number of user sessions that are available for streaming or are currently streaming in your
+     *        pool.</p>
+     *        <p>
+     *        ActualUserSessions = AvailableUserSessions + ActiveUserSessions
      */
 
     public void setActualUserSessions(Integer actualUserSessions) {
@@ -158,10 +182,16 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The total number of session slots that are available for a pool of WorkSpaces.
+     * The total number of user sessions that are available for streaming or are currently streaming in your pool.
+     * </p>
+     * <p>
+     * ActualUserSessions = AvailableUserSessions + ActiveUserSessions
      * </p>
      * 
-     * @return The total number of session slots that are available for a pool of WorkSpaces.
+     * @return The total number of user sessions that are available for streaming or are currently streaming in your
+     *         pool.</p>
+     *         <p>
+     *         ActualUserSessions = AvailableUserSessions + ActiveUserSessions
      */
 
     public Integer getActualUserSessions() {
@@ -170,11 +200,17 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The total number of session slots that are available for a pool of WorkSpaces.
+     * The total number of user sessions that are available for streaming or are currently streaming in your pool.
+     * </p>
+     * <p>
+     * ActualUserSessions = AvailableUserSessions + ActiveUserSessions
      * </p>
      * 
      * @param actualUserSessions
-     *        The total number of session slots that are available for a pool of WorkSpaces.
+     *        The total number of user sessions that are available for streaming or are currently streaming in your
+     *        pool.</p>
+     *        <p>
+     *        ActualUserSessions = AvailableUserSessions + ActiveUserSessions
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -185,12 +221,11 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of user sessions currently being used for pool sessions. This only applies to multi-session pools.
+     * The number of user sessions currently being used for your pool.
      * </p>
      * 
      * @param activeUserSessions
-     *        The number of user sessions currently being used for pool sessions. This only applies to multi-session
-     *        pools.
+     *        The number of user sessions currently being used for your pool.
      */
 
     public void setActiveUserSessions(Integer activeUserSessions) {
@@ -199,11 +234,10 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of user sessions currently being used for pool sessions. This only applies to multi-session pools.
+     * The number of user sessions currently being used for your pool.
      * </p>
      * 
-     * @return The number of user sessions currently being used for pool sessions. This only applies to multi-session
-     *         pools.
+     * @return The number of user sessions currently being used for your pool.
      */
 
     public Integer getActiveUserSessions() {
@@ -212,12 +246,11 @@ public class CapacityStatus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of user sessions currently being used for pool sessions. This only applies to multi-session pools.
+     * The number of user sessions currently being used for your pool.
      * </p>
      * 
      * @param activeUserSessions
-     *        The number of user sessions currently being used for pool sessions. This only applies to multi-session
-     *        pools.
+     *        The number of user sessions currently being used for your pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

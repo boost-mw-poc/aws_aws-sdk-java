@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.codepipeline.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,8 @@ public class FailureConditionsMarshaller {
 
     private static final MarshallingInfo<String> RESULT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("result").build();
+    private static final MarshallingInfo<List> CONDITIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("conditions").build();
 
     private static final FailureConditionsMarshaller instance = new FailureConditionsMarshaller();
 
@@ -47,6 +50,7 @@ public class FailureConditionsMarshaller {
 
         try {
             protocolMarshaller.marshall(failureConditions.getResult(), RESULT_BINDING);
+            protocolMarshaller.marshall(failureConditions.getConditions(), CONDITIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

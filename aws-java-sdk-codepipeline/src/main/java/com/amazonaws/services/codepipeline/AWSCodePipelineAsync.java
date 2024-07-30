@@ -1016,6 +1016,68 @@ public interface AWSCodePipelineAsync extends AWSCodePipeline {
 
     /**
      * <p>
+     * Lists the rule executions that have occurred in a pipeline configured for conditions with rules.
+     * </p>
+     * 
+     * @param listRuleExecutionsRequest
+     * @return A Java Future containing the result of the ListRuleExecutions operation returned by the service.
+     * @sample AWSCodePipelineAsync.ListRuleExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListRuleExecutions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRuleExecutionsResult> listRuleExecutionsAsync(ListRuleExecutionsRequest listRuleExecutionsRequest);
+
+    /**
+     * <p>
+     * Lists the rule executions that have occurred in a pipeline configured for conditions with rules.
+     * </p>
+     * 
+     * @param listRuleExecutionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRuleExecutions operation returned by the service.
+     * @sample AWSCodePipelineAsyncHandler.ListRuleExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListRuleExecutions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRuleExecutionsResult> listRuleExecutionsAsync(ListRuleExecutionsRequest listRuleExecutionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRuleExecutionsRequest, ListRuleExecutionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the rules for the condition.
+     * </p>
+     * 
+     * @param listRuleTypesRequest
+     * @return A Java Future containing the result of the ListRuleTypes operation returned by the service.
+     * @sample AWSCodePipelineAsync.ListRuleTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListRuleTypes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListRuleTypesResult> listRuleTypesAsync(ListRuleTypesRequest listRuleTypesRequest);
+
+    /**
+     * <p>
+     * Lists the rules for the condition.
+     * </p>
+     * 
+     * @param listRuleTypesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRuleTypes operation returned by the service.
+     * @sample AWSCodePipelineAsyncHandler.ListRuleTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListRuleTypes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListRuleTypesResult> listRuleTypesAsync(ListRuleTypesRequest listRuleTypesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRuleTypesRequest, ListRuleTypesResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets the set of key-value pairs (metadata) that are used to manage the resource.
      * </p>
      * 
@@ -1077,6 +1139,37 @@ public interface AWSCodePipelineAsync extends AWSCodePipeline {
      */
     java.util.concurrent.Future<ListWebhooksResult> listWebhooksAsync(ListWebhooksRequest listWebhooksRequest,
             com.amazonaws.handlers.AsyncHandler<ListWebhooksRequest, ListWebhooksResult> asyncHandler);
+
+    /**
+     * <p>
+     * Used to override a stage condition.
+     * </p>
+     * 
+     * @param overrideStageConditionRequest
+     * @return A Java Future containing the result of the OverrideStageCondition operation returned by the service.
+     * @sample AWSCodePipelineAsync.OverrideStageCondition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/OverrideStageCondition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<OverrideStageConditionResult> overrideStageConditionAsync(OverrideStageConditionRequest overrideStageConditionRequest);
+
+    /**
+     * <p>
+     * Used to override a stage condition.
+     * </p>
+     * 
+     * @param overrideStageConditionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the OverrideStageCondition operation returned by the service.
+     * @sample AWSCodePipelineAsyncHandler.OverrideStageCondition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/OverrideStageCondition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<OverrideStageConditionResult> overrideStageConditionAsync(OverrideStageConditionRequest overrideStageConditionRequest,
+            com.amazonaws.handlers.AsyncHandler<OverrideStageConditionRequest, OverrideStageConditionResult> asyncHandler);
 
     /**
      * <p>

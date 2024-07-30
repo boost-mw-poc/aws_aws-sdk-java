@@ -56,6 +56,14 @@ public class ListSolNetworkOperationsMetadataJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     listSolNetworkOperationsMetadata.setLastModified(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("nsdInfoId", targetDepth)) {
+                    context.nextToken();
+                    listSolNetworkOperationsMetadata.setNsdInfoId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("vnfInstanceId", targetDepth)) {
+                    context.nextToken();
+                    listSolNetworkOperationsMetadata.setVnfInstanceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

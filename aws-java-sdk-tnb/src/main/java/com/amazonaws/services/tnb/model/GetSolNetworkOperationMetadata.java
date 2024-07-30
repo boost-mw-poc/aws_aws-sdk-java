@@ -40,10 +40,24 @@ public class GetSolNetworkOperationMetadata implements Serializable, Cloneable, 
     private java.util.Date createdAt;
     /**
      * <p>
+     * Metadata related to the network operation occurrence for network instantiation. This is populated only if the
+     * lcmOperationType is <code>INSTANTIATE</code>.
+     * </p>
+     */
+    private InstantiateMetadata instantiateMetadata;
+    /**
+     * <p>
      * The date that the resource was last modified.
      * </p>
      */
     private java.util.Date lastModified;
+    /**
+     * <p>
+     * Metadata related to the network operation occurrence for network instance updates. This is populated only if the
+     * lcmOperationType is <code>UPDATE</code> and the updateType is <code>UPDATE_NS</code>.
+     * </p>
+     */
+    private UpdateNsMetadata updateNsMetadata;
 
     /**
      * <p>
@@ -82,6 +96,52 @@ public class GetSolNetworkOperationMetadata implements Serializable, Cloneable, 
 
     public GetSolNetworkOperationMetadata withCreatedAt(java.util.Date createdAt) {
         setCreatedAt(createdAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Metadata related to the network operation occurrence for network instantiation. This is populated only if the
+     * lcmOperationType is <code>INSTANTIATE</code>.
+     * </p>
+     * 
+     * @param instantiateMetadata
+     *        Metadata related to the network operation occurrence for network instantiation. This is populated only if
+     *        the lcmOperationType is <code>INSTANTIATE</code>.
+     */
+
+    public void setInstantiateMetadata(InstantiateMetadata instantiateMetadata) {
+        this.instantiateMetadata = instantiateMetadata;
+    }
+
+    /**
+     * <p>
+     * Metadata related to the network operation occurrence for network instantiation. This is populated only if the
+     * lcmOperationType is <code>INSTANTIATE</code>.
+     * </p>
+     * 
+     * @return Metadata related to the network operation occurrence for network instantiation. This is populated only if
+     *         the lcmOperationType is <code>INSTANTIATE</code>.
+     */
+
+    public InstantiateMetadata getInstantiateMetadata() {
+        return this.instantiateMetadata;
+    }
+
+    /**
+     * <p>
+     * Metadata related to the network operation occurrence for network instantiation. This is populated only if the
+     * lcmOperationType is <code>INSTANTIATE</code>.
+     * </p>
+     * 
+     * @param instantiateMetadata
+     *        Metadata related to the network operation occurrence for network instantiation. This is populated only if
+     *        the lcmOperationType is <code>INSTANTIATE</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSolNetworkOperationMetadata withInstantiateMetadata(InstantiateMetadata instantiateMetadata) {
+        setInstantiateMetadata(instantiateMetadata);
         return this;
     }
 
@@ -126,6 +186,52 @@ public class GetSolNetworkOperationMetadata implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * Metadata related to the network operation occurrence for network instance updates. This is populated only if the
+     * lcmOperationType is <code>UPDATE</code> and the updateType is <code>UPDATE_NS</code>.
+     * </p>
+     * 
+     * @param updateNsMetadata
+     *        Metadata related to the network operation occurrence for network instance updates. This is populated only
+     *        if the lcmOperationType is <code>UPDATE</code> and the updateType is <code>UPDATE_NS</code>.
+     */
+
+    public void setUpdateNsMetadata(UpdateNsMetadata updateNsMetadata) {
+        this.updateNsMetadata = updateNsMetadata;
+    }
+
+    /**
+     * <p>
+     * Metadata related to the network operation occurrence for network instance updates. This is populated only if the
+     * lcmOperationType is <code>UPDATE</code> and the updateType is <code>UPDATE_NS</code>.
+     * </p>
+     * 
+     * @return Metadata related to the network operation occurrence for network instance updates. This is populated only
+     *         if the lcmOperationType is <code>UPDATE</code> and the updateType is <code>UPDATE_NS</code>.
+     */
+
+    public UpdateNsMetadata getUpdateNsMetadata() {
+        return this.updateNsMetadata;
+    }
+
+    /**
+     * <p>
+     * Metadata related to the network operation occurrence for network instance updates. This is populated only if the
+     * lcmOperationType is <code>UPDATE</code> and the updateType is <code>UPDATE_NS</code>.
+     * </p>
+     * 
+     * @param updateNsMetadata
+     *        Metadata related to the network operation occurrence for network instance updates. This is populated only
+     *        if the lcmOperationType is <code>UPDATE</code> and the updateType is <code>UPDATE_NS</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetSolNetworkOperationMetadata withUpdateNsMetadata(UpdateNsMetadata updateNsMetadata) {
+        setUpdateNsMetadata(updateNsMetadata);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -139,8 +245,12 @@ public class GetSolNetworkOperationMetadata implements Serializable, Cloneable, 
         sb.append("{");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
+        if (getInstantiateMetadata() != null)
+            sb.append("InstantiateMetadata: ").append(getInstantiateMetadata()).append(",");
         if (getLastModified() != null)
-            sb.append("LastModified: ").append(getLastModified());
+            sb.append("LastModified: ").append(getLastModified()).append(",");
+        if (getUpdateNsMetadata() != null)
+            sb.append("UpdateNsMetadata: ").append(getUpdateNsMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -159,9 +269,17 @@ public class GetSolNetworkOperationMetadata implements Serializable, Cloneable, 
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
             return false;
+        if (other.getInstantiateMetadata() == null ^ this.getInstantiateMetadata() == null)
+            return false;
+        if (other.getInstantiateMetadata() != null && other.getInstantiateMetadata().equals(this.getInstantiateMetadata()) == false)
+            return false;
         if (other.getLastModified() == null ^ this.getLastModified() == null)
             return false;
         if (other.getLastModified() != null && other.getLastModified().equals(this.getLastModified()) == false)
+            return false;
+        if (other.getUpdateNsMetadata() == null ^ this.getUpdateNsMetadata() == null)
+            return false;
+        if (other.getUpdateNsMetadata() != null && other.getUpdateNsMetadata().equals(this.getUpdateNsMetadata()) == false)
             return false;
         return true;
     }
@@ -172,7 +290,9 @@ public class GetSolNetworkOperationMetadata implements Serializable, Cloneable, 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getInstantiateMetadata() == null) ? 0 : getInstantiateMetadata().hashCode());
         hashCode = prime * hashCode + ((getLastModified() == null) ? 0 : getLastModified().hashCode());
+        hashCode = prime * hashCode + ((getUpdateNsMetadata() == null) ? 0 : getUpdateNsMetadata().hashCode());
         return hashCode;
     }
 

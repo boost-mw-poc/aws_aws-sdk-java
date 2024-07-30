@@ -1190,9 +1190,19 @@ public interface AmazonElastiCache {
      * selected resources; you cannot cancel or revert this operation.
      * </p>
      * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CreateSnapshot</code> permission is required to create a final snapshot. Without this permission, the API
+     * call will fail with an <code>Access Denied</code> exception.
+     * </p>
+     * </li>
+     * <li>
      * <p>
      * This operation is valid for Redis OSS only.
      * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param deleteReplicationGroupRequest
@@ -1236,6 +1246,12 @@ public interface AmazonElastiCache {
      * <p>
      * Deletes a specified existing serverless cache.
      * </p>
+     * <note>
+     * <p>
+     * <code>CreateServerlessCacheSnapshot</code> permission is required to create a final snapshot. Without this
+     * permission, the API call will fail with an <code>Access Denied</code> exception.
+     * </p>
+     * </note>
      * 
      * @param deleteServerlessCacheRequest
      * @return Result of the DeleteServerlessCache operation returned by the service.

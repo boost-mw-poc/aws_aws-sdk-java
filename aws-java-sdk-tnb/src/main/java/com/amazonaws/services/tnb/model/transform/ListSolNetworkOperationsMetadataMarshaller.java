@@ -31,6 +31,10 @@ public class ListSolNetworkOperationsMetadataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFIED_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastModified").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> NSDINFOID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("nsdInfoId").build();
+    private static final MarshallingInfo<String> VNFINSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vnfInstanceId").build();
 
     private static final ListSolNetworkOperationsMetadataMarshaller instance = new ListSolNetworkOperationsMetadataMarshaller();
 
@@ -50,6 +54,8 @@ public class ListSolNetworkOperationsMetadataMarshaller {
         try {
             protocolMarshaller.marshall(listSolNetworkOperationsMetadata.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(listSolNetworkOperationsMetadata.getLastModified(), LASTMODIFIED_BINDING);
+            protocolMarshaller.marshall(listSolNetworkOperationsMetadata.getNsdInfoId(), NSDINFOID_BINDING);
+            protocolMarshaller.marshall(listSolNetworkOperationsMetadata.getVnfInstanceId(), VNFINSTANCEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

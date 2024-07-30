@@ -40,6 +40,12 @@ public class StageStateMarshaller {
             .marshallLocationName("actionStates").build();
     private static final MarshallingInfo<StructuredPojo> LATESTEXECUTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latestExecution").build();
+    private static final MarshallingInfo<StructuredPojo> BEFOREENTRYCONDITIONSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("beforeEntryConditionState").build();
+    private static final MarshallingInfo<StructuredPojo> ONSUCCESSCONDITIONSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("onSuccessConditionState").build();
+    private static final MarshallingInfo<StructuredPojo> ONFAILURECONDITIONSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("onFailureConditionState").build();
 
     private static final StageStateMarshaller instance = new StageStateMarshaller();
 
@@ -63,6 +69,9 @@ public class StageStateMarshaller {
             protocolMarshaller.marshall(stageState.getInboundTransitionState(), INBOUNDTRANSITIONSTATE_BINDING);
             protocolMarshaller.marshall(stageState.getActionStates(), ACTIONSTATES_BINDING);
             protocolMarshaller.marshall(stageState.getLatestExecution(), LATESTEXECUTION_BINDING);
+            protocolMarshaller.marshall(stageState.getBeforeEntryConditionState(), BEFOREENTRYCONDITIONSTATE_BINDING);
+            protocolMarshaller.marshall(stageState.getOnSuccessConditionState(), ONSUCCESSCONDITIONSTATE_BINDING);
+            protocolMarshaller.marshall(stageState.getOnFailureConditionState(), ONFAILURECONDITIONSTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

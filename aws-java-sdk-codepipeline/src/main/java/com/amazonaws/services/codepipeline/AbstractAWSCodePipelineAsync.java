@@ -290,6 +290,32 @@ public class AbstractAWSCodePipelineAsync extends AbstractAWSCodePipeline implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListRuleExecutionsResult> listRuleExecutionsAsync(ListRuleExecutionsRequest request) {
+
+        return listRuleExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRuleExecutionsResult> listRuleExecutionsAsync(ListRuleExecutionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRuleExecutionsRequest, ListRuleExecutionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRuleTypesResult> listRuleTypesAsync(ListRuleTypesRequest request) {
+
+        return listRuleTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRuleTypesResult> listRuleTypesAsync(ListRuleTypesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRuleTypesRequest, ListRuleTypesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);
@@ -311,6 +337,19 @@ public class AbstractAWSCodePipelineAsync extends AbstractAWSCodePipeline implem
     @Override
     public java.util.concurrent.Future<ListWebhooksResult> listWebhooksAsync(ListWebhooksRequest request,
             com.amazonaws.handlers.AsyncHandler<ListWebhooksRequest, ListWebhooksResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<OverrideStageConditionResult> overrideStageConditionAsync(OverrideStageConditionRequest request) {
+
+        return overrideStageConditionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<OverrideStageConditionResult> overrideStageConditionAsync(OverrideStageConditionRequest request,
+            com.amazonaws.handlers.AsyncHandler<OverrideStageConditionRequest, OverrideStageConditionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

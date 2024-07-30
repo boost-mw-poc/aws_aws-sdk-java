@@ -30,19 +30,18 @@ public class Capacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The desired number of user sessions for a multi-session pool. This is not allowed for single-session pools.
+     * The desired number of user sessions for the WorkSpaces in the pool.
      * </p>
      */
     private Integer desiredUserSessions;
 
     /**
      * <p>
-     * The desired number of user sessions for a multi-session pool. This is not allowed for single-session pools.
+     * The desired number of user sessions for the WorkSpaces in the pool.
      * </p>
      * 
      * @param desiredUserSessions
-     *        The desired number of user sessions for a multi-session pool. This is not allowed for single-session
-     *        pools.
+     *        The desired number of user sessions for the WorkSpaces in the pool.
      */
 
     public void setDesiredUserSessions(Integer desiredUserSessions) {
@@ -51,11 +50,10 @@ public class Capacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The desired number of user sessions for a multi-session pool. This is not allowed for single-session pools.
+     * The desired number of user sessions for the WorkSpaces in the pool.
      * </p>
      * 
-     * @return The desired number of user sessions for a multi-session pool. This is not allowed for single-session
-     *         pools.
+     * @return The desired number of user sessions for the WorkSpaces in the pool.
      */
 
     public Integer getDesiredUserSessions() {
@@ -64,12 +62,11 @@ public class Capacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The desired number of user sessions for a multi-session pool. This is not allowed for single-session pools.
+     * The desired number of user sessions for the WorkSpaces in the pool.
      * </p>
      * 
      * @param desiredUserSessions
-     *        The desired number of user sessions for a multi-session pool. This is not allowed for single-session
-     *        pools.
+     *        The desired number of user sessions for the WorkSpaces in the pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

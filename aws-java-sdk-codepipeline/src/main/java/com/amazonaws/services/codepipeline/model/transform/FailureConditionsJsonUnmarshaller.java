@@ -52,6 +52,12 @@ public class FailureConditionsJsonUnmarshaller implements Unmarshaller<FailureCo
                     context.nextToken();
                     failureConditions.setResult(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("conditions", targetDepth)) {
+                    context.nextToken();
+                    failureConditions.setConditions(new ListUnmarshaller<Condition>(ConditionJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

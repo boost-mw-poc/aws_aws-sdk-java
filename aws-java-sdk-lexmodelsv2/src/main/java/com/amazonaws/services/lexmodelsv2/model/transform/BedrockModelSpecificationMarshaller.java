@@ -29,6 +29,12 @@ public class BedrockModelSpecificationMarshaller {
 
     private static final MarshallingInfo<String> MODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("modelArn").build();
+    private static final MarshallingInfo<StructuredPojo> GUARDRAIL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("guardrail").build();
+    private static final MarshallingInfo<String> TRACESTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("traceStatus").build();
+    private static final MarshallingInfo<String> CUSTOMPROMPT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customPrompt").build();
 
     private static final BedrockModelSpecificationMarshaller instance = new BedrockModelSpecificationMarshaller();
 
@@ -47,6 +53,9 @@ public class BedrockModelSpecificationMarshaller {
 
         try {
             protocolMarshaller.marshall(bedrockModelSpecification.getModelArn(), MODELARN_BINDING);
+            protocolMarshaller.marshall(bedrockModelSpecification.getGuardrail(), GUARDRAIL_BINDING);
+            protocolMarshaller.marshall(bedrockModelSpecification.getTraceStatus(), TRACESTATUS_BINDING);
+            protocolMarshaller.marshall(bedrockModelSpecification.getCustomPrompt(), CUSTOMPROMPT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

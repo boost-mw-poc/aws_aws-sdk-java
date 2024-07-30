@@ -88,6 +88,10 @@ public class GetSolNetworkOperationResultJsonUnmarshaller implements Unmarshalle
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("updateType", targetDepth)) {
+                    context.nextToken();
+                    getSolNetworkOperationResult.setUpdateType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -283,7 +283,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      * to their previous session. Otherwise, they are connected to a new session with a new streaming instance.
      * </p>
      * <p>
-     * Specify a value between 60 and 360000.
+     * Specify a value between 60 and 36000.
      * </p>
      */
     private Integer disconnectTimeoutInSeconds;
@@ -336,7 +336,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * To prevent users from being disconnected due to inactivity, specify a value of 0. Otherwise, specify a value
-     * between 60 and 3600. The default value is 0.
+     * between 60 and 36000. The default value is 0.
      * </p>
      * <note>
      * <p>
@@ -2035,7 +2035,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      * to their previous session. Otherwise, they are connected to a new session with a new streaming instance.
      * </p>
      * <p>
-     * Specify a value between 60 and 360000.
+     * Specify a value between 60 and 36000.
      * </p>
      * 
      * @param disconnectTimeoutInSeconds
@@ -2044,7 +2044,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      *        interval, they are connected to their previous session. Otherwise, they are connected to a new session
      *        with a new streaming instance.</p>
      *        <p>
-     *        Specify a value between 60 and 360000.
+     *        Specify a value between 60 and 36000.
      */
 
     public void setDisconnectTimeoutInSeconds(Integer disconnectTimeoutInSeconds) {
@@ -2058,7 +2058,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      * to their previous session. Otherwise, they are connected to a new session with a new streaming instance.
      * </p>
      * <p>
-     * Specify a value between 60 and 360000.
+     * Specify a value between 60 and 36000.
      * </p>
      * 
      * @return The amount of time that a streaming session remains active after users disconnect. If they try to
@@ -2066,7 +2066,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      *         interval, they are connected to their previous session. Otherwise, they are connected to a new session
      *         with a new streaming instance.</p>
      *         <p>
-     *         Specify a value between 60 and 360000.
+     *         Specify a value between 60 and 36000.
      */
 
     public Integer getDisconnectTimeoutInSeconds() {
@@ -2080,7 +2080,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      * to their previous session. Otherwise, they are connected to a new session with a new streaming instance.
      * </p>
      * <p>
-     * Specify a value between 60 and 360000.
+     * Specify a value between 60 and 36000.
      * </p>
      * 
      * @param disconnectTimeoutInSeconds
@@ -2089,7 +2089,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      *        interval, they are connected to their previous session. Otherwise, they are connected to a new session
      *        with a new streaming instance.</p>
      *        <p>
-     *        Specify a value between 60 and 360000.
+     *        Specify a value between 60 and 36000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2431,7 +2431,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * To prevent users from being disconnected due to inactivity, specify a value of 0. Otherwise, specify a value
-     * between 60 and 3600. The default value is 0.
+     * between 60 and 36000. The default value is 0.
      * </p>
      * <note>
      * <p>
@@ -2454,7 +2454,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      *        <code>IdleDisconnectTimeoutInSeconds</code> elapses, they are disconnected.</p>
      *        <p>
      *        To prevent users from being disconnected due to inactivity, specify a value of 0. Otherwise, specify a
-     *        value between 60 and 3600. The default value is 0.
+     *        value between 60 and 36000. The default value is 0.
      *        </p>
      *        <note>
      *        <p>
@@ -2483,7 +2483,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * To prevent users from being disconnected due to inactivity, specify a value of 0. Otherwise, specify a value
-     * between 60 and 3600. The default value is 0.
+     * between 60 and 36000. The default value is 0.
      * </p>
      * <note>
      * <p>
@@ -2505,7 +2505,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      *         <code>IdleDisconnectTimeoutInSeconds</code> elapses, they are disconnected.</p>
      *         <p>
      *         To prevent users from being disconnected due to inactivity, specify a value of 0. Otherwise, specify a
-     *         value between 60 and 3600. The default value is 0.
+     *         value between 60 and 36000. The default value is 0.
      *         </p>
      *         <note>
      *         <p>
@@ -2534,7 +2534,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * To prevent users from being disconnected due to inactivity, specify a value of 0. Otherwise, specify a value
-     * between 60 and 3600. The default value is 0.
+     * between 60 and 36000. The default value is 0.
      * </p>
      * <note>
      * <p>
@@ -2557,7 +2557,7 @@ public class Fleet implements Serializable, Cloneable, StructuredPojo {
      *        <code>IdleDisconnectTimeoutInSeconds</code> elapses, they are disconnected.</p>
      *        <p>
      *        To prevent users from being disconnected due to inactivity, specify a value of 0. Otherwise, specify a
-     *        value between 60 and 3600. The default value is 0.
+     *        value between 60 and 36000. The default value is 0.
      *        </p>
      *        <note>
      *        <p>

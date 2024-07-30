@@ -34,8 +34,9 @@ public class TerminateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
-     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
-     * search and filter your resources or track your Amazon Web Services costs.
+     * value. When you use this API, the tags are only applied to the network operation that is created. These tags are
+     * not applied to the network instance. Use tags to search and filter your resources or track your Amazon Web
+     * Services costs.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -83,13 +84,15 @@ public class TerminateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
-     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
-     * search and filter your resources or track your Amazon Web Services costs.
+     * value. When you use this API, the tags are only applied to the network operation that is created. These tags are
+     * not applied to the network instance. Use tags to search and filter your resources or track your Amazon Web
+     * Services costs.
      * </p>
      * 
      * @return A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
-     *         optional value. When you use this API, the tags are transferred to the network operation that is created.
-     *         Use tags to search and filter your resources or track your Amazon Web Services costs.
+     *         optional value. When you use this API, the tags are only applied to the network operation that is
+     *         created. These tags are not applied to the network instance. Use tags to search and filter your resources
+     *         or track your Amazon Web Services costs.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -99,14 +102,16 @@ public class TerminateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
-     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
-     * search and filter your resources or track your Amazon Web Services costs.
+     * value. When you use this API, the tags are only applied to the network operation that is created. These tags are
+     * not applied to the network instance. Use tags to search and filter your resources or track your Amazon Web
+     * Services costs.
      * </p>
      * 
      * @param tags
      *        A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
-     *        optional value. When you use this API, the tags are transferred to the network operation that is created.
-     *        Use tags to search and filter your resources or track your Amazon Web Services costs.
+     *        optional value. When you use this API, the tags are only applied to the network operation that is created.
+     *        These tags are not applied to the network instance. Use tags to search and filter your resources or track
+     *        your Amazon Web Services costs.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -116,14 +121,16 @@ public class TerminateSolNetworkInstanceRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional
-     * value. When you use this API, the tags are transferred to the network operation that is created. Use tags to
-     * search and filter your resources or track your Amazon Web Services costs.
+     * value. When you use this API, the tags are only applied to the network operation that is created. These tags are
+     * not applied to the network instance. Use tags to search and filter your resources or track your Amazon Web
+     * Services costs.
      * </p>
      * 
      * @param tags
      *        A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an
-     *        optional value. When you use this API, the tags are transferred to the network operation that is created.
-     *        Use tags to search and filter your resources or track your Amazon Web Services costs.
+     *        optional value. When you use this API, the tags are only applied to the network operation that is created.
+     *        These tags are not applied to the network instance. Use tags to search and filter your resources or track
+     *        your Amazon Web Services costs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

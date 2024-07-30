@@ -778,6 +778,47 @@ public interface AWSCodePipeline {
 
     /**
      * <p>
+     * Lists the rule executions that have occurred in a pipeline configured for conditions with rules.
+     * </p>
+     * 
+     * @param listRuleExecutionsRequest
+     * @return Result of the ListRuleExecutions operation returned by the service.
+     * @throws ValidationException
+     *         The validation was specified in an invalid format.
+     * @throws PipelineNotFoundException
+     *         The pipeline was specified in an invalid format or cannot be found.
+     * @throws InvalidNextTokenException
+     *         The next token was specified in an invalid format. Make sure that the next token you provide is the token
+     *         returned by a previous call.
+     * @throws PipelineExecutionNotFoundException
+     *         The pipeline execution was specified in an invalid format or cannot be found, or an execution ID does not
+     *         belong to the specified pipeline.
+     * @sample AWSCodePipeline.ListRuleExecutions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListRuleExecutions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListRuleExecutionsResult listRuleExecutions(ListRuleExecutionsRequest listRuleExecutionsRequest);
+
+    /**
+     * <p>
+     * Lists the rules for the condition.
+     * </p>
+     * 
+     * @param listRuleTypesRequest
+     * @return Result of the ListRuleTypes operation returned by the service.
+     * @throws ValidationException
+     *         The validation was specified in an invalid format.
+     * @throws InvalidNextTokenException
+     *         The next token was specified in an invalid format. Make sure that the next token you provide is the token
+     *         returned by a previous call.
+     * @sample AWSCodePipeline.ListRuleTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/ListRuleTypes" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListRuleTypesResult listRuleTypes(ListRuleTypesRequest listRuleTypesRequest);
+
+    /**
+     * <p>
      * Gets the set of key-value pairs (metadata) that are used to manage the resource.
      * </p>
      * 
@@ -816,6 +857,34 @@ public interface AWSCodePipeline {
      *      Documentation</a>
      */
     ListWebhooksResult listWebhooks(ListWebhooksRequest listWebhooksRequest);
+
+    /**
+     * <p>
+     * Used to override a stage condition.
+     * </p>
+     * 
+     * @param overrideStageConditionRequest
+     * @return Result of the OverrideStageCondition operation returned by the service.
+     * @throws ValidationException
+     *         The validation was specified in an invalid format.
+     * @throws ConflictException
+     *         Your request cannot be handled because the pipeline is busy handling ongoing activities. Try again later.
+     * @throws PipelineNotFoundException
+     *         The pipeline was specified in an invalid format or cannot be found.
+     * @throws StageNotFoundException
+     *         The stage was specified in an invalid format or cannot be found.
+     * @throws ConditionNotOverridableException
+     *         Unable to override because the condition does not allow overrides.
+     * @throws NotLatestPipelineExecutionException
+     *         The stage has failed in a later run of the pipeline and the <code>pipelineExecutionId</code> associated
+     *         with the request is out of date.
+     * @throws ConcurrentPipelineExecutionsLimitExceededException
+     *         The pipeline has reached the limit for concurrent pipeline executions.
+     * @sample AWSCodePipeline.OverrideStageCondition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/OverrideStageCondition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    OverrideStageConditionResult overrideStageCondition(OverrideStageConditionRequest overrideStageConditionRequest);
 
     /**
      * <p>
@@ -884,6 +953,8 @@ public interface AWSCodePipeline {
      *         The specified action cannot be found.
      * @throws ValidationException
      *         The validation was specified in an invalid format.
+     * @throws ConcurrentPipelineExecutionsLimitExceededException
+     *         The pipeline has reached the limit for concurrent pipeline executions.
      * @sample AWSCodePipeline.PutActionRevision
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/PutActionRevision" target="_top">AWS
      *      API Documentation</a>
@@ -1084,6 +1155,8 @@ public interface AWSCodePipeline {
      * @throws NotLatestPipelineExecutionException
      *         The stage has failed in a later run of the pipeline and the <code>pipelineExecutionId</code> associated
      *         with the request is out of date.
+     * @throws ConcurrentPipelineExecutionsLimitExceededException
+     *         The pipeline has reached the limit for concurrent pipeline executions.
      * @sample AWSCodePipeline.RetryStageExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codepipeline-2015-07-09/RetryStageExecution"
      *      target="_top">AWS API Documentation</a>

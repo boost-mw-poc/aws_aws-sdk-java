@@ -37,6 +37,12 @@ public class ListSolNetworkOperationsRequest extends com.amazonaws.AmazonWebServ
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * Network instance id filter, to retrieve network operations associated to a network instance.
+     * </p>
+     */
+    private String nsInstanceId;
 
     /**
      * <p>
@@ -119,6 +125,46 @@ public class ListSolNetworkOperationsRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * Network instance id filter, to retrieve network operations associated to a network instance.
+     * </p>
+     * 
+     * @param nsInstanceId
+     *        Network instance id filter, to retrieve network operations associated to a network instance.
+     */
+
+    public void setNsInstanceId(String nsInstanceId) {
+        this.nsInstanceId = nsInstanceId;
+    }
+
+    /**
+     * <p>
+     * Network instance id filter, to retrieve network operations associated to a network instance.
+     * </p>
+     * 
+     * @return Network instance id filter, to retrieve network operations associated to a network instance.
+     */
+
+    public String getNsInstanceId() {
+        return this.nsInstanceId;
+    }
+
+    /**
+     * <p>
+     * Network instance id filter, to retrieve network operations associated to a network instance.
+     * </p>
+     * 
+     * @param nsInstanceId
+     *        Network instance id filter, to retrieve network operations associated to a network instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListSolNetworkOperationsRequest withNsInstanceId(String nsInstanceId) {
+        setNsInstanceId(nsInstanceId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +179,9 @@ public class ListSolNetworkOperationsRequest extends com.amazonaws.AmazonWebServ
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getNsInstanceId() != null)
+            sb.append("NsInstanceId: ").append(getNsInstanceId());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +204,10 @@ public class ListSolNetworkOperationsRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getNsInstanceId() == null ^ this.getNsInstanceId() == null)
+            return false;
+        if (other.getNsInstanceId() != null && other.getNsInstanceId().equals(this.getNsInstanceId()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +218,7 @@ public class ListSolNetworkOperationsRequest extends com.amazonaws.AmazonWebServ
 
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getNsInstanceId() == null) ? 0 : getNsInstanceId().hashCode());
         return hashCode;
     }
 

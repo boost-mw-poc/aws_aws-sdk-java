@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum Result {
 
-    ROLLBACK("ROLLBACK");
+    ROLLBACK("ROLLBACK"),
+    FAIL("FAIL");
 
     private String value;
 

@@ -65,10 +65,16 @@ public enum CodepipelineActions implements Action {
     ListPipelineExecutions("codepipeline:ListPipelineExecutions"),
     /** Action for the ListPipelines operation. */
     ListPipelines("codepipeline:ListPipelines"),
+    /** Action for the ListRuleExecutions operation. */
+    ListRuleExecutions("codepipeline:ListRuleExecutions"),
+    /** Action for the ListRuleTypes operation. */
+    ListRuleTypes("codepipeline:ListRuleTypes"),
     /** Action for the ListTagsForResource operation. */
     ListTagsForResource("codepipeline:ListTagsForResource"),
     /** Action for the ListWebhooks operation. */
     ListWebhooks("codepipeline:ListWebhooks"),
+    /** Action for the OverrideStageCondition operation. */
+    OverrideStageCondition("codepipeline:OverrideStageCondition"),
     /** Action for the PollForJobs operation. */
     PollForJobs("codepipeline:PollForJobs"),
     /** Action for the PollForThirdPartyJobs operation. */

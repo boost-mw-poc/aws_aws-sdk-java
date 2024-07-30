@@ -225,7 +225,7 @@ public class ValidateSolNetworkPackageContentRequest extends com.amazonaws.Amazo
         if (getContentType() != null)
             sb.append("ContentType: ").append(getContentType()).append(",");
         if (getFile() != null)
-            sb.append("File: ").append(getFile()).append(",");
+            sb.append("File: ").append("***Sensitive Data Redacted***").append(",");
         if (getNsdInfoId() != null)
             sb.append("NsdInfoId: ").append(getNsdInfoId());
         sb.append("}");

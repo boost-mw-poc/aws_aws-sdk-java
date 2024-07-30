@@ -33,6 +33,8 @@ public class UpdateSolNetworkInstanceRequestMarshaller {
             .marshallLocationName("nsInstanceId").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> UPDATENS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateNs").build();
     private static final MarshallingInfo<String> UPDATETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateType").build();
 
@@ -54,6 +56,7 @@ public class UpdateSolNetworkInstanceRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateSolNetworkInstanceRequest.getNsInstanceId(), NSINSTANCEID_BINDING);
             protocolMarshaller.marshall(updateSolNetworkInstanceRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(updateSolNetworkInstanceRequest.getUpdateNs(), UPDATENS_BINDING);
             protocolMarshaller.marshall(updateSolNetworkInstanceRequest.getUpdateType(), UPDATETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

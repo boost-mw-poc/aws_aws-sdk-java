@@ -78,6 +78,12 @@ public class GetSolNetworkOperationResult extends com.amazonaws.AmazonWebService
      * </p>
      */
     private java.util.List<GetSolNetworkOperationTaskDetails> tasks;
+    /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     */
+    private String updateType;
 
     /**
      * <p>
@@ -545,6 +551,65 @@ public class GetSolNetworkOperationResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     * 
+     * @param updateType
+     *        Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * @see UpdateSolNetworkType
+     */
+
+    public void setUpdateType(String updateType) {
+        this.updateType = updateType;
+    }
+
+    /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     * 
+     * @return Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * @see UpdateSolNetworkType
+     */
+
+    public String getUpdateType() {
+        return this.updateType;
+    }
+
+    /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     * 
+     * @param updateType
+     *        Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UpdateSolNetworkType
+     */
+
+    public GetSolNetworkOperationResult withUpdateType(String updateType) {
+        setUpdateType(updateType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * </p>
+     * 
+     * @param updateType
+     *        Type of the update. Only present if the network operation lcmOperationType is <code>UPDATE</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see UpdateSolNetworkType
+     */
+
+    public GetSolNetworkOperationResult withUpdateType(UpdateSolNetworkType updateType) {
+        this.updateType = updateType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -573,7 +638,9 @@ public class GetSolNetworkOperationResult extends com.amazonaws.AmazonWebService
         if (getTags() != null)
             sb.append("Tags: ").append("***Sensitive Data Redacted***").append(",");
         if (getTasks() != null)
-            sb.append("Tasks: ").append(getTasks());
+            sb.append("Tasks: ").append(getTasks()).append(",");
+        if (getUpdateType() != null)
+            sb.append("UpdateType: ").append(getUpdateType());
         sb.append("}");
         return sb.toString();
     }
@@ -624,6 +691,10 @@ public class GetSolNetworkOperationResult extends com.amazonaws.AmazonWebService
             return false;
         if (other.getTasks() != null && other.getTasks().equals(this.getTasks()) == false)
             return false;
+        if (other.getUpdateType() == null ^ this.getUpdateType() == null)
+            return false;
+        if (other.getUpdateType() != null && other.getUpdateType().equals(this.getUpdateType()) == false)
+            return false;
         return true;
     }
 
@@ -641,6 +712,7 @@ public class GetSolNetworkOperationResult extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getOperationState() == null) ? 0 : getOperationState().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getTasks() == null) ? 0 : getTasks().hashCode());
+        hashCode = prime * hashCode + ((getUpdateType() == null) ? 0 : getUpdateType().hashCode());
         return hashCode;
     }
 

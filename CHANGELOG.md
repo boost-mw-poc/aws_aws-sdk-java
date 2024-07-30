@@ -1,3 +1,52 @@
+# __1.12.767__ __2024-07-30__
+## __AWS CodePipeline__
+  - ### Features
+    - AWS CodePipeline V2 type pipelines now support stage level conditions to enable development teams to safely release changes that meet quality and compliance requirements.
+
+## __AWS SDK for Java__
+  - ### Deprecations
+    - The AWS SDK for Java 1.x is now in maintenance mode, and will no longer receive updates for new or existing services, and will not be updated to support new regions. The 1.x SDK will continue to receive critical bug fixes and security updates until December 31, 2025. For more information, see https://aws.amazon.com/blogs/developer/the-aws-sdk-for-java-1-x-is-in-maintenance-mode-effective-july-31-2024/
+
+## __AWS Telco Network Builder__
+  - ### Features
+    - This release adds Network Service Update, through which customers will be able to update their instantiated networks to a new network package. See the documentation for limitations. The release also enhances the Get network operation API to return parameter overrides used during the operation.
+
+## __Amazon AppStream__
+  - ### Features
+    - Added support for Red Hat Enterprise Linux 8 on Amazon AppStream 2.0
+
+## __Amazon CloudWatch Logs__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon ElastiCache__
+  - ### Features
+    - Doc only update for changes to deletion API.
+
+## __Amazon EventBridge__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __Amazon Lex Model Building V2__
+  - ### Features
+    - This release adds new capabilities to the AMAZON.QnAIntent: Custom prompting, Guardrails integration and ExactResponse support for Bedrock Knowledge Base.
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - Removing multi-session as it isn't supported for pools
+
+## __Auto Scaling__
+  - ### Features
+    - Increase the length limit for VPCZoneIdentifier from 2047 to 5000
+
+## __Elastic Load Balancing__
+  - ### Features
+    - Add v2 smoke tests and smithy smokeTests trait for SDK testing.
+
+## __IAM Roles Anywhere__
+  - ### Features
+    - IAM RolesAnywhere now supports custom role session name on the CreateSession. This release adds the acceptRoleSessionName option to a profile to control whether a role session name will be accepted in a session request with a given profile.
+
 # __1.12.766__ __2024-07-29__
 ## __Amazon ElastiCache__
   - ### Features

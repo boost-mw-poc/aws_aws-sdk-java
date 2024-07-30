@@ -1138,6 +1138,72 @@ public class AWSCodePipelineAsyncClient extends AWSCodePipelineClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListRuleExecutionsResult> listRuleExecutionsAsync(ListRuleExecutionsRequest request) {
+
+        return listRuleExecutionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRuleExecutionsResult> listRuleExecutionsAsync(final ListRuleExecutionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRuleExecutionsRequest, ListRuleExecutionsResult> asyncHandler) {
+        final ListRuleExecutionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRuleExecutionsResult>() {
+            @Override
+            public ListRuleExecutionsResult call() throws Exception {
+                ListRuleExecutionsResult result = null;
+
+                try {
+                    result = executeListRuleExecutions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRuleTypesResult> listRuleTypesAsync(ListRuleTypesRequest request) {
+
+        return listRuleTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRuleTypesResult> listRuleTypesAsync(final ListRuleTypesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRuleTypesRequest, ListRuleTypesResult> asyncHandler) {
+        final ListRuleTypesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRuleTypesResult>() {
+            @Override
+            public ListRuleTypesResult call() throws Exception {
+                ListRuleTypesResult result = null;
+
+                try {
+                    result = executeListRuleTypes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);
@@ -1188,6 +1254,39 @@ public class AWSCodePipelineAsyncClient extends AWSCodePipelineClient implements
 
                 try {
                     result = executeListWebhooks(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<OverrideStageConditionResult> overrideStageConditionAsync(OverrideStageConditionRequest request) {
+
+        return overrideStageConditionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<OverrideStageConditionResult> overrideStageConditionAsync(final OverrideStageConditionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<OverrideStageConditionRequest, OverrideStageConditionResult> asyncHandler) {
+        final OverrideStageConditionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<OverrideStageConditionResult>() {
+            @Override
+            public OverrideStageConditionResult call() throws Exception {
+                OverrideStageConditionResult result = null;
+
+                try {
+                    result = executeOverrideStageCondition(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

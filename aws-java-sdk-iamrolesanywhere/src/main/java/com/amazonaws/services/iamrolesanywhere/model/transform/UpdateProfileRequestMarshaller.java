@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateProfileRequestMarshaller {
 
+    private static final MarshallingInfo<Boolean> ACCEPTROLESESSIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("acceptRoleSessionName").build();
     private static final MarshallingInfo<Integer> DURATIONSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("durationSeconds").build();
     private static final MarshallingInfo<List> MANAGEDPOLICYARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -57,6 +59,7 @@ public class UpdateProfileRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(updateProfileRequest.getAcceptRoleSessionName(), ACCEPTROLESESSIONNAME_BINDING);
             protocolMarshaller.marshall(updateProfileRequest.getDurationSeconds(), DURATIONSECONDS_BINDING);
             protocolMarshaller.marshall(updateProfileRequest.getManagedPolicyArns(), MANAGEDPOLICYARNS_BINDING);
             protocolMarshaller.marshall(updateProfileRequest.getName(), NAME_BINDING);
