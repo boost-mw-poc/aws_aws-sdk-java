@@ -47,6 +47,7 @@ import com.amazonaws.services.s3.model.ListBucketAnalyticsConfigurationsResult;
 import com.amazonaws.services.s3.model.ListBucketIntelligentTieringConfigurationsResult;
 import com.amazonaws.services.s3.model.ListBucketInventoryConfigurationsResult;
 import com.amazonaws.services.s3.model.ListBucketMetricsConfigurationsResult;
+import com.amazonaws.services.s3.model.ListBucketsPaginatedResult;
 import com.amazonaws.services.s3.model.ListObjectsV2Result;
 import com.amazonaws.services.s3.model.MultipartUploadListing;
 import com.amazonaws.services.s3.model.ObjectListing;
@@ -86,6 +87,17 @@ public class Unmarshallers {
         public List<Bucket> unmarshall(InputStream in) throws Exception {
             return new XmlResponsesSaxParser()
                     .parseListMyBucketsResponse(in).getBuckets();
+        }
+    }
+
+    /**
+     * Unmarshaller for the ListBuckets XML response.
+     */
+    public static final class ListBucketsPaginatedUnmarshaller implements
+                                                      Unmarshaller<ListBucketsPaginatedResult, InputStream> {
+        public ListBucketsPaginatedResult unmarshall(InputStream in) throws Exception {
+            return new XmlResponsesSaxParser()
+                .parseListMyBucketsResponse(in).getResult();
         }
     }
 

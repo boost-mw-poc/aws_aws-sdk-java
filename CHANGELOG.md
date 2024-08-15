@@ -1,3 +1,13 @@
+# __1.12.769__ __2024-08-15__
+## __Amazon Simple Storage Service__
+  - ### Features
+    - Amazon Simple Storage Service / Features  : Adds support for pagination in the S3 ListBuckets API.
+
+# __1.12.768__ __2024-08-14__
+## __AWS SDK for Java__
+  - ### Features
+    - Update Java baseline version to Java 8 and bump Jackson library to 2.17.2
+
 # __1.12.767__ __2024-07-30__
 ## __AWS CodePipeline__
   - ### Features

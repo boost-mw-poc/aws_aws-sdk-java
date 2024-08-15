@@ -14,6 +14,8 @@
  */
 package com.amazonaws.services.s3;
 
+import com.amazonaws.services.s3.model.ListBucketsPaginatedRequest;
+import com.amazonaws.services.s3.model.ListBucketsPaginatedResult;
 import com.amazonaws.services.s3.model.MultiObjectDeleteSlowdownException;
 import com.amazonaws.services.s3.model.WriteGetObjectResponseRequest;
 import com.amazonaws.services.s3.model.WriteGetObjectResponseResult;
@@ -1206,9 +1208,12 @@ public interface AmazonS3 extends S3DirectSpi {
      *             request.
      *
      * @see AmazonS3#listBuckets(ListBucketsRequest)
+     * @see AmazonS3#listBuckets(ListBucketsPaginatedRequest)
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBuckets">Amazon Web Services API Documentation</a>
      * @sample AmazonS3.ListBuckets
+     * @deprecated Use {@link AmazonS3#listBuckets(ListBucketsPaginatedRequest)} instead
      */
+    @Deprecated
     public List<Bucket> listBuckets() throws SdkClientException,
             AmazonServiceException;
 
@@ -1238,10 +1243,45 @@ public interface AmazonS3 extends S3DirectSpi {
      *             request.
      *
      * @see AmazonS3#listBuckets()
+     * @see AmazonS3#listBuckets(ListBucketsPaginatedRequest)
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBuckets">Amazon Web Services API Documentation</a>
+     * @deprecated Use {@link AmazonS3#listBuckets(ListBucketsPaginatedRequest)} instead
      */
+    @Deprecated
     public List<Bucket> listBuckets(ListBucketsRequest listBucketsRequest)
             throws SdkClientException, AmazonServiceException;
+
+    /**
+     * <p>
+     * Returns a list of all buckets owned by the authenticated sender of the request. To use this operation, you must
+     * have the <code>s3:ListAllMyBuckets</code> permission. An optional continuationToken can be configured on the
+     * {@link ListBucketsPaginatedRequest} to indicates to Amazon S3 that the list is
+     * being continued on this bucket with a token.
+     * </p>
+     * <p>
+     * For information about Amazon S3 buckets, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html">Creating, configuring, and
+     * working with Amazon S3 buckets</a>.
+     * </p>
+     *
+     * @param listBucketsPaginatedRequest
+     *          The request containing all of the options related to the listing
+     *          of buckets.
+     *
+     * @return A list of all of the Amazon S3 buckets owned by the authenticated
+     *         sender of the request.
+     *
+     * @throws SdkClientException
+     *             If any errors are encountered in the client while making the
+     *             request or handling the response.
+     * @throws AmazonServiceException
+     *             If any errors occurred in Amazon S3 while processing the
+     *             request.
+     *
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ListBuckets">Amazon Web Services API Documentation</a>
+     */
+    public ListBucketsPaginatedResult listBuckets(ListBucketsPaginatedRequest listBucketsPaginatedRequest)
+        throws SdkClientException, AmazonServiceException;
 
 
     /**

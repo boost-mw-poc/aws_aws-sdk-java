@@ -1011,6 +1011,8 @@ public class XmlResponsesSaxParser {
         private Owner bucketsOwner = null;
 
         private Bucket currentBucket = null;
+        private String continuationToken;
+        private ListBucketsPaginatedResult result = new ListBucketsPaginatedResult();
 
         /**
          * @return the buckets listed in the document.
@@ -1024,6 +1026,12 @@ public class XmlResponsesSaxParser {
          */
         public Owner getOwner() {
             return bucketsOwner;
+        }
+
+        public ListBucketsPaginatedResult getResult() {
+            return  new ListBucketsPaginatedResult().withBuckets(buckets)
+                                                    .withOwner(bucketsOwner)
+                                                    .withContinuationToken(continuationToken);
         }
 
         @Override
@@ -1047,7 +1055,11 @@ public class XmlResponsesSaxParser {
 
         @Override
         protected void doEndElement(String uri, String name, String qName) {
-            if (in("ListAllMyBucketsResult", "Owner")) {
+            if (in("ListAllMyBucketsResult")) {
+                 if (name.equals("ContinuationToken")) {
+                    continuationToken = getText();
+                }
+            } else if (in("ListAllMyBucketsResult", "Owner")) {
                 if (name.equals("ID")) {
                     bucketsOwner.setId(getText());
 

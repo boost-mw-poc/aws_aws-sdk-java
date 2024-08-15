@@ -18,6 +18,8 @@ import com.amazonaws.services.s3.model.DeleteBucketOwnershipControlsRequest;
 import com.amazonaws.services.s3.model.DeleteBucketOwnershipControlsResult;
 import com.amazonaws.services.s3.model.GetBucketOwnershipControlsRequest;
 import com.amazonaws.services.s3.model.GetBucketOwnershipControlsResult;
+import com.amazonaws.services.s3.model.ListBucketsPaginatedRequest;
+import com.amazonaws.services.s3.model.ListBucketsPaginatedResult;
 import com.amazonaws.services.s3.model.SetBucketOwnershipControlsRequest;
 import com.amazonaws.services.s3.model.SetBucketOwnershipControlsResult;
 import com.amazonaws.services.s3.model.SetRequestPaymentConfigurationRequest;
@@ -379,6 +381,12 @@ public abstract class AbstractAmazonS3 implements AmazonS3 {
             throws SdkClientException, AmazonServiceException {
         throw new UnsupportedOperationException("Extend AbstractAmazonS3 to provide an implementation");
 
+    }
+
+    @Override
+    public ListBucketsPaginatedResult listBuckets(ListBucketsPaginatedRequest listBucketsRequest)
+        throws SdkClientException, AmazonServiceException{
+        throw new UnsupportedOperationException("Extend AbstractAmazonS3 to provide an implementation");
     }
 
     @Override

@@ -229,6 +229,8 @@ import com.amazonaws.services.s3.model.ListBucketInventoryConfigurationsRequest;
 import com.amazonaws.services.s3.model.ListBucketInventoryConfigurationsResult;
 import com.amazonaws.services.s3.model.ListBucketMetricsConfigurationsRequest;
 import com.amazonaws.services.s3.model.ListBucketMetricsConfigurationsResult;
+import com.amazonaws.services.s3.model.ListBucketsPaginatedRequest;
+import com.amazonaws.services.s3.model.ListBucketsPaginatedResult;
 import com.amazonaws.services.s3.model.ListBucketsRequest;
 import com.amazonaws.services.s3.model.ListMultipartUploadsRequest;
 import com.amazonaws.services.s3.model.ListNextBatchOfObjectsRequest;
@@ -1055,6 +1057,18 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         Request<ListBucketsRequest> request = createRequest(null, null, listBucketsRequest, HttpMethodName.GET);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListBuckets");
         return invoke(request, new Unmarshallers.ListBucketsUnmarshaller(), null, null);
+    }
+
+    @Override
+    public ListBucketsPaginatedResult listBuckets(ListBucketsPaginatedRequest listBucketsRequest)
+        throws SdkClientException, AmazonServiceException {
+        listBucketsRequest = beforeClientExecution(listBucketsRequest);
+        rejectNull(listBucketsRequest, "The request object parameter listBucketsRequest must be specified.");
+        Request<ListBucketsPaginatedRequest> request = createRequest(null, null, listBucketsRequest, HttpMethodName.GET);
+        request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListBuckets");
+        addParameterIfNotNull(request, "continuation-token", listBucketsRequest.getContinuationToken());
+        addParameterIfNotNull(request, "max-buckets", listBucketsRequest.getMaxBuckets());
+        return invoke(request, new Unmarshallers.ListBucketsPaginatedUnmarshaller(), null, null);
     }
 
     @Override
