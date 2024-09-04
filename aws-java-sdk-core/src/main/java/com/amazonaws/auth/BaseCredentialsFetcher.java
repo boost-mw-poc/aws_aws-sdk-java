@@ -60,6 +60,9 @@ abstract class BaseCredentialsFetcher {
     /** The name of the Json Object that contains the token.*/
     private static final String TOKEN = "Token";
 
+    /** The name of the field in the credentials response that contains the account ID.*/
+    private final String accountIdKey;
+
     private final SdkClock clock;
 
     /**
@@ -81,14 +84,15 @@ abstract class BaseCredentialsFetcher {
     /** The time of the last attempt to check for new credentials */
     protected volatile Date lastInstanceProfileCheck;
 
-    protected BaseCredentialsFetcher(SdkClock clock, boolean allowExpiredCredentials) {
-        this(clock, allowExpiredCredentials, null);
+    protected BaseCredentialsFetcher(SdkClock clock, boolean allowExpiredCredentials, String accountIdKey) {
+        this(clock, allowExpiredCredentials, null, accountIdKey);
     }
 
-    protected BaseCredentialsFetcher(SdkClock clock, boolean allowExpiredCredentials, String providerName) {
+    protected BaseCredentialsFetcher(SdkClock clock, boolean allowExpiredCredentials, String providerName, String accountIdKey) {
         this.clock = clock;
         this.allowExpiredCredentials = allowExpiredCredentials;
         this.providerName = providerName;
+        this.accountIdKey = accountIdKey;
     }
 
     public AWSCredentials getCredentials() {
@@ -146,6 +150,7 @@ abstract class BaseCredentialsFetcher {
 
         JsonNode accessKey;
         JsonNode secretKey;
+        JsonNode accountId;
         JsonNode node;
         JsonNode token;
         try {
@@ -158,20 +163,28 @@ abstract class BaseCredentialsFetcher {
             secretKey = node.get(SECRET_ACCESS_KEY);
             token = node.get(TOKEN);
 
+            if (accountIdKey != null) {
+                accountId = node.get(accountIdKey);
+            } else {
+                accountId = null;
+            }
+
             if (null == accessKey || null == secretKey) {
                 throw new SdkClientException("Unable to load credentials. Access key or secret key are null.");
             }
+
+            String accountIdStr = null == accountId ? null : accountId.asText();
 
             if (null != token) {
                 credentials = new BasicSessionCredentials(accessKey.asText(),
                                                           secretKey.asText(),
                                                           token.asText(),
-                                                          null,
+                                                          accountIdStr,
                                                           providerName);
             } else {
                 credentials = new BasicAWSCredentials(accessKey.asText(),
                                                       secretKey.asText(),
-                                                      null,
+                                                      accountIdStr,
                                                       providerName);
             }
 

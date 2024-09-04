@@ -17,6 +17,7 @@ package com.amazonaws.auth;
 
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.annotation.ThreadSafe;
+import com.amazonaws.auth.internal.StsAuthUtils;
 import com.amazonaws.internal.StaticCredentialsProvider;
 import com.amazonaws.services.securitytoken.AWSSecurityTokenService;
 import com.amazonaws.services.securitytoken.AWSSecurityTokenServiceClient;
@@ -358,7 +359,7 @@ public class STSAssumeRoleSessionCredentialsProvider implements AWSSessionCreden
         }
 
         AssumeRoleResult assumeRoleResult = securityTokenService.assumeRole(assumeRoleRequest);
-        return new SessionCredentialsHolder(assumeRoleResult.getCredentials(), PROVIDER_NAME);
+        return new SessionCredentialsHolder(assumeRoleResult.getCredentials(), PROVIDER_NAME, StsAuthUtils.accountIdFromArn(assumeRoleResult.getAssumedRoleUser()));
     }
 
     /**

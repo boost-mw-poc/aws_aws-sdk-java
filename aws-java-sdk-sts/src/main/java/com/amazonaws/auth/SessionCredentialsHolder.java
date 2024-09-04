@@ -16,6 +16,7 @@ package com.amazonaws.auth;
 
 import com.amazonaws.annotation.SdkInternalApi;
 import com.amazonaws.annotation.ThreadSafe;
+import com.amazonaws.arn.Arn;
 import com.amazonaws.services.securitytoken.model.Credentials;
 
 import java.util.Date;
@@ -31,18 +32,21 @@ final class SessionCredentialsHolder {
     private final Date sessionCredentialsExpiration;
 
     SessionCredentialsHolder(Credentials credentials) {
-        this(credentials, null);
+        this(credentials, null, null);
     }
 
     SessionCredentialsHolder(Credentials credentials, String providerName) {
+        this(credentials, providerName, null);
+    }
+
+    SessionCredentialsHolder(Credentials credentials, String providerName, String accountId) {
         this.sessionCredentials = new BasicSessionCredentials(credentials.getAccessKeyId(),
                 credentials.getSecretAccessKey(),
                 credentials.getSessionToken(),
-                null,
+                accountId,
                 providerName);
         this.sessionCredentialsExpiration = credentials.getExpiration();
     }
-
     public AWSSessionCredentials getSessionCredentials() {
         return sessionCredentials;
     }

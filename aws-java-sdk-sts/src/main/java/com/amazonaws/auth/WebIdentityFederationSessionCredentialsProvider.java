@@ -18,6 +18,7 @@ package com.amazonaws.auth;
 import java.util.Date;
 
 import com.amazonaws.ClientConfiguration;
+import com.amazonaws.auth.internal.StsAuthUtils;
 import com.amazonaws.services.securitytoken.AWSSecurityTokenService;
 import com.amazonaws.services.securitytoken.AWSSecurityTokenServiceClient;
 import com.amazonaws.services.securitytoken.model.AssumeRoleWithWebIdentityRequest;
@@ -250,6 +251,9 @@ public class WebIdentityFederationSessionCredentialsProvider implements AWSSessi
                         .withRoleArn(roleArn)
                         .withRoleSessionName("ProviderSession")
                         .withDurationSeconds(this.sessionDuration));
+
+        String accountId = StsAuthUtils.accountIdFromArn(sessionTokenResult.getAssumedRoleUser());
+
         Credentials stsCredentials = sessionTokenResult.getCredentials();
 
         subjectFromWIF = sessionTokenResult.getSubjectFromWebIdentityToken();
@@ -258,6 +262,7 @@ public class WebIdentityFederationSessionCredentialsProvider implements AWSSessi
                 stsCredentials.getAccessKeyId(),
                 stsCredentials.getSecretAccessKey(),
                 stsCredentials.getSessionToken(),
+                accountId,
                 PROVIDER_NAME);
         sessionCredentialsExpiration = stsCredentials.getExpiration();
     }

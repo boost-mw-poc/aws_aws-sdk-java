@@ -1028,6 +1028,7 @@ public interface AmazonS3 extends S3DirectSpi {
      * </p>
      *
      * @return The account of the authenticated sender
+     * @deprecated Use {@link AmazonS3#listBuckets(ListBucketsPaginatedRequest)} instead
      *
      * @throws SdkClientException
      *             If any errors are encountered in the client while making the
@@ -1038,6 +1039,7 @@ public interface AmazonS3 extends S3DirectSpi {
      *
      * @see AmazonS3#getS3AccountOwner(GetS3AccountOwnerRequest)
      */
+    @Deprecated
     public Owner getS3AccountOwner() throws SdkClientException,
             AmazonServiceException;
 
@@ -1060,6 +1062,8 @@ public interface AmazonS3 extends S3DirectSpi {
      *
      * @return The account of the authenticated sender
      *
+     * @deprecated Use {@link AmazonS3#listBuckets(ListBucketsPaginatedRequest)} instead
+     *
      * @throws SdkClientException
      *             If any errors are encountered in the client while making the
      *             request or handling the response.
@@ -1069,6 +1073,7 @@ public interface AmazonS3 extends S3DirectSpi {
      *
      * @see AmazonS3#getS3AccountOwner()
      */
+    @Deprecated
     public Owner getS3AccountOwner(GetS3AccountOwnerRequest getS3AccountOwnerRequest)
             throws SdkClientException, AmazonServiceException;
 

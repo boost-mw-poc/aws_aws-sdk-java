@@ -15,6 +15,7 @@
 package com.amazonaws;
 
 import com.amazonaws.annotation.NotThreadSafe;
+import com.amazonaws.endpoints.AccountIdEndpointMode;
 import com.amazonaws.http.IdleConnectionReaper;
 import com.amazonaws.http.SystemPropertyTlsKeyManagersProvider;
 import com.amazonaws.http.TlsKeyManagersProvider;
@@ -383,6 +384,7 @@ public class ClientConfiguration {
 
     private TlsKeyManagersProvider tlsKeyManagersProvider;
     private RetryMode retryMode;
+    private AccountIdEndpointMode accountIdEndpointMode;
 
     public ClientConfiguration() {
         apacheHttpClientConfig = new ApacheHttpClientConfig();
@@ -435,6 +437,7 @@ public class ClientConfiguration {
         this.httpsProxyHolder.set(other.httpsProxyHolder.get());
         this.tlsKeyManagersProvider = other.tlsKeyManagersProvider;
         this.retryMode = other.retryMode;
+        this.accountIdEndpointMode = other.accountIdEndpointMode;
     }
 
     /**
@@ -1308,6 +1311,17 @@ public class ClientConfiguration {
     }
 
     /**
+     * Sets the AccountIdEndpointMode to use
+     *
+     * @param accountIdEndpointMode the accountIdEndpointMode
+     * @return The updated ClientConfiguration object.
+     */
+    public ClientConfiguration withAccountIdEndpointMode(AccountIdEndpointMode accountIdEndpointMode) {
+        setAccountIdEndpointMode(accountIdEndpointMode);
+        return this;
+    }
+
+    /**
      * Sets the RetryMode to use
      *
      * @param retryMode the retryMode
@@ -1317,10 +1331,26 @@ public class ClientConfiguration {
     }
 
     /**
+     * Sets the AccountIdEndpointMode to use
+     *
+     * @param accountIdEndpointMode the accountIdEndpointMode
+     */
+    public void setAccountIdEndpointMode(AccountIdEndpointMode accountIdEndpointMode) {
+        this.accountIdEndpointMode = accountIdEndpointMode;
+    }
+
+    /**
      * @return the retryMode
      */
     public RetryMode getRetryMode() {
         return retryMode;
+    }
+
+    /**
+     * @return the accountIdEndpointMode
+     */
+    public AccountIdEndpointMode getAccountIdEndpointMode() {
+        return accountIdEndpointMode;
     }
 
     /**

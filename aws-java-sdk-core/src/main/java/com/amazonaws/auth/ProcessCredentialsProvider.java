@@ -64,6 +64,7 @@ public final class ProcessCredentialsProvider implements AWSCredentialsProvider 
     private final int expirationBufferValue;
     private final TimeUnit expirationBufferUnit;
     private final long processOutputLimit;
+    private final String staticAccountId;
 
     private final Object credentialLock = new Object();
 
@@ -78,6 +79,7 @@ public final class ProcessCredentialsProvider implements AWSCredentialsProvider 
         this.processOutputLimit = ValidationUtils.assertNotNull(builder.processOutputLimit, "processOutputLimit");
         this.expirationBufferValue = ValidationUtils.assertNotNull(builder.expirationBufferValue, "expirationBufferValue");
         this.expirationBufferUnit = ValidationUtils.assertNotNull(builder.expirationBufferUnit, "expirationBufferUnit");
+        this.staticAccountId = builder.staticAccountId;
     }
 
     private List<String> executableCommand(Builder builder) {
@@ -178,14 +180,17 @@ public final class ProcessCredentialsProvider implements AWSCredentialsProvider 
         String accessKeyId = getText(credentialsJson, "AccessKeyId");
         String secretAccessKey = getText(credentialsJson, "SecretAccessKey");
         String sessionToken = getText(credentialsJson, "SessionToken");
+        String accountIdFromJson = getText(credentialsJson, "AccountId");
+
+        String resolvedAccountId = accountIdFromJson == null ? this.staticAccountId : accountIdFromJson;
 
         ValidationUtils.assertStringNotEmpty(accessKeyId, "AccessKeyId");
         ValidationUtils.assertStringNotEmpty(secretAccessKey, "SecretAccessKey");
 
         if (sessionToken != null) {
-            return new BasicSessionCredentials(accessKeyId, secretAccessKey, sessionToken, null, PROVIDER_NAME);
+            return new BasicSessionCredentials(accessKeyId, secretAccessKey, sessionToken, resolvedAccountId, PROVIDER_NAME);
         } else {
-            return new BasicAWSCredentials(accessKeyId, secretAccessKey, null, PROVIDER_NAME);
+            return new BasicAWSCredentials(accessKeyId, secretAccessKey, resolvedAccountId, PROVIDER_NAME);
         }
     }
 
@@ -255,6 +260,7 @@ public final class ProcessCredentialsProvider implements AWSCredentialsProvider 
         private int expirationBufferValue = 15;
         private TimeUnit expirationBufferUnit = TimeUnit.SECONDS;
         private long processOutputLimit = 64000;
+        private String staticAccountId;
 
         /**
          * @see #builder()
@@ -338,6 +344,24 @@ public final class ProcessCredentialsProvider implements AWSCredentialsProvider 
          */
         public Builder withProcessOutputLimit(long outputByteLimit) {
             setProcessOutputLimit(outputByteLimit);
+            return this;
+        }
+
+        /**
+         * Configure a static account id for this credentials provider. Account id for ProcessCredentialsProvider is only
+         * relevant in a context where a service constructs endpoint URL containing an account id.
+         * This option should ONLY be used if the provider should return credentials with account id, and the process does not
+         * output account id. If a static account ID is configured, and the process also returns an account
+         * id, the process output value overrides the static value. If used, the static account id MUST match the credentials
+         * returned by the process.
+         */
+        public void setStaticAccountId(String staticAccountId) { this.staticAccountId = staticAccountId; }
+
+        /**
+         * @see #setStaticAccountId(String)
+         */
+        public Builder withStaticAccountId(String staticAccountId) {
+            setStaticAccountId(staticAccountId);
             return this;
         }
 

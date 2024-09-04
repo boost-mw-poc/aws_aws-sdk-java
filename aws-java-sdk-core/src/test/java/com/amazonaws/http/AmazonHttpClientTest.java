@@ -30,7 +30,10 @@ import java.util.List;
 import com.amazonaws.AbortedException;
 import com.amazonaws.Response;
 import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.endpoints.AccountIdEndpointMode;
+import com.amazonaws.endpoints.internal.AccountIdEndpointModeResolver;
 import com.amazonaws.handlers.HandlerAfterAttemptContext;
 import com.amazonaws.handlers.HandlerBeforeAttemptContext;
 import com.amazonaws.handlers.HandlerContextKey;
@@ -57,9 +60,13 @@ import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonWebServiceResponse;
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.DefaultRequest;
+import com.amazonaws.Protocol;
 import com.amazonaws.Request;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
 
 public class AmazonHttpClientTest {
 
@@ -313,7 +320,84 @@ public class AmazonHttpClientTest {
     }
 
     @Test
-    public void testCredentialsSetInRequestContext() throws Exception {
+    public void testAccountIdEndpointModeSetInClientConfig_shouldTakePrecedence() throws Exception {
+        ClientConfiguration config =
+                new ClientConfiguration().withAccountIdEndpointMode(AccountIdEndpointMode.DISABLED);
+        Request<?> request = executeMockRequest(config, null);
+
+        assertEquals(AccountIdEndpointMode.DISABLED, request.getHandlerContext(HandlerContextKey.ACCOUNT_ID_ENDPOINT_MODE));
+    }
+
+    @Test
+    public void testNoAccountIdEndpointModeSetInClientConfig_shouldResolveFromEndpointResolver() throws Exception {
+        ClientConfiguration config = new ClientConfiguration();
+        Request<?> request = executeMockRequest(config, null);
+
+        assertEquals(AccountIdEndpointMode.PREFERRED, request.getHandlerContext(HandlerContextKey.ACCOUNT_ID_ENDPOINT_MODE));
+    }
+
+    @Test
+    public void testClientProtocolSetInConfig() throws Exception {
+        ClientConfiguration config =
+                new ClientConfiguration().withProtocol(Protocol.HTTP);
+        Request<?> request = executeMockRequest(config, null);
+
+        assertEquals(Protocol.HTTP, request.getHandlerContext(HandlerContextKey.CLIENT_PROTOCOL));
+    }
+
+    @Test
+    public void testClientProtocolWithDefaultConfig() throws Exception {
+        ClientConfiguration config = new ClientConfiguration();
+        Request<?> request = executeMockRequest(config, null);
+
+        assertEquals(Protocol.HTTPS, request.getHandlerContext(HandlerContextKey.CLIENT_PROTOCOL));
+    }
+
+    @Test
+    public void testCredentialsWithAccountIdSetInRequestContext() throws Exception {
+        final BasicAWSCredentials credentials = new BasicAWSCredentials("foo", "bar", "1234");
+
+        Request<?> request = executeMockRequestWithCredentials(credentials);
+
+        assertEquals(credentials, request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS));
+        assertEquals("1234", request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS_ACCOUNT_ID));
+    }
+
+    @Test
+    public void testCredentialsWithoutAccountIdSetInRequestContext() throws Exception {
+        final BasicAWSCredentials credentials = new BasicAWSCredentials("foo", "bar");
+
+        Request<?> request = executeMockRequestWithCredentials(credentials);
+
+        assertEquals(credentials, request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS));
+        Assert.assertNull(request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS_ACCOUNT_ID));
+    }
+
+    @Test
+    public void testCredentialsWithoutAccountIdImplementedInRequestContext() throws Exception {
+        final AWSCredentials credentials = new TestAWSCredentialsNoAccountId();
+
+        Request<?> request = executeMockRequestWithCredentials(credentials);
+
+        assertEquals(credentials, request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS));
+        Assert.assertNull(request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS_ACCOUNT_ID));
+    }
+
+    private static class TestAWSCredentialsNoAccountId implements AWSCredentials {
+        public String getAWSAccessKeyId() {
+            return "foo";
+        }
+
+        public String getAWSSecretKey() {
+            return "bar";
+        }
+    }
+
+    private Request<?> executeMockRequestWithCredentials(AWSCredentials credentials) throws Exception {
+        return executeMockRequest(new ClientConfiguration(), credentials);
+    }
+
+    private Request<?> executeMockRequest(ClientConfiguration config, AWSCredentials credentials) throws Exception {
         EasyMock.reset(httpClient);
         EasyMock
                 .expect(httpClient.execute(EasyMock.<HttpRequestBase>anyObject(), EasyMock.<HttpContext>anyObject()))
@@ -321,18 +405,18 @@ public class AmazonHttpClientTest {
                 .once();
         EasyMock.replay(httpClient);
 
-        AmazonHttpClient client = new AmazonHttpClient(new ClientConfiguration(), httpClient, null, new TokenBucket());
-
-        final BasicAWSCredentials credentials = new BasicAWSCredentials("foo", "bar");
-
-        AWSCredentialsProvider credentialsProvider = EasyMock.createMock(AWSCredentialsProvider.class);
-        EasyMock.expect(credentialsProvider.getCredentials())
-                .andReturn(credentials)
-                .anyTimes();
-        EasyMock.replay(credentialsProvider);
-
+        AmazonHttpClient client = new AmazonHttpClient(config, httpClient, null, new TokenBucket());
         ExecutionContext executionContext = new ExecutionContext();
-        executionContext.setCredentialsProvider(credentialsProvider);
+
+        if (credentials != null) {
+            AWSCredentialsProvider credentialsProvider = EasyMock.createMock(AWSCredentialsProvider.class);
+            EasyMock.expect(credentialsProvider.getCredentials())
+                    .andReturn(credentials)
+                    .anyTimes();
+            EasyMock.replay(credentialsProvider);
+
+            executionContext.setCredentialsProvider(credentialsProvider);
+        }
 
         Request<?> request = mockRequest(SERVER_NAME, HttpMethodName.PUT, URI_NAME, true);
 
@@ -341,7 +425,7 @@ public class AmazonHttpClientTest {
 
         client.execute(request, handler, null, executionContext);
 
-        assertEquals(credentials, request.getHandlerContext(HandlerContextKey.AWS_CREDENTIALS));
+        return request;
     }
 
     private BasicHttpResponse createBasicHttpResponse() {

@@ -161,4 +161,7 @@ public class ProfileResourceLoader {
         return new ProfileResourceLoader("DuplicateProfileWithAndWithoutProfilePrefix.tst");
     }
 
+    public static ProfileResourceLoader profilesWithAccountId() {
+        return new ProfileResourceLoader("ProfilesWithAccountId.tst");
+    }
 }

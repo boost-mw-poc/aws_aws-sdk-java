@@ -24,6 +24,7 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
 import static org.unitils.reflectionassert.ReflectionAssert.assertReflectionEquals;
 
+import com.amazonaws.endpoints.AccountIdEndpointMode;
 import com.amazonaws.http.SystemPropertyTlsKeyManagersProvider;
 import com.amazonaws.http.TlsKeyManagersProvider;
 import com.amazonaws.retry.PredefinedRetryPolicies;
@@ -580,6 +581,8 @@ public class ClientConfigurationTest {
                 field.set(customConfig, new SystemPropertyTlsKeyManagersProvider());
             } else if (clzz.isAssignableFrom(RetryMode.class)) {
                 field.set(customConfig, RetryMode.LEGACY);
+            } else if (clzz.isAssignableFrom(AccountIdEndpointMode.class)){
+              field.set(customConfig, AccountIdEndpointMode.PREFERRED);
             } else {
                 throw new RuntimeException(
                         String.format("Field %s of type %s is not supported",

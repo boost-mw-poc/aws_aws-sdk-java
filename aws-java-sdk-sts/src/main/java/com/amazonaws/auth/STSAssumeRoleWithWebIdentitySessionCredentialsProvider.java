@@ -19,6 +19,7 @@ import com.amazonaws.AmazonServiceException;
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.SdkClientException;
+import com.amazonaws.auth.internal.StsAuthUtils;
 import com.amazonaws.retry.PredefinedBackoffStrategies;
 import com.amazonaws.retry.RetryPolicy;
 import com.amazonaws.retry.RetryUtils;
@@ -161,7 +162,7 @@ public class STSAssumeRoleWithWebIdentitySessionCredentialsProvider implements A
                 .withRoleSessionName(roleSessionName);
 
         AssumeRoleWithWebIdentityResult assumeRoleResult = securityTokenService.assumeRoleWithWebIdentity(assumeRoleRequest);
-        return new SessionCredentialsHolder(assumeRoleResult.getCredentials(), PROVIDER_NAME);
+        return new SessionCredentialsHolder(assumeRoleResult.getCredentials(), PROVIDER_NAME, StsAuthUtils.accountIdFromArn(assumeRoleResult.getAssumedRoleUser()));
     }
 
     private String getWebIdentityToken() {

@@ -39,7 +39,7 @@ public class InternalConfigJsonHelper {
     private String userAgentTemplate;
 
     private boolean endpointDiscoveryEnabled;
-    
+
     private String defaultRetryMode;
 
     public SignerConfigJsonHelper getDefaultSigner() {

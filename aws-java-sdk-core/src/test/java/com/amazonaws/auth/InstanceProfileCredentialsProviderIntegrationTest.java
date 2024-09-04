@@ -24,6 +24,7 @@ import static org.hamcrest.collection.IsEmptyCollection.empty;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.fail;
 
@@ -98,11 +99,23 @@ public class InstanceProfileCredentialsProviderIntegrationTest extends LogCaptor
         mockServer.setAvailableSecurityCredentials("aws-dr-tools-test");
 
         InstanceProfileCredentialsProvider credentialsProvider = new InstanceProfileCredentialsProvider();
-        AWSSessionCredentials credentials = (AWSSessionCredentials)credentialsProvider.getCredentials();
+        AWSSessionCredentials credentials = (AWSSessionCredentials) credentialsProvider.getCredentials();
 
         assertEquals("ACCESS_KEY_ID",     credentials.getAWSAccessKeyId());
         assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
         assertEquals("TOKEN_TOKEN_TOKEN", credentials.getSessionToken());
+    }
+
+    /** Tests that we correctly handle the metadata service returning credentials with no account ID. */
+    @Test
+    public void testSessionCredentialsNoAccountId() throws Exception {
+        mockServer.setResponseContent(nonExpiredResponse());
+        mockServer.setAvailableSecurityCredentials("aws-dr-tools-test");
+
+        InstanceProfileCredentialsProvider credentialsProvider = new InstanceProfileCredentialsProvider();
+        BasicSessionCredentials credentials = (BasicSessionCredentials) credentialsProvider.getCredentials();
+
+        assertNull(credentials.getAccountId());
     }
 
     /**
@@ -115,11 +128,26 @@ public class InstanceProfileCredentialsProviderIntegrationTest extends LogCaptor
         mockServer.setAvailableSecurityCredentials("test-credentials");
 
         InstanceProfileCredentialsProvider credentialsProvider = new InstanceProfileCredentialsProvider();
-        AWSSessionCredentials credentials = (AWSSessionCredentials)credentialsProvider.getCredentials();
+        AWSSessionCredentials credentials = (AWSSessionCredentials) credentialsProvider.getCredentials();
 
         assertEquals("ACCESS_KEY_ID",     credentials.getAWSAccessKeyId());
         assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
         assertEquals("TOKEN_TOKEN_TOKEN", credentials.getSessionToken());
+    }
+
+    /**
+     * Tests that we correctly handle the metadata service returning credentials
+     * when multiple instance profiles are available with no account ID.
+     */
+    @Test
+    public void testSessionCredentialsNoAccountId_MultipleInstanceProfiles() throws Exception {
+        mockServer.setResponseContent(nonExpiredResponse());
+        mockServer.setAvailableSecurityCredentials("test-credentials");
+
+        InstanceProfileCredentialsProvider credentialsProvider = new InstanceProfileCredentialsProvider();
+        BasicSessionCredentials credentials = (BasicSessionCredentials) credentialsProvider.getCredentials();
+
+        assertNull(credentials.getAccountId());
     }
 
     /**
@@ -169,10 +197,25 @@ public class InstanceProfileCredentialsProviderIntegrationTest extends LogCaptor
         mockServer.setAvailableSecurityCredentials("test-credentials");
 
         InstanceProfileCredentialsProvider credentialsProvider = new InstanceProfileCredentialsProvider();
-        AWSCredentials credentials = credentialsProvider.getCredentials();
+        AWSCredentials credentials = (AWSCredentials) credentialsProvider.getCredentials();
 
         assertEquals("ACCESS_KEY_ID", credentials.getAWSAccessKeyId());
         assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
+    }
+
+    /**
+     * Tests that we correctly handle when the metadata service credentials without account ID has
+     * expired.
+     */
+    @Test
+    public void testSessionCredentialsNoAccountId_Expired() throws Exception {
+        mockServer.setResponseContent(expiredResponse());
+        mockServer.setAvailableSecurityCredentials("test-credentials");
+
+        InstanceProfileCredentialsProvider credentialsProvider = new InstanceProfileCredentialsProvider();
+        BasicSessionCredentials credentials = (BasicSessionCredentials) credentialsProvider.getCredentials();
+
+        assertNull(credentials.getAccountId());
     }
 
     /**
@@ -214,9 +257,27 @@ public class InstanceProfileCredentialsProviderIntegrationTest extends LogCaptor
         //then there's no exception, which means that getCredentials didn't get called on the fetcher
         assertThat(loggedEvents(), is(empty()));
 
-        AWSCredentials credentials = credentialsProvider.getCredentials();
+        AWSCredentials credentials = (AWSCredentials) credentialsProvider.getCredentials();
         assertEquals("ACCESS_KEY_ID", credentials.getAWSAccessKeyId());
         assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
+    }
+
+    @Test
+    public void canBeConfiguredToOnlyRefreshCredentialsAfterFirstCallToGetCredentialsWithoutAccountId() throws InterruptedException {
+        mockServer.setResponseContent(expiredResponse());
+        mockServer.setAvailableSecurityCredentials("test-credentials");
+
+        InstanceProfileCredentialsProvider credentialsProvider = InstanceProfileCredentialsProvider.createAsyncRefreshingProvider(false);
+        Thread.sleep(1000);
+
+        //Hacky assert but we know that this mockServer will create an exception that will be logged, if there's no log entry
+        //then there's no exception, which means that getCredentials didn't get called on the fetcher
+        assertThat(loggedEvents(), is(empty()));
+
+        BasicSessionCredentials credentials = (BasicSessionCredentials) credentialsProvider.getCredentials();
+        assertEquals("ACCESS_KEY_ID", credentials.getAWSAccessKeyId());
+        assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
+        assertNull(credentials.getAccountId());
     }
 
     @Test

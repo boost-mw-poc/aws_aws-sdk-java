@@ -16,6 +16,9 @@ package com.amazonaws.handlers;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.client.builder.AdvancedConfig;
+import com.amazonaws.endpoints.AccountIdEndpointMode;
+import com.amazonaws.Protocol;
+
 import java.net.URI;
 
 /**
@@ -50,6 +53,11 @@ public class HandlerContextKey<T> {
      * The key under which the request credentials are set.
      **/
     public static final HandlerContextKey<AWSCredentials> AWS_CREDENTIALS = new HandlerContextKey<AWSCredentials>("AWSCredentials");
+
+    /**
+     * The unique account identifier supplied by the credentials provider.
+     */
+    public static final HandlerContextKey<String> AWS_CREDENTIALS_ACCOUNT_ID = new HandlerContextKey<String>("AWSCredentialsAccountId");
 
     /**
      * The region used to sign the request.
@@ -98,9 +106,20 @@ public class HandlerContextKey<T> {
     public static final HandlerContextKey<Boolean> ENDPOINT_OVERRIDDEN = new HandlerContextKey<Boolean>("EndpointOverridden");
 
     /**
+     * The AccountIdEndpointMode which enables or disables account ID based endpoint routing for supported operations.
+     */
+    public static final HandlerContextKey<AccountIdEndpointMode> ACCOUNT_ID_ENDPOINT_MODE = 
+        new HandlerContextKey<AccountIdEndpointMode>("AccountIdEndpointMode");
+
+    /**
      * The endpoint configured on the client.
      */
     public static final HandlerContextKey<URI> CLIENT_ENDPOINT = new HandlerContextKey<URI>("ClientEndpoint");
+
+    /**
+     * The protocol configured on the client.
+     */
+    public static final HandlerContextKey<Protocol> CLIENT_PROTOCOL = new HandlerContextKey<Protocol>("ClientProtocol");
 
     private final String name;
 

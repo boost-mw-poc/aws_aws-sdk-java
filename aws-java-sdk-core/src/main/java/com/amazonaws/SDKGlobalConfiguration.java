@@ -52,6 +52,9 @@ public class SDKGlobalConfiguration {
     /** System property name for the AWS secret key */
     public  static final String SECRET_KEY_SYSTEM_PROPERTY = "aws.secretKey";
 
+    /** System property name for the AWS account ID */
+    public static final String AWS_ACCOUNT_ID_SYSTEM_PROPERTY = "aws.accountId";
+
     /**
      * System property name for the AWS session token
      */
@@ -271,6 +274,9 @@ public class SDKGlobalConfiguration {
     /** Alternate environment variable name for the AWS secret key */
     public static final String ALTERNATE_SECRET_KEY_ENV_VAR = "AWS_SECRET_ACCESS_KEY";
 
+    /** Environment variable name for the AWS account ID */
+    public static final String AWS_ACCOUNT_ID_ENV_VAR = "AWS_ACCOUNT_ID";
+
     /** Environment variable name for the AWS session token */
     public static final String AWS_SESSION_TOKEN_ENV_VAR = "AWS_SESSION_TOKEN";
 
@@ -375,6 +381,17 @@ public class SDKGlobalConfiguration {
      * Environment variable to set the retry mode to use. See {@link RetryMode} for available values
      */
     public static final String AWS_RETRY_MODE_ENV_VAR = "AWS_RETRY_MODE";
+
+    /**
+     * System properties to set the account id endpoint mode to use. See {@link com.amazonaws.endpoints.AccountIdEndpointMode} for available values
+     */
+    public static final String AWS_ACCOUNT_ID_ENDPOINT_MODE_SYSTEM_PROPERTY = "com.amazonaws.sdk.accountIdEndpointMode";
+
+    /**
+     * Environment variable to set the account id endpoint mode to use. See {@link com.amazonaws.endpoints.AccountIdEndpointMode} for available values
+     */
+    public static final String AWS_ACCOUNT_ID_ENDPOINT_MODE_ENV_VAR = "AWS_ACCOUNT_ID_ENDPOINT_MODE";
+
 
     /**
      * System properties to set the retry max attempts

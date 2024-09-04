@@ -61,6 +61,7 @@ public class ProcessCredentialsProviderTest {
         Assert.assertEquals("accessKeyId", credentials.getAWSAccessKeyId());
         Assert.assertEquals("secretAccessKey", credentials.getAWSSecretKey());
         Assert.assertEquals("ProcessCredentialsProvider", ((BasicAWSCredentials) credentials).getProviderName());
+        Assert.assertNull(((BasicAWSCredentials) credentials).getAccountId());
     }
 
     @Test
@@ -74,6 +75,7 @@ public class ProcessCredentialsProviderTest {
         Assert.assertFalse(credentials instanceof AWSSessionCredentials);
         Assert.assertEquals("accessKeyId", credentials.getAWSAccessKeyId());
         Assert.assertEquals("secretAccessKey", credentials.getAWSSecretKey());
+        Assert.assertNull(((BasicAWSCredentials) credentials).getAccountId());
     }
 
     @Test
@@ -93,6 +95,106 @@ public class ProcessCredentialsProviderTest {
         Assert.assertEquals("accessKeyId", sessionCredentials.getAWSAccessKeyId());
         Assert.assertEquals("secretAccessKey", sessionCredentials.getAWSSecretKey());
         Assert.assertEquals("sessionToken", sessionCredentials.getSessionToken());
+        Assert.assertNull(((BasicSessionCredentials) credentials).getAccountId());
+    }
+
+    @Test
+    public void staticCredentials_WithAccountIdInProcessOutput_CanBeLoaded() {
+        BasicAWSCredentials credentials = (BasicAWSCredentials)
+                ProcessCredentialsProvider.builder()
+                        .withCommand(scriptLocation + " --account-id accountId accessKeyId secretAccessKey")
+                        .build()
+                        .getCredentials();
+
+        Assert.assertEquals("accountId", credentials.getAccountId());
+    }
+
+    @Test
+    public void staticCredentials_WithAccountIdInProcessOutput_WithCommandAsListOfStrings_CanBeLoaded() {
+        BasicAWSCredentials credentials = (BasicAWSCredentials)
+                ProcessCredentialsProvider.builder()
+                        .withCommand(Arrays.asList(scriptLocation, "--account-id", "accountId", "accessKeyId", "secretAccessKey"))
+                        .build()
+                        .getCredentials();
+
+        Assert.assertEquals("accountId", credentials.getAccountId());
+    }
+
+    @Test
+    public void sessionCredentials_WithAccountIdInProcessOutput_CanBeLoaded() {
+        ProcessCredentialsProvider credentialsProvider =
+                ProcessCredentialsProvider.builder()
+                        .withCommand(scriptLocation + " --account-id accountId accessKeyId secretAccessKey sessionToken")
+                        .withCredentialExpirationBuffer(0, TimeUnit.SECONDS)
+                        .build();
+
+        AWSCredentials credentials = credentialsProvider.getCredentials();
+
+        Assert.assertTrue(credentials instanceof BasicSessionCredentials);
+
+        BasicSessionCredentials sessionCredentials = (BasicSessionCredentials) credentials;
+
+        Assert.assertEquals("accessKeyId", sessionCredentials.getAWSAccessKeyId());
+        Assert.assertEquals("secretAccessKey", sessionCredentials.getAWSSecretKey());
+        Assert.assertEquals("sessionToken", sessionCredentials.getSessionToken());
+        Assert.assertEquals("accountId", sessionCredentials.getAccountId());
+    }
+
+    @Test
+    public void staticCredentials_WithStaticAccountId_CanBeLoaded() {
+        BasicAWSCredentials credentials = (BasicAWSCredentials)
+                ProcessCredentialsProvider.builder()
+                        .withCommand(scriptLocation + " accessKeyId secretAccessKey")
+                        .withStaticAccountId("accountId")
+                        .build()
+                        .getCredentials();
+
+        Assert.assertEquals("accountId", credentials.getAccountId());
+    }
+
+    @Test
+    public void staticCredentials_WithStaticAccountId_WithCommandAsListOfStrings_CanBeLoaded() {
+        BasicAWSCredentials credentials = (BasicAWSCredentials)
+                ProcessCredentialsProvider.builder()
+                        .withCommand(Arrays.asList(scriptLocation, "accessKeyId", "secretAccessKey"))
+                        .withStaticAccountId("accountId")
+                        .build()
+                        .getCredentials();
+
+        Assert.assertEquals("accountId", credentials.getAccountId());
+    }
+
+    @Test
+    public void sessionCredentials_WithStaticAccountId_CanBeLoaded() {
+        ProcessCredentialsProvider credentialsProvider =
+                ProcessCredentialsProvider.builder()
+                        .withCommand(scriptLocation + " accessKeyId secretAccessKey sessionToken")
+                        .withStaticAccountId("accountId")
+                        .withCredentialExpirationBuffer(0, TimeUnit.SECONDS)
+                        .build();
+
+        AWSCredentials credentials = credentialsProvider.getCredentials();
+
+        Assert.assertTrue(credentials instanceof BasicSessionCredentials);
+
+        BasicSessionCredentials sessionCredentials = (BasicSessionCredentials) credentials;
+
+        Assert.assertEquals("accessKeyId", sessionCredentials.getAWSAccessKeyId());
+        Assert.assertEquals("secretAccessKey", sessionCredentials.getAWSSecretKey());
+        Assert.assertEquals("sessionToken", sessionCredentials.getSessionToken());
+        Assert.assertEquals("accountId", sessionCredentials.getAccountId());
+    }
+
+    @Test
+    public void processOutputOverridesStaticAccountId() {
+        BasicAWSCredentials credentials = (BasicAWSCredentials)
+                ProcessCredentialsProvider.builder()
+                        .withCommand(scriptLocation + " --account-id processOutputAccountId accessKeyId secretAccessKey")
+                        .withStaticAccountId("staticAccountId")
+                        .build()
+                        .getCredentials();
+
+        Assert.assertEquals("processOutputAccountId", credentials.getAccountId());
     }
 
     @Test

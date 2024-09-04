@@ -15,10 +15,12 @@
 package com.amazonaws.http;
 
 import com.amazonaws.AmazonWebServiceClient;
+import com.amazonaws.Protocol;
 import com.amazonaws.annotation.NotThreadSafe;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.Signer;
+import com.amazonaws.endpoints.AccountIdEndpointMode;
 import com.amazonaws.handlers.RequestHandler2;
 import com.amazonaws.http.timers.client.ClientExecutionAbortTrackerTask;
 import com.amazonaws.http.timers.client.NoOpClientExecutionAbortTrackerTask;
@@ -56,6 +58,10 @@ public class ExecutionContext {
      * auto-resolving V4-required regions.
      */
     private AuthErrorRetryStrategy authErrorRetryStrategy;
+
+    private AccountIdEndpointMode accountIdEndpointMode;
+
+    private Protocol clientProtocol;
 
     private ClientExecutionAbortTrackerTask clientExecutionTrackerTask = NoOpClientExecutionAbortTrackerTask.INSTANCE;
 
@@ -186,6 +192,23 @@ public class ExecutionContext {
      */
     public void setAuthErrorRetryStrategy(AuthErrorRetryStrategy authErrorRetryStrategy) {
         this.authErrorRetryStrategy = authErrorRetryStrategy;
+    }
+
+
+    public AccountIdEndpointMode getAccountIdEndpointMode() {
+        return accountIdEndpointMode;
+    }
+
+    public void setAccountIdEndpointMode(AccountIdEndpointMode accountIdEndpointMode) {
+        this.accountIdEndpointMode = accountIdEndpointMode;
+    }
+
+    public Protocol getClientProtocol() {
+        return clientProtocol;
+    }
+
+    public void setClientProtocol(Protocol clientProtocol) {
+        this.clientProtocol = clientProtocol;
     }
 
     public ClientExecutionAbortTrackerTask getClientExecutionTrackerTask() {

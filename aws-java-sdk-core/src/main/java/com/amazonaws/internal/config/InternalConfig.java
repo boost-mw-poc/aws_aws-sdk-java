@@ -73,6 +73,7 @@ public class InternalConfig {
     
     private final String defaultRetryMode;
 
+
     /**
      * @param defaults
      *            default configuration

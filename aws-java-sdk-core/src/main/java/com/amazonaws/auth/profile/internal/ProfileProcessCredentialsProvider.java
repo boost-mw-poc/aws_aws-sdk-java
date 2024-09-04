@@ -28,6 +28,7 @@ public class ProfileProcessCredentialsProvider implements AWSCredentialsProvider
     public ProfileProcessCredentialsProvider(BasicProfile profile) {
         this.delegate = ProcessCredentialsProvider.builder()
                                                   .withCommand(profile.getCredentialProcess())
+                                                  .withStaticAccountId(profile.getAwsAccountId())
                                                   .build();
     }
 

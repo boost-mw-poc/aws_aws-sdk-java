@@ -27,10 +27,11 @@ import java.util.Properties;
  * property and the AWS secret key id is expected to be in the "secretKey"
  * property.
  */
-public class PropertiesCredentials implements AWSCredentials, ProviderNameAware {
+public class PropertiesCredentials implements AWSCredentials, AccountIdAware, ProviderNameAware {
 
     private final String accessKey;
     private final String secretAccessKey;
+    private final String accountId;
     private final String providerName;
 
     /**
@@ -101,6 +102,7 @@ public class PropertiesCredentials implements AWSCredentials, ProviderNameAware 
 
             accessKey = accountProperties.getProperty("accessKey");
             secretAccessKey = accountProperties.getProperty("secretKey");
+            this.accountId = accountProperties.getProperty("accountId");
             this.providerName = providerName;
 
         } finally {
@@ -155,6 +157,7 @@ public class PropertiesCredentials implements AWSCredentials, ProviderNameAware 
 
         accessKey = accountProperties.getProperty("accessKey");
         secretAccessKey = accountProperties.getProperty("secretKey");
+        this.accountId = accountProperties.getProperty("accountId");;
         this.providerName = providerName;
     }
 
@@ -171,6 +174,11 @@ public class PropertiesCredentials implements AWSCredentials, ProviderNameAware 
     public String getAWSSecretKey() {
         return secretAccessKey;
     }
+
+    /* (non-Javadoc)
+     * @see com.amazonaws.auth.AccountIdAware#getAccountId()
+     */
+    public String getAccountId() { return accountId; }
 
     public String getProviderName() {
         return providerName;

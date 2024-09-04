@@ -264,6 +264,15 @@ public class CredentialProfilesTest {
                                "Should throw an exception as a role profile can not use a role profile as its source");
     }
 
+    @Test
+    public void testProfilesWithAccountId() {
+        ProfilesConfigFile profile = new ProfilesConfigFile(
+                ProfileResourceLoader.profilesWithAccountId().asFile());
+
+        BasicAWSCredentials cred = (BasicAWSCredentials) profile.getCredentials(DEFAULT_PROFILE_NAME);
+        assertEquals("defaultAccountId", cred.getAccountId());
+    }
+
     /**
      * Configures the Profile with the data returned from the file. Throws an error if the
      * configuration is success as the file contains data not in the correct format.

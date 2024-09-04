@@ -1,3 +1,12 @@
+# __1.12.771__ __2024-09-04__
+## __AWS SDK for Java__
+  - ### Features
+    - Source account Id from credentials to use in endpoint construction
+
+## __Amazon DynamoDB__
+  - ### Features
+    - Add handler to generate the account endpoint for a request
+
 # __1.12.770__ __2024-08-20__
 ## __Amazon Simple Storage Service__
   - ### Features

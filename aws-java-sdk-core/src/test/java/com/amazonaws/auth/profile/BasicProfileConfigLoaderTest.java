@@ -132,6 +132,13 @@ public class BasicProfileConfigLoaderTest {
         assertEquals("https://s3-endpoint-override.aws", serviceSectionRaw.getPropertyValue("endpoint_url"));
     }
 
+    @Test
+    public void profilesWithAccountIdAreSupported() {
+        File file = ProfileResourceLoader.profilesWithAccountId().asFile();
+        BasicProfile profile = loadProfiles(file).getProfile("default");
+        assertEquals("defaultAccountId", profile.getAwsAccountId());
+    }
+
     public AllProfiles loadProfiles(File file) {
         return BasicProfileConfigLoader.INSTANCE.loadProfiles(file);
     }

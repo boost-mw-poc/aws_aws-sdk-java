@@ -18,6 +18,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import com.amazonaws.annotation.Immutable;
+import com.amazonaws.auth.AccountIdAware;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.AWSSessionCredentials;
@@ -49,6 +50,11 @@ public class Profile {
         if (awsCredentials instanceof AWSSessionCredentials) {
             AWSSessionCredentials sessionCred = (AWSSessionCredentials)awsCredentials;
             properties.put(ProfileKeyConstants.AWS_SESSION_TOKEN, sessionCred.getSessionToken());
+        }
+
+        if (awsCredentials instanceof AccountIdAware) {
+            AccountIdAware accountIdAwareCred  = (AccountIdAware)awsCredentials;
+            properties.put(ProfileKeyConstants.AWS_ACCOUNT_ID, accountIdAwareCred.getAccountId());
         }
 
         this.profileName = profileName;

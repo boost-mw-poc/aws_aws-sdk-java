@@ -64,7 +64,8 @@ public class ProfileStaticCredentialsProvider implements AWSCredentialsProvider 
 
         if (profile.getAwsSessionToken() == null) {
             return new BasicAWSCredentials(profile.getAwsAccessIdKey(),
-                                           profile.getAwsSecretAccessKey());
+                                           profile.getAwsSecretAccessKey(),
+                                           profile.getAwsAccountId());
         } else {
             if (profile.getAwsSessionToken().isEmpty()) {
                 throw new SdkClientException(String.format(
@@ -74,7 +75,8 @@ public class ProfileStaticCredentialsProvider implements AWSCredentialsProvider 
 
             return new BasicSessionCredentials(profile.getAwsAccessIdKey(),
                                                profile.getAwsSecretAccessKey(),
-                                               profile.getAwsSessionToken());
+                                               profile.getAwsSessionToken(),
+                                               profile.getAwsAccountId());
         }
     }
 

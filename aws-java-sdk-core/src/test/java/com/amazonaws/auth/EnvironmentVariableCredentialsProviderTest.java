@@ -17,6 +17,7 @@ package com.amazonaws.auth;
 import static com.amazonaws.SDKGlobalConfiguration.ACCESS_KEY_ENV_VAR;
 import static com.amazonaws.SDKGlobalConfiguration.ALTERNATE_ACCESS_KEY_ENV_VAR;
 import static com.amazonaws.SDKGlobalConfiguration.ALTERNATE_SECRET_KEY_ENV_VAR;
+import static com.amazonaws.SDKGlobalConfiguration.AWS_ACCOUNT_ID_ENV_VAR;
 import static com.amazonaws.SDKGlobalConfiguration.AWS_SESSION_TOKEN_ENV_VAR;
 import static com.amazonaws.SDKGlobalConfiguration.SECRET_KEY_ENV_VAR;
 import static org.junit.Assert.assertFalse;
@@ -44,6 +45,7 @@ public class EnvironmentVariableCredentialsProviderTest {
 
     private static final String AWS_SESSION_TOKEN  = "SESSION TOKEN";
 
+    private static final String AWS_ACCOUNT_ID = "AWS_ACCOUNT_ID";
 
     @After
     public void restoreOriginal() {
@@ -56,11 +58,13 @@ public class EnvironmentVariableCredentialsProviderTest {
         helper.set(ALTERNATE_ACCESS_KEY_ENV_VAR, ALT_ACCESS_KEY_ID);
         helper.set(SECRET_KEY_ENV_VAR, SECRET_ACCESS_KEY);
         helper.set(ALTERNATE_SECRET_KEY_ENV_VAR, ALT_SECRET_ACCESS_KEY);
+        helper.set(AWS_ACCOUNT_ID_ENV_VAR, AWS_ACCOUNT_ID);
 
         AWSCredentials credentials = new EnvironmentVariableCredentialsProvider().getCredentials();
         assertTrue(credentials instanceof BasicAWSCredentials);
         Assert.assertEquals(ACCESS_KEY_ID, credentials.getAWSAccessKeyId());
         Assert.assertEquals(SECRET_ACCESS_KEY, credentials.getAWSSecretKey());
+        Assert.assertEquals(AWS_ACCOUNT_ID, ((BasicAWSCredentials) credentials).getAccountId());
         Assert.assertEquals("EnvironmentVariableCredentialsProvider",
                 ((BasicAWSCredentials) credentials).getProviderName());
     }
@@ -127,5 +131,17 @@ public class EnvironmentVariableCredentialsProviderTest {
 
         assertNotNull(credentials);
         assertFalse(credentials instanceof AWSSessionCredentials);
+    }
+
+    @Test
+    public void envVars_missingAccountId_doesNotThrowError()  {
+        helper.set(ACCESS_KEY_ENV_VAR, ACCESS_KEY_ID);
+        helper.set(SECRET_KEY_ENV_VAR, SECRET_ACCESS_KEY);
+
+        BasicAWSCredentials credentials = (BasicAWSCredentials) new EnvironmentVariableCredentialsProvider().getCredentials();
+        assertFalse(credentials instanceof AWSSessionCredentials);
+        Assert.assertEquals(ACCESS_KEY_ID, credentials.getAWSAccessKeyId());
+        Assert.assertEquals(SECRET_ACCESS_KEY, credentials.getAWSSecretKey());
+        Assert.assertNull(credentials.getAccountId());
     }
 }

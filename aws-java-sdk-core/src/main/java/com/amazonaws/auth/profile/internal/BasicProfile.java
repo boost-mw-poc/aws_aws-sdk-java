@@ -77,6 +77,10 @@ public class BasicProfile {
         return getPropertyValue(ProfileKeyConstants.AWS_SESSION_TOKEN);
     }
 
+    public String getAwsAccountId() {
+        return getPropertyValue(ProfileKeyConstants.AWS_ACCOUNT_ID);
+    }
+
     public String getRoleArn() {
         return getPropertyValue(ProfileKeyConstants.ROLE_ARN);
     }

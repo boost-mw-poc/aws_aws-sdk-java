@@ -17,6 +17,7 @@ package com.amazonaws.auth;
 import static com.amazonaws.SDKGlobalConfiguration.ACCESS_KEY_ENV_VAR;
 import static com.amazonaws.SDKGlobalConfiguration.ALTERNATE_ACCESS_KEY_ENV_VAR;
 import static com.amazonaws.SDKGlobalConfiguration.ALTERNATE_SECRET_KEY_ENV_VAR;
+import static com.amazonaws.SDKGlobalConfiguration.AWS_ACCOUNT_ID_ENV_VAR;
 import static com.amazonaws.SDKGlobalConfiguration.AWS_SESSION_TOKEN_ENV_VAR;
 import static com.amazonaws.SDKGlobalConfiguration.SECRET_KEY_ENV_VAR;
 
@@ -54,8 +55,11 @@ public class EnvironmentVariableCredentialsProvider implements AWSCredentialsPro
             secretKey = System.getenv(ALTERNATE_SECRET_KEY_ENV_VAR);
         }
 
+        String accountId = System.getenv(AWS_ACCOUNT_ID_ENV_VAR);
+
         accessKey = StringUtils.trim(accessKey);
         secretKey = StringUtils.trim(secretKey);
+        accountId = StringUtils.trim(accountId);
 
         if (StringUtils.isNullOrEmpty(accessKey) || StringUtils.isNullOrEmpty(secretKey)) {
 
@@ -67,9 +71,9 @@ public class EnvironmentVariableCredentialsProvider implements AWSCredentialsPro
 
         String sessionToken = StringUtils.trim(System.getenv(AWS_SESSION_TOKEN_ENV_VAR));
         return StringUtils.isNullOrEmpty(sessionToken) ?
-                new BasicAWSCredentials(accessKey, secretKey, null, PROVIDER_NAME)
+                new BasicAWSCredentials(accessKey, secretKey, accountId, PROVIDER_NAME)
                 :
-                new BasicSessionCredentials(accessKey, secretKey, sessionToken, null, PROVIDER_NAME);
+                new BasicSessionCredentials(accessKey, secretKey, sessionToken, accountId, PROVIDER_NAME);
     }
 
     @Override

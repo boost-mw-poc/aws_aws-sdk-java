@@ -31,6 +31,7 @@ import com.amazonaws.AmazonServiceException;
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.AmazonWebServiceResponse;
 import com.amazonaws.ClientConfiguration;
+import com.amazonaws.Protocol;
 import com.amazonaws.Request;
 import com.amazonaws.RequestClientOptions;
 import com.amazonaws.RequestClientOptions.Marker;
@@ -44,11 +45,14 @@ import com.amazonaws.SdkClientException;
 import com.amazonaws.annotation.SdkInternalApi;
 import com.amazonaws.annotation.SdkTestInternalApi;
 import com.amazonaws.annotation.ThreadSafe;
+import com.amazonaws.auth.AccountIdAware;
 import com.amazonaws.auth.AWS4Signer;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.CanHandleNullCredentials;
 import com.amazonaws.auth.Signer;
+import com.amazonaws.endpoints.AccountIdEndpointMode;
+import com.amazonaws.endpoints.internal.AccountIdEndpointModeResolver;
 import com.amazonaws.event.ProgressEventType;
 import com.amazonaws.event.ProgressInputStream;
 import com.amazonaws.event.ProgressListener;
@@ -201,6 +205,9 @@ public class AmazonHttpClient {
 
     private final HttpRequestFactory<HttpRequestBase> httpRequestFactory =
             new ApacheHttpRequestFactory();
+
+    private final AccountIdEndpointModeResolver accountIdEndpointModeResolver = new AccountIdEndpointModeResolver();
+
     /**
      * Internal client for sending HTTP requests
      */
@@ -262,6 +269,8 @@ public class AmazonHttpClient {
     private volatile int timeOffset = SDKGlobalTime.getGlobalTimeOffset();
 
     private final RetryMode retryMode;
+
+    private final AccountIdEndpointMode accountIdEndpointMode;
 
     private final SdkRequestRetryHeaderProvider sdkRequestHeaderProvider;
 
@@ -372,6 +381,7 @@ public class AmazonHttpClient {
                 retryPolicy == null ? new RetryPolicyAdapter(clientConfig.getRetryPolicy(), clientConfig) : retryPolicy;
         this.retryMode =
             clientConfig.getRetryMode() == null ? clientConfig.getRetryPolicy().getRetryMode() : clientConfig.getRetryMode();
+        this.accountIdEndpointMode = resolveAccountIdEndpointMode();
         this.httpClientSettings = httpClientSettings;
         this.requestMetricCollector = requestMetricCollector;
         this.responseMetadataCache =
@@ -388,6 +398,14 @@ public class AmazonHttpClient {
         this.retryCapacity = new CapacityManager(throttledRetryMaxCapacity);
         this.tokenBucket = new TokenBucket();
         this.sdkRequestHeaderProvider = new SdkRequestRetryHeaderProvider(config, this.retryPolicy, clockSkewAdjuster);
+    }
+
+    private AccountIdEndpointMode resolveAccountIdEndpointMode() {
+        if (config.getAccountIdEndpointMode() != null) {
+            return config.getAccountIdEndpointMode();
+        } else {
+            return accountIdEndpointModeResolver.accountIdEndpointMode();
+        }
     }
 
     public static Builder builder() {
@@ -553,6 +571,8 @@ public class AmazonHttpClient {
             request,
             executionContext.getAwsRequestMetrics(),
             responseMetadataCache);
+        executionContext.setAccountIdEndpointMode(this.accountIdEndpointMode);
+        executionContext.setClientProtocol(this.config.getProtocol());
         return requestExecutionBuilder()
             .request(request)
             .requestConfig(requestConfig)
@@ -720,6 +740,8 @@ public class AmazonHttpClient {
         private final ExecutionContext executionContext;
         private final List<RequestHandler2> requestHandler2s;
         private final AWSRequestMetrics awsRequestMetrics;
+        private final AccountIdEndpointMode accountIdEndpointMode;
+        private final Protocol clientProtocol;
         //TODO: Call CSMRequestHandler directly in this class since it's CSM aware now
         private RequestHandler2 csmRequestHandler;
 
@@ -735,6 +757,8 @@ public class AmazonHttpClient {
             this.executionContext = executionContext;
             this.requestHandler2s = requestHandler2s;
             this.awsRequestMetrics = executionContext.getAwsRequestMetrics();
+            this.accountIdEndpointMode = executionContext.getAccountIdEndpointMode();
+            this.clientProtocol = executionContext.getClientProtocol();
             for (RequestHandler2 requestHandler2 : requestHandler2s) {
                 if (requestHandler2 instanceof ClientSideMonitoringRequestHandler) {
                     csmRequestHandler = requestHandler2;
@@ -844,6 +868,8 @@ public class AmazonHttpClient {
         private void runBeforeRequestHandlers() {
             AWSCredentials credentials = getCredentialsFromContext();
             request.addHandlerContext(HandlerContextKey.AWS_CREDENTIALS, credentials);
+            request.addHandlerContext(HandlerContextKey.ACCOUNT_ID_ENDPOINT_MODE, this.accountIdEndpointMode);
+            request.addHandlerContext(HandlerContextKey.CLIENT_PROTOCOL, this.clientProtocol);
             // Apply any additional service specific request handlers that need to be run
             for (RequestHandler2 requestHandler2 : requestHandler2s) {
                 // If the request handler is a type of CredentialsRequestHandler, then set the credentials in the request handler.
@@ -1267,6 +1293,12 @@ public class AmazonHttpClient {
                 awsRequestMetrics.startEvent(Field.CredentialsRequestTime);
                 try {
                     credentials = credentialsProvider.getCredentials();
+                    if (credentials instanceof AccountIdAware) {
+                        String accountId = ((AccountIdAware) credentials).getAccountId();
+                        if (!StringUtils.isNullOrEmpty(accountId)) {
+                            request.addHandlerContext(HandlerContextKey.AWS_CREDENTIALS_ACCOUNT_ID, accountId);
+                        }
+                    }
                 } finally {
                     awsRequestMetrics.endEvent(Field.CredentialsRequestTime);
                 }

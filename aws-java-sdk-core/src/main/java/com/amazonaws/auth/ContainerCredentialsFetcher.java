@@ -29,8 +29,10 @@ class ContainerCredentialsFetcher extends BaseCredentialsFetcher {
 
     private static final String PROVIDER_NAME = "ContainerCredentialsProvider";
 
+    private static final String ACCOUNT_ID_JSON_NAME = "AccountId";
+
     ContainerCredentialsFetcher(CredentialsEndpointProvider credentialsEndpointProvider) {
-        super(SdkClock.STANDARD, false, PROVIDER_NAME);
+        super(SdkClock.STANDARD, false, PROVIDER_NAME, ACCOUNT_ID_JSON_NAME);
         this.credentialsEndpointProvider = credentialsEndpointProvider;
     }
 

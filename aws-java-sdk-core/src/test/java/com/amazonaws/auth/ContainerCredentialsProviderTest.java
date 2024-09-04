@@ -52,6 +52,8 @@ public class ContainerCredentialsProviderTest {
 
     private static final String SECRET_ACCESS_KEY = "SECRET_ACCESS_KEY";
 
+    private static final String ACCOUNT_ID = "ACCOUNT_ID";
+
     private static final String TOKEN = "TOKEN_TOKEN_TOKEN";
 
     private static final String EXPIRATION_DATE = "3000-05-03T04:55:54Z";
@@ -97,6 +99,7 @@ public class ContainerCredentialsProviderTest {
 
         Assert.assertEquals(ACCESS_KEY_ID, credentials.getAWSAccessKeyId());
         Assert.assertEquals(SECRET_ACCESS_KEY, credentials.getAWSSecretKey());
+        Assert.assertEquals(ACCOUNT_ID, credentials.getAccountId());
         Assert.assertEquals(TOKEN, credentials.getSessionToken());
         Assert.assertEquals("ContainerCredentialsProvider", credentials.getProviderName());
         Assert.assertEquals(new DateTime(EXPIRATION_DATE).toDate(), containerCredentialsProvider.getCredentialsExpiration());
@@ -115,6 +118,24 @@ public class ContainerCredentialsProviderTest {
     }
 
     /**
+     * Tests that the getCredentials parses the response properly when
+     * it receives a valid 200 response with no account ID from endpoint.
+     */
+    @Test
+    public void testGetCredentialsNoAccountIdReturnsValidResponseFromEcsEndpoint() {
+        stubForSuccessResponseNoAccountId();
+
+        BasicSessionCredentials credentials = (BasicSessionCredentials) containerCredentialsProvider.getCredentials();
+
+        Assert.assertEquals(ACCESS_KEY_ID, credentials.getAWSAccessKeyId());
+        Assert.assertEquals(SECRET_ACCESS_KEY, credentials.getAWSSecretKey());
+        Assert.assertNull(credentials.getAccountId());
+        Assert.assertEquals(TOKEN, credentials.getSessionToken());
+        Assert.assertEquals("ContainerCredentialsProvider", credentials.getProviderName());
+        Assert.assertEquals(new DateTime(EXPIRATION_DATE).toDate(), containerCredentialsProvider.getCredentialsExpiration());
+    }
+
+    /**
      * Tests that the getCredentials won't leak credentials data if the response from ECS is corrupted.
      */
     @Test
@@ -128,6 +149,7 @@ public class ContainerCredentialsProviderTest {
             String stackTrace = ExceptionUtils.getStackTrace(e);
             Assert.assertFalse(stackTrace.contains("ACCESS_KEY_ID"));
             Assert.assertFalse(stackTrace.contains("SECRET_ACCESS_KEY"));
+            Assert.assertFalse(stackTrace.contains("ACCOUNT_ID"));
             Assert.assertFalse(stackTrace.contains("TOKEN_TOKEN_TOKEN"));
         }
     }
@@ -168,6 +190,10 @@ public class ContainerCredentialsProviderTest {
         stubFor200Response(getSuccessfulBody());
     }
 
+    private void stubForSuccessResponseNoAccountId() {
+        stubFor200Response(getSuccessfulBodyNoAccountId());
+    }
+
     private void stubForCorruptedSuccessResponse() {
         String body = getSuccessfulBody();
         stubFor200Response(body.substring(0, body.length() - 2));
@@ -185,6 +211,7 @@ public class ContainerCredentialsProviderTest {
     private String getSuccessfulBody() {
         return "{\"AccessKeyId\":\"ACCESS_KEY_ID\"," +
                "\"SecretAccessKey\":\"SECRET_ACCESS_KEY\"," +
+               "\"AccountId\":\"ACCOUNT_ID\"," +
                "\"Token\":\"TOKEN_TOKEN_TOKEN\"," +
                "\"Expiration\":\"3000-05-03T04:55:54Z\"}";
     }
@@ -192,6 +219,13 @@ public class ContainerCredentialsProviderTest {
     private String getSuccessfulBodyNoToken() {
         return "{\"AccessKeyId\":\"ACCESS_KEY_ID\"," +
                 "\"SecretAccessKey\":\"SECRET_ACCESS_KEY\"," +
+                "\"Expiration\":\"3000-05-03T04:55:54Z\"}";
+    }
+    
+    private String getSuccessfulBodyNoAccountId() {
+        return "{\"AccessKeyId\":\"ACCESS_KEY_ID\"," +
+                "\"SecretAccessKey\":\"SECRET_ACCESS_KEY\"," +
+                "\"Token\":\"TOKEN_TOKEN_TOKEN\"," +
                 "\"Expiration\":\"3000-05-03T04:55:54Z\"}";
     }
 

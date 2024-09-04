@@ -21,6 +21,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.urlPathEqualTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -52,11 +53,14 @@ public class ContainerCredentialsFetcherTest {
 
     private static String successResponse;
 
+    private static String successResponseWithoutAccountId;
+
     private static String successResponseWithInvalidBody;
 
     @BeforeClass
     public static void setup() throws IOException {
         successResponse = IOUtils.toString(ContainerCredentialsFetcherTest.class.getResourceAsStream("/resources/wiremock/successResponse.json"));
+        successResponseWithoutAccountId = IOUtils.toString(ContainerCredentialsFetcherTest.class.getResourceAsStream("/resources/wiremock/successResponseWithoutAccountId.json"));
         successResponseWithInvalidBody = IOUtils.toString(ContainerCredentialsFetcherTest.class.getResourceAsStream("/resources/wiremock/successResponseWithInvalidBody.json"));
     }
 
@@ -67,18 +71,18 @@ public class ContainerCredentialsFetcherTest {
         TestCredentialsProvider credentialsProvider = new TestCredentialsProvider();
 
         // The provider should not refresh credentials when they aren't close to expiring and are recent
-        stubForSuccessResonseWithCustomExpirationDate(200, DateUtils.formatISO8601Date(new Date(System.currentTimeMillis() + ONE_MINUTE * 60 * 24)).toString());
+        stubForSuccessResponseWithCustomExpirationDate(200, DateUtils.formatISO8601Date(new Date(System.currentTimeMillis() + ONE_MINUTE * 60 * 24)).toString());
         credentialsProvider.getCredentials();
         assertFalse(credentialsProvider.needsToLoadCredentials());
 
         // The provider should refresh credentials when they aren't close to expiring, but are more than an hour old
-        stubForSuccessResonseWithCustomExpirationDate(200, DateUtils.formatISO8601Date(new Date(System.currentTimeMillis() + ONE_MINUTE * 16)).toString());
+        stubForSuccessResponseWithCustomExpirationDate(200, DateUtils.formatISO8601Date(new Date(System.currentTimeMillis() + ONE_MINUTE * 16)).toString());
         credentialsProvider.getCredentials();
         credentialsProvider.setLastInstanceProfileCheck(new Date(System.currentTimeMillis() - ONE_MINUTE * 61));
         assertTrue(credentialsProvider.needsToLoadCredentials());
 
         // The provider should refresh credentials when they are close to expiring
-        stubForSuccessResonseWithCustomExpirationDate(200, DateUtils.formatISO8601Date(new Date(System.currentTimeMillis() + ONE_MINUTE * 14)).toString());
+        stubForSuccessResponseWithCustomExpirationDate(200, DateUtils.formatISO8601Date(new Date(System.currentTimeMillis() + ONE_MINUTE * 14)).toString());
         credentialsProvider.getCredentials();
         assertTrue(credentialsProvider.needsToLoadCredentials());
     }
@@ -87,15 +91,32 @@ public class ContainerCredentialsFetcherTest {
      * Test that loadCredentials returns proper credentials when response from client is in proper Json format.
      */
     @Test
-    public void testLoadCredentialsParsesJsonResponseProperly() {
+    public void testLoadCredentialsParsesJsonResponseProperlyWithAccountId() {
         stubForSuccessResponseWithCustomBody(200, successResponse);
 
          TestCredentialsProvider credentialsProvider = new TestCredentialsProvider();
-         AWSSessionCredentials credentials = (AWSSessionCredentials) credentialsProvider.getCredentials();
+         BasicSessionCredentials credentials = (BasicSessionCredentials) credentialsProvider.getCredentials();
 
          assertEquals("ACCESS_KEY_ID",     credentials.getAWSAccessKeyId());
          assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
+         assertEquals("ACCOUNT_ID", credentials.getAccountId());
          assertEquals("TOKEN_TOKEN_TOKEN", credentials.getSessionToken());
+    }
+
+    /**
+     * Test that loadCredentials returns proper credentials when response from client is in proper Json format without the account ID.
+     */
+    @Test
+    public void testLoadCredentialsParsesJsonResponseProperlyWithoutAccountId() {
+        stubForSuccessResponseWithCustomBody(200, successResponseWithoutAccountId);
+
+        TestCredentialsProvider credentialsProvider = new TestCredentialsProvider();
+        BasicSessionCredentials credentials = (BasicSessionCredentials) credentialsProvider.getCredentials();
+
+        assertEquals("ACCESS_KEY_ID",     credentials.getAWSAccessKeyId());
+        assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
+        assertNull(credentials.getAccountId());
+        assertEquals("TOKEN_TOKEN_TOKEN", credentials.getSessionToken());
     }
 
     /**
@@ -137,7 +158,7 @@ public class ContainerCredentialsFetcherTest {
 
         // When there are valid credentials (but need to be refreshed) and the endpoint returns 404 status,
         // the provider should still return credentials.
-        stubForSuccessResonseWithCustomExpirationDate(200, new Date(System.currentTimeMillis() + ONE_MINUTE * 4).toString());
+        stubForSuccessResponseWithCustomExpirationDate(200, new Date(System.currentTimeMillis() + ONE_MINUTE * 4).toString());
         AWSCredentials firstCredentials = credentialsProvider.getCredentials(); // loads the credentials that will be expired soon
 
         credentialsProvider.setLastInstanceProfileCheck(new Date(System.currentTimeMillis() - (ONE_MINUTE * 61)));
@@ -157,7 +178,7 @@ public class ContainerCredentialsFetcherTest {
                                 .withBody(body)));
     }
 
-    private void stubForSuccessResonseWithCustomExpirationDate(int statusCode, String expiration) {
+    private void stubForSuccessResponseWithCustomExpirationDate(int statusCode, String expiration) {
         stubFor(
                 get(urlPathEqualTo(CREDENTIALS_PATH))
                 .willReturn(aResponse()
