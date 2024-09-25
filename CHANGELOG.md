@@ -1,7 +1,7 @@
 # __1.12.771__ __2024-09-04__
 ## __AWS SDK for Java__
   - ### Features
-    - Source account Id from credentials to use in endpoint construction
+    - Generate and use AWS-account-based endpoints for DynamoDB requests when the account ID is available. The new endpoint URL pattern will be ```https://<account-id>.ddb.<region>.amazonaws.com```. See the documentation for details: https://docs.aws.amazon.com/sdkref/latest/guide/feature-account-endpoints.html
 
 ## __Amazon DynamoDB__
   - ### Features
