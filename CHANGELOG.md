@@ -1,3 +1,8 @@
+# __1.12.780__ __2024-12-11__
+## __Amazon Simple Storage Service__
+  - ### Bugfixes
+    - AWS SDK for Java 1.x now includes additional validation for Amazon S3 client APIs to handle scenarios where an empty string ('') is passed as the key argument to the following operations: PutObject, DeleteObject, ListObjects, GetObjectMetaData, ListObjectsV2, SetObjectTagging, GetObjectTagging, SetObjectAcl, GetObjectAcl, SetObjectLegalHold, GetObjectLegalHold, CopyObject, CopyPart, SelectObjectContent, SetObjectRetention, GetObjectRetention, AbortMultipartUpload, CompleteMultipartUpload, InitiateMultipartUpload, ListParts, UploadPart, RestoreObjectV2, and RestoreObject. The SDK will validate the key argument and throw an exception if it is an empty string, ensuring correct and expected behavior.
+
 # __1.12.778__ __2024-11-13__
 ## __Amazon Kinesis Video Streams__
   - ### Features

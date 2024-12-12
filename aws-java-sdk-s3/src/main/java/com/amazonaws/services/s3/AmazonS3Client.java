@@ -925,7 +925,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             throws SdkClientException, AmazonServiceException {
         listObjectsRequest = beforeClientExecution(listObjectsRequest);
         rejectNull(listObjectsRequest.getBucketName(), "The bucket name parameter must be specified when listing objects in a bucket");
-
+        assertStringNotEmpty(listObjectsRequest.getBucketName(),"BucketName");
         /**
          * This flag shows whether we need to url decode S3 key names. This flag is enabled
          * only when the customers don't explicitly call {@link ListObjectsRequest#setEncodingType(String)},
@@ -972,6 +972,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             throws SdkClientException, AmazonServiceException {
         listObjectsV2Request = beforeClientExecution(listObjectsV2Request);
         rejectNull(listObjectsV2Request.getBucketName(), "The bucket name parameter must be specified when listing objects in a bucket");
+        assertStringNotEmpty(listObjectsV2Request.getBucketName(), "BucketName");
         Request<ListObjectsV2Request> request = createRequest(listObjectsV2Request.getBucketName(), null, listObjectsV2Request, HttpMethodName.GET);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListObjectsV2");
 
@@ -1408,7 +1409,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
         rejectNull(bucketName, "The bucket name parameter must be specified when requesting an object's metadata");
         rejectNull(key, "The key parameter must be specified when requesting an object's metadata");
-
+        assertStringNotEmpty(key, "Key");
         Request<GetObjectMetadataRequest> request = createRequest(bucketName, key, getObjectMetadataRequest, HttpMethodName.HEAD);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "HeadObject");
 
@@ -1706,7 +1707,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         rejectNull(getObjectTaggingRequest,
                 "The request parameter must be specified when getting the object tags");
         String bucketName = assertStringNotEmpty(getObjectTaggingRequest.getBucketName(), "BucketName");
-        String key = assertNotNull(getObjectTaggingRequest.getKey(), "Key");
+        String key = assertStringNotEmpty(getObjectTaggingRequest.getKey(), "Key");
 
         Request<GetObjectTaggingRequest> request = createRequest(bucketName, key, getObjectTaggingRequest, HttpMethodName.GET);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetObjectTagging");
@@ -1728,7 +1729,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         rejectNull(setObjectTaggingRequest,
                 "The request parameter must be specified setting the object tags");
         String bucketName = assertStringNotEmpty(setObjectTaggingRequest.getBucketName(), "BucketName");
-        String key = assertNotNull(setObjectTaggingRequest.getKey(), "Key");
+        String key = assertStringNotEmpty(setObjectTaggingRequest.getKey(), "Key");
         ObjectTagging tagging = assertNotNull(setObjectTaggingRequest.getTagging(), "ObjectTagging");
 
         Request<SetObjectTaggingRequest> request = createRequest(bucketName, key, setObjectTaggingRequest, HttpMethodName.PUT);
@@ -1814,7 +1815,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         final ProgressListener listener = putObjectRequest.getGeneralProgressListener();
         rejectNull(bucketName, "The bucket name parameter must be specified when uploading an object");
         rejectNull(key, "The key parameter must be specified when uploading an object");
-
+        assertStringNotEmpty(key, "Key");
         ObjectMetadata metadata = putObjectRequest.getMetadata();
         if (metadata == null)
             metadata = new ObjectMetadata();
@@ -2091,7 +2092,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         rejectNull(copyObjectRequest.getDestinationKey(),
                 "The destination object key must be specified when copying an object");
 
-        String destinationKey = copyObjectRequest.getDestinationKey();
+        String destinationKey = assertStringNotEmpty(copyObjectRequest.getDestinationKey(), "DestinationKey");
         String destinationBucketName = copyObjectRequest.getDestinationBucketName();
 
         Request<CopyObjectRequest> request = createRequest(destinationBucketName, destinationKey, copyObjectRequest, HttpMethodName.PUT);
@@ -2246,7 +2247,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         rejectNull(copyPartRequest.getPartNumber(),
                 "The part number must be specified when copying a part");
 
-        String destinationKey = copyPartRequest.getDestinationKey();
+        String destinationKey = assertStringNotEmpty(copyPartRequest.getDestinationKey(), "DestinationKey");
         String destinationBucketName = copyPartRequest.getDestinationBucketName();
 
         Request<CopyPartRequest> request = createRequest(destinationBucketName, destinationKey, copyPartRequest,
@@ -2349,7 +2350,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
         rejectNull(deleteObjectRequest.getBucketName(), "The bucket name must be specified when deleting an object");
         rejectNull(deleteObjectRequest.getKey(), "The key must be specified when deleting an object");
-
+        assertStringNotEmpty(deleteObjectRequest.getKey(), "Key");
         Request<DeleteObjectRequest> request = createRequest(deleteObjectRequest.getBucketName(), deleteObjectRequest.getKey(), deleteObjectRequest, HttpMethodName.DELETE);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteObject");
 
@@ -3309,6 +3310,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
         rejectNull(selectRequest.getBucketName(), "The bucket name parameter must be specified when selecting object content.");
         rejectNull(selectRequest.getKey(), "The key parameter must be specified when selecting object content.");
+        assertStringNotEmpty(selectRequest.getKey(), "Key");
 
         Request<SelectObjectContentRequest> request = createRequest(selectRequest.getBucketName(), selectRequest.getKey(), selectRequest, HttpMethodName.POST);
         request.addParameter("select", null);
@@ -3338,6 +3340,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
         rejectNull(bucketName, "The bucket name parameter must be specified when setting the object legal hold.");
         rejectNull(key, "The key parameter must be specified when setting the object legal hold.");
+        assertStringNotEmpty(key, "Key");
 
         Request<SetObjectLegalHoldRequest> request = createRequest(bucketName, key, setObjectLegalHoldRequest, HttpMethodName.PUT);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutObjectLegalHold");
@@ -3364,6 +3367,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         String key = getObjectLegalHoldRequest.getKey();
         rejectNull(bucketName, "The bucket name parameter must be specified when getting the object legal hold.");
         rejectNull(key, "The key parameter must be specified when getting the object legal hold.");
+        assertStringNotEmpty(key, "Key");
 
         Request<GetObjectLegalHoldRequest> request = createRequest(bucketName, key, getObjectLegalHoldRequest, HttpMethodName.GET);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetObjectLegalHold");
@@ -3424,6 +3428,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
         rejectNull(bucketName, "The bucket name parameter must be specified when setting the object retention.");
         rejectNull(key, "The key parameter must be specified when setting the object retention.");
+        assertStringNotEmpty(key,"Key");
 
         Request<SetObjectRetentionRequest> request = createRequest(bucketName, key, setObjectRetentionRequest, HttpMethodName.PUT);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutObjectRetention");
@@ -3454,6 +3459,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
         rejectNull(bucketName, "The bucket name parameter must be specified when getting the object retention.");
         rejectNull(key, "The key parameter must be specified when getting the object retention.");
+        assertStringNotEmpty(key, "Key");
 
         Request<GetObjectRetentionRequest> request = createRequest(bucketName, key, getObjectRetentionRequest, HttpMethodName.GET);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetObjectRetention");
@@ -3670,7 +3676,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             "The upload ID parameter must be specified when aborting a multipart upload");
 
         String bucketName = abortMultipartUploadRequest.getBucketName();
-        String key = abortMultipartUploadRequest.getKey();
+        String key = assertStringNotEmpty(abortMultipartUploadRequest.getKey(),"Key");
 
         Request<AbortMultipartUploadRequest> request = createRequest(bucketName, key, abortMultipartUploadRequest, HttpMethodName.DELETE);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AbortMultipartUpload");
@@ -3689,7 +3695,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             "The request parameter must be specified when completing a multipart upload");
 
         String bucketName = completeMultipartUploadRequest.getBucketName();
-        String key = completeMultipartUploadRequest.getKey();
+        String key = assertStringNotEmpty(completeMultipartUploadRequest.getKey(), "Key");
         String uploadId = completeMultipartUploadRequest.getUploadId();
         rejectNull(bucketName,
             "The bucket name parameter must be specified when completing a multipart upload");
@@ -3781,6 +3787,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             "The bucket name parameter must be specified when initiating a multipart upload");
         rejectNull(initiateMultipartUploadRequest.getKey(),
             "The key parameter must be specified when initiating a multipart upload");
+        assertStringNotEmpty(initiateMultipartUploadRequest.getKey(), "Key");
 
         Request<InitiateMultipartUploadRequest> request = createRequest(initiateMultipartUploadRequest.getBucketName(), initiateMultipartUploadRequest.getKey(), initiateMultipartUploadRequest, HttpMethodName.POST);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateMultipartUpload");
@@ -3889,6 +3896,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             "The key parameter must be specified when listing parts");
         rejectNull(listPartsRequest.getUploadId(),
             "The upload ID parameter must be specified when listing parts");
+        assertStringNotEmpty(listPartsRequest.getKey(), "Key");
 
         Request<ListPartsRequest> request = createRequest(listPartsRequest.getBucketName(), listPartsRequest.getKey(), listPartsRequest, HttpMethodName.GET);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListParts");
@@ -3929,6 +3937,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             "The key parameter must be specified when uploading a part");
         rejectNull(uploadId,
             "The upload ID parameter must be specified when uploading a part");
+        assertStringNotEmpty(uploadPartRequest.getKey(),"Key");
         Request<UploadPartRequest> request = createRequest(bucketName, key, uploadPartRequest, HttpMethodName.PUT);
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UploadPart");
         request.addHandlerContext(HandlerContextKey.REQUIRES_LENGTH, Boolean.TRUE);
@@ -4167,6 +4176,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         Request<AmazonWebServiceRequest> request = createRequest(bucketName, key, originalRequest, HttpMethodName.GET);
 
         if (bucketName != null && key != null) {
+            assertStringNotEmpty(key, "Key");
             request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetObjectAcl");
         } else if (bucketName != null) {
             request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetBucketAcl");
@@ -4212,6 +4222,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         Request<AmazonWebServiceRequest> request = createRequest(bucketName, key, originalRequest, HttpMethodName.PUT);
 
         if (bucketName != null && key != null) {
+            assertStringNotEmpty(key, "Key");
             request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutObjectAcl");
         } else if (bucketName != null) {
             request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutBucketAcl");
@@ -4250,6 +4261,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         Request<AmazonWebServiceRequest> request = createRequest(bucketName, key, originalRequest, HttpMethodName.PUT);
 
         if (bucketName != null && key != null) {
+            assertStringNotEmpty(key,"Key");
             request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutObjectAcl");
         } else if (bucketName != null) {
             request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutBucketAcl");
@@ -6632,7 +6644,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
     private Request<RestoreObjectRequest> createRestoreObjectRequest(RestoreObjectRequest restoreObjectRequest) {
         String bucketName = restoreObjectRequest.getBucketName();
-        String key = restoreObjectRequest.getKey();
+        String key = assertStringNotEmpty(restoreObjectRequest.getKey(), "Key");
         String versionId = restoreObjectRequest.getVersionId();
 
         Request<RestoreObjectRequest> request = createRequest(
