@@ -1,4 +1,4 @@
-# __1.12.784__ __2025-05-30__
+# __1.12.784__ __2025-06-02__
 ## __Amazon DynamoDB__
   - ### Bugfixes
     - Avoid silently throwing exception when retrieving account ID from resource name
