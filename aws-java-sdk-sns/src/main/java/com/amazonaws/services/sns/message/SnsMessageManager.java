@@ -136,8 +136,14 @@ public class SnsMessageManager {
                 return "sns-us-iso-east-1.c2s.ic.gov";
             case US_ISOB_EAST_1:
                 return "sns-us-isob-east-1.sc2s.sgov.gov";
+            case US_ISOF_EAST_1:
+            case US_ISOF_SOUTH_1:
+                return "sns-signing." + regionStr + ".csp.hci.ic.gov";
             case AP_EAST_1:
+            case AP_EAST_2:
             case AP_SOUTH_2:
+            case AP_SOUTHEAST_5:
+            case AP_SOUTHEAST_7:
             case ME_SOUTH_1:
             case ME_CENTRAL_1:
             case EU_SOUTH_1:
@@ -148,6 +154,7 @@ public class SnsMessageManager {
             case AP_SOUTHEAST_4:
             case IL_CENTRAL_1:
             case CA_WEST_1:
+            case MX_CENTRAL_1:
                 return "sns-signing." + regionStr + ".amazonaws.com";
             default:
                 return "sns.amazonaws.com";

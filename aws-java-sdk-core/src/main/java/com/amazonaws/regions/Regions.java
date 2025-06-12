@@ -49,12 +49,15 @@ public enum Regions {
     EU_SOUTH_1("eu-south-1", "EU (Milan)"),
     EU_SOUTH_2("eu-south-2", "EU (Spain)"),
     AP_EAST_1("ap-east-1", "Asia Pacific (Hong Kong)"),
+    AP_EAST_2("ap-east-2", "Asia Pacific (Taipei)"),
     AP_SOUTH_1("ap-south-1", "Asia Pacific (Mumbai)"),
     AP_SOUTH_2("ap-south-2", "Asia Pacific (Hyderabad)"),
     AP_SOUTHEAST_1("ap-southeast-1", "Asia Pacific (Singapore)"),
     AP_SOUTHEAST_2("ap-southeast-2", "Asia Pacific (Sydney)"),
     AP_SOUTHEAST_3("ap-southeast-3", "Asia Pacific (Jakarta)"),
     AP_SOUTHEAST_4("ap-southeast-4", "Asia Pacific (Melbourne)"),
+    AP_SOUTHEAST_5("ap-southeast-5", "Asia Pacific (Malaysia)"),
+    AP_SOUTHEAST_7("ap-southeast-7", "Asia Pacific (Thailand)"),
     AP_NORTHEAST_1("ap-northeast-1", "Asia Pacific (Tokyo)"),
     AP_NORTHEAST_2("ap-northeast-2", "Asia Pacific (Seoul)"),
     AP_NORTHEAST_3("ap-northeast-3", "Asia Pacific (Osaka)"),
@@ -70,9 +73,10 @@ public enum Regions {
     US_ISO_EAST_1("us-iso-east-1", "US ISO East"),
     US_ISOB_EAST_1("us-isob-east-1", "US ISOB East (Ohio)"),
     US_ISO_WEST_1("us-iso-west-1", "US ISO West"),
-    IL_CENTRAL_1("il-central-1", "Israel (Tel Aviv)")
-    ;
-
+    US_ISOF_EAST_1("us-isof-east-1", "US ISOF East1 (California)"),
+    US_ISOF_SOUTH_1("us-isof-south-1", "US ISOF South1 (Alpine)"),
+    IL_CENTRAL_1("il-central-1", "Israel (Tel Aviv)"),
+    MX_CENTRAL_1("mx-central-1", "Mexico (Central)");
     /**
      * The default region that new customers in the US are encouraged to use
      * when using AWS services for the first time.

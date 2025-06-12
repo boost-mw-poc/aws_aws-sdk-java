@@ -1,4 +1,9 @@
-# __1.12.786__ __2025-06-09__
+# __1.12.787__ __2025-06-11__
+## __AWS SDK for Java__
+  - ### Features
+    - Added support for KualaLumpur, Bangkok, Queretaro, us-isof-east-1, isof-south-1, Taipei Regions.
+
+# __1.12.786__ __2025-06-10__
 ## __AWS SDK for Java__
   - ### Features
     - Support for protocols service model field and x-amzn-query-mode header

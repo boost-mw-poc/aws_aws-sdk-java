@@ -424,6 +424,73 @@ public enum Region {
      */
     US_ISOB_EAST_1("us-isob-east-1"),
 
+
+    /**
+     * The Asia Pacific (Malaysia) Region. This region uses Amazon S3 servers located in Malaysia.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.ap-southeast-5.amazonaws.com</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    AP_Malaysia("ap-southeast-5"),
+
+    /**
+     * The Asia Pacific (Thailand) Region. This region uses Amazon S3 servers located in Thailand.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.ap-southeast-7.amazonaws.com</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    AP_Thailand("ap-southeast-7", "Asia Pacific (Thailand)"),
+
+    /**
+     * The Mexico (Central) Region. This region uses Amazon S3 servers located in Mexico.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.mx-central-1.amazonaws.com</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    MX_Central("mx-central-1", "Mexico (Central)"),
+
+    /**
+     * The US ISOF East1 (California) Region. This region uses Amazon S3 servers located in California.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.us-isof-east-1.csp.hci.ic.gov</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    US_ISOF_EAST_1("us-isof-east-1"),
+
+    /**
+     * The US ISOF South1 (Alpine) Region. This region uses Amazon S3 servers located in Alpine.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.us-isof-south-1.csp.hci.ic.gov</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    US_ISOF_SOUTH_1("us-isof-south-1"),
+
+    /**
+     * The Asia Pacific (Taipei) Region. This region uses Amazon S3 servers located in Taipei.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3.ap-east-2.amazonaws.com</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    AP_Taipei("ap-east-2", "Asia Pacific (Taipei)"),
+
     /**
      * The US ISO West Region. This region uses Amazon S3 servers
      * located in Colorado.
