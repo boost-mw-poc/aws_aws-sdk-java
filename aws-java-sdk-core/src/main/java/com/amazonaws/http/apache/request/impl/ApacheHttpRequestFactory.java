@@ -26,6 +26,7 @@ import com.amazonaws.http.request.HttpRequestFactory;
 import com.amazonaws.http.settings.HttpClientSettings;
 import com.amazonaws.util.FakeIOException;
 import com.amazonaws.util.SdkHttpUtils;
+import com.amazonaws.util.SdkUri;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -58,18 +59,19 @@ public class ApacheHttpRequestFactory implements HttpRequestFactory<HttpRequestB
     public HttpRequestBase create(final Request<?> request,
                                   final HttpClientSettings settings) throws FakeIOException {
 
-        String endpointUri = getUriEndpoint(request);
+        String endpoint = getUriEndpoint(request);
         String encodedParams = SdkHttpUtils.encodeParameters(request);
         final HttpRequestBase base;
 
         if (shouldMoveQueryParametersToBody(request, encodedParams)) {
-            base = createPostParamsInBodyRequest(endpointUri, encodedParams);
+            base = createPostParamsInBodyRequest(endpoint, encodedParams);
             addHeadersToRequest(base, request);
             addContentTypeHeaderIfNeeded(base);
         } else {
             if (encodedParams != null) {
-                endpointUri += "?" + encodedParams;
+                endpoint += "?" + encodedParams;
             }
+            URI endpointUri = SdkUri.getInstance().create(endpoint);
             base = createStandardRequest(request, endpointUri);
             addHeadersToRequest(base, request);
         }
@@ -115,7 +117,7 @@ public class ApacheHttpRequestFactory implements HttpRequestFactory<HttpRequestB
         base.setConfig(requestConfigBuilder.build());
     }
 
-    private HttpRequestBase createStandardRequest(Request<?> request, String uri) throws FakeIOException {
+    private HttpRequestBase createStandardRequest(Request<?> request, URI uri) throws FakeIOException {
         switch (request.getHttpMethod()) {
             case HEAD:
                 return new HttpHead(uri);

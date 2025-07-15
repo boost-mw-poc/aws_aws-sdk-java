@@ -1,4 +1,13 @@
-# __1.12.787__ __2025-06-11__
+# __1.12.788__ __2025-07-11__
+## __AWS SDK for Java__
+  - ### Features
+    - Add account endpoint caching
+
+## __Amazon DynamoDB__
+  - ### Features
+    - Cache account endpoint URIs
+
+# __1.12.787__ __2025-06-12__
 ## __AWS SDK for Java__
   - ### Features
     - Added support for KualaLumpur, Bangkok, Queretaro, us-isof-east-1, isof-south-1, Taipei Regions.

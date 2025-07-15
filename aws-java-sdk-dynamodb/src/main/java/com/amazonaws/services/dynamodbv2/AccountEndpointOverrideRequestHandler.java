@@ -24,10 +24,9 @@ import com.amazonaws.Request;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.dynamodbv2.util.ResourceNameUtils;
 import com.amazonaws.util.StringUtils;
+import com.amazonaws.util.SdkUri;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import java.net.URI;
 
 public class AccountEndpointOverrideRequestHandler extends RequestHandler2 {
     private static final String COMMERCIAL_PARTITION = "aws";
@@ -70,7 +69,7 @@ public class AccountEndpointOverrideRequestHandler extends RequestHandler2 {
                               ? clientProtocol.toString()
                               : DEFAULT_PROTOCOL;
             String accountEndpoint = String.format(ENDPOINT_FORMAT, protocol, resolvedAccountId, regionName, regionObj.getDomain());
-            request.setEndpoint(URI.create(accountEndpoint));
+            request.setEndpoint(SdkUri.getInstance().create(accountEndpoint));
         } catch (Exception e) {
             if (endpointMode == AccountIdEndpointMode.REQUIRED) {
                 throw e;

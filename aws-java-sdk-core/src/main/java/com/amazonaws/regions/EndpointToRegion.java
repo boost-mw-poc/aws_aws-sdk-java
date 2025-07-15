@@ -16,6 +16,8 @@ package com.amazonaws.regions;
 
 import com.amazonaws.annotation.SdkProtectedApi;
 import com.amazonaws.util.AwsHostNameUtils;
+import com.amazonaws.util.SdkUri;
+
 import java.net.URI;
 
 /**
@@ -70,13 +72,13 @@ public class EndpointToRegion {
         String host = null;
 
         try {
-            host = URI.create(endpoint).getHost();
+            host = SdkUri.getInstance().create(endpoint).getHost();
         } catch (Exception ex) {
             // Ignore errors. eg: IllegalArgumentException: Illegal character in scheme name at index 0: 127.0.0.1:1234
         }
 
         if (host == null) {
-            host = URI.create("http://" + endpoint).getHost();
+            host = SdkUri.getInstance().create("http://" + endpoint).getHost();
         }
 
         if (host == null) {

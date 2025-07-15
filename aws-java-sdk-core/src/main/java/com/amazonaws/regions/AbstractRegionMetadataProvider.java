@@ -14,6 +14,8 @@
  */
 package com.amazonaws.regions;
 
+import com.amazonaws.util.SdkUri;
+
 import java.net.URI;
 
 
@@ -51,9 +53,9 @@ public abstract class AbstractRegionMetadataProvider implements
      */
     protected static String getHost(final String endpoint) {
         try {
-            String host = URI.create(endpoint).getHost();
+            String host = SdkUri.getInstance().create(endpoint).getHost();
             if (host == null) {
-                host = URI.create("http://" + endpoint).getHost();
+                host = SdkUri.getInstance().create("http://" + endpoint).getHost();
             }
             if (host == null) {
                 return "";
