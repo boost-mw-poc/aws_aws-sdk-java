@@ -22,7 +22,9 @@ public enum HistoryItemType {
 
     ConfigurationUpdate("ConfigurationUpdate"),
     StateUpdate("StateUpdate"),
-    Action("Action");
+    Action("Action"),
+    AlarmContributorStateUpdate("AlarmContributorStateUpdate"),
+    AlarmContributorAction("AlarmContributorAction");
 
     private String value;
 

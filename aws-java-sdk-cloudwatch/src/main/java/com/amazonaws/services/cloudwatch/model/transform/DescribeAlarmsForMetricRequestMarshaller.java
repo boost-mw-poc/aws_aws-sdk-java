@@ -12,80 +12,65 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * DescribeAlarmsForMetricRequest Marshaller
+ * DescribeAlarmsForMetricRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DescribeAlarmsForMetricRequestMarshaller implements Marshaller<Request<DescribeAlarmsForMetricRequest>, DescribeAlarmsForMetricRequest> {
+@SdkInternalApi
+public class DescribeAlarmsForMetricRequestMarshaller {
 
-    public Request<DescribeAlarmsForMetricRequest> marshall(DescribeAlarmsForMetricRequest describeAlarmsForMetricRequest) {
+    private static final MarshallingInfo<String> METRICNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetricName").build();
+    private static final MarshallingInfo<String> NAMESPACE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Namespace").build();
+    private static final MarshallingInfo<String> STATISTIC_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Statistic").build();
+    private static final MarshallingInfo<String> EXTENDEDSTATISTIC_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExtendedStatistic").build();
+    private static final MarshallingInfo<List> DIMENSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Dimensions").build();
+    private static final MarshallingInfo<Integer> PERIOD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Period").build();
+    private static final MarshallingInfo<String> UNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Unit").build();
+
+    private static final DescribeAlarmsForMetricRequestMarshaller instance = new DescribeAlarmsForMetricRequestMarshaller();
+
+    public static DescribeAlarmsForMetricRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(DescribeAlarmsForMetricRequest describeAlarmsForMetricRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (describeAlarmsForMetricRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<DescribeAlarmsForMetricRequest> request = new DefaultRequest<DescribeAlarmsForMetricRequest>(describeAlarmsForMetricRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "DescribeAlarmsForMetric");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (describeAlarmsForMetricRequest.getMetricName() != null) {
-            request.addParameter("MetricName", StringUtils.fromString(describeAlarmsForMetricRequest.getMetricName()));
-        }
-
-        if (describeAlarmsForMetricRequest.getNamespace() != null) {
-            request.addParameter("Namespace", StringUtils.fromString(describeAlarmsForMetricRequest.getNamespace()));
-        }
-
-        if (describeAlarmsForMetricRequest.getStatistic() != null) {
-            request.addParameter("Statistic", StringUtils.fromString(describeAlarmsForMetricRequest.getStatistic()));
-        }
-
-        if (describeAlarmsForMetricRequest.getExtendedStatistic() != null) {
-            request.addParameter("ExtendedStatistic", StringUtils.fromString(describeAlarmsForMetricRequest.getExtendedStatistic()));
-        }
-
-        if (!describeAlarmsForMetricRequest.getDimensions().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<Dimension>) describeAlarmsForMetricRequest.getDimensions()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<Dimension> dimensionsList = (com.amazonaws.internal.SdkInternalList<Dimension>) describeAlarmsForMetricRequest
-                    .getDimensions();
-            int dimensionsListIndex = 1;
-
-            for (Dimension dimensionsListValue : dimensionsList) {
-                if (dimensionsListValue != null) {
-
-                    if (dimensionsListValue.getName() != null) {
-                        request.addParameter("Dimensions.member." + dimensionsListIndex + ".Name", StringUtils.fromString(dimensionsListValue.getName()));
-                    }
-
-                    if (dimensionsListValue.getValue() != null) {
-                        request.addParameter("Dimensions.member." + dimensionsListIndex + ".Value", StringUtils.fromString(dimensionsListValue.getValue()));
-                    }
-                }
-                dimensionsListIndex++;
+        try {
+            protocolMarshaller.marshall(describeAlarmsForMetricRequest.getMetricName(), METRICNAME_BINDING);
+            protocolMarshaller.marshall(describeAlarmsForMetricRequest.getNamespace(), NAMESPACE_BINDING);
+            protocolMarshaller.marshall(describeAlarmsForMetricRequest.getStatistic(), STATISTIC_BINDING);
+            protocolMarshaller.marshall(describeAlarmsForMetricRequest.getExtendedStatistic(), EXTENDEDSTATISTIC_BINDING);
+            if (describeAlarmsForMetricRequest.getDimensions() != null && !describeAlarmsForMetricRequest.getDimensions().isEmpty()) {
+                protocolMarshaller.marshall(describeAlarmsForMetricRequest.getDimensions(), DIMENSIONS_BINDING);
             }
+            protocolMarshaller.marshall(describeAlarmsForMetricRequest.getPeriod(), PERIOD_BINDING);
+            protocolMarshaller.marshall(describeAlarmsForMetricRequest.getUnit(), UNIT_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (describeAlarmsForMetricRequest.getPeriod() != null) {
-            request.addParameter("Period", StringUtils.fromInteger(describeAlarmsForMetricRequest.getPeriod()));
-        }
-
-        if (describeAlarmsForMetricRequest.getUnit() != null) {
-            request.addParameter("Unit", StringUtils.fromString(describeAlarmsForMetricRequest.getUnit()));
-        }
-
-        return request;
     }
 
 }

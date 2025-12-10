@@ -12,49 +12,47 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * DeleteDashboardsRequest Marshaller
+ * DeleteDashboardsRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DeleteDashboardsRequestMarshaller implements Marshaller<Request<DeleteDashboardsRequest>, DeleteDashboardsRequest> {
+@SdkInternalApi
+public class DeleteDashboardsRequestMarshaller {
 
-    public Request<DeleteDashboardsRequest> marshall(DeleteDashboardsRequest deleteDashboardsRequest) {
+    private static final MarshallingInfo<List> DASHBOARDNAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DashboardNames").build();
+
+    private static final DeleteDashboardsRequestMarshaller instance = new DeleteDashboardsRequestMarshaller();
+
+    public static DeleteDashboardsRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(DeleteDashboardsRequest deleteDashboardsRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (deleteDashboardsRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<DeleteDashboardsRequest> request = new DefaultRequest<DeleteDashboardsRequest>(deleteDashboardsRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "DeleteDashboards");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (!deleteDashboardsRequest.getDashboardNames().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) deleteDashboardsRequest.getDashboardNames()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> dashboardNamesList = (com.amazonaws.internal.SdkInternalList<String>) deleteDashboardsRequest
-                    .getDashboardNames();
-            int dashboardNamesListIndex = 1;
-
-            for (String dashboardNamesListValue : dashboardNamesList) {
-                if (dashboardNamesListValue != null) {
-                    request.addParameter("DashboardNames.member." + dashboardNamesListIndex, StringUtils.fromString(dashboardNamesListValue));
-                }
-                dashboardNamesListIndex++;
+        try {
+            if (deleteDashboardsRequest.getDashboardNames() != null && !deleteDashboardsRequest.getDashboardNames().isEmpty()) {
+                protocolMarshaller.marshall(deleteDashboardsRequest.getDashboardNames(), DASHBOARDNAMES_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

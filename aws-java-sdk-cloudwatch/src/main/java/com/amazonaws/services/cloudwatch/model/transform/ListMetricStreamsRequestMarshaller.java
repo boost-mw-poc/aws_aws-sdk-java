@@ -15,40 +15,44 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * ListMetricStreamsRequest Marshaller
+ * ListMetricStreamsRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListMetricStreamsRequestMarshaller implements Marshaller<Request<ListMetricStreamsRequest>, ListMetricStreamsRequest> {
+@SdkInternalApi
+public class ListMetricStreamsRequestMarshaller {
 
-    public Request<ListMetricStreamsRequest> marshall(ListMetricStreamsRequest listMetricStreamsRequest) {
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+
+    private static final ListMetricStreamsRequestMarshaller instance = new ListMetricStreamsRequestMarshaller();
+
+    public static ListMetricStreamsRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(ListMetricStreamsRequest listMetricStreamsRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (listMetricStreamsRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<ListMetricStreamsRequest> request = new DefaultRequest<ListMetricStreamsRequest>(listMetricStreamsRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "ListMetricStreams");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (listMetricStreamsRequest.getNextToken() != null) {
-            request.addParameter("NextToken", StringUtils.fromString(listMetricStreamsRequest.getNextToken()));
+        try {
+            protocolMarshaller.marshall(listMetricStreamsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listMetricStreamsRequest.getMaxResults(), MAXRESULTS_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (listMetricStreamsRequest.getMaxResults() != null) {
-            request.addParameter("MaxResults", StringUtils.fromInteger(listMetricStreamsRequest.getMaxResults()));
-        }
-
-        return request;
     }
 
 }

@@ -12,87 +12,64 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * DescribeAnomalyDetectorsRequest Marshaller
+ * DescribeAnomalyDetectorsRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DescribeAnomalyDetectorsRequestMarshaller implements Marshaller<Request<DescribeAnomalyDetectorsRequest>, DescribeAnomalyDetectorsRequest> {
+@SdkInternalApi
+public class DescribeAnomalyDetectorsRequestMarshaller {
 
-    public Request<DescribeAnomalyDetectorsRequest> marshall(DescribeAnomalyDetectorsRequest describeAnomalyDetectorsRequest) {
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<String> NAMESPACE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Namespace").build();
+    private static final MarshallingInfo<String> METRICNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetricName").build();
+    private static final MarshallingInfo<List> DIMENSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Dimensions").build();
+    private static final MarshallingInfo<List> ANOMALYDETECTORTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnomalyDetectorTypes").build();
+
+    private static final DescribeAnomalyDetectorsRequestMarshaller instance = new DescribeAnomalyDetectorsRequestMarshaller();
+
+    public static DescribeAnomalyDetectorsRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(DescribeAnomalyDetectorsRequest describeAnomalyDetectorsRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (describeAnomalyDetectorsRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<DescribeAnomalyDetectorsRequest> request = new DefaultRequest<DescribeAnomalyDetectorsRequest>(describeAnomalyDetectorsRequest,
-                "AmazonCloudWatch");
-        request.addParameter("Action", "DescribeAnomalyDetectors");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (describeAnomalyDetectorsRequest.getNextToken() != null) {
-            request.addParameter("NextToken", StringUtils.fromString(describeAnomalyDetectorsRequest.getNextToken()));
-        }
-
-        if (describeAnomalyDetectorsRequest.getMaxResults() != null) {
-            request.addParameter("MaxResults", StringUtils.fromInteger(describeAnomalyDetectorsRequest.getMaxResults()));
-        }
-
-        if (describeAnomalyDetectorsRequest.getNamespace() != null) {
-            request.addParameter("Namespace", StringUtils.fromString(describeAnomalyDetectorsRequest.getNamespace()));
-        }
-
-        if (describeAnomalyDetectorsRequest.getMetricName() != null) {
-            request.addParameter("MetricName", StringUtils.fromString(describeAnomalyDetectorsRequest.getMetricName()));
-        }
-
-        if (!describeAnomalyDetectorsRequest.getDimensions().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<Dimension>) describeAnomalyDetectorsRequest.getDimensions()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<Dimension> dimensionsList = (com.amazonaws.internal.SdkInternalList<Dimension>) describeAnomalyDetectorsRequest
-                    .getDimensions();
-            int dimensionsListIndex = 1;
-
-            for (Dimension dimensionsListValue : dimensionsList) {
-                if (dimensionsListValue != null) {
-
-                    if (dimensionsListValue.getName() != null) {
-                        request.addParameter("Dimensions.member." + dimensionsListIndex + ".Name", StringUtils.fromString(dimensionsListValue.getName()));
-                    }
-
-                    if (dimensionsListValue.getValue() != null) {
-                        request.addParameter("Dimensions.member." + dimensionsListIndex + ".Value", StringUtils.fromString(dimensionsListValue.getValue()));
-                    }
-                }
-                dimensionsListIndex++;
+        try {
+            protocolMarshaller.marshall(describeAnomalyDetectorsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(describeAnomalyDetectorsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(describeAnomalyDetectorsRequest.getNamespace(), NAMESPACE_BINDING);
+            protocolMarshaller.marshall(describeAnomalyDetectorsRequest.getMetricName(), METRICNAME_BINDING);
+            if (describeAnomalyDetectorsRequest.getDimensions() != null && !describeAnomalyDetectorsRequest.getDimensions().isEmpty()) {
+                protocolMarshaller.marshall(describeAnomalyDetectorsRequest.getDimensions(), DIMENSIONS_BINDING);
             }
-        }
-
-        if (!describeAnomalyDetectorsRequest.getAnomalyDetectorTypes().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) describeAnomalyDetectorsRequest.getAnomalyDetectorTypes()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> anomalyDetectorTypesList = (com.amazonaws.internal.SdkInternalList<String>) describeAnomalyDetectorsRequest
-                    .getAnomalyDetectorTypes();
-            int anomalyDetectorTypesListIndex = 1;
-
-            for (String anomalyDetectorTypesListValue : anomalyDetectorTypesList) {
-                if (anomalyDetectorTypesListValue != null) {
-                    request.addParameter("AnomalyDetectorTypes.member." + anomalyDetectorTypesListIndex, StringUtils.fromString(anomalyDetectorTypesListValue));
-                }
-                anomalyDetectorTypesListIndex++;
+            if (describeAnomalyDetectorsRequest.getAnomalyDetectorTypes() != null && !describeAnomalyDetectorsRequest.getAnomalyDetectorTypes().isEmpty()) {
+                protocolMarshaller.marshall(describeAnomalyDetectorsRequest.getAnomalyDetectorTypes(), ANOMALYDETECTORTYPES_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

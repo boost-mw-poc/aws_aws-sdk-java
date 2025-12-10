@@ -12,48 +12,47 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * StartMetricStreamsRequest Marshaller
+ * StartMetricStreamsRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class StartMetricStreamsRequestMarshaller implements Marshaller<Request<StartMetricStreamsRequest>, StartMetricStreamsRequest> {
+@SdkInternalApi
+public class StartMetricStreamsRequestMarshaller {
 
-    public Request<StartMetricStreamsRequest> marshall(StartMetricStreamsRequest startMetricStreamsRequest) {
+    private static final MarshallingInfo<List> NAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Names").build();
+
+    private static final StartMetricStreamsRequestMarshaller instance = new StartMetricStreamsRequestMarshaller();
+
+    public static StartMetricStreamsRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(StartMetricStreamsRequest startMetricStreamsRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (startMetricStreamsRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<StartMetricStreamsRequest> request = new DefaultRequest<StartMetricStreamsRequest>(startMetricStreamsRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "StartMetricStreams");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (!startMetricStreamsRequest.getNames().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) startMetricStreamsRequest.getNames()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> namesList = (com.amazonaws.internal.SdkInternalList<String>) startMetricStreamsRequest.getNames();
-            int namesListIndex = 1;
-
-            for (String namesListValue : namesList) {
-                if (namesListValue != null) {
-                    request.addParameter("Names.member." + namesListIndex, StringUtils.fromString(namesListValue));
-                }
-                namesListIndex++;
+        try {
+            if (startMetricStreamsRequest.getNames() != null && !startMetricStreamsRequest.getNames().isEmpty()) {
+                protocolMarshaller.marshall(startMetricStreamsRequest.getNames(), NAMES_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

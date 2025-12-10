@@ -65,6 +65,27 @@ public class PutInsightRuleRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * Specify <code>true</code> to have this rule evaluate log events after they have been transformed by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a>. If you specify <code>true</code>, then the log events in log groups that have transformers
+     * will be evaluated by Contributor Insights after being transformed. Log groups that don't have transformers will
+     * still have their original log events evaluated by Contributor Insights.
+     * </p>
+     * <p>
+     * The default is <code>false</code>
+     * </p>
+     * <note>
+     * <p>
+     * If a log group has a transformer, and transformation fails for some log events, those log events won't be
+     * evaluated by Contributor Insights. For information about investigating log transformation failures, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Transformation-Errors-Metrics.html">Transformation
+     * metrics and errors</a>.
+     * </p>
+     * </note>
+     */
+    private Boolean applyOnTransformedLogs;
 
     /**
      * <p>
@@ -385,6 +406,174 @@ public class PutInsightRuleRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Specify <code>true</code> to have this rule evaluate log events after they have been transformed by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a>. If you specify <code>true</code>, then the log events in log groups that have transformers
+     * will be evaluated by Contributor Insights after being transformed. Log groups that don't have transformers will
+     * still have their original log events evaluated by Contributor Insights.
+     * </p>
+     * <p>
+     * The default is <code>false</code>
+     * </p>
+     * <note>
+     * <p>
+     * If a log group has a transformer, and transformation fails for some log events, those log events won't be
+     * evaluated by Contributor Insights. For information about investigating log transformation failures, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Transformation-Errors-Metrics.html">Transformation
+     * metrics and errors</a>.
+     * </p>
+     * </note>
+     * 
+     * @param applyOnTransformedLogs
+     *        Specify <code>true</code> to have this rule evaluate log events after they have been transformed by <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     *        transformation</a>. If you specify <code>true</code>, then the log events in log groups that have
+     *        transformers will be evaluated by Contributor Insights after being transformed. Log groups that don't have
+     *        transformers will still have their original log events evaluated by Contributor Insights.</p>
+     *        <p>
+     *        The default is <code>false</code>
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If a log group has a transformer, and transformation fails for some log events, those log events won't be
+     *        evaluated by Contributor Insights. For information about investigating log transformation failures, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Transformation-Errors-Metrics.html">
+     *        Transformation metrics and errors</a>.
+     *        </p>
+     */
+
+    public void setApplyOnTransformedLogs(Boolean applyOnTransformedLogs) {
+        this.applyOnTransformedLogs = applyOnTransformedLogs;
+    }
+
+    /**
+     * <p>
+     * Specify <code>true</code> to have this rule evaluate log events after they have been transformed by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a>. If you specify <code>true</code>, then the log events in log groups that have transformers
+     * will be evaluated by Contributor Insights after being transformed. Log groups that don't have transformers will
+     * still have their original log events evaluated by Contributor Insights.
+     * </p>
+     * <p>
+     * The default is <code>false</code>
+     * </p>
+     * <note>
+     * <p>
+     * If a log group has a transformer, and transformation fails for some log events, those log events won't be
+     * evaluated by Contributor Insights. For information about investigating log transformation failures, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Transformation-Errors-Metrics.html">Transformation
+     * metrics and errors</a>.
+     * </p>
+     * </note>
+     * 
+     * @return Specify <code>true</code> to have this rule evaluate log events after they have been transformed by <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     *         transformation</a>. If you specify <code>true</code>, then the log events in log groups that have
+     *         transformers will be evaluated by Contributor Insights after being transformed. Log groups that don't
+     *         have transformers will still have their original log events evaluated by Contributor Insights.</p>
+     *         <p>
+     *         The default is <code>false</code>
+     *         </p>
+     *         <note>
+     *         <p>
+     *         If a log group has a transformer, and transformation fails for some log events, those log events won't be
+     *         evaluated by Contributor Insights. For information about investigating log transformation failures, see
+     *         <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Transformation-Errors-Metrics.html">
+     *         Transformation metrics and errors</a>.
+     *         </p>
+     */
+
+    public Boolean getApplyOnTransformedLogs() {
+        return this.applyOnTransformedLogs;
+    }
+
+    /**
+     * <p>
+     * Specify <code>true</code> to have this rule evaluate log events after they have been transformed by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a>. If you specify <code>true</code>, then the log events in log groups that have transformers
+     * will be evaluated by Contributor Insights after being transformed. Log groups that don't have transformers will
+     * still have their original log events evaluated by Contributor Insights.
+     * </p>
+     * <p>
+     * The default is <code>false</code>
+     * </p>
+     * <note>
+     * <p>
+     * If a log group has a transformer, and transformation fails for some log events, those log events won't be
+     * evaluated by Contributor Insights. For information about investigating log transformation failures, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Transformation-Errors-Metrics.html">Transformation
+     * metrics and errors</a>.
+     * </p>
+     * </note>
+     * 
+     * @param applyOnTransformedLogs
+     *        Specify <code>true</code> to have this rule evaluate log events after they have been transformed by <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     *        transformation</a>. If you specify <code>true</code>, then the log events in log groups that have
+     *        transformers will be evaluated by Contributor Insights after being transformed. Log groups that don't have
+     *        transformers will still have their original log events evaluated by Contributor Insights.</p>
+     *        <p>
+     *        The default is <code>false</code>
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If a log group has a transformer, and transformation fails for some log events, those log events won't be
+     *        evaluated by Contributor Insights. For information about investigating log transformation failures, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Transformation-Errors-Metrics.html">
+     *        Transformation metrics and errors</a>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutInsightRuleRequest withApplyOnTransformedLogs(Boolean applyOnTransformedLogs) {
+        setApplyOnTransformedLogs(applyOnTransformedLogs);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specify <code>true</code> to have this rule evaluate log events after they have been transformed by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a>. If you specify <code>true</code>, then the log events in log groups that have transformers
+     * will be evaluated by Contributor Insights after being transformed. Log groups that don't have transformers will
+     * still have their original log events evaluated by Contributor Insights.
+     * </p>
+     * <p>
+     * The default is <code>false</code>
+     * </p>
+     * <note>
+     * <p>
+     * If a log group has a transformer, and transformation fails for some log events, those log events won't be
+     * evaluated by Contributor Insights. For information about investigating log transformation failures, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Transformation-Errors-Metrics.html">Transformation
+     * metrics and errors</a>.
+     * </p>
+     * </note>
+     * 
+     * @return Specify <code>true</code> to have this rule evaluate log events after they have been transformed by <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     *         transformation</a>. If you specify <code>true</code>, then the log events in log groups that have
+     *         transformers will be evaluated by Contributor Insights after being transformed. Log groups that don't
+     *         have transformers will still have their original log events evaluated by Contributor Insights.</p>
+     *         <p>
+     *         The default is <code>false</code>
+     *         </p>
+     *         <note>
+     *         <p>
+     *         If a log group has a transformer, and transformation fails for some log events, those log events won't be
+     *         evaluated by Contributor Insights. For information about investigating log transformation failures, see
+     *         <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Transformation-Errors-Metrics.html">
+     *         Transformation metrics and errors</a>.
+     *         </p>
+     */
+
+    public Boolean isApplyOnTransformedLogs() {
+        return this.applyOnTransformedLogs;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -403,7 +592,9 @@ public class PutInsightRuleRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getRuleDefinition() != null)
             sb.append("RuleDefinition: ").append(getRuleDefinition()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getApplyOnTransformedLogs() != null)
+            sb.append("ApplyOnTransformedLogs: ").append(getApplyOnTransformedLogs());
         sb.append("}");
         return sb.toString();
     }
@@ -434,6 +625,10 @@ public class PutInsightRuleRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getApplyOnTransformedLogs() == null ^ this.getApplyOnTransformedLogs() == null)
+            return false;
+        if (other.getApplyOnTransformedLogs() != null && other.getApplyOnTransformedLogs().equals(this.getApplyOnTransformedLogs()) == false)
+            return false;
         return true;
     }
 
@@ -446,6 +641,7 @@ public class PutInsightRuleRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getRuleState() == null) ? 0 : getRuleState().hashCode());
         hashCode = prime * hashCode + ((getRuleDefinition() == null) ? 0 : getRuleDefinition().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getApplyOnTransformedLogs() == null) ? 0 : getApplyOnTransformedLogs().hashCode());
         return hashCode;
     }
 

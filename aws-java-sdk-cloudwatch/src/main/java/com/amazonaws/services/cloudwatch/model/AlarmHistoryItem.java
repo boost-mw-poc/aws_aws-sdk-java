@@ -14,6 +14,8 @@ package com.amazonaws.services.cloudwatch.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
+import com.amazonaws.protocol.StructuredPojo;
+import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
@@ -24,7 +26,7 @@ import javax.annotation.Generated;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class AlarmHistoryItem implements Serializable, Cloneable {
+public class AlarmHistoryItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
@@ -32,6 +34,12 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
      * </p>
      */
     private String alarmName;
+    /**
+     * <p>
+     * The unique identifier of the alarm contributor associated with this history item, if applicable.
+     * </p>
+     */
+    private String alarmContributorId;
     /**
      * <p>
      * The type of alarm, either metric alarm or composite alarm.
@@ -62,6 +70,13 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
      * </p>
      */
     private String historyData;
+    /**
+     * <p>
+     * A map of attributes that describe the alarm contributor associated with this history item, providing context
+     * about the contributor's characteristics at the time of the event.
+     * </p>
+     */
+    private java.util.Map<String, String> alarmContributorAttributes;
 
     /**
      * <p>
@@ -100,6 +115,46 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
 
     public AlarmHistoryItem withAlarmName(String alarmName) {
         setAlarmName(alarmName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the alarm contributor associated with this history item, if applicable.
+     * </p>
+     * 
+     * @param alarmContributorId
+     *        The unique identifier of the alarm contributor associated with this history item, if applicable.
+     */
+
+    public void setAlarmContributorId(String alarmContributorId) {
+        this.alarmContributorId = alarmContributorId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the alarm contributor associated with this history item, if applicable.
+     * </p>
+     * 
+     * @return The unique identifier of the alarm contributor associated with this history item, if applicable.
+     */
+
+    public String getAlarmContributorId() {
+        return this.alarmContributorId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of the alarm contributor associated with this history item, if applicable.
+     * </p>
+     * 
+     * @param alarmContributorId
+     *        The unique identifier of the alarm contributor associated with this history item, if applicable.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AlarmHistoryItem withAlarmContributorId(String alarmContributorId) {
+        setAlarmContributorId(alarmContributorId);
         return this;
     }
 
@@ -370,6 +425,80 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * A map of attributes that describe the alarm contributor associated with this history item, providing context
+     * about the contributor's characteristics at the time of the event.
+     * </p>
+     * 
+     * @return A map of attributes that describe the alarm contributor associated with this history item, providing
+     *         context about the contributor's characteristics at the time of the event.
+     */
+
+    public java.util.Map<String, String> getAlarmContributorAttributes() {
+        return alarmContributorAttributes;
+    }
+
+    /**
+     * <p>
+     * A map of attributes that describe the alarm contributor associated with this history item, providing context
+     * about the contributor's characteristics at the time of the event.
+     * </p>
+     * 
+     * @param alarmContributorAttributes
+     *        A map of attributes that describe the alarm contributor associated with this history item, providing
+     *        context about the contributor's characteristics at the time of the event.
+     */
+
+    public void setAlarmContributorAttributes(java.util.Map<String, String> alarmContributorAttributes) {
+        this.alarmContributorAttributes = alarmContributorAttributes;
+    }
+
+    /**
+     * <p>
+     * A map of attributes that describe the alarm contributor associated with this history item, providing context
+     * about the contributor's characteristics at the time of the event.
+     * </p>
+     * 
+     * @param alarmContributorAttributes
+     *        A map of attributes that describe the alarm contributor associated with this history item, providing
+     *        context about the contributor's characteristics at the time of the event.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AlarmHistoryItem withAlarmContributorAttributes(java.util.Map<String, String> alarmContributorAttributes) {
+        setAlarmContributorAttributes(alarmContributorAttributes);
+        return this;
+    }
+
+    /**
+     * Add a single AlarmContributorAttributes entry
+     *
+     * @see AlarmHistoryItem#withAlarmContributorAttributes
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AlarmHistoryItem addAlarmContributorAttributesEntry(String key, String value) {
+        if (null == this.alarmContributorAttributes) {
+            this.alarmContributorAttributes = new java.util.HashMap<String, String>();
+        }
+        if (this.alarmContributorAttributes.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.alarmContributorAttributes.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into AlarmContributorAttributes.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AlarmHistoryItem clearAlarmContributorAttributesEntries() {
+        this.alarmContributorAttributes = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -383,6 +512,8 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
         sb.append("{");
         if (getAlarmName() != null)
             sb.append("AlarmName: ").append(getAlarmName()).append(",");
+        if (getAlarmContributorId() != null)
+            sb.append("AlarmContributorId: ").append(getAlarmContributorId()).append(",");
         if (getAlarmType() != null)
             sb.append("AlarmType: ").append(getAlarmType()).append(",");
         if (getTimestamp() != null)
@@ -392,7 +523,9 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
         if (getHistorySummary() != null)
             sb.append("HistorySummary: ").append(getHistorySummary()).append(",");
         if (getHistoryData() != null)
-            sb.append("HistoryData: ").append(getHistoryData());
+            sb.append("HistoryData: ").append(getHistoryData()).append(",");
+        if (getAlarmContributorAttributes() != null)
+            sb.append("AlarmContributorAttributes: ").append(getAlarmContributorAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -410,6 +543,10 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
         if (other.getAlarmName() == null ^ this.getAlarmName() == null)
             return false;
         if (other.getAlarmName() != null && other.getAlarmName().equals(this.getAlarmName()) == false)
+            return false;
+        if (other.getAlarmContributorId() == null ^ this.getAlarmContributorId() == null)
+            return false;
+        if (other.getAlarmContributorId() != null && other.getAlarmContributorId().equals(this.getAlarmContributorId()) == false)
             return false;
         if (other.getAlarmType() == null ^ this.getAlarmType() == null)
             return false;
@@ -431,6 +568,10 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
             return false;
         if (other.getHistoryData() != null && other.getHistoryData().equals(this.getHistoryData()) == false)
             return false;
+        if (other.getAlarmContributorAttributes() == null ^ this.getAlarmContributorAttributes() == null)
+            return false;
+        if (other.getAlarmContributorAttributes() != null && other.getAlarmContributorAttributes().equals(this.getAlarmContributorAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -440,11 +581,13 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAlarmName() == null) ? 0 : getAlarmName().hashCode());
+        hashCode = prime * hashCode + ((getAlarmContributorId() == null) ? 0 : getAlarmContributorId().hashCode());
         hashCode = prime * hashCode + ((getAlarmType() == null) ? 0 : getAlarmType().hashCode());
         hashCode = prime * hashCode + ((getTimestamp() == null) ? 0 : getTimestamp().hashCode());
         hashCode = prime * hashCode + ((getHistoryItemType() == null) ? 0 : getHistoryItemType().hashCode());
         hashCode = prime * hashCode + ((getHistorySummary() == null) ? 0 : getHistorySummary().hashCode());
         hashCode = prime * hashCode + ((getHistoryData() == null) ? 0 : getHistoryData().hashCode());
+        hashCode = prime * hashCode + ((getAlarmContributorAttributes() == null) ? 0 : getAlarmContributorAttributes().hashCode());
         return hashCode;
     }
 
@@ -457,4 +600,9 @@ public class AlarmHistoryItem implements Serializable, Cloneable {
         }
     }
 
+    @com.amazonaws.annotation.SdkInternalApi
+    @Override
+    public void marshall(ProtocolMarshaller protocolMarshaller) {
+        com.amazonaws.services.cloudwatch.model.transform.AlarmHistoryItemMarshaller.getInstance().marshall(this, protocolMarshaller);
+    }
 }

@@ -12,49 +12,47 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * EnableAlarmActionsRequest Marshaller
+ * EnableAlarmActionsRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class EnableAlarmActionsRequestMarshaller implements Marshaller<Request<EnableAlarmActionsRequest>, EnableAlarmActionsRequest> {
+@SdkInternalApi
+public class EnableAlarmActionsRequestMarshaller {
 
-    public Request<EnableAlarmActionsRequest> marshall(EnableAlarmActionsRequest enableAlarmActionsRequest) {
+    private static final MarshallingInfo<List> ALARMNAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AlarmNames").build();
+
+    private static final EnableAlarmActionsRequestMarshaller instance = new EnableAlarmActionsRequestMarshaller();
+
+    public static EnableAlarmActionsRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(EnableAlarmActionsRequest enableAlarmActionsRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (enableAlarmActionsRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<EnableAlarmActionsRequest> request = new DefaultRequest<EnableAlarmActionsRequest>(enableAlarmActionsRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "EnableAlarmActions");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (!enableAlarmActionsRequest.getAlarmNames().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) enableAlarmActionsRequest.getAlarmNames()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> alarmNamesList = (com.amazonaws.internal.SdkInternalList<String>) enableAlarmActionsRequest
-                    .getAlarmNames();
-            int alarmNamesListIndex = 1;
-
-            for (String alarmNamesListValue : alarmNamesList) {
-                if (alarmNamesListValue != null) {
-                    request.addParameter("AlarmNames.member." + alarmNamesListIndex, StringUtils.fromString(alarmNamesListValue));
-                }
-                alarmNamesListIndex++;
+        try {
+            if (enableAlarmActionsRequest.getAlarmNames() != null && !enableAlarmActionsRequest.getAlarmNames().isEmpty()) {
+                protocolMarshaller.marshall(enableAlarmActionsRequest.getAlarmNames(), ALARMNAMES_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

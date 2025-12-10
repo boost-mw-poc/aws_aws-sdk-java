@@ -33,6 +33,12 @@ public class DescribeAlarmHistoryRequest extends com.amazonaws.AmazonWebServiceR
     private String alarmName;
     /**
      * <p>
+     * The unique identifier of a specific alarm contributor to filter the alarm history results.
+     * </p>
+     */
+    private String alarmContributorId;
+    /**
+     * <p>
      * Use this parameter to specify whether you want the operation to return metric alarms or composite alarms. If you
      * omit this parameter, only metric alarms are returned.
      * </p>
@@ -114,6 +120,46 @@ public class DescribeAlarmHistoryRequest extends com.amazonaws.AmazonWebServiceR
 
     public DescribeAlarmHistoryRequest withAlarmName(String alarmName) {
         setAlarmName(alarmName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a specific alarm contributor to filter the alarm history results.
+     * </p>
+     * 
+     * @param alarmContributorId
+     *        The unique identifier of a specific alarm contributor to filter the alarm history results.
+     */
+
+    public void setAlarmContributorId(String alarmContributorId) {
+        this.alarmContributorId = alarmContributorId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a specific alarm contributor to filter the alarm history results.
+     * </p>
+     * 
+     * @return The unique identifier of a specific alarm contributor to filter the alarm history results.
+     */
+
+    public String getAlarmContributorId() {
+        return this.alarmContributorId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a specific alarm contributor to filter the alarm history results.
+     * </p>
+     * 
+     * @param alarmContributorId
+     *        The unique identifier of a specific alarm contributor to filter the alarm history results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAlarmHistoryRequest withAlarmContributorId(String alarmContributorId) {
+        setAlarmContributorId(alarmContributorId);
         return this;
     }
 
@@ -568,6 +614,8 @@ public class DescribeAlarmHistoryRequest extends com.amazonaws.AmazonWebServiceR
         sb.append("{");
         if (getAlarmName() != null)
             sb.append("AlarmName: ").append(getAlarmName()).append(",");
+        if (getAlarmContributorId() != null)
+            sb.append("AlarmContributorId: ").append(getAlarmContributorId()).append(",");
         if (getAlarmTypes() != null)
             sb.append("AlarmTypes: ").append(getAlarmTypes()).append(",");
         if (getHistoryItemType() != null)
@@ -599,6 +647,10 @@ public class DescribeAlarmHistoryRequest extends com.amazonaws.AmazonWebServiceR
         if (other.getAlarmName() == null ^ this.getAlarmName() == null)
             return false;
         if (other.getAlarmName() != null && other.getAlarmName().equals(this.getAlarmName()) == false)
+            return false;
+        if (other.getAlarmContributorId() == null ^ this.getAlarmContributorId() == null)
+            return false;
+        if (other.getAlarmContributorId() != null && other.getAlarmContributorId().equals(this.getAlarmContributorId()) == false)
             return false;
         if (other.getAlarmTypes() == null ^ this.getAlarmTypes() == null)
             return false;
@@ -637,6 +689,7 @@ public class DescribeAlarmHistoryRequest extends com.amazonaws.AmazonWebServiceR
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAlarmName() == null) ? 0 : getAlarmName().hashCode());
+        hashCode = prime * hashCode + ((getAlarmContributorId() == null) ? 0 : getAlarmContributorId().hashCode());
         hashCode = prime * hashCode + ((getAlarmTypes() == null) ? 0 : getAlarmTypes().hashCode());
         hashCode = prime * hashCode + ((getHistoryItemType() == null) ? 0 : getHistoryItemType().hashCode());
         hashCode = prime * hashCode + ((getStartDate() == null) ? 0 : getStartDate().hashCode());

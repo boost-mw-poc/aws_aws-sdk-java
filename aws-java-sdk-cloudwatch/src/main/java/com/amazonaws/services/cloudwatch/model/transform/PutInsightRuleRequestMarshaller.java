@@ -12,66 +12,59 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * PutInsightRuleRequest Marshaller
+ * PutInsightRuleRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class PutInsightRuleRequestMarshaller implements Marshaller<Request<PutInsightRuleRequest>, PutInsightRuleRequest> {
+@SdkInternalApi
+public class PutInsightRuleRequestMarshaller {
 
-    public Request<PutInsightRuleRequest> marshall(PutInsightRuleRequest putInsightRuleRequest) {
+    private static final MarshallingInfo<String> RULENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RuleName").build();
+    private static final MarshallingInfo<String> RULESTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RuleState").build();
+    private static final MarshallingInfo<String> RULEDEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RuleDefinition").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<Boolean> APPLYONTRANSFORMEDLOGS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ApplyOnTransformedLogs").build();
+
+    private static final PutInsightRuleRequestMarshaller instance = new PutInsightRuleRequestMarshaller();
+
+    public static PutInsightRuleRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(PutInsightRuleRequest putInsightRuleRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (putInsightRuleRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<PutInsightRuleRequest> request = new DefaultRequest<PutInsightRuleRequest>(putInsightRuleRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "PutInsightRule");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (putInsightRuleRequest.getRuleName() != null) {
-            request.addParameter("RuleName", StringUtils.fromString(putInsightRuleRequest.getRuleName()));
-        }
-
-        if (putInsightRuleRequest.getRuleState() != null) {
-            request.addParameter("RuleState", StringUtils.fromString(putInsightRuleRequest.getRuleState()));
-        }
-
-        if (putInsightRuleRequest.getRuleDefinition() != null) {
-            request.addParameter("RuleDefinition", StringUtils.fromString(putInsightRuleRequest.getRuleDefinition()));
-        }
-
-        if (!putInsightRuleRequest.getTags().isEmpty() || !((com.amazonaws.internal.SdkInternalList<Tag>) putInsightRuleRequest.getTags()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<Tag> tagsList = (com.amazonaws.internal.SdkInternalList<Tag>) putInsightRuleRequest.getTags();
-            int tagsListIndex = 1;
-
-            for (Tag tagsListValue : tagsList) {
-                if (tagsListValue != null) {
-
-                    if (tagsListValue.getKey() != null) {
-                        request.addParameter("Tags.member." + tagsListIndex + ".Key", StringUtils.fromString(tagsListValue.getKey()));
-                    }
-
-                    if (tagsListValue.getValue() != null) {
-                        request.addParameter("Tags.member." + tagsListIndex + ".Value", StringUtils.fromString(tagsListValue.getValue()));
-                    }
-                }
-                tagsListIndex++;
+        try {
+            protocolMarshaller.marshall(putInsightRuleRequest.getRuleName(), RULENAME_BINDING);
+            protocolMarshaller.marshall(putInsightRuleRequest.getRuleState(), RULESTATE_BINDING);
+            protocolMarshaller.marshall(putInsightRuleRequest.getRuleDefinition(), RULEDEFINITION_BINDING);
+            if (putInsightRuleRequest.getTags() != null && !putInsightRuleRequest.getTags().isEmpty()) {
+                protocolMarshaller.marshall(putInsightRuleRequest.getTags(), TAGS_BINDING);
             }
+            protocolMarshaller.marshall(putInsightRuleRequest.getApplyOnTransformedLogs(), APPLYONTRANSFORMEDLOGS_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

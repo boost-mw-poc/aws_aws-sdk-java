@@ -1,4 +1,13 @@
-# __1.12.794__ __2025-11-20__
+# __1.12.795__ __2025-12-09__
+## __Amazon CloudWatch__
+  - ### Features
+    - This release introduces two additional protocols AWS JSON 1.1 and Smithy RPC v2 CBOR, replacing the currently utilized one, AWSQuery. AWS SDKs will prioritize the protocol that is the most performant for each language.
+
+## __Amazon S3__
+  - ### Bugfixes
+    - Fix error when using S3 with Dualstack and custom regions.
+
+# __1.12.794__ __2025-11-24__
 ## __AWS SDK for Java__
   - ### Features
     - Update region metadata.

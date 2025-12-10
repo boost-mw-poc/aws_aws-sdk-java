@@ -15,48 +15,50 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * SetAlarmStateRequest Marshaller
+ * SetAlarmStateRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class SetAlarmStateRequestMarshaller implements Marshaller<Request<SetAlarmStateRequest>, SetAlarmStateRequest> {
+@SdkInternalApi
+public class SetAlarmStateRequestMarshaller {
 
-    public Request<SetAlarmStateRequest> marshall(SetAlarmStateRequest setAlarmStateRequest) {
+    private static final MarshallingInfo<String> ALARMNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AlarmName").build();
+    private static final MarshallingInfo<String> STATEVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StateValue").build();
+    private static final MarshallingInfo<String> STATEREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StateReason").build();
+    private static final MarshallingInfo<String> STATEREASONDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StateReasonData").build();
+
+    private static final SetAlarmStateRequestMarshaller instance = new SetAlarmStateRequestMarshaller();
+
+    public static SetAlarmStateRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(SetAlarmStateRequest setAlarmStateRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (setAlarmStateRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<SetAlarmStateRequest> request = new DefaultRequest<SetAlarmStateRequest>(setAlarmStateRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "SetAlarmState");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (setAlarmStateRequest.getAlarmName() != null) {
-            request.addParameter("AlarmName", StringUtils.fromString(setAlarmStateRequest.getAlarmName()));
+        try {
+            protocolMarshaller.marshall(setAlarmStateRequest.getAlarmName(), ALARMNAME_BINDING);
+            protocolMarshaller.marshall(setAlarmStateRequest.getStateValue(), STATEVALUE_BINDING);
+            protocolMarshaller.marshall(setAlarmStateRequest.getStateReason(), STATEREASON_BINDING);
+            protocolMarshaller.marshall(setAlarmStateRequest.getStateReasonData(), STATEREASONDATA_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (setAlarmStateRequest.getStateValue() != null) {
-            request.addParameter("StateValue", StringUtils.fromString(setAlarmStateRequest.getStateValue()));
-        }
-
-        if (setAlarmStateRequest.getStateReason() != null) {
-            request.addParameter("StateReason", StringUtils.fromString(setAlarmStateRequest.getStateReason()));
-        }
-
-        if (setAlarmStateRequest.getStateReasonData() != null) {
-            request.addParameter("StateReasonData", StringUtils.fromString(setAlarmStateRequest.getStateReasonData()));
-        }
-
-        return request;
     }
 
 }

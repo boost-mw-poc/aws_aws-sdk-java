@@ -75,6 +75,12 @@ public class PutCompositeAlarmRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:opsitem:<i>severity</i> </code>
      * </p>
+     * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> alarmActions;
     /**
@@ -401,6 +407,12 @@ public class PutCompositeAlarmRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:opsitem:<i>severity</i> </code>
      * </p>
+     * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
      * 
      * @return The actions to execute when this alarm transitions to the <code>ALARM</code> state from any other state.
      *         Each action is specified as an Amazon Resource Name (ARN).</p>
@@ -441,6 +453,12 @@ public class PutCompositeAlarmRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </p>
      *         <p>
      *         <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:opsitem:<i>severity</i> </code>
+     *         </p>
+     *         <p>
+     *         <b>Start a Amazon Q Developer operational investigation</b>
+     *         </p>
+     *         <p>
+     *         <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
      */
 
     public java.util.List<String> getAlarmActions() {
@@ -493,6 +511,12 @@ public class PutCompositeAlarmRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:opsitem:<i>severity</i> </code>
      * </p>
+     * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
      * 
      * @param alarmActions
      *        The actions to execute when this alarm transitions to the <code>ALARM</code> state from any other state.
@@ -534,6 +558,12 @@ public class PutCompositeAlarmRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:opsitem:<i>severity</i> </code>
+     *        </p>
+     *        <p>
+     *        <b>Start a Amazon Q Developer operational investigation</b>
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
      */
 
     public void setAlarmActions(java.util.Collection<String> alarmActions) {
@@ -589,6 +619,12 @@ public class PutCompositeAlarmRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:opsitem:<i>severity</i> </code>
      * </p>
      * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAlarmActions(java.util.Collection)} or {@link #withAlarmActions(java.util.Collection)} if you want to
      * override the existing values.
@@ -634,6 +670,12 @@ public class PutCompositeAlarmRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:opsitem:<i>severity</i> </code>
+     *        </p>
+     *        <p>
+     *        <b>Start a Amazon Q Developer operational investigation</b>
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -690,6 +732,12 @@ public class PutCompositeAlarmRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:opsitem:<i>severity</i> </code>
      * </p>
+     * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
      * 
      * @param alarmActions
      *        The actions to execute when this alarm transitions to the <code>ALARM</code> state from any other state.
@@ -731,6 +779,12 @@ public class PutCompositeAlarmRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:opsitem:<i>severity</i> </code>
+     *        </p>
+     *        <p>
+     *        <b>Start a Amazon Q Developer operational investigation</b>
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

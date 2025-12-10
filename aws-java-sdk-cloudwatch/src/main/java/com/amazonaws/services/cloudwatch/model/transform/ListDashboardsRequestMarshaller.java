@@ -15,40 +15,44 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * ListDashboardsRequest Marshaller
+ * ListDashboardsRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListDashboardsRequestMarshaller implements Marshaller<Request<ListDashboardsRequest>, ListDashboardsRequest> {
+@SdkInternalApi
+public class ListDashboardsRequestMarshaller {
 
-    public Request<ListDashboardsRequest> marshall(ListDashboardsRequest listDashboardsRequest) {
+    private static final MarshallingInfo<String> DASHBOARDNAMEPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DashboardNamePrefix").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
+
+    private static final ListDashboardsRequestMarshaller instance = new ListDashboardsRequestMarshaller();
+
+    public static ListDashboardsRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(ListDashboardsRequest listDashboardsRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (listDashboardsRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<ListDashboardsRequest> request = new DefaultRequest<ListDashboardsRequest>(listDashboardsRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "ListDashboards");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (listDashboardsRequest.getDashboardNamePrefix() != null) {
-            request.addParameter("DashboardNamePrefix", StringUtils.fromString(listDashboardsRequest.getDashboardNamePrefix()));
+        try {
+            protocolMarshaller.marshall(listDashboardsRequest.getDashboardNamePrefix(), DASHBOARDNAMEPREFIX_BINDING);
+            protocolMarshaller.marshall(listDashboardsRequest.getNextToken(), NEXTTOKEN_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (listDashboardsRequest.getNextToken() != null) {
-            request.addParameter("NextToken", StringUtils.fromString(listDashboardsRequest.getNextToken()));
-        }
-
-        return request;
     }
 
 }

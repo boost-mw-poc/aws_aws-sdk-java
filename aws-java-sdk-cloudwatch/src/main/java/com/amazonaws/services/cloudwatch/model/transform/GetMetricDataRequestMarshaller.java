@@ -12,170 +12,65 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * GetMetricDataRequest Marshaller
+ * GetMetricDataRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class GetMetricDataRequestMarshaller implements Marshaller<Request<GetMetricDataRequest>, GetMetricDataRequest> {
+@SdkInternalApi
+public class GetMetricDataRequestMarshaller {
 
-    public Request<GetMetricDataRequest> marshall(GetMetricDataRequest getMetricDataRequest) {
+    private static final MarshallingInfo<List> METRICDATAQUERIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetricDataQueries").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<String> SCANBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ScanBy").build();
+    private static final MarshallingInfo<Integer> MAXDATAPOINTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxDatapoints").build();
+    private static final MarshallingInfo<StructuredPojo> LABELOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LabelOptions").build();
+
+    private static final GetMetricDataRequestMarshaller instance = new GetMetricDataRequestMarshaller();
+
+    public static GetMetricDataRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(GetMetricDataRequest getMetricDataRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (getMetricDataRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<GetMetricDataRequest> request = new DefaultRequest<GetMetricDataRequest>(getMetricDataRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "GetMetricData");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (!getMetricDataRequest.getMetricDataQueries().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<MetricDataQuery>) getMetricDataRequest.getMetricDataQueries()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<MetricDataQuery> metricDataQueriesList = (com.amazonaws.internal.SdkInternalList<MetricDataQuery>) getMetricDataRequest
-                    .getMetricDataQueries();
-            int metricDataQueriesListIndex = 1;
-
-            for (MetricDataQuery metricDataQueriesListValue : metricDataQueriesList) {
-                if (metricDataQueriesListValue != null) {
-
-                    if (metricDataQueriesListValue.getId() != null) {
-                        request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".Id",
-                                StringUtils.fromString(metricDataQueriesListValue.getId()));
-                    }
-
-                    {
-                        MetricStat metricStat = metricDataQueriesListValue.getMetricStat();
-                        if (metricStat != null) {
-
-                            {
-                                Metric metric = metricStat.getMetric();
-                                if (metric != null) {
-
-                                    if (metric.getNamespace() != null) {
-                                        request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".MetricStat.Metric.Namespace",
-                                                StringUtils.fromString(metric.getNamespace()));
-                                    }
-
-                                    if (metric.getMetricName() != null) {
-                                        request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".MetricStat.Metric.MetricName",
-                                                StringUtils.fromString(metric.getMetricName()));
-                                    }
-
-                                    if (!metric.getDimensions().isEmpty()
-                                            || !((com.amazonaws.internal.SdkInternalList<Dimension>) metric.getDimensions()).isAutoConstruct()) {
-                                        com.amazonaws.internal.SdkInternalList<Dimension> dimensionsList = (com.amazonaws.internal.SdkInternalList<Dimension>) metric
-                                                .getDimensions();
-                                        int dimensionsListIndex = 1;
-
-                                        for (Dimension dimensionsListValue : dimensionsList) {
-                                            if (dimensionsListValue != null) {
-
-                                                if (dimensionsListValue.getName() != null) {
-                                                    request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex
-                                                            + ".MetricStat.Metric.Dimensions.member." + dimensionsListIndex + ".Name",
-                                                            StringUtils.fromString(dimensionsListValue.getName()));
-                                                }
-
-                                                if (dimensionsListValue.getValue() != null) {
-                                                    request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex
-                                                            + ".MetricStat.Metric.Dimensions.member." + dimensionsListIndex + ".Value",
-                                                            StringUtils.fromString(dimensionsListValue.getValue()));
-                                                }
-                                            }
-                                            dimensionsListIndex++;
-                                        }
-                                    }
-                                }
-                            }
-
-                            if (metricStat.getPeriod() != null) {
-                                request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".MetricStat.Period",
-                                        StringUtils.fromInteger(metricStat.getPeriod()));
-                            }
-
-                            if (metricStat.getStat() != null) {
-                                request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".MetricStat.Stat",
-                                        StringUtils.fromString(metricStat.getStat()));
-                            }
-
-                            if (metricStat.getUnit() != null) {
-                                request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".MetricStat.Unit",
-                                        StringUtils.fromString(metricStat.getUnit()));
-                            }
-                        }
-                    }
-
-                    if (metricDataQueriesListValue.getExpression() != null) {
-                        request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".Expression",
-                                StringUtils.fromString(metricDataQueriesListValue.getExpression()));
-                    }
-
-                    if (metricDataQueriesListValue.getLabel() != null) {
-                        request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".Label",
-                                StringUtils.fromString(metricDataQueriesListValue.getLabel()));
-                    }
-
-                    if (metricDataQueriesListValue.getReturnData() != null) {
-                        request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".ReturnData",
-                                StringUtils.fromBoolean(metricDataQueriesListValue.getReturnData()));
-                    }
-
-                    if (metricDataQueriesListValue.getPeriod() != null) {
-                        request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".Period",
-                                StringUtils.fromInteger(metricDataQueriesListValue.getPeriod()));
-                    }
-
-                    if (metricDataQueriesListValue.getAccountId() != null) {
-                        request.addParameter("MetricDataQueries.member." + metricDataQueriesListIndex + ".AccountId",
-                                StringUtils.fromString(metricDataQueriesListValue.getAccountId()));
-                    }
-                }
-                metricDataQueriesListIndex++;
+        try {
+            if (getMetricDataRequest.getMetricDataQueries() != null && !getMetricDataRequest.getMetricDataQueries().isEmpty()) {
+                protocolMarshaller.marshall(getMetricDataRequest.getMetricDataQueries(), METRICDATAQUERIES_BINDING);
             }
+            protocolMarshaller.marshall(getMetricDataRequest.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(getMetricDataRequest.getEndTime(), ENDTIME_BINDING);
+            protocolMarshaller.marshall(getMetricDataRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(getMetricDataRequest.getScanBy(), SCANBY_BINDING);
+            protocolMarshaller.marshall(getMetricDataRequest.getMaxDatapoints(), MAXDATAPOINTS_BINDING);
+            protocolMarshaller.marshall(getMetricDataRequest.getLabelOptions(), LABELOPTIONS_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (getMetricDataRequest.getStartTime() != null) {
-            request.addParameter("StartTime", StringUtils.fromDate(getMetricDataRequest.getStartTime()));
-        }
-
-        if (getMetricDataRequest.getEndTime() != null) {
-            request.addParameter("EndTime", StringUtils.fromDate(getMetricDataRequest.getEndTime()));
-        }
-
-        if (getMetricDataRequest.getNextToken() != null) {
-            request.addParameter("NextToken", StringUtils.fromString(getMetricDataRequest.getNextToken()));
-        }
-
-        if (getMetricDataRequest.getScanBy() != null) {
-            request.addParameter("ScanBy", StringUtils.fromString(getMetricDataRequest.getScanBy()));
-        }
-
-        if (getMetricDataRequest.getMaxDatapoints() != null) {
-            request.addParameter("MaxDatapoints", StringUtils.fromInteger(getMetricDataRequest.getMaxDatapoints()));
-        }
-
-        {
-            LabelOptions labelOptions = getMetricDataRequest.getLabelOptions();
-            if (labelOptions != null) {
-
-                if (labelOptions.getTimezone() != null) {
-                    request.addParameter("LabelOptions.Timezone", StringUtils.fromString(labelOptions.getTimezone()));
-                }
-            }
-        }
-
-        return request;
     }
 
 }

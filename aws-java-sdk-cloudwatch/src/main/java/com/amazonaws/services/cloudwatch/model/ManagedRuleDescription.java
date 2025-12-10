@@ -14,6 +14,8 @@ package com.amazonaws.services.cloudwatch.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
+import com.amazonaws.protocol.StructuredPojo;
+import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
@@ -24,7 +26,7 @@ import javax.annotation.Generated;
  *      API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ManagedRuleDescription implements Serializable, Cloneable {
+public class ManagedRuleDescription implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
@@ -242,4 +244,9 @@ public class ManagedRuleDescription implements Serializable, Cloneable {
         }
     }
 
+    @com.amazonaws.annotation.SdkInternalApi
+    @Override
+    public void marshall(ProtocolMarshaller protocolMarshaller) {
+        com.amazonaws.services.cloudwatch.model.transform.ManagedRuleDescriptionMarshaller.getInstance().marshall(this, protocolMarshaller);
+    }
 }

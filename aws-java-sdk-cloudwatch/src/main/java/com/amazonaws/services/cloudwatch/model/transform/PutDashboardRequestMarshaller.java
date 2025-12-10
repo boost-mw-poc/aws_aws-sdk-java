@@ -15,40 +15,44 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * PutDashboardRequest Marshaller
+ * PutDashboardRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class PutDashboardRequestMarshaller implements Marshaller<Request<PutDashboardRequest>, PutDashboardRequest> {
+@SdkInternalApi
+public class PutDashboardRequestMarshaller {
 
-    public Request<PutDashboardRequest> marshall(PutDashboardRequest putDashboardRequest) {
+    private static final MarshallingInfo<String> DASHBOARDNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DashboardName").build();
+    private static final MarshallingInfo<String> DASHBOARDBODY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DashboardBody").build();
+
+    private static final PutDashboardRequestMarshaller instance = new PutDashboardRequestMarshaller();
+
+    public static PutDashboardRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(PutDashboardRequest putDashboardRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (putDashboardRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<PutDashboardRequest> request = new DefaultRequest<PutDashboardRequest>(putDashboardRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "PutDashboard");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (putDashboardRequest.getDashboardName() != null) {
-            request.addParameter("DashboardName", StringUtils.fromString(putDashboardRequest.getDashboardName()));
+        try {
+            protocolMarshaller.marshall(putDashboardRequest.getDashboardName(), DASHBOARDNAME_BINDING);
+            protocolMarshaller.marshall(putDashboardRequest.getDashboardBody(), DASHBOARDBODY_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (putDashboardRequest.getDashboardBody() != null) {
-            request.addParameter("DashboardBody", StringUtils.fromString(putDashboardRequest.getDashboardBody()));
-        }
-
-        return request;
     }
 
 }

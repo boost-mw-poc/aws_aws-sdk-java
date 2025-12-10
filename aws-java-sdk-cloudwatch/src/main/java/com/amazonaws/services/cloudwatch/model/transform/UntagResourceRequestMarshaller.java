@@ -12,52 +12,50 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * UntagResourceRequest Marshaller
+ * UntagResourceRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class UntagResourceRequestMarshaller implements Marshaller<Request<UntagResourceRequest>, UntagResourceRequest> {
+@SdkInternalApi
+public class UntagResourceRequestMarshaller {
 
-    public Request<UntagResourceRequest> marshall(UntagResourceRequest untagResourceRequest) {
+    private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceARN").build();
+    private static final MarshallingInfo<List> TAGKEYS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("TagKeys").build();
+
+    private static final UntagResourceRequestMarshaller instance = new UntagResourceRequestMarshaller();
+
+    public static UntagResourceRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(UntagResourceRequest untagResourceRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (untagResourceRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<UntagResourceRequest> request = new DefaultRequest<UntagResourceRequest>(untagResourceRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "UntagResource");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (untagResourceRequest.getResourceARN() != null) {
-            request.addParameter("ResourceARN", StringUtils.fromString(untagResourceRequest.getResourceARN()));
-        }
-
-        if (!untagResourceRequest.getTagKeys().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) untagResourceRequest.getTagKeys()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> tagKeysList = (com.amazonaws.internal.SdkInternalList<String>) untagResourceRequest.getTagKeys();
-            int tagKeysListIndex = 1;
-
-            for (String tagKeysListValue : tagKeysList) {
-                if (tagKeysListValue != null) {
-                    request.addParameter("TagKeys.member." + tagKeysListIndex, StringUtils.fromString(tagKeysListValue));
-                }
-                tagKeysListIndex++;
+        try {
+            protocolMarshaller.marshall(untagResourceRequest.getResourceARN(), RESOURCEARN_BINDING);
+            if (untagResourceRequest.getTagKeys() != null && !untagResourceRequest.getTagKeys().isEmpty()) {
+                protocolMarshaller.marshall(untagResourceRequest.getTagKeys(), TAGKEYS_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

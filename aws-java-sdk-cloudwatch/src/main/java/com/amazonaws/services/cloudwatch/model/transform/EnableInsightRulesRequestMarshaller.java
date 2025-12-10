@@ -12,49 +12,47 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * EnableInsightRulesRequest Marshaller
+ * EnableInsightRulesRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class EnableInsightRulesRequestMarshaller implements Marshaller<Request<EnableInsightRulesRequest>, EnableInsightRulesRequest> {
+@SdkInternalApi
+public class EnableInsightRulesRequestMarshaller {
 
-    public Request<EnableInsightRulesRequest> marshall(EnableInsightRulesRequest enableInsightRulesRequest) {
+    private static final MarshallingInfo<List> RULENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RuleNames").build();
+
+    private static final EnableInsightRulesRequestMarshaller instance = new EnableInsightRulesRequestMarshaller();
+
+    public static EnableInsightRulesRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(EnableInsightRulesRequest enableInsightRulesRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (enableInsightRulesRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<EnableInsightRulesRequest> request = new DefaultRequest<EnableInsightRulesRequest>(enableInsightRulesRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "EnableInsightRules");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (!enableInsightRulesRequest.getRuleNames().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) enableInsightRulesRequest.getRuleNames()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> ruleNamesList = (com.amazonaws.internal.SdkInternalList<String>) enableInsightRulesRequest
-                    .getRuleNames();
-            int ruleNamesListIndex = 1;
-
-            for (String ruleNamesListValue : ruleNamesList) {
-                if (ruleNamesListValue != null) {
-                    request.addParameter("RuleNames.member." + ruleNamesListIndex, StringUtils.fromString(ruleNamesListValue));
-                }
-                ruleNamesListIndex++;
+        try {
+            if (enableInsightRulesRequest.getRuleNames() != null && !enableInsightRulesRequest.getRuleNames().isEmpty()) {
+                protocolMarshaller.marshall(enableInsightRulesRequest.getRuleNames(), RULENAMES_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

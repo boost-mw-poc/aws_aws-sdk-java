@@ -33,7 +33,7 @@ import com.amazonaws.metrics.*;
 import com.amazonaws.regions.*;
 import com.amazonaws.transform.*;
 import com.amazonaws.util.*;
-import com.amazonaws.protocol.json.*;
+import com.amazonaws.protocol.rpcv2cbor.*;
 import com.amazonaws.util.AWSRequestMetrics.Field;
 import com.amazonaws.annotation.ThreadSafe;
 import com.amazonaws.client.AwsSyncClientParams;
@@ -88,19 +88,46 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
 
     private final AdvancedConfig advancedConfig;
 
-    /**
-     * Map of exception unmarshallers for all modeled exceptions
-     */
-    private final Map<String, Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallersMap = new HashMap<String, Unmarshaller<AmazonServiceException, Node>>();
-
-    /**
-     * List of exception unmarshallers for all modeled exceptions Even though this exceptionUnmarshallers is not used in
-     * Clients, this is not removed since this was directly used by Client extended classes. Using this list can cause
-     * performance impact.
-     */
-    protected final List<Unmarshaller<AmazonServiceException, Node>> exceptionUnmarshallers = new ArrayList<Unmarshaller<AmazonServiceException, Node>>();
-
-    protected Unmarshaller<AmazonServiceException, Node> defaultUnmarshaller;
+    private static final com.amazonaws.protocol.rpcv2cbor.SdkRpcV2CborProtocolFactory protocolFactory = new com.amazonaws.protocol.rpcv2cbor.SdkRpcV2CborProtocolFactory(
+            new RpcV2CborClientMetadata()
+                    .withAwsQueryCompatible(true)
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("ConcurrentModificationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.ConcurrentModificationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("InvalidParameterValueException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.InvalidParameterValueExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("InvalidFormatFault").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.InvalidFormatExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("MissingRequiredParameterException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.MissingRequiredParameterExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("InvalidNextToken").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.InvalidNextTokenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("LimitExceededFault").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("InvalidParameterCombinationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.InvalidParameterCombinationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("DashboardNotFoundError").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.DashboardNotFoundErrorExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("DashboardInvalidInputError").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.DashboardInvalidInputErrorExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new RpcV2CborErrorShapeMetadata().withErrorCode("InternalServiceFault").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudwatch.model.transform.InternalServiceExceptionUnmarshaller.getInstance()))
+                    .withBaseServiceExceptionClass(com.amazonaws.services.cloudwatch.model.AmazonCloudWatchException.class));
 
     /**
      * Constructs a new client to invoke service methods on CloudWatch. A credentials provider chain will be used that
@@ -291,57 +318,10 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
     }
 
     private void init() {
-        if (exceptionUnmarshallersMap.get("ConcurrentModificationException") == null) {
-            exceptionUnmarshallersMap.put("ConcurrentModificationException", new ConcurrentModificationExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new ConcurrentModificationExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("InvalidParameterValue") == null) {
-            exceptionUnmarshallersMap.put("InvalidParameterValue", new InvalidParameterValueExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new InvalidParameterValueExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("InvalidFormat") == null) {
-            exceptionUnmarshallersMap.put("InvalidFormat", new InvalidFormatExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new InvalidFormatExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("MissingParameter") == null) {
-            exceptionUnmarshallersMap.put("MissingParameter", new MissingRequiredParameterExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new MissingRequiredParameterExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("InvalidNextToken") == null) {
-            exceptionUnmarshallersMap.put("InvalidNextToken", new InvalidNextTokenExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new InvalidNextTokenExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("LimitExceeded") == null) {
-            exceptionUnmarshallersMap.put("LimitExceeded", new LimitExceededExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new LimitExceededExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("ResourceNotFoundException") == null) {
-            exceptionUnmarshallersMap.put("ResourceNotFoundException", new ResourceNotFoundExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new ResourceNotFoundExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("InvalidParameterCombination") == null) {
-            exceptionUnmarshallersMap.put("InvalidParameterCombination", new InvalidParameterCombinationExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new InvalidParameterCombinationExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("ResourceNotFound") == null) {
-            exceptionUnmarshallersMap.put("ResourceNotFound", new DashboardNotFoundErrorExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new DashboardNotFoundErrorExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("InvalidParameterInput") == null) {
-            exceptionUnmarshallersMap.put("InvalidParameterInput", new DashboardInvalidInputErrorExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new DashboardInvalidInputErrorExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("InternalServiceError") == null) {
-            exceptionUnmarshallersMap.put("InternalServiceError", new InternalServiceExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new InternalServiceExceptionUnmarshaller());
-        defaultUnmarshaller = new StandardErrorUnmarshaller(com.amazonaws.services.cloudwatch.model.AmazonCloudWatchException.class);
-        exceptionUnmarshallers.add(new StandardErrorUnmarshaller(com.amazonaws.services.cloudwatch.model.AmazonCloudWatchException.class));
-
         setServiceNameIntern(DEFAULT_SIGNING_NAME);
         setEndpointPrefix(ENDPOINT_PREFIX);
         // calling this.setEndPoint(...) will also modify the signer accordingly
-        this.setEndpoint("https://monitoring.us-east-1.amazonaws.com");
+        setEndpoint("https://monitoring.us-east-1.amazonaws.com");
         HandlerChainFactory chainFactory = new HandlerChainFactory();
         requestHandler2s.addAll(chainFactory.newRequestHandlerChain("/com/amazonaws/services/cloudwatch/request.handlers"));
         requestHandler2s.addAll(chainFactory.newRequestHandler2Chain("/com/amazonaws/services/cloudwatch/request.handler2s"));
@@ -355,10 +335,11 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * one operation, but you can't delete two composite alarms with one operation.
      * </p>
      * <p>
-     * If you specify an incorrect alarm name or make any other error in the operation, no alarms are deleted. To
-     * confirm that alarms were deleted successfully, you can use the <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeAlarms.html"
-     * >DescribeAlarms</a> operation after using <code>DeleteAlarms</code>.
+     * If you specify any incorrect alarm names, the alarms you specify with correct names are still deleted. Other
+     * syntax errors might result in no alarms being deleted. To confirm that alarms were deleted successfully, you can
+     * use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeAlarms.html">DescribeAlarms
+     * </a> operation after using <code>DeleteAlarms</code>.
      * </p>
      * <note>
      * <p>
@@ -403,7 +384,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DeleteAlarmsRequestMarshaller().marshall(super.beforeMarshalling(deleteAlarmsRequest));
+                request = new DeleteAlarmsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteAlarmsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -417,8 +398,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DeleteAlarmsResult> responseHandler = new StaxResponseHandler<DeleteAlarmsResult>(new DeleteAlarmsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteAlarmsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DeleteAlarmsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -471,7 +453,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DeleteAnomalyDetectorRequestMarshaller().marshall(super.beforeMarshalling(deleteAnomalyDetectorRequest));
+                request = new DeleteAnomalyDetectorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteAnomalyDetectorRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -485,9 +467,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DeleteAnomalyDetectorResult> responseHandler = new StaxResponseHandler<DeleteAnomalyDetectorResult>(
-                    new DeleteAnomalyDetectorResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteAnomalyDetectorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DeleteAnomalyDetectorResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -512,6 +494,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      *         The specified dashboard does not exist.
      * @throws InternalServiceException
      *         Request processing has failed due to some unknown error, exception, or failure.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
      * @sample AmazonCloudWatch.DeleteDashboards
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DeleteDashboards" target="_top">AWS
      *      API Documentation</a>
@@ -534,7 +518,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DeleteDashboardsRequestMarshaller().marshall(super.beforeMarshalling(deleteDashboardsRequest));
+                request = new DeleteDashboardsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteDashboardsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -548,9 +532,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DeleteDashboardsResult> responseHandler = new StaxResponseHandler<DeleteDashboardsResult>(
-                    new DeleteDashboardsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteDashboardsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DeleteDashboardsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -598,7 +582,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DeleteInsightRulesRequestMarshaller().marshall(super.beforeMarshalling(deleteInsightRulesRequest));
+                request = new DeleteInsightRulesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteInsightRulesRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -612,9 +596,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DeleteInsightRulesResult> responseHandler = new StaxResponseHandler<DeleteInsightRulesResult>(
-                    new DeleteInsightRulesResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteInsightRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DeleteInsightRulesResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -660,7 +644,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DeleteMetricStreamRequestMarshaller().marshall(super.beforeMarshalling(deleteMetricStreamRequest));
+                request = new DeleteMetricStreamRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteMetricStreamRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -674,9 +658,71 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DeleteMetricStreamResult> responseHandler = new StaxResponseHandler<DeleteMetricStreamResult>(
-                    new DeleteMetricStreamResultStaxUnmarshaller());
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteMetricStreamResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DeleteMetricStreamResultRpcV2CborUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
 
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the information of the current alarm contributors that are in <code>ALARM</code> state. This operation
+     * returns details about the individual time series that contribute to the alarm's state.
+     * </p>
+     * 
+     * @param describeAlarmContributorsRequest
+     * @return Result of the DescribeAlarmContributors operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The next token specified is invalid.
+     * @throws ResourceNotFoundException
+     *         The named resource does not exist.
+     * @sample AmazonCloudWatch.DescribeAlarmContributors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DescribeAlarmContributors"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeAlarmContributorsResult describeAlarmContributors(DescribeAlarmContributorsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeAlarmContributors(request);
+    }
+
+    @SdkInternalApi
+    final DescribeAlarmContributorsResult executeDescribeAlarmContributors(DescribeAlarmContributorsRequest describeAlarmContributorsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeAlarmContributorsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeAlarmContributorsRequest> request = null;
+        Response<DescribeAlarmContributorsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeAlarmContributorsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeAlarmContributorsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeAlarmContributors");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeAlarmContributorsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DescribeAlarmContributorsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -728,7 +774,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DescribeAlarmHistoryRequestMarshaller().marshall(super.beforeMarshalling(describeAlarmHistoryRequest));
+                request = new DescribeAlarmHistoryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeAlarmHistoryRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -742,9 +788,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DescribeAlarmHistoryResult> responseHandler = new StaxResponseHandler<DescribeAlarmHistoryResult>(
-                    new DescribeAlarmHistoryResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeAlarmHistoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DescribeAlarmHistoryResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -797,7 +843,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DescribeAlarmsRequestMarshaller().marshall(super.beforeMarshalling(describeAlarmsRequest));
+                request = new DescribeAlarmsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeAlarmsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -811,9 +857,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DescribeAlarmsResult> responseHandler = new StaxResponseHandler<DescribeAlarmsResult>(
-                    new DescribeAlarmsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeAlarmsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DescribeAlarmsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -862,7 +908,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DescribeAlarmsForMetricRequestMarshaller().marshall(super.beforeMarshalling(describeAlarmsForMetricRequest));
+                request = new DescribeAlarmsForMetricRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeAlarmsForMetricRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -876,9 +923,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DescribeAlarmsForMetricResult> responseHandler = new StaxResponseHandler<DescribeAlarmsForMetricResult>(
-                    new DescribeAlarmsForMetricResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeAlarmsForMetricResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DescribeAlarmsForMetricResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -930,7 +977,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DescribeAnomalyDetectorsRequestMarshaller().marshall(super.beforeMarshalling(describeAnomalyDetectorsRequest));
+                request = new DescribeAnomalyDetectorsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeAnomalyDetectorsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -944,9 +992,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DescribeAnomalyDetectorsResult> responseHandler = new StaxResponseHandler<DescribeAnomalyDetectorsResult>(
-                    new DescribeAnomalyDetectorsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeAnomalyDetectorsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DescribeAnomalyDetectorsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -993,7 +1041,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DescribeInsightRulesRequestMarshaller().marshall(super.beforeMarshalling(describeInsightRulesRequest));
+                request = new DescribeInsightRulesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeInsightRulesRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1007,9 +1055,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DescribeInsightRulesResult> responseHandler = new StaxResponseHandler<DescribeInsightRulesResult>(
-                    new DescribeInsightRulesResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeInsightRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DescribeInsightRulesResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1050,7 +1098,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DisableAlarmActionsRequestMarshaller().marshall(super.beforeMarshalling(disableAlarmActionsRequest));
+                request = new DisableAlarmActionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(disableAlarmActionsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1064,9 +1112,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DisableAlarmActionsResult> responseHandler = new StaxResponseHandler<DisableAlarmActionsResult>(
-                    new DisableAlarmActionsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DisableAlarmActionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DisableAlarmActionsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1111,7 +1159,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new DisableInsightRulesRequestMarshaller().marshall(super.beforeMarshalling(disableInsightRulesRequest));
+                request = new DisableInsightRulesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(disableInsightRulesRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1125,9 +1173,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<DisableInsightRulesResult> responseHandler = new StaxResponseHandler<DisableInsightRulesResult>(
-                    new DisableInsightRulesResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<DisableInsightRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new DisableInsightRulesResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1167,7 +1215,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new EnableAlarmActionsRequestMarshaller().marshall(super.beforeMarshalling(enableAlarmActionsRequest));
+                request = new EnableAlarmActionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(enableAlarmActionsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1181,9 +1229,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<EnableAlarmActionsResult> responseHandler = new StaxResponseHandler<EnableAlarmActionsResult>(
-                    new EnableAlarmActionsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<EnableAlarmActionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new EnableAlarmActionsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1230,7 +1278,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new EnableInsightRulesRequestMarshaller().marshall(super.beforeMarshalling(enableInsightRulesRequest));
+                request = new EnableInsightRulesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(enableInsightRulesRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1244,9 +1292,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<EnableInsightRulesResult> responseHandler = new StaxResponseHandler<EnableInsightRulesResult>(
-                    new EnableInsightRulesResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<EnableInsightRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new EnableInsightRulesResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1297,7 +1345,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new GetDashboardRequestMarshaller().marshall(super.beforeMarshalling(getDashboardRequest));
+                request = new GetDashboardRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDashboardRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1311,8 +1359,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<GetDashboardResult> responseHandler = new StaxResponseHandler<GetDashboardResult>(new GetDashboardResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<GetDashboardResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new GetDashboardResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1410,7 +1459,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new GetInsightRuleReportRequestMarshaller().marshall(super.beforeMarshalling(getInsightRuleReportRequest));
+                request = new GetInsightRuleReportRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getInsightRuleReportRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1424,9 +1473,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<GetInsightRuleReportResult> responseHandler = new StaxResponseHandler<GetInsightRuleReportResult>(
-                    new GetInsightRuleReportResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<GetInsightRuleReportResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new GetInsightRuleReportResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1539,7 +1588,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new GetMetricDataRequestMarshaller().marshall(super.beforeMarshalling(getMetricDataRequest));
+                request = new GetMetricDataRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getMetricDataRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1553,8 +1602,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<GetMetricDataResult> responseHandler = new StaxResponseHandler<GetMetricDataResult>(new GetMetricDataResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<GetMetricDataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new GetMetricDataResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1674,7 +1724,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new GetMetricStatisticsRequestMarshaller().marshall(super.beforeMarshalling(getMetricStatisticsRequest));
+                request = new GetMetricStatisticsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getMetricStatisticsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1688,9 +1738,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<GetMetricStatisticsResult> responseHandler = new StaxResponseHandler<GetMetricStatisticsResult>(
-                    new GetMetricStatisticsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<GetMetricStatisticsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new GetMetricStatisticsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1740,7 +1790,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new GetMetricStreamRequestMarshaller().marshall(super.beforeMarshalling(getMetricStreamRequest));
+                request = new GetMetricStreamRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getMetricStreamRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1754,9 +1804,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<GetMetricStreamResult> responseHandler = new StaxResponseHandler<GetMetricStreamResult>(
-                    new GetMetricStreamResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<GetMetricStreamResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new GetMetricStreamResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1819,7 +1869,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new GetMetricWidgetImageRequestMarshaller().marshall(super.beforeMarshalling(getMetricWidgetImageRequest));
+                request = new GetMetricWidgetImageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getMetricWidgetImageRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1833,9 +1883,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<GetMetricWidgetImageResult> responseHandler = new StaxResponseHandler<GetMetricWidgetImageResult>(
-                    new GetMetricWidgetImageResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<GetMetricWidgetImageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new GetMetricWidgetImageResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1885,7 +1935,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new ListDashboardsRequestMarshaller().marshall(super.beforeMarshalling(listDashboardsRequest));
+                request = new ListDashboardsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listDashboardsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1899,9 +1949,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<ListDashboardsResult> responseHandler = new StaxResponseHandler<ListDashboardsResult>(
-                    new ListDashboardsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<ListDashboardsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new ListDashboardsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1947,7 +1997,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new ListManagedInsightRulesRequestMarshaller().marshall(super.beforeMarshalling(listManagedInsightRulesRequest));
+                request = new ListManagedInsightRulesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listManagedInsightRulesRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -1961,9 +2012,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<ListManagedInsightRulesResult> responseHandler = new StaxResponseHandler<ListManagedInsightRulesResult>(
-                    new ListManagedInsightRulesResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<ListManagedInsightRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new ListManagedInsightRulesResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2011,7 +2062,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new ListMetricStreamsRequestMarshaller().marshall(super.beforeMarshalling(listMetricStreamsRequest));
+                request = new ListMetricStreamsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listMetricStreamsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2025,9 +2076,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<ListMetricStreamsResult> responseHandler = new StaxResponseHandler<ListMetricStreamsResult>(
-                    new ListMetricStreamsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<ListMetricStreamsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new ListMetricStreamsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2098,7 +2149,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new ListMetricsRequestMarshaller().marshall(super.beforeMarshalling(listMetricsRequest));
+                request = new ListMetricsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listMetricsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2112,8 +2163,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<ListMetricsResult> responseHandler = new StaxResponseHandler<ListMetricsResult>(new ListMetricsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<ListMetricsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new ListMetricsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2165,7 +2217,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new ListTagsForResourceRequestMarshaller().marshall(super.beforeMarshalling(listTagsForResourceRequest));
+                request = new ListTagsForResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listTagsForResourceRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2179,9 +2231,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<ListTagsForResourceResult> responseHandler = new StaxResponseHandler<ListTagsForResourceResult>(
-                    new ListTagsForResourceResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new ListTagsForResourceResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2242,7 +2294,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new PutAnomalyDetectorRequestMarshaller().marshall(super.beforeMarshalling(putAnomalyDetectorRequest));
+                request = new PutAnomalyDetectorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putAnomalyDetectorRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2256,9 +2308,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<PutAnomalyDetectorResult> responseHandler = new StaxResponseHandler<PutAnomalyDetectorResult>(
-                    new PutAnomalyDetectorResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<PutAnomalyDetectorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new PutAnomalyDetectorResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2372,7 +2424,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new PutCompositeAlarmRequestMarshaller().marshall(super.beforeMarshalling(putCompositeAlarmRequest));
+                request = new PutCompositeAlarmRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putCompositeAlarmRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2386,9 +2438,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<PutCompositeAlarmResult> responseHandler = new StaxResponseHandler<PutCompositeAlarmResult>(
-                    new PutCompositeAlarmResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<PutCompositeAlarmResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new PutCompositeAlarmResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2427,6 +2479,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      *         Some part of the dashboard data is invalid.
      * @throws InternalServiceException
      *         Request processing has failed due to some unknown error, exception, or failure.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
      * @sample AmazonCloudWatch.PutDashboard
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutDashboard" target="_top">AWS API
      *      Documentation</a>
@@ -2449,7 +2503,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new PutDashboardRequestMarshaller().marshall(super.beforeMarshalling(putDashboardRequest));
+                request = new PutDashboardRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putDashboardRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2463,8 +2517,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<PutDashboardResult> responseHandler = new StaxResponseHandler<PutDashboardResult>(new PutDashboardResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<PutDashboardResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new PutDashboardResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2517,7 +2572,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new PutInsightRuleRequestMarshaller().marshall(super.beforeMarshalling(putInsightRuleRequest));
+                request = new PutInsightRuleRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putInsightRuleRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2531,9 +2586,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<PutInsightRuleResult> responseHandler = new StaxResponseHandler<PutInsightRuleResult>(
-                    new PutInsightRuleResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<PutInsightRuleResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new PutInsightRuleResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2582,7 +2637,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new PutManagedInsightRulesRequestMarshaller().marshall(super.beforeMarshalling(putManagedInsightRulesRequest));
+                request = new PutManagedInsightRulesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putManagedInsightRulesRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2596,9 +2651,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<PutManagedInsightRulesResult> responseHandler = new StaxResponseHandler<PutManagedInsightRulesResult>(
-                    new PutManagedInsightRulesResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<PutManagedInsightRulesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new PutManagedInsightRulesResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2712,7 +2767,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new PutMetricAlarmRequestMarshaller().marshall(super.beforeMarshalling(putMetricAlarmRequest));
+                request = new PutMetricAlarmRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putMetricAlarmRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2726,9 +2781,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<PutMetricAlarmResult> responseHandler = new StaxResponseHandler<PutMetricAlarmResult>(
-                    new PutMetricAlarmResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<PutMetricAlarmResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new PutMetricAlarmResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2741,21 +2796,28 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified
-     * metric. If the specified metric does not exist, CloudWatch creates the metric. When CloudWatch creates a metric,
-     * it can take up to fifteen minutes for the metric to appear in calls to <a
+     * Publishes metric data to Amazon CloudWatch. CloudWatch associates the data with the specified metric. If the
+     * specified metric does not exist, CloudWatch creates the metric. When CloudWatch creates a metric, it can take up
+     * to fifteen minutes for the metric to appear in calls to <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
      * <p>
-     * You can publish either individual data points in the <code>Value</code> field, or arrays of values and the number
-     * of times each value occurred during the period by using the <code>Values</code> and <code>Counts</code> fields in
+     * You can publish metrics with associated entity data (so that related telemetry can be found and viewed together),
+     * or publish metric data by itself. To send entity data with your metrics, use the <code>EntityMetricData</code>
+     * parameter. To send metrics without entity data, use the <code>MetricData</code> parameter. The
+     * <code>EntityMetricData</code> structure includes <code>MetricData</code> structures for the metric data.
+     * </p>
+     * <p>
+     * You can publish either individual values in the <code>Value</code> field, or arrays of values and the number of
+     * times each value occurred during the period by using the <code>Values</code> and <code>Counts</code> fields in
      * the <code>MetricData</code> structure. Using the <code>Values</code> and <code>Counts</code> method enables you
      * to publish up to 150 values per metric with one <code>PutMetricData</code> request, and supports retrieving
      * percentile statistics on this data.
      * </p>
      * <p>
      * Each <code>PutMetricData</code> request is limited to 1 MB in size for HTTP POST requests. You can send a payload
-     * compressed by gzip. Each request is also limited to no more than 1000 different metrics.
+     * compressed by gzip. Each request is also limited to no more than 1000 different metrics (across both the
+     * <code>MetricData</code> and <code>EntityMetricData</code> properties).
      * </p>
      * <p>
      * Although the <code>Value</code> parameter accepts numbers of type <code>Double</code>, CloudWatch rejects values
@@ -2777,7 +2839,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a>
      * or <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">
      * GetMetricStatistics</a> from the time they are submitted. Data points with time stamps between 3 and 24 hours ago
-     * can take as much as 2 hours to become available for for <a
+     * can take as much as 2 hours to become available for <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a>
      * or <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">
      * GetMetricStatistics</a>.
@@ -2833,7 +2895,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new PutMetricDataRequestMarshaller().marshall(super.beforeMarshalling(putMetricDataRequest));
+                request = new PutMetricDataRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putMetricDataRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2847,8 +2909,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<PutMetricDataResult> responseHandler = new StaxResponseHandler<PutMetricDataResult>(new PutMetricDataResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<PutMetricDataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new PutMetricDataResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2947,7 +3010,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new PutMetricStreamRequestMarshaller().marshall(super.beforeMarshalling(putMetricStreamRequest));
+                request = new PutMetricStreamRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putMetricStreamRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -2961,9 +3024,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<PutMetricStreamResult> responseHandler = new StaxResponseHandler<PutMetricStreamResult>(
-                    new PutMetricStreamResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<PutMetricStreamResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new PutMetricStreamResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3026,7 +3089,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new SetAlarmStateRequestMarshaller().marshall(super.beforeMarshalling(setAlarmStateRequest));
+                request = new SetAlarmStateRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(setAlarmStateRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -3040,8 +3103,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<SetAlarmStateResult> responseHandler = new StaxResponseHandler<SetAlarmStateResult>(new SetAlarmStateResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<SetAlarmStateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new SetAlarmStateResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3087,7 +3151,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new StartMetricStreamsRequestMarshaller().marshall(super.beforeMarshalling(startMetricStreamsRequest));
+                request = new StartMetricStreamsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startMetricStreamsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -3101,9 +3165,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<StartMetricStreamsResult> responseHandler = new StaxResponseHandler<StartMetricStreamsResult>(
-                    new StartMetricStreamsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<StartMetricStreamsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new StartMetricStreamsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3149,7 +3213,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new StopMetricStreamsRequestMarshaller().marshall(super.beforeMarshalling(stopMetricStreamsRequest));
+                request = new StopMetricStreamsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopMetricStreamsRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -3163,9 +3227,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<StopMetricStreamsResult> responseHandler = new StaxResponseHandler<StopMetricStreamsResult>(
-                    new StopMetricStreamsResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<StopMetricStreamsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new StopMetricStreamsResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3209,6 +3273,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      *         More than one process tried to modify a resource at the same time.
      * @throws InternalServiceException
      *         Request processing has failed due to some unknown error, exception, or failure.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
      * @sample AmazonCloudWatch.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -3231,7 +3297,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new TagResourceRequestMarshaller().marshall(super.beforeMarshalling(tagResourceRequest));
+                request = new TagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(tagResourceRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -3245,8 +3311,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<TagResourceResult> responseHandler = new StaxResponseHandler<TagResourceResult>(new TagResourceResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<TagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new TagResourceResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3272,6 +3339,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      *         More than one process tried to modify a resource at the same time.
      * @throws InternalServiceException
      *         Request processing has failed due to some unknown error, exception, or failure.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
      * @sample AmazonCloudWatch.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/UntagResource" target="_top">AWS API
      *      Documentation</a>
@@ -3294,7 +3363,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
         try {
             awsRequestMetrics.startEvent(Field.RequestMarshallTime);
             try {
-                request = new UntagResourceRequestMarshaller().marshall(super.beforeMarshalling(untagResourceRequest));
+                request = new UntagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(untagResourceRequest));
                 // Binds the request metrics to the current request.
                 request.setAWSRequestMetrics(awsRequestMetrics);
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
@@ -3308,8 +3377,9 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
-            StaxResponseHandler<UntagResourceResult> responseHandler = new StaxResponseHandler<UntagResourceResult>(new UntagResourceResultStaxUnmarshaller());
-
+            HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new RpcV2CborOperationMetadata().withPayloadRpcV2Cbor(true).withHasStreamingSuccessResponse(false),
+                    new UntagResourceResultRpcV2CborUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3386,7 +3456,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
 
         request.setTimeOffset(timeOffset);
 
-        DefaultErrorResponseHandler errorResponseHandler = new DefaultErrorResponseHandler(exceptionUnmarshallersMap, defaultUnmarshaller);
+        HttpResponseHandler<AmazonServiceException> errorResponseHandler = protocolFactory.createErrorResponseHandler(new RpcV2CborErrorResponseMetadata()
+                .withAwsQueryCompatible(true));
 
         return client.execute(request, responseHandler, errorResponseHandler, executionContext);
     }

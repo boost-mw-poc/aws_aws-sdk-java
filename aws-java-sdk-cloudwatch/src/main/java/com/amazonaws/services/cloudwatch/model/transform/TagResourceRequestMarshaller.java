@@ -12,58 +12,50 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * TagResourceRequest Marshaller
+ * TagResourceRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class TagResourceRequestMarshaller implements Marshaller<Request<TagResourceRequest>, TagResourceRequest> {
+@SdkInternalApi
+public class TagResourceRequestMarshaller {
 
-    public Request<TagResourceRequest> marshall(TagResourceRequest tagResourceRequest) {
+    private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceARN").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
+
+    private static final TagResourceRequestMarshaller instance = new TagResourceRequestMarshaller();
+
+    public static TagResourceRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(TagResourceRequest tagResourceRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (tagResourceRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<TagResourceRequest> request = new DefaultRequest<TagResourceRequest>(tagResourceRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "TagResource");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (tagResourceRequest.getResourceARN() != null) {
-            request.addParameter("ResourceARN", StringUtils.fromString(tagResourceRequest.getResourceARN()));
-        }
-
-        if (!tagResourceRequest.getTags().isEmpty() || !((com.amazonaws.internal.SdkInternalList<Tag>) tagResourceRequest.getTags()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<Tag> tagsList = (com.amazonaws.internal.SdkInternalList<Tag>) tagResourceRequest.getTags();
-            int tagsListIndex = 1;
-
-            for (Tag tagsListValue : tagsList) {
-                if (tagsListValue != null) {
-
-                    if (tagsListValue.getKey() != null) {
-                        request.addParameter("Tags.member." + tagsListIndex + ".Key", StringUtils.fromString(tagsListValue.getKey()));
-                    }
-
-                    if (tagsListValue.getValue() != null) {
-                        request.addParameter("Tags.member." + tagsListIndex + ".Value", StringUtils.fromString(tagsListValue.getValue()));
-                    }
-                }
-                tagsListIndex++;
+        try {
+            protocolMarshaller.marshall(tagResourceRequest.getResourceARN(), RESOURCEARN_BINDING);
+            if (tagResourceRequest.getTags() != null && !tagResourceRequest.getTags().isEmpty()) {
+                protocolMarshaller.marshall(tagResourceRequest.getTags(), TAGS_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

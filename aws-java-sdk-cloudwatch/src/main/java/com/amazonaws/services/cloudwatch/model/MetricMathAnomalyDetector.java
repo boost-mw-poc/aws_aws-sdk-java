@@ -14,6 +14,8 @@ package com.amazonaws.services.cloudwatch.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
+import com.amazonaws.protocol.StructuredPojo;
+import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
@@ -25,7 +27,7 @@ import javax.annotation.Generated;
  *      target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class MetricMathAnomalyDetector implements Serializable, Cloneable {
+public class MetricMathAnomalyDetector implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
@@ -209,4 +211,9 @@ public class MetricMathAnomalyDetector implements Serializable, Cloneable {
         }
     }
 
+    @com.amazonaws.annotation.SdkInternalApi
+    @Override
+    public void marshall(ProtocolMarshaller protocolMarshaller) {
+        com.amazonaws.services.cloudwatch.model.transform.MetricMathAnomalyDetectorMarshaller.getInstance().marshall(this, protocolMarshaller);
+    }
 }

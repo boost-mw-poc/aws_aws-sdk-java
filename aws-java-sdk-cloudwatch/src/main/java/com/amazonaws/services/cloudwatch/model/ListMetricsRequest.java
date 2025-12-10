@@ -39,7 +39,8 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String metricName;
     /**
      * <p>
-     * The dimensions to filter against. Only the dimensions that match exactly will be returned.
+     * The dimensions to filter against. Only the dimension with names that match exactly will be returned. If you
+     * specify one dimension name and a metric has that dimension and also other dimensions, it will be returned.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<DimensionFilter> dimensions;
@@ -56,7 +57,7 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * The results that are returned are an approximation of the value you specify. There is a low probability that the
-     * returned results include metrics with last published data as much as 40 minutes more than the specified time
+     * returned results include metrics with last published data as much as 50 minutes more than the specified time
      * interval.
      * </p>
      */
@@ -163,10 +164,13 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The dimensions to filter against. Only the dimensions that match exactly will be returned.
+     * The dimensions to filter against. Only the dimension with names that match exactly will be returned. If you
+     * specify one dimension name and a metric has that dimension and also other dimensions, it will be returned.
      * </p>
      * 
-     * @return The dimensions to filter against. Only the dimensions that match exactly will be returned.
+     * @return The dimensions to filter against. Only the dimension with names that match exactly will be returned. If
+     *         you specify one dimension name and a metric has that dimension and also other dimensions, it will be
+     *         returned.
      */
 
     public java.util.List<DimensionFilter> getDimensions() {
@@ -178,11 +182,14 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The dimensions to filter against. Only the dimensions that match exactly will be returned.
+     * The dimensions to filter against. Only the dimension with names that match exactly will be returned. If you
+     * specify one dimension name and a metric has that dimension and also other dimensions, it will be returned.
      * </p>
      * 
      * @param dimensions
-     *        The dimensions to filter against. Only the dimensions that match exactly will be returned.
+     *        The dimensions to filter against. Only the dimension with names that match exactly will be returned. If
+     *        you specify one dimension name and a metric has that dimension and also other dimensions, it will be
+     *        returned.
      */
 
     public void setDimensions(java.util.Collection<DimensionFilter> dimensions) {
@@ -196,7 +203,8 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The dimensions to filter against. Only the dimensions that match exactly will be returned.
+     * The dimensions to filter against. Only the dimension with names that match exactly will be returned. If you
+     * specify one dimension name and a metric has that dimension and also other dimensions, it will be returned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -205,7 +213,9 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param dimensions
-     *        The dimensions to filter against. Only the dimensions that match exactly will be returned.
+     *        The dimensions to filter against. Only the dimension with names that match exactly will be returned. If
+     *        you specify one dimension name and a metric has that dimension and also other dimensions, it will be
+     *        returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,11 +231,14 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The dimensions to filter against. Only the dimensions that match exactly will be returned.
+     * The dimensions to filter against. Only the dimension with names that match exactly will be returned. If you
+     * specify one dimension name and a metric has that dimension and also other dimensions, it will be returned.
      * </p>
      * 
      * @param dimensions
-     *        The dimensions to filter against. Only the dimensions that match exactly will be returned.
+     *        The dimensions to filter against. Only the dimension with names that match exactly will be returned. If
+     *        you specify one dimension name and a metric has that dimension and also other dimensions, it will be
+     *        returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -281,7 +294,7 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * The results that are returned are an approximation of the value you specify. There is a low probability that the
-     * returned results include metrics with last published data as much as 40 minutes more than the specified time
+     * returned results include metrics with last published data as much as 50 minutes more than the specified time
      * interval.
      * </p>
      * 
@@ -291,7 +304,7 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        parameter.</p>
      *        <p>
      *        The results that are returned are an approximation of the value you specify. There is a low probability
-     *        that the returned results include metrics with last published data as much as 40 minutes more than the
+     *        that the returned results include metrics with last published data as much as 50 minutes more than the
      *        specified time interval.
      * @see RecentlyActive
      */
@@ -307,7 +320,7 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * The results that are returned are an approximation of the value you specify. There is a low probability that the
-     * returned results include metrics with last published data as much as 40 minutes more than the specified time
+     * returned results include metrics with last published data as much as 50 minutes more than the specified time
      * interval.
      * </p>
      * 
@@ -316,7 +329,7 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         parameter.</p>
      *         <p>
      *         The results that are returned are an approximation of the value you specify. There is a low probability
-     *         that the returned results include metrics with last published data as much as 40 minutes more than the
+     *         that the returned results include metrics with last published data as much as 50 minutes more than the
      *         specified time interval.
      * @see RecentlyActive
      */
@@ -332,7 +345,7 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * The results that are returned are an approximation of the value you specify. There is a low probability that the
-     * returned results include metrics with last published data as much as 40 minutes more than the specified time
+     * returned results include metrics with last published data as much as 50 minutes more than the specified time
      * interval.
      * </p>
      * 
@@ -342,7 +355,7 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        parameter.</p>
      *        <p>
      *        The results that are returned are an approximation of the value you specify. There is a low probability
-     *        that the returned results include metrics with last published data as much as 40 minutes more than the
+     *        that the returned results include metrics with last published data as much as 50 minutes more than the
      *        specified time interval.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecentlyActive
@@ -360,7 +373,7 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * The results that are returned are an approximation of the value you specify. There is a low probability that the
-     * returned results include metrics with last published data as much as 40 minutes more than the specified time
+     * returned results include metrics with last published data as much as 50 minutes more than the specified time
      * interval.
      * </p>
      * 
@@ -370,7 +383,7 @@ public class ListMetricsRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        parameter.</p>
      *        <p>
      *        The results that are returned are an approximation of the value you specify. There is a low probability
-     *        that the returned results include metrics with last published data as much as 40 minutes more than the
+     *        that the returned results include metrics with last published data as much as 50 minutes more than the
      *        specified time interval.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecentlyActive

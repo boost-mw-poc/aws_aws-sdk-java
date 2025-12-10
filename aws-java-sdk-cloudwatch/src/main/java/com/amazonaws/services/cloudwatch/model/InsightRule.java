@@ -14,6 +14,8 @@ package com.amazonaws.services.cloudwatch.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
+import com.amazonaws.protocol.StructuredPojo;
+import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
@@ -26,7 +28,7 @@ import javax.annotation.Generated;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class InsightRule implements Serializable, Cloneable {
+public class InsightRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
@@ -63,6 +65,14 @@ public class InsightRule implements Serializable, Cloneable {
      * </p>
      */
     private Boolean managedRule;
+    /**
+     * <p>
+     * Displays whether the rule is evaluated on the transformed versions of logs, for log groups that have <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a> enabled. If this is <code>false</code>, log events are evaluated before they are transformed.
+     * </p>
+     */
+    private Boolean applyOnTransformedLogs;
 
     /**
      * <p>
@@ -307,6 +317,78 @@ public class InsightRule implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Displays whether the rule is evaluated on the transformed versions of logs, for log groups that have <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a> enabled. If this is <code>false</code>, log events are evaluated before they are transformed.
+     * </p>
+     * 
+     * @param applyOnTransformedLogs
+     *        Displays whether the rule is evaluated on the transformed versions of logs, for log groups that have <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     *        transformation</a> enabled. If this is <code>false</code>, log events are evaluated before they are
+     *        transformed.
+     */
+
+    public void setApplyOnTransformedLogs(Boolean applyOnTransformedLogs) {
+        this.applyOnTransformedLogs = applyOnTransformedLogs;
+    }
+
+    /**
+     * <p>
+     * Displays whether the rule is evaluated on the transformed versions of logs, for log groups that have <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a> enabled. If this is <code>false</code>, log events are evaluated before they are transformed.
+     * </p>
+     * 
+     * @return Displays whether the rule is evaluated on the transformed versions of logs, for log groups that have <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     *         transformation</a> enabled. If this is <code>false</code>, log events are evaluated before they are
+     *         transformed.
+     */
+
+    public Boolean getApplyOnTransformedLogs() {
+        return this.applyOnTransformedLogs;
+    }
+
+    /**
+     * <p>
+     * Displays whether the rule is evaluated on the transformed versions of logs, for log groups that have <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a> enabled. If this is <code>false</code>, log events are evaluated before they are transformed.
+     * </p>
+     * 
+     * @param applyOnTransformedLogs
+     *        Displays whether the rule is evaluated on the transformed versions of logs, for log groups that have <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     *        transformation</a> enabled. If this is <code>false</code>, log events are evaluated before they are
+     *        transformed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InsightRule withApplyOnTransformedLogs(Boolean applyOnTransformedLogs) {
+        setApplyOnTransformedLogs(applyOnTransformedLogs);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Displays whether the rule is evaluated on the transformed versions of logs, for log groups that have <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     * transformation</a> enabled. If this is <code>false</code>, log events are evaluated before they are transformed.
+     * </p>
+     * 
+     * @return Displays whether the rule is evaluated on the transformed versions of logs, for log groups that have <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch-Logs-Transformation.html">Log
+     *         transformation</a> enabled. If this is <code>false</code>, log events are evaluated before they are
+     *         transformed.
+     */
+
+    public Boolean isApplyOnTransformedLogs() {
+        return this.applyOnTransformedLogs;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -327,7 +409,9 @@ public class InsightRule implements Serializable, Cloneable {
         if (getDefinition() != null)
             sb.append("Definition: ").append(getDefinition()).append(",");
         if (getManagedRule() != null)
-            sb.append("ManagedRule: ").append(getManagedRule());
+            sb.append("ManagedRule: ").append(getManagedRule()).append(",");
+        if (getApplyOnTransformedLogs() != null)
+            sb.append("ApplyOnTransformedLogs: ").append(getApplyOnTransformedLogs());
         sb.append("}");
         return sb.toString();
     }
@@ -362,6 +446,10 @@ public class InsightRule implements Serializable, Cloneable {
             return false;
         if (other.getManagedRule() != null && other.getManagedRule().equals(this.getManagedRule()) == false)
             return false;
+        if (other.getApplyOnTransformedLogs() == null ^ this.getApplyOnTransformedLogs() == null)
+            return false;
+        if (other.getApplyOnTransformedLogs() != null && other.getApplyOnTransformedLogs().equals(this.getApplyOnTransformedLogs()) == false)
+            return false;
         return true;
     }
 
@@ -375,6 +463,7 @@ public class InsightRule implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getSchema() == null) ? 0 : getSchema().hashCode());
         hashCode = prime * hashCode + ((getDefinition() == null) ? 0 : getDefinition().hashCode());
         hashCode = prime * hashCode + ((getManagedRule() == null) ? 0 : getManagedRule().hashCode());
+        hashCode = prime * hashCode + ((getApplyOnTransformedLogs() == null) ? 0 : getApplyOnTransformedLogs().hashCode());
         return hashCode;
     }
 
@@ -387,4 +476,9 @@ public class InsightRule implements Serializable, Cloneable {
         }
     }
 
+    @com.amazonaws.annotation.SdkInternalApi
+    @Override
+    public void marshall(ProtocolMarshaller protocolMarshaller) {
+        com.amazonaws.services.cloudwatch.model.transform.InsightRuleMarshaller.getInstance().marshall(this, protocolMarshaller);
+    }
 }

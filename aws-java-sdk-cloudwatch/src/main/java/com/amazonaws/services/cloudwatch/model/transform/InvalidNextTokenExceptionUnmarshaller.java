@@ -12,32 +12,63 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
-import org.w3c.dom.Node;
+import java.math.*;
+
 import javax.annotation.Generated;
 
-import com.amazonaws.AmazonServiceException;
+import com.amazonaws.services.cloudwatch.model.*;
+import com.amazonaws.transform.rpcv2cbor.SimpleTypeRpcV2CborUnmarshallers.*;
+import com.amazonaws.transform.rpcv2cbor.*;
 
-import com.amazonaws.transform.StandardErrorUnmarshaller;
+import com.fasterxml.jackson.core.JsonToken;
+import static com.fasterxml.jackson.core.JsonToken.*;
 
-import com.amazonaws.services.cloudwatch.model.InvalidNextTokenException;
-
+/**
+ * InvalidNextTokenException CBOR Unmarshaller
+ */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class InvalidNextTokenExceptionUnmarshaller extends StandardErrorUnmarshaller {
-
-    public InvalidNextTokenExceptionUnmarshaller() {
-        super(InvalidNextTokenException.class);
+public class InvalidNextTokenExceptionUnmarshaller extends EnhancedRpcV2CborErrorUnmarshaller {
+    private InvalidNextTokenExceptionUnmarshaller() {
+        super(com.amazonaws.services.cloudwatch.model.InvalidNextTokenException.class, "InvalidNextToken");
     }
 
     @Override
-    public AmazonServiceException unmarshall(Node node) throws Exception {
-        // Bail out if this isn't the right error code that this
-        // marshaller understands
-        String errorCode = parseErrorCode(node);
-        if (errorCode == null || !errorCode.equals("InvalidNextToken"))
+    public com.amazonaws.services.cloudwatch.model.InvalidNextTokenException unmarshallFromContext(RpcV2CborUnmarshallerContext context) throws Exception {
+        com.amazonaws.services.cloudwatch.model.InvalidNextTokenException invalidNextTokenException = new com.amazonaws.services.cloudwatch.model.InvalidNextTokenException(
+                null);
+
+        int originalDepth = context.getCurrentDepth();
+        String currentParentElement = context.getCurrentParentElement();
+        int targetDepth = originalDepth + 1;
+
+        JsonToken token = context.getCurrentToken();
+        if (token == null)
+            token = context.nextToken();
+        if (token == VALUE_NULL) {
             return null;
+        }
 
-        InvalidNextTokenException e = (InvalidNextTokenException) super.unmarshall(node);
+        while (true) {
+            if (token == null)
+                break;
 
-        return e;
+            if (token == FIELD_NAME || token == START_OBJECT) {
+            } else if (token == END_ARRAY || token == END_OBJECT) {
+                if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
+                    if (context.getCurrentDepth() <= originalDepth)
+                        break;
+                }
+            }
+            token = context.nextToken();
+        }
+        return invalidNextTokenException;
+    }
+
+    private static InvalidNextTokenExceptionUnmarshaller instance;
+
+    public static InvalidNextTokenExceptionUnmarshaller getInstance() {
+        if (instance == null)
+            instance = new InvalidNextTokenExceptionUnmarshaller();
+        return instance;
     }
 }

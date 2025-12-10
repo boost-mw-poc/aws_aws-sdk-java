@@ -434,6 +434,39 @@ public class AmazonCloudWatchAsyncClient extends AmazonCloudWatchClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAlarmContributorsResult> describeAlarmContributorsAsync(DescribeAlarmContributorsRequest request) {
+
+        return describeAlarmContributorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAlarmContributorsResult> describeAlarmContributorsAsync(final DescribeAlarmContributorsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeAlarmContributorsRequest, DescribeAlarmContributorsResult> asyncHandler) {
+        final DescribeAlarmContributorsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeAlarmContributorsResult>() {
+            @Override
+            public DescribeAlarmContributorsResult call() throws Exception {
+                DescribeAlarmContributorsResult result = null;
+
+                try {
+                    result = executeDescribeAlarmContributors(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAlarmHistoryResult> describeAlarmHistoryAsync(DescribeAlarmHistoryRequest request) {
 
         return describeAlarmHistoryAsync(request, null);

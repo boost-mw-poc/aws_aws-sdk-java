@@ -114,10 +114,11 @@ public interface AmazonCloudWatch {
      * one operation, but you can't delete two composite alarms with one operation.
      * </p>
      * <p>
-     * If you specify an incorrect alarm name or make any other error in the operation, no alarms are deleted. To
-     * confirm that alarms were deleted successfully, you can use the <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeAlarms.html"
-     * >DescribeAlarms</a> operation after using <code>DeleteAlarms</code>.
+     * If you specify any incorrect alarm names, the alarms you specify with correct names are still deleted. Other
+     * syntax errors might result in no alarms being deleted. To confirm that alarms were deleted successfully, you can
+     * use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeAlarms.html">DescribeAlarms
+     * </a> operation after using <code>DeleteAlarms</code>.
      * </p>
      * <note>
      * <p>
@@ -186,6 +187,8 @@ public interface AmazonCloudWatch {
      *         The specified dashboard does not exist.
      * @throws InternalServiceException
      *         Request processing has failed due to some unknown error, exception, or failure.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
      * @sample AmazonCloudWatch.DeleteDashboards
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DeleteDashboards" target="_top">AWS
      *      API Documentation</a>
@@ -231,6 +234,24 @@ public interface AmazonCloudWatch {
      *      API Documentation</a>
      */
     DeleteMetricStreamResult deleteMetricStream(DeleteMetricStreamRequest deleteMetricStreamRequest);
+
+    /**
+     * <p>
+     * Returns the information of the current alarm contributors that are in <code>ALARM</code> state. This operation
+     * returns details about the individual time series that contribute to the alarm's state.
+     * </p>
+     * 
+     * @param describeAlarmContributorsRequest
+     * @return Result of the DescribeAlarmContributors operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The next token specified is invalid.
+     * @throws ResourceNotFoundException
+     *         The named resource does not exist.
+     * @sample AmazonCloudWatch.DescribeAlarmContributors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DescribeAlarmContributors"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeAlarmContributorsResult describeAlarmContributors(DescribeAlarmContributorsRequest describeAlarmContributorsRequest);
 
     /**
      * <p>
@@ -1035,6 +1056,8 @@ public interface AmazonCloudWatch {
      *         Some part of the dashboard data is invalid.
      * @throws InternalServiceException
      *         Request processing has failed due to some unknown error, exception, or failure.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
      * @sample AmazonCloudWatch.PutDashboard
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutDashboard" target="_top">AWS API
      *      Documentation</a>
@@ -1178,21 +1201,28 @@ public interface AmazonCloudWatch {
 
     /**
      * <p>
-     * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified
-     * metric. If the specified metric does not exist, CloudWatch creates the metric. When CloudWatch creates a metric,
-     * it can take up to fifteen minutes for the metric to appear in calls to <a
+     * Publishes metric data to Amazon CloudWatch. CloudWatch associates the data with the specified metric. If the
+     * specified metric does not exist, CloudWatch creates the metric. When CloudWatch creates a metric, it can take up
+     * to fifteen minutes for the metric to appear in calls to <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>.
      * </p>
      * <p>
-     * You can publish either individual data points in the <code>Value</code> field, or arrays of values and the number
-     * of times each value occurred during the period by using the <code>Values</code> and <code>Counts</code> fields in
+     * You can publish metrics with associated entity data (so that related telemetry can be found and viewed together),
+     * or publish metric data by itself. To send entity data with your metrics, use the <code>EntityMetricData</code>
+     * parameter. To send metrics without entity data, use the <code>MetricData</code> parameter. The
+     * <code>EntityMetricData</code> structure includes <code>MetricData</code> structures for the metric data.
+     * </p>
+     * <p>
+     * You can publish either individual values in the <code>Value</code> field, or arrays of values and the number of
+     * times each value occurred during the period by using the <code>Values</code> and <code>Counts</code> fields in
      * the <code>MetricData</code> structure. Using the <code>Values</code> and <code>Counts</code> method enables you
      * to publish up to 150 values per metric with one <code>PutMetricData</code> request, and supports retrieving
      * percentile statistics on this data.
      * </p>
      * <p>
      * Each <code>PutMetricData</code> request is limited to 1 MB in size for HTTP POST requests. You can send a payload
-     * compressed by gzip. Each request is also limited to no more than 1000 different metrics.
+     * compressed by gzip. Each request is also limited to no more than 1000 different metrics (across both the
+     * <code>MetricData</code> and <code>EntityMetricData</code> properties).
      * </p>
      * <p>
      * Although the <code>Value</code> parameter accepts numbers of type <code>Double</code>, CloudWatch rejects values
@@ -1214,7 +1244,7 @@ public interface AmazonCloudWatch {
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a>
      * or <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">
      * GetMetricStatistics</a> from the time they are submitted. Data points with time stamps between 3 and 24 hours ago
-     * can take as much as 2 hours to become available for for <a
+     * can take as much as 2 hours to become available for <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a>
      * or <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">
      * GetMetricStatistics</a>.
@@ -1433,6 +1463,8 @@ public interface AmazonCloudWatch {
      *         More than one process tried to modify a resource at the same time.
      * @throws InternalServiceException
      *         Request processing has failed due to some unknown error, exception, or failure.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
      * @sample AmazonCloudWatch.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -1454,6 +1486,8 @@ public interface AmazonCloudWatch {
      *         More than one process tried to modify a resource at the same time.
      * @throws InternalServiceException
      *         Request processing has failed due to some unknown error, exception, or failure.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
      * @sample AmazonCloudWatch.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/UntagResource" target="_top">AWS API
      *      Documentation</a>

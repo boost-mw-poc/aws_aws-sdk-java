@@ -15,36 +15,41 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * ListTagsForResourceRequest Marshaller
+ * ListTagsForResourceRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListTagsForResourceRequestMarshaller implements Marshaller<Request<ListTagsForResourceRequest>, ListTagsForResourceRequest> {
+@SdkInternalApi
+public class ListTagsForResourceRequestMarshaller {
 
-    public Request<ListTagsForResourceRequest> marshall(ListTagsForResourceRequest listTagsForResourceRequest) {
+    private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceARN").build();
+
+    private static final ListTagsForResourceRequestMarshaller instance = new ListTagsForResourceRequestMarshaller();
+
+    public static ListTagsForResourceRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(ListTagsForResourceRequest listTagsForResourceRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (listTagsForResourceRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<ListTagsForResourceRequest> request = new DefaultRequest<ListTagsForResourceRequest>(listTagsForResourceRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "ListTagsForResource");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (listTagsForResourceRequest.getResourceARN() != null) {
-            request.addParameter("ResourceARN", StringUtils.fromString(listTagsForResourceRequest.getResourceARN()));
+        try {
+            protocolMarshaller.marshall(listTagsForResourceRequest.getResourceARN(), RESOURCEARN_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

@@ -14,6 +14,8 @@ package com.amazonaws.services.cloudwatch.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
+import com.amazonaws.protocol.StructuredPojo;
+import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
@@ -51,7 +53,7 @@ import javax.annotation.Generated;
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class MetricDataQuery implements Serializable, Cloneable {
+public class MetricDataQuery implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
@@ -123,7 +125,7 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * <p>
      * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as
      * short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at
-     * intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a <code>PutMetricData</code> operation that includes a
      * <code>StorageResolution of 1 second</code>.
      * </p>
@@ -581,7 +583,7 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * <p>
      * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as
      * short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at
-     * intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a <code>PutMetricData</code> operation that includes a
      * <code>StorageResolution of 1 second</code>.
      * </p>
@@ -589,9 +591,9 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * @param period
      *        The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period
      *        can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that
-     *        are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of
-     *        60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> operation that
-     *        includes a <code>StorageResolution of 1 second</code>.
+     *        are collected at intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any
+     *        multiple of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> operation
+     *        that includes a <code>StorageResolution of 1 second</code>.
      */
 
     public void setPeriod(Integer period) {
@@ -602,16 +604,16 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * <p>
      * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as
      * short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at
-     * intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a <code>PutMetricData</code> operation that includes a
      * <code>StorageResolution of 1 second</code>.
      * </p>
      * 
      * @return The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period
      *         can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that
-     *         are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple
-     *         of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> operation that
-     *         includes a <code>StorageResolution of 1 second</code>.
+     *         are collected at intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any
+     *         multiple of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code>
+     *         operation that includes a <code>StorageResolution of 1 second</code>.
      */
 
     public Integer getPeriod() {
@@ -622,7 +624,7 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * <p>
      * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as
      * short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at
-     * intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a <code>PutMetricData</code> operation that includes a
      * <code>StorageResolution of 1 second</code>.
      * </p>
@@ -630,9 +632,9 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * @param period
      *        The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period
      *        can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that
-     *        are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of
-     *        60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> operation that
-     *        includes a <code>StorageResolution of 1 second</code>.
+     *        are collected at intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any
+     *        multiple of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> operation
+     *        that includes a <code>StorageResolution of 1 second</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -821,4 +823,9 @@ public class MetricDataQuery implements Serializable, Cloneable {
         }
     }
 
+    @com.amazonaws.annotation.SdkInternalApi
+    @Override
+    public void marshall(ProtocolMarshaller protocolMarshaller) {
+        com.amazonaws.services.cloudwatch.model.transform.MetricDataQueryMarshaller.getInstance().marshall(this, protocolMarshaller);
+    }
 }

@@ -15,36 +15,41 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * GetMetricStreamRequest Marshaller
+ * GetMetricStreamRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class GetMetricStreamRequestMarshaller implements Marshaller<Request<GetMetricStreamRequest>, GetMetricStreamRequest> {
+@SdkInternalApi
+public class GetMetricStreamRequestMarshaller {
 
-    public Request<GetMetricStreamRequest> marshall(GetMetricStreamRequest getMetricStreamRequest) {
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Name").build();
+
+    private static final GetMetricStreamRequestMarshaller instance = new GetMetricStreamRequestMarshaller();
+
+    public static GetMetricStreamRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(GetMetricStreamRequest getMetricStreamRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (getMetricStreamRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<GetMetricStreamRequest> request = new DefaultRequest<GetMetricStreamRequest>(getMetricStreamRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "GetMetricStream");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (getMetricStreamRequest.getName() != null) {
-            request.addParameter("Name", StringUtils.fromString(getMetricStreamRequest.getName()));
+        try {
+            protocolMarshaller.marshall(getMetricStreamRequest.getName(), NAME_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

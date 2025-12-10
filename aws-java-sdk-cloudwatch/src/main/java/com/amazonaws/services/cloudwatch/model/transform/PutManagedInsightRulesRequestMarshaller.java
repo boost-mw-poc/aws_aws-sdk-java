@@ -12,80 +12,47 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * PutManagedInsightRulesRequest Marshaller
+ * PutManagedInsightRulesRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class PutManagedInsightRulesRequestMarshaller implements Marshaller<Request<PutManagedInsightRulesRequest>, PutManagedInsightRulesRequest> {
+@SdkInternalApi
+public class PutManagedInsightRulesRequestMarshaller {
 
-    public Request<PutManagedInsightRulesRequest> marshall(PutManagedInsightRulesRequest putManagedInsightRulesRequest) {
+    private static final MarshallingInfo<List> MANAGEDRULES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ManagedRules").build();
+
+    private static final PutManagedInsightRulesRequestMarshaller instance = new PutManagedInsightRulesRequestMarshaller();
+
+    public static PutManagedInsightRulesRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(PutManagedInsightRulesRequest putManagedInsightRulesRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (putManagedInsightRulesRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<PutManagedInsightRulesRequest> request = new DefaultRequest<PutManagedInsightRulesRequest>(putManagedInsightRulesRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "PutManagedInsightRules");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (!putManagedInsightRulesRequest.getManagedRules().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<ManagedRule>) putManagedInsightRulesRequest.getManagedRules()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<ManagedRule> managedRulesList = (com.amazonaws.internal.SdkInternalList<ManagedRule>) putManagedInsightRulesRequest
-                    .getManagedRules();
-            int managedRulesListIndex = 1;
-
-            for (ManagedRule managedRulesListValue : managedRulesList) {
-                if (managedRulesListValue != null) {
-
-                    if (managedRulesListValue.getTemplateName() != null) {
-                        request.addParameter("ManagedRules.member." + managedRulesListIndex + ".TemplateName",
-                                StringUtils.fromString(managedRulesListValue.getTemplateName()));
-                    }
-
-                    if (managedRulesListValue.getResourceARN() != null) {
-                        request.addParameter("ManagedRules.member." + managedRulesListIndex + ".ResourceARN",
-                                StringUtils.fromString(managedRulesListValue.getResourceARN()));
-                    }
-
-                    if (!managedRulesListValue.getTags().isEmpty()
-                            || !((com.amazonaws.internal.SdkInternalList<Tag>) managedRulesListValue.getTags()).isAutoConstruct()) {
-                        com.amazonaws.internal.SdkInternalList<Tag> tagsList = (com.amazonaws.internal.SdkInternalList<Tag>) managedRulesListValue.getTags();
-                        int tagsListIndex = 1;
-
-                        for (Tag tagsListValue : tagsList) {
-                            if (tagsListValue != null) {
-
-                                if (tagsListValue.getKey() != null) {
-                                    request.addParameter("ManagedRules.member." + managedRulesListIndex + ".Tags.member." + tagsListIndex + ".Key",
-                                            StringUtils.fromString(tagsListValue.getKey()));
-                                }
-
-                                if (tagsListValue.getValue() != null) {
-                                    request.addParameter("ManagedRules.member." + managedRulesListIndex + ".Tags.member." + tagsListIndex + ".Value",
-                                            StringUtils.fromString(tagsListValue.getValue()));
-                                }
-                            }
-                            tagsListIndex++;
-                        }
-                    }
-                }
-                managedRulesListIndex++;
+        try {
+            if (putManagedInsightRulesRequest.getManagedRules() != null && !putManagedInsightRulesRequest.getManagedRules().isEmpty()) {
+                protocolMarshaller.marshall(putManagedInsightRulesRequest.getManagedRules(), MANAGEDRULES_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

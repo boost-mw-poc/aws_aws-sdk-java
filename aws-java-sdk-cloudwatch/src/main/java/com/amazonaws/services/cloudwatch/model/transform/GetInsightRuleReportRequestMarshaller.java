@@ -12,73 +12,65 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * GetInsightRuleReportRequest Marshaller
+ * GetInsightRuleReportRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class GetInsightRuleReportRequestMarshaller implements Marshaller<Request<GetInsightRuleReportRequest>, GetInsightRuleReportRequest> {
+@SdkInternalApi
+public class GetInsightRuleReportRequestMarshaller {
 
-    public Request<GetInsightRuleReportRequest> marshall(GetInsightRuleReportRequest getInsightRuleReportRequest) {
+    private static final MarshallingInfo<String> RULENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RuleName").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<Integer> PERIOD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Period").build();
+    private static final MarshallingInfo<Integer> MAXCONTRIBUTORCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxContributorCount").build();
+    private static final MarshallingInfo<List> METRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Metrics").build();
+    private static final MarshallingInfo<String> ORDERBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("OrderBy").build();
+
+    private static final GetInsightRuleReportRequestMarshaller instance = new GetInsightRuleReportRequestMarshaller();
+
+    public static GetInsightRuleReportRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(GetInsightRuleReportRequest getInsightRuleReportRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (getInsightRuleReportRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<GetInsightRuleReportRequest> request = new DefaultRequest<GetInsightRuleReportRequest>(getInsightRuleReportRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "GetInsightRuleReport");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (getInsightRuleReportRequest.getRuleName() != null) {
-            request.addParameter("RuleName", StringUtils.fromString(getInsightRuleReportRequest.getRuleName()));
-        }
-
-        if (getInsightRuleReportRequest.getStartTime() != null) {
-            request.addParameter("StartTime", StringUtils.fromDate(getInsightRuleReportRequest.getStartTime()));
-        }
-
-        if (getInsightRuleReportRequest.getEndTime() != null) {
-            request.addParameter("EndTime", StringUtils.fromDate(getInsightRuleReportRequest.getEndTime()));
-        }
-
-        if (getInsightRuleReportRequest.getPeriod() != null) {
-            request.addParameter("Period", StringUtils.fromInteger(getInsightRuleReportRequest.getPeriod()));
-        }
-
-        if (getInsightRuleReportRequest.getMaxContributorCount() != null) {
-            request.addParameter("MaxContributorCount", StringUtils.fromInteger(getInsightRuleReportRequest.getMaxContributorCount()));
-        }
-
-        if (!getInsightRuleReportRequest.getMetrics().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) getInsightRuleReportRequest.getMetrics()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> metricsList = (com.amazonaws.internal.SdkInternalList<String>) getInsightRuleReportRequest
-                    .getMetrics();
-            int metricsListIndex = 1;
-
-            for (String metricsListValue : metricsList) {
-                if (metricsListValue != null) {
-                    request.addParameter("Metrics.member." + metricsListIndex, StringUtils.fromString(metricsListValue));
-                }
-                metricsListIndex++;
+        try {
+            protocolMarshaller.marshall(getInsightRuleReportRequest.getRuleName(), RULENAME_BINDING);
+            protocolMarshaller.marshall(getInsightRuleReportRequest.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(getInsightRuleReportRequest.getEndTime(), ENDTIME_BINDING);
+            protocolMarshaller.marshall(getInsightRuleReportRequest.getPeriod(), PERIOD_BINDING);
+            protocolMarshaller.marshall(getInsightRuleReportRequest.getMaxContributorCount(), MAXCONTRIBUTORCOUNT_BINDING);
+            if (getInsightRuleReportRequest.getMetrics() != null && !getInsightRuleReportRequest.getMetrics().isEmpty()) {
+                protocolMarshaller.marshall(getInsightRuleReportRequest.getMetrics(), METRICS_BINDING);
             }
+            protocolMarshaller.marshall(getInsightRuleReportRequest.getOrderBy(), ORDERBY_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (getInsightRuleReportRequest.getOrderBy() != null) {
-            request.addParameter("OrderBy", StringUtils.fromString(getInsightRuleReportRequest.getOrderBy()));
-        }
-
-        return request;
     }
 
 }

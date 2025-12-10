@@ -12,194 +12,77 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * PutMetricStreamRequest Marshaller
+ * PutMetricStreamRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class PutMetricStreamRequestMarshaller implements Marshaller<Request<PutMetricStreamRequest>, PutMetricStreamRequest> {
+@SdkInternalApi
+public class PutMetricStreamRequestMarshaller {
 
-    public Request<PutMetricStreamRequest> marshall(PutMetricStreamRequest putMetricStreamRequest) {
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Name").build();
+    private static final MarshallingInfo<List> INCLUDEFILTERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncludeFilters").build();
+    private static final MarshallingInfo<List> EXCLUDEFILTERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExcludeFilters").build();
+    private static final MarshallingInfo<String> FIREHOSEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FirehoseArn").build();
+    private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RoleArn").build();
+    private static final MarshallingInfo<String> OUTPUTFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutputFormat").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<List> STATISTICSCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StatisticsConfigurations").build();
+    private static final MarshallingInfo<Boolean> INCLUDELINKEDACCOUNTSMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncludeLinkedAccountsMetrics").build();
+
+    private static final PutMetricStreamRequestMarshaller instance = new PutMetricStreamRequestMarshaller();
+
+    public static PutMetricStreamRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(PutMetricStreamRequest putMetricStreamRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (putMetricStreamRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<PutMetricStreamRequest> request = new DefaultRequest<PutMetricStreamRequest>(putMetricStreamRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "PutMetricStream");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (putMetricStreamRequest.getName() != null) {
-            request.addParameter("Name", StringUtils.fromString(putMetricStreamRequest.getName()));
-        }
-
-        if (!putMetricStreamRequest.getIncludeFilters().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<MetricStreamFilter>) putMetricStreamRequest.getIncludeFilters()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<MetricStreamFilter> includeFiltersList = (com.amazonaws.internal.SdkInternalList<MetricStreamFilter>) putMetricStreamRequest
-                    .getIncludeFilters();
-            int includeFiltersListIndex = 1;
-
-            for (MetricStreamFilter includeFiltersListValue : includeFiltersList) {
-                if (includeFiltersListValue != null) {
-
-                    if (includeFiltersListValue.getNamespace() != null) {
-                        request.addParameter("IncludeFilters.member." + includeFiltersListIndex + ".Namespace",
-                                StringUtils.fromString(includeFiltersListValue.getNamespace()));
-                    }
-
-                    if (!includeFiltersListValue.getMetricNames().isEmpty()
-                            || !((com.amazonaws.internal.SdkInternalList<String>) includeFiltersListValue.getMetricNames()).isAutoConstruct()) {
-                        com.amazonaws.internal.SdkInternalList<String> metricNamesList = (com.amazonaws.internal.SdkInternalList<String>) includeFiltersListValue
-                                .getMetricNames();
-                        int metricNamesListIndex = 1;
-
-                        for (String metricNamesListValue : metricNamesList) {
-                            if (metricNamesListValue != null) {
-                                request.addParameter("IncludeFilters.member." + includeFiltersListIndex + ".MetricNames.member." + metricNamesListIndex,
-                                        StringUtils.fromString(metricNamesListValue));
-                            }
-                            metricNamesListIndex++;
-                        }
-                    }
-                }
-                includeFiltersListIndex++;
+        try {
+            protocolMarshaller.marshall(putMetricStreamRequest.getName(), NAME_BINDING);
+            if (putMetricStreamRequest.getIncludeFilters() != null && !putMetricStreamRequest.getIncludeFilters().isEmpty()) {
+                protocolMarshaller.marshall(putMetricStreamRequest.getIncludeFilters(), INCLUDEFILTERS_BINDING);
             }
-        }
-
-        if (!putMetricStreamRequest.getExcludeFilters().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<MetricStreamFilter>) putMetricStreamRequest.getExcludeFilters()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<MetricStreamFilter> excludeFiltersList = (com.amazonaws.internal.SdkInternalList<MetricStreamFilter>) putMetricStreamRequest
-                    .getExcludeFilters();
-            int excludeFiltersListIndex = 1;
-
-            for (MetricStreamFilter excludeFiltersListValue : excludeFiltersList) {
-                if (excludeFiltersListValue != null) {
-
-                    if (excludeFiltersListValue.getNamespace() != null) {
-                        request.addParameter("ExcludeFilters.member." + excludeFiltersListIndex + ".Namespace",
-                                StringUtils.fromString(excludeFiltersListValue.getNamespace()));
-                    }
-
-                    if (!excludeFiltersListValue.getMetricNames().isEmpty()
-                            || !((com.amazonaws.internal.SdkInternalList<String>) excludeFiltersListValue.getMetricNames()).isAutoConstruct()) {
-                        com.amazonaws.internal.SdkInternalList<String> metricNamesList = (com.amazonaws.internal.SdkInternalList<String>) excludeFiltersListValue
-                                .getMetricNames();
-                        int metricNamesListIndex = 1;
-
-                        for (String metricNamesListValue : metricNamesList) {
-                            if (metricNamesListValue != null) {
-                                request.addParameter("ExcludeFilters.member." + excludeFiltersListIndex + ".MetricNames.member." + metricNamesListIndex,
-                                        StringUtils.fromString(metricNamesListValue));
-                            }
-                            metricNamesListIndex++;
-                        }
-                    }
-                }
-                excludeFiltersListIndex++;
+            if (putMetricStreamRequest.getExcludeFilters() != null && !putMetricStreamRequest.getExcludeFilters().isEmpty()) {
+                protocolMarshaller.marshall(putMetricStreamRequest.getExcludeFilters(), EXCLUDEFILTERS_BINDING);
             }
-        }
-
-        if (putMetricStreamRequest.getFirehoseArn() != null) {
-            request.addParameter("FirehoseArn", StringUtils.fromString(putMetricStreamRequest.getFirehoseArn()));
-        }
-
-        if (putMetricStreamRequest.getRoleArn() != null) {
-            request.addParameter("RoleArn", StringUtils.fromString(putMetricStreamRequest.getRoleArn()));
-        }
-
-        if (putMetricStreamRequest.getOutputFormat() != null) {
-            request.addParameter("OutputFormat", StringUtils.fromString(putMetricStreamRequest.getOutputFormat()));
-        }
-
-        if (!putMetricStreamRequest.getTags().isEmpty() || !((com.amazonaws.internal.SdkInternalList<Tag>) putMetricStreamRequest.getTags()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<Tag> tagsList = (com.amazonaws.internal.SdkInternalList<Tag>) putMetricStreamRequest.getTags();
-            int tagsListIndex = 1;
-
-            for (Tag tagsListValue : tagsList) {
-                if (tagsListValue != null) {
-
-                    if (tagsListValue.getKey() != null) {
-                        request.addParameter("Tags.member." + tagsListIndex + ".Key", StringUtils.fromString(tagsListValue.getKey()));
-                    }
-
-                    if (tagsListValue.getValue() != null) {
-                        request.addParameter("Tags.member." + tagsListIndex + ".Value", StringUtils.fromString(tagsListValue.getValue()));
-                    }
-                }
-                tagsListIndex++;
+            protocolMarshaller.marshall(putMetricStreamRequest.getFirehoseArn(), FIREHOSEARN_BINDING);
+            protocolMarshaller.marshall(putMetricStreamRequest.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(putMetricStreamRequest.getOutputFormat(), OUTPUTFORMAT_BINDING);
+            if (putMetricStreamRequest.getTags() != null && !putMetricStreamRequest.getTags().isEmpty()) {
+                protocolMarshaller.marshall(putMetricStreamRequest.getTags(), TAGS_BINDING);
             }
-        }
-
-        if (!putMetricStreamRequest.getStatisticsConfigurations().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration>) putMetricStreamRequest.getStatisticsConfigurations())
-                        .isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration> statisticsConfigurationsList = (com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration>) putMetricStreamRequest
-                    .getStatisticsConfigurations();
-            int statisticsConfigurationsListIndex = 1;
-
-            for (MetricStreamStatisticsConfiguration statisticsConfigurationsListValue : statisticsConfigurationsList) {
-                if (statisticsConfigurationsListValue != null) {
-
-                    if (!statisticsConfigurationsListValue.getIncludeMetrics().isEmpty()
-                            || !((com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsMetric>) statisticsConfigurationsListValue.getIncludeMetrics())
-                                    .isAutoConstruct()) {
-                        com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsMetric> includeMetricsList = (com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsMetric>) statisticsConfigurationsListValue
-                                .getIncludeMetrics();
-                        int includeMetricsListIndex = 1;
-
-                        for (MetricStreamStatisticsMetric includeMetricsListValue : includeMetricsList) {
-                            if (includeMetricsListValue != null) {
-
-                                if (includeMetricsListValue.getNamespace() != null) {
-                                    request.addParameter("StatisticsConfigurations.member." + statisticsConfigurationsListIndex + ".IncludeMetrics.member."
-                                            + includeMetricsListIndex + ".Namespace", StringUtils.fromString(includeMetricsListValue.getNamespace()));
-                                }
-
-                                if (includeMetricsListValue.getMetricName() != null) {
-                                    request.addParameter("StatisticsConfigurations.member." + statisticsConfigurationsListIndex + ".IncludeMetrics.member."
-                                            + includeMetricsListIndex + ".MetricName", StringUtils.fromString(includeMetricsListValue.getMetricName()));
-                                }
-                            }
-                            includeMetricsListIndex++;
-                        }
-                    }
-
-                    if (!statisticsConfigurationsListValue.getAdditionalStatistics().isEmpty()
-                            || !((com.amazonaws.internal.SdkInternalList<String>) statisticsConfigurationsListValue.getAdditionalStatistics())
-                                    .isAutoConstruct()) {
-                        com.amazonaws.internal.SdkInternalList<String> additionalStatisticsList = (com.amazonaws.internal.SdkInternalList<String>) statisticsConfigurationsListValue
-                                .getAdditionalStatistics();
-                        int additionalStatisticsListIndex = 1;
-
-                        for (String additionalStatisticsListValue : additionalStatisticsList) {
-                            if (additionalStatisticsListValue != null) {
-                                request.addParameter("StatisticsConfigurations.member." + statisticsConfigurationsListIndex + ".AdditionalStatistics.member."
-                                        + additionalStatisticsListIndex, StringUtils.fromString(additionalStatisticsListValue));
-                            }
-                            additionalStatisticsListIndex++;
-                        }
-                    }
-                }
-                statisticsConfigurationsListIndex++;
+            if (putMetricStreamRequest.getStatisticsConfigurations() != null && !putMetricStreamRequest.getStatisticsConfigurations().isEmpty()) {
+                protocolMarshaller.marshall(putMetricStreamRequest.getStatisticsConfigurations(), STATISTICSCONFIGURATIONS_BINDING);
             }
+            protocolMarshaller.marshall(putMetricStreamRequest.getIncludeLinkedAccountsMetrics(), INCLUDELINKEDACCOUNTSMETRICS_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (putMetricStreamRequest.getIncludeLinkedAccountsMetrics() != null) {
-            request.addParameter("IncludeLinkedAccountsMetrics", StringUtils.fromBoolean(putMetricStreamRequest.getIncludeLinkedAccountsMetrics()));
-        }
-
-        return request;
     }
 
 }

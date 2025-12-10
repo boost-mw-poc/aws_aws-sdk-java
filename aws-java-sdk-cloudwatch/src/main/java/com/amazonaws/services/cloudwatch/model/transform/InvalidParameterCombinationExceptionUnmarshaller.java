@@ -12,32 +12,64 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
-import org.w3c.dom.Node;
+import java.math.*;
+
 import javax.annotation.Generated;
 
-import com.amazonaws.AmazonServiceException;
+import com.amazonaws.services.cloudwatch.model.*;
+import com.amazonaws.transform.rpcv2cbor.SimpleTypeRpcV2CborUnmarshallers.*;
+import com.amazonaws.transform.rpcv2cbor.*;
 
-import com.amazonaws.transform.StandardErrorUnmarshaller;
+import com.fasterxml.jackson.core.JsonToken;
+import static com.fasterxml.jackson.core.JsonToken.*;
 
-import com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException;
-
+/**
+ * InvalidParameterCombinationException CBOR Unmarshaller
+ */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class InvalidParameterCombinationExceptionUnmarshaller extends StandardErrorUnmarshaller {
-
-    public InvalidParameterCombinationExceptionUnmarshaller() {
-        super(InvalidParameterCombinationException.class);
+public class InvalidParameterCombinationExceptionUnmarshaller extends EnhancedRpcV2CborErrorUnmarshaller {
+    private InvalidParameterCombinationExceptionUnmarshaller() {
+        super(com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException.class, "InvalidParameterCombinationException");
     }
 
     @Override
-    public AmazonServiceException unmarshall(Node node) throws Exception {
-        // Bail out if this isn't the right error code that this
-        // marshaller understands
-        String errorCode = parseErrorCode(node);
-        if (errorCode == null || !errorCode.equals("InvalidParameterCombination"))
+    public com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException unmarshallFromContext(RpcV2CborUnmarshallerContext context)
+            throws Exception {
+        com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException invalidParameterCombinationException = new com.amazonaws.services.cloudwatch.model.InvalidParameterCombinationException(
+                null);
+
+        int originalDepth = context.getCurrentDepth();
+        String currentParentElement = context.getCurrentParentElement();
+        int targetDepth = originalDepth + 1;
+
+        JsonToken token = context.getCurrentToken();
+        if (token == null)
+            token = context.nextToken();
+        if (token == VALUE_NULL) {
             return null;
+        }
 
-        InvalidParameterCombinationException e = (InvalidParameterCombinationException) super.unmarshall(node);
+        while (true) {
+            if (token == null)
+                break;
 
-        return e;
+            if (token == FIELD_NAME || token == START_OBJECT) {
+            } else if (token == END_ARRAY || token == END_OBJECT) {
+                if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
+                    if (context.getCurrentDepth() <= originalDepth)
+                        break;
+                }
+            }
+            token = context.nextToken();
+        }
+        return invalidParameterCombinationException;
+    }
+
+    private static InvalidParameterCombinationExceptionUnmarshaller instance;
+
+    public static InvalidParameterCombinationExceptionUnmarshaller getInstance() {
+        if (instance == null)
+            instance = new InvalidParameterCombinationExceptionUnmarshaller();
+        return instance;
     }
 }

@@ -15,44 +15,47 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * ListManagedInsightRulesRequest Marshaller
+ * ListManagedInsightRulesRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ListManagedInsightRulesRequestMarshaller implements Marshaller<Request<ListManagedInsightRulesRequest>, ListManagedInsightRulesRequest> {
+@SdkInternalApi
+public class ListManagedInsightRulesRequestMarshaller {
 
-    public Request<ListManagedInsightRulesRequest> marshall(ListManagedInsightRulesRequest listManagedInsightRulesRequest) {
+    private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceARN").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+
+    private static final ListManagedInsightRulesRequestMarshaller instance = new ListManagedInsightRulesRequestMarshaller();
+
+    public static ListManagedInsightRulesRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(ListManagedInsightRulesRequest listManagedInsightRulesRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (listManagedInsightRulesRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<ListManagedInsightRulesRequest> request = new DefaultRequest<ListManagedInsightRulesRequest>(listManagedInsightRulesRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "ListManagedInsightRules");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (listManagedInsightRulesRequest.getResourceARN() != null) {
-            request.addParameter("ResourceARN", StringUtils.fromString(listManagedInsightRulesRequest.getResourceARN()));
+        try {
+            protocolMarshaller.marshall(listManagedInsightRulesRequest.getResourceARN(), RESOURCEARN_BINDING);
+            protocolMarshaller.marshall(listManagedInsightRulesRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listManagedInsightRulesRequest.getMaxResults(), MAXRESULTS_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (listManagedInsightRulesRequest.getNextToken() != null) {
-            request.addParameter("NextToken", StringUtils.fromString(listManagedInsightRulesRequest.getNextToken()));
-        }
-
-        if (listManagedInsightRulesRequest.getMaxResults() != null) {
-            request.addParameter("MaxResults", StringUtils.fromInteger(listManagedInsightRulesRequest.getMaxResults()));
-        }
-
-        return request;
     }
 
 }

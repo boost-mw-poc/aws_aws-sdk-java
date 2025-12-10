@@ -15,36 +15,41 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * GetDashboardRequest Marshaller
+ * GetDashboardRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class GetDashboardRequestMarshaller implements Marshaller<Request<GetDashboardRequest>, GetDashboardRequest> {
+@SdkInternalApi
+public class GetDashboardRequestMarshaller {
 
-    public Request<GetDashboardRequest> marshall(GetDashboardRequest getDashboardRequest) {
+    private static final MarshallingInfo<String> DASHBOARDNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DashboardName").build();
+
+    private static final GetDashboardRequestMarshaller instance = new GetDashboardRequestMarshaller();
+
+    public static GetDashboardRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(GetDashboardRequest getDashboardRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (getDashboardRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<GetDashboardRequest> request = new DefaultRequest<GetDashboardRequest>(getDashboardRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "GetDashboard");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (getDashboardRequest.getDashboardName() != null) {
-            request.addParameter("DashboardName", StringUtils.fromString(getDashboardRequest.getDashboardName()));
+        try {
+            protocolMarshaller.marshall(getDashboardRequest.getDashboardName(), DASHBOARDNAME_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

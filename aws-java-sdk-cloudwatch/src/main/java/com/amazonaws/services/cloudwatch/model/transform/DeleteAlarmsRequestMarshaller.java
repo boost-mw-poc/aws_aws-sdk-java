@@ -12,49 +12,47 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * DeleteAlarmsRequest Marshaller
+ * DeleteAlarmsRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DeleteAlarmsRequestMarshaller implements Marshaller<Request<DeleteAlarmsRequest>, DeleteAlarmsRequest> {
+@SdkInternalApi
+public class DeleteAlarmsRequestMarshaller {
 
-    public Request<DeleteAlarmsRequest> marshall(DeleteAlarmsRequest deleteAlarmsRequest) {
+    private static final MarshallingInfo<List> ALARMNAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AlarmNames").build();
+
+    private static final DeleteAlarmsRequestMarshaller instance = new DeleteAlarmsRequestMarshaller();
+
+    public static DeleteAlarmsRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(DeleteAlarmsRequest deleteAlarmsRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (deleteAlarmsRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<DeleteAlarmsRequest> request = new DefaultRequest<DeleteAlarmsRequest>(deleteAlarmsRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "DeleteAlarms");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (!deleteAlarmsRequest.getAlarmNames().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) deleteAlarmsRequest.getAlarmNames()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> alarmNamesList = (com.amazonaws.internal.SdkInternalList<String>) deleteAlarmsRequest
-                    .getAlarmNames();
-            int alarmNamesListIndex = 1;
-
-            for (String alarmNamesListValue : alarmNamesList) {
-                if (alarmNamesListValue != null) {
-                    request.addParameter("AlarmNames.member." + alarmNamesListIndex, StringUtils.fromString(alarmNamesListValue));
-                }
-                alarmNamesListIndex++;
+        try {
+            if (deleteAlarmsRequest.getAlarmNames() != null && !deleteAlarmsRequest.getAlarmNames().isEmpty()) {
+                protocolMarshaller.marshall(deleteAlarmsRequest.getAlarmNames(), ALARMNAMES_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

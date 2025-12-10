@@ -41,6 +41,7 @@ public class ResourceNotFoundException extends com.amazonaws.services.cloudwatch
      * @param resourceType
      */
 
+    @com.fasterxml.jackson.annotation.JsonProperty("ResourceType")
     public void setResourceType(String resourceType) {
         this.resourceType = resourceType;
     }
@@ -49,6 +50,7 @@ public class ResourceNotFoundException extends com.amazonaws.services.cloudwatch
      * @return
      */
 
+    @com.fasterxml.jackson.annotation.JsonProperty("ResourceType")
     public String getResourceType() {
         return this.resourceType;
     }
@@ -67,6 +69,7 @@ public class ResourceNotFoundException extends com.amazonaws.services.cloudwatch
      * @param resourceId
      */
 
+    @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
@@ -75,6 +78,7 @@ public class ResourceNotFoundException extends com.amazonaws.services.cloudwatch
      * @return
      */
 
+    @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
     public String getResourceId() {
         return this.resourceId;
     }

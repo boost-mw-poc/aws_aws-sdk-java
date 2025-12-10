@@ -12,49 +12,47 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * DeleteInsightRulesRequest Marshaller
+ * DeleteInsightRulesRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DeleteInsightRulesRequestMarshaller implements Marshaller<Request<DeleteInsightRulesRequest>, DeleteInsightRulesRequest> {
+@SdkInternalApi
+public class DeleteInsightRulesRequestMarshaller {
 
-    public Request<DeleteInsightRulesRequest> marshall(DeleteInsightRulesRequest deleteInsightRulesRequest) {
+    private static final MarshallingInfo<List> RULENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RuleNames").build();
+
+    private static final DeleteInsightRulesRequestMarshaller instance = new DeleteInsightRulesRequestMarshaller();
+
+    public static DeleteInsightRulesRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(DeleteInsightRulesRequest deleteInsightRulesRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (deleteInsightRulesRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<DeleteInsightRulesRequest> request = new DefaultRequest<DeleteInsightRulesRequest>(deleteInsightRulesRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "DeleteInsightRules");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (!deleteInsightRulesRequest.getRuleNames().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) deleteInsightRulesRequest.getRuleNames()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> ruleNamesList = (com.amazonaws.internal.SdkInternalList<String>) deleteInsightRulesRequest
-                    .getRuleNames();
-            int ruleNamesListIndex = 1;
-
-            for (String ruleNamesListValue : ruleNamesList) {
-                if (ruleNamesListValue != null) {
-                    request.addParameter("RuleNames.member." + ruleNamesListIndex, StringUtils.fromString(ruleNamesListValue));
-                }
-                ruleNamesListIndex++;
+        try {
+            if (deleteInsightRulesRequest.getRuleNames() != null && !deleteInsightRulesRequest.getRuleNames().isEmpty()) {
+                protocolMarshaller.marshall(deleteInsightRulesRequest.getRuleNames(), RULENAMES_BINDING);
             }
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

@@ -12,77 +12,71 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * DescribeAlarmHistoryRequest Marshaller
+ * DescribeAlarmHistoryRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DescribeAlarmHistoryRequestMarshaller implements Marshaller<Request<DescribeAlarmHistoryRequest>, DescribeAlarmHistoryRequest> {
+@SdkInternalApi
+public class DescribeAlarmHistoryRequestMarshaller {
 
-    public Request<DescribeAlarmHistoryRequest> marshall(DescribeAlarmHistoryRequest describeAlarmHistoryRequest) {
+    private static final MarshallingInfo<String> ALARMNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AlarmName").build();
+    private static final MarshallingInfo<String> ALARMCONTRIBUTORID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AlarmContributorId").build();
+    private static final MarshallingInfo<List> ALARMTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AlarmTypes").build();
+    private static final MarshallingInfo<String> HISTORYITEMTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HistoryItemType").build();
+    private static final MarshallingInfo<java.util.Date> STARTDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartDate").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> ENDDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndDate").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<Integer> MAXRECORDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxRecords").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<String> SCANBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ScanBy").build();
+
+    private static final DescribeAlarmHistoryRequestMarshaller instance = new DescribeAlarmHistoryRequestMarshaller();
+
+    public static DescribeAlarmHistoryRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(DescribeAlarmHistoryRequest describeAlarmHistoryRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (describeAlarmHistoryRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<DescribeAlarmHistoryRequest> request = new DefaultRequest<DescribeAlarmHistoryRequest>(describeAlarmHistoryRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "DescribeAlarmHistory");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (describeAlarmHistoryRequest.getAlarmName() != null) {
-            request.addParameter("AlarmName", StringUtils.fromString(describeAlarmHistoryRequest.getAlarmName()));
-        }
-
-        if (!describeAlarmHistoryRequest.getAlarmTypes().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) describeAlarmHistoryRequest.getAlarmTypes()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> alarmTypesList = (com.amazonaws.internal.SdkInternalList<String>) describeAlarmHistoryRequest
-                    .getAlarmTypes();
-            int alarmTypesListIndex = 1;
-
-            for (String alarmTypesListValue : alarmTypesList) {
-                if (alarmTypesListValue != null) {
-                    request.addParameter("AlarmTypes.member." + alarmTypesListIndex, StringUtils.fromString(alarmTypesListValue));
-                }
-                alarmTypesListIndex++;
+        try {
+            protocolMarshaller.marshall(describeAlarmHistoryRequest.getAlarmName(), ALARMNAME_BINDING);
+            protocolMarshaller.marshall(describeAlarmHistoryRequest.getAlarmContributorId(), ALARMCONTRIBUTORID_BINDING);
+            if (describeAlarmHistoryRequest.getAlarmTypes() != null && !describeAlarmHistoryRequest.getAlarmTypes().isEmpty()) {
+                protocolMarshaller.marshall(describeAlarmHistoryRequest.getAlarmTypes(), ALARMTYPES_BINDING);
             }
+            protocolMarshaller.marshall(describeAlarmHistoryRequest.getHistoryItemType(), HISTORYITEMTYPE_BINDING);
+            protocolMarshaller.marshall(describeAlarmHistoryRequest.getStartDate(), STARTDATE_BINDING);
+            protocolMarshaller.marshall(describeAlarmHistoryRequest.getEndDate(), ENDDATE_BINDING);
+            protocolMarshaller.marshall(describeAlarmHistoryRequest.getMaxRecords(), MAXRECORDS_BINDING);
+            protocolMarshaller.marshall(describeAlarmHistoryRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(describeAlarmHistoryRequest.getScanBy(), SCANBY_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (describeAlarmHistoryRequest.getHistoryItemType() != null) {
-            request.addParameter("HistoryItemType", StringUtils.fromString(describeAlarmHistoryRequest.getHistoryItemType()));
-        }
-
-        if (describeAlarmHistoryRequest.getStartDate() != null) {
-            request.addParameter("StartDate", StringUtils.fromDate(describeAlarmHistoryRequest.getStartDate()));
-        }
-
-        if (describeAlarmHistoryRequest.getEndDate() != null) {
-            request.addParameter("EndDate", StringUtils.fromDate(describeAlarmHistoryRequest.getEndDate()));
-        }
-
-        if (describeAlarmHistoryRequest.getMaxRecords() != null) {
-            request.addParameter("MaxRecords", StringUtils.fromInteger(describeAlarmHistoryRequest.getMaxRecords()));
-        }
-
-        if (describeAlarmHistoryRequest.getNextToken() != null) {
-            request.addParameter("NextToken", StringUtils.fromString(describeAlarmHistoryRequest.getNextToken()));
-        }
-
-        if (describeAlarmHistoryRequest.getScanBy() != null) {
-            request.addParameter("ScanBy", StringUtils.fromString(describeAlarmHistoryRequest.getScanBy()));
-        }
-
-        return request;
     }
 
 }

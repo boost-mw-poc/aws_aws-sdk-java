@@ -12,108 +12,75 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * GetMetricStatisticsRequest Marshaller
+ * GetMetricStatisticsRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class GetMetricStatisticsRequestMarshaller implements Marshaller<Request<GetMetricStatisticsRequest>, GetMetricStatisticsRequest> {
+@SdkInternalApi
+public class GetMetricStatisticsRequestMarshaller {
 
-    public Request<GetMetricStatisticsRequest> marshall(GetMetricStatisticsRequest getMetricStatisticsRequest) {
+    private static final MarshallingInfo<String> NAMESPACE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Namespace").build();
+    private static final MarshallingInfo<String> METRICNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetricName").build();
+    private static final MarshallingInfo<List> DIMENSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Dimensions").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<Integer> PERIOD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Period").build();
+    private static final MarshallingInfo<List> STATISTICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Statistics").build();
+    private static final MarshallingInfo<List> EXTENDEDSTATISTICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExtendedStatistics").build();
+    private static final MarshallingInfo<String> UNIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Unit").build();
+
+    private static final GetMetricStatisticsRequestMarshaller instance = new GetMetricStatisticsRequestMarshaller();
+
+    public static GetMetricStatisticsRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(GetMetricStatisticsRequest getMetricStatisticsRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (getMetricStatisticsRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<GetMetricStatisticsRequest> request = new DefaultRequest<GetMetricStatisticsRequest>(getMetricStatisticsRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "GetMetricStatistics");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (getMetricStatisticsRequest.getNamespace() != null) {
-            request.addParameter("Namespace", StringUtils.fromString(getMetricStatisticsRequest.getNamespace()));
-        }
-
-        if (getMetricStatisticsRequest.getMetricName() != null) {
-            request.addParameter("MetricName", StringUtils.fromString(getMetricStatisticsRequest.getMetricName()));
-        }
-
-        if (!getMetricStatisticsRequest.getDimensions().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<Dimension>) getMetricStatisticsRequest.getDimensions()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<Dimension> dimensionsList = (com.amazonaws.internal.SdkInternalList<Dimension>) getMetricStatisticsRequest
-                    .getDimensions();
-            int dimensionsListIndex = 1;
-
-            for (Dimension dimensionsListValue : dimensionsList) {
-                if (dimensionsListValue != null) {
-
-                    if (dimensionsListValue.getName() != null) {
-                        request.addParameter("Dimensions.member." + dimensionsListIndex + ".Name", StringUtils.fromString(dimensionsListValue.getName()));
-                    }
-
-                    if (dimensionsListValue.getValue() != null) {
-                        request.addParameter("Dimensions.member." + dimensionsListIndex + ".Value", StringUtils.fromString(dimensionsListValue.getValue()));
-                    }
-                }
-                dimensionsListIndex++;
+        try {
+            protocolMarshaller.marshall(getMetricStatisticsRequest.getNamespace(), NAMESPACE_BINDING);
+            protocolMarshaller.marshall(getMetricStatisticsRequest.getMetricName(), METRICNAME_BINDING);
+            if (getMetricStatisticsRequest.getDimensions() != null && !getMetricStatisticsRequest.getDimensions().isEmpty()) {
+                protocolMarshaller.marshall(getMetricStatisticsRequest.getDimensions(), DIMENSIONS_BINDING);
             }
-        }
-
-        if (getMetricStatisticsRequest.getStartTime() != null) {
-            request.addParameter("StartTime", StringUtils.fromDate(getMetricStatisticsRequest.getStartTime()));
-        }
-
-        if (getMetricStatisticsRequest.getEndTime() != null) {
-            request.addParameter("EndTime", StringUtils.fromDate(getMetricStatisticsRequest.getEndTime()));
-        }
-
-        if (getMetricStatisticsRequest.getPeriod() != null) {
-            request.addParameter("Period", StringUtils.fromInteger(getMetricStatisticsRequest.getPeriod()));
-        }
-
-        if (!getMetricStatisticsRequest.getStatistics().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) getMetricStatisticsRequest.getStatistics()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> statisticsList = (com.amazonaws.internal.SdkInternalList<String>) getMetricStatisticsRequest
-                    .getStatistics();
-            int statisticsListIndex = 1;
-
-            for (String statisticsListValue : statisticsList) {
-                if (statisticsListValue != null) {
-                    request.addParameter("Statistics.member." + statisticsListIndex, StringUtils.fromString(statisticsListValue));
-                }
-                statisticsListIndex++;
+            protocolMarshaller.marshall(getMetricStatisticsRequest.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(getMetricStatisticsRequest.getEndTime(), ENDTIME_BINDING);
+            protocolMarshaller.marshall(getMetricStatisticsRequest.getPeriod(), PERIOD_BINDING);
+            if (getMetricStatisticsRequest.getStatistics() != null && !getMetricStatisticsRequest.getStatistics().isEmpty()) {
+                protocolMarshaller.marshall(getMetricStatisticsRequest.getStatistics(), STATISTICS_BINDING);
             }
-        }
-
-        if (!getMetricStatisticsRequest.getExtendedStatistics().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) getMetricStatisticsRequest.getExtendedStatistics()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> extendedStatisticsList = (com.amazonaws.internal.SdkInternalList<String>) getMetricStatisticsRequest
-                    .getExtendedStatistics();
-            int extendedStatisticsListIndex = 1;
-
-            for (String extendedStatisticsListValue : extendedStatisticsList) {
-                if (extendedStatisticsListValue != null) {
-                    request.addParameter("ExtendedStatistics.member." + extendedStatisticsListIndex, StringUtils.fromString(extendedStatisticsListValue));
-                }
-                extendedStatisticsListIndex++;
+            if (getMetricStatisticsRequest.getExtendedStatistics() != null && !getMetricStatisticsRequest.getExtendedStatistics().isEmpty()) {
+                protocolMarshaller.marshall(getMetricStatisticsRequest.getExtendedStatistics(), EXTENDEDSTATISTICS_BINDING);
             }
+            protocolMarshaller.marshall(getMetricStatisticsRequest.getUnit(), UNIT_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (getMetricStatisticsRequest.getUnit() != null) {
-            request.addParameter("Unit", StringUtils.fromString(getMetricStatisticsRequest.getUnit()));
-        }
-
-        return request;
     }
 
 }

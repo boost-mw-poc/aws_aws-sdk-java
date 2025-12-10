@@ -84,9 +84,9 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * If you set <code>Period</code> to 5, 10, or 30, the start time of your request is rounded down to the nearest
-     * time that corresponds to even 5-, 10-, or 30-second divisions of a minute. For example, if you make a query at
-     * (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is rounded down and you
+     * If you set <code>Period</code> to 5, 10, 20, or 30, the start time of your request is rounded down to the nearest
+     * time that corresponds to even 5-, 10-, 20-, or 30-second divisions of a minute. For example, if you make a query
+     * at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is rounded down and you
      * receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the previous 5 minutes of data, using
      * a period of 5 seconds, you receive data timestamped between 15:02:15 and 15:07:15.
      * </p>
@@ -106,7 +106,7 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as
      * short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at
-     * intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a <code>PutMetricData</code> call that includes a
      * <code>StorageResolution</code> of 1 second.
      * </p>
@@ -410,9 +410,9 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * If you set <code>Period</code> to 5, 10, or 30, the start time of your request is rounded down to the nearest
-     * time that corresponds to even 5-, 10-, or 30-second divisions of a minute. For example, if you make a query at
-     * (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is rounded down and you
+     * If you set <code>Period</code> to 5, 10, 20, or 30, the start time of your request is rounded down to the nearest
+     * time that corresponds to even 5-, 10-, 20-, or 30-second divisions of a minute. For example, if you make a query
+     * at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is rounded down and you
      * receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the previous 5 minutes of data, using
      * a period of 5 seconds, you receive data timestamped between 15:02:15 and 15:07:15.
      * </p>
@@ -448,10 +448,10 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        If you set <code>Period</code> to 5, 10, or 30, the start time of your request is rounded down to the
-     *        nearest time that corresponds to even 5-, 10-, or 30-second divisions of a minute. For example, if you
-     *        make a query at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is
-     *        rounded down and you receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the
+     *        If you set <code>Period</code> to 5, 10, 20, or 30, the start time of your request is rounded down to the
+     *        nearest time that corresponds to even 5-, 10-, 20-, or 30-second divisions of a minute. For example, if
+     *        you make a query at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request
+     *        is rounded down and you receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the
      *        previous 5 minutes of data, using a period of 5 seconds, you receive data timestamped between 15:02:15 and
      *        15:07:15.
      */
@@ -493,9 +493,9 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * If you set <code>Period</code> to 5, 10, or 30, the start time of your request is rounded down to the nearest
-     * time that corresponds to even 5-, 10-, or 30-second divisions of a minute. For example, if you make a query at
-     * (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is rounded down and you
+     * If you set <code>Period</code> to 5, 10, 20, or 30, the start time of your request is rounded down to the nearest
+     * time that corresponds to even 5-, 10-, 20-, or 30-second divisions of a minute. For example, if you make a query
+     * at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is rounded down and you
      * receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the previous 5 minutes of data, using
      * a period of 5 seconds, you receive data timestamped between 15:02:15 and 15:07:15.
      * </p>
@@ -530,10 +530,10 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      *         </li>
      *         </ul>
      *         <p>
-     *         If you set <code>Period</code> to 5, 10, or 30, the start time of your request is rounded down to the
-     *         nearest time that corresponds to even 5-, 10-, or 30-second divisions of a minute. For example, if you
-     *         make a query at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is
-     *         rounded down and you receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the
+     *         If you set <code>Period</code> to 5, 10, 20, or 30, the start time of your request is rounded down to the
+     *         nearest time that corresponds to even 5-, 10-, 20-, or 30-second divisions of a minute. For example, if
+     *         you make a query at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request
+     *         is rounded down and you receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the
      *         previous 5 minutes of data, using a period of 5 seconds, you receive data timestamped between 15:02:15
      *         and 15:07:15.
      */
@@ -575,9 +575,9 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * If you set <code>Period</code> to 5, 10, or 30, the start time of your request is rounded down to the nearest
-     * time that corresponds to even 5-, 10-, or 30-second divisions of a minute. For example, if you make a query at
-     * (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is rounded down and you
+     * If you set <code>Period</code> to 5, 10, 20, or 30, the start time of your request is rounded down to the nearest
+     * time that corresponds to even 5-, 10-, 20-, or 30-second divisions of a minute. For example, if you make a query
+     * at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is rounded down and you
      * receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the previous 5 minutes of data, using
      * a period of 5 seconds, you receive data timestamped between 15:02:15 and 15:07:15.
      * </p>
@@ -613,10 +613,10 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        If you set <code>Period</code> to 5, 10, or 30, the start time of your request is rounded down to the
-     *        nearest time that corresponds to even 5-, 10-, or 30-second divisions of a minute. For example, if you
-     *        make a query at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request is
-     *        rounded down and you receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the
+     *        If you set <code>Period</code> to 5, 10, 20, or 30, the start time of your request is rounded down to the
+     *        nearest time that corresponds to even 5-, 10-, 20-, or 30-second divisions of a minute. For example, if
+     *        you make a query at (HH:mm:ss) 01:05:23 for the previous 10-second period, the start time of your request
+     *        is rounded down and you receive data from 01:05:10 to 01:05:20. If you make a query at 15:07:17 for the
      *        previous 5 minutes of data, using a period of 5 seconds, you receive data timestamped between 15:02:15 and
      *        15:07:15.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -692,7 +692,7 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as
      * short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at
-     * intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a <code>PutMetricData</code> call that includes a
      * <code>StorageResolution</code> of 1 second.
      * </p>
@@ -721,9 +721,9 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * @param period
      *        The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period
      *        can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that
-     *        are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of
-     *        60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> call that includes a
-     *        <code>StorageResolution</code> of 1 second.</p>
+     *        are collected at intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any
+     *        multiple of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> call that
+     *        includes a <code>StorageResolution</code> of 1 second.</p>
      *        <p>
      *        If the <code>StartTime</code> parameter specifies a time stamp that is greater than 3 hours ago, you must
      *        specify the period as follows or no data points in that time range is returned:
@@ -754,7 +754,7 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as
      * short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at
-     * intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a <code>PutMetricData</code> call that includes a
      * <code>StorageResolution</code> of 1 second.
      * </p>
@@ -782,9 +782,9 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @return The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period
      *         can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that
-     *         are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple
-     *         of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> call that
-     *         includes a <code>StorageResolution</code> of 1 second.</p>
+     *         are collected at intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any
+     *         multiple of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> call
+     *         that includes a <code>StorageResolution</code> of 1 second.</p>
      *         <p>
      *         If the <code>StartTime</code> parameter specifies a time stamp that is greater than 3 hours ago, you must
      *         specify the period as follows or no data points in that time range is returned:
@@ -815,7 +815,7 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as
      * short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at
-     * intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution
+     * intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any multiple of 60. High-resolution
      * metrics are those metrics stored by a <code>PutMetricData</code> call that includes a
      * <code>StorageResolution</code> of 1 second.
      * </p>
@@ -844,9 +844,9 @@ public class GetMetricStatisticsRequest extends com.amazonaws.AmazonWebServiceRe
      * @param period
      *        The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period
      *        can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that
-     *        are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of
-     *        60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> call that includes a
-     *        <code>StorageResolution</code> of 1 second.</p>
+     *        are collected at intervals of less than one minute, the period can be 1, 5, 10, 20, 30, 60, or any
+     *        multiple of 60. High-resolution metrics are those metrics stored by a <code>PutMetricData</code> call that
+     *        includes a <code>StorageResolution</code> of 1 second.</p>
      *        <p>
      *        If the <code>StartTime</code> parameter specifies a time stamp that is greater than 3 hours ago, you must
      *        specify the period as follows or no data points in that time range is returned:

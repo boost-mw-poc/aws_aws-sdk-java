@@ -15,40 +15,44 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * DescribeInsightRulesRequest Marshaller
+ * DescribeInsightRulesRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DescribeInsightRulesRequestMarshaller implements Marshaller<Request<DescribeInsightRulesRequest>, DescribeInsightRulesRequest> {
+@SdkInternalApi
+public class DescribeInsightRulesRequestMarshaller {
 
-    public Request<DescribeInsightRulesRequest> marshall(DescribeInsightRulesRequest describeInsightRulesRequest) {
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+
+    private static final DescribeInsightRulesRequestMarshaller instance = new DescribeInsightRulesRequestMarshaller();
+
+    public static DescribeInsightRulesRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(DescribeInsightRulesRequest describeInsightRulesRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (describeInsightRulesRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<DescribeInsightRulesRequest> request = new DefaultRequest<DescribeInsightRulesRequest>(describeInsightRulesRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "DescribeInsightRules");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (describeInsightRulesRequest.getNextToken() != null) {
-            request.addParameter("NextToken", StringUtils.fromString(describeInsightRulesRequest.getNextToken()));
+        try {
+            protocolMarshaller.marshall(describeInsightRulesRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(describeInsightRulesRequest.getMaxResults(), MAXRESULTS_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (describeInsightRulesRequest.getMaxResults() != null) {
-            request.addParameter("MaxResults", StringUtils.fromInteger(describeInsightRulesRequest.getMaxResults()));
-        }
-
-        return request;
     }
 
 }

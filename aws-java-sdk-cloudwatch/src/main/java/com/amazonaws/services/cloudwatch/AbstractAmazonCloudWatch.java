@@ -64,6 +64,11 @@ public class AbstractAmazonCloudWatch implements AmazonCloudWatch {
     }
 
     @Override
+    public DescribeAlarmContributorsResult describeAlarmContributors(DescribeAlarmContributorsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAlarmHistoryResult describeAlarmHistory(DescribeAlarmHistoryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

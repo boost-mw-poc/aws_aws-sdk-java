@@ -15,40 +15,44 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * GetMetricWidgetImageRequest Marshaller
+ * GetMetricWidgetImageRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class GetMetricWidgetImageRequestMarshaller implements Marshaller<Request<GetMetricWidgetImageRequest>, GetMetricWidgetImageRequest> {
+@SdkInternalApi
+public class GetMetricWidgetImageRequestMarshaller {
 
-    public Request<GetMetricWidgetImageRequest> marshall(GetMetricWidgetImageRequest getMetricWidgetImageRequest) {
+    private static final MarshallingInfo<String> METRICWIDGET_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetricWidget").build();
+    private static final MarshallingInfo<String> OUTPUTFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutputFormat").build();
+
+    private static final GetMetricWidgetImageRequestMarshaller instance = new GetMetricWidgetImageRequestMarshaller();
+
+    public static GetMetricWidgetImageRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(GetMetricWidgetImageRequest getMetricWidgetImageRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (getMetricWidgetImageRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<GetMetricWidgetImageRequest> request = new DefaultRequest<GetMetricWidgetImageRequest>(getMetricWidgetImageRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "GetMetricWidgetImage");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (getMetricWidgetImageRequest.getMetricWidget() != null) {
-            request.addParameter("MetricWidget", StringUtils.fromString(getMetricWidgetImageRequest.getMetricWidget()));
+        try {
+            protocolMarshaller.marshall(getMetricWidgetImageRequest.getMetricWidget(), METRICWIDGET_BINDING);
+            protocolMarshaller.marshall(getMetricWidgetImageRequest.getOutputFormat(), OUTPUTFORMAT_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (getMetricWidgetImageRequest.getOutputFormat() != null) {
-            request.addParameter("OutputFormat", StringUtils.fromString(getMetricWidgetImageRequest.getOutputFormat()));
-        }
-
-        return request;
     }
 
 }

@@ -15,36 +15,41 @@ package com.amazonaws.services.cloudwatch.model.transform;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * DeleteMetricStreamRequest Marshaller
+ * DeleteMetricStreamRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DeleteMetricStreamRequestMarshaller implements Marshaller<Request<DeleteMetricStreamRequest>, DeleteMetricStreamRequest> {
+@SdkInternalApi
+public class DeleteMetricStreamRequestMarshaller {
 
-    public Request<DeleteMetricStreamRequest> marshall(DeleteMetricStreamRequest deleteMetricStreamRequest) {
+    private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Name").build();
+
+    private static final DeleteMetricStreamRequestMarshaller instance = new DeleteMetricStreamRequestMarshaller();
+
+    public static DeleteMetricStreamRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(DeleteMetricStreamRequest deleteMetricStreamRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (deleteMetricStreamRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<DeleteMetricStreamRequest> request = new DefaultRequest<DeleteMetricStreamRequest>(deleteMetricStreamRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "DeleteMetricStream");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (deleteMetricStreamRequest.getName() != null) {
-            request.addParameter("Name", StringUtils.fromString(deleteMetricStreamRequest.getName()));
+        try {
+            protocolMarshaller.marshall(deleteMetricStreamRequest.getName(), NAME_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        return request;
     }
 
 }

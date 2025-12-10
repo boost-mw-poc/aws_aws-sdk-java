@@ -265,6 +265,12 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> alarmActions;
     /**
@@ -487,7 +493,7 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The length, in seconds, used each time the metric specified in <code>MetricName</code> is evaluated. Valid values
-     * are 10, 30, and any multiple of 60.
+     * are 10, 20, 30, and any multiple of 60.
      * </p>
      * <p>
      * <code>Period</code> is required for alarms based on static thresholds. If you are creating an alarm based on a
@@ -495,17 +501,18 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * array.
      * </p>
      * <p>
-     * Be sure to specify 10 or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
-     * <code>StorageResolution</code> of 1. If you specify a period of 10 or 30 for a metric that does not have
+     * Be sure to specify 10, 20, or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
+     * <code>StorageResolution</code> of 1. If you specify a period of 10, 20, or 30 for a metric that does not have
      * sub-minute resolution, the alarm still attempts to gather data at the period rate that you specify. In this case,
      * it does not receive data for the attempts that do not correspond to a one-minute data resolution, and the alarm
-     * might often lapse into INSUFFICENT_DATA status. Specifying 10 or 30 also sets this alarm as a high-resolution
-     * alarm, which has a higher charge than other alarms. For more information about pricing, see <a
+     * might often lapse into INSUFFICENT_DATA status. Specifying 10, 20, or 30 also sets this alarm as a
+     * high-resolution alarm, which has a higher charge than other alarms. For more information about pricing, see <a
      * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
      * </p>
      * <p>
-     * An alarm's total current evaluation period can be no longer than one day, so <code>Period</code> multiplied by
-     * <code>EvaluationPeriods</code> cannot be more than 86,400 seconds.
+     * An alarm's total current evaluation period can be no longer than seven days, so <code>Period</code> multiplied by
+     * <code>EvaluationPeriods</code> can't be more than 604,800 seconds. For alarms with a period of less than one hour
+     * (3,600 seconds), the total evaluation period can't be longer than one day (86,400 seconds).
      * </p>
      */
     private Integer period;
@@ -538,10 +545,6 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * The number of periods over which data is compared to the specified threshold. If you are setting an alarm that
      * requires that a number of consecutive data points be breaching to trigger the alarm, this value specifies that
      * number. If you are setting an "M out of N" alarm, this value is the N.
-     * </p>
-     * <p>
-     * An alarm's total current evaluation period can be no longer than one day, so this number multiplied by
-     * <code>Period</code> cannot be more than 86,400 seconds.
      * </p>
      */
     private Integer evaluationPeriods;
@@ -647,6 +650,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_TagResource.html">TagResource</a> or
      * <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html">UntagResource</a>.
+     * </p>
+     * <p>
+     * To use this field to set tags for an alarm when you create it, you must be signed on with both the
+     * <code>cloudwatch:PutMetricAlarm</code> and <code>cloudwatch:TagResource</code> permissions.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
@@ -1828,6 +1835,12 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
      * 
      * @return The actions to execute when this alarm transitions to the <code>ALARM</code> state from any other state.
      *         Each action is specified as an Amazon Resource Name (ARN). Valid values:</p>
@@ -1933,6 +1946,12 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <code>arn:aws:ssm-incidents::<i>account-id</i>:responseplan/<i>response-plan-name</i> </code>
      *         </p>
      *         </li>
+     *         </ul>
+     *         <p>
+     *         <b>Start a Amazon Q Developer operational investigation</b>
+     *         </p>
+     *         <p>
+     *         <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
      */
 
     public java.util.List<String> getAlarmActions() {
@@ -2050,6 +2069,12 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
      * 
      * @param alarmActions
      *        The actions to execute when this alarm transitions to the <code>ALARM</code> state from any other state.
@@ -2156,6 +2181,12 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <code>arn:aws:ssm-incidents::<i>account-id</i>:responseplan/<i>response-plan-name</i> </code>
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        <b>Start a Amazon Q Developer operational investigation</b>
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
      */
 
     public void setAlarmActions(java.util.Collection<String> alarmActions) {
@@ -2276,6 +2307,12 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * </ul>
      * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAlarmActions(java.util.Collection)} or {@link #withAlarmActions(java.util.Collection)} if you want to
      * override the existing values.
@@ -2386,6 +2423,12 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <code>arn:aws:ssm-incidents::<i>account-id</i>:responseplan/<i>response-plan-name</i> </code>
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        <b>Start a Amazon Q Developer operational investigation</b>
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2507,6 +2550,12 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <b>Start a Amazon Q Developer operational investigation</b>
+     * </p>
+     * <p>
+     * <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
+     * </p>
      * 
      * @param alarmActions
      *        The actions to execute when this alarm transitions to the <code>ALARM</code> state from any other state.
@@ -2613,6 +2662,12 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <code>arn:aws:ssm-incidents::<i>account-id</i>:responseplan/<i>response-plan-name</i> </code>
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        <b>Start a Amazon Q Developer operational investigation</b>
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:aiops:<i>region</i>:<i>account-id</i>:investigation-group:<i>investigation-group-id</i> </code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4259,7 +4314,7 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The length, in seconds, used each time the metric specified in <code>MetricName</code> is evaluated. Valid values
-     * are 10, 30, and any multiple of 60.
+     * are 10, 20, 30, and any multiple of 60.
      * </p>
      * <p>
      * <code>Period</code> is required for alarms based on static thresholds. If you are creating an alarm based on a
@@ -4267,39 +4322,43 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * array.
      * </p>
      * <p>
-     * Be sure to specify 10 or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
-     * <code>StorageResolution</code> of 1. If you specify a period of 10 or 30 for a metric that does not have
+     * Be sure to specify 10, 20, or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
+     * <code>StorageResolution</code> of 1. If you specify a period of 10, 20, or 30 for a metric that does not have
      * sub-minute resolution, the alarm still attempts to gather data at the period rate that you specify. In this case,
      * it does not receive data for the attempts that do not correspond to a one-minute data resolution, and the alarm
-     * might often lapse into INSUFFICENT_DATA status. Specifying 10 or 30 also sets this alarm as a high-resolution
-     * alarm, which has a higher charge than other alarms. For more information about pricing, see <a
+     * might often lapse into INSUFFICENT_DATA status. Specifying 10, 20, or 30 also sets this alarm as a
+     * high-resolution alarm, which has a higher charge than other alarms. For more information about pricing, see <a
      * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
      * </p>
      * <p>
-     * An alarm's total current evaluation period can be no longer than one day, so <code>Period</code> multiplied by
-     * <code>EvaluationPeriods</code> cannot be more than 86,400 seconds.
+     * An alarm's total current evaluation period can be no longer than seven days, so <code>Period</code> multiplied by
+     * <code>EvaluationPeriods</code> can't be more than 604,800 seconds. For alarms with a period of less than one hour
+     * (3,600 seconds), the total evaluation period can't be longer than one day (86,400 seconds).
      * </p>
      * 
      * @param period
      *        The length, in seconds, used each time the metric specified in <code>MetricName</code> is evaluated. Valid
-     *        values are 10, 30, and any multiple of 60.</p>
+     *        values are 10, 20, 30, and any multiple of 60.</p>
      *        <p>
      *        <code>Period</code> is required for alarms based on static thresholds. If you are creating an alarm based
      *        on a metric math expression, you specify the period for each metric within the objects in the
      *        <code>Metrics</code> array.
      *        </p>
      *        <p>
-     *        Be sure to specify 10 or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
-     *        <code>StorageResolution</code> of 1. If you specify a period of 10 or 30 for a metric that does not have
-     *        sub-minute resolution, the alarm still attempts to gather data at the period rate that you specify. In
-     *        this case, it does not receive data for the attempts that do not correspond to a one-minute data
-     *        resolution, and the alarm might often lapse into INSUFFICENT_DATA status. Specifying 10 or 30 also sets
-     *        this alarm as a high-resolution alarm, which has a higher charge than other alarms. For more information
-     *        about pricing, see <a href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
+     *        Be sure to specify 10, 20, or 30 only for metrics that are stored by a <code>PutMetricData</code> call
+     *        with a <code>StorageResolution</code> of 1. If you specify a period of 10, 20, or 30 for a metric that
+     *        does not have sub-minute resolution, the alarm still attempts to gather data at the period rate that you
+     *        specify. In this case, it does not receive data for the attempts that do not correspond to a one-minute
+     *        data resolution, and the alarm might often lapse into INSUFFICENT_DATA status. Specifying 10, 20, or 30
+     *        also sets this alarm as a high-resolution alarm, which has a higher charge than other alarms. For more
+     *        information about pricing, see <a href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+     *        Pricing</a>.
      *        </p>
      *        <p>
-     *        An alarm's total current evaluation period can be no longer than one day, so <code>Period</code>
-     *        multiplied by <code>EvaluationPeriods</code> cannot be more than 86,400 seconds.
+     *        An alarm's total current evaluation period can be no longer than seven days, so <code>Period</code>
+     *        multiplied by <code>EvaluationPeriods</code> can't be more than 604,800 seconds. For alarms with a period
+     *        of less than one hour (3,600 seconds), the total evaluation period can't be longer than one day (86,400
+     *        seconds).
      */
 
     public void setPeriod(Integer period) {
@@ -4309,7 +4368,7 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The length, in seconds, used each time the metric specified in <code>MetricName</code> is evaluated. Valid values
-     * are 10, 30, and any multiple of 60.
+     * are 10, 20, 30, and any multiple of 60.
      * </p>
      * <p>
      * <code>Period</code> is required for alarms based on static thresholds. If you are creating an alarm based on a
@@ -4317,38 +4376,42 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * array.
      * </p>
      * <p>
-     * Be sure to specify 10 or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
-     * <code>StorageResolution</code> of 1. If you specify a period of 10 or 30 for a metric that does not have
+     * Be sure to specify 10, 20, or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
+     * <code>StorageResolution</code> of 1. If you specify a period of 10, 20, or 30 for a metric that does not have
      * sub-minute resolution, the alarm still attempts to gather data at the period rate that you specify. In this case,
      * it does not receive data for the attempts that do not correspond to a one-minute data resolution, and the alarm
-     * might often lapse into INSUFFICENT_DATA status. Specifying 10 or 30 also sets this alarm as a high-resolution
-     * alarm, which has a higher charge than other alarms. For more information about pricing, see <a
+     * might often lapse into INSUFFICENT_DATA status. Specifying 10, 20, or 30 also sets this alarm as a
+     * high-resolution alarm, which has a higher charge than other alarms. For more information about pricing, see <a
      * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
      * </p>
      * <p>
-     * An alarm's total current evaluation period can be no longer than one day, so <code>Period</code> multiplied by
-     * <code>EvaluationPeriods</code> cannot be more than 86,400 seconds.
+     * An alarm's total current evaluation period can be no longer than seven days, so <code>Period</code> multiplied by
+     * <code>EvaluationPeriods</code> can't be more than 604,800 seconds. For alarms with a period of less than one hour
+     * (3,600 seconds), the total evaluation period can't be longer than one day (86,400 seconds).
      * </p>
      * 
      * @return The length, in seconds, used each time the metric specified in <code>MetricName</code> is evaluated.
-     *         Valid values are 10, 30, and any multiple of 60.</p>
+     *         Valid values are 10, 20, 30, and any multiple of 60.</p>
      *         <p>
      *         <code>Period</code> is required for alarms based on static thresholds. If you are creating an alarm based
      *         on a metric math expression, you specify the period for each metric within the objects in the
      *         <code>Metrics</code> array.
      *         </p>
      *         <p>
-     *         Be sure to specify 10 or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
-     *         <code>StorageResolution</code> of 1. If you specify a period of 10 or 30 for a metric that does not have
-     *         sub-minute resolution, the alarm still attempts to gather data at the period rate that you specify. In
-     *         this case, it does not receive data for the attempts that do not correspond to a one-minute data
-     *         resolution, and the alarm might often lapse into INSUFFICENT_DATA status. Specifying 10 or 30 also sets
-     *         this alarm as a high-resolution alarm, which has a higher charge than other alarms. For more information
-     *         about pricing, see <a href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
+     *         Be sure to specify 10, 20, or 30 only for metrics that are stored by a <code>PutMetricData</code> call
+     *         with a <code>StorageResolution</code> of 1. If you specify a period of 10, 20, or 30 for a metric that
+     *         does not have sub-minute resolution, the alarm still attempts to gather data at the period rate that you
+     *         specify. In this case, it does not receive data for the attempts that do not correspond to a one-minute
+     *         data resolution, and the alarm might often lapse into INSUFFICENT_DATA status. Specifying 10, 20, or 30
+     *         also sets this alarm as a high-resolution alarm, which has a higher charge than other alarms. For more
+     *         information about pricing, see <a href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+     *         Pricing</a>.
      *         </p>
      *         <p>
-     *         An alarm's total current evaluation period can be no longer than one day, so <code>Period</code>
-     *         multiplied by <code>EvaluationPeriods</code> cannot be more than 86,400 seconds.
+     *         An alarm's total current evaluation period can be no longer than seven days, so <code>Period</code>
+     *         multiplied by <code>EvaluationPeriods</code> can't be more than 604,800 seconds. For alarms with a period
+     *         of less than one hour (3,600 seconds), the total evaluation period can't be longer than one day (86,400
+     *         seconds).
      */
 
     public Integer getPeriod() {
@@ -4358,7 +4421,7 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The length, in seconds, used each time the metric specified in <code>MetricName</code> is evaluated. Valid values
-     * are 10, 30, and any multiple of 60.
+     * are 10, 20, 30, and any multiple of 60.
      * </p>
      * <p>
      * <code>Period</code> is required for alarms based on static thresholds. If you are creating an alarm based on a
@@ -4366,39 +4429,43 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * array.
      * </p>
      * <p>
-     * Be sure to specify 10 or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
-     * <code>StorageResolution</code> of 1. If you specify a period of 10 or 30 for a metric that does not have
+     * Be sure to specify 10, 20, or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
+     * <code>StorageResolution</code> of 1. If you specify a period of 10, 20, or 30 for a metric that does not have
      * sub-minute resolution, the alarm still attempts to gather data at the period rate that you specify. In this case,
      * it does not receive data for the attempts that do not correspond to a one-minute data resolution, and the alarm
-     * might often lapse into INSUFFICENT_DATA status. Specifying 10 or 30 also sets this alarm as a high-resolution
-     * alarm, which has a higher charge than other alarms. For more information about pricing, see <a
+     * might often lapse into INSUFFICENT_DATA status. Specifying 10, 20, or 30 also sets this alarm as a
+     * high-resolution alarm, which has a higher charge than other alarms. For more information about pricing, see <a
      * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
      * </p>
      * <p>
-     * An alarm's total current evaluation period can be no longer than one day, so <code>Period</code> multiplied by
-     * <code>EvaluationPeriods</code> cannot be more than 86,400 seconds.
+     * An alarm's total current evaluation period can be no longer than seven days, so <code>Period</code> multiplied by
+     * <code>EvaluationPeriods</code> can't be more than 604,800 seconds. For alarms with a period of less than one hour
+     * (3,600 seconds), the total evaluation period can't be longer than one day (86,400 seconds).
      * </p>
      * 
      * @param period
      *        The length, in seconds, used each time the metric specified in <code>MetricName</code> is evaluated. Valid
-     *        values are 10, 30, and any multiple of 60.</p>
+     *        values are 10, 20, 30, and any multiple of 60.</p>
      *        <p>
      *        <code>Period</code> is required for alarms based on static thresholds. If you are creating an alarm based
      *        on a metric math expression, you specify the period for each metric within the objects in the
      *        <code>Metrics</code> array.
      *        </p>
      *        <p>
-     *        Be sure to specify 10 or 30 only for metrics that are stored by a <code>PutMetricData</code> call with a
-     *        <code>StorageResolution</code> of 1. If you specify a period of 10 or 30 for a metric that does not have
-     *        sub-minute resolution, the alarm still attempts to gather data at the period rate that you specify. In
-     *        this case, it does not receive data for the attempts that do not correspond to a one-minute data
-     *        resolution, and the alarm might often lapse into INSUFFICENT_DATA status. Specifying 10 or 30 also sets
-     *        this alarm as a high-resolution alarm, which has a higher charge than other alarms. For more information
-     *        about pricing, see <a href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
+     *        Be sure to specify 10, 20, or 30 only for metrics that are stored by a <code>PutMetricData</code> call
+     *        with a <code>StorageResolution</code> of 1. If you specify a period of 10, 20, or 30 for a metric that
+     *        does not have sub-minute resolution, the alarm still attempts to gather data at the period rate that you
+     *        specify. In this case, it does not receive data for the attempts that do not correspond to a one-minute
+     *        data resolution, and the alarm might often lapse into INSUFFICENT_DATA status. Specifying 10, 20, or 30
+     *        also sets this alarm as a high-resolution alarm, which has a higher charge than other alarms. For more
+     *        information about pricing, see <a href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+     *        Pricing</a>.
      *        </p>
      *        <p>
-     *        An alarm's total current evaluation period can be no longer than one day, so <code>Period</code>
-     *        multiplied by <code>EvaluationPeriods</code> cannot be more than 86,400 seconds.
+     *        An alarm's total current evaluation period can be no longer than seven days, so <code>Period</code>
+     *        multiplied by <code>EvaluationPeriods</code> can't be more than 604,800 seconds. For alarms with a period
+     *        of less than one hour (3,600 seconds), the total evaluation period can't be longer than one day (86,400
+     *        seconds).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4666,18 +4733,11 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * requires that a number of consecutive data points be breaching to trigger the alarm, this value specifies that
      * number. If you are setting an "M out of N" alarm, this value is the N.
      * </p>
-     * <p>
-     * An alarm's total current evaluation period can be no longer than one day, so this number multiplied by
-     * <code>Period</code> cannot be more than 86,400 seconds.
-     * </p>
      * 
      * @param evaluationPeriods
      *        The number of periods over which data is compared to the specified threshold. If you are setting an alarm
      *        that requires that a number of consecutive data points be breaching to trigger the alarm, this value
-     *        specifies that number. If you are setting an "M out of N" alarm, this value is the N.</p>
-     *        <p>
-     *        An alarm's total current evaluation period can be no longer than one day, so this number multiplied by
-     *        <code>Period</code> cannot be more than 86,400 seconds.
+     *        specifies that number. If you are setting an "M out of N" alarm, this value is the N.
      */
 
     public void setEvaluationPeriods(Integer evaluationPeriods) {
@@ -4690,17 +4750,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * requires that a number of consecutive data points be breaching to trigger the alarm, this value specifies that
      * number. If you are setting an "M out of N" alarm, this value is the N.
      * </p>
-     * <p>
-     * An alarm's total current evaluation period can be no longer than one day, so this number multiplied by
-     * <code>Period</code> cannot be more than 86,400 seconds.
-     * </p>
      * 
      * @return The number of periods over which data is compared to the specified threshold. If you are setting an alarm
      *         that requires that a number of consecutive data points be breaching to trigger the alarm, this value
-     *         specifies that number. If you are setting an "M out of N" alarm, this value is the N.</p>
-     *         <p>
-     *         An alarm's total current evaluation period can be no longer than one day, so this number multiplied by
-     *         <code>Period</code> cannot be more than 86,400 seconds.
+     *         specifies that number. If you are setting an "M out of N" alarm, this value is the N.
      */
 
     public Integer getEvaluationPeriods() {
@@ -4713,18 +4766,11 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * requires that a number of consecutive data points be breaching to trigger the alarm, this value specifies that
      * number. If you are setting an "M out of N" alarm, this value is the N.
      * </p>
-     * <p>
-     * An alarm's total current evaluation period can be no longer than one day, so this number multiplied by
-     * <code>Period</code> cannot be more than 86,400 seconds.
-     * </p>
      * 
      * @param evaluationPeriods
      *        The number of periods over which data is compared to the specified threshold. If you are setting an alarm
      *        that requires that a number of consecutive data points be breaching to trigger the alarm, this value
-     *        specifies that number. If you are setting an "M out of N" alarm, this value is the N.</p>
-     *        <p>
-     *        An alarm's total current evaluation period can be no longer than one day, so this number multiplied by
-     *        <code>Period</code> cannot be more than 86,400 seconds.
+     *        specifies that number. If you are setting an "M out of N" alarm, this value is the N.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5399,6 +5445,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html">UntagResource</a>.
      * </p>
+     * <p>
+     * To use this field to set tags for an alarm when you create it, you must be signed on with both the
+     * <code>cloudwatch:PutMetricAlarm</code> and <code>cloudwatch:TagResource</code> permissions.
+     * </p>
      * 
      * @return A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an
      *         alarm. To be able to associate tags with the alarm when you create the alarm, you must have the
@@ -5414,6 +5464,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *         >TagResource</a> or <a
      *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html"
      *         >UntagResource</a>.
+     *         </p>
+     *         <p>
+     *         To use this field to set tags for an alarm when you create it, you must be signed on with both the
+     *         <code>cloudwatch:PutMetricAlarm</code> and <code>cloudwatch:TagResource</code> permissions.
      */
 
     public java.util.List<Tag> getTags() {
@@ -5440,6 +5494,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html">UntagResource</a>.
      * </p>
+     * <p>
+     * To use this field to set tags for an alarm when you create it, you must be signed on with both the
+     * <code>cloudwatch:PutMetricAlarm</code> and <code>cloudwatch:TagResource</code> permissions.
+     * </p>
      * 
      * @param tags
      *        A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
@@ -5456,6 +5514,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        >TagResource</a> or <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html"
      *        >UntagResource</a>.
+     *        </p>
+     *        <p>
+     *        To use this field to set tags for an alarm when you create it, you must be signed on with both the
+     *        <code>cloudwatch:PutMetricAlarm</code> and <code>cloudwatch:TagResource</code> permissions.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -5485,6 +5547,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html">UntagResource</a>.
      * </p>
      * <p>
+     * To use this field to set tags for an alarm when you create it, you must be signed on with both the
+     * <code>cloudwatch:PutMetricAlarm</code> and <code>cloudwatch:TagResource</code> permissions.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
      * existing values.
@@ -5505,6 +5571,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        >TagResource</a> or <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html"
      *        >UntagResource</a>.
+     *        </p>
+     *        <p>
+     *        To use this field to set tags for an alarm when you create it, you must be signed on with both the
+     *        <code>cloudwatch:PutMetricAlarm</code> and <code>cloudwatch:TagResource</code> permissions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5535,6 +5605,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      * <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html">UntagResource</a>.
      * </p>
+     * <p>
+     * To use this field to set tags for an alarm when you create it, you must be signed on with both the
+     * <code>cloudwatch:PutMetricAlarm</code> and <code>cloudwatch:TagResource</code> permissions.
+     * </p>
      * 
      * @param tags
      *        A list of key-value pairs to associate with the alarm. You can associate as many as 50 tags with an alarm.
@@ -5551,6 +5625,10 @@ public class PutMetricAlarmRequest extends com.amazonaws.AmazonWebServiceRequest
      *        >TagResource</a> or <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html"
      *        >UntagResource</a>.
+     *        </p>
+     *        <p>
+     *        To use this field to set tags for an alarm when you create it, you must be signed on with both the
+     *        <code>cloudwatch:PutMetricAlarm</code> and <code>cloudwatch:TagResource</code> permissions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -5397,7 +5397,7 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
             if (regionStr != null) {
                 awsRegion = RegionUtils.getRegion(regionStr);
             } else {
-                awsRegion = getRegion().toAWSRegion();
+                awsRegion = RegionUtils.getRegion(getRegionName());
             }
             return new DualstackEndpointBuilder(getServiceNameIntern(), protocol, awsRegion);
         } else {

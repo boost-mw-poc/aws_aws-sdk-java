@@ -12,34 +12,71 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
-import org.w3c.dom.Node;
+import java.math.*;
+
 import javax.annotation.Generated;
 
-import com.amazonaws.AmazonServiceException;
-import com.amazonaws.util.XpathUtils;
-import com.amazonaws.transform.StandardErrorUnmarshaller;
+import com.amazonaws.services.cloudwatch.model.*;
+import com.amazonaws.transform.rpcv2cbor.SimpleTypeRpcV2CborUnmarshallers.*;
+import com.amazonaws.transform.rpcv2cbor.*;
 
-import com.amazonaws.services.cloudwatch.model.ResourceNotFoundException;
+import com.fasterxml.jackson.core.JsonToken;
+import static com.fasterxml.jackson.core.JsonToken.*;
 
+/**
+ * ResourceNotFoundException CBOR Unmarshaller
+ */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ResourceNotFoundExceptionUnmarshaller extends StandardErrorUnmarshaller {
-
-    public ResourceNotFoundExceptionUnmarshaller() {
-        super(ResourceNotFoundException.class);
+public class ResourceNotFoundExceptionUnmarshaller extends EnhancedRpcV2CborErrorUnmarshaller {
+    private ResourceNotFoundExceptionUnmarshaller() {
+        super(com.amazonaws.services.cloudwatch.model.ResourceNotFoundException.class, "ResourceNotFoundException");
     }
 
     @Override
-    public AmazonServiceException unmarshall(Node node) throws Exception {
-        // Bail out if this isn't the right error code that this
-        // marshaller understands
-        String errorCode = parseErrorCode(node);
-        if (errorCode == null || !errorCode.equals("ResourceNotFoundException"))
+    public com.amazonaws.services.cloudwatch.model.ResourceNotFoundException unmarshallFromContext(RpcV2CborUnmarshallerContext context) throws Exception {
+        com.amazonaws.services.cloudwatch.model.ResourceNotFoundException resourceNotFoundException = new com.amazonaws.services.cloudwatch.model.ResourceNotFoundException(
+                null);
+
+        int originalDepth = context.getCurrentDepth();
+        String currentParentElement = context.getCurrentParentElement();
+        int targetDepth = originalDepth + 1;
+
+        JsonToken token = context.getCurrentToken();
+        if (token == null)
+            token = context.nextToken();
+        if (token == VALUE_NULL) {
             return null;
+        }
 
-        ResourceNotFoundException e = (ResourceNotFoundException) super.unmarshall(node);
-        e.setResourceType(XpathUtils.asString(getErrorPropertyPath("ResourceType"), node));
-        e.setResourceId(XpathUtils.asString(getErrorPropertyPath("ResourceId"), node));
+        while (true) {
+            if (token == null)
+                break;
 
-        return e;
+            if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("ResourceType", targetDepth)) {
+                    context.nextToken();
+                    resourceNotFoundException.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ResourceId", targetDepth)) {
+                    context.nextToken();
+                    resourceNotFoundException.setResourceId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+            } else if (token == END_ARRAY || token == END_OBJECT) {
+                if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
+                    if (context.getCurrentDepth() <= originalDepth)
+                        break;
+                }
+            }
+            token = context.nextToken();
+        }
+        return resourceNotFoundException;
+    }
+
+    private static ResourceNotFoundExceptionUnmarshaller instance;
+
+    public static ResourceNotFoundExceptionUnmarshaller getInstance() {
+        if (instance == null)
+            instance = new ResourceNotFoundExceptionUnmarshaller();
+        return instance;
     }
 }

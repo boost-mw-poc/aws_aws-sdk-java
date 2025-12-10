@@ -39,6 +39,7 @@ public class DashboardInvalidInputErrorException extends com.amazonaws.services.
      * @return
      */
 
+    @com.fasterxml.jackson.annotation.JsonProperty("dashboardValidationMessages")
     public java.util.List<DashboardValidationMessage> getDashboardValidationMessages() {
         if (dashboardValidationMessages == null) {
             dashboardValidationMessages = new com.amazonaws.internal.SdkInternalList<DashboardValidationMessage>();
@@ -50,6 +51,7 @@ public class DashboardInvalidInputErrorException extends com.amazonaws.services.
      * @param dashboardValidationMessages
      */
 
+    @com.fasterxml.jackson.annotation.JsonProperty("dashboardValidationMessages")
     public void setDashboardValidationMessages(java.util.Collection<DashboardValidationMessage> dashboardValidationMessages) {
         if (dashboardValidationMessages == null) {
             this.dashboardValidationMessages = null;

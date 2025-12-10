@@ -12,32 +12,63 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
-import org.w3c.dom.Node;
+import java.math.*;
+
 import javax.annotation.Generated;
 
-import com.amazonaws.AmazonServiceException;
+import com.amazonaws.services.cloudwatch.model.*;
+import com.amazonaws.transform.rpcv2cbor.SimpleTypeRpcV2CborUnmarshallers.*;
+import com.amazonaws.transform.rpcv2cbor.*;
 
-import com.amazonaws.transform.StandardErrorUnmarshaller;
+import com.fasterxml.jackson.core.JsonToken;
+import static com.fasterxml.jackson.core.JsonToken.*;
 
-import com.amazonaws.services.cloudwatch.model.ConcurrentModificationException;
-
+/**
+ * ConcurrentModificationException CBOR Unmarshaller
+ */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ConcurrentModificationExceptionUnmarshaller extends StandardErrorUnmarshaller {
-
-    public ConcurrentModificationExceptionUnmarshaller() {
-        super(ConcurrentModificationException.class);
+public class ConcurrentModificationExceptionUnmarshaller extends EnhancedRpcV2CborErrorUnmarshaller {
+    private ConcurrentModificationExceptionUnmarshaller() {
+        super(com.amazonaws.services.cloudwatch.model.ConcurrentModificationException.class, "ConcurrentModificationException");
     }
 
     @Override
-    public AmazonServiceException unmarshall(Node node) throws Exception {
-        // Bail out if this isn't the right error code that this
-        // marshaller understands
-        String errorCode = parseErrorCode(node);
-        if (errorCode == null || !errorCode.equals("ConcurrentModificationException"))
+    public com.amazonaws.services.cloudwatch.model.ConcurrentModificationException unmarshallFromContext(RpcV2CborUnmarshallerContext context) throws Exception {
+        com.amazonaws.services.cloudwatch.model.ConcurrentModificationException concurrentModificationException = new com.amazonaws.services.cloudwatch.model.ConcurrentModificationException(
+                null);
+
+        int originalDepth = context.getCurrentDepth();
+        String currentParentElement = context.getCurrentParentElement();
+        int targetDepth = originalDepth + 1;
+
+        JsonToken token = context.getCurrentToken();
+        if (token == null)
+            token = context.nextToken();
+        if (token == VALUE_NULL) {
             return null;
+        }
 
-        ConcurrentModificationException e = (ConcurrentModificationException) super.unmarshall(node);
+        while (true) {
+            if (token == null)
+                break;
 
-        return e;
+            if (token == FIELD_NAME || token == START_OBJECT) {
+            } else if (token == END_ARRAY || token == END_OBJECT) {
+                if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
+                    if (context.getCurrentDepth() <= originalDepth)
+                        break;
+                }
+            }
+            token = context.nextToken();
+        }
+        return concurrentModificationException;
+    }
+
+    private static ConcurrentModificationExceptionUnmarshaller instance;
+
+    public static ConcurrentModificationExceptionUnmarshaller getInstance() {
+        if (instance == null)
+            instance = new ConcurrentModificationExceptionUnmarshaller();
+        return instance;
     }
 }

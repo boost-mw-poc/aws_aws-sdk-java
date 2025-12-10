@@ -35,6 +35,8 @@ public enum CloudWatchActions implements Action {
     DeleteInsightRules("cloudwatch:DeleteInsightRules"),
     /** Action for the DeleteMetricStream operation. */
     DeleteMetricStream("cloudwatch:DeleteMetricStream"),
+    /** Action for the DescribeAlarmContributors operation. */
+    DescribeAlarmContributors("cloudwatch:DescribeAlarmContributors"),
     /** Action for the DescribeAlarmHistory operation. */
     DescribeAlarmHistory("cloudwatch:DescribeAlarmHistory"),
     /** Action for the DescribeAlarms operation. */

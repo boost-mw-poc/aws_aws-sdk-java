@@ -93,6 +93,19 @@ public class AbstractAmazonCloudWatchAsync extends AbstractAmazonCloudWatch impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAlarmContributorsResult> describeAlarmContributorsAsync(DescribeAlarmContributorsRequest request) {
+
+        return describeAlarmContributorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAlarmContributorsResult> describeAlarmContributorsAsync(DescribeAlarmContributorsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAlarmContributorsRequest, DescribeAlarmContributorsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAlarmHistoryResult> describeAlarmHistoryAsync(DescribeAlarmHistoryRequest request) {
 
         return describeAlarmHistoryAsync(request, null);

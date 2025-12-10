@@ -12,126 +12,83 @@
  */
 package com.amazonaws.services.cloudwatch.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
-import com.amazonaws.Request;
-import com.amazonaws.DefaultRequest;
-import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.cloudwatch.model.*;
-import com.amazonaws.transform.Marshaller;
-import com.amazonaws.util.StringUtils;
+
+import com.amazonaws.protocol.*;
+import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * PutCompositeAlarmRequest Marshaller
+ * PutCompositeAlarmRequestMarshaller
  */
-
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class PutCompositeAlarmRequestMarshaller implements Marshaller<Request<PutCompositeAlarmRequest>, PutCompositeAlarmRequest> {
+@SdkInternalApi
+public class PutCompositeAlarmRequestMarshaller {
 
-    public Request<PutCompositeAlarmRequest> marshall(PutCompositeAlarmRequest putCompositeAlarmRequest) {
+    private static final MarshallingInfo<Boolean> ACTIONSENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ActionsEnabled").build();
+    private static final MarshallingInfo<List> ALARMACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AlarmActions").build();
+    private static final MarshallingInfo<String> ALARMDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AlarmDescription").build();
+    private static final MarshallingInfo<String> ALARMNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AlarmName").build();
+    private static final MarshallingInfo<String> ALARMRULE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AlarmRule").build();
+    private static final MarshallingInfo<List> INSUFFICIENTDATAACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InsufficientDataActions").build();
+    private static final MarshallingInfo<List> OKACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("OKActions").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> ACTIONSSUPPRESSOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ActionsSuppressor").build();
+    private static final MarshallingInfo<Integer> ACTIONSSUPPRESSORWAITPERIOD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ActionsSuppressorWaitPeriod").build();
+    private static final MarshallingInfo<Integer> ACTIONSSUPPRESSOREXTENSIONPERIOD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ActionsSuppressorExtensionPeriod").build();
+
+    private static final PutCompositeAlarmRequestMarshaller instance = new PutCompositeAlarmRequestMarshaller();
+
+    public static PutCompositeAlarmRequestMarshaller getInstance() {
+        return instance;
+    }
+
+    /**
+     * Marshall the given parameter object.
+     */
+    public void marshall(PutCompositeAlarmRequest putCompositeAlarmRequest, ProtocolMarshaller protocolMarshaller) {
 
         if (putCompositeAlarmRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
-        Request<PutCompositeAlarmRequest> request = new DefaultRequest<PutCompositeAlarmRequest>(putCompositeAlarmRequest, "AmazonCloudWatch");
-        request.addParameter("Action", "PutCompositeAlarm");
-        request.addParameter("Version", "2010-08-01");
-        request.setHttpMethod(HttpMethodName.POST);
-
-        if (putCompositeAlarmRequest.getActionsEnabled() != null) {
-            request.addParameter("ActionsEnabled", StringUtils.fromBoolean(putCompositeAlarmRequest.getActionsEnabled()));
-        }
-
-        if (!putCompositeAlarmRequest.getAlarmActions().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) putCompositeAlarmRequest.getAlarmActions()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> alarmActionsList = (com.amazonaws.internal.SdkInternalList<String>) putCompositeAlarmRequest
-                    .getAlarmActions();
-            int alarmActionsListIndex = 1;
-
-            for (String alarmActionsListValue : alarmActionsList) {
-                if (alarmActionsListValue != null) {
-                    request.addParameter("AlarmActions.member." + alarmActionsListIndex, StringUtils.fromString(alarmActionsListValue));
-                }
-                alarmActionsListIndex++;
+        try {
+            protocolMarshaller.marshall(putCompositeAlarmRequest.getActionsEnabled(), ACTIONSENABLED_BINDING);
+            if (putCompositeAlarmRequest.getAlarmActions() != null && !putCompositeAlarmRequest.getAlarmActions().isEmpty()) {
+                protocolMarshaller.marshall(putCompositeAlarmRequest.getAlarmActions(), ALARMACTIONS_BINDING);
             }
-        }
-
-        if (putCompositeAlarmRequest.getAlarmDescription() != null) {
-            request.addParameter("AlarmDescription", StringUtils.fromString(putCompositeAlarmRequest.getAlarmDescription()));
-        }
-
-        if (putCompositeAlarmRequest.getAlarmName() != null) {
-            request.addParameter("AlarmName", StringUtils.fromString(putCompositeAlarmRequest.getAlarmName()));
-        }
-
-        if (putCompositeAlarmRequest.getAlarmRule() != null) {
-            request.addParameter("AlarmRule", StringUtils.fromString(putCompositeAlarmRequest.getAlarmRule()));
-        }
-
-        if (!putCompositeAlarmRequest.getInsufficientDataActions().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) putCompositeAlarmRequest.getInsufficientDataActions()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> insufficientDataActionsList = (com.amazonaws.internal.SdkInternalList<String>) putCompositeAlarmRequest
-                    .getInsufficientDataActions();
-            int insufficientDataActionsListIndex = 1;
-
-            for (String insufficientDataActionsListValue : insufficientDataActionsList) {
-                if (insufficientDataActionsListValue != null) {
-                    request.addParameter("InsufficientDataActions.member." + insufficientDataActionsListIndex,
-                            StringUtils.fromString(insufficientDataActionsListValue));
-                }
-                insufficientDataActionsListIndex++;
+            protocolMarshaller.marshall(putCompositeAlarmRequest.getAlarmDescription(), ALARMDESCRIPTION_BINDING);
+            protocolMarshaller.marshall(putCompositeAlarmRequest.getAlarmName(), ALARMNAME_BINDING);
+            protocolMarshaller.marshall(putCompositeAlarmRequest.getAlarmRule(), ALARMRULE_BINDING);
+            if (putCompositeAlarmRequest.getInsufficientDataActions() != null && !putCompositeAlarmRequest.getInsufficientDataActions().isEmpty()) {
+                protocolMarshaller.marshall(putCompositeAlarmRequest.getInsufficientDataActions(), INSUFFICIENTDATAACTIONS_BINDING);
             }
-        }
-
-        if (!putCompositeAlarmRequest.getOKActions().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<String>) putCompositeAlarmRequest.getOKActions()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<String> oKActionsList = (com.amazonaws.internal.SdkInternalList<String>) putCompositeAlarmRequest
-                    .getOKActions();
-            int oKActionsListIndex = 1;
-
-            for (String oKActionsListValue : oKActionsList) {
-                if (oKActionsListValue != null) {
-                    request.addParameter("OKActions.member." + oKActionsListIndex, StringUtils.fromString(oKActionsListValue));
-                }
-                oKActionsListIndex++;
+            if (putCompositeAlarmRequest.getOKActions() != null && !putCompositeAlarmRequest.getOKActions().isEmpty()) {
+                protocolMarshaller.marshall(putCompositeAlarmRequest.getOKActions(), OKACTIONS_BINDING);
             }
-        }
-
-        if (!putCompositeAlarmRequest.getTags().isEmpty()
-                || !((com.amazonaws.internal.SdkInternalList<Tag>) putCompositeAlarmRequest.getTags()).isAutoConstruct()) {
-            com.amazonaws.internal.SdkInternalList<Tag> tagsList = (com.amazonaws.internal.SdkInternalList<Tag>) putCompositeAlarmRequest.getTags();
-            int tagsListIndex = 1;
-
-            for (Tag tagsListValue : tagsList) {
-                if (tagsListValue != null) {
-
-                    if (tagsListValue.getKey() != null) {
-                        request.addParameter("Tags.member." + tagsListIndex + ".Key", StringUtils.fromString(tagsListValue.getKey()));
-                    }
-
-                    if (tagsListValue.getValue() != null) {
-                        request.addParameter("Tags.member." + tagsListIndex + ".Value", StringUtils.fromString(tagsListValue.getValue()));
-                    }
-                }
-                tagsListIndex++;
+            if (putCompositeAlarmRequest.getTags() != null && !putCompositeAlarmRequest.getTags().isEmpty()) {
+                protocolMarshaller.marshall(putCompositeAlarmRequest.getTags(), TAGS_BINDING);
             }
+            protocolMarshaller.marshall(putCompositeAlarmRequest.getActionsSuppressor(), ACTIONSSUPPRESSOR_BINDING);
+            protocolMarshaller.marshall(putCompositeAlarmRequest.getActionsSuppressorWaitPeriod(), ACTIONSSUPPRESSORWAITPERIOD_BINDING);
+            protocolMarshaller.marshall(putCompositeAlarmRequest.getActionsSuppressorExtensionPeriod(), ACTIONSSUPPRESSOREXTENSIONPERIOD_BINDING);
+        } catch (Exception e) {
+            throw new SdkClientException("Unable to marshall request: " + e.getMessage(), e);
         }
-
-        if (putCompositeAlarmRequest.getActionsSuppressor() != null) {
-            request.addParameter("ActionsSuppressor", StringUtils.fromString(putCompositeAlarmRequest.getActionsSuppressor()));
-        }
-
-        if (putCompositeAlarmRequest.getActionsSuppressorWaitPeriod() != null) {
-            request.addParameter("ActionsSuppressorWaitPeriod", StringUtils.fromInteger(putCompositeAlarmRequest.getActionsSuppressorWaitPeriod()));
-        }
-
-        if (putCompositeAlarmRequest.getActionsSuppressorExtensionPeriod() != null) {
-            request.addParameter("ActionsSuppressorExtensionPeriod", StringUtils.fromInteger(putCompositeAlarmRequest.getActionsSuppressorExtensionPeriod()));
-        }
-
-        return request;
     }
 
 }
