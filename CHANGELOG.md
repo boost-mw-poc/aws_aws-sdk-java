@@ -1,3 +1,8 @@
+# __1.12.797__ __2025-12-29__
+## __AWS SDK for Java__
+  - ### Deprecations
+    - Updated the warning message for v1 end-of-support
+
 # __1.12.796__ __2025-12-18__
 ## __AWS Kinesis Video__
   - ### Features

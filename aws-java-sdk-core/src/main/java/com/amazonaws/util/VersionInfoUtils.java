@@ -67,7 +67,7 @@ public class VersionInfoUtils {
 
         if (printDeprecationAnnouncement) {
             StringBuilder message = new StringBuilder(
-                "The AWS SDK for Java 1.x entered maintenance mode starting July 31, 2024 and will reach end of support "
+                "The AWS SDK for Java 1.x reached end of support "
                 + "on December 31, 2025. For more information, see "
                 + "https://aws.amazon.com/blogs/developer/the-aws-sdk-for-java-1-x-is-in-maintenance-mode-effective-july-31-2024/\n"
                 + "You can print where on the file system the AWS SDK for Java 1.x core runtime is located by setting "

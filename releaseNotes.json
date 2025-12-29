@@ -1,7 +1,10 @@
 {
   "releases": {
+    "1.12.797": {
+      "changeDescription": "Updated the warning message for v1 end-of-support"
+    },
     "1.12.796": {
-      "changeDescription": "For AWS Kinesis Video: Upgrade Netty to `4.1.130-Final"
+      "changeDescription": "For AWS Kinesis Video: Upgrade Netty to 4.1.130-Final"
     },
     "1.12.795": {
       "changeDescription": "For Amazon S3: fix error when using S3 with Dualstack and custom regions; For Amazon CloudWatch: introduce two additional protocols AWS JSON 1.1 and Smithy RPC v2 CBOR."
