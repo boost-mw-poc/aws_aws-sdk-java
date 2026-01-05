@@ -5,23 +5,16 @@ build scalable solutions with Amazon S3, Amazon DynamoDB, Amazon Glacier, and mo
 
 See the [AWS SDK for Java 2.x][aws-sdk-for-java-2x] for how to get started.
 
-## In Maintenance Mode as of July 31, 2024 ##
 
-[The AWS SDK for Java 1.x is in maintenance mode][maintenance-mode-post]. The AWS SDK for Java 1.x entered maintenance 
-mode on July 31, 2024 and will reaching end-of-support on December 31, 2025. During maintenance mode, AWS will limit 
-SDK releases to address critical bug fixes and security issues only. The SDK will not receive API updates for new or 
-existing services, or be updated to support new regions. 
+## End-of-Support on December 31, 2025 ##
+
+[The AWS SDK for Java 1.x reached end-of-support on December 31, 2025][deprecation-announcement-post]. The SDK no longer receives updates or releases. 
+Previously published releases will continue to be available via public package managers and the code will remain on GitHub.
 
 We recommend that you [migrate to the AWS SDK for Java 2.x][migration-guide]. The AWS SDK for Java 2.x provides 
 improved features, enhanced performance, and continued support from AWS. By adopting the latest version of the SDK, 
 developers can ensure the security, compatibility, and stability of their solutions on AWS. Updating also allows you to 
 leverage the latest services and innovations from AWS.
-
-## End-of-Support on December 31, 2025 ##
-
-[The AWS SDK for Java 1.x will reach end-of-support on December 31, 2025][deprecation-announcement-post]. After end-of-
-support, AWS will no longer receive updates or releases. Previously published releases will continue to be available 
-via public package managers and the code will remain on GitHub.
 
 ## Release Notes ##
 Changes to the SDK beginning with version 1.12.1 (June 2021) are tracked in [CHANGELOG.md][changes-file].
@@ -97,15 +90,6 @@ in the build, use:
 mvn clean install -Dgpg.skip=true
 ```
 
-## Getting Help
-GitHub [issues][sdk-issues] is the preferred channel to interact with our team. Also check these community resources for getting help:
-
-* Ask a question on [StackOverflow][stack-overflow] and tag it with `aws-java-sdk`
-* Articulate your feature request or upvote existing ones on our [Issues][features] page
-* Take a look at the [blog] for plenty of helpful walkthroughs and tips
-* Open a case via the [AWS Support Center][support-center] in the [AWS console][console]
-* If it turns out that you may have found a bug, please open an [issue][sdk-issues]
-
 ## Maintenance and Support for SDK Major Versions
 
 For information about maintenance and support for SDK major versions and their underlying dependencies, see the following in the AWS SDKs and Tools Reference Guide:
@@ -113,11 +97,6 @@ For information about maintenance and support for SDK major versions and their u
 * [AWS SDKs and Tools Maintenance Policy][maintenance-policy]
 * [AWS SDKs and Tools Version Support Matrix][version-matrix]
 
-## Supported Minor Versions
-
-* **1.12.x** - In [maintenance mode][maintenance-mode-post]. We recommend migrating to the [AWS SDK for Java 2.x][aws-sdk-for-java-2x].
-
-* **1.11.x** - No longer supported, but migration to 1.12.x should require no code changes.
 
 ## AWS SDK for Java 2.x
 
