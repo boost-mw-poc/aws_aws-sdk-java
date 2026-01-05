@@ -22,6 +22,74 @@ Changes to the SDK beginning with version 1.12.1 (June 2021) are tracked in [CHA
 Changes in the _retired_ 1.11.x series of the SDK, beginning with version 1.11.82, 
 are listed in the [CHANGELOG-1.11.x.md](./changelogs/CHANGELOG-1.11.x.md) file.
 
+## Getting Started with AWS
+
+Use [the AWS SDK for Java 2.x to get started][sdk-v2-getting-started].
+
+## Using the AWS SDK for Java 1.x
+
+The AWS SDK for Java 1.x is in [maintenance mode][maintenance-mode-post], so we recommend that you use the 
+[AWS SDK for Java 2.x][aws-sdk-for-java-2x].
+
+#### Minimum requirements ####
+
+To run the AWS SDK for Java 1.x, you will need **Java 1.8+**. For more information about the requirements and optimum
+settings for the SDK, please see the [Installing a Java Development Environment][docs-java-env]
+section of the developer guide.
+
+#### Install the 1.x SDK ####
+
+You can use the AWS SDK for Java 1.x in your project by consuming it from Maven. Import
+the [aws-java-sdk-bom][] and specify the SDK Maven modules that your project needs in the
+dependencies.
+
+##### Importing the 1.x BOM #####
+
+```xml
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.amazonaws</groupId>
+      <artifactId>aws-java-sdk-bom</artifactId>
+      <version>1.12.797</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+```
+
+##### Using the 1.x SDK Maven modules #####
+
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk-ec2</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk-s3</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk-dynamodb</artifactId>
+  </dependency>
+</dependencies>
+```
+
+See the [Set up the AWS SDK for Java 1.x][docs-setup] section of the developer guide for more
+information about installing the 1.x SDK through other means.
+
+## Building From Source
+
+Once you check out the code from GitHub, you can build it using Maven. To disable the GPG-signing
+in the build, use:
+
+```sh
+mvn clean install -Dgpg.skip=true
+```
+
 ## Maintenance and Support for SDK Major Versions
 
 For information about maintenance and support for SDK major versions and their underlying dependencies, see the following in the AWS SDKs and Tools Reference Guide:
